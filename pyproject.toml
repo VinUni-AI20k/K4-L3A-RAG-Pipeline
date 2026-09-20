@@ -18,8 +18,12 @@ dependencies = [
     "langchain-community==0.4.1",
     "langchain-openai>=1.6.2,<2",
     "langchain-text-splitters>=1.1.2,<2",
-    "markitdown[pdf]>=0.1.0,<0.2",
-    "numpy>=1.26.0,<3",
+    "markitdown[pdf,docx]>=0.1.0,<0.2",
+    # numpy phải <2: PyTorch 2.2.x build trên numpy 1.x ABI. Trên macOS x86_64
+    # (Intel) torch không có wheel nào mới hơn 2.2.2, nên không thể nâng torch
+    # để dùng numpy 2. Nâng numpy lên 2.x gây "Failed to initialize NumPy:
+    # _ARRAY_API not found" rồi NameError khi import transformers.
+    "numpy>=1.26.0,<2",
     "openai>=2.45.0,<3",
     "pageindex==0.2.8",
     "python-dotenv>=1.0.0,<2",
@@ -27,7 +31,12 @@ dependencies = [
     "rank-bm25>=0.2.2,<0.3",
     "requests>=2.31.0,<3",
     "scikit-learn>=1.3.0,<2",
-    "sentence-transformers>=2.2.0,<7",
+    # sentence-transformers <4 và transformers <5: transformers 5.x đòi
+    # torch>=2.5, không có trên macOS x86_64 (torch dừng ở 2.2.2). Khoảng cũ
+    # ">=2.2.0,<7" quá lỏng nên pip kéo về 6.1.0 -> transformers 5.17 -> vỡ.
+    # BAAI/bge-m3 chạy bình thường trên sentence-transformers 3.x.
+    "sentence-transformers>=3.0.0,<4",
+    "transformers>=4.41.0,<5",
     "streamlit>=1.35.0,<2",
 ]
 
