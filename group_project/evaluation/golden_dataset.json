@@ -81,21 +81,42 @@
 		"source": "bai-bao-2.md + quy-dinh-xu-ly-khieu-nai.md",
 		"question": "Người mua căn hộ được tặng voucher Vinmec 100 triệu đồng cần làm gì nếu có vấn đề về việc nhận ưu đãi?",
 		"expected_answer": "Người mua nên liên hệ Công ty qua hotline, email, bản cứng hoặc Ban Quản lý để gửi yêu cầu. Với yêu cầu đơn giản, thời gian xử lý theo quy định là trong vòng 4 ngày làm việc.",
-		"expected_context": "Chính sách bán hàng nêu voucher Vinmec trị giá 100 triệu đồng cho khách hàng đủ điều kiện. Quy định khiếu nại nêu các kênh tiếp nhận và thời hạn xử lý yêu cầu đơn giản trong vòng 04 ngày làm việc."
+		"expected_context": "Chính sách bán hàng nêu voucher Vinmec trị giá 100 triệu đồng cho khách hàng đủ điều kiện. Quy định khiếu nại nêu các kênh tiếp nhận và thời hạn xử lý yêu cầu đơn giản trong vòng 04 ngày làm việc.",
+		"root_cause_analysis": {
+			"likely_low_metrics": ["Context Recall", "Context Precision"],
+			"failure_stage": "retrieval",
+			"root_cause": "Câu hỏi cần truy hồi đồng thời chi tiết khuyến mại từ tài liệu news và quy trình khiếu nại từ tài liệu legal. Dense-only dễ chỉ lấy một trong hai nguồn hoặc lấy nhiều đoạn quảng bá không chứa thời hạn xử lý.",
+			"improvement": "Dùng hybrid BM25 + dense và RRF; mở rộng truy vấn bằng các từ khóa 'voucher Vinmec', 'kênh tiếp nhận', 'yêu cầu đơn giản', sau đó kiểm tra tối thiểu một context từ mỗi doc_type trước khi generation.",
+			"verification": "Đo lại Context Recall/Precision riêng cho mẫu này và kiểm tra top-k phải chứa bai-bao-2.md cùng quy-dinh-xu-ly-khieu-nai.md."
+		}
 	},
 	{
 		"category": "cross-domain",
 		"source": "bai-bao-4.md + quy-dinh-xu-ly-khieu-nai.md",
 		"question": "Khách hàng mua nhà Vinhomes Ocean Park 2 tham gia chương trình cam kết tiền thuê nhưng chưa nhận được hỗ trợ đúng hạn thì có quyền yêu cầu phản hồi không?",
 		"expected_answer": "Có. Khách hàng có thể gửi yêu cầu qua các kênh tiếp nhận của Vinhomes. Nếu yêu cầu đơn giản, Công ty phải xử lý trong vòng 4 ngày làm việc; nếu chưa có phương án được duyệt khi đến hạn thì phải gia hạn phản hồi qua app, email hoặc điện thoại.",
-		"expected_context": "Chương trình cam kết tiền thuê quy định khoản hỗ trợ và thời hạn thanh toán. Quy định xử lý khiếu nại cho phép khách hàng gửi yêu cầu, xử lý yêu cầu đơn giản trong 04 ngày và gia hạn phản hồi nếu chưa có phương án được duyệt."
+		"expected_context": "Chương trình cam kết tiền thuê quy định khoản hỗ trợ và thời hạn thanh toán. Quy định xử lý khiếu nại cho phép khách hàng gửi yêu cầu, xử lý yêu cầu đơn giản trong 04 ngày và gia hạn phản hồi nếu chưa có phương án được duyệt.",
+		"root_cause_analysis": {
+			"likely_low_metrics": ["Answer Relevance", "Faithfulness", "Context Recall"],
+			"failure_stage": "retrieval/generation",
+			"root_cause": "Câu hỏi kết hợp quyền khiếu nại với điều khoản cam kết tiền thuê. Mô hình có thể trả lời chung chung về quyền phản ánh nhưng bỏ sót điều kiện gia hạn phản hồi, hoặc nhầm thời hạn thanh toán tiền thuê với thời hạn xử lý khiếu nại.",
+			"improvement": "Tách truy vấn thành hai ý: 'cam kết tiền thuê/thời hạn thanh toán' và 'chưa có phương án được duyệt/thời hạn xử lý'. Khi sinh câu trả lời, yêu cầu trích dẫn riêng cho quyền gửi yêu cầu, 4 ngày làm việc và cơ chế gia hạn.",
+			"verification": "Chấm lại mẫu với rubric bắt buộc đủ ba ý: có quyền yêu cầu, 4 ngày làm việc nếu đơn giản, và gia hạn qua app/mail/điện thoại khi chưa có phương án."
+		}
 	},
 	{
 		"category": "out-of-domain",
 		"source": "none",
 		"question": "Ecopark hiện đang mở bán những căn hộ nào và có chương trình khuyến mại gì?",
 		"expected_answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có vì bộ tài liệu chỉ tập trung vào Vinhomes.",
-		"expected_context": "Không có tài liệu về Ecopark trong corpus Vinhomes; hệ thống cần từ chối thay vì suy đoán."
+		"expected_context": "Không có tài liệu về Ecopark trong corpus Vinhomes; hệ thống cần từ chối thay vì suy đoán.",
+		"root_cause_analysis": {
+			"likely_low_metrics": ["Context Recall", "Context Precision", "Answer Relevance"],
+			"failure_stage": "retrieval/safety",
+			"root_cause": "Ecopark nằm ngoài phạm vi corpus. Nếu hệ thống chỉ dựa vào top-k không rỗng hoặc không có ngưỡng confidence, các đoạn Vinhomes có thể bị dùng để trả lời sai thay vì kích hoạt safe refusal.",
+			"improvement": "Thêm domain gate nhận diện thực thể ngoài phạm vi, kết hợp ngưỡng dense score và kiểm tra độ phủ từ khóa thương hiệu. Khi không có bằng chứng đúng thực thể, trả về câu từ chối cố định và không gọi generator để suy đoán.",
+			"verification": "Chạy test với Ecopark và Novaworld: sources phải rỗng hoặc bị loại, retrieval_source là none, và câu trả lời phải giữ nguyên ý không thể xác minh."
+		}
 	},
 	{
 		"category": "out-of-domain",
