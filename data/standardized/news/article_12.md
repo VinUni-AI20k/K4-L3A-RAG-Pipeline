@@ -1,0 +1,51 @@
+# Top 10 Common Pitfalls & Examiner Warnings That Keep Candidates Stuck at Band 6.0 in IELTS Writing
+
+**Source:** https://ieltsliz.com/ielts-writing-top-10-common-pitfalls-examiner-warnings/
+
+**Crawled:** 2026-09-20T14:36:50.000000
+
+---
+
+# Top 10 Common Pitfalls & Examiner Warnings That Keep Candidates Stuck at Band 6.0 in IELTS Writing
+
+Many candidates possess solid English proficiency but consistently find themselves trapped at Band 6.0 or 6.5. Official examiner feedback identifies 10 habitual blunders responsible for this score ceiling.
+
+## Pitfall 1: Omitting or Under-developing the Overview in Task 1
+* **The Fatal Mistake:** Failing to include an overview, or burying data numbers inside it.
+* **The Examiner Rule:** The public band descriptors explicitly state that an essay without an overview **cannot receive higher than Band 5 for Task Achievement**. The overview is the heart of Task 1.
+
+## Pitfall 2: 'The Thesaurus Trap' – Forcing Complex Words into Unnatural Contexts
+* **The Fatal Mistake:** Memorizing obscure words and inserting them randomly to impress examiners (e.g., writing *myriad serendipities* instead of *numerous advantages*).
+* **The Examiner Rule:** Lexical Resource assesses **precision and collocation**, not just rarity. Incorrectly applied synonyms sound absurd and drop the LR score to Band 5. Use words whose meaning and prepositions you understand completely.
+
+## Pitfall 3: Cliche Openers & Memorized Formulaic Sentences
+* **The Fatal Mistake:** Beginning essays with tired clichés like *Since the dawn of human civilization, this controversial issue has sparked heated debate among intellectuals...*
+* **The Examiner Rule:** Examiners mark hundreds of scripts and immediately recognize robotic filler templates. They cross out memorized phrases and exclude them from your word count.
+
+## Pitfall 4: Mechanical & Repetitive Cohesive Devices
+* **The Fatal Mistake:** Starting every single sentence with an adverbial connector (*Firstly, Secondly, Thirdly, Furthermore, In addition, In contrast, On the contrary, To sum up*).
+* **The Examiner Rule:** Band 6 explicitly mentions *mechanical use of cohesive devices*. Band 7 and 8 require subtle, organic linking through pronouns (*this situation, these consequences*), relative clauses, and cohesive thematic flow.
+
+## Pitfall 5: Listing Too Many Points Without Developing Any of Them
+* **The Fatal Mistake:** Mentioning 5 different reasons in one paragraph, giving only one sentence to each reason.
+* **The Examiner Rule:** IELTS Writing is an assessment of depth, not breadth. Examiners reward one well-extended and fully supported idea far more than a bullet-point style list of shallow thoughts.
+
+## Pitfall 6: Writing Under the Prescribed Word Count
+* **The Fatal Mistake:** Submitting 142 words in Task 1 or 241 words in Task 2.
+* **The Examiner Rule:** Being even 1 word under the threshold triggers an automatic penalty under Task Response/Task Achievement.
+
+## Pitfall 7: Fabricating Unbelievable Research Statistics
+* **The Fatal Mistake:** Writing *According to a 2022 survey conducted by Oxford University involving 10,000 participants, 87.4% of citizens stated...*
+* **The Examiner Rule:** Examiners know these statistics are fabricated. While you are allowed to make up examples, realistic and logical everyday scenarios carry far more academic credibility than absurdly precise invented surveys.
+
+## Pitfall 8: Shifting or Inconsistent Stance in Task 2
+* **The Fatal Mistake:** Agreeing with the topic in the Introduction, arguing against it in Body 1, and coming to an ambiguous conclusion.
+* **The Examiner Rule:** Band 7 Task Response requires *a clear position presented throughout the response*. Keep your perspective consistent from the opening thesis to the final sentence.
+
+## Pitfall 9: Informality, Contractions & Conversational Rhetorical Questions
+* **The Fatal Mistake:** Writing contractions (*don't, can't, it's*), conversational slangs (*kids, stuff, cops, gonna*), or rhetorical questions (*Have you ever wondered why?*).
+* **The Examiner Rule:** Academic Writing demands objective, formal register. Rhetorical questions are frowned upon because your job is to answer questions, not pose them.
+
+## Pitfall 10: Copying the Prompt Verbatim
+* **The Fatal Mistake:** Copying sentences directly from the test prompt into the introduction.
+* **The Examiner Rule:** Words copied directly from the prompt are discounted by the examiner and subtracted from your word count, potentially dropping you below the required length.
