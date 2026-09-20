@@ -1,0 +1,121 @@
+[
+  {
+    "question": "Người điều khiển xe ô tô có nồng độ cồn vượt quá 50 đến 80 miligam/100 mililít máu bị phạt bao nhiêu tiền?",
+    "expected_answer": "Phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng, theo khoản 9 Điều 6 Nghị định 168/2024/NĐ-CP.",
+    "expected_context": "9. Phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở;",
+    "source_file": "data/standardized/legal/nd-168-2024-xu-phat-vi-pham-giao-thong-duong-bo-phan-1.md",
+    "doc_type": "legal"
+  },
+  {
+    "question": "Mức phạt tiền cao nhất về nồng độ cồn đối với người lái xe ô tô là bao nhiêu?",
+    "expected_answer": "Phạt tiền từ 30.000.000 đồng đến 40.000.000 đồng khi nồng độ cồn vượt quá 80 miligam/100 mililít máu hoặc vượt quá 0,4 miligam/1 lít khí thở.",
+    "expected_context": "11.  Phạt  tiền  từ  30.000.000  đồng  đến  40.000.000  đồng  đối  với  người  điều\n\nkhiển xe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt\n\nquá 80 miligam/100 mililít máu hoặc vượt quá 0,4 miligam/1 lít khí thở;",
+    "source_file": "data/standardized/legal/nd-168-2024-xu-phat-vi-pham-giao-thong-duong-bo-phan-1.md",
+    "doc_type": "legal"
+  },
+  {
+    "question": "Người lái xe ô tô chạy quá tốc độ trên 20 km/h đến 35 km/h bị phạt bao nhiêu tiền?",
+    "expected_answer": "Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng.",
+    "expected_context": "6. Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng đối với người điều khiển xe\n\nthực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe chạy quá tốc độ quy định trên 20 km/h đến 35 km/h;",
+    "source_file": "data/standardized/legal/nd-168-2024-xu-phat-vi-pham-giao-thong-duong-bo-phan-1.md",
+    "doc_type": "legal"
+  },
+  {
+    "question": "Lái xe ô tô có nồng độ cồn nhưng chưa vượt quá 50 miligam/100 mililít máu thì bị xử phạt thế nào?",
+    "expected_answer": "Bị phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng, cùng khung với hành vi chạy quá tốc độ trên 20 km/h đến 35 km/h.",
+    "expected_context": "c) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn nhưng chưa vượt quá 50 miligam/100 mililít máu hoặc chưa vượt quá 0,25 miligam/1 lít khí thở;",
+    "source_file": "data/standardized/legal/nd-168-2024-xu-phat-vi-pham-giao-thong-duong-bo-phan-1.md",
+    "doc_type": "legal"
+  },
+  {
+    "question": "Những xe ô tô nào bắt buộc phải lắp thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe?",
+    "expected_answer": "Xe ô tô kinh doanh vận tải phải lắp thiết bị giám sát hành trình. Xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải, xe ô tô đầu kéo và xe cứu thương phải lắp cả thiết bị giám sát hành trình lẫn thiết bị ghi nhận hình ảnh người lái xe.",
+    "expected_context": "2. Xe ô tô kinh doanh vận tải phải lắp thiết bị giám sát hành trình. Xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải, xe ô tô đầu kéo, xe cứu thương phải lắp thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe.",
+    "source_file": "data/standardized/legal/luat-36-2024-qh15-trat-tu-an-toan-giao-thong-duong-bo-phan-2.md",
+    "doc_type": "legal"
+  },
+  {
+    "question": "Bao nhiêu tuổi thì được điều khiển xe gắn máy và bao nhiêu tuổi được cấp giấy phép lái xe hạng B?",
+    "expected_answer": "Người đủ 16 tuổi trở lên được điều khiển xe gắn máy; người đủ 18 tuổi trở lên được cấp giấy phép lái xe hạng A1, A, B1, B, C1.",
+    "expected_context": "1. Độ tuổi của người lái xe, người điều khiển xe máy chuyên dùng được quy\n\nđịnh như sau:\n\na) Người đủ 16 tuổi trở lên được điều khiển xe gắn máy;\n\nb) Người đủ 18 tuổi trở lên được cấp giấy phép lái xe hạng A1, A, B1, B, C1",
+    "source_file": "data/standardized/legal/luat-36-2024-qh15-trat-tu-an-toan-giao-thong-duong-bo-phan-2.md",
+    "doc_type": "legal"
+  },
+  {
+    "question": "Giấy phép lái xe hạng B có thời hạn bao lâu?",
+    "expected_answer": "Giấy phép lái xe hạng B và hạng C1 có thời hạn 10 năm kể từ ngày cấp. Hạng A1, A, B1 không thời hạn; các hạng C, D1, D2, D, BE, C1E, CE, D1E, D2E và DE có thời hạn 05 năm.",
+    "expected_context": "5. Thời hạn của giấy phép lái xe được quy định như sau:\n\na) Giấy phép lái xe các hạng A1, A, B1 không thời hạn;\n\nb) Giấy phép lái xe hạng B và hạng C1 có thời hạn 10 năm kể từ ngày cấp;\n\nc) Giấy phép lái xe các hạng C, D1, D2, D, BE, C1E, CE, D1E, D2E và DE có\n\nthời hạn 05 năm kể từ ngày cấp.",
+    "source_file": "data/standardized/legal/luat-36-2024-qh15-trat-tu-an-toan-giao-thong-duong-bo-phan-2.md",
+    "doc_type": "legal"
+  },
+  {
+    "question": "Thiết bị an toàn cho trẻ em được Luật Trật tự, an toàn giao thông đường bộ định nghĩa như thế nào?",
+    "expected_answer": "Là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế ngồi hoặc nằm trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương khi xảy ra va chạm hoặc khi xe giảm tốc độ đột ngột, bằng cách hạn chế sự di chuyển của cơ thể trẻ em.",
+    "expected_context": "13. Thiết bị an toàn cho trẻ em là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế ngồi hoặc nằm trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương cho người dùng trong trường hợp xảy ra va chạm hoặc xe ô tô giảm tốc độ đột ngột, bằng cách hạn chế sự di chuyển của cơ thể trẻ em.",
+    "source_file": "data/standardized/legal/luat-36-2024-qh15-trat-tu-an-toan-giao-thong-duong-bo-phan-1.md",
+    "doc_type": "legal"
+  },
+  {
+    "question": "Xe cơ giới tham gia giao thông đường bộ phải đáp ứng những điều kiện nào?",
+    "expected_answer": "Phải được cấp chứng nhận đăng ký xe và gắn biển số xe theo quy định của pháp luật, đồng thời bảo đảm chất lượng an toàn kỹ thuật và bảo vệ môi trường.",
+    "expected_context": "a) Được cấp chứng nhận đăng ký xe và gắn biển số xe theo quy định của pháp luật;\n\nb) Bảo đảm chất lượng an toàn kỹ thuật và bảo vệ môi trường theo quy định\n\ncủa pháp luật.",
+    "source_file": "data/standardized/legal/luat-36-2024-qh15-trat-tu-an-toan-giao-thong-duong-bo-phan-2.md",
+    "doc_type": "legal"
+  },
+  {
+    "question": "Kinh doanh vận tải hành khách bằng xe ô tô gồm những loại hình nào?",
+    "expected_answer": "Gồm kinh doanh vận tải hành khách theo tuyến cố định, vận tải hành khách công cộng bằng xe buýt, vận tải hành khách bằng xe taxi, vận tải hành khách theo hợp đồng và loại hình mới theo quy định của Chính phủ.",
+    "expected_context": "6. Kinh doanh vận tải hành khách bằng xe ô tô gồm: kinh doanh vận tải hành khách theo tuyến cố định, kinh doanh vận tải hành khách công cộng bằng xe buýt, kinh doanh vận tải hành khách bằng xe taxi, kinh doanh vận tải hành khách theo hợp đồng và loại hình kinh doanh vận tải hành khách mới theo quy định của Chính phủ.",
+    "source_file": "data/standardized/legal/vbhn-49-vbhn-vpqh-luat-duong-bo.md",
+    "doc_type": "legal"
+  },
+  {
+    "question": "Xe ô tô kinh doanh vận tải hành khách theo tuyến cố định phải có sức chứa tối thiểu bao nhiêu chỗ?",
+    "expected_answer": "Phải có sức chứa từ 08 chỗ trở lên, không kể chỗ của người lái xe.",
+    "expected_context": "3. Xe ô tô kinh doanh vận tải hành khách theo tuyến cố định phải có sức chứa từ 08 chỗ trở lên (không kể chỗ của người lái xe) và có niên hạn sử dụng như sau:",
+    "source_file": "data/standardized/legal/nd-158-2024-hoat-dong-van-tai-duong-bo-phan-1.md",
+    "doc_type": "legal"
+  },
+  {
+    "question": "Cơ quan nào có thẩm quyền cấp giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên cho các cơ quan ở trung ương?",
+    "expected_answer": "Cục Cảnh sát giao thông, Bộ Công an, trừ xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp.",
+    "expected_context": "1. Cục Cảnh sát giao thông, Bộ Công an cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên cho các đối tượng thuộc bộ, ngành, cơ quan ở trung ương, trừ xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp.",
+    "source_file": "data/standardized/legal/nd-151-2024-huong-dan-luat-trat-tu-an-toan-giao-thong-duong-bo.md",
+    "doc_type": "legal"
+  },
+  {
+    "question": "Sau khi đạt kết quả kỳ sát hạch thì bao lâu được cấp giấy phép lái xe?",
+    "expected_answer": "Trong thời hạn 7 ngày làm việc kể từ ngày kết thúc kỳ sát hạch, do Cục Cảnh sát giao thông cấp. Giấy phép lái xe điện tử được tích hợp trong thời hạn 3 ngày làm việc.",
+    "expected_context": "Theo đó, Cục Cảnh sát giao thông (Bộ Công an) là đơn vị cấp giấy phép lái xe cho người đạt kết quả kỳ sát hạch trong thời hạn 7 ngày làm việc (kể từ ngày kết thúc kỳ sát hạch).",
+    "source_file": "data/standardized/news/article_02.md",
+    "doc_type": "news"
+  },
+  {
+    "question": "Thông tư nào quy định về sát hạch, cấp giấy phép lái xe và có hiệu lực từ khi nào?",
+    "expected_answer": "Thông tư số 12/2025/TT-BCA ngày 28/02/2025 của Bộ Công an, có hiệu lực từ ngày 01/3/2025.",
+    "expected_context": "Bộ Công an vừa ban hành Thông tư số 12/2025/TT-BCA ngày 28/02/2025 quy định về sát hạch, cấp giấy phép lái xe; cấp, sử dụng giấy phép lái xe quốc tế. Thông tư có hiệu lực từ ngày 01/3/2025.",
+    "source_file": "data/standardized/news/article_02.md",
+    "doc_type": "news"
+  },
+  {
+    "question": "Từ ngày 15/8, ô tô chở trẻ em dưới 10 tuổi không sử dụng thiết bị an toàn phù hợp bị xử lý thế nào?",
+    "expected_answer": "Bị phạt cảnh cáo, theo khoản 1a bổ sung vào Điều 6 Nghị định 168/2024/NĐ-CP bởi Nghị định 238/2026/NĐ-CP.",
+    "expected_context": "Một trong các nội dung đáng chú ý của Nghị định số 238/2026/NĐ-CP là bổ sung khoản 1a vào trước khoản 1 Điều 6 Nghị định số 168/2024/NĐ-CP về xử phạt hành vi chở trẻ em trên xe mà không sử dụng thiết bị an toàn. Theo đó, phạt cảnh cáo đối với người điều khiển xe ô tô thực hiện hành vi chở trẻ em dưới 10 tuổi",
+    "source_file": "data/standardized/news/article_04.md",
+    "doc_type": "news"
+  },
+  {
+    "question": "Nghị định 236/2026/NĐ-CP sửa đổi, bổ sung nghị định nào?",
+    "expected_answer": "Sửa đổi, bổ sung một số điều của Nghị định số 151/2024/NĐ-CP ngày 15/11/2024, văn bản này trước đó đã được sửa đổi bởi Nghị định số 184/2025/NĐ-CP ngày 01/7/2025.",
+    "expected_context": "Chính phủ ban hành Nghị định số 236/2026/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 151/2024/NĐ-CP ngày 15/11/2024 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Trật tự, an toàn giao thông đường bộ được sửa đổi, bổ sung bởi Nghị định số 184/2025/NĐ-CP ngày 01/7/2025 của Chính phủ.",
+    "source_file": "data/standardized/news/article_05.md",
+    "doc_type": "news"
+  },
+  {
+    "question": "Thông tư 14/2025/TT-BXD do cơ quan nào ban hành và quy định về nội dung gì?",
+    "expected_answer": "Do Bộ Xây dựng ban hành, quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ.",
+    "expected_context": "Bộ Xây dựng đã ban hành Thông tư số 14/2025/TT-BXD quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ.",
+    "source_file": "data/standardized/news/article_01.md",
+    "doc_type": "news"
+  }
+]
