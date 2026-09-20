@@ -1,0 +1,107 @@
+[
+  {
+    "id": "legal-01",
+    "question": "Theo corpus Thông tư 03/2026/TT-BVHTTDL, định mức là mức tối đa hay tối thiểu?",
+    "expected_answer": "Là mức tối đa để xác định chi phí cung cấp dịch vụ sự nghiệp công sử dụng ngân sách nhà nước.",
+    "expected_context": "Định mức kinh tế - kỹ thuật quy định tại Thông tư này là mức tối đa để xác định chi phí cung cấp dịch vụ sự nghiệp công sử dụng ngân sách nhà nước",
+    "source": "legal/03_2026_TT-BVHTTDL.md"
+  },
+  {
+    "id": "legal-02",
+    "question": "Theo corpus Thông tư 03/2026/TT-BVHTTDL, dịch vụ bảo tồn làng, bản hướng đến đối tượng nào?",
+    "expected_answer": "Làng, bản văn hóa truyền thống của các dân tộc thiểu số có nguy cơ mai một.",
+    "expected_context": "Dịch vụ bảo tồn làng, bản văn hóa truyền thống của các dân tộc thiểu số có nguy cơ mai một.",
+    "source": "legal/03_2026_TT-BVHTTDL.md"
+  },
+  {
+    "id": "legal-03",
+    "question": "Theo corpus Thông tư 25/2025/TT-BVHTTDL, định mức tối đa cần bảo đảm điều gì?",
+    "expected_answer": "Bảo đảm tính đúng, tính đủ để hoàn thành thực hiện cung cấp dịch vụ sự nghiệp công sử dụng ngân sách nhà nước.",
+    "expected_context": "Định mức kinh tế - kỹ thuật được quy định tại Thông tư này là mức tối đa, được bảo đảm tính đúng, tính đủ để hoàn thành thực hiện cung cấp dịch vụ sự nghiệp công sử dụng ngân sách nhà nước.",
+    "source": "legal/25_2025_TT-BVHTTDL.md"
+  },
+  {
+    "id": "legal-04",
+    "question": "Theo corpus Thông tư 25/2025/TT-BVHTTDL, công chức, viên chức hưởng lương ngân sách tham gia triển khai công việc có áp dụng định mức hao phí nhân công không?",
+    "expected_answer": "Không áp dụng định mức hao phí nhân công quy định tại Thông tư này.",
+    "expected_context": "Đối tượng là công chức, viên chức hưởng lương từ ngân sách nhà nước khi tham gia triển khai các thành phần công việc trong quy trình cung cấp dịch vụ sự nghiệp công không áp dụng định mức hao phí nhân công quy định tại Thông tư này.",
+    "source": "legal/25_2025_TT-BVHTTDL.md"
+  },
+  {
+    "id": "legal-05",
+    "question": "Theo corpus Thông tư 10/2026/TT-BVHTTDL, định mức tối đa bao gồm những loại hao phí nào?",
+    "expected_answer": "Hao phí nhân công, máy móc, thiết bị và vật liệu.",
+    "expected_context": "Định mức kinh tế - kỹ thuật tại Thông tư này là mức tối đa, bao gồm các hao phí nhân công, máy móc, thiết bị và vật liệu sử dụng để hoàn thành thực hiện cung cấp dịch vụ sự nghiệp công.",
+    "source": "legal/thong_tu_10_2026_bvhttdl.md"
+  },
+  {
+    "id": "legal-06",
+    "question": "Theo corpus Thông tư 10/2026/TT-BVHTTDL, cơ quan, tổ chức ngoài công lập không sử dụng ngân sách nhà nước có được khuyến khích áp dụng định mức không?",
+    "expected_answer": "Có, các cơ quan, tổ chức ngoài công lập triển khai dịch vụ sự nghiệp công không sử dụng ngân sách nhà nước được khuyến khích áp dụng.",
+    "expected_context": "Khuyến khích cơ quan, tổ chức ngoài công lập có triển khai dịch vụ sự nghiệp công không sử dụng ngân sách nhà nước áp dụng định mức kinh tế - kỹ thuật theo quy định tại Thông tư này.",
+    "source": "legal/thong_tu_10_2026_bvhttdl.md"
+  },
+  {
+    "id": "news-01",
+    "question": "Theo bài viết về Hà Nội trong corpus, ai đặt tên Thăng Long và vào năm nào?",
+    "expected_answer": "Vua Lý Thái Tổ, năm 1010.",
+    "expected_context": "Hà Nội được vua Lý Thái Tổ đặt tên là Thăng Long (rồng bay lên) vào năm 1010.",
+    "source": "news/article_01.md"
+  },
+  {
+    "id": "news-02",
+    "question": "Theo bài Hạ Long trong corpus, mùa mưa bão kéo dài từ tháng mấy đến tháng mấy?",
+    "expected_answer": "Từ tháng 6 đến tháng 8.",
+    "expected_context": "mùa mưa bão từ tháng 6 đến tháng 8 có thể khiến chuyến đi của bạn khó lường trước.",
+    "source": "news/article_02.md"
+  },
+  {
+    "id": "news-03",
+    "question": "Theo bài Hạ Long trong corpus, thời điểm nào trong ngày lý tưởng để chèo kayak?",
+    "expected_answer": "Ngay trước hoàng hôn.",
+    "expected_context": "Khoảng thời gian ngay trước hoàng hôn là thời điểm lý tưởng để chèo thuyền kayak ngắm nhìn những đầm nước yên tĩnh và các con thuyền đánh cá ở cự ly gần.",
+    "source": "news/article_02.md"
+  },
+  {
+    "id": "news-04",
+    "question": "Theo bài Hội An trong corpus, bãi biển An Bàng cách Phố Cổ bao xa?",
+    "expected_answer": "7 km.",
+    "expected_context": "**Bãi biển An Bàng** , chỉ cách Phố Cổ 7km",
+    "source": "news/article_03.md"
+  },
+  {
+    "id": "news-05",
+    "question": "Theo bài Hội An trong corpus, du thuyền hoàng hôn được gợi ý trên sông nào?",
+    "expected_answer": "Sông Thu Bồn.",
+    "expected_context": "Đừng rời đi mà chưa trải nghiệm một chuyến **du thuyền hoàng hôn** trên sông Thu Bồn.",
+    "source": "news/article_03.md"
+  },
+  {
+    "id": "news-06",
+    "question": "Theo bài Đà Nẵng trong corpus, điểm cao nhất của đèo Hải Vân cao bao nhiêu so với mực nước biển?",
+    "expected_answer": "496 mét.",
+    "expected_context": "Ở điểm cao nhất, Đèo Hải Vân đạt độ cao 496 mét so với mực nước biển",
+    "source": "news/article_04.md"
+  },
+  {
+    "id": "news-07",
+    "question": "Theo bài Đà Nẵng trong corpus, thời điểm nào được gợi ý để leo Ngũ Hành Sơn?",
+    "expected_answer": "Ngay trước 7 giờ sáng.",
+    "expected_context": "Ngay trước 7 giờ sáng là thời điểm hoàn hảo để bạn leo lên những bậc thang dốc đứng tại **Ngũ Hành Sơn**.",
+    "source": "news/article_04.md"
+  },
+  {
+    "id": "news-08",
+    "question": "Theo bài Phú Quốc trong corpus, hai món hải sản địa phương được yêu thích nhất được nêu là gì?",
+    "expected_answer": "Nhum biển nướng và gỏi cá trích.",
+    "expected_context": "nhum biển nướng và gỏi cá trích là hai món ăn địa phương được yêu thích nhất.",
+    "source": "news/article_05.md"
+  },
+  {
+    "id": "news-09",
+    "question": "Theo bài Phú Quốc trong corpus, địa điểm nào được gợi ý để ngắm hoàng hôn buông xuống bến cảng?",
+    "expected_answer": "Dinh Cậu.",
+    "expected_context": "Hãy ghé thăm Dinh Cậu vào cuối buổi chiều để ngắm hoàng hôn buông xuống bến cảng từ ngọn hải đăng, nơi cũng chính là ngôi đền thờ Thần Biển.",
+    "source": "news/article_05.md"
+  }
+]
