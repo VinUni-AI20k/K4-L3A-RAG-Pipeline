@@ -25,9 +25,10 @@ Dự án xây dựng hệ thống **Trợ lý Trí tuệ Nhân tạo (RAG Chatbo
 
 | STT | Thành viên | Mã học viên | Vai trò phụ trách | Module & Deliverables chính |
 | :---: | :--- | :---: | :--- | :--- |
-| 1 | **Ngọ Doãn Ngọc** | `2A202602635` | **Retrieval & Reranking** | Task 5 (Dense Semantic Search), Task 6 (BM25 Lexical Search), Task 7 (Reciprocal Rank Fusion RRF), Task 8 (PageIndex Fallback), Task 9 (Retrieval Pipeline & Fallback Threshold Calibration). |
-| 2 | **Nguyễn Thái Anh** | `2A202602810` | **Generation & UI** | Task 10 (Generation kèm trích dẫn nguồn `[Document X]`, Reordering chống Lost-in-the-middle, Safe Refusal), Xây dựng giao diện Streamlit UI (`app.py`), tính năng Bonus Citation Highlighting & Conversation Memory. |
+| 1 | **Nguyễn Thái Anh** | `2A202602810` | **Generation & UI Lead** | Task 10 (Generation kèm trích dẫn nguồn `[Document X]`, Reordering chống Lost-in-the-middle, Safe Refusal), Xây dựng giao diện Streamlit UI (`app.py`), tính năng Bonus Citation Highlighting & Conversation Memory. |
+| 2 | **Ngọ Doãn Ngọc** | `2A202602635` | **Retrieval & Reranking** | Task 5 (Dense Semantic Search), Task 6 (BM25 Lexical Search), Task 7 (Reciprocal Rank Fusion RRF), Task 8 (PageIndex Fallback), Task 9 (Retrieval Pipeline & Fallback Threshold Calibration). |
 | 3 | **Hoàng Ngọc Đăng Khoa** | `2A202602790` | **Evaluation & Benchmark** | Biên soạn và nghiệm thu Golden Dataset 16 cases (`golden_dataset.json`), phát triển script đo kiểm tự động (`run_eval.py`), thực hiện đánh giá A/B Testing 4 metrics RAG trong `RESULT.md`, phân tích lỗi (Failure Analysis) và nghiệm thu 20/20 unit tests. |
+| 4 | **Đoàn Quang Minh** | `2A202602711` | **Data Lead** | Task 1 (Thu thập 3 tài liệu pháp luật PDF gốc), Task 2 (Crawl 5 bài báo tài chính kèm metadata), Task 3 (Chuẩn hóa dữ liệu sang Markdown), Task 4 (Chunking, Embedding và Indexing 44 chunks vào ChromaDB). |
 
 ---
 
@@ -140,8 +141,10 @@ pytest -q
 
 ```text
 K4-L3A-RAG-Pipeline/
+├── TEAMMATES.md                       # Danh sách thành viên và phân công vai trò
+├── README.md                          # Tài liệu tổng quan dự án
 ├── app.py                             # Ứng dụng Streamlit UI kèm Citation Highlighting & Memory
-├── chroma_db/                         # Cơ sở dữ liệu vector ChromaDB
+├── chroma_db/                         # Cơ sở dữ liệu vector ChromaDB (sinh tự động khi chạy index)
 ├── data/
 │   ├── landing/                       # Dữ liệu thô thu thập ban đầu (PDF pháp luật, JSON bài báo)
 │   └── standardized/                  # Dữ liệu chuẩn hóa định dạng Markdown (legal/, news/)
@@ -154,9 +157,10 @@ K4-L3A-RAG-Pipeline/
 │   │   └── run_eval.py                # Script chạy benchmark tự động
 │   └── individual/                    # Báo cáo đóng góp cá nhân từng thành viên
 ├── reports/                           # Báo cáo cá nhân và kết quả nộp bài
-│   ├── 2A202602635_NgoDoanNgoc.md
-│   ├── 2A202602790_HoangNgocDangKhoa.md
-│   ├── 2A202602810-NguyenThaiAnh.md
+│   ├── K4-L3A-2A202602635-NgoDoanNgoc.md
+│   ├── K4-L3A-2A202602711-DoanQuangMinh.md
+│   ├── K4-L3A-2A202602790-HoangNgocDangKhoa.md
+│   ├── K4-L3A-2A202602810-NguyenThaiAnh.md
 │   └── RESULT.md
 ├── src/                               # 10 Tasks pipeline từ thu thập đến generation
 └── tests/                             # Unit tests: test_contracts.py và test_acceptance.py

@@ -6,7 +6,7 @@
 - Mã học viên: 2A202602790
 - Lớp: K4-L3A
 - Nhóm: Phronesis
-- Repository/branch: https://github.com/nthanhwork/K4-L3A-RAG-Pipeline / branch: dkhoa
+- Repository/branch: https://github.com/nthanhwork/K4-L3A-RAG-Pipeline / branch: main
 
 ---
 
@@ -14,13 +14,11 @@
 
 | Module/deliverable | Việc tôi trực tiếp làm | File/commit/PR | Trạng thái |
 |---|---|---|---|
-| **Golden Dataset Verification & Acceptance** | Tiếp nhận, kiểm tra và nghiệm thu bộ dữ liệu chuẩn gồm 16 cặp câu hỏi - câu trả lời - context trích xuất từ 3 Nghị định pháp lý (357, 358, 359/2026) và 5 bài báo nghiệp vụ. Đảm bảo 100% ca kiểm thử có căn cứ ngữ cảnh xác thực, phân bổ đều giữa các dạng câu hỏi tra cứu thông tin, số liệu định lượng, điều kiện hỗ trợ và quy trình nộp ngân sách. Vượt qua bài kiểm tra 	est_golden_dataset_has_15_grounded_cases. | group_project/evaluation/golden_dataset.json | Done |
-| **A/B Benchmark & 4 Metrics Evaluation** | Vận hành script đo lường tự động 
-un_eval.py, tiến hành đo đạc và tính toán 4 metrics cốt lõi của RAG (Faithfulness, Answer Relevance, Context Recall, Context Precision) trên cả 2 cấu hình Config A (Dense-only) và Config B (Hybrid + RRF). Thu thập dữ liệu thực nghiệm so sánh phương sai (Delta B - A). | group_project/evaluation/run_eval.py, group_project/evaluation/RESULT.md | Done |
-| **Failure Analysis (Phân tích lỗi Worst Performers)** | Phân tích sâu 3 trường hợp có điểm số thấp nhất trong bài benchmark, phân loại chính xác nguồn gốc lỗi theo từng giai đoạn (Retrieval, Generation, Data) và chỉ ra nguyên nhân gốc rễ (phân tán từ khóa 'cơ cấu lại vốn', loãng số liệu tỷ lệ trong vector, hiện tượng LLM tóm tắt thiếu ý). | group_project/evaluation/RESULT.md, 
-eports/RESULT.md | Done |
-| **Đề xuất cải tiến kỹ thuật (Recommendations)** | Xây dựng 3 khuyến nghị ưu tiên theo thứ tự tác động: Bổ sung Metadata Filtering theo nguồn văn bản pháp luật, chuyển đổi sang Semantic/Section Chunking theo điều khoản, và tối ưu Prompt ép trích dẫn toàn diện danh sách điểm mới. Đánh giá 2 thử nghiệm mở rộng (+4 điểm Bonus: Conversation Memory & Citation Highlighting). | group_project/evaluation/RESULT.md | Done |
-| **Kiểm thử nghiệm thu toàn hệ thống** | Chạy và xác thực toàn bộ bộ kiểm thử của dự án, đạt kết quả tuyệt đối **20/20 test pass** (15 contract tests trong 	est_contracts.py và 5 acceptance tests trong 	est_acceptance.py). | 	ests/test_contracts.py, 	ests/test_acceptance.py | Done |
+| **Golden Dataset Verification & Acceptance** | Tiếp nhận, kiểm tra và nghiệm thu bộ dữ liệu chuẩn gồm 16 cặp câu hỏi - câu trả lời - context trích xuất từ 3 Nghị định pháp lý (357, 358, 359/2026) và 5 bài báo nghiệp vụ. Đảm bảo 100% ca kiểm thử có căn cứ ngữ cảnh xác thực, phân bổ đều giữa các dạng câu hỏi tra cứu thông tin, số liệu định lượng, điều kiện hỗ trợ và quy trình nộp ngân sách. Vượt qua bài kiểm tra `test_golden_dataset_has_15_grounded_cases`. | `group_project/evaluation/golden_dataset.json` | Done |
+| **A/B Benchmark & 4 Metrics Evaluation** | Vận hành script đo lường tự động `run_eval.py`, tiến hành đo đạc và tính toán 4 metrics cốt lõi của RAG (Faithfulness, Answer Relevance, Context Recall, Context Precision) trên cả 2 cấu hình Config A (Dense-only) và Config B (Hybrid + RRF). Thu thập dữ liệu thực nghiệm so sánh phương sai (Delta B - A). | `group_project/evaluation/run_eval.py`, `group_project/evaluation/RESULT.md` | Done |
+| **Failure Analysis (Phân tích lỗi Worst Performers)** | Phân tích sâu 3 trường hợp có điểm số thấp nhất trong bài benchmark, phân loại chính xác nguồn gốc lỗi theo từng giai đoạn (Retrieval, Generation, Data) và chỉ ra nguyên nhân gốc rễ (phân tán từ khóa 'cơ cấu lại vốn', loãng số liệu tỷ lệ trong vector, hiện tượng LLM tóm tắt thiếu ý). | `group_project/evaluation/RESULT.md`, `reports/RESULT.md` | Done |
+| **Đề xuất cải tiến kỹ thuật (Recommendations)** | Xây dựng 3 khuyến nghị ưu tiên theo thứ tự tác động: Bổ sung Metadata Filtering theo nguồn văn bản pháp luật, chuyển đổi sang Semantic/Section Chunking theo điều khoản, và tối ưu Prompt ép trích dẫn toàn diện danh sách điểm mới. Đánh giá 2 thử nghiệm mở rộng (+4 điểm Bonus: Conversation Memory & Citation Highlighting). | `group_project/evaluation/RESULT.md` | Done |
+| **Kiểm thử nghiệm thu toàn hệ thống** | Chạy và xác thực toàn bộ bộ kiểm thử của dự án, đạt kết quả tuyệt đối **20/20 test pass** (15 contract tests trong `tests/test_contracts.py` và 5 acceptance tests trong `tests/test_acceptance.py`). | `tests/test_contracts.py`, `tests/test_acceptance.py` | Done |
 
 ---
 
@@ -42,10 +40,9 @@ eports/RESULT.md | Done |
 ## Kiểm thử và kết quả
 
 - **Các bài kiểm thử đã thực hiện:**
-  - pytest tests/test_contracts.py -q: Đạt **15/15 passed** (toàn bộ hợp đồng dữ liệu, schema SearchResult, GenerationResult, 
-erank_rrf, pageindex_search đều chuẩn hóa).
-  - pytest tests/test_acceptance.py -q: Đạt **5/5 passed** (đầy đủ tài liệu pháp luật, tin tức kèm metadata, markdown chuẩn hóa, 16 ca golden dataset và file RESULT.md hoàn thiện không còn TODO).
-  - Toàn bộ test suite: pytest -q đạt **20/20 passed**.
+  - `pytest tests/test_contracts.py -q`: Đạt **15/15 passed** (toàn bộ hợp đồng dữ liệu, schema SearchResult, GenerationResult, `rerank_rrf`, `pageindex_search` đều chuẩn hóa).
+  - `pytest tests/test_acceptance.py -q`: Đạt **5/5 passed** (đầy đủ tài liệu pháp luật, tin tức kèm metadata, markdown chuẩn hóa, 16 ca golden dataset và file RESULT.md hoàn thiện không còn TODO).
+  - Toàn bộ test suite: `pytest -q` đạt **20/20 passed**.
 - **Kết quả đo kiểm A/B trên 16 câu hỏi Golden Dataset:**
   - **Config A (Dense-only):** Faithfulness = 0.93, Answer Relevance = 0.91, Context Recall = 0.83, Context Precision = 0.92 | Điểm trung bình: **0.8975**.
   - **Config B (Hybrid + RRF):** Faithfulness = 0.96, Answer Relevance = 0.95, Context Recall = 0.81, Context Precision = 0.97 | Điểm trung bình: **0.9225**.
