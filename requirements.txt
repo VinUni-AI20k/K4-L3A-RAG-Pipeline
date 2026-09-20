@@ -1,0 +1,9 @@
+# --- Các thư viện chính (Core Dependencies) ---
+playwright>=1.40.0
+python-dotenv>=1.0.0
+
+# --- Các thư viện cho Developer (Tương đương nhóm "dev") ---
+pytest>=8.0.0
+pytest-playwright>=0.4.0
+black>=24.0.0
+flake8>=7.0.0
