@@ -11,6 +11,7 @@ Mỗi document/chunk phải theo docs/MODULE_CONTRACTS.md. ID cần ổn định
 chạy lại pipeline không tạo dữ liệu trùng. Task 5 phải dùng chung embed_texts().
 """
 
+import json
 import math
 import os
 import re
@@ -40,6 +41,30 @@ EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM") or "1024")
 EMBEDDING_BATCH_SIZE = 32
 
 COLLECTION_NAME = "rag_documents"
+
+
+def _front_matter(content: str) -> dict[str, str]:
+    """Parse the small YAML-compatible header produced by Task 3."""
+
+    lines = content.splitlines()
+    if not lines or lines[0].strip() != "---":
+        return {}
+
+    metadata: dict[str, str] = {}
+    for line in lines[1:]:
+        if line.strip() == "---":
+            break
+        key, separator, raw_value = line.partition(":")
+        if not separator:
+            continue
+        value = raw_value.strip()
+        try:
+            parsed = json.loads(value)
+        except json.JSONDecodeError:
+            parsed = value.strip('"\'')
+        if isinstance(parsed, str) and parsed.strip():
+            metadata[key.strip()] = parsed.strip()
+    return metadata
 
 
 @lru_cache(maxsize=1)
@@ -136,16 +161,23 @@ def load_documents() -> list[dict]:
         content = path.read_text(encoding="utf-8-sig").strip()
         if not content:
             continue
+        front_matter = _front_matter(content)
         heading = re.search(r"^#\s+(.+)$", content, re.MULTILINE)
-        source = re.search(r"^\*\*Source:\*\*\s*(https?://\S+)", content, re.MULTILINE)
+        legacy_source = re.search(r"^\*\*Source:\*\*\s*(https?://\S+)", content, re.MULTILINE)
+        source_value = front_matter.get("source") or (
+            legacy_source.group(1) if legacy_source else relative.as_posix()
+        )
+        source_url = source_value if source_value.startswith(("https://", "http://")) else None
         documents.append({
             "id": relative.as_posix(),
             "content": content,
             "metadata": {
-                "source": relative.as_posix(),
-                "title": heading.group(1).strip() if heading else path.stem,
-                "doc_type": relative.parts[0],
-                "url": source.group(1) if source else None,
+                "source": source_value,
+                "title": front_matter.get("title") or (
+                    heading.group(1).strip() if heading else path.stem
+                ),
+                "doc_type": front_matter.get("doc_type") or relative.parts[0],
+                "url": source_url,
             },
         })
     return documents
