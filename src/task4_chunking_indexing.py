@@ -12,7 +12,7 @@ STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
 CHROMA_DIR = Path(__file__).parent.parent / "chroma_db"
 CHUNK_SIZE, CHUNK_OVERLAP = 900, 120
 CHUNKING_METHOD = "recursive"
-EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "gemini-embedding-001")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "gemini-embedding-2")
 EMBEDDING_DIM = 3072
 COLLECTION_NAME = "rag_documents"
 
@@ -66,8 +66,8 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
         return []
     client = _gemini_client()
     vectors: list[list[float]] = []
-    for start in range(0, len(texts), 50):
-        batch = texts[start:start + 50]
+    for start in range(0, len(texts), 100):
+        batch = texts[start:start + 100]
         vectors.extend(_embed_batch(client, batch, start))
     return vectors
 
@@ -143,10 +143,11 @@ def run_pipeline() -> None:
     collection = get_collection()
     stored = collection.get(include=["metadatas"])
     existing = dict(zip(stored.get("ids", []), stored.get("metadatas", [])))
+    force_reindex = os.getenv("FORCE_REINDEX", "").lower() in {"1", "true", "yes"}
     wanted_ids = {item["id"] for item in chunks}
 
     pending = [item for item in chunks
-        if item["id"] not in existing
+        if force_reindex or item["id"] not in existing
         or not _same_metadata(existing[item["id"]], item["metadata"])]
     if pending:
         embedded = embed_chunks(pending)

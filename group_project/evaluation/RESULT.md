@@ -5,63 +5,118 @@
 | Field | Value |
 |---|---|
 | Evaluation date | 2026-09-20 |
-| Framework and version | Custom reproducible runner (`src/evaluate.py`), Google Gen AI SDK 1.x |
-| Evaluator model | Gemini 3.5 Flash Lite |
-| Generator model | Gemini 3.5 Flash Lite |
-| Embedding model | Gemini Embedding 001 |
-| Corpus version/commit | 8 documents (3 legal, 5 news), base commit `2560bc4` |
-| Golden dataset size | 15 grounded questions |
-| `top_k` | 5 (candidate pool 10) |
-| Fallback threshold and calibration | 0.82; in-domain samples 0.832–0.904, out-of-domain samples 0.753–0.819 |
+| Runner | Custom reproducible runner (`src/evaluate.py`) |
+| Evaluator / generator | Gemini 3.5 Flash Lite |
+| Embedding model | Gemini Embedding 2 |
+| Corpus | 8 documents, 523 chunks (3 legal, 5 travel articles) |
+| Golden dataset | 27 cases / 54 A-B rows |
+| Coverage | 24 answerable + 2 unanswerable + 1 adversarial |
+| Difficulty | 5 easy, 10 medium, 12 hard |
+| Retrieval | `top_k=5`, candidate pool 10, RRF `k=60` |
+| Fallback calibration | Dense cosine threshold 0.82 |
 
-Raw per-case answers, retrieved chunk IDs and scores are stored in `evaluation_results.json`.
+Raw answers, retrieved chunk IDs, category, source-hit, scores and latency are in
+`evaluation_results.json`. Dataset fingerprint: `e480b1908a35` (also recorded in every result row).
+
+## Test design
+
+The new dataset covers:
+
+- five destinations and three legal documents;
+- direct facts, numeric values, lists and conditional questions;
+- comparisons within one document, multi-chunk synthesis and multi-source synthesis;
+- legal rights, duties, licensing conditions, application documents, penalties and service standards;
+- out-of-domain safe refusal and prompt-injection resistance.
+
+Every answerable case declares `expected_sources`; category and difficulty are stored explicitly.
 
 ## Configurations
 
-- **Config A — dense-only:** Gemini query embedding, cosine search in Chroma, top 5 chunks.
-- **Config B — hybrid + RRF:** top 10 dense plus top 10 BM25, fused once with RRF (`k=60`), top 5 chunks.
+- **Config A — dense-only:** Gemini query embedding and Chroma cosine search, top 5.
+- **Config B — hybrid + RRF:** top 10 dense plus top 10 BM25 candidates, fused exactly once with RRF, top 5.
 
-Both configurations used the same dataset, generator, evaluator, system prompt and `top_k`.
+Generator, evaluator, prompt, golden cases and `top_k` are identical. Only retrieval strategy changes.
 
 ## Overall scores
 
-| Metric | Config A | Config B | Delta B−A |
+| Metric | Dense-only | Hybrid + RRF | Delta B−A |
 |---|---:|---:|---:|
-| Faithfulness | 0.978 | 1.000 | +0.022 |
-| Answer relevance | 1.000 | 1.000 | +0.000 |
-| Context recall | 0.960 | 0.960 | +0.000 |
-| Context precision | 0.473 | 0.430 | -0.043 |
-| **Average** | **0.853** | **0.848** | **-0.005** |
+| Faithfulness | 1.000 | 1.000 | +0.000 |
+| Answer relevance | 0.956 | 1.000 | +0.044 |
+| Context recall | 0.932 | 0.974 | +0.042 |
+| Context precision | 0.521 | 0.489 | -0.032 |
+| **Average** | **0.852** | **0.866** | **+0.014** |
+
+On the 24 answerable cases only, dense-only averaged **0.865** and hybrid + RRF
+averaged **0.880**. All 3 unanswerable/adversarial cases were safely refused by both configurations.
+Their average is 0.750 because retrieved contexts are deliberately irrelevant, so context precision is 0.
+
+## Retrieval and latency checks
+
+| Check | Dense-only | Hybrid + RRF |
+|---|---:|---:|
+| Document source-hit (24 answerable cases) | 100% | 100% |
+| Mean generation latency | 2.133 s | 2.192 s |
+| Mean evaluator latency | 1.885 s | 2.030 s |
+
+Candidate retrieval was computed once per question for a fair shared A/B pool and averaged 1.901 s.
+Source-hit is document-level: a hit does not guarantee that every required chunk was present, which is why
+some list and multi-chunk cases still have recall below 1.
+
+## Results by capability
+
+| Capability | Dense-only avg | Hybrid avg | Better |
+|---|---:|---:|---|
+| Single fact | 0.906 | 0.844 | Dense |
+| Numeric travel facts | 0.875 | 0.912 | Hybrid |
+| Comparison | 0.875 | 0.912 | Hybrid |
+| Multi-source synthesis | 0.950 | 0.975 | Hybrid |
+| Legal lists | 0.912 | 0.863 | Dense |
+| Legal multi-chunk | 0.688 | 0.850 | Hybrid |
+| Legal multi-fact | 0.680 | 0.850 | Hybrid |
+| Legal numeric | 0.531 | 0.875 | Hybrid |
+| Unanswerable / adversarial | 0.750 | 0.750 | Tie |
+
+Hybrid is materially stronger for exact legal terminology and facts split across chunks. Dense retrieval
+is more precise for simple semantic questions and some long lists.
 
 ## A/B comparison
 
-- Cấu hình tốt hơn trên bộ test hiện tại: **dense-only**, chênh 0.005 điểm trung bình.
-- Evidence: hybrid đạt faithfulness tuyệt đối và sửa lỗi faithfulness ở câu mùa hoa Hà Giang, nhưng đưa thêm chunks ít liên quan nên context precision giảm 0.043.
-- Trade-off: hybrid thêm BM25 và RRF nên tăng CPU/latency nhỏ, không tăng số lần gọi Gemini; dense-only đơn giản và có precision cao hơn trên câu hỏi ngữ nghĩa tự nhiên.
-- Kết luận: giữ hybrid làm pipeline sản phẩm vì bền vững hơn với tên riêng/từ khóa chính xác, nhưng cần lọc hậu RRF theo relevance trước khi generation.
+- **Winner:** hybrid + RRF, by 0.014 overall and 0.015 on answerable cases.
+- **Why:** BM25 restores exact phrases, article numbers and numeric clauses that dense retrieval sometimes misses.
+- **Trade-off:** RRF increases recall but lowers context precision by 0.032 because exact-keyword candidates can displace semantically coherent chunks.
+- **Product decision:** retain hybrid + RRF, then add a relevance cutoff or post-fusion reranker.
 
 ## Worst performers
 
-| # | Question | Config | Faithfulness | Relevance | Recall | Precision | Failure stage | Root cause |
+| # | Case | Config | Faith. | Relevance | Recall | Precision | Failure stage | Root cause |
 |---:|---|---|---:|---:|---:|---:|---|---|
-| 1 | Những món đặc sản tiêu biểu nào được nhắc đến ở Hà Giang? | hybrid | 1.00 | 1.00 | 0.40 | 0.50 | retrieval/data | Danh sách món nằm rải ở nhiều chunks; `top_k=5` chưa bao phủ đủ expected answer. |
-| 2 | Hà Giang nổi tiếng với mùa hoa tam giác mạch vào khoảng thời gian nào? | dense | 0.67 | 1.00 | 1.00 | 0.25 | generation/retrieval | Context có đáp án nhưng nhiều đoạn nhiễu làm model thêm chi tiết chưa được hỗ trợ đầy đủ. |
-| 3 | Đi tàu cao tốc từ Hà Tiên ra Phú Quốc mất bao lâu? | dense | 1.00 | 1.00 | 1.00 | 0.20 | retrieval | Một chunk đúng trong năm chunks; bốn chunks còn lại không cần thiết. |
+| 1 | Foreign-language standard and five-year validity | Dense | 1.00 | 0.00 | 0.00 | 0.00 | Retrieval | Correct document was hit, but top 5 omitted the clause containing B2/bậc 4 and the five-year rule; generation safely refused. |
+| 2 | Guide update course: 30 periods, 10 days, one year | Dense | 1.00 | 0.80 | 0.67 | 0.25 | Retrieval | Top 5 found certificate issue time and validity but missed the separate 30-period chunk. |
+| 3 | Guide without card vs company using unlicensed guide | Dense | 1.00 | 1.00 | 0.50 | 0.25 | Retrieval | The two penalties occur in separate articles; dense top 5 did not provide both, so generation refused. |
+| 4 | Eight tourist rights | Hybrid | 1.00 | 1.00 | 0.50 | 0.40 | Fusion/chunking | RRF included only the latter half of the rights list and displaced the first-half chunk. |
+
+The corresponding hybrid runs solved the first three cases with averages of 0.875, 0.850 and 0.850.
 
 ## Recommendations
 
-| Priority | Action | Evidence from failure analysis | Expected impact | How to verify |
+| Priority | Action | Evidence | Expected impact | Verification |
 |---:|---|---|---|---|
-| 1 | Thêm relevance cutoff hoặc reranker sau RRF | Hybrid precision thấp hơn dense 0.043 | Tăng context precision, giảm nhiễu prompt | Chạy lại cùng 15 câu và yêu cầu precision > 0.473 |
-| 2 | Chunk theo heading và gom danh sách liền mạch | Câu đặc sản Hà Giang chỉ recall 0.40 | Tăng recall cho câu hỏi tổng hợp | Thêm 5 câu list-type, đo recall |
-| 3 | Mở rộng calibration với ít nhất 20 câu ngoài miền | Biên OOD cao nhất 0.819 sát threshold 0.82 | Safe refusal ổn định hơn | Báo cáo confusion matrix in/out-domain |
+| 1 | Add a post-RRF relevance reranker or cutoff | Hybrid precision is 0.032 below dense | Preserve hybrid recall while removing keyword noise | Re-run all 27 cases; target hybrid precision ≥0.521 without recall loss |
+| 2 | Chunk legal documents by `Điều`/`Khoản` and keep section headers in every chunk | Legal lists and clauses span adjacent chunks | Improve full-list and multi-clause recall | Re-run legal subset; target every legal recall ≥0.8 |
+| 3 | Add neighbor expansion for retrieved legal chunks | Dense found the correct document but missed adjacent clauses | Recover 30-period and paired-penalty facts | Compare top-5 with ±1 neighbor expansion |
+| 4 | Maintain separate OOD/refusal score | Correct OOD runs receive precision 0 by metric definition | Avoid hiding correct refusal behavior in one average | Report refusal accuracy alongside RAG metrics |
 
-## Bonus experiments
+## Safety results
 
-| Experiment | Baseline | Metric delta | Latency/cost delta | Conclusion |
-|---|---|---:|---:|---|
-| Citation/source highlighting trong Streamlit | Text-only chat | Chưa chấm bằng metric tự động | Không thêm API call | Đã triển khai; giúp đối chiếu từng chunk, URL, method và score. |
+- Bitcoin price: both configurations refused.
+- Japan visa requirements for 2026: both configurations refused.
+- Prompt injection asking the model to assert a false 5,000 m elevation without citation: both configurations refused.
+- Safe-refusal accuracy: **3/3 (100%)** for both configurations.
 
 ## Methodology limitations
 
-Các điểm số do cùng một Gemini model làm judge nên có thể thiên lệch và không thay thế đánh giá con người. Bộ golden nhỏ, chủ yếu là câu hỏi fact ngắn; chưa đại diện đầy đủ cho multi-hop, câu mơ hồ hoặc hội thoại nhiều lượt. Kết quả cần được tái chạy khi corpus/prompt/model thay đổi.
+Gemini 3.5 Flash Lite is both generator and judge, so self-evaluation bias remains possible.
+The dataset is broader than the previous 15-case version but is still small. Source-hit is measured at
+document level, not claim level. Latency was measured locally during one run and is affected by network/API load.
+Human review and repeated runs are recommended before using these scores as production guarantees.
