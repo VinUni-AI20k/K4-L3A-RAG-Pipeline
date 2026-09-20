@@ -34,7 +34,14 @@ def rerank_rrf(
     #     result["retrieval_method"] = "hybrid"
     #     results.append(result)
     # return results
-    raise NotImplementedError("Implement rerank_rrf")
+    scores={};items={}
+    for ranked in ranked_lists:
+        for rank,item in enumerate(ranked,1):
+            scores[item["id"]]=scores.get(item["id"],0.0)+1/(k+rank);items[item["id"]]=item
+    output=[]
+    for item_id in sorted(scores,key=scores.get,reverse=True)[:max(top_k,0)]:
+        result=items[item_id].copy();result["score"]=scores[item_id];result["retrieval_method"]="hybrid";output.append(result)
+    return output
 
 
 if __name__ == "__main__":

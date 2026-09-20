@@ -1,0 +1,24 @@
+{
+  "source_id": "luat_73_2021",
+  "file_name": "luat_73_2021_phong_chong_ma_tuy.pdf",
+  "file_sha256": "da2beda0e8d055277926550d577595b18c8862bcff1d44cb2138fd864a81433a",
+  "total_pages": 31,
+  "processed_pages": 31,
+  "extracted_at": "2026-09-20T08:38:01.638837+00:00",
+  "schema_version": "1.0",
+  "errors": [],
+  "landing_url": "https://chinhphu.vn/?classid=1&docid=204940&pageid=27160&typegroupid=3",
+  "pdf_url": null,
+  "structuring_model": "gemini-3.5-flash-lite",
+  "document_title": "LUẬT PHÒNG, CHỐNG MA TÚY",
+  "document_number": "73/2021/QH14",
+  "document_type": "Luật",
+  "issuer": "Quốc hội",
+  "issued_date": "30 tháng 3 năm 2021",
+  "effective_date": null,
+  "signer": "Nguyễn Thị Kim Ngân",
+  "legal_basis": [
+    "Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam"
+  ],
+  "source_url": "https://chinhphu.vn/?classid=1&docid=204940&pageid=27160&typegroupid=3"
+}

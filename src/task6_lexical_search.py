@@ -40,7 +40,12 @@ def lexical_search(query: str, top_k: int = 10) -> list[dict]:
     #         "retrieval_method": "bm25",
     #     })
     # return results
-    raise NotImplementedError("Implement lexical_search")
+    if not CORPUS or top_k<=0:return []
+    terms=query.lower().split();results=[]
+    for item in CORPUS:
+        tokens=item["content"].lower().split(); score=sum(tokens.count(term) for term in terms)
+        if score>0:results.append({"id":item["id"],"content":item["content"],"score":float(score),"metadata":item["metadata"],"retrieval_method":"bm25"})
+    return sorted(results,key=lambda x:x["score"],reverse=True)[:top_k]
 
 
 if __name__ == "__main__":

@@ -1,0 +1,8 @@
+{
+  "source_id": "nd28_2026",
+  "page_number": 40,
+  "raw_text": "37 Ghi chú chung các danh mục 1. Mã số CAS - Chất ma túy dạng nguyên liệu thực vật không có mã thông tin CAS, một số chất ma túy chưa có sẵn mã CAS ở thời điểm cập nhật danh mục. - Mã CAS của các chất trong danh mục không phải là duy | nhất. Mã CAS trong danh mục thường là dạng base hay dạng hỗn hợp racemic của chat. Bat ky dang | muối, ester, ether, đồng phân, muối của đồng phân của một chất trong danh mục ï nếu ton tại, dù mã CAS không xuất hiện trong danh mục vẫn được coi là một chất bị kiểm soát. 2. Đồng phân 2.1. Khi một chất có các đồng phân lập thể (stereochemical) mà tên khoa học của chất hiển thị dạng hỗn hợp đối quang (+) (racemic): __ a. Nếu cấu trúc hóa học của chất có một tâm bất đối (chiral centre) thì cả 2 dang đồng phân đối quang (enationmers) R và S (+ hoặc -) và hỗn hợp RS-racemic (+) đều bị kiểm soát. b. Néu cấu trúc hóa học của chất có nhiều hơn một tâm bắt đối thì tất cả các đồng phân phi đối quang (diastereoisomers) và các cặp đôi quang (racemic) của chúng, đều bị kiểm soát. 2.2. Khi một chất có các đồng phan lập thể, cấu trúc có một tâm bat đối mà tên khoa học của chất chỉ ghi một loại đồng phân đối quang cụ thể (R hoặc S, + hoặc -) thì dang hỗn hợp RS-racemic (+) của chất đó cũng bị kiểm soát. 2.3. Khi một chất có các đồng phân lập | thể, cấu trúc có nhiều hơn một tâm bat đối mà tên khoa học của chất chỉ ghi một loại đồng. phân phi đối quang (diastereoisomers) cụ thể thì chỉ có đồng phân phi đối quang đó bị kiểm soát. 2.4. Khi một đồng phân đối quang bị kiểm soát thì hỗn hợp của đồng phân đối quang đó với đồng phân đối quang còn lại cũng bị kiểm soát.",
+  "extraction_method": "ocr",
+  "ocr_engine": "tesseract",
+  "ocr_confidence": 0.9422379603399433
+}
