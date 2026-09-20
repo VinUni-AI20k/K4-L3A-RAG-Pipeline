@@ -15,10 +15,10 @@ _configured_model = os.getenv("LLM_MODEL", "").strip()
 _configured_key = os.getenv("OPENAI_API_KEY", "").strip()
 if LLM_PROVIDER == "openai" and not _configured_key and _configured_model.startswith("sk-"):
     OPENAI_API_KEY = _configured_model
-    LLM_MODEL = os.getenv("OPENAI_CHAT_MODEL", "o4-mini").strip()
+    LLM_MODEL = os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini").strip()
 else:
     OPENAI_API_KEY = _configured_key
-    LLM_MODEL = _configured_model or "o4-mini"
+    LLM_MODEL = _configured_model or "gpt-4o-mini"
 
 SYSTEM_PROMPT = """Trả lời chỉ từ context được cung cấp.
 Mỗi khẳng định phải có citation dạng [Document N]. Nếu context không đủ,
@@ -78,9 +78,12 @@ def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
         result = {"answer": REFUSAL, "sources": chunks, "retrieval_source": "hybrid"}
         validate_generation_result(result)
         return result
+    ordered_sources = reorder_for_llm(chunks)
+    retrieval_method = ordered_sources[0]["retrieval_method"]
     result = {
-        "answer": answer, "sources": chunks,
-        "retrieval_source": chunks[0]["retrieval_method"],
+        "answer": answer,
+        "sources": ordered_sources,
+        "retrieval_source": "pageindex" if retrieval_method == "pageindex" else "hybrid",
     }
     validate_generation_result(result)
     return result
