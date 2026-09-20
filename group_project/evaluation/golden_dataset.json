@@ -1,0 +1,83 @@
+[
+  {
+    "question": "Mức phí phạt khi trả tài liệu trễ hạn tại Thư viện Trung tâm ĐHQG-HCM là bao nhiêu?",
+    "expected_answer": "Mức phí phạt trả tài liệu trễ hạn là 5.000 đồng/tài liệu/ngày.",
+    "expected_context": "Quá hạn, bồi thường hư hỏng tài liệu: - Phạt trễ hạn: Mức phạt: 5.000đ/tài liệu/ngày."
+  },
+  {
+    "question": "Nếu độc giả làm mất tài liệu của thư viện thì mức bồi thường bằng tiền được tính như thế nào?",
+    "expected_answer": "Đền bằng tiền tính theo công thức: Giá bìa x 3 + 50.000 đồng/tài liệu + phí phạt trễ hạn (nếu có).",
+    "expected_context": "Mất tài liệu: Đền bằng tiền: Giá bìa x 3 + 50.000đ/tài liệu + phí phạt trễ hạn (nếu có)"
+  },
+  {
+    "question": "Chi phí cấp mới thẻ thư viện cho sinh viên thuộc ĐHQG-HCM là bao nhiêu?",
+    "expected_answer": "Mức phí cấp mới thẻ thư viện cho học sinh, sinh viên, học viên sau đại học thuộc ĐHQG-HCM là 45.000 đồng/người, sinh viên năm nhất được miễn phí tài khoản truy cập CSDL/thẻ điện tử.",
+    "expected_context": "Đối tượng thuộc ĐHQG-HCM: Học sinh, sinh viên, học viên sau đại học, văn bằng hai, tại chức: Cấp mới: 45.000đ/người, Cấp lại thẻ: 35.000đ/người, Gia hạn: 25.000đ/người/năm. SV năm nhất & GV, CB được miễn phí cấp tài khoản truy cập CSDL/ thẻ thư viện điện tử."
+  },
+  {
+    "question": "Chi phí cấp mới thẻ thư viện cho độc giả không thuộc ĐHQG-HCM là bao nhiêu?",
+    "expected_answer": "Chi phí cấp mới thẻ thư viện cho đối tượng ngoài ĐHQG-HCM là 95.000 đồng/người, gia hạn 50.000 đồng/người/năm.",
+    "expected_context": "Đối tượng không thuộc ĐHQG-HCM: Đăng ký làm thẻ thư viện: Cấp mới: 95.000đ/người, Cấp lại: 35.000đ/người, Gia hạn: 50.000đ/người/năm. Đăng ký tài khoản truy cập CSDL: 180.000đ/người."
+  },
+  {
+    "question": "Phí sử dụng máy tính có kết nối Internet tại thư viện là bao nhiêu?",
+    "expected_answer": "Phí sử dụng máy tính có kết nối Internet là 3.000 đồng/giờ.",
+    "expected_context": "7. Sử dụng máy tính có kết nối Internet: 3.000đ/giờ"
+  },
+  {
+    "question": "Mượn phòng học nhóm hoặc phòng hội nghị tại thư viện có mất phí không?",
+    "expected_answer": "Mượn phòng học nhóm hoặc phòng hội nghị được miễn phí nếu không sử dụng máy lạnh; nếu dùng thêm máy lạnh tính phí 30.000 đồng/giờ.",
+    "expected_context": "8. Mượn phòng học nhóm, phòng hội nghị: - Miễn phí: nếu không sử dụng máy lạnh. - Tính phí các thiết bị mượn thêm như sau: Máy lạnh: 30.000đ/giờ; Máy chiếu + Màn chiếu/ Tivi: 15.000đ/giờ; Âm thanh: 10.000đ/giờ."
+  },
+  {
+    "question": "Nếu làm gãy hoặc mất chìa khóa tủ giữ túi xách tại thư viện thì bị phạt bao nhiêu tiền?",
+    "expected_answer": "Làm gãy chìa hoặc mất chìa khóa bị phạt 15.000 đồng; làm hư ổ khóa phạt 50.000 đồng; mang chìa khóa về nhà phạt 5.000 đồng/ngày.",
+    "expected_context": "9. Làm hư hỏng, gãy, mất chìa khóa tủ giữ túi xách: Làm gãy chìa, mất chìa khóa: 15.000đ; Làm hư ổ khóa: 50.000đ; Mang chìa khóa về nhà: 5.000đ/ngày."
+  },
+  {
+    "question": "Đối với sách có giá bìa dưới 100.000 VNĐ, số tiền thế chân (tiền đặt cọc) quy định là bao nhiêu?",
+    "expected_answer": "Mức tiền thế chân (tiền đặt cọc) cho sách có giá bìa dưới 100.000 VNĐ là 1.000.000 VNĐ.",
+    "expected_context": "Giá bìa sách dưới 100.000 VNĐ: Số tiền thế chân là 1.000.000 VNĐ. Từ 100.000 - dưới 200.000: 1.500.000 VNĐ."
+  },
+  {
+    "question": "Trường hợp tài liệu mượn không được hoàn trả quá hạn bao lâu thì tiền thế chân sẽ bị giữ lại để mua tài liệu mới?",
+    "expected_answer": "Trường hợp tài liệu không được hoàn trả quá hạn 03 tháng, tiền thế chân sẽ được TVTT sử dụng để mua lại tài liệu đã thất thoát và độc giả sẽ không được hoàn trả số tiền này.",
+    "expected_context": "Trường hợp tài liệu không được hoàn trả quá hạn 03 tháng, tiền thế chân sẽ được TVTT sử dụng để mua lại tài liệu đã thất thoát và độc giả sẽ không được hoàn trả số tiền này."
+  },
+  {
+    "question": "Đối tượng nào phải đóng tiền thế chân khi mượn tài liệu tại TVTT theo Thông báo 52?",
+    "expected_answer": "Thông báo áp dụng thu tiền thế chân đối với độc giả ngoài ĐHQG-HCM và học sinh, sinh viên văn bằng hai, giảng viên thỉnh giảng thuộc ĐHQG-HCM.",
+    "expected_context": "1. Đối tượng áp dụng: Thông báo này áp dụng đối với độc giả ngoài ĐHQG-HCM và học sinh, sinh viên văn bằng hai, giảng viên thỉnh giảng thuộc ĐHQG-HCM."
+  },
+  {
+    "question": "Sinh viên hệ chính quy thuộc ĐHQG-HCM được mượn tối đa bao nhiêu tài liệu và trong bao nhiêu ngày?",
+    "expected_answer": "Sinh viên chính quy ĐHQG-HCM được mượn 5 tài liệu trong 21 ngày, được gia hạn 1 lần thêm 21 ngày và không phải đặt cọc.",
+    "expected_context": "Sinh viên thuộc ĐHQG-HCM (Hệ chính quy): Số lượng tài liệu: 5, Số ngày: 21, Gia hạn: 1 lần 21 ngày. Đối tượng không phải đặt tiền cọc và phí mượn sách."
+  },
+  {
+    "question": "Độc giả ngoài ĐHQG-HCM được mượn tối đa bao nhiêu tài liệu về nhà?",
+    "expected_answer": "Độc giả ngoài ĐHQG-HCM được mượn tối đa 2 tài liệu trong 30 ngày, không được gia hạn và phải đóng tiền cọc cùng phí mượn sách.",
+    "expected_context": "Đối tượng ngoài ĐHQG-HCM: Số lượng tài liệu: 2, Số ngày: 30, Gia hạn: 0. Đối tượng phải đặt tiền cọc và đóng phí mượn sách."
+  },
+  {
+    "question": "Mức phí mượn sách đối với độc giả ngoài ĐHQG-HCM là bao nhiêu một ngày?",
+    "expected_answer": "Phí mượn sách đối với độc giả ngoài ĐHQG-HCM là 1.000 đồng/cuốn/ngày.",
+    "expected_context": "Phí mượn: 1.000đ /1 cuốn /1 ngày. Mượn quá hạn 30 ngày sẽ bị khấu trừ vào tiền cọc 10%/ngày và phải thanh toán phí mượn."
+  },
+  {
+    "question": "Những loại tài liệu nào trong thư viện không được phép mượn về nhà?",
+    "expected_answer": "Tài liệu tra cứu (từ điển, bách khoa toàn thư, cẩm nang có đóng dấu Không mượn về), tài liệu phòng Tham khảo, phòng Báo – Tạp chí, Băng đĩa và tài liệu lưu chiểu không được mượn về nhà.",
+    "expected_context": "Tài liệu không được mượn về nhà: Tài liệu tra cứu như từ điển, bách khoa toàn thư, cẩm nang,… có đóng dấu Không mượn về, tài liệu phòng Tham khảo, phòng Báo – Tạp chí, Băng đĩa và tài liệu lưu chiểu."
+  },
+  {
+    "question": "Nếu độc giả bị phạt tiền quá hạn từ bao nhiêu trở lên thì tài khoản mượn sẽ bị khóa?",
+    "expected_answer": "Nếu tiền phạt trễ hạn từ 100.000 đồng trở lên thì tài khoản mượn sách sẽ bị khóa cho đến khi thanh toán đầy đủ.",
+    "expected_context": "Nếu độc giả bị phạt tiền quá hạn từ 100.000đ trở lên, tài khoản mượn sẽ bị khoá cho đến khi tài khoản được thanh toán đầy đủ. Nếu khoản tiền phạt trên không được thanh toán vào cuối học kỳ, thư viện sẽ gửi thông báo về Trường."
+  },
+  {
+    "question": "Mục lục trực tuyến của Thư viện Trung tâm ĐHQG-HCM hỗ trợ các phương thức tra cứu nào?",
+    "expected_answer": "Hỗ trợ 3 phương thức tra cứu: Tìm lướt, Tìm nâng cao và Tìm mở rộng.",
+    "expected_context": "II. MỤC LỤC TRỰC TUYẾN TVTT: 1. Tìm lướt; 2. Tìm nâng cao; 3. Tìm mở rộng. Tiện ích: Xem lại biểu thức tìm, Lưu lại biểu ghi, Gia hạn tài liệu, Đặt trước tài liệu."
+  }
+]
+
