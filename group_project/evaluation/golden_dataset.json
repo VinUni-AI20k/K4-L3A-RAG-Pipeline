@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Sinh viên chương trình chuẩn của UET cần đạt điều kiện gì để được xét học bổng khuyến khích học tập?",
+    "expected_answer": "Kết quả học tập đạt loại Khá trở lên và rèn luyện đạt loại Khá trở lên.",
+    "expected_context": "Chương trình chuẩn: Kết quả học tập đạt loại Khá trở lên. Rèn luyện đạt loại Khá trở lên.",
+    "source_doc_id": "hoc-bong-uet-2025-2026"
+  },
+  {
+    "question": "Quỹ học bổng khuyến khích học tập của UET được trích từ nguồn nào và bao nhiêu phần trăm?",
+    "expected_answer": "Thường được trích 8% từ nguồn thu học phí hệ chính quy.",
+    "expected_context": "Danh sách sinh viên nhận học bổng được lập dựa trên quỹ học bổng (thường được trích 8% từ nguồn thu học phí hệ chính quy), xét từ cao xuống thấp cho đến khi hết kinh phí.",
+    "source_doc_id": "hoc-bong-uet-2025-2026"
+  },
+  {
+    "question": "Sinh viên hệ chính quy của PTIT được mượn tối đa bao nhiêu cuốn sách và trong bao lâu?",
+    "expected_answer": "Tối đa 08 cuốn, thời hạn 01 học kỳ tương đương 150 ngày.",
+    "expected_context": "Sinh viên hệ chính quy (cao đẳng, đại học): Số lượng tối đa 08 cuốn. Thời hạn mượn 01 học kỳ, tương đương 150 ngày.",
+    "source_doc_id": "noi-quy-thu-vien-ptit-sinh-vien"
+  },
+  {
+    "question": "Cán bộ, giảng viên PTIT được mượn tối đa bao nhiêu cuốn và thời hạn bao lâu?",
+    "expected_answer": "Tối đa 07 cuốn, thời hạn 02 tháng tương đương 60 ngày.",
+    "expected_context": "Số lượng tối đa: 07 cuốn. Thời hạn mượn: 02 tháng, tương đương 60 ngày.",
+    "source_doc_id": "noi-quy-thu-vien-ptit-can-bo"
+  },
+  {
+    "question": "Những loại tài liệu nào của thư viện PTIT không được mượn về nhà?",
+    "expected_answer": "Tài liệu có dấu đỏ, sách tra cứu, luận án, luận văn, báo và tạp chí — chỉ được đọc tại chỗ.",
+    "expected_context": "Tài liệu có dấu đỏ, sách tra cứu, luận án, luận văn, báo và tạp chí chỉ được đọc tại chỗ, không được mượn về nhà.",
+    "source_doc_id": "noi-quy-thu-vien-ptit-can-bo"
+  },
+  {
+    "question": "Tổng ngân sách thí điểm của chương trình Học bổng Jensen Huang là bao nhiêu và phân bổ ra sao?",
+    "expected_answer": "Tổng 1 triệu USD: 200.000 USD đầu tư trực tiếp cho sinh viên và 800.000 USD cung cấp tài nguyên GPU.",
+    "expected_context": "Tổng ngân sách thí điểm của chương trình là 1 triệu USD: 200.000 USD đầu tư trực tiếp cho sinh viên; 800.000 USD cung cấp tài nguyên GPU phục vụ các dự án nghiên cứu, khởi nghiệp và đổi mới sáng tạo trong lĩnh vực AI.",
+    "source_doc_id": "hoc-bong-jensen-huang-2025"
+  },
+  {
+    "question": "Học bổng Jensen Huang yêu cầu GPA và chứng chỉ ngoại ngữ tối thiểu bao nhiêu?",
+    "expected_answer": "GPA tối thiểu 3.5/4.0 (tương đương 8.75/10) và IELTS tối thiểu 6.0 hoặc TOEFL iBT từ 80 trở lên.",
+    "expected_context": "Học tập: Điểm trung bình (GPA) tối thiểu 3.5/4.0 (tương đương 8.75/10). Ngoại ngữ: IELTS tối thiểu 6.0 hoặc TOEFL iBT từ 80 trở lên.",
+    "source_doc_id": "hoc-bong-jensen-huang-2025"
+  },
+  {
+    "question": "Học bổng Sigma Gold hỗ trợ sinh viên những gì về tài chính?",
+    "expected_answer": "Hỗ trợ 100% học phí và cấp sinh hoạt phí lên tới 15.000.000 đồng/tháng, cấp 10 tháng mỗi năm học.",
+    "expected_context": "Hỗ trợ tài chính: Hỗ trợ 100% học phí và cấp sinh hoạt phí lên tới 15.000.000 đồng/tháng. Mỗi học kỳ được cấp 05 tháng, tương đương 10 tháng/năm học.",
+    "source_doc_id": "hoc-bong-sigma-gold-2026"
+  },
+  {
+    "question": "Bài luận nộp hồ sơ học bổng Sigma Gold có yêu cầu gì về hình thức?",
+    "expected_answer": "Độ dài không quá 04 trang A4, trình bày bằng LaTeX, nộp kèm tệp nguồn và bản PDF.",
+    "expected_context": "Bài luận: Trình bày về một định lý, khái niệm, ý tưởng hoặc ứng dụng Toán học mà sinh viên yêu thích (độ dài không quá 04 trang A4, trình bày bằng LaTeX, nộp kèm tệp nguồn và bản PDF).",
+    "source_doc_id": "hoc-bong-sigma-gold-2026"
+  },
+  {
+    "question": "Học bổng FPTU Tuổi 18 trị giá bao nhiêu và yêu cầu điểm thi thế nào?",
+    "expected_answer": "Trị giá 180 triệu đồng/suất, trừ trực tiếp 20 triệu đồng mỗi học kỳ chuyên ngành trong 9 học kỳ; yêu cầu điểm tổ hợp 3 môn đạt từ 25 điểm trở lên.",
+    "expected_context": "Tiêu chí điểm: Điểm tổ hợp 3 môn (Toán + 2 môn bất kỳ) trong kỳ thi tốt nghiệp THPT năm 2024 đạt từ 25 điểm trở lên. Giá trị: 180 triệu đồng/suất, thực hiện bằng cách trừ trực tiếp 20 triệu đồng/học kỳ chuyên ngành (áp dụng cho 9 học kỳ).",
+    "source_doc_id": "hoc-bong-fpt-2024"
+  },
+  {
+    "question": "Kỳ thi học bổng Đại học FPT có các mức học bổng nào?",
+    "expected_answer": "Đa dạng các mức 10%, 30%, 50%, 70% và 100% học phí toàn khóa học, tùy điểm số đạt được tại kỳ thi.",
+    "expected_context": "Mức học bổng: Đa dạng các mức 10%, 30%, 50%, 70% và 100% học phí toàn khóa học, tùy theo điểm số đạt được tại kỳ thi.",
+    "source_doc_id": "hoc-bong-fpt-2024"
+  },
+  {
+    "question": "Học phí ngành Dược học tại Đại học Tôn Đức Thắng năm 2026 là bao nhiêu?",
+    "expected_answer": "68,46 triệu đồng/năm, cao hơn mức 31,26 – 36,59 triệu đồng/năm của chương trình tiêu chuẩn.",
+    "expected_context": "Chương trình tiêu chuẩn: Học phí trung bình dao động từ 31,26 – 36,59 triệu đồng/năm tùy ngành. Riêng ngành Dược học có mức học phí là 68,46 triệu đồng/năm.",
+    "source_doc_id": "hoc-bong-tdtu-2026"
+  },
+  {
+    "question": "Năm 2026 Đại học Tôn Đức Thắng dành bao nhiêu tiền để cấp học bổng?",
+    "expected_answer": "Hơn 95 tỷ đồng.",
+    "expected_context": "Năm 2026, nhà trường dành hơn 95 tỷ đồng để cấp học bổng cho người học.",
+    "source_doc_id": "hoc-bong-tdtu-2026"
+  },
+  {
+    "question": "Học bổng JAIF của VJU dành cho ai và bao gồm những gì?",
+    "expected_answer": "Dành cho công dân Campuchia, Lào và Myanmar, gồm 100% học phí (khoảng 110 triệu VND), phí nhập học, sinh hoạt phí 250 USD/tháng, vé máy bay và bảo hiểm y tế; có 10 suất.",
+    "expected_context": "JAIF Scholarship: Coverage 100% tuition fee (approximately 110 million VND), plus enrollment fee, admission fee, living expenses of 250 USD/month, airfare, and health insurance. Eligibility: nationals of Cambodia, Laos, and Myanmar. Quota: 10 awards.",
+    "source_doc_id": "hoc-bong-vju-2025"
+  },
+  {
+    "question": "Học bổng khuyến khích học tập của Bách khoa Hà Nội chia làm mấy mức và tiêu chí ra sao?",
+    "expected_answer": "Ba mức: loại A cần GPA từ 3.6 và rèn luyện từ 90 (bằng 150% học phí), loại B cần GPA từ 3.2 và rèn luyện từ 80 (120% học phí), loại C cần GPA từ 2.5 và rèn luyện từ 65 (100% học phí).",
+    "expected_context": "Loại A: GPA từ 3.6 trở lên và điểm rèn luyện từ 90 trở lên — giá trị bằng 150% học phí. Loại B: GPA từ 3.2 trở lên và điểm rèn luyện từ 80 trở lên — giá trị bằng 120% học phí. Loại C: GPA từ 2.5 trở lên và điểm rèn luyện từ 65 trở lên — giá trị bằng 100% học phí.",
+    "source_doc_id": "ho-tro-tai-chinh-hust"
+  }
+]
