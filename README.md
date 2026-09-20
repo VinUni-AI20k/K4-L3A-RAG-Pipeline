@@ -82,3 +82,29 @@ pytest tests/test_acceptance.py -q
 # Toàn bộ
 pytest -q
 ```
+
+## Chạy lại bài toán IELTS Writing
+
+Chạy bằng Python của `.venv` để tránh gọi nhầm `pytest` cài ở Python hệ thống:
+
+```bash
+source .venv/bin/activate
+python -m src.task1_collect_legal_docs
+python -m src.task2_crawl_news
+python -m src.task3_convert_markdown
+python -m src.task4_chunking_indexing
+python -m src.task9_retrieval_pipeline --calibrate
+python -m src.task10_generation
+streamlit run app.py
+```
+
+Đặt `LLM_PROVIDER`, `LLM_MODEL` và API key của cùng provider trong `.env`. Model embedding `BAAI/bge-m3` cần được tải lần đầu. Corpus tải từ các URL trong Task 1–2 và index Chroma được tạo trên máy; chúng chưa nằm trong Git. Do nội dung trang web có thể thay đổi, kết quả chạy lại có thể khác lần đánh giá ngày 2026-09-20.
+
+Để chạy so sánh A/B trên 15 câu trong `group_project/evaluation/golden_dataset.json`:
+
+```bash
+python -m group_project.evaluation.run_evaluation --generate
+python -m group_project.evaluation.run_evaluation --score
+```
+
+Hai lệnh này gọi OpenAI cho câu trả lời và chấm bốn metric Ragas; kết quả chi tiết được lưu cục bộ trong `group_project/evaluation/run_results.json`, còn tổng hợp và phân tích nằm trong `group_project/evaluation/RESULT.md`. Chạy `python -m pytest -q` sau khi thu thập dữ liệu và index.
