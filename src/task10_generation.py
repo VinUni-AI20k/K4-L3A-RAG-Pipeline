@@ -87,13 +87,12 @@ def call_llm(system_prompt: str, user_message: str) -> str:
 
         if not os.getenv("ANTHROPIC_API_KEY"):
             raise ValueError("ANTHROPIC_API_KEY is not configured")
+        # anthropic SDK 1.x đã bỏ temperature/top_p (model 4.7+ trả 400 nếu gửi).
         response = Anthropic().messages.create(
             model=LLM_MODEL,
             system=system_prompt,
             messages=[{"role": "user", "content": user_message}],
             max_tokens=1024,
-            temperature=TEMPERATURE,
-            top_p=TOP_P,
         )
         return "\n".join(block.text for block in response.content if block.type == "text")
 
