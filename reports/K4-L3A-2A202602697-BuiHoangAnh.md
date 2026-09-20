@@ -5,7 +5,7 @@
 * **Họ và tên:** Bùi Hoàng Anh
 * **Mã học viên:** 2A202602697
 * **Nhóm:** K4-L3A
-* **Repository/branch:** https://github.com/hoanganhb680-arch/K4-L3A-RAG-Pipeline / `anhhhh`
+* **Repository/branch:** https://github.com/hoanganhb680-arch/K4-L3A-RAG-Pipeline / `hoanganh`
 
 ## Phần việc đã thực hiện
 
