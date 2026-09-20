@@ -28,7 +28,12 @@ dependencies = [
     "rank-bm25>=0.2.2,<0.3",
     "requests>=2.31.0,<3",
     "scikit-learn>=1.3.0,<2",
-    "sentence-transformers>=2.2.0,<7",
+    # sentence-transformers <4 và transformers <5: transformers 5.x đòi
+    # torch>=2.5, không có trên macOS x86_64 (torch dừng ở 2.2.2). Khoảng cũ
+    # ">=2.2.0,<7" quá lỏng nên pip kéo về 6.1.0 -> transformers 5.17 -> vỡ.
+    # BAAI/bge-m3 chạy bình thường trên sentence-transformers 3.x.
+    "sentence-transformers>=3.0.0,<4",
+    "transformers>=4.41.0,<5",
     "streamlit>=1.35.0,<2",
 ]
 
