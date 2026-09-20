@@ -27,7 +27,9 @@ EMBEDDING_DIM = 1024
 
 COLLECTION_NAME = "rag_documents"
 
+import hashlib
 import logging
+import math
 import os
 from dotenv import load_dotenv
 
@@ -41,11 +43,10 @@ def _embed_gemini(texts: list[str]) -> list[list[float]]:
         raise ValueError("GEMINI_API_KEY is not set.")
     model = os.getenv("EMBEDDING_MODEL", "text-embedding-004")
     client = genai.Client(api_key=api_key)
-    
     all_embeddings = []
     batch_size = 64
     for i in range(0, len(texts), batch_size):
-        batch = texts[i:i + batch_size]
+        batch = texts[i : i + batch_size]
         response = client.models.embed_content(
             model=model,
             contents=batch,
@@ -60,13 +61,13 @@ def _embed_nvidia(texts: list[str], input_type: str = "passage") -> list[list[fl
     if not api_key:
         raise ValueError("NVIDIA_API_KEY is not set.")
     base_url = os.getenv("NVIDIA_BASE_URL", "https://integrate.api.nvidia.com/v1")
-    model = os.getenv("NVIDIA_EMBEDDING_MODEL", "nvidia/nv-embedqa-e5-v5")
+    model = os.getenv("NVIDIA_EMBEDDING_MODEL", "nvidia/nemotron-3-embed-1b")
     client = OpenAI(api_key=api_key, base_url=base_url)
-    
+
     all_embeddings = []
-    batch_size = 64
+    batch_size = 30
     for i in range(0, len(texts), batch_size):
-        batch = texts[i:i + batch_size]
+        batch = texts[i : i + batch_size]
         try:
             response = client.embeddings.create(
                 model=model,
@@ -82,11 +83,35 @@ def _embed_nvidia(texts: list[str], input_type: str = "passage") -> list[list[fl
     return all_embeddings
 
 
+def _embed_dummy(texts: list[str], dim: int = 384) -> list[list[float]]:
+    """Tự tạo vector 384 chiều thuần Python bằng Feature Hashing (0% model, 0% API, siêu nhẹ)."""
+    vectors = []
+    for text in texts:
+        vec = [0.0] * dim
+        words = text.lower().split()
+        if not words:
+            vectors.append(vec)
+            continue
+        for word in words:
+            idx = int(hashlib.md5(word.encode("utf-8")).hexdigest(), 16) % dim
+            vec[idx] += 1.0
+        norm = math.sqrt(sum(x * x for x in vec))
+        if norm > 0:
+            vec = [x / norm for x in vec]
+        vectors.append(vec)
+    return vectors
+
+
+_ST_MODEL = None
+
+
 def _embed_sentence_transformers(texts: list[str]) -> list[list[float]]:
+    global _ST_MODEL
     from sentence_transformers import SentenceTransformer
-    model_name = os.getenv("EMBEDDING_MODEL", "BAAI/bge-m3")
-    model = SentenceTransformer(model_name)
-    return model.encode(texts).tolist()
+    model_name = os.getenv("EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
+    if _ST_MODEL is None:
+        _ST_MODEL = SentenceTransformer(model_name)
+    return _ST_MODEL.encode(texts).tolist()
 
 
 def _embed_openai(texts: list[str]) -> list[list[float]]:
@@ -108,7 +133,9 @@ def _embed_openai(texts: list[str]) -> list[list[float]]:
 
 def _dispatch_embed(provider: str, texts: list[str], input_type: str = "passage") -> list[list[float]]:
     provider = provider.lower()
-    if provider == "gemini":
+    if provider in ("dummy", "mock", "none", "hash", "chay"):
+        return _embed_dummy(texts)
+    elif provider == "gemini":
         return _embed_gemini(texts)
     elif provider == "nvidia":
         return _embed_nvidia(texts, input_type=input_type)

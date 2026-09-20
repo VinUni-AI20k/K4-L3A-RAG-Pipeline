@@ -14,7 +14,7 @@
 | Thu thập tin tức & mở bán Vinhomes | Crawl 5 bài báo tin tức/mở bán và bảng giá Vinhomes Ocean Park (1, 2, 3), làm sạch dữ liệu | PR #2, commit `f560447`, `data/landing/news/*.json` | Done |
 | Chuẩn hóa dữ liệu Markdown (Task 3) | Xây dựng pipeline chuẩn hóa tài liệu legal và news sang Markdown chuẩn có header metadata (`Title`, `Source`, `Doc Type`, `Date`), loại bỏ trùng lặp và hỗ trợ đa định dạng (`.json`, `.md`, `.pdf`, `.docx`) | `src/task3_convert_markdown.py`, `data/standardized/` | Done |
 | Chunking & Metadata Preservation (Task 4) | Hiện thực `load_documents()` và `chunk_documents()` sử dụng `RecursiveCharacterTextSplitter` (size 500, overlap 50), bảo toàn metadata nguồn và gán `chunk_index`, định danh ID ổn định | `src/task4_chunking_indexing.py` | Done |
-| Vectorstore Indexing (Task 4) | Hiện thực `get_collection()` và `index_to_vectorstore()` upsert vào ChromaDB với metric cosine distance (`hnsw:space: cosine`), xử lý batch upsert an toàn | `src/task4_chunking_indexing.py` | Done |
+| Vectorstore Indexing (Task 4) | Hiện thực `get_collection()` và `index_to_vectorstore()` upsert vào ChromaDB với metric cosine distance (`hnsw:space: cosine`), đồng bộ số chiều 2048 với NVIDIA NIM embedding (`nvidia/nemotron-3-embed-1b`), xử lý batch upsert an toàn | `src/task4_chunking_indexing.py`, `chroma_db/` | Done |
 
 ## Quyết định kỹ thuật quan trọng
 
@@ -25,6 +25,10 @@
 2. **Quyết định: Chọn strategy RecursiveCharacterTextSplitter với chunk_size=500, chunk_overlap=50 và batch upsert 100 vào ChromaDB**  
    **Lý do/evidence:** Văn bản chính sách và tin tức bất động sản có cấu trúc điều khoản, mục lục và bảng biểu phân cấp rõ ràng. Chunk size 500 ký tự giúp mỗi chunk chứa trọn vẹn một điều khoản hoặc chính sách ưu đãi cụ thể mà không bị cắt vụn, dung sai chiều dài luôn $\le 550$ ký tự thỏa mãn contract test `test_chunk_documents_preserves_identity_and_metadata`. Batch upsert 100 giúp hạn chế lỗi quá tải bộ nhớ và giới hạn request của vector database.  
    **Trade-off:** Kích thước chunk 500 có thể làm một số bảng biểu dài bị ngắt đôi, nhưng được bù đắp bằng overlap 50 ký tự để duy trì mạch thông tin liên kết.
+
+3. **Quyết định: Chuẩn hóa toàn bộ Vectorstore sang NVIDIA NIM Embeddings (2048 chiều, model `nvidia/nemotron-3-embed-1b`)**  
+   **Lý do/evidence:** Khắc phục triệt để nguy cơ lệch số chiều vector (`InvalidDimensionException` / `InvalidArgumentError`) giữa các thành viên khi chuyển đổi giữa dummy hash (384 chiều) và model lớn. NVIDIA NIM cung cấp API embedding chuyên biệt cho retrieval, tốc độ xử lý nhanh, chất lượng semantic cao và miễn phí 1.000 credits cho bài Lab.  
+   **Trade-off:** Số chiều vector tăng từ 384 lên 2048 làm kích thước index tăng nhẹ (~2.5MB), nhưng mang lại khả năng nắm bắt ngữ nghĩa tài liệu vượt trội so với dummy hash hay mô hình nén.
 
 ## Kiểm thử và kết quả
 
@@ -39,6 +43,8 @@
 - Lỗi đã phát hiện và cách xử lý:
   - Thư mục `landing/news` ban đầu chỉ có `.md`, khiến `test_corpus_has_required_news_with_metadata` fail vì thiếu `.json`. Đã tạo song song các file `.json` đầy đủ metadata `url`, `title`, `date_crawled`, `content_markdown`.
   - ChromaDB metadata không chấp nhận giá trị `None` ở một số client mode: Đã chuẩn hóa `url: None` thành chuỗi rỗng `""` trước khi upsert vào collection.
+  - **Lệch chiều Vectorstore (384 vs 2048 chiều)**: Khi nạp embedding từ NVIDIA (2048 chiều) vào collection `rag_documents` cũ được tạo trước đó với 384 chiều, ChromaDB ném lỗi `InvalidArgumentError: Collection expecting embedding with dimension of 384, got 2048`. Cách xử lý: Xóa collection 384 chiều cũ và re-index lại toàn bộ 288 chunks bằng `nvidia/nemotron-3-embed-1b`, đưa vectorstore vào trạng thái đồng bộ 2048 chiều hoàn toàn.
+  - **Lỗi phụ thuộc môi trường**: Thiếu thư viện `langchain_text_splitters` ở môi trường Python chưa cài đầy đủ dependency. Cách xử lý: Kích hoạt đúng virtual environment `.venv` và cài đặt bổ sung `langchain-text-splitters` theo đúng `pyproject.toml`.
 
 ## Điều còn hạn chế
 
