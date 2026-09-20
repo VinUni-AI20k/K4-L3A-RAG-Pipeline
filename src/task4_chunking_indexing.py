@@ -1,5 +1,6 @@
 """Load standardized Markdown, chunk it, embed it, and build a Chroma index."""
 
+import math
 import os
 import re
 from pathlib import Path
@@ -17,23 +18,24 @@ CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 CHUNKING_METHOD = "recursive"
 
-EMBEDDING_MODEL = "BAAI/bge-m3"
-EMBEDDING_DIM = 1024
+EMBEDDING_MODEL = "text-embedding-3-small"
+EMBEDDING_DIM = 1536
 EMBEDDING_BATCH_SIZE = 16
 INDEX_BATCH_SIZE = 128
 
 COLLECTION_NAME = "rag_documents"
-_model = None
+_embedding_client = None
+_embedding_client_model = None
 
 
 def _embedding_settings() -> tuple[str, str]:
     load_dotenv(ROOT / ".env")
-    provider = os.getenv("EMBEDDING_PROVIDER", "sentence_transformers").strip()
+    provider = os.getenv("EMBEDDING_PROVIDER", "openai").strip().lower()
     model_name = os.getenv("EMBEDDING_MODEL", EMBEDDING_MODEL).strip()
-    if provider != "sentence_transformers":
+    if provider != "openai":
         raise ValueError(
             f"EMBEDDING_PROVIDER={provider!r} chưa được hỗ trợ trong Task 4; "
-            "hãy dùng sentence_transformers."
+            "hãy dùng openai."
         )
     if not model_name:
         raise ValueError("EMBEDDING_MODEL không được để trống")
@@ -41,25 +43,29 @@ def _embedding_settings() -> tuple[str, str]:
 
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    """Embed texts with the same local model used later for query embedding."""
-    global _model
+    """Embed texts with OpenAI's model used later for query embedding."""
+    global _embedding_client, _embedding_client_model
     if not texts:
         return []
     _, model_name = _embedding_settings()
-    if _model is None or getattr(_model, "_rag_model_name", None) != model_name:
-        from sentence_transformers import SentenceTransformer
+    api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    if not api_key:
+        raise RuntimeError("Thiếu OPENAI_API_KEY trong file .env để tạo embedding")
+    if _embedding_client is None or _embedding_client_model != model_name:
+        from openai import OpenAI
 
-        _model = SentenceTransformer(model_name)
-        _model._rag_model_name = model_name
-    vectors = _model.encode(
-        texts,
-        batch_size=EMBEDDING_BATCH_SIZE,
-        show_progress_bar=False,
-        normalize_embeddings=True,
-    )
-    if len(vectors) != len(texts):
+        _embedding_client = OpenAI(api_key=api_key)
+        _embedding_client_model = model_name
+    response = _embedding_client.embeddings.create(model=model_name, input=texts)
+    data = sorted(response.data, key=lambda item: item.index)
+    vectors = [list(item.embedding) for item in data]
+    if len(vectors) != len(texts) or any(len(vector) != EMBEDDING_DIM for vector in vectors):
         raise RuntimeError("Số embedding không khớp số văn bản")
-    return vectors.tolist()
+    normalized = []
+    for vector in vectors:
+        norm = math.sqrt(sum(value * value for value in vector)) or 1.0
+        normalized.append([value / norm for value in vector])
+    return normalized
 
 
 def get_collection():

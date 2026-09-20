@@ -57,10 +57,9 @@ Kiểm tra thủ công một số trang của mỗi sách, đặc biệt là cô
 ## 5. Chunk, embedding và index
 
 Task 4 đọc 8 file Markdown trong `data/standardized/`, chia recursive chunk
-500 ký tự (overlap 50), tạo embedding bằng `BAAI/bge-m3` rồi upsert vào
-ChromaDB tại `chroma_db/` (cosine distance). ID chunk ổn định nên chạy lại
-không tạo bản ghi trùng. Lần đầu cần tải model từ Hugging Face, dung lượng
-lớn và cần kết nối mạng; các lần sau dùng cache của máy.
+500 ký tự (overlap 50), tạo embedding bằng OpenAI `text-embedding-3-small`
+rồi upsert vào ChromaDB tại `chroma_db/` (cosine distance). ID chunk ổn định nên chạy lại
+không tạo bản ghi trùng. Bước này cần `OPENAI_API_KEY` và phát sinh chi phí embedding.
 
 ```bash
 python -m src.task4_chunking_indexing
@@ -73,8 +72,10 @@ Sau khi chạy, kiểm tra số bản ghi bằng:
 .\.venv\Scripts\python.exe -c "from src.task4_chunking_indexing import get_collection; print(get_collection().count())"
 ```
 
-Không commit `chroma_db/` hoặc cache model. Dùng cùng `EMBEDDING_MODEL` khi
-index và khi truy vấn; đổi model thì cần tạo lại index.
+Không commit `chroma_db/` hoặc API key. Dùng cùng `EMBEDDING_MODEL` khi
+index và khi truy vấn; đổi model thì cần tạo lại index. Nếu đã có index từ
+`BAAI/bge-m3`, cần xóa/rebuild collection trước khi chạy demo vì kích thước
+vector đã thay đổi.
 
 ## 6. Xây dựng hybrid retrieval
 
@@ -83,7 +84,8 @@ index và khi truy vấn; đổi model thì cần tạo lại index.
 - Task 7: RRF gộp hai bảng xếp hạng theo ID.
 
 Chạy bước 5 trước và kiểm tra ChromaDB đã có dữ liệu. Task 5 dùng lại
-`EMBEDDING_MODEL` để mã hóa câu hỏi; cả ba task không cần LLM API key.
+`EMBEDDING_MODEL` để mã hóa câu hỏi và cần `OPENAI_API_KEY`; Task 6 và Task 7
+không gọi API embedding.
 Task 6 đọc Markdown đã chuẩn hóa và tái tạo cùng các chunk, không cần tải
 model. Task 7 kết hợp kết quả của Task 5 và 6; RRF không phải LLM reranker.
 

@@ -11,7 +11,7 @@
 
 | Module/deliverable | Việc trực tiếp làm | File/bằng chứng | Trạng thái |
 |---|---|---|---|
-| Chunk/index | Chunk recursive 500/50, embedding BGE-M3, Chroma cosine | `src/task4_chunking_indexing.py` | Done |
+| Chunk/index | Chunk recursive 500/50, OpenAI `text-embedding-3-small`, Chroma cosine | `src/task4_chunking_indexing.py` | Done |
 | Hybrid retrieval | Dense, BM25L và RRF theo ID | `src/task5_semantic_search.py`, `src/task6_lexical_search.py`, `src/task7_reranking.py` | Done |
 | Evaluation A/B | Chạy dense-only và hybrid + RRF với 4 metric | `src/evaluate_ragas.py`, `group_project/evaluation/evaluation_runs.json` | Done |
 
@@ -22,7 +22,7 @@
 
 ## Kiểm thử và kết quả
 
-- ChromaDB có 1.578 chunk.
+- ChromaDB có 1.578 chunk; embedding dùng OpenAI `text-embedding-3-small`.
 - Contract tests cho chunk, dense, BM25 và RRF đạt.
 - Evaluation ghi nhận hybrid + RRF đạt average 0.8406 so với dense-only 0.8365.
 
