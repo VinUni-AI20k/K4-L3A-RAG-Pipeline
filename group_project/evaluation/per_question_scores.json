@@ -1,0 +1,186 @@
+{
+  "A": [
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6893,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9993,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9987,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7478,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.9286,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9378,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8469,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9141,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 0.6667,
+      "answer_relevancy": 0.5728,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 0.6667,
+      "answer_relevancy": 0.8368,
+      "context_recall": 1.0,
+      "context_precision": 0.5
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9689,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8977,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7487,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9984,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7776,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    }
+  ],
+  "B": [
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6442,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9993,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9987,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7478,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.9286,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9378,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8469,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9093,
+      "context_recall": 1.0,
+      "context_precision": 0.7
+    },
+    {
+      "faithfulness": 0.6667,
+      "answer_relevancy": 0.6384,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8343,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9689,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8977,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8322,
+      "context_recall": 1.0,
+      "context_precision": 0.75
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9984,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    },
+    {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7776,
+      "context_recall": 1.0,
+      "context_precision": 1.0
+    }
+  ]
+}

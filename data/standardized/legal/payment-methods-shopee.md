@@ -1,8 +1,8 @@
 Phương Thức Thanh Toán Hợp Lệ
 
-Shopee  hỗ  trợ  nhiều  phương  thức  thanh  toán  nhằm  mang  lại  sự  tiện  lợi  cho  người  dùng.  Khách
+Shopee hỗ trợ nhiều phương thức thanh toán nhằm mang lại sự tiện lợi cho người dùng. Khách
 
-hàng  có  thể  thanh  toán  bằng:  1.  Thẻ  Tín  dụng/Ghi  nợ  (Visa,  Mastercard,  JCB).  2.  Ví  ShopeePay
+hàng có thể thanh toán bằng: 1. Thẻ Tín dụng/Ghi nợ (Visa, Mastercard, JCB). 2. Ví ShopeePay
 
 (ưu tiên với nhiều voucher giảm giá). 3. Thanh toán khi nhận hàng (COD). 4. Trả góp qua thẻ tín
 

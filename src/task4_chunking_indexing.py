@@ -99,10 +99,23 @@ def get_collection():
 
 
 def _extract_title(content: str, fallback: str) -> str:
-    """Lấy H1 đầu tiên làm title để citation đọc được; fallback về tên file."""
+    """Lấy title đọc được để citation đối chiếu ra tên tài liệu, không phải slug.
+
+    News đi qua Task 3 nên luôn có H1. Legal đi từ PDF qua MarkItDown và không
+    có heading nào, nhưng dòng đầu tiên chính là tiêu đề văn bản — nhận dạng
+    bằng cách nó ngắn và không kết thúc như một câu.
+    """
     match = _HEADING_PATTERN.search(content)
     if match and match.group(1).strip():
         return match.group(1).strip()
+
+    for line in content.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            continue
+        if len(stripped) <= 120 and not stripped.endswith((".", ":", ",", ";")):
+            return stripped
+        break
     return fallback
 
 
@@ -116,10 +129,13 @@ def load_documents() -> list[dict]:
         content = path.read_text(encoding="utf-8")
         if not content.strip():
             continue
-        doc_type = "legal" if "legal" in path.parts else "news"
+        # Chi xet phan duong dan ben trong data/standardized/, khong xet duong
+        # dan tuyet doi: mot thu muc cha ten "legal" se lam lech doc_type.
+        relative = path.relative_to(STANDARDIZED_DIR)
+        doc_type = "legal" if "legal" in relative.parts[:-1] else "news"
         documents.append(
             {
-                "id": path.relative_to(STANDARDIZED_DIR).as_posix(),
+                "id": relative.as_posix(),
                 "content": content,
                 "metadata": {
                     "source": path.name,

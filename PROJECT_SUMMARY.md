@@ -1,43 +1,80 @@
-# Báo cáo Tổng kết Dự án: K4-Day08-RAG-Pipeline
+# Tổng kết dự án: K4-L3A-RAG-Pipeline
 
-Dự án này là một hệ thống RAG (Retrieval-Augmented Generation) xây dựng Chatbot hỗ trợ khách hàng cho sàn thương mại điện tử (e-commerce). Dưới đây là tóm tắt toàn bộ các công việc đã được thực hiện.
+Chatbot RAG hỗ trợ khách hàng sàn thương mại điện tử. File này ghi lại những gì
+đã làm và **những gì chưa làm**, để người đọc không phải suy đoán.
 
-## 1. Thu thập & Tiền xử lý Dữ liệu (Task 1, 2, 3)
-- **Tạo dữ liệu giả lập (Synthetic Data):** Thay vì crawl web và bị chặn bởi WAF/Captcha, chúng ta đã viết script tự động sinh ra các tài liệu hợp lệ.
-  - Sinh 3 file chính sách định dạng PDF (Task 1) bằng `fpdf2` (Chính sách trả hàng, Phương thức thanh toán, Quy định người bán).
-  - Sinh 5 bài báo định dạng JSON (Task 2) về các chủ đề hỗ trợ người mua.
-- **Chuẩn hóa (Standardization):** Dùng `markitdown` để chuyển đổi toàn bộ PDF và JSON sang định dạng Markdown chuẩn, lưu vào `data/standardized/` để dễ dàng chunking (Task 3).
+Số liệu đánh giá không nằm ở đây — chúng nằm trong
+[`group_project/evaluation/RESULT.md`](group_project/evaluation/RESULT.md), do
+`eval_pipeline.py` sinh ra từ lần chạy thật.
+
+## 1. Dữ liệu (Task 1, 2, 3)
+
+- Corpus **synthetic**: 3 tài liệu chính sách (PDF, sinh bằng `fpdf2`) và 5 bài
+  hướng dẫn (JSON). Lý do: help center của sàn TMĐT chặn crawler bằng WAF/Captcha
+  và bài lab không cho phép vượt WAF.
+- Nội dung do nhóm tự soạn theo cấu trúc tài liệu thật, **không trích dẫn nguyên
+  văn từ Shopee**. README và docstring của Task 1/2 đều ghi rõ điều này.
+- Task 3 convert PDF bằng `markitdown`, JSON render thủ công kèm metadata header.
+  MarkItDown trích text từ PDF chèn khoảng trắng đôi giữa các từ nên có bước gom
+  lại một space trước khi ghi.
 
 ## 2. Chunking & Indexing (Task 4)
-- Áp dụng `RecursiveCharacterTextSplitter` với `chunk_size=500` và `chunk_overlap=50`.
-- Chuyển sang sử dụng model embedding nhẹ `all-MiniLM-L6-v2` (384 dimensions) để tối ưu hóa tốc độ chạy trên CPU (nhanh gấp 20-25 lần so với các model nặng) thay vì `BAAI/bge-m3`.
-- Lưu toàn bộ embedding và metadata vào Vector Store **ChromaDB**.
 
-## 3. Các module Tìm kiếm & Reranking (Task 5, 6, 7, 8)
-- **Semantic Search (Task 5):** Tìm kiếm theo ngữ nghĩa dựa trên cosine similarity từ ChromaDB.
-- **Lexical Search (Task 6):** Tìm kiếm theo từ khóa chính xác sử dụng thuật toán **BM25**.
-- **Reranking (Task 7):** Triển khai thuật toán **Reciprocal Rank Fusion (RRF)** để lai ghép và xếp hạng lại kết quả từ Semantic và Lexical search, lấy ra những documents tốt nhất.
-- **Vectorless Fallback (Task 8):** Triển khai logic mock gọi PageIndex API để dự phòng cho trường hợp Semantic search có độ tin cậy quá thấp.
+- `RecursiveCharacterTextSplitter`, `chunk_size=500`, `chunk_overlap=50` → 16 chunks.
+- Embedding: **`paraphrase-multilingual-MiniLM-L12-v2`** (384 chiều, chạy local).
+- Đã thử `all-MiniLM-L6-v2` trước và **phải loại**: model tiếng Anh chấm query
+  ngoài miền bằng tiếng Việt tới 0.58–0.69, chồng lấn hoàn toàn với query trong
+  miền (0.63–0.84), khiến không thể đặt ngưỡng fallback. Chi tiết trong README.
+- Lưu vào ChromaDB persistent, cosine distance. ID chunk sinh từ đường dẫn tương
+  đối (`legal/payment-methods-shopee.md::chunk-0`) nên chạy lại pipeline là
+  upsert đè, không sinh bản trùng.
 
-## 4. Pipeline RAG Hoàn chỉnh (Task 9, 10)
-- **Unified Retrieval (Task 9):** Viết hàm `retrieve()` điều phối toàn bộ luồng: Hybrid Search -> RRF -> Fallback nếu điểm số < 0.3.
-- **Generation có trích dẫn (Task 10):** 
-  - Tích hợp **DeepSeek** làm LLM chính (do giá rẻ, tốc độ nhanh, tương thích chuẩn OpenAI SDK).
-  - Áp dụng kỹ thuật **Lost-in-the-middle reordering** để sắp xếp lại chunk trước khi đưa vào LLM.
-  - Tối ưu hóa System Prompt để ép LLM luôn trả lời tiếng Việt và chèn trích dẫn gốc (ví dụ: `[Document 1]`).
-  - Code có tích hợp fallback mock trả về câu trả lời giả lập nếu người dùng chưa cung cấp API key.
+## 3. Retrieval (Task 5, 6, 7, 8)
 
-## 5. Ứng dụng UI và Đánh giá (Group Project)
-- **Streamlit Chatbot UI (`app.py`):** Giao diện hoàn chỉnh, hiển thị câu trả lời từ bot kèm theo thông tin chi tiết về Nguồn tham khảo (tên file, loại tài liệu, điểm số).
-- **Evaluation Pipeline (`group_project/evaluation`):**
-  - Đã xây dựng **Golden Dataset** gồm 15 cặp Câu hỏi - Câu trả lời mẫu dựa trên tài liệu giả lập.
-  - Viết module đánh giá tự động bằng **Ragas** đo lường 4 metrics: Faithfulness, Answer Relevancy, Context Recall, Context Precision.
-  - So sánh A/B test tự động giữa cấu hình `Hybrid + RRF` và `Dense Only`, sau đó xuất báo cáo tự động ra file `results.md`.
+- **Semantic (Task 5):** query đi qua đúng `embed_texts()` của Task 4 nên index
+  và query luôn cùng model, cùng dimension.
+- **Lexical (Task 6):** BM25Okapi trên cùng bộ chunks, nên ID khớp với dense.
+- **RRF (Task 7):** fuse theo `id`, không theo `content` — `chunk_overlap` làm
+  nhiều chunk có đoạn text trùng nhau, fuse theo content sẽ nuốt mất kết quả.
+- **Fallback (Task 8):** gọi PageIndex API thật, có timeout và cache doc ID.
+  **Chưa chạy được end-to-end** vì nhóm chưa có `PAGEINDEX_API_KEY`. Khi thiếu
+  key hoặc khi provider lỗi, hàm trả về danh sách rỗng và Task 9 quay lại dùng
+  hybrid result — không có nhánh nào sinh nội dung giả.
 
-## 6. Môi trường & Dependencies
-- File `requirements.txt` đã được hiệu chỉnh:
-  - Loại bỏ `crawl4ai` (do yêu cầu Rust compiler gây lỗi cài đặt trên một số máy).
-  - Nới lỏng phiên bản `langchain-text-splitters` và `langchain-core` để tương thích hoàn toàn với thư viện đánh giá `ragas`.
+## 4. Pipeline & Generation (Task 9, 10)
 
----
-*Tất cả các tính năng đã được test chạy thành công 100% từ đầu đến cuối trên máy tính local.*
+- `retrieve()`: dense + BM25 → RRF một lần → so ngưỡng với **cosine score gốc
+  của dense**, không so với RRF score (hai thang đo khác nhau).
+- `SCORE_THRESHOLD = 0.35`, hiệu chỉnh bằng 8 query in-domain (0.360–0.791) và
+  8 query out-of-domain (0.135–0.336). Biên chỉ rộng 0.024 — mở rộng corpus thì
+  phải đo lại.
+- **Generation (Task 10):** DeepSeek `deepseek-chat`. Có lost-in-the-middle
+  reordering, context kèm title + source để citation `[Document N]` đối chiếu
+  được, và safe refusal khi không retrieve được gì hoặc provider lỗi.
+
+## 5. UI và đánh giá
+
+- **Streamlit (`app.py`):** hiển thị câu trả lời kèm panel nguồn (title, file,
+  loại tài liệu, chunk index, score, retrieval method).
+- **Evaluation:** golden dataset 15 cặp Q&A, mỗi case kèm đoạn văn gốc trong
+  `expected_context`. Đo 4 metric Ragas (Faithfulness, Answer Relevancy, Context
+  Recall, Context Precision) và so sánh A/B giữa dense-only và hybrid + RRF.
+- `eval_pipeline.py` hỗ trợ cả Ragas 0.1.x và 0.4.x, và **không có nhánh sinh
+  điểm giả**: thiếu API key thì script dừng và báo lỗi.
+
+## 6. Kiểm thử
+
+`pytest -q` → 20/20 pass (15 contract tests + 5 acceptance tests), chạy trên
+Python 3.12, không gọi network.
+
+## 7. Những chỗ còn hạn chế
+
+- Corpus là synthetic và rất nhỏ (8 tài liệu, 16 chunks). Mọi con số đánh giá
+  chỉ nói lên pipeline chạy đúng, không nói lên nó tốt trên dữ liệu thật.
+- PageIndex fallback chưa được kiểm chứng end-to-end (thiếu API key).
+- Biên threshold giữa in-domain và out-of-domain chỉ 0.024, quá hẹp để tin cậy
+  trên corpus lớn hơn.
+- Phần Recommendations trong `RESULT.md` cần người đọc bảng Worst performers rồi
+  điền tay; script chỉ sinh được số liệu, không sinh được kết luận.
+- Chưa làm phần bonus (HyDE/query expansion, cross-encoder reranker,
+  conversation memory, deploy online).

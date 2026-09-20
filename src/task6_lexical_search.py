@@ -35,7 +35,15 @@ def build_bm25_index(corpus: list[dict]):
 
 def _get_index(corpus: list[dict]):
     """Trả BM25 index đã cache cho corpus hiện tại."""
-    key = (id(corpus), len(corpus))
+    # Gồm cả id đầu/cuối chứ không chỉ id(list) và độ dài: một list khác có thể
+    # tái sử dụng cùng địa chỉ bộ nhớ sau khi list cũ bị thu hồi, và lúc đó
+    # cache sẽ trả về index của corpus cũ.
+    key = (
+        id(corpus),
+        len(corpus),
+        corpus[0]["id"] if corpus else None,
+        corpus[-1]["id"] if corpus else None,
+    )
     if _INDEX_CACHE["corpus_key"] != key:
         _INDEX_CACHE["corpus_key"] = key
         _INDEX_CACHE["bm25"] = build_bm25_index(corpus)

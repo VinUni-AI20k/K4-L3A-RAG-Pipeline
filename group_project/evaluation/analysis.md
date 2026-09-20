@@ -1,0 +1,10 @@
+| Priority | Action | Evidence from failure analysis | Expected impact | How to verify |
+| -------: | ------ | ------------------------------ | --------------- | ------------- |
+| 1 | Thêm ngưỡng cắt score trong `retrieve()`, hoặc giảm `top_k` xuống 3, thay vì luôn trả đủ `top_k` chunk | Câu "Thanh toán bằng thẻ tín dụng có an toàn không?" lấy 5 chunk nhưng chỉ chunk 1 (`payment-methods-shopee.md`) liên quan; 4 chunk còn lại nói về trả hàng, giao hàng và đổi phương thức thanh toán. Corpus chỉ có 16 chunk nên `top_k=5` ép lấy cả phần không liên quan. Câu "người bán từ chối yêu cầu trả hàng" có context precision 0.500 vì lý do tương tự | Context precision tăng; context nhiễu ít đi thì faithfulness cũng đỡ bị kéo xuống | Chạy lại `eval_pipeline.py` và so cột Context precision với bảng hiện tại (A 0.967 / B 0.963) |
+| 2 | Sửa `SYSTEM_PROMPT`: cấm mở đầu bằng "Có." / "Không." đứng riêng thành một câu, bắt gộp vào mệnh đề có citation | Hai case faithfulness thấp nhất (0.667) thực ra **trả lời đúng và có citation**: "Có. Mọi giao dịch qua thẻ đều được mã hóa… [Document 1]". Ragas tách answer thành từng statement rồi đối chiếu context, nên "Có." trở thành một statement không kiểm chứng được và ăn 1/3 điểm faithfulness | Faithfulness tăng mà không phải đổi gì ở retrieval — đây là lỗi đo, không phải lỗi hệ thống | Chạy lại evaluation, xem 2 câu này trong `per_question_scores.json` có lên 1.000 không |
+| 3 | Mở rộng corpus và golden dataset trước khi kết luận hybrid tốt hơn dense | Delta average B−A chỉ **+0.006** trên 15 câu, và context precision của B còn thấp hơn A (−0.003). Với corpus 8 tài liệu / 16 chunk thì dense gần như luôn lấy trúng, BM25 hầu như không thêm được gì để RRF phát huy | Có đủ dữ liệu để kết luận A/B một cách có nghĩa, thay vì chênh lệch nằm trong nhiễu | Lặp lại A/B trên corpus lớn hơn và xem delta có vượt khỏi mức dao động giữa các lần chạy không |
+
+**Lưu ý về độ tin cậy của toàn bộ bảng điểm:** corpus là synthetic, 8 tài liệu,
+16 chunk, và golden dataset 15 câu đều được soạn từ chính corpus đó. Điểm cao ở
+đây chỉ chứng minh pipeline nối đúng từ đầu tới cuối, không chứng minh hệ thống
+hoạt động tốt trên tài liệu thật.

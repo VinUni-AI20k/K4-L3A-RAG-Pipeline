@@ -35,6 +35,9 @@ htmlcov/
 .env.*
 !.env.example
 
+# Vector store (sinh lại được bằng `python -m src.task4_chunking_indexing`)
+chroma_db/
+
 # Temp PDF conversion cache
 data/_tmp_pdf/
 

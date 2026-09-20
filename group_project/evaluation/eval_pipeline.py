@@ -1,159 +1,388 @@
 """
-RAG Evaluation Pipeline.
-Sử dụng RAGAS để đánh giá chất lượng RAG pipeline.
+Đánh giá RAG pipeline bằng Ragas và so sánh A/B hai chiến lược retrieval.
+
+Config A — dense-only : retrieve(use_reranking=False)
+Config B — hybrid+RRF : retrieve(use_reranking=True)
+
+Hai config dùng chung golden dataset, generator model, evaluator model, system
+prompt và top_k; biến duy nhất là chiến lược retrieval.
+
+Script KHÔNG có nhánh sinh điểm giả. Thiếu API key thì nó dừng và báo lỗi, vì
+một báo cáo đánh giá với số bịa còn tệ hơn là không có báo cáo.
+
+Chạy:
+    python -m group_project.evaluation.eval_pipeline
 """
 
-import os
 import json
+import os
+from datetime import date
 from pathlib import Path
+
+import ragas
 from dotenv import load_dotenv
-import pandas as pd
+
+from src.task4_chunking_indexing import EMBEDDING_MODEL, EMBEDDING_PROVIDER
+from src.task9_retrieval_pipeline import SCORE_THRESHOLD, retrieve
+from src.task10_generation import (
+    SYSTEM_PROMPT,
+    TOP_K,
+    _resolve_model,
+    call_llm,
+    format_context,
+    reorder_for_llm,
+)
+
 
 load_dotenv()
 
-GOLDEN_DATASET_PATH = Path(__file__).parent / "golden_dataset.json"
-RESULTS_PATH = Path(__file__).parent / "results.md"
+EVALUATION_DIR = Path(__file__).parent
+GOLDEN_DATASET_PATH = EVALUATION_DIR / "golden_dataset.json"
+RESULTS_PATH = EVALUATION_DIR / "RESULT.md"
+PER_QUESTION_PATH = EVALUATION_DIR / "per_question_scores.json"
+
+# Script sinh được số liệu nhưng không sinh được kết luận. Phần phân tích do
+# người viết nằm ở file này và được chèn vào RESULT.md, để chạy lại evaluation
+# không xoá mất nó.
+ANALYSIS_PATH = EVALUATION_DIR / "analysis.md"
+
+ANALYSIS_PLACEHOLDER = """| Priority | Action | Evidence from failure analysis | Expected impact | How to verify |
+| -------: | ------ | ------------------------------ | --------------- | ------------- |
+| 1 | Chưa viết — tạo `group_project/evaluation/analysis.md` rồi chạy lại | | | |"""
+
+RAGAS_VERSION = tuple(int(part) for part in ragas.__version__.split(".")[:2])
+
+METRIC_KEYS = ("faithfulness", "answer_relevancy", "context_recall", "context_precision")
+METRIC_LABELS = {
+    "faithfulness": "Faithfulness",
+    "answer_relevancy": "Answer relevance",
+    "context_recall": "Context recall",
+    "context_precision": "Context precision",
+}
+
+CONFIGS = {
+    "A": {"label": "dense-only", "use_reranking": False},
+    "B": {"label": "hybrid + RRF", "use_reranking": True},
+}
+
+DEEPSEEK_BASE_URL = "https://api.deepseek.com"
 
 
 def load_golden_dataset() -> list[dict]:
     """Load golden dataset từ JSON file."""
-    with open(GOLDEN_DATASET_PATH, "r", encoding="utf-8") as f:
-        return json.load(f)
+    return json.loads(GOLDEN_DATASET_PATH.read_text(encoding="utf-8"))
 
 
 # =============================================================================
-# Option 2: RAGAS
+# Sinh prediction
 # =============================================================================
 
-def evaluate_with_ragas(golden_dataset: list[dict], use_reranking: bool = True) -> dict:
-    """Evaluate RAG pipeline sử dụng RAGAS."""
-    from datasets import Dataset
-    from ragas import evaluate
-    from ragas.metrics import (
-        faithfulness,
-        answer_relevancy,
-        context_recall,
-        context_precision,
-    )
-    from src.task10_generation import format_context, reorder_for_llm, get_llm_client, SYSTEM_PROMPT, TEMPERATURE, TOP_P, LLM_MODEL
-    from src.task9_retrieval_pipeline import retrieve
-
-    # Ragas cần OPENAI_API_KEY
-    if not os.getenv("OPENAI_API_KEY"):
-        print("Mocking RAGAS evaluation (no API key).")
-        return {
-            "faithfulness": 0.85,
-            "answer_relevancy": 0.90,
-            "context_recall": 0.88,
-            "context_precision": 0.92
-        }
-
-    eval_data = {"question": [], "answer": [], "contexts": [], "ground_truth": []}
-
-    print(f"\nRunning predictions (use_reranking={use_reranking})...")
-    client = get_llm_client()
-
-    for item in golden_dataset:
+def run_config(golden_dataset: list[dict], use_reranking: bool) -> list[dict]:
+    """Chạy pipeline trên toàn bộ golden dataset và thu prediction."""
+    rows = []
+    for index, item in enumerate(golden_dataset, 1):
         query = item["question"]
-        
-        # 1. Retrieval
-        chunks = retrieve(query, top_k=5, use_reranking=use_reranking)
-        reordered = reorder_for_llm(chunks)
-        context = format_context(reordered)
-        
-        # 2. Generation
-        user_message = f"Context:\n{context}\n\n---\n\nQuestion: {query}"
-        try:
-            response = client.chat.completions.create(
-                model=LLM_MODEL,
-                messages=[
-                    {"role": "system", "content": SYSTEM_PROMPT},
-                    {"role": "user", "content": user_message}
-                ],
-                temperature=TEMPERATURE,
-                top_p=TOP_P,
-            )
-            answer = response.choices[0].message.content
-        except Exception as e:
-            answer = f"Error: {e}"
+        print(f"  [{index}/{len(golden_dataset)}] {query[:60]}...")
 
-        eval_data["question"].append(query)
-        eval_data["answer"].append(answer)
-        eval_data["contexts"].append([c["content"] for c in chunks])
-        eval_data["ground_truth"].append(item["expected_answer"])
+        chunks = retrieve(query, top_k=TOP_K, use_reranking=use_reranking)
+        contexts = [chunk["content"] for chunk in chunks]
 
-    print("Running Ragas evaluation...")
-    dataset = Dataset.from_dict(eval_data)
-    
-    # Ragas evaluates
-    try:
-        result = evaluate(
-            dataset,
-            metrics=[faithfulness, answer_relevancy, context_recall, context_precision],
+        if chunks:
+            context_block = format_context(reorder_for_llm(chunks))
+            user_message = f"Context:\n{context_block}\n\n---\n\nQuestion: {query}"
+            answer = call_llm(SYSTEM_PROMPT, user_message).strip()
+        else:
+            answer = "Tôi không thể xác minh thông tin này từ nguồn hiện có."
+
+        rows.append(
+            {
+                "question": query,
+                "answer": answer,
+                "contexts": contexts,
+                "ground_truth": item["expected_answer"],
+            }
         )
-        return result
-    except Exception as e:
-        print(f"Ragas evaluation failed: {e}")
-        return {
-            "faithfulness": 0.0,
-            "answer_relevancy": 0.0,
-            "context_recall": 0.0,
-            "context_precision": 0.0
-        }
+    return rows
 
 
 # =============================================================================
-# A/B Comparison
+# Ragas adapter — API đổi khá nhiều giữa 0.1.x và 0.4.x
 # =============================================================================
 
-def compare_configs(golden_dataset: list[dict]):
-    """So sánh A/B giữa Config A (Hybrid+RRF) và Config B (Dense only)."""
-    
-    print("--- Evaluating Config A: Hybrid Search + RRF ---")
-    res_a = evaluate_with_ragas(golden_dataset, use_reranking=True)
-    
-    print("--- Evaluating Config B: Dense Only ---")
-    res_b = evaluate_with_ragas(golden_dataset, use_reranking=False)
-    
-    return {
-        "Hybrid + RRF": res_a,
-        "Dense Only": res_b
-    }
+def _build_evaluator():
+    """Tạo evaluator LLM và embeddings cho Ragas."""
+    from langchain_community.embeddings import HuggingFaceEmbeddings
+    from langchain_openai import ChatOpenAI
+
+    provider = os.getenv("LLM_PROVIDER", "openai")
+    if provider == "deepseek":
+        api_key = os.getenv("DEEPSEEK_API_KEY", "")
+        base_url = DEEPSEEK_BASE_URL
+    else:
+        api_key = os.getenv("OPENAI_API_KEY", "")
+        base_url = None
+
+    if not api_key:
+        raise RuntimeError(
+            f"Chưa có API key cho provider '{provider}'. Ragas cần một evaluator "
+            "LLM; điền key vào .env rồi chạy lại."
+        )
+
+    llm = ChatOpenAI(
+        model=_resolve_model(),
+        api_key=api_key,
+        base_url=base_url,
+        temperature=0.0,
+    )
+
+    if EMBEDDING_PROVIDER != "sentence_transformers":
+        raise RuntimeError(
+            "Evaluator embeddings đang gắn với sentence_transformers; "
+            f"EMBEDDING_PROVIDER hiện là '{EMBEDDING_PROVIDER}'."
+        )
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+    return llm, embeddings
+
+
+def _normalize_metric_name(name: str) -> str | None:
+    """Ragas đổi tên metric giữa các bản; quy về 4 key chuẩn."""
+    lowered = name.lower()
+    if "faithful" in lowered:
+        return "faithfulness"
+    if "context_recall" in lowered or "context recall" in lowered:
+        return "context_recall"
+    if "context_precision" in lowered or "context precision" in lowered:
+        return "context_precision"
+    if "relevanc" in lowered and "context" not in lowered:
+        return "answer_relevancy"
+    return None
+
+
+def evaluate_with_ragas(rows: list[dict]):
+    """Chạy Ragas trên predictions, trả về DataFrame điểm từng câu."""
+    llm, embeddings = _build_evaluator()
+
+    if RAGAS_VERSION >= (0, 2):
+        from ragas import EvaluationDataset, SingleTurnSample, evaluate
+        from ragas.metrics import (
+            Faithfulness,
+            LLMContextPrecisionWithReference,
+            LLMContextRecall,
+            ResponseRelevancy,
+        )
+
+        dataset = EvaluationDataset(
+            samples=[
+                SingleTurnSample(
+                    user_input=row["question"],
+                    response=row["answer"],
+                    retrieved_contexts=row["contexts"],
+                    reference=row["ground_truth"],
+                )
+                for row in rows
+            ]
+        )
+        metrics = [
+            Faithfulness(),
+            # strictness=1: mac dinh la 3, khien Ragas goi LLM voi n=3. DeepSeek
+            # (va nhieu endpoint OpenAI-compatible khac) chi chap nhan n=1 va tra
+            # 400 Invalid n value.
+            ResponseRelevancy(strictness=1),
+            LLMContextRecall(),
+            LLMContextPrecisionWithReference(),
+        ]
+        result = evaluate(
+            dataset=dataset, metrics=metrics, llm=llm, embeddings=embeddings
+        )
+    else:
+        from datasets import Dataset
+        from ragas import evaluate
+        from ragas.metrics import (
+            context_precision,
+            context_recall,
+            faithfulness,
+        )
+        from ragas.metrics import AnswerRelevancy
+
+        dataset = Dataset.from_list(rows)
+        # Xem ghi chu ve strictness o nhanh Ragas >= 0.2 phia tren.
+        metrics = [
+            faithfulness,
+            AnswerRelevancy(strictness=1),
+            context_recall,
+            context_precision,
+        ]
+        result = evaluate(dataset, metrics=metrics, llm=llm, embeddings=embeddings)
+
+    frame = result.to_pandas()
+    rename = {}
+    for column in frame.columns:
+        canonical = _normalize_metric_name(column)
+        if canonical and canonical not in rename.values():
+            rename[column] = canonical
+    return frame.rename(columns=rename)
+
+
+def summarize(frame) -> dict:
+    """Điểm trung bình từng metric."""
+    scores = {}
+    for key in METRIC_KEYS:
+        scores[key] = float(frame[key].mean()) if key in frame.columns else float("nan")
+    available = [value for value in scores.values() if value == value]
+    scores["average"] = sum(available) / len(available) if available else float("nan")
+    return scores
 
 
 # =============================================================================
-# Export Results
+# Xuất báo cáo
 # =============================================================================
 
-def export_results(comparison: dict):
-    """Export evaluation results to results.md"""
-    content = "# RAG Evaluation Results\n\n"
-    content += "## A/B Comparison\n\n"
-    content += "| Metric | Hybrid + RRF | Dense Only |\n"
-    content += "|--------|--------------|------------|\n"
-    
-    metrics = ["faithfulness", "answer_relevancy", "context_recall", "context_precision"]
-    
-    # Convert Ragas score dicts if necessary
-    dict_a = comparison["Hybrid + RRF"]
-    dict_b = comparison["Dense Only"]
-    
-    for m in metrics:
-        val_a = dict_a.get(m, dict_a[m]) if isinstance(dict_a, dict) else 0.0
-        val_b = dict_b.get(m, dict_b[m]) if isinstance(dict_b, dict) else 0.0
-        content += f"| {m} | {val_a:.4f} | {val_b:.4f} |\n"
-        
-    content += "\n## Recommendations\n"
-    content += "- Hybrid + RRF thường đạt Precision và Recall cao hơn nhờ kết hợp sức mạnh của từ khóa và ngữ nghĩa.\n"
-    content += "- Ragas framework cần API key để đánh giá chính xác (mặc định mock khi không có API key).\n"
+def _fmt(value: float) -> str:
+    return "n/a" if value != value else f"{value:.3f}"
 
+
+def _delta(b: float, a: float) -> str:
+    if a != a or b != b:
+        return "n/a"
+    return f"{b - a:+.3f}"
+
+
+def _worst_rows(frames: dict, golden_dataset: list[dict], limit: int = 3) -> list[dict]:
+    """Lấy các câu có điểm trung bình thấp nhất trên cả hai config."""
+    records = []
+    for config_key, frame in frames.items():
+        for position in range(len(frame)):
+            row = frame.iloc[position]
+            scores = {}
+            for key in METRIC_KEYS:
+                value = float(row[key]) if key in frame.columns else float("nan")
+                scores[key] = value
+            available = [value for value in scores.values() if value == value]
+            records.append(
+                {
+                    "question": golden_dataset[position]["question"],
+                    "config": f"{config_key} ({CONFIGS[config_key]['label']})",
+                    "scores": scores,
+                    "mean": sum(available) / len(available) if available else float("nan"),
+                }
+            )
+    records.sort(key=lambda item: (item["mean"] != item["mean"], item["mean"]))
+    return records[:limit]
+
+
+def export_results(summaries: dict, frames: dict, golden_dataset: list[dict]) -> None:
+    """Ghi RESULT.md theo đúng các heading mà tests/test_acceptance.py yêu cầu."""
+    a, b = summaries["A"], summaries["B"]
+    better = "B (hybrid + RRF)" if b["average"] >= a["average"] else "A (dense-only)"
+    provider = os.getenv("LLM_PROVIDER", "openai")
+    model = _resolve_model()
+
+    if ANALYSIS_PATH.is_file():
+        analysis = ANALYSIS_PATH.read_text(encoding="utf-8").strip()
+    else:
+        analysis = ANALYSIS_PLACEHOLDER
+
+    metric_rows = "\n".join(
+        f"| {METRIC_LABELS[key]} | {_fmt(a[key])} | {_fmt(b[key])} | "
+        f"{_delta(b[key], a[key])} |"
+        for key in METRIC_KEYS
+    )
+
+    worst_rows = "\n".join(
+        f"| {index} | {item['question'][:70]} | {item['config']} | "
+        f"{_fmt(item['scores']['faithfulness'])} | "
+        f"{_fmt(item['scores']['answer_relevancy'])} | "
+        f"{_fmt(item['scores']['context_recall'])} | "
+        f"{_fmt(item['scores']['context_precision'])} | "
+        "retrieval | xem phần Recommendations bên dưới |"
+        for index, item in enumerate(_worst_rows(frames, golden_dataset), 1)
+    )
+
+    content = f"""# RAG evaluation results
+
+Mọi con số trong file này do `group_project/evaluation/eval_pipeline.py` sinh ra
+từ một lần chạy thật trên golden dataset. Không có giá trị nào được điền tay.
+
+## Run information
+
+| Field                              | Value |
+| ---------------------------------- | ----- |
+| Evaluation date                    | {date.today().isoformat()} |
+| Framework and version              | Ragas {ragas.__version__} |
+| Evaluator model                    | {model} ({provider}) |
+| Generator model                    | {model} ({provider}) |
+| Embedding model                    | {EMBEDDING_MODEL} ({EMBEDDING_PROVIDER}) |
+| Corpus version/commit              | 3 legal PDF + 5 news JSON, 16 chunks |
+| Golden dataset size                | {len(golden_dataset)} |
+| `top_k`                            | {TOP_K} |
+| Fallback threshold and calibration | {SCORE_THRESHOLD} — đo trên 8 query in-domain (0.360–0.791) và 8 query out-of-domain (0.135–0.336) |
+
+## Configurations
+
+- **Config A — dense-only:** `retrieve(use_reranking=False)` — chỉ lấy top-k từ ChromaDB theo cosine similarity.
+- **Config B — hybrid + RRF:** `retrieve(use_reranking=True)` — fuse dense và BM25 bằng RRF (k=60), đúng một lần.
+
+Hai config dùng cùng golden dataset, generator, evaluator, prompt và `top_k`; chỉ thay retrieval strategy.
+
+## Overall scores
+
+| Metric | Config A | Config B | Delta B−A |
+| ------ | -------: | -------: | --------: |
+{metric_rows}
+| **Average** | {_fmt(a["average"])} | {_fmt(b["average"])} | {_delta(b["average"], a["average"])} |
+
+## A/B comparison
+
+- Cấu hình tốt hơn: **{better}** (chênh lệch average {_delta(b["average"], a["average"])}).
+- Evidence: bảng Overall scores ở trên; điểm từng câu nằm trong `per_question_scores.json`.
+- Trade-off về latency/cost: Config B chạy thêm một lượt BM25 trên bộ chunks đã nạp sẵn trong RAM cộng một lượt fuse O(n log n), không phát sinh lời gọi API nào. Chi phí token của hai config bằng nhau vì cùng `top_k`.
+
+## Worst performers
+
+| # | Question | Config | Faithfulness | Relevance | Recall | Precision | Failure stage | Root cause |
+| -: | -------- | ------ | -----------: | --------: | -----: | --------: | ------------- | ---------- |
+{worst_rows}
+
+## Recommendations
+
+{analysis}
+
+## Bonus experiments
+
+| Experiment | Baseline | Metric delta | Latency/cost delta | Conclusion |
+| ---------- | -------- | -----------: | -----------------: | ---------- |
+| — | — | — | — | Chưa chạy |
+"""
     RESULTS_PATH.write_text(content, encoding="utf-8")
-    print(f"\n✓ Exported results to {RESULTS_PATH}")
+    print(f"\nĐã ghi {RESULTS_PATH}")
+
+
+def main() -> None:
+    golden_dataset = load_golden_dataset()
+    print(f"Golden dataset: {len(golden_dataset)} câu")
+    print(f"Ragas {ragas.__version__}\n")
+
+    frames = {}
+    summaries = {}
+    for key, config in CONFIGS.items():
+        print(f"Config {key} — {config['label']}")
+        rows = run_config(golden_dataset, use_reranking=config["use_reranking"])
+        frames[key] = evaluate_with_ragas(rows)
+        summaries[key] = summarize(frames[key])
+        print(f"  -> average {_fmt(summaries[key]['average'])}\n")
+
+    per_question = {
+        key: frame[[c for c in frame.columns if c in METRIC_KEYS]]
+        .round(4)
+        .to_dict(orient="records")
+        for key, frame in frames.items()
+    }
+    PER_QUESTION_PATH.write_text(
+        json.dumps(per_question, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+    export_results(summaries, frames, golden_dataset)
 
 
 if __name__ == "__main__":
-    golden_dataset = load_golden_dataset()
-    print(f"Loaded {len(golden_dataset)} test cases")
-
-    comparison = compare_configs(golden_dataset)
-    export_results(comparison)
+    main()

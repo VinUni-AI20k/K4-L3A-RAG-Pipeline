@@ -7,6 +7,7 @@ file .md cùng stem nên không sinh bản trùng.
 """
 
 import json
+import re
 from pathlib import Path
 
 
@@ -15,6 +16,16 @@ OUTPUT_DIR = Path(__file__).parent.parent / "data" / "standardized"
 
 # Ngắn hơn mức này thì chunk gần như chắc chắn vô dụng cho retrieval.
 MIN_CONTENT_CHARS = 200
+
+# MarkItDown trích text từ PDF theo vị trí ký tự nên chèn khoảng trắng đôi/ba
+# giữa các từ ("Shopee  hỗ  trợ"). Gom lại một space để BM25 và embedding đọc
+# đúng văn bản; xuống dòng giữ nguyên để không phá cấu trúc Markdown.
+_MULTISPACE = re.compile(r"[ \t]{2,}")
+
+
+def _normalize_spacing(text: str) -> str:
+    lines = (_MULTISPACE.sub(" ", line).rstrip() for line in text.splitlines())
+    return "\n".join(lines)
 
 
 def _write_markdown(output_path: Path, content: str) -> bool:
@@ -46,7 +57,9 @@ def convert_legal_docs() -> None:
         except Exception as error:
             print(f"  Failed: {error}")
             continue
-        _write_markdown(output_dir / f"{path.stem}.md", result.text_content)
+        _write_markdown(
+            output_dir / f"{path.stem}.md", _normalize_spacing(result.text_content)
+        )
 
 
 def convert_news_articles() -> None:

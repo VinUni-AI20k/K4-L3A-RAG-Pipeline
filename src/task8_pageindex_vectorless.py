@@ -22,7 +22,7 @@ load_dotenv()
 PAGEINDEX_API_KEY = os.getenv("PAGEINDEX_API_KEY", "")
 
 LANDING_LEGAL_DIR = Path(__file__).parent.parent / "data" / "landing" / "legal"
-DOC_ID_CACHE = Path(__file__).parent.parent / "data" / "pageindex_documents.json"
+DOC_ID_CACHE = Path(__file__).parent.parent / "pageindex_doc_ids.json"
 
 # PageIndex xử lý bất đồng bộ; đây là trần chờ để pipeline không treo UI.
 READY_TIMEOUT_SECONDS = 60
