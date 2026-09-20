@@ -28,12 +28,15 @@
    nhánh retrieval được bảo đảm nhìn vào cùng một tập chunk.
 
 2. **Quyết định:** Lọc chunk có mật độ markdown link > 50% (và ≥ 3 link) trước khi embed.
-   **Lý do/evidence:** Các trang `ielts.org` mang theo menu điều hướng lặp lại
-   hàng trăm dòng; `article_01_how-ielts-is-scored.md` có khoảng 2/3 độ dài là
-   danh sách link. Sau khi lọc, corpus giảm từ 753 xuống 402 chunk mà không mất
-   nội dung thật (band scale, cách làm tròn, thời hạn 2 năm đều còn).
-   **Trade-off:** Heuristic có thể loại nhầm chunk ngắn nhưng nhiều link hợp lệ,
-   ví dụ danh sách tài nguyên ôn luyện ở cuối bài ieltsliz.
+   **Lý do/evidence:** Dữ liệu crawl từ Wikipedia, Wikivoyage và cổng Cục Du
+   lịch Quốc gia có nhiều menu, mục lục và liên kết điều hướng. Task 3 hiện đã
+   đổi link Markdown thành anchor text trước khi Task 4 chạy, nên phép đo trên
+   corpus chuẩn hóa hiện tại cho kết quả 2.633 → 2.633 chunk (không có chunk nào
+   bị loại). Heuristic vẫn được giữ như lớp phòng vệ khi nhóm bổ sung Markdown
+   chưa qua bước làm sạch hoặc thay đổi nguồn crawl trong tương lai.
+   **Trade-off:** Bộ lọc không cải thiện kích thước corpus hiện tại và có thể
+   loại nhầm một chunk ngắn chứa danh sách liên kết tài nguyên du lịch hợp lệ;
+   đổi lại nó ngăn navigation noise đi vào embedding nếu dữ liệu đầu vào thay đổi.
 
 ## Kiểm thử và kết quả
 
@@ -41,7 +44,10 @@
   `test_chunk_documents_preserves_identity_and_metadata`,
   `test_semantic_search_uses_shared_embedding_and_contract` và
   `test_lexical_search_returns_bm25_contract` là phần tôi phụ trách.
-- Kết quả trước/sau: 753 → 402 chunk sau khi bật bộ lọc noise.
+- Kết quả trên corpus du lịch hiện tại: 12 tài liệu chuẩn hóa tạo 2.633 chunk;
+  trước/sau bộ lọc noise đều là 2.633 chunk, ID không trùng và độ dài tối đa 500
+  ký tự. Nguyên nhân bộ lọc không loại thêm dữ liệu là Task 3 đã làm sạch cú pháp
+  link ở tầng `data/standardized/`.
 - Lỗi đã phát hiện và cách xử lý:
   - Chroma từ chối metadata giá trị `None` → convert `url=None` thành chuỗi rỗng
     ngay trước khi upsert, giữ nguyên `None` ở tầng Python để không phá contract.
@@ -53,11 +59,11 @@
 ## Điều còn hạn chế
 
 - Hạn chế cụ thể: `embed_texts()` với `sentence_transformers` load bge-m3
-  (~2,3 GB) và chạy trên CPU, nên bước index 402 chunk mất vài phút và lần chạy
-  đầu phụ thuộc vào tốc độ tải từ HuggingFace Hub.
-- Nếu có thêm thời gian: cho phép chọn model embedding nhẹ hơn qua `.env` (ví dụ
-  `all-MiniLM-L6-v2`) để vòng lặp thử nghiệm nhanh hơn, và đo A/B chất lượng
-  retrieval giữa hai model thay vì mặc định chọn model lớn.
+  (~2,3 GB) và chạy trên CPU, nên bước index 2.633 chunk có thể mất nhiều phút;
+  lần chạy đầu còn phụ thuộc vào tốc độ tải từ HuggingFace Hub.
+- Nếu có thêm thời gian: đo A/B `BAAI/bge-m3` với một model multilingual nhẹ
+  hơn trên cùng golden dataset, đồng thời thử chunking theo cấu trúc Điều/Khoản
+  cho tài liệu pháp lý thay vì chỉ chia theo số ký tự.
 
 ## Xác nhận đóng góp
 
