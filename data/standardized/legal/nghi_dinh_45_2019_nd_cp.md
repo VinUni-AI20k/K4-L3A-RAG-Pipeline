@@ -5,272 +5,1586 @@
 
 ---
 
-![facebook tracking](https://www.facebook.com/tr?id=297190890797171&ev=PageView&noscript=1)
+|CHÍNH PHỦ               |CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM             |
+|--------                |Độc lập - Tự do - Hạnh phúc                    |
+|Số: 45/2019/NĐ-CP       |---------------                                |
+|                        |Hà Nội, ngày 21 tháng 5 năm 2019               |
 
-[![LuatVietnam](/assets/images/logo.svg)](/ "Luật Việt Nam")
 
-Danh mục
+ 
 
-|
+                                  NGHỊ ĐỊNH
+         QUY ĐỊNH XỬ PHẠT VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC DU LỊCH
 
-Tổng đài trực tuyến **19006192**
+      Căn cứ Luật tổ chức Chính phủ ngày 19 tháng 6 năm 2015;
 
-|
+      Căn cứ Luật xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;
 
-[Gói dịch vụ & Giá](/dich-vu.html "Dịch vụ")
+      Căn cứ Luật du lịch ngày 19 tháng 6 năm 2017;
 
-* [Tra cứu văn bản](/dich-vu.html "Tra cứu văn bản")* [Phân tích văn bản](/dich-vu/phan-tich-van-ban.html "Phân tích văn bản")* [Dịch vụ dịch thuật](/dich-vu-dich-thuat.html "Dịch vụ dịch thuật")* [Dịch vụ nội dung](/dich-vu-noi-dung.html "Dịch vụ nội dung")* [Tổng đài tư vấn](/dich-vu-tong-dai-tu-van.html "Tổng đài tư vấn")
+      Theo đề nghị của Bộ trưởng Bộ Văn hóa, Thể thao và Du lịch;
 
-|
+      Chính phủ ban hành Nghị định quy định xử phạt vi phạm hành chính trong
+lĩnh vực du lịch.
 
-[![LuatVietnam English](https://image3.luatvietnam.vn/uploaded/images/original/2024/08/22/en_2208013926.png) English](https://english.luatvietnam.vn/ "LuatVietnam English")
+                                  Chương I
+                               QUY ĐỊNH CHUNG
 
-Đăng ký    / Đăng nhập   Đăng nhập
+      Điều 1. Phạm vi điều chỉnh
 
-* * [Văn bản mới](/van-ban-moi.html "Văn bản mới")* [Tra cứu văn bản](/van-ban/tim-kiem.html "Tra cứu văn bản")
-      + [Văn bản mới](/van-ban-moi.html "Văn bản mới") + [Văn bản luật Việt Nam](/van-ban-luat-viet-nam.html "Văn bản luật Việt Nam") + [Văn bản tiếng Anh ![Văn bản tiếng Anh](https://image3.luatvietnam.vn/uploaded/images/original/2024/08/22/en_2208013926.png)](https://english.luatvietnam.vn/ "Văn bản tiếng Anh") + [Văn bản UBND](/van-ban-uy-ban-nhan-dan.html "Văn bản UBND") + [Văn bản của Đảng ![Văn bản của Đảng](https://image3.luatvietnam.vn/uploaded/images/original/2026/08/12/lacodang_1208165331.png)](/van-ban-cua-dang.html "Văn bản của Đảng") + [Công văn](/cong-van.html "Công văn") + [Văn bản hợp nhất](/van-ban-hop-nhat.html "Văn bản hợp nhất") + [Quy chuẩn Việt Nam](/quy-chuan-viet-nam.html "Quy chuẩn Việt Nam") + [Tiêu chuẩn Việt Nam](/tieu-chuan-viet-nam.html "Tiêu chuẩn Việt Nam") + [Công ước](/cong-uoc-t2.html "Công ước") + [Hiệp định](/hiep-dinh-t8.html "Hiệp định") + [Hiệp ước](/hiep-uoc-t9.html "Hiệp ước")* [Dự thảo](/du-thao.html "Dự thảo")* [Tin văn bản mới](/tin-van-ban-moi-c186-article.html "Tin văn bản mới")* [Tin pháp luật](/tin-phap-luat.html "Tin pháp luật ")
-            + [Hành chính](/tin-phap-luat/quy-dinh-moi-nhat-ve-hanh-chinh-c570-article.html "Hành chính") + [Thuế - Phí](/tin-phap-luat/thue-phi-le-phi-c565-article.html "Thuế - Phí") + [Đất đai - Nhà ở](/tin-phap-luat/dat-dai-nha-o-c567-article.html "Đất đai - Nhà ở") + [Bảo hiểm](/tin-phap-luat/quy-dinh-ve-bao-hiem-c563-article.html "Bảo hiểm") + [Cán bộ - Công chức](/tin-phap-luat/quy-dinh-moi-nhat-ve-can-bo-cong-chuc-c566-article.html "Cán bộ - Công chức") + [Lao động](/tin-phap-luat/lao-dong-tien-luong-c562-article.html "Lao động") + [Dân sự](/tin-phap-luat/quy-dinh-moi-nhat-ve-dan-su-c568-article.html "Dân sự") + [Giao thông](/tin-phap-luat/giao-thong-c863-article.html "Giao thông") + [Biểu mẫu](/tin-phap-luat/bieu-mau-c571-article.html "Biểu mẫu") + [Media Luật](/tin-phap-luat/media-luat-c627-article.html "Media Luật") + [Lĩnh vực khác](/tin-phap-luat/linh-vuc-khac-c883-article.html "Lĩnh vực khác")* [Bản tin luật](/ban-tin-luatvietnam-c531-article.html "Bản tin luật ")
-              + [Điểm tin văn bản mới](/ban-tin-luatvietnam/diem-tin-van-ban-moi-c220-article.html "Điểm tin văn bản mới") + [Chính sách mới hàng tháng](/ban-tin-luatvietnam/diem-tin-chinh-sach-moi-c559-article.html "Chính sách mới hàng tháng") + [Văn bản hàng tuần](/ban-tin-luatvietnam/van-ban-cap-nhat-hang-tuan-c219-article.html "Văn bản hàng tuần") + [Bản tin hiệu lực](/ban-tin-luatvietnam/ban-tin-hieu-luc-c221-article.html "Bản tin hiệu lực")* [Luật sư tư vấn](/luat-su-tu-van.html "Luật sư tư vấn")* [AI Luật](https://ailuat.luatvietnam.vn/ "AI Luật")* [Tiện ích](/dich-vu/tien-ich.html "Tiện ích")
-                    + [Tra cứu giá đất](/bang-gia-dat.html "Tra cứu giá đất") + [Tính thuế thu nhập cá nhân](/tinh-thue-thu-nhap-ca-nhan.html "Tính thuế thu nhập cá nhân") + [Tính bảo hiểm xã hội 1 lần](/tinh-bao-hiem-xa-hoi-1-lan.html "Tính bảo hiểm xã hội 1 lần") + [Tính lương Gross - Net](/tinh-luong-gross-net.html "Tính lương Gross - Net") + [Tính bảo hiểm thất nghiệp](/tinh-muc-huong-bao-hiem-that-nghiep.html "Tính bảo hiểm thất nghiệp") + [Giá xăng hôm nay](/bang-gia-xang-dau-hom-nay.html "Giá xăng hôm nay")
+      1. Nghị định này quy định về hành vi vi phạm hành chính, hình thức  xử
+phạt, mức xử phạt, các biện pháp khắc phục hậu  quả,  thẩm  quyền  xử  phạt,
+thẩm quyền lập biên bản vi phạm hành chính trong lĩnh vực du lịch.
 
-Tất cả chuyên mục Đóng
+      2. Các hành vi vi phạm hành chính khác trong lĩnh vực  du  lịch  không
+được quy định tại Nghị định này thì áp dụng quy định tại các nghị định  khác
+của Chính phủ quy định xử phạt vi phạm hành chính trong  lĩnh  vực  quản  lý
+nhà nước có liên quan để xử phạt.
 
-Văn bản
+      Điều 2. Đối tượng áp dụng
 
-* [Văn bản mới](/van-ban-moi.html "Văn bản mới") * [Văn bản luật Việt Nam](/van-ban-luat-viet-nam.html "Văn bản luật Việt Nam") * [Văn bản tiếng Anh ![Văn bản tiếng Anh](https://image3.luatvietnam.vn/uploaded/images/original/2024/08/22/en_2208013926.png)](https://english.luatvietnam.vn/ "Văn bản tiếng Anh") * [Văn bản UBND](/van-ban-uy-ban-nhan-dan.html "Văn bản UBND") * [Văn bản của Đảng ![Văn bản của Đảng](https://image3.luatvietnam.vn/uploaded/images/original/2026/08/12/lacodang_1208165331.png)](/van-ban-cua-dang.html "Văn bản của Đảng") * [Công văn](/cong-van.html "Công văn") * [Văn bản hợp nhất](/van-ban-hop-nhat.html "Văn bản hợp nhất") * [Tiêu chuẩn Việt Nam](/tieu-chuan-viet-nam.html "Tiêu chuẩn Việt Nam") * [Quy chuẩn Việt Nam](/quy-chuan-viet-nam.html "Quy chuẩn Việt Nam") * [Công ước](/cong-uoc-t2.html "Công ước") * [Hiệp định](/hiep-dinh-t8.html "Hiệp định") * [Hiệp ước](/hiep-uoc-t9.html "Hiệp ước") * [Dự thảo](/du-thao.html "Dự thảo")
+      1. Tổ chức, cá nhân Việt Nam hoạt động du lịch trên lãnh thổ Việt  Nam
+và ở nước ngoài; tổ chức, cá nhân nước ngoài hoạt động  du  lịch  trên  lãnh
+thổ Việt Nam.
 
-Lĩnh vực tra cứu văn bản
+      2. Tổ chức là đối tượng bị xử phạt vi phạm hành chính trong  lĩnh  vực
+du lịch theo Nghị định này bao gồm:
 
-* [An ninh quốc gia](/an-ninh-quoc-gia-46-f1.html)* [An ninh trật tự](/an-ninh-trat-tu-11-f1.html)* [Báo chí-Truyền hình](/bao-chi-truyen-hinh-58-f1.html)* [Bảo hiểm](/bao-hiem-57-f1.html)* [Cán bộ-Công chức-Viên chức](/can-bo-cong-chuc-vien-chuc-45-f1.html)* [COVID-19](/covid-19-194-f1.html)* [Cổ phần-Cổ phần hoá](/co-phan-co-phan-hoa-52-f1.html)* [Công nghiệp](/cong-nghiep-15-f1.html)* [Cơ cấu tổ chức](/co-cau-to-chuc-23-f1.html)* [Cư trú-Hộ khẩu](/cu-tru-ho-khau-43-f1.html)* [Chính sách](/chinh-sach-25-f1.html)* [Chứng khoán](/chung-khoan-35-f1.html)* [Dân sự](/dan-su-65-f1.html)* [Doanh nghiệp](/doanh-nghiep-24-f1.html)* [Đất đai-Nhà ở](/dat-dai-nha-o-3-f1.html)* [Đầu tư](/dau-tu-1-f1.html)* [Đấu thầu-Cạnh tranh](/dau-thau-canh-tranh-61-f1.html)* [Địa giới hành chính](/dia-gioi-hanh-chinh-54-f1.html)* [Điện lực](/dien-luc-62-f1.html)* [Giáo dục-Đào tạo-Dạy nghề](/giao-duc-dao-tao-day-nghe-5-f1.html)* [Giao thông](/giao-thong-28-f1.html)* [Hải quan](/hai-quan-21-f1.html)* [Hàng hải](/hang-hai-34-f1.html)* [Hàng không](/hang-khong-193-f1.html)* [Hành chính](/hanh-chinh-27-f1.html)* [Hình sự](/hinh-su-66-f1.html)* [Hóa chất](/hoa-chat-189-f1.html)* [Hôn nhân gia đình](/hon-nhan-gia-dinh-64-f1.html)* [Kế toán-Kiểm toán](/ke-toan-kiem-toan-40-f1.html)* [Khiếu nại-Tố cáo](/khieu-nai-to-cao-59-f1.html)* [Khoa học-Công nghệ](/khoa-hoc-cong-nghe-18-f1.html)* [Lao động-Tiền lương](/lao-dong-tien-luong-7-f1.html)* [Lĩnh vực khác](/linh-vuc-khac-22-f1.html)* [Nông nghiệp-Lâm nghiệp](/nong-nghiep-lam-nghiep-87-f1.html)* [Ngoại giao](/ngoai-giao-13-f1.html)* [Quốc phòng](/quoc-phong-31-f1.html)* [Sở hữu trí tuệ](/so-huu-tri-tue-29-f1.html)* [Tài chính-Ngân hàng](/tai-chinh-ngan-hang-2-f1.html)* [Tài nguyên-Môi trường](/tai-nguyen-moi-truong-86-f1.html)* [Tiết kiệm-Phòng, chống tham nhũng, lãng phí](/tiet-kiem-phong-chong-tham-nhung-lang-phi-48-f1.html)* [Tòa án](/toa-an-10-f1.html)* [Tư pháp-Hộ tịch](/tu-phap-ho-tich-85-f1.html)* [Thi đua-Khen thưởng-Kỷ luật](/thi-dua-khen-thuong-ky-luat-55-f1.html)* [Thông tin-Truyền thông](/thong-tin-truyen-thong-88-f1.html)* [Thuế-Phí-Lệ phí](/thue-phi-le-phi-4-f1.html)* [Thủy hải sản](/thuy-hai-san-32-f1.html)* [Thực phẩm-Dược phẩm](/thuc-pham-duoc-pham-49-f1.html)* [Thương mại-Quảng cáo](/thuong-mai-quang-cao-51-f1.html)* [Văn hóa-Thể thao-Du lịch](/van-hoa-the-thao-du-lich-89-f1.html)* [Vi phạm hành chính](/vi-pham-hanh-chinh-26-f1.html)* [Xây dựng](/xay-dung-19-f1.html)* [Xuất nhập cảnh](/xuat-nhap-canh-42-f1.html)* [Xuất nhập khẩu](/xuat-nhap-khau-6-f1.html)* [Y tế-Sức khỏe](/y-te-suc-khoe-12-f1.html)
+      a) Doanh nghiệp hoạt động du lịch được thành lập  và  hoạt  động  theo
+pháp luật Việt Nam;
 
-Xem thêm
+      b) Chi nhánh, Văn phòng đại diện của doanh nghiệp hoạt động du lịch;
 
-[Tin tức pháp luật](/ "Tin tức pháp luật")
+      c) Hợp tác xã, liên hiệp hợp tác xã hoạt động du lịch;
 
-[Tin văn bản mới](/tin-van-ban-moi-c186-article.html "Tin văn bản mới")
+      d) Văn phòng đại diện tại Việt Nam của cơ quan du lịch nước ngoài,  tổ
+chức du lịch quốc tế và khu vực;
 
-[Tin pháp luật](/tin-phap-luat.html "Tin pháp luật")
+      đ) Tổ chức xã hội - nghề nghiệp về du lịch;
 
-* [Hành chính](/tin-phap-luat/quy-dinh-moi-nhat-ve-hanh-chinh-c570-article.html "Hành chính")* [Thuế - Phí](/tin-phap-luat/thue-phi-le-phi-c565-article.html "Thuế - Phí")* [Đất đai - Nhà ở](/tin-phap-luat/dat-dai-nha-o-c567-article.html "Đất đai - Nhà ở")* [Bảo hiểm](/tin-phap-luat/quy-dinh-ve-bao-hiem-c563-article.html "Bảo hiểm")* [Cán bộ - công chức](/tin-phap-luat/quy-dinh-moi-nhat-ve-can-bo-cong-chuc-c566-article.html "Cán bộ - công chức")* [Lao động](/tin-phap-luat/lao-dong-tien-luong-c562-article.html "Lao động")* [Dân sự](/tin-phap-luat/quy-dinh-moi-nhat-ve-dan-su-c568-article.html "Dân sự")* [Giao thông](/tin-phap-luat/giao-thong-c863-article.html "Giao thông ") * [Biểu mẫu](/tin-phap-luat/bieu-mau-c571-article.html "Biểu mẫu")* [Media Luật](/tin-phap-luat/media-luat-c627-article.html "Media Luật")* [Lĩnh vực khác](/tin-phap-luat/linh-vuc-khac-c883-article.html "Lĩnh vực khác")
+      e) Ban quản lý điểm du lịch, khu du lịch, đơn vị sự  nghiệp  công  lập
+hoạt động du lịch;
 
-Xem thêm
+      g) Nhà khách, nhà nghỉ của cơ quan nhà nước có hoạt  động  kinh  doanh
+dịch vụ lưu trú du lịch.
 
-[Tiện ích](/dich-vu/tien-ich.html "Tiện ích")
+      3. Cá nhân là đối tượng bị xử phạt vi phạm hành chính trong  lĩnh  vực
+du lịch theo Nghị định này là các đối tượng không thuộc quy định  tại  khoản
+2 Điều này.
 
-* [Thuật ngữ pháp lý](/thuat-ngu-phap-ly.html "Thuật ngữ pháp lý")* [Tra cứu giá đất](/bang-gia-dat.html "Tra cứu giá đất")* [Tra cứu diện tích tách thửa](/tra-cuu-dien-tich-tach-thua.html "Tra cứu diện tích tách thửa")* [Tính thuế thu nhập cá nhân](/tinh-thue-thu-nhap-ca-nhan.html "Tính thuế thu nhập cá nhân")* [Tính bảo hiểm thất nghiệp](/tinh-muc-huong-bao-hiem-that-nghiep.html "Tính bảo hiểm thất nghiệp")* [Tính bảo hiểm xã hội 1 lần](/tinh-bao-hiem-xa-hoi-1-lan.html "Tính bảo hiểm xã hội 1 lần")* [Tính lương Gross - Net](/tinh-luong-gross-net.html "Tính lương Gross - Net")* [Tra cứu mức lương tối thiểu](/muc-luong-toi-thieu-vung.html "Tra cứu mức lương tối thiểu")* [Tính lãi suất vay ngân hàng](/cong-cu-tinh-lai-suat-vay-ngan-hang.html "Tính lãi suất vay ngân hàng")* [Tính lãi suất tiết kiệm ngân hàng](/cong-cu-tinh-lai-suat-tiet-kiem-ngan-hang.html "Tính lãi suất tiết kiệm ngân hàng")* [Tính VAT online](/tinh-thue-gtgt-online.html "Tính VAT online")* [Giá xăng hôm nay](/bang-gia-xang-dau-hom-nay.html "Giá xăng hôm nay")* [Tính tiền chế độ thai sản](https://luatvietnam.vn/tinh-tien-che-do-thai-san.html "Tính tiền chế độ thai sản")* [Tra cứu mặt hàng không giảm thuế](https://luatvietnam.vn/tra-cuu-mat-hang-khong-duoc-giam-thue.html "Tra cứu mặt hàng không giảm thuế")* [Biểu thuế nhập khẩu WTO](/tra-cuu-bieu-thue-WTO.html "Biểu thuế nhập khẩu WTO")* [Biểu thuế ASEAN](/tra-cuu-bieu-thue-ASEAN.html "Biểu thuế ASEAN")* [Thông tin về dịch Covid-19](/covid-19.html "Thông tin về dịch Covid-19")* [Tra cứu mã ngành nghề kinh doanh](/tra-cuu-ma-nganh-nghe-kinh-doanh.html "Tra cứu mã ngành nghề kinh doanh")
+      4. Người có thẩm quyền lập biên bản, xử phạt vi phạm hành chính.
 
-Xem thêm
+      5. Cơ quan, tổ chức, cá nhân khác có liên quan.
 
-[Bản tin luật](/ban-tin-luatvietnam-c531-article.html "Bản tin luật")
+      Điều 3. Các hình thức xử phạt vi phạm hành chính
 
-* [Điểm tin văn bản mới](/ban-tin-luatvietnam/diem-tin-van-ban-moi-c220-article.html "Điểm tin văn bản mới")* [Văn bản hàng tuần](/ban-tin-luatvietnam/van-ban-cap-nhat-hang-tuan-c219-article.html "Văn bản hàng tuần")* [Bản tin hiệu lực](/ban-tin-luatvietnam/ban-tin-hieu-luc-c221-article.html "Bản tin hiệu lực")* [Chính sách mới hàng tháng](/ban-tin-luatvietnam/diem-tin-chinh-sach-moi-c559-article.html "Chính sách mới hàng tháng")
+      1. Các hình thức xử phạt chính
 
-[Luật sư tư vấn](/luat-su-tu-van.html "Luật sư tư vấn")
+      Đối với mỗi hành vi vi phạm hành chính trong  lĩnh  vực  du  lịch,  cá
+nhân, tổ chức vi phạm phải chịu một trong các hình thức xử  phạt  chính  sau
+đây:
 
-* [Hỏi đáp cùng chuyên gia](/dat-cau-hoi-tu-van.html "Hỏi đáp cùng chuyên gia")* [Danh sách Luật sư/ VP Luật](/danh-ba-luat-su.html "Danh sách Luật sư/ VP Luật")
+      a) Cảnh cáo;
 
-[Pháp lý doanh nghiệp](/phap-ly-doanh-nghiep.html "Pháp lý doanh nghiệp")
+      b) Phạt tiền.
 
-* [Thủ tục doanh nghiệp](/pldn/thu-tuc-phap-ly-doanh-nghiep.html "Thủ tục doanh nghiệp")* [Biểu mẫu](/pldn/bieu-mau.html "Biểu mẫu")* [Lịch pháp lý](/pldn/lich-phap-ly.html "Lịch pháp lý")
+      2. Các hình thức xử phạt bổ sung
 
-[Phiên bản tiếng Anh ![Phiên bản tiếng Anh ](https://image3.luatvietnam.vn/uploaded/images/original/2024/08/22/en_2208013926.png)](https://english.luatvietnam.vn/ "Phiên bản tiếng Anh ")
+      Tùy theo tính chất, mức độ vi phạm, cá nhân, tổ chức  có  hành  vi  vi
+phạm hành chính trong lĩnh vực du lịch còn có thể bị áp dụng một hoặc  nhiều
+hình thức xử phạt bổ sung sau đây:
 
-[Hệ thống Bản án - Án lệ ![Hệ thống Bản án - Án lệ](https://image3.luatvietnam.vn/uploaded/images/original/2024/06/19/moi_1906143321.gif)](/ban-an/ "Hệ thống Bản án - Án lệ")
+      a) Tước quyền sử dụng có thời hạn từ 01 tháng đến 24 tháng: Giấy  phép
+kinh doanh dịch vụ lữ hành; thẻ hướng dẫn viên  du  lịch;  quyết  định  công
+nhận hạng cơ sở lưu trú du lịch; quyết định công nhận cơ sở kinh doanh  dịch
+vụ du lịch khác đạt tiêu chuẩn phục vụ khách du lịch; quyết định  công  nhận
+điểm du lịch; quyết định công nhận khu du lịch; biển hiệu  phương  tiện  vận
+tải khách du lịch;
 
-[AI Luật - Trợ lý pháp lý thông minh ![AI Luật - Trợ lý pháp lý thông minh](https://image3.luatvietnam.vn/uploaded/images/original/2024/06/19/moi_1906143321.gif)](https://ailuat.luatvietnam.vn/ "AI Luật - Trợ lý pháp lý thông minh")
+      b) Đình chỉ hoạt động có thời hạn từ 01 tháng đến 06 tháng;
 
-[Pháp lý doanh nghiệp](/dich-vu-phap-ly-doanh-nghiep.html "Pháp lý doanh nghiệp")
+      c) Tịch thu tang vật vi phạm hành chính: Giấy phép kinh doanh dịch  vụ
+lữ hành giả; thẻ hướng dẫn viên du lịch giả; biển hiệu phương tiện  vận  tải
+khách du lịch giả.
 
-[Dịch vụ](/dich-vu.html "Dịch vụ")
+      Điều 4. Các biện pháp khắc phục hậu quả
 
-* [Tra cứu văn bản](/dich-vu.html "Tra cứu văn bản")* [Phân tích văn bản](/dich-vu/phan-tich-van-ban.html "Phân tích văn bản")* [Dịch vụ dịch thuật](/dich-vu-dich-thuat.html "Dịch vụ dịch thuật")* [Dịch vụ nội dung](/dich-vu-noi-dung.html "Dịch vụ nội dung")* [Tổng đài tư vấn](/dich-vu-tong-dai-tu-van.html "Tổng đài tư vấn")
+      Cá nhân, tổ chức vi phạm hành chính trong lĩnh vực du lịch ngoài  việc
+bị áp dụng hình thức xử phạt quy định tại Điều 3 Nghị định này  còn  có  thể
+bị áp dụng một hoặc một số biện pháp khắc phục hậu quả sau đây:
 
-* [Giới thiệu](/gioi-thieu.html "Giới thiệu")* [Hướng dẫn sử dụng](/huong-dan.html "Hướng dẫn sử dụng")
+      1. Buộc nộp lại số lợi bất hợp pháp có được do thực hiện  hành  vi  vi
+phạm hành chính.
 
-* Liên hệ* Hỗ trợ: **0938 36 1919*** Giải đáp Pháp luật: **1900 6192*** LH quảng cáo: [**[email protected]**](/cdn-cgi/l/email-protection#acd8c4d9d5ced8ecc5c2cfc3c182dac2 "Liên hệ quảng cáo")
+      2. Buộc thu hồi giấy phép kinh doanh dịch vụ  lữ  hành  quốc  tế,  thẻ
+hướng dẫn viên du lịch, quyết định công nhận hạng cơ sở  lưu  trú  du  lịch,
+quyết định công nhận cơ sở kinh doanh dịch vụ du lịch khác  đạt  tiêu  chuẩn
+phục vụ khách du lịch, quyết định công nhận điểm du lịch,  quyết  định  công
+nhận khu du lịch.
 
-* Tải ứng dụng* Android:[![google](/assets/images/google-play-badge.svg)](https://play.google.com/store/apps/details?id=com.iccom.luatvietnam)* IOS:[![appstore](/assets/images/appstore-badge.svg)](https://apps.apple.com/us/app/lu%E1%BA%ADt-vi%E1%BB%87t-nam/id1498874008)* Theo dõi chúng tôi trên:
+      3. Buộc tháo dỡ biển hiệu đạt tiêu chuẩn phục vụ khách du lịch.
 
-× [![Luật Việt Nam](/assets/images/logo.svg)](/)  Đăng nhập
+      4. Buộc nộp đủ số tiền phí, lệ phí, các khoản phải nộp theo quy định.
 
-[Trang chủ](/ "Trang chủ")
+      Điều 5. Mức phạt tiền và thẩm quyền phạt tiền trong lĩnh vực du lịch
 
-[Gói dịch vụ & Giá](/dich-vu.html "Gói dịch vụ & Giá")
+      1. Mức phạt tiền tối đa đối với mỗi hành vi vi phạm hành  chính  trong
+lĩnh vực du lịch đối với cá nhân là 50.000.000 đồng,  đối  với  tổ  chức  là
+100.000.000 đồng.
 
-[Chuyên trang tiếng Anh](https://english.luatvietnam.vn/ "Chuyên trang tiếng Anh")
+      2. Mức phạt tiền quy định tại các Điều 6, 8, 9, 10, 11,  12,  13,  14,
+15, 16, 17 và 18 Nghị định này là áp dụng đối với cá  nhân.  Mức  phạt  tiền
+quy định tại Điều 7 Nghị định này là áp dụng đối với tổ chức.
 
-[Hệ thống Bản án ![Hệ thống Bản án](https://image3.luatvietnam.vn/uploaded/images/original/2024/06/19/moi_1906143321.gif)](/ban-an/ "Hệ thống Bản án")
+      3. Đối với cùng một hành vi vi phạm hành chính thì mức phạt  tiền  đối
+với tổ chức gấp 02 lần mức phạt tiền đối với cá nhân.
 
-[AI Luật – Trợ lý pháp lý thông minh ![AI Luật – Trợ lý pháp lý thông minh](https://image3.luatvietnam.vn/uploaded/images/original/2024/06/19/moi_1906143321.gif)](https://ailuat.luatvietnam.vn/ "AI Luật – Trợ lý pháp lý thông minh")
+      4. Thẩm quyền phạt tiền của các chức danh có thẩm quyền  xử  phạt  quy
+định tại Chương III Nghị định này là thẩm quyền áp dụng đối với hành  vi  vi
+phạm hành chính của cá nhân; thẩm quyền phạt tiền với tổ  chức  gấp  02  lần
+thẩm quyền phạt tiền đối với cá nhân.
 
-[Tra cứu văn bản](/van-ban/tim-kiem.html "Tra cứu văn bản")
+                                  Chương II
+   HÀNH VI VI PHẠM HÀNH CHÍNH, HÌNH THỨC XỬ PHẠT, MỨC XỬ PHẠT VÀ BIỆN PHÁP
+                              KHẮC PHỤC HẬU QUẢ
 
-* [Văn bản mới](/van-ban-moi.html "Văn bản mới") * [Văn bản luật Việt Nam](/van-ban-luat-viet-nam.html "Văn bản luật Việt Nam") * [Văn bản Tiếng Anh ![Văn bản Tiếng Anh](https://image3.luatvietnam.vn/uploaded/images/original/2024/08/22/en_2208013926.png)](/van-ban-tieng-anh.html "Văn bản Tiếng Anh") * [Văn bản của Đảng ![Văn bản của Đảng](https://image3.luatvietnam.vn/uploaded/images/original/2026/08/12/lacodang_1208165331.png)](/van-ban-cua-dang.html "Văn bản của Đảng") * [Văn bản UBND](/van-ban-uy-ban-nhan-dan.html "Văn bản UBND") * [Công văn](/cong-van.html "Công văn") * [Văn bản hợp nhất](/van-ban-hop-nhat.html "Văn bản hợp nhất") * [Tiêu chuẩn Việt Nam](/tieu-chuan-viet-nam.html "Tiêu chuẩn Việt Nam") * [Quy chuẩn Việt Nam](/quy-chuan-viet-nam.html "Quy chuẩn Việt Nam") * [Công ước](/cong-uoc-t2.html "Công ước ") * [Hiệp định](/hiep-dinh-t8.html "Hiệp định") * [Hiệp ước](/hiep-uoc-t9.html "Hiệp ước  ") * [Dự thảo](/du-thao.html "Dự thảo")
+      Điều 6. Vi phạm quy định chung về hoạt động kinh doanh du lịch
 
-[Tin văn bản mới](/tin-van-ban-moi-c186-article.html "Tin văn bản mới")
+      1. Cảnh cáo hoặc phạt tiền từ 200.000 đồng đến 500.000  đồng  đối  với
+hành vi không có nhân lực hoặc cơ sở vật chất để tiếp nhận kiến  nghị,  phản
+ánh của khách du lịch trong phạm vi quản lý.
 
-[Tin pháp luật](/tin-phap-luat.html "Tin pháp luật")
+      2. Phạt tiền từ 500.000 đồng đến 1.000.000 đồng đối với hành  vi  giải
+quyết không kịp thời kiến nghị, phản ánh của khách du  lịch  trong  phạm  vi
+quản lý khi nhận được kiến nghị, phản ánh.
 
-* [Hành chính](/tin-phap-luat/quy-dinh-moi-nhat-ve-hanh-chinh-c570-article.html "Hành chính") * [Thuế - Phí](/tin-phap-luat/thue-phi-le-phi-c565-article.html "Thuế - Phí") * [Đất đai - Nhà ở](/tin-phap-luat/dat-dai-nha-o-c567-article.html "Đất đai - Nhà ở") * [Bảo hiểm](/tin-phap-luat/quy-dinh-ve-bao-hiem-c563-article.html "Bảo hiểm") * [Cán bộ - Công chức](/tin-phap-luat/quy-dinh-moi-nhat-ve-can-bo-cong-chuc-c566-article.html "Cán bộ - Công chức") * [Lao động](/tin-phap-luat/lao-dong-tien-luong-c562-article.html "Lao động") * [Dân sự](/tin-phap-luat/quy-dinh-moi-nhat-ve-dan-su-c568-article.html "Dân sự") * [Giao thông](/tin-phap-luat/giao-thong-c863-article.html "Giao thông") * [Biểu mẫu](/tin-phap-luat/bieu-mau-c571-article.html "Biểu mẫu") * [Media Luật](/tin-phap-luat/media-luat-c627-article.html "Media Luật") * [Lĩnh vực khác](/tin-phap-luat/linh-vuc-khac-c883-article.html "Lĩnh vực khác")
+      3. Phạt tiền từ 1.000.000 đồng đến 3.000.000 đồng đối  với  một  trong
+các hành vi sau đây:
 
-[Bản tin luật](/ban-tin-luatvietnam-c531-article.html "Bản tin luật")
+      a) Tranh giành khách du lịch hoặc nài ép khách du lịch mua  hàng  hóa,
+dịch vụ;
 
-* [Điểm tin văn bản mới](/ban-tin-luatvietnam/diem-tin-van-ban-moi-c220-article.html "Điểm tin văn bản mới") * [Chính sách mới hàng tháng](/ban-tin-luatvietnam/diem-tin-chinh-sach-moi-c559-article.html "Chính sách mới hàng tháng") * [Văn bản hàng tuần](/ban-tin-luatvietnam/van-ban-cap-nhat-hang-tuan-c219-article.html "Văn bản hàng tuần") * [Bản tin hiệu lực](/ban-tin-luatvietnam/ban-tin-hieu-luc-c221-article.html "Bản tin hiệu lực")
+      b) Phân biệt đối xử với khách du lịch;
 
-[Luật sư tư vấn](/luat-su-tu-van.html "Luật sư tư vấn")
+      c) Không thực hiện đúng chế độ báo cáo cho cơ quan nhà  nước  có  thẩm
+quyền theo quy định.
 
-[Tiện ích](/dich-vu/tien-ich.html "Tiện ích")
+      4. Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng đối  với  một  trong
+các hành vi sau đây:
 
-* [Tra cứu giá đất](/bang-gia-dat.html "Tra cứu giá đất") * [Tính thuế TNCN](/tinh-thue-thu-nhap-ca-nhan.html "Tính thuế TNCN") * [Tính BHXH 1 lần](/tinh-bao-hiem-xa-hoi-1-lan.html "Tính BHXH 1 lần") * [Tính lương Gross - Net](/tinh-luong-gross-net.html "Tính lương Gross - Net") * [Tính bảo hiểm thất nghiệp](/tinh-muc-huong-bao-hiem-that-nghiep.html "Tính bảo hiểm thất nghiệp") * [Giá xăng hôm nay](/bang-gia-xang-dau-hom-nay.html "Giá xăng hôm nay") * [Thuật ngữ pháp lý](/thuat-ngu-phap-ly.html "Thuật ngữ pháp lý") * [Tra cứu diện tích tách thửa](/tra-cuu-dien-tich-tach-thua.html "Tra cứu diện tích tách thửa") * [Tra cứu mức lương tối thiểu](/muc-luong-toi-thieu-vung.html "Tra cứu mức lương tối thiểu") * [Tính lãi suất vay ngân hàng](/cong-cu-tinh-lai-suat-vay-ngan-hang.html "Tính lãi suất vay ngân hàng") * [Tính lãi suất tiết kiệm ngân hàng](/cong-cu-tinh-lai-suat-tiet-kiem-ngan-hang.html "Tính lãi suất tiết kiệm ngân hàng") * [Tính VAT online](/tinh-thue-gtgt-online.html "Tính VAT online") * [Tính tiền chế độ thai sản](https://luatvietnam.vn/tinh-tien-che-do-thai-san.html "Tính tiền chế độ thai sản") * [Tra cứu mặt hàng không được giảm thuế](https://luatvietnam.vn/tra-cuu-mat-hang-khong-duoc-giam-thue.html "Tra cứu mặt hàng không được giảm thuế") * [Biểu thuế nhập khẩu WTO](/tra-cuu-bieu-thue-WTO.html "Biểu thuế nhập khẩu WTO") * [Biểu thuế ASEAN](/tra-cuu-bieu-thue-ASEAN.html "Biểu thuế ASEAN") * [Tra cứu mã ngành nghề kinh doanh](/tra-cuu-ma-nganh-nghe-kinh-doanh.html "Tra cứu mã ngành nghề kinh doanh") * [Thông tin về dịch Covid-19](/covid-19.html "Thông tin về dịch Covid-19")
+      a) Không thông báo kịp thời cho cơ quan nhà nước  có  thẩm  quyền  khi
+phát hiện tai nạn hoặc rủi ro, sự cố xảy ra với khách du lịch;
 
-[Pháp lý doanh nghiệp](/phap-ly-doanh-nghiep.html "Pháp lý doanh nghiệp")
+      b) Không giải quyết kiến nghị, phản ánh của khách du lịch  trong  phạm
+vi quản lý;
 
-* [Thủ tục doanh nghiệp](/pldn/thu-tuc-phap-ly-doanh-nghiep.html "Thủ tục doanh nghiệp") * [Biểu mẫu](/pldn/bieu-mau.html "Biểu mẫu") * [Lịch pháp lý](/pldn/lich-phap-ly.html "Lịch pháp lý")
+      c) Thu lợi bất hợp pháp từ khách du lịch.
 
-Lĩnh vực văn bản
+      5. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng đối với  một  trong
+các hành vi sau đây:
 
-* [Doanh nghiệp](/doanh-nghiep-24-f1.html "Doanh nghiệp")* [Đất đai-Nhà ở](/dat-dai-nha-o-3-f1.html "Đất đai-Nhà ở")* [Đầu tư](/dau-tu-1-f1.html "Đầu tư")* [Thuế-Phí-Lệ phí](/thue-phi-le-phi-4-f1.html "Thuế-Phí-Lệ phí")* [Lao động-Tiền lương](/lao-dong-tien-luong-7-f1.html "Lao động-Tiền lương")* [Tài chính-Ngân hàng](/tai-chinh-ngan-hang-2-f1.html "Tài chính-Ngân hàng")* [Giáo dục-Đào tạo-Dạy nghề](/giao-duc-dao-tao-day-nghe-5-f1.html "Giáo dục-Đào tạo-Dạy nghề")* [Y tế-Sức khỏe](/y-te-suc-khoe-12-f1.html "Y tế-Sức khỏe")* [Xây dựng](/xay-dung-19-f1.html "Xây dựng")* [Xuất nhập khẩu](/xuat-nhap-khau-6-f1.html "Xuất nhập khẩu")* [An ninh quốc gia](/an-ninh-quoc-gia-46-f1.html "An ninh quốc gia")* [An ninh trật tự](/an-ninh-trat-tu-11-f1.html "An ninh trật tự")* [Báo chí-Truyền hình](/bao-chi-truyen-hinh-58-f1.html "Báo chí-Truyền hình")* [Bảo hiểm](/bao-hiem-57-f1.html "Bảo hiểm")* [Cán bộ-Công chức-Viên chức](/can-bo-cong-chuc-vien-chuc-45-f1.html "Cán bộ-Công chức-Viên chức")* [Chính sách](/chinh-sach-25-f1.html "Chính sách")* [Chứng khoán](/chung-khoan-35-f1.html "Chứng khoán")* [Cơ cấu tổ chức](/co-cau-to-chuc-23-f1.html "Cơ cấu tổ chức")* [Cổ phần-Cổ phần hoá](/co-phan-co-phan-hoa-52-f1.html "Cổ phần-Cổ phần hoá")* [Công nghiệp](/cong-nghiep-15-f1.html "Công nghiệp")* [COVID-19](/covid-19-194-f1.html "COVID-19")* [Cư trú-Hộ khẩu](/cu-tru-ho-khau-43-f1.html "Cư trú-Hộ khẩu")* [Dân sự](/dan-su-65-f1.html "Dân sự")* [Đấu thầu-Cạnh tranh](/dau-thau-canh-tranh-61-f1.html "Đấu thầu-Cạnh tranh")* [Địa giới hành chính](/dia-gioi-hanh-chinh-54-f1.html "Địa giới hành chính")* [Điện lực](/dien-luc-62-f1.html "Điện lực")* [Giao thông](/giao-thong-28-f1.html "Giao thông")* [Hải quan](/hai-quan-21-f1.html "Hải quan")* [Hàng hải](/hang-hai-34-f1.html "Hàng hải")* [Hành chính](/hanh-chinh-27-f1.html "Hành chính")* [Hình sự](/hinh-su-66-f1.html "Hình sự")* [Hôn nhân gia đình](/hon-nhan-gia-dinh-64-f1.html "Hôn nhân gia đình")* [Kế toán-Kiểm toán](/ke-toan-kiem-toan-40-f1.html "Kế toán-Kiểm toán")* [Khiếu nại-Tố cáo](/khieu-nai-to-cao-59-f1.html "Khiếu nại-Tố cáo")* [Khoa học-Công nghệ](/khoa-hoc-cong-nghe-18-f1.html "Khoa học-Công nghệ")* [Ngoại giao](/ngoai-giao-13-f1.html "Ngoại giao")* [Nông nghiệp-Lâm nghiệp](/nong-nghiep-lam-nghiep-87-f1.html "Nông nghiệp-Lâm nghiệp")* [Quốc phòng](/quoc-phong-31-f1.html "Quốc phòng")* [Sở hữu trí tuệ](/so-huu-tri-tue-29-f1.html "Sở hữu trí tuệ")* [Tài nguyên-Môi trường](/tai-nguyen-moi-truong-86-f1.html "Tài nguyên-Môi trường")* [Thi đua-Khen thưởng-Kỷ luật](/thi-dua-khen-thuong-ky-luat-55-f1.html "Thi đua-Khen thưởng-Kỷ luật")* [Thông tin-Truyền thông](/thong-tin-truyen-thong-88-f1.html "Thông tin-Truyền thông")* [Thực phẩm-Dược phẩm](/thuc-pham-duoc-pham-49-f1.html "Thực phẩm-Dược phẩm")* [Thương mại-Quảng cáo](/thuong-mai-quang-cao-51-f1.html "Thương mại-Quảng cáo")* [Tiết kiệm-Phòng, chống tham nhũng, lãng phí](/tiet-kiem-phong-chong-tham-nhung-lang-phi-48-f1.html "Tiết kiệm-Phòng, chống tham nhũng, lãng phí")* [Tư pháp-Hộ tịch](/tu-phap-ho-tich-85-f1.html "Tư pháp-Hộ tịch")* [Văn hóa-Thể thao-Du lịch](/van-hoa-the-thao-du-lich-89-f1.html "Văn hóa-Thể thao-Du lịch")* [Vi phạm hành chính](/vi-pham-hanh-chinh-26-f1.html "Vi phạm hành chính")* [Xuất nhập cảnh](/xuat-nhap-canh-42-f1.html "Xuất nhập cảnh")* [Lĩnh vực khác](/linh-vuc-khac-22-f1.html "Lĩnh vực khác")
+      a) Không cảnh báo nguy cơ gây nguy hiểm cho khách du lịch;
 
-Liên hệ:
+      b) Không thông báo, chỉ dẫn cho khách du lịch trong  trường  hợp  khẩn
+cấp.
 
-Hỗ trợ: **0938 36 1919** - Giải đáp Pháp luật: **1900 6192**
+      6. Phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng đối  với  hành  vi
+không phối hợp với cơ quan, tổ chức, cá nhân có liên  quan  trong  việc  cứu
+hộ, cứu nạn cho khách du lịch.
 
-LH quảng cáo: **[[email protected]](/cdn-cgi/l/email-protection)**
+      7. Phạt tiền từ 15.000.000 đồng đến 20.000.000 đồng đối  với  hành  vi
+không áp dụng biện pháp bảo đảm tính mạng, sức khỏe, tài sản  của  khách  du
+lịch.
 
-Tải ứng dụng:
+      8. Hình thức xử phạt bổ sung:
 
-[![](/assets/images/google-play-badge.svg)](https://play.google.com/store/apps/details?id=com.iccom.luatvietnam "google play") [![](/assets/images/appstore-badge.svg)](https://apps.apple.com/us/app/lu%E1%BA%ADt-vi%E1%BB%87t-nam/id1498874008 "ios store")
+      Đình chỉ hoạt động từ 01 tháng đến 03 tháng đối với hành vi  quy  định
+tại các khoản 5, 6 và 7 Điều này.
 
-Theo dõi chúng tôi trên:
+      9. Biện pháp khắc phục hậu quả:
 
-Đăng nhập tài khoản
+      Buộc nộp lại số lợi bất hợp pháp có được do thực hiện hành vi quy định
+tại điểm a khoản 3, điểm c khoản 4 Điều này.
 
-**Đăng nhập tài khoản LuatVietnam**
+      Điều 7. Vi phạm quy định về kinh doanh dịch vụ lữ hành
 
-*![ten dang nhap](/assets/images/user/ten-dang-nhap.png)*
+      1. Phạt tiền từ 500.000 đồng đến 1.000.000 đồng đối với hành  vi  phối
+hợp không kịp thời với cơ quan nhà nước có thẩm quyền để xử lý các  hành  vi
+vi phạm pháp luật của khách du lịch trong thời gian tham  gia  chương  trình
+du lịch.
 
-*![mat khau](/assets/images/user/matkhau2.png)*  *![eye](/Assets/Images/fa-eye.png)*
+      2. Phạt tiền từ 1.000.000 đồng đến 3.000.000 đồng đối  với  một  trong
+các hành vi sau đây:
 
-[ ]  Ghi nhớ
+      a) Không hướng dẫn, cung cấp cho bên nhận đại lý  lữ  hành  thông  tin
+liên quan đến chương trình du lịch;
 
-Quên mật khẩu?
+      b) Không phổ biến, hướng dẫn khách du lịch tuân  thủ  pháp  luật,  quy
+định của nơi đến du lịch;
 
-Đăng nhập
+      c) Không phổ biến, hướng dẫn khách du lịch ứng xử văn minh, tôn  trọng
+bản sắc văn hóa, phong tục, tập quán của Việt Nam và nơi đến du lịch;
 
-Hoặc đăng nhập bằng
+      d) Hợp đồng lữ hành thiếu một trong các nội dung theo quy định;
 
-![facebook](/assets/images/facebook1.png) Facebook
+      đ) Chương trình du lịch thiếu một trong các nội dung theo quy định;
 
-![google](/assets/images/google4.png) Google
+      e) Hợp đồng đại lý lữ hành thiếu một trong các nội dung theo quy định.
 
-Bạn chưa có tài khoản?  [Tạo tài khoản](/user/dang-ky-tai-khoan.html "Tạo tài khoản")
+      3. Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng đối  với  một  trong
+các hành vi sau đây:
 
-Giới thiệu
+      a) Không gửi hồ sơ về người phụ trách kinh doanh dịch vụ lữ hành  thay
+thế theo quy định;
 
-* [Lời giới thiệu](/gioi-thieu.html "Lời giới thiệu")* [Lịch sử phát triển](/gioi-thieu.html#lichsuphattrien "Lịch sử phát triển")* [Profile Tra cứu văn bản](https://cms.luatvietnam.vn/uploaded/Others/2023/08/29/Profile_LuatVietnam_8.8.2023_2908150600.pdf "Profile Tra cứu văn bản")* [Liên hệ](/lien-he.html "Liên hệ")* Góp ý
+      b) Không thông báo bằng văn bản về việc thay đổi người phụ trách  kinh
+doanh dịch vụ lữ hành theo quy định;
 
-Dịch vụ
+      c) Cung cấp thông tin không rõ ràng hoặc không công  khai  hoặc  không
+trung thực về chương trình du lịch, dịch vụ, điểm đến du lịch cho  khách  du
+lịch hoặc đại diện khách du lịch.
 
-* [Tra cứu văn bản](/dich-vu.html "Tra cứu văn bản")* [Phân tích văn bản](/dich-vu/phan-tich-van-ban.html "Phân tích văn bản")* [Dịch vụ dịch thuật](/dich-vu-dich-thuat.html "Dịch vụ dịch thuật")* [Pháp lý doanh nghiệp](/dich-vu-phap-ly-doanh-nghiep.html "Pháp lý doanh nghiệp")* [Dịch vụ nội dung](/dich-vu-noi-dung.html "Dịch vụ nội dung")* [Tổng đài tư vấn](/dich-vu-tong-dai-tu-van.html "Tổng đài tư vấn")
+      4. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng đối với  một  trong
+các hành vi sau đây:
 
-Chính sách
+      a) Không phối hợp với cơ quan nhà nước có thẩm quyền để xử lý các hành
+vi vi phạm pháp luật của khách du lịch  trong  thời  gian  tham  gia  chương
+trình du lịch;
 
-* [Bảng giá phần mềm](/chinh-sach/bang-gia-dich-vu-519-12076-article.html "Bảng giá phần mềm")* [Hình thức thanh toán](/huong-dan/thue-bao-thanh-toan.html "Hình thức thanh toán")* [Quy ước sử dụng](/quy-uoc-chung-su-dung-website-luat-viet-nam-519-12078-article.html "Quy ước sử dụng")* [Chính sách bảo mật](/chinh-sach/chinh-sach-bao-mat-519-12079-article.html "Chính sách bảo mật")* [Chính sách bảo vệ dữ liệu cá nhân](/chinh-sach/chinh-sach-bao-ve-du-lieu-ca-nhan-519-98584-article.html "Chính sách bảo vệ dữ liệu cá nhân")* [Thông báo hợp tác](/chinh-sach/thong-bao-ve-viec-hop-tac-kinh-doanh-giua-incom-va-luatvietnam-519-23137-article.html "Thông báo hợp tác")
+      b) Không cung cấp thông tin về chương trình du lịch, dịch vụ, điểm đến
+du lịch cho khách du lịch hoặc đại diện khách du lịch;
 
-[![LuatVietnam](data:image/gif;base64...)](/)
+      c) Không công khai tên doanh nghiệp, số giấy phép kinh doanh  dịch  vụ
+lữ hành trên biển hiệu tại trụ sở, chi  nhánh,  văn  phòng  giao  dịch  hoặc
+trong hợp đồng lữ hành hoặc trên ấn phẩm quảng  cáo  hoặc  trong  giao  dịch
+điện tử.
 
-**Bản quyền © 2000-2026 bởi LuatVietnam - Thành viên INCOM Communications ., JSC**
+      5. Phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng đối với một  trong
+các hành vi sau đây:
 
-Giấy phép thiết lập trang Thông tin điện tử tổng hợp số: 692/GP-TTĐT cấp ngày 29/10/2010 bởi
+      a) Sử dụng hướng dẫn viên du lịch quốc tế, hướng dẫn viên du lịch  nội
+địa không có hợp đồng lao động với doanh nghiệp kinh doanh dịch vụ  lữ  hành
+hoặc doanh nghiệp cung cấp dịch vụ hướng dẫn du lịch hoặc không là hội  viên
+của tổ chức xã hội - nghề nghiệp về hướng dẫn du lịch theo quy định;
 
-Sở TT-TT Hà Nội, thay thế giấy phép số: 322/GP - BC, ngày 26/07/2007, cấp bởi Bộ Thông tin và Truyền thông
+      b) Sử dụng hướng dẫn viên du lịch để hướng dẫn cho khách du lịch không
+đúng phạm vi hành nghề của hướng dẫn viên du lịch;
 
-Chứng nhận bản quyền tác giả số 280/2009/QTG ngày 16/02/2009, cấp bởi Bộ Văn hoá - Thể thao - Du lịch
+      c) Sử dụng hướng dẫn viên du lịch để thực hiện chương trình du lịch mà
+không có hợp đồng hướng dẫn hoặc văn bản phân công hướng dẫn theo quy định;
 
-Cơ quan chủ quản: Công ty Cổ phần Truyền thông Luật Việt Nam. Chịu trách nhiệm: Ông Trần Văn Trí
+      d) Không viết hoặc không gắn tên chi nhánh, văn phòng  đại  diện,  địa
+điểm kinh doanh tại trụ sở chi nhánh, văn phòng  đại  diện,  địa  điểm  kinh
+doanh.
 
-![hotline](data:image/gif;base64...)
+      6. Phạt tiền từ 15.000.000 đồng đến 20.000.000 đồng đối với một  trong
+các hành vi sau đây:
 
-Hotline:
+      a) Không có biện pháp kiểm tra, giám sát việc thực hiện hợp  đồng  của
+bên nhận đại lý lữ hành;
 
-**0938 36 1919**
+      b) Không có biện pháp kiểm tra, giám sát hoạt động của hướng dẫn  viên
+du lịch theo quy định;
 
-[![TikTok LuatVietnam](data:image/gif;base64... "TikTok LuatVietnam")](https://www.tiktok.com/%40luatvietnam "TikTok LuatVietnam")
+      c) Không tổ chức thực hiện chương trình du lịch do bên nhận đại lý  lữ
+hành bán.
 
-Tải ứng dụng luatvietnam
+      7. Phạt tiền từ 20.000.000 đồng đến 30.000.000 đồng đối với một  trong
+các hành vi sau đây:
 
-![qrcode](data:image/gif;base64...) [![googleplay](data:image/gif;base64...)](https://play.google.com/store/apps/details?id=com.iccom.luatvietnam) [![appstore](data:image/gif;base64...)](https://apps.apple.com/us/app/lu%E1%BA%ADt-vi%E1%BB%87t-nam/id1498874008)
+      a) Không có hợp đồng lữ hành với doanh nghiệp, khách du lịch hoặc  đại
+diện của khách du lịch theo quy định;
 
-Quét mã QR code để cài đặt
+      b) Không có hợp đồng đại lý lữ hành với đại lý lữ hành theo quy định;
 
-Trụ sở: Tầng 3, Toà nhà IC, 82 Duy Tân, P.Cầu Giấy, TP.Hà Nội
+      c) Không có chương trình du lịch theo quy định;
 
-VPĐD: 648 Nguyễn Kiệm, Phường Đức Nhuận, TP. Hồ Chí Minh
+      d) Không thực hiện chế độ lưu giữ hồ sơ liên quan đến hoạt  động  kinh
+doanh dịch vụ lữ hành;
 
-Điện thoại: 0938 36 1919 - Email: [[email protected]](/cdn-cgi/l/email-protection)
+      đ) Kê khai không trung thực các giấy tờ, tài liệu trong hồ sơ đề  nghị
+cấp, cấp đổi, cấp lại giấy phép kinh doanh dịch vụ lữ hành.
 
-Liên hệ quảng cáo; quyền tác giả và các quyền liên quan: [[email protected]](/cdn-cgi/l/email-protection)
+      8. Phạt tiền từ 30.000.000 đồng đến 40.000.000 đồng đối với một  trong
+các hành vi sau đây:
 
-[Văn Bản Pháp Luật](https://luatvietnam.vn/ "Văn Bản Pháp Luật") | [Luật Doanh nghiệp 2020](https://luatvietnam.vn/doanh-nghiep/luat-doanh-nghiep-2020-so-59-2020-qh14-186272-d1.html "Luật Doanh nghiệp 2020") | [Luật Đất đai 2024](https://luatvietnam.vn/dat-dai/luat-dat-dai-2024-so-31-2024-qh15-296638-d1.html "Luật Đất đai 2024") | [Luật Hình sự 2015](https://luatvietnam.vn/hinh-su/bo-luat-hinh-su-2015-so-100-2015-qh13-101324-d1.html "Luật Hình sự 2015")
+      a) Không sử dụng hướng dẫn viên du lịch để hướng dẫn cho khách du lịch
+theo hợp đồng lữ hành;
 
-[![Đã đăng ký với Bộ công thương](data:image/gif;base64...)](http://online.gov.vn/Home/WebDetails/22876 "Cổng thông tin quản lý hoạt động thương mại điện tử") [![dmca protected](data:image/gif;base64...)](//www.dmca.com/Protection/Status.aspx?ID=d3c31922-f131-4450-98b7-8c56b50687e1 "DMCA.com Protection")
+      b) Thay đổi chương trình du lịch, tiêu chuẩn, dịch vụ  đã  ký  kết  mà
+không được sự đồng ý của khách du lịch hoặc đại diện khách du lịch;
 
-![](data:image/gif;base64...)
+      c) Không quản lý khách du lịch theo chương trình du lịch đã thỏa thuận
+với khách du lịch.
 
-Đăng nhập Đăng ký tài khoản
+      9. Phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng đối với một  trong
+các hành vi sau đây:
 
-* *![eye](/Assets/Images/fa-eye.png)*
+      a) Không mua bảo hiểm cho khách du lịch  trong  thời  gian  thực  hiện
+chương trình du lịch theo quy định;
 
-  Lưu tài khoản [x]
+      b) Không sử dụng dịch vụ do tổ chức, cá nhân thuộc Danh mục  tổ  chức,
+cá nhân đáp ứng đầy đủ các biện pháp bảo đảm an toàn cho khách du lịch  theo
+quy định;
 
-  Quên mật khẩu?
+      c) Sử dụng hướng dẫn viên du lịch có hành vi cung cấp, giới thiệu  cho
+khách du lịch các nội dung thông tin mang tính chất xuyên tạc lịch  sử,  văn
+hóa, chủ quyền quốc gia.
 
-  Đăng nhập
+      10. Phạt tiền từ 50.000.000 đồng đến 60.000.000 đồng đối với một trong
+các hành vi sau đây:
 
-  Hoặc đăng nhập bằng
+      a) Sử dụng người không có thẻ hướng dẫn viên du lịch để hướng dẫn  cho
+khách du lịch;
 
-  ![facebook](/assets/images/ic-facebook.svg) Đăng nhập bằng Facebook
+      b) Sử dụng người sử dụng thẻ hướng dẫn viên du lịch giả để  hướng  dẫn
+cho khách du lịch.
 
-  ![google](/assets/images/social-cr-google.svg) Đăng nhập bằng Google
+      11. Phạt tiền từ 60.000.000 đồng đến 70.000.000 đồng đối với một trong
+các hành vi sau đây:
 
-  * Tôi đồng ý với [Quy ước sử dụng](/quy-uoc-chung-su-dung-website-luat-viet-nam-519-12078-article.html "Quy ước sử dụng") của LuatVietnam.vn [ ]
+      a) Không thực hiện đúng quy định về ký quỹ kinh doanh dịch vụ lữ hành;
 
-    Tạo tài khoản
+      b) Không bổ sung đủ số tiền ký quỹ đã sử dụng theo quy định;
 
-    Hoặc đăng ký bằng
+      c) Sử dụng người phụ trách kinh doanh dịch vụ lữ hành  không  bảo  đảm
+điều kiện theo quy định.
 
-    ![facebook](/assets/images/ic-facebook.svg) Đăng ký bằng Facebook
+      12. Phạt tiền từ 70.000.000 đồng đến 80.000.000 đồng đối với một trong
+các hành vi sau đây:
 
-    ![google](/assets/images/social-cr-google.svg) Đăng ký bằng Google
+      a) Không làm thủ tục đổi giấy phép kinh doanh dịch vụ lữ hành theo quy
+định;
 
-**Đặt mật khẩu mới**
+      b) Hoạt động kinh doanh dịch vụ lữ hành không đúng phạm vi kinh  doanh
+dịch vụ lữ hành ghi trong giấy phép kinh doanh dịch vụ lữ hành.
 
-Mật khẩu hiện tại:
+      13. Phạt tiền từ 80.000.000 đồng đến 90.000.000 đồng đối với một trong
+các hành vi sau đây:
 
-Mật khẩu mới:
+      a) Cho tổ chức, cá nhân khác sử dụng giấy phép kinh doanh dịch  vụ  lữ
+hành của doanh nghiệp để hoạt động kinh doanh;
 
-Nhập lại mật khẩu mới:
+      b) Sử dụng giấy phép kinh doanh dịch vụ lữ hành của doanh nghiệp  khác
+để hoạt động kinh doanh đối với doanh nghiệp có giấy phép  kinh  doanh  dịch
+vụ lữ hành;
 
-Xác nhận
+      c) Để khách du lịch trốn ở lại nước ngoài hoặc trốn  ở  lại  Việt  Nam
+trái pháp luật;
 
-Đang tải dữ liệu...
+      d) Sử dụng người nước ngoài hoạt động hướng dẫn du lịch tại Việt Nam.
 
-CHÍNH SÁCH BẢO VỆ DỮ LIỆU CÁ NHÂN
+      14. Phạt tiền từ 90.000.000 đồng đến  100.000.000  đồng  đối  với  một
+trong các hành vi sau đây:
 
-Cập nhật lần cuối
+      a) Kinh doanh dịch vụ lữ hành sau khi đã  thông  báo  tạm  ngừng  hoạt
+động;
 
-Đặt mua Tiêu chuẩn quốc gia - tcvn
+      b) Kinh doanh dịch vụ lữ hành sau khi bị cơ  quan  nhà  nước  có  thẩm
+quyền tước quyền sử dụng giấy phép kinh doanh dịch vụ lữ hành;
 
-**Thông tin liên hệ về Tiêu chuẩn Quốc gia - TCVN**
+      c) Kinh doanh dịch vụ lữ hành sau khi bị cơ  quan  nhà  nước  có  thẩm
+quyền đình chỉ hoạt động kinh doanh dịch vụ lữ hành;
 
-Trung tâm Thông tin – Truyền thông (ISMQ), Tổng cục Tiêu chuẩn Đo lường Chất lượng
+      d) Hoạt động kinh doanh dịch vụ lữ hành mà không  có  giấy  phép  kinh
+doanh dịch vụ lữ hành;
 
-Số 8 Hoàng Quốc Việt, Phường Cầu Giấy, Hà Nội | ĐT: (024) 37562608 – Email: [[email protected]](/cdn-cgi/l/email-protection)
+      đ) Sử dụng giấy phép kinh doanh dịch vụ lữ hành giả để hoạt động  kinh
+doanh.
 
-Hotline (hỗ trợ) của LuatVietnam: **0938361919**
+      15. Hình thức xử phạt bổ sung:
 
-![google ads](data:image/gif;base64...)
+      a) Tước quyền sử dụng giấy phép kinh doanh dịch vụ lữ hành từ 06 tháng
+đến 12 tháng đối với hành vi quy định tại khoản 11 Điều này;
 
- [LuatVietnam sẵn sàng hỗ trợ!](/khach-hang/support)
+      b) Tước quyền sử dụng giấy phép kinh doanh dịch vụ lữ hành từ 12 tháng
+đến 18 tháng đối với hành vi quy định tại điểm b khoản  12,  khoản  13  Điều
+này;
 
-Vui lòng đợi
+      c) Tước quyền sử dụng giấy phép kinh doanh dịch vụ lữ hành từ 18 tháng
+đến 24 tháng đối với hành vi quy định tại điểm a và điểm  c  khoản  14  Điều
+này;
+
+      d) Đình chỉ hoạt động từ 01 tháng đến 03 tháng đối  với  hành  vi  quy
+định tại khoản 9 Điều này;
+
+      đ) Tịch thu tang vật vi phạm hành chính đối với hành vi quy  định  tại
+điểm đ khoản 14 Điều này.
+
+      16. Biện pháp khắc phục hậu quả:
+
+      a) Buộc nộp lại số lợi bất hợp pháp có được do thực hiện hành  vi  quy
+định tại điểm b khoản 8, điểm b khoản 12, điểm a và điểm b khoản  13,  khoản
+14 Điều này;
+
+      b) Buộc thu hồi giấy phép kinh doanh dịch vụ lữ hành đối với  hành  vi
+quy định tại điểm đ khoản 7 Điều này.
+
+      Điều 8. Vi phạm quy định về kinh doanh đại lý lữ hành
+
+      1. Cảnh cáo hoặc phạt tiền từ 200.000 đồng đến 500.000  đồng  đối  với
+hành vi treo biển đại lý lữ hành ở vị trí khó nhận biết tại trụ sở đại lý.
+
+      2. Phạt tiền từ 500.000 đồng đến 1.000.000 đồng đối với  hành  vi  hợp
+đồng đại lý lữ hành thiếu một trong các nội dung theo quy định.
+
+      3. Phạt tiền từ 1.000.000 đồng đến 3.000.000 đồng đối  với  một  trong
+các hành vi sau đây:
+
+      a) Không thông báo cho cơ quan chuyên môn về du  lịch  cấp  tỉnh  thời
+điểm bắt đầu hoạt động kinh doanh hoặc địa điểm kinh doanh  hoặc  thông  tin
+về doanh nghiệp giao đại lý lữ hành;
+
+      b) Cung cấp thông tin không rõ ràng hoặc không công  khai  hoặc  không
+trung thực về số lượng hoặc giá cả các dịch vụ du lịch của bên giao  đại  lý
+lữ hành cho khách du lịch.
+
+      4. Phạt tiền từ 3.000.000 đồng đến 5.000.000  đồng  đối  với  hành  vi
+không treo biển đại lý lữ hành.
+
+      5. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng đối với  một  trong
+các hành vi sau đây:
+
+      a) Không cung cấp thông tin về số lượng hoặc giá cả  các  dịch  vụ  du
+lịch của bên giao đại lý lữ hành cho khách du lịch;
+
+      b) Bán chương trình du lịch không đúng nội dung trong hợp đồng đại  lý
+lữ hành.
+
+      6. Phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng đối với một  trong
+các hành vi sau đây:
+
+      a) Không lập và lưu giữ hồ sơ về chương trình du lịch đã bán cho khách
+du lịch theo quy định;
+
+      b) Không có hợp đồng đại lý lữ hành với doanh nghiệp kinh  doanh  dịch
+vụ lữ hành theo quy định.
+
+      7. Phạt tiền từ 15.000.000 đồng đến 20.000.000 đồng đối  với  hành  vi
+không đăng ký kinh doanh đại lý lữ hành tại cơ quan nhà nước có  thẩm  quyền
+theo quy định.
+
+      8. Phạt tiền từ 20.000.000 đồng đến 30.000.000 đồng đối với hành vi tổ
+chức thực hiện chương trình du lịch của bên giao đại  lý  lữ  hành  đối  với
+doanh nghiệp có giấy phép kinh doanh dịch vụ lữ hành.
+
+      9. Phạt tiền từ 30.000.000 đồng đến 40.000.000 đồng đối  với  hành  vi
+nhận bán chương trình du lịch của đại lý lữ hành cho bên giao đại  lý  không
+bảo đảm điều kiện theo quy định.
+
+      10. Biện pháp khắc phục hậu quả:
+
+      Buộc nộp lại số lợi bất hợp pháp có được do thực hiện hành vi quy định
+tại điểm b khoản 5, các khoản 7, 8 và 9 Điều này.
+
+      Điều 9. Vi phạm quy định về hướng dẫn du lịch
+
+      1. Cảnh cáo hoặc phạt tiền từ 200.000 đồng đến 500.000  đồng  đối  với
+hành vi không đeo thẻ hướng dẫn viên du lịch trong khi hành nghề  hướng  dẫn
+du lịch.
+
+      2. Phạt tiền từ 500.000 đồng đến 1.000.000 đồng đối với một trong  các
+hành vi sau đây:
+
+      a) Không xuất trình được phân công nhiệm vụ của doanh nghiệp  tổ  chức
+chương trình du lịch theo quy định trong khi hành nghề;
+
+      b) Không xuất trình được chương trình du lịch theo quy định trong  khi
+hành nghề.
+
+      3. Phạt tiền từ 1.000.000 đồng đến 3.000.000 đồng đối  với  một  trong
+các hành vi sau đây:
+
+      a) Không hướng dẫn khách du lịch tuân thủ pháp  luật  Việt  Nam,  pháp
+luật nơi đến du lịch, nội quy nơi đến tham quan, phong  tục,  tập  quán  của
+địa phương nơi đến du lịch;
+
+      b) Cung cấp thông tin cho khách du lịch không rõ ràng hoặc không  công
+khai hoặc không trung thực về chương trình du lịch, dịch vụ, các quyền,  lợi
+ích hợp pháp của khách du lịch.
+
+      4. Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng đối  với  một  trong
+các hành vi sau đây:
+
+      a) Không thực hiện nội quy, quy định của khu du lịch, điểm du lịch, cơ
+sở cung cấp dịch vụ du lịch khi hành nghề;
+
+      b) Không tôn trọng phong tục, tập quán, bản sắc văn hóa địa phương nơi
+đến tham quan khi hành nghề;
+
+      c) Có thái độ thiếu văn minh đối với khách du lịch khi hành nghề;
+
+      d) Không cung cấp thông tin cho khách du lịch về chương trình du lịch,
+dịch vụ và các quyền, lợi ích hợp pháp của khách du lịch.
+
+      5. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng đối với  một  trong
+các hành vi sau đây:
+
+      a) Không hướng dẫn khách du lịch theo phân công  nhiệm  vụ  được  giao
+hoặc theo hợp đồng hướng dẫn;
+
+      b) Không hướng dẫn khách du lịch theo đúng chương trình du lịch;
+
+      c) Không báo cáo người phụ trách kinh doanh dịch vụ lữ hành quyết định
+thay đổi chương trình du lịch trong trường hợp khách du lịch có yêu cầu;
+
+      d) Không có hợp đồng lao động với doanh nghiệp kinh doanh dịch  vụ  lữ
+hành hoặc doanh nghiệp cung cấp dịch vụ hướng dẫn du lịch hoặc không là  hội
+viên của tổ chức xã hội - nghề nghiệp theo quy định khi hành  nghề  đối  với
+hướng dẫn viên du lịch quốc tế và hướng dẫn viên du lịch nội địa;
+
+      đ) Không có hợp đồng hướng dẫn với doanh nghiệp kinh doanh dịch vụ  lữ
+hành hoặc không có văn bản phân công hướng dẫn theo  chương  trình  du  lịch
+theo quy định;
+
+      e) Không có phân công của tổ chức, cá nhân quản lý khu du  lịch,  điểm
+du lịch đối với hướng dẫn viên du lịch tại điểm.
+
+      6. Phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng đối với một  trong
+các hành vi sau đây:
+
+      a) Kê khai không trung thực hồ sơ đề nghị cấp, cấp đổi,  cấp  lại  thẻ
+hướng dẫn viên du lịch;
+
+      b) Thuê, cho thuê, mượn, cho mượn thẻ hướng dẫn viên du lịch;
+
+      c) Hoạt động hướng dẫn du lịch không đúng phạm vi hành nghề của  hướng
+dẫn viên du lịch theo quy định.
+
+      7. Phạt tiền từ 15.000.000 đồng đến 20.000.000 đồng đối với một  trong
+các hành vi sau đây:
+
+      a) Không có thẻ hướng dẫn viên du lịch khi hành nghề;
+
+      b) Sử dụng thẻ hướng dẫn viên du lịch giả để hành nghề hướng dẫn.
+
+      8. Phạt tiền từ 20.000.000 đồng đến 30.000.000 đồng đối  với  hành  vi
+cung cấp, giới thiệu cho khách du lịch các nội  dung  thông  tin  mang  tính
+chất xuyên tạc lịch sử, văn hóa, chủ quyền quốc gia.
+
+      9. Phạt tiền từ 30.000.000 đồng đến 50.000.000 đồng đối  với  hành  vi
+hoạt động hướng dẫn du lịch tại Việt Nam của người nước ngoài.
+
+      10. Hình thức xử phạt bổ sung:
+
+      a) Tước quyền sử dụng thẻ hướng dẫn viên du lịch trong thời hạn từ  01
+tháng đến 06 tháng đối với hành vi quy định tại điểm b và  điểm  c  khoản  6
+Điều này;
+
+      b) Tước quyền sử dụng thẻ hướng dẫn viên du lịch trong thời hạn từ  06
+tháng đến 12 tháng đối với hành vi quy định tại khoản 8 Điều này;
+
+      c) Tịch thu tang vật vi phạm hành chính đối với hành vi quy  định  tại
+điểm b khoản 7 Điều này.
+
+      11. Biện pháp khắc phục hậu quả:
+
+      a) Buộc nộp lại số lợi bất hợp pháp có được do thực hiện hành  vi  quy
+định tại điểm b và điểm c khoản 6 và khoản 7 Điều này;
+
+      b) Buộc thu hồi thẻ hướng dẫn viên du lịch đối với hành  vi  quy  định
+tại điểm a khoản 6 Điều này.
+
+      Điều 10. Vi phạm quy định chung về kinh doanh dịch vụ lưu trú du lịch
+
+      1. Phạt tiền từ 500.000 đồng đến 1.000.000 đồng đối với một trong  các
+hành vi sau đây:
+
+      a) Thông báo không đầy đủ các nội dung tới cơ quan chuyên  môn  về  du
+lịch cấp tỉnh nơi có cơ sở lưu trú du lịch trước khi đi vào hoạt  động  theo
+quy định;
+
+      b) Thông báo hoạt động không đúng thời hạn theo quy định;
+
+      c) Không niêm yết công khai giá hàng hóa, dịch vụ theo quy định.
+
+      2. Phạt tiền từ 1.000.000 đồng đến 3.000.000 đồng đối  với  một  trong
+các hành vi sau đây:
+
+      a) Không thông báo trước khi đi vào hoạt động theo quy định;
+
+      b) Không thông báo về việc thay đổi tên cơ sở lưu trú du lịch theo quy
+định;
+
+      c) Không thông báo về việc thay đổi quy mô cơ sở lưu trú du lịch  theo
+quy định;
+
+      d) Không thông báo về việc thay đổi địa chỉ cơ sở lưu trú du lịch theo
+quy định;
+
+      đ) Không thông báo về việc thay đổi người đại diện theo pháp luật  của
+cơ sở lưu trú du lịch theo quy định.
+
+      3. Phạt tiền từ 3.000.000 đồng đến 5.000.000  đồng  đối  với  hành  vi
+không niêm yết công khai nội quy của cơ sở lưu trú du lịch theo quy định.
+
+      4. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng đối với hành vi bán
+không đúng giá niêm yết hàng hóa, dịch vụ trong cơ sở lưu trú du lịch.
+
+      5. Phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng đối  với  hành  vi
+không bảo đảm quyền và lợi ích hợp pháp theo hợp đồng đã giao kết với  khách
+du lịch.
+
+      6. Phạt tiền từ 15.000.000 đồng đến 20.000.000 đồng đối với một  trong
+các hành vi sau đây:
+
+      a) Hoạt động kinh doanh dịch vụ lưu trú du lịch sau khi đã  thông  báo
+tạm dừng hoặc chấm dứt hoạt động;
+
+      b) Hoạt động kinh doanh dịch vụ lưu trú du lịch sau khi bị cơ quan nhà
+nước có thẩm quyền đình chỉ hoạt động kinh doanh.
+
+      7. Phạt tiền từ 20.000.000 đồng đến 30.000.000 đồng đối  với  hành  vi
+không bảo đảm điều kiện kinh doanh dịch vụ lưu trú  du  lịch  quy  định  tại
+điểm a và điểm b khoản 1 Điều 49 của Luật Du lịch.
+
+      8. Quy định từ khoản 1 đến khoản 7 Điều này cũng được áp dụng đối  với
+nhà khách, nhà nghỉ của cơ quan nhà nước có hoạt động  kinh  doanh  dịch  vụ
+lưu trú du lịch.
+
+      9. Biện pháp khắc phục hậu quả:
+
+      a) Đình chỉ hoạt động từ 01 tháng đến 03 tháng đối  với  hành  vi  quy
+định tại khoản 7 Điều này;
+
+      b) Buộc nộp lại số lợi bất hợp pháp có được do thực hiện hành  vi  quy
+định tại các khoản 4, 5, 6 và 7 Điều này.
+
+      Điều 11. Vi phạm quy định về điều kiện tối thiểu về cơ sở vật chất  kỹ
+thuật, dịch vụ lưu trú du lịch
+
+      1. Phạt tiền từ 1.000.000 đồng đến 3.000.000 đồng đối  với  một  trong
+các hành vi sau đây:
+
+      a) Không thông báo về việc bổ sung, hoàn thiện đáp ứng điều  kiện  tối
+thiểu hoặc thay đổi loại hình cơ sở lưu trú du lịch theo quy định;
+
+      b) Không có giường hoặc đệm hoặc chiếu hoặc chăn  hoặc  gối  theo  quy
+định;
+
+      c) Không có khăn mặt hoặc khăn tắm theo quy định;
+
+      d) Không thay bọc đệm hoặc chiếu hoặc bọc chăn hoặc  bọc  gối  khi  có
+khách mới;
+
+      đ) Không thay khăn mặt hoặc khăn tắm khi có khách mới.
+
+      2. Phạt tiền từ 3.000.000 đồng đến 5.000.000  đồng  đối  với  hành  vi
+không có tủ thuốc cấp cứu ban đầu đối với bãi cắm  trại  du  lịch  theo  quy
+định.
+
+      3. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng đối với  một  trong
+các hành vi sau đây:
+
+      a) Không có tối thiểu 10 buồng ngủ đối với khách  sạn  hoặc  không  có
+phòng ngủ đối với biệt thự du lịch, căn hộ du lịch,  tàu  thủy  lưu  trú  du
+lịch, nhà nghỉ du lịch hoặc không có khu vực lưu trú cho khách đối  với  nhà
+ở có phòng cho khách du lịch thuê hoặc không có khu vực dựng lều,  trại  đối
+với bãi cắm trại du lịch;
+
+      b) Không có quầy lễ tân đối với khách sạn hoặc khu vực tiếp khách  đối
+với biệt thự du lịch, căn hộ du lịch hoặc khu vực đón  tiếp  khách  đối  với
+tàu thủy lưu trú du lịch, nhà nghỉ du lịch, bãi cắm trại du  lịch  theo  quy
+định;
+
+      c) Không có nơi để xe cho khách đối với  khách  sạn  nghỉ  dưỡng  hoặc
+khách sạn bên đường theo quy định;
+
+      d) Không có bếp hoặc phòng ăn hoặc dịch vụ phục vụ  ăn  uống  đối  với
+khách sạn nghỉ dưỡng, khách sạn nổi, khách sạn bên đường, tàu thủy  lưu  trú
+du lịch; không có bếp đối với biệt thự du lịch, căn hộ du  lịch,  nhà  ở  có
+phòng cho khách du lịch thuê theo quy định;
+
+      đ) Không có nhân viên trực 24 giờ mỗi ngày đối với khách sạn, biệt thự
+du lịch, nhà nghỉ du lịch; không có nhân viên bảo vệ trực khi có  khách  đối
+với bãi cắm trại du lịch theo quy định.
+
+      4. Phạt tiền từ 10.000.000 đồng đến 20.000.000 đồng đối  với  hành  vi
+không bảo đảm nhà vệ sinh theo quy định.
+
+      5. Các quy định tại các khoản 1, 2, 3 và 4 Điều này cũng được áp  dụng
+đối với nhà khách, nhà nghỉ của cơ quan nhà nước có  hoạt  động  kinh  doanh
+dịch vụ lưu trú du lịch.
+
+      6. Hình thức xử phạt bổ sung:
+
+      Đình chỉ hoạt động từ 01 tháng đến 03 tháng đối với hành vi  quy  định
+tại điểm a và điểm d khoản 3 và khoản 4 Điều này.
+
+      Điều 12. Vi phạm quy định về kinh doanh dịch vụ lưu trú  du  lịch  đối
+với cơ sở lưu trú đã được công nhận hạng
+
+      1. Phạt tiền từ 1.000.000 đồng đến 3.000.000  đồng  đối  với  hành  vi
+không thực hiện đúng quy định về mẫu biển công nhận hạng cơ sở  lưu  trú  du
+lịch.
+
+      2. Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng đối với hành vi  gắn
+biển công nhận hạng cơ sở lưu trú du lịch không ở khu vực cửa chính  của  cơ
+sở lưu trú du lịch.
+
+      3. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng đối với  một  trong
+các hành vi sau đây:
+
+      a) Không gắn biển công nhận hạng cơ sở lưu trú du lịch  sau  khi  được
+xếp hạng;
+
+      b) Không bảo đảm số lượng hoặc diện tích buồng  ngủ  theo  tiêu  chuẩn
+tương ứng với từng loại, hạng cơ sở lưu trú du lịch theo quy định;
+
+      c) Không bảo đảm tiêu chuẩn về nơi để xe và giao thông nội bộ hoặc khu
+vực sảnh đón tiếp theo quy định;
+
+      d) Không bảo đảm số lượng hoặc tiêu chuẩn nhà hàng, quầy bar theo  quy
+định;
+
+      đ) Không bảo đảm tiêu chuẩn khu vực bếp theo quy định;
+
+      e) Không bảo đảm số lượng hoặc tiêu chuẩn phòng hội  nghị,  hội  thảo,
+phòng họp theo quy định;
+
+      g) Không bảo đảm tiêu chuẩn trang thiết bị, tiện nghi  khác  theo  quy
+định;
+
+      h) Không bảo đảm tiêu chuẩn về dịch vụ theo quy định;
+
+      i) Không bảo đảm tiêu chuẩn về trình độ chuyên môn  nghiệp  vụ,  ngoại
+ngữ của người quản lý hoặc nhân viên phục vụ theo quy định.
+
+      4. Phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng đối với hành vi kê
+khai không trung thực hồ sơ đăng ký công nhận hạng cơ sở lưu trú du lịch.
+
+      5. Hình thức xử phạt bổ sung:
+
+      Tước quyền sử dụng quyết định công nhận hạng cơ sở lưu trú du lịch  từ
+06 tháng đến 12 tháng đối với hành vi quy định tại các điểm b, c, d,  đ,  e,
+g, h và i khoản 3 Điều này.
+
+      6. Biện pháp khắc phục hậu quả:
+
+      Buộc thu hồi quyết định công nhận hạng cơ sở lưu trú du lịch  đối  với
+hành vi quy định tại khoản 4 Điều này.
+
+      Điều 13. Vi phạm quy định về kinh doanh dịch vụ du lịch khác
+
+      1. Phạt tiền từ 500.000 đồng đến 1.000.000 đồng đối với hành vi  không
+niêm yết công khai giá bán hàng hóa, dịch vụ theo quy định.
+
+      2. Phạt tiền từ 1.000.000 đồng đến 3.000.000  đồng  đối  với  hành  vi
+không thực hiện đúng quy định về mẫu biển hiệu đạt tiêu chuẩn phục vụ  khách
+du lịch.
+
+      3. Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng đối  với  một  trong
+các hành vi sau đây:
+
+      a) Không thông tin rõ ràng về nguồn gốc, chất lượng hàng hóa;
+
+      b) Không nhận thanh toán bằng thẻ do ngân hàng phát hành;
+
+      c) Không có thực đơn theo quy định;
+
+      d) Không có nội quy, quy trình theo quy định.
+
+      4. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng đối với  một  trong
+các hành vi sau đây:
+
+      a) Không có nơi đón tiếp hoặc nơi gửi đồ dùng cá nhân theo quy định;
+
+      b) Không có phòng tắm cho khách theo quy định;
+
+      c) Không có dịch vụ cho thuê dụng cụ tập luyện, thi đấu  phù  hợp  với
+từng môn thể thao theo quy định;
+
+      d) Không bảo đảm tiêu chuẩn nhân viên theo quy định;
+
+      đ) Không bảo đảm khu vực phòng ăn hoặc dụng cụ phục vụ  ăn  uống  theo
+quy định;
+
+      e) Không bảo đảm khu vực bếp theo quy định;
+
+      g) Không có nhân viên y tế hoặc kỹ thuật viên hoặc nhân viên  phục  vụ
+phù hợp với từng dịch vụ chăm sóc sức khỏe theo quy định;
+
+      h) Không bán đúng giá niêm yết.
+
+      5. Phạt tiền từ 10.000.000 đồng đến 20.000.000 đồng đối với một  trong
+các hành vi sau đây:
+
+      a) Không bảo đảm nhà vệ sinh theo quy định;
+
+      b) Kê khai không trung thực hồ sơ đăng ký công nhận cơ sở  kinh  doanh
+dịch vụ du lịch khác đạt tiêu chuẩn phục vụ khách du lịch.
+
+      6. Phạt tiền từ 20.000.000 đồng đến 30.000.000 đồng đối  với  hành  vi
+treo biển hiệu đạt tiêu chuẩn phục vụ khách du lịch khi chưa  được  cơ  quan
+có thẩm quyền công nhận.
+
+      7. Vi phạm quy định về cơ sở vật chất, trang thiết bị, dụng cụ, phương
+tiện, nhân viên chuyên môn trong cơ sở kinh doanh dịch vụ thể  thao,  cơ  sở
+kinh doanh dịch vụ vui chơi giải trí, cơ sở kinh doanh dịch vụ chăm sóc  sức
+khỏe thì bị xử phạt theo quy định của pháp luật chuyên ngành.
+
+      8. Hình thức xử phạt bổ sung:
+
+      Tước quyền sử dụng quyết định công nhận cơ sở kinh doanh  dịch  vụ  du
+lịch khác đạt tiêu chuẩn phục vụ khách du lịch từ 01 tháng đến 06 tháng  đối
+với hành vi quy định tại khoản 4 và điểm a khoản 5 Điều này.
+
+      9. Biện pháp khắc phục hậu quả:
+
+      a) Buộc tháo dỡ biển hiệu đạt tiêu chuẩn phục vụ khách du lịch đối với
+hành vi quy định tại khoản 6 Điều này;
+
+      b) Buộc nộp lại số lợi bất hợp pháp có được do thực hiện hành  vi  quy
+định tại điểm h khoản 4 và khoản 6 Điều này;
+
+      c) Buộc thu hồi quyết định công nhận cơ sở kinh doanh dịch vụ khác đạt
+tiêu chuẩn phục vụ khách du lịch đối với hành vi quy định tại điểm  b  khoản
+5 Điều này.
+
+      Điều 14. Vi phạm quy định về nghĩa vụ của khách du lịch
+
+      1. Cảnh cáo đối với hành vi không thực hiện đúng thông  báo  nộp  tiền
+phí, lệ phí, các khoản phải nộp khác của cơ quan có thẩm quyền.
+
+      2. Phạt tiền từ 1 đến 3 lần số tiền phí, lệ phí, các  khoản  phải  nộp
+khác theo quy định đối với hành vi trốn nộp phí, lệ phí, các khoản phải  nộp
+khác. Mức phạt tối đa là 50.000.000 đồng.
+
+      3. Phạt tiền từ 500.000 đồng đến 1.000.000 đồng đối với hành vi  không
+thực hiện nội quy, quy định của khu du lịch, điểm du lịch, cơ  sở  cung  cấp
+dịch vụ du lịch.
+
+      4. Phạt tiền từ 1.000.000 đồng đến 3.000.000 đồng đối với hành vi  ứng
+xử không văn minh hoặc không tôn trọng phong tục, tập quán, bản sắc văn  hóa
+địa phương nơi đến du lịch.
+
+      5. Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng đối với hành vi  gây
+phương hại đến hình ảnh quốc gia, truyền thống văn  hóa  dân  tộc  của  Việt
+Nam.
+
+      6. Biện pháp khắc phục hậu quả:
+
+      Buộc nộp đủ số tiền phí, lệ phí, các khoản phải nộp đối  với  hành  vi
+quy định tại khoản 1 và khoản 2 Điều này.
+
+      Điều 15. Vi phạm quy định về kinh doanh sản phẩm du lịch  có  nguy  cơ
+ảnh hưởng đến tính mạng, sức khỏe của khách du lịch
+
+      1. Phạt tiền từ 1.000.000 đồng đến 3.000.000  đồng  đối  với  hành  vi
+không thông báo trước khi bắt đầu kinh doanh sản phẩm du  lịch  có  nguy  cơ
+ảnh hưởng đến tính mạng, sức khỏe của khách du lịch theo quy định.
+
+      2. Phạt tiền từ 3.000.000 đồng đến 5.000.000  đồng  đối  với  hành  vi
+không cảnh báo, chỉ dẫn về điều kiện khí hậu, thời tiết,  sức  khỏe  và  các
+yếu tố liên quan khi cung cấp các sản phẩm du lịch có nguy cơ ảnh hưởng  đến
+tính mạng, sức khỏe của khách du lịch.
+
+      3. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng  đối  với  hành  vi
+không có phương án cứu hộ, cứu nạn theo quy định.
+
+      4. Phạt tiền từ 10.000.000 đồng đến 15.000.000 đồng đối với một  trong
+các hành vi sau đây:
+
+      a) Không phổ biến các quy định về bảo vệ an toàn cho khách du lịch;
+
+      b) Không hướng dẫn các thao tác kỹ thuật cho khách du lịch  trước  khi
+cung cấp sản phẩm du lịch.
+
+      5. Phạt tiền từ 15.000.000 đồng đến 20.000.000 đồng đối với một  trong
+các hành vi sau đây:
+
+      a) Không duy trì, bảo đảm thông tin liên lạc với khách du  lịch  trong
+suốt thời gian cung cấp sản phẩm du lịch;
+
+      b) Không bố trí, sử dụng huấn luyện viên hoặc kỹ thuật viên hoặc hướng
+dẫn viên có chuyên môn phù hợp theo quy định;
+
+      c) Không cung cấp, hướng dẫn sử dụng và giám sát việc  sử  dụng  trang
+thiết bị, dụng cụ hỗ trợ theo quy chuẩn, tiêu chuẩn, bảo  đảm  an  toàn  cho
+khách du lịch.
+
+      6. Phạt tiền từ 20.000.000 đồng đến 30.000.000 đồng đối  với  hành  vi
+không bố trí lực lượng cứu hộ khách du lịch theo quy định.
+
+      7. Phạt tiền từ 30.000.000 đồng đến 40.000.000 đồng đối  với  hành  vi
+không can thiệp, xử lý, ứng cứu kịp thời các sự cố, tai nạn, rủi ro xảy ra.
+
+      8. Phạt tiền từ 40.000.000 đồng đến 50.000.000 đồng đối  với  hành  vi
+tiếp tục kinh doanh sau khi cơ quan chuyên môn về du lịch cấp tỉnh  yêu  cầu
+hoàn thiện, bổ sung các biện pháp bảo đảm an toàn nhưng chưa thực hiện  theo
+quy định.
+
+      9. Hình thức xử phạt bổ sung:
+
+      a) Đình chỉ hoạt động từ 01 tháng đến 03 tháng đối  với  hành  vi  quy
+định tại khoản 3 và khoản 4 Điều này;
+
+      b) Đình chỉ hoạt động từ 03 tháng đến 06 tháng đối  với  hành  vi  quy
+định tại các khoản 5, 6 và 7 Điều này.
+
+      10. Biện pháp khắc phục hậu quả:
+
+      Buộc nộp lại số lợi bất hợp pháp có được do thực hiện hành vi quy định
+định tại khoản 8 Điều này.
+
+      Điều 16. Vi phạm quy định về quản lý điểm du lịch, khu du lịch
+
+      1. Phạt tiền từ 1.000.000 đồng đến 3.000.000  đồng  đối  với  hành  vi
+không công khai số điện thoại, địa chỉ của tổ chức, cá nhân quản lý điểm  du
+lịch hoặc khu du lịch.
+
+      2. Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng đối  với  một  trong
+các hành vi sau đây:
+
+      a) Không có biển chỉ dẫn, thuyết minh hoặc biển báo về giao thông, các
+cơ sở dịch vụ, các điểm tham quan theo quy định;
+
+      b) Không có nội quy theo quy định.
+
+      3. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng đối với  một  trong
+các hành vi sau đây:
+
+      a) Không có bộ phận thông tin hỗ trợ khách du lịch theo quy định;
+
+      b) Không có bộ phận bảo vệ trực 24 giờ mỗi ngày;
+
+      c) Không có bộ phận cứu hộ, cứu nạn theo quy định;
+
+      d) Không cung cấp dịch vụ thuyết minh, hướng  dẫn  du  lịch  theo  quy
+định;
+
+      đ) Không có biện pháp quản lý, kiểm tra, giám sát hoạt động kinh doanh
+dịch vụ du lịch trong phạm vi quản lý theo quy định;
+
+      e) Không bố trí nhân lực làm vệ sinh môi trường theo quy định.
+
+      4. Phạt tiền từ 10.000.000 đồng đến 20.000.000 đồng đối với một  trong
+các hành vi sau đây:
+
+      a) Không có kết nối giao thông, thông tin liên lạc theo quy định;
+
+      b) Không có hệ thống điện theo quy định;
+
+      c) Không có hệ thống cung cấp nước sạch theo quy định;
+
+      d) Không có dịch vụ ăn uống hoặc cơ sở kinh doanh dịch vụ ăn uống  đạt
+tiêu chuẩn phục vụ khách du lịch theo quy định;
+
+      đ) Không có dịch vụ mua sắm hoặc cơ sở kinh doanh dịch vụ mua sắm  đạt
+tiêu chuẩn phục vụ khách du lịch theo quy định;
+
+      e) Không có hệ thống cơ sở lưu trú du lịch theo quy định;
+
+      g) Không bảo đảm nhà vệ sinh công cộng theo quy định;
+
+      h) Không có đủ phương tiện, thiết bị thu gom chất thải đáp ứng yêu cầu
+giữ gìn vệ sinh môi trường theo quy định;
+
+      i) Không thu gom, xử lý chất thải phát sinh trong hoạt  động  du  lịch
+theo quy định;
+
+      k) Không có các biện pháp phòng, chống cháy nổ theo quy định;
+
+      l) Kê khai không trung thực hồ sơ đề nghị công nhận điểm du lịch  hoặc
+khu du lịch.
+
+      5. Phạt tiền từ 20.000.000 đồng đến 30.000.000 đồng đối với một  trong
+các hành vi sau đây:
+
+      a) Sử dụng các biện pháp cản trở việc tham quan của khách  du  lịch  ở
+những nơi được phép vào tham quan theo quy định;
+
+      b) Không phối hợp với cơ quan quản lý nhà nước  về  du  lịch  có  thẩm
+quyền trong việc bảo vệ và khai thác tài nguyên du lịch theo quy định.
+
+      6. Hình thức xử phạt bổ sung:
+
+      a) Tước quyền sử dụng quyết định công nhận điểm du lịch  hoặc  khu  du
+lịch từ 01 tháng đến 06 tháng đối với hành vi quy định tại các  điểm  a,  b,
+c, d, đ, e và g khoản 4 Điều này;
+
+      b) Tước quyền sử dụng quyết định công nhận điểm du lịch  hoặc  khu  du
+lịch từ 06 tháng đến 12 tháng đối với hành vi quy  định  tại  khoản  5  Điều
+này;
+
+      c) Đình chỉ hoạt động từ 01 tháng đến 03 tháng đối  với  hành  vi  quy
+định tại điểm h khoản 4 Điều này;
+
+      d) Đình chỉ hoạt động từ 06 tháng đến 12 tháng đối  với  hành  vi  quy
+định tại điểm i và điểm k khoản 4 Điều này.
+
+      7. Biện pháp khắc phục hậu quả:
+
+      Buộc thu hồi quyết định công nhận điểm du lịch hoặc khu  du  lịch  đối
+với hành vi quy định tại điểm l khoản 4 Điều này.
+
+      Điều 17. Vi phạm quy định về vận tải khách du lịch bằng đường bộ
+
+      1. Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng đối  với  một  trong
+các hành vi sau đây:
+
+      a) Vận tải khách du lịch không theo hợp đồng  với  doanh  nghiệp  kinh
+doanh dịch vụ lữ hành hoặc với khách du lịch theo hành  trình,  tuyến  đường
+phù hợp;
+
+      b) Không có hợp đồng vận tải khách du lịch theo quy định;
+
+      c) Không xuất trình được danh sách khách du lịch theo quy định.
+
+      2. Phạt tiền từ 2.000.000 đồng đến 3.000.000  đồng  đối  với  hành  vi
+không gắn biển hiệu phương tiện vận tải khách du lịch theo quy định.
+
+      3. Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng đối  với  một  trong
+các hành vi sau đây:
+
+      a) Không có thùng chứa đồ uống đối với xe ô tô vận tải khách du lịch;
+
+      b) Không có dụng cụ y tế sơ cấp cứu, túi thuốc dự phòng đối với  xe  ô
+tô vận tải khách du lịch;
+
+      c) Không có rèm cửa chống nắng đối với xe ô tô vận tải khách  du  lịch
+từ 09 chỗ trở lên;
+
+      d) Không có thùng đựng rác đối với xe ô tô vận tải khách du lịch từ 09
+chỗ trở lên;
+
+      đ) Không có micro đối với xe ô tô vận tải khách du lịch từ 24 chỗ  trở
+lên (trừ ô tô chuyên dụng caravan);
+
+      e) Không có vị trí dành cho người cao tuổi, người khuyết tật theo  quy
+định đối với xe ô tô vận tải khách du lịch từ 24  chỗ  trở  lên  (trừ  ô  tô
+chuyên dụng caravan).
+
+      4. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng đối với  một  trong
+các hành vi sau đây:
+
+      a) Sử dụng nhân viên phục vụ khách du lịch không bảo  đảm  tiêu  chuẩn
+theo quy định;
+
+      b) Sử dụng người điều khiển phương tiện vận tải khách  du  lịch  không
+đảm bảo tiêu chuẩn theo quy định.
+
+      5. Hình thức xử phạt bổ sung:
+
+      Tước quyền sử dụng biển hiệu vận tải khách du lịch trong thời gian  từ
+01 tháng đến 06 tháng đối với hành vi quy định tại khoản 4 Điều này.
+
+      Điều 18. Vi phạm quy định về vận tải khách du lịch bằng đường thủy nội
+địa
+
+      1. Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng đối với hành vi  vận
+tải khách du lịch không theo hợp đồng với doanh nghiệp kinh  doanh  dịch  vụ
+lữ hành hoặc với khách du lịch theo hành trình, tuyến đường du lịch.
+
+      2. Phạt tiền từ 2.000.000 đồng đến 3.000.000  đồng  đối  với  hành  vi
+không gắn biển hiệu phương tiện vận tải khách du lịch theo quy định.
+
+      3. Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng đối  với  một  trong
+các hành vi sau đây:
+
+      a) Không có hợp đồng vận tải khách du lịch theo quy định;
+
+      b) Không trang bị đủ số lượng áo phao cho khách du  lịch  trên  phương
+tiện vận tải khách du lịch bằng đường thủy nội địa theo quy định;
+
+      c) Không có bảng hướng dẫn sử dụng các trang thiết bị  cứu  sinh,  cứu
+đắm và số điện thoại, địa chỉ các cơ quan tìm kiếm cứu nạn  để  tại  vị  trí
+ghế ngồi của khách du lịch đối với phương tiện vận tải khách  du  lịch  bằng
+đường thủy nội địa;
+
+      d) Không có biểu đồ hành trình tuyến du lịch đối với phương  tiện  vận
+tải khách du lịch bằng đường thủy nội địa;
+
+      đ) Không có thùng chứa đồ uống đối với phương tiện vận  tải  khách  du
+lịch bằng đường thủy nội địa;
+
+      e) Không có thùng đựng rác đối với phương tiện vận tải khách  du  lịch
+bằng đường thủy nội địa;
+
+      g) Không có dụng cụ chống nắng đối với phương tiện vận  tải  khách  du
+lịch bằng đường thủy nội địa từ 20 ghế ngồi trở lên;
+
+      h) Không có micro đối với phương tiện vận tải khách du lịch bằng đường
+thủy nội địa từ 20 ghế ngồi trở lên;
+
+      i) Không đảm bảo yêu cầu của khu vực phục vụ dịch vụ ăn uống, khu  chế
+biến (nếu có) theo quy định đối với phương tiện vận tải khách du  lịch  bằng
+đường thủy nội địa từ 20 ghế ngồi trở lên;
+
+      k) Không có mái che đối với phương tiện vận tải  khách  du  lịch  bằng
+đường thủy nội địa từ 50 ghế ngồi trở lên;
+
+      l) Không có rèm cửa chống nắng đối với phương tiện vận  tải  khách  du
+lịch bằng đường thủy nội địa từ 50 ghế ngồi trở lên;
+
+      m) Không có phòng vệ sinh đối với phương tiện vận tải  khách  du  lịch
+bằng đường thủy nội địa từ 50 ghế ngồi trở lên.
+
+      4. Phạt tiền từ 5.000.000 đồng đến 10.000.000 đồng đối với  một  trong
+các hành vi sau đây:
+
+      a) Sử dụng nhân viên phục vụ khách du lịch không bảo  đảm  tiêu  chuẩn
+theo quy định;
+
+      b) Sử dụng người điều khiển phương tiện  vận  tải  khách  du  lịch  và
+thuyền viên không bảo đảm theo quy định.
+
+      5. Hình thức xử phạt bổ sung:
+
+      a) Tước quyền sử dụng biển hiệu vận tải khách du lịch trong thời  gian
+từ
+
+      01 tháng đến 06 tháng đối với hành vi quy định tại khoản 4 Điều này;
+
+      b) Đình chỉnh hoạt động từ 01 tháng đến 03 tháng đối với hành  vi  quy
+định tại điểm b và điểm m khoản 3 Điều này.
+
+                                 Chương III
+  THẨM QUYỀN XỬ PHẠT VI PHẠM HÀNH CHÍNH VÀ THẨM QUYỀN LẬP BIÊN BẢN VI PHẠM
+                                 HÀNH CHÍNH
+
+      Điều 19. Thẩm quyền của cơ quan Thanh tra chuyên ngành
+
+      1. Thanh tra viên, người được giao thực hiện nhiệm vụ thanh tra chuyên
+ngành đang thi hành công vụ có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 500.000 đồng;
+
+      c) Tịch thu tang vật vi phạm hành chính có giá trị không vượt quá  mức
+tiền phạt 500.000 đồng.
+
+      2. Chánh Thanh tra cấp Sở, Trưởng đoàn thanh tra chuyên ngành  cấp  Sở
+có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 25.000.000 đồng;
+
+      c) Tước quyền sử dụng giấy phép kinh doanh dịch vụ lữ hành, thẻ  hướng
+dẫn viên du lịch, quyết định công nhận hạng cơ sở  lưu  trú  du  lịch,  biển
+hiệu phương tiện vận tải khách du lịch, quyết định  công  nhận  cơ  sở  kinh
+doanh dịch vụ du lịch khác đạt tiêu chuẩn phục vụ khách du lịch, quyết  định
+công nhận điểm du lịch, quyết định công nhận khu du lịch có  thời  hạn  hoặc
+đình chỉ hoạt động có thời hạn;
+
+      d) Tịch thu tang vật vi phạm hành chính có giá trị không vượt quá  mức
+tiền phạt 25.000.000 đồng;
+
+      đ) Áp dụng các biện pháp khắc phục hậu quả quy định tại  Điều  4  Nghị
+định này.
+
+      3. Trưởng đoàn thanh tra chuyên ngành cấp Bộ có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 35.000.000 đồng;
+
+      c) Tước quyền sử dụng giấy phép kinh doanh dịch vụ lữ hành, thẻ  hướng
+dẫn viên du lịch, quyết định công nhận hạng cơ sở  lưu  trú  du  lịch,  biển
+hiệu phương tiện vận tải khách du lịch, quyết định  công  nhận  cơ  sở  kinh
+doanh dịch vụ du lịch khác đạt tiêu chuẩn phục vụ khách du lịch, quyết  định
+công nhận điểm du lịch, quyết định công nhận khu du lịch có  thời  hạn  hoặc
+đình chỉ hoạt động có thời hạn;
+
+      d) Tịch thu tang vật vi phạm hành chính có giá trị không vượt quá  mức
+tiền phạt 35.000.000 đồng;
+
+      đ) Áp dụng các biện pháp khắc phục hậu quả quy định tại  Điều  4  Nghị
+định này.
+
+      4. Chánh Thanh tra cấp Bộ, Tổng cục trưởng Tổng cục Đường bộ Việt Nam,
+Cục trưởng Cục Đường thủy nội địa được giao thực hiện chức  năng  thanh  tra
+chuyên ngành có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 50.000.000 đồng;
+
+      c) Tước quyền sử dụng giấy phép kinh doanh dịch vụ lữ hành, thẻ  hướng
+dẫn viên du lịch, quyết định công nhận hạng cơ sở  lưu  trú  du  lịch,  biển
+hiệu phương tiện vận tải khách du lịch, quyết định  công  nhận  cơ  sở  kinh
+doanh dịch vụ du lịch khác đạt tiêu chuẩn phục vụ khách du lịch, quyết  định
+công nhận điểm du lịch, quyết định công nhận khu du lịch có  thời  hạn  hoặc
+đình chỉ hoạt động có thời hạn;
+
+      d) Tịch thu tang vật vi phạm hành chính có giá trị không vượt quá  mức
+tiền phạt 50.000.000 đồng;
+
+      đ) Áp dụng các biện pháp khắc phục hậu quả quy định tại  Điều  4  Nghị
+định này.
+
+      Điều 20. Thẩm quyền của Chủ tịch Ủy ban nhân dân
+
+      1. Chủ tịch Ủy ban nhân dân cấp xã có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 5.000.000 đồng;
+
+      c) Tịch thu tang vật vi phạm hành chính có giá trị không vượt quá  mức
+tiền phạt 5.000.000 đồng.
+
+      2. Chủ tịch Ủy ban nhân dân cấp huyện có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 25.000.000 đồng;
+
+      c) Tước quyền sử dụng giấy phép kinh doanh dịch vụ lữ hành, thẻ  hướng
+dẫn viên du lịch, quyết định công nhận hạng cơ sở  lưu  trú  du  lịch,  biển
+hiệu phương tiện vận tải khách du lịch, quyết định  công  nhận  cơ  sở  kinh
+doanh dịch vụ du lịch khác đạt tiêu chuẩn phục vụ khách du lịch, quyết  định
+công nhận điểm du lịch, quyết định công nhận khu du lịch có  thời  hạn  hoặc
+đình chỉ hoạt động có thời hạn;
+
+      d) Tịch thu tang vật vi phạm hành chính có giá trị không vượt quá  mức
+tiền phạt 25.000.000 đồng;
+
+      đ) Áp dụng các biện pháp khắc phục hậu quả quy định tại  Điều  4  Nghị
+định này.
+
+      3. Chủ tịch Ủy ban nhân dân cấp tỉnh có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 50.000.000 đồng;
+
+      c) Tước quyền sử dụng giấy phép kinh doanh dịch vụ lữ hành, thẻ  hướng
+dẫn viên du lịch, quyết định công nhận hạng cơ sở  lưu  trú  du  lịch,  biển
+hiệu phương tiện vận tải khách du lịch, quyết định  công  nhận  cơ  sở  kinh
+doanh dịch vụ du lịch khác đạt tiêu chuẩn phục vụ khách du lịch, quyết  định
+công nhận điểm du lịch, quyết định công nhận khu du lịch có  thời  hạn  hoặc
+đình chỉ hoạt động có thời hạn;
+
+      d) Tịch thu tang vật vi phạm hành chính có giá trị không vượt quá  mức
+tiền phạt 50.000.000 đồng;
+
+      đ) Áp dụng các biện pháp khắc phục hậu quả quy định tại  Điều  4  Nghị
+định này.
+
+      Điều 21. Thẩm quyền của Quản lý thị trường
+
+      1. Kiểm soát viên thị trường đang thi hành công vụ có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 500.000 đồng;
+
+      2. Đội trưởng Đội Quản lý thị trường có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 25.000.000 đồng;
+
+      c) Áp dụng biện pháp khắc phục hậu quả quy định tại Điều 4  Nghị  định
+này.
+
+      3. Cục trưởng Cục Quản lý thị trường cấp tỉnh, Cục trưởng  Cục  nghiệp
+vụ quản lý thị trường trực thuộc Tổng cục Quản lý thị trường có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 50.000.000 đồng;
+
+      c) Tước quyền sử dụng quyết định công nhận cơ sở kinh doanh dịch vụ du
+lịch khác đạt tiêu chuẩn phục vụ khách du lịch có thời  hạn  hoặc  đình  chỉ
+hoạt động có thời hạn;
+
+      d) Áp dụng các biện pháp khắc phục hậu quả quy định tại  Điều  4  Nghị
+định này.
+
+      4. Tổng cục trưởng Tổng Cục Quản lý thị trường có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 50.000.000 đồng;
+
+      c) Tước quyền sử dụng quyết định công nhận cơ sở kinh doanh dịch vụ du
+lịch khác đạt tiêu chuẩn phục vụ khách du lịch có thời  hạn  hoặc  đình  chỉ
+hoạt động có thời hạn;
+
+      d) Áp dụng biện pháp khắc phục hậu quả quy định tại Điều 4  Nghị  định
+này.
+
+      Điều 22. Thẩm quyền xử phạt của Bộ đội biên phòng
+
+      1. Chiến sĩ Bộ đội biên phòng đang thi hành công vụ có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 500.000 đồng.
+
+      2. Trạm trưởng, Đội trưởng của người được quy định tại  khoản  1  Điều
+này có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 25.000.000 đồng;
+
+      3. Đồn trưởng Đồn biên phòng, Hải đội trưởng Hải đội biên  phòng,  Chỉ
+huy trưởng Tiểu khu biên phòng, Chỉ huy trưởng biên phòng Cửa khẩu  cảng  có
+quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 25.000.000 đồng;
+
+      c) Tịch thu tang vật vi phạm hành chính có giá trị không vượt quá  mức
+tiền phạt 25.000.000 đồng;
+
+      d) Áp dụng các biện pháp khắc phục hậu quả quy định tại  Điều  4  Nghị
+định này.
+
+      4. Chỉ huy trưởng Bộ đội biên phòng cấp tỉnh, Chỉ huy trưởng Hải  đoàn
+biên phòng trực thuộc Bộ Tư lệnh Bộ đội biên phòng có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 50.000.000 đồng;
+
+      c) Tước quyền sử dụng thẻ hướng dẫn viên du  lịch,  biển  hiệu  phương
+tiện vận tải khách du lịch có thời hạn hoặc đình chỉ hoạt động có thời hạn;
+
+      d) Tịch thu tang vật vi phạm hành chính có giá trị không vượt quá  mức
+tiền phạt 50.000.000 đồng;
+
+      đ) Áp dụng các biện pháp khắc phục hậu quả quy định tại  Điều  4  Nghị
+định này.
+
+      Điều 23. Thẩm quyền của Cảnh sát biển
+
+      1. Cảnh sát viên Cảnh sát biển đang thi hành công vụ có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 1.500.000 đồng.
+
+      2. Tổ trưởng Tổ nghiệp vụ Cảnh sát biển có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 2.500.000 đồng.
+
+      3. Đội trưởng Đội nghiệp vụ Cảnh sát biển, Trạm trưởng Trạm  Cảnh  sát
+biển có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 5.000.000 đồng;
+
+      c) Áp dụng biện pháp khắc phục hậu quả quy định tại Điều 4  Nghị  định
+này.
+
+      4. Hải đội trưởng Hải đội Cảnh sát biển có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 10.000.000 đồng;
+
+      c) Tịch thu tang vật vi phạm hành chính có giá trị không vượt quá  mức
+tiền phạt 10.000.000 đồng;
+
+      d) Áp dụng biện pháp khắc phục hậu quả quy định tại Điều 4  Nghị  định
+này.
+
+      5. Hải đoàn trưởng Hải đoàn Cảnh sát biển có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 15.000.000 đồng;
+
+      c) Tịch thu tang vật vi phạm hành chính có giá trị không vượt quá  mức
+tiền phạt 15.000.000 đồng;
+
+      d) Áp dụng biện pháp khắc phục hậu quả quy định tại Điều 4  Nghị  định
+này.
+
+      6. Tư lệnh Vùng Cảnh sát biển có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 25.000.000 đồng;
+
+      c) Tịch thu tang vật vi phạm hành chính có giá trị không vượt quá  mức
+tiền phạt 25.000.000 đồng;
+
+      d) Áp dụng biện pháp khắc phục hậu quả quy định tại Điều 4  Nghị  định
+này.
+
+      7. Tư lệnh Cảnh sát biển có quyền:
+
+      a) Phạt cảnh cáo;
+
+      b) Phạt tiền đến 50.000.000 đồng;
+
+      c) Tước quyền sử dụng thẻ hướng dẫn viên du lịch, biển  hiệu  vận  tải
+khách du lịch có thời hạn hoặc đình chỉ hoạt động có thời hạn;
+
+      d) Tịch thu tang vật vi phạm hành chính có giá trị không vượt quá  mức
+tiền phạt 50.000.000 đồng;
+
+      đ) Áp dụng biện pháp khắc phục hậu quả quy định tại Điều 4  Nghị  định
+này.
+
+      Điều 24. Thẩm quyền của Công an nhân dân
+
+      Thẩm quyền xử phạt vi phạm hành chính, áp dụng các hình thức  xử  phạt
+bổ sung và biện pháp khắc phục hậu quả của Công an nhân dân thực  hiện  theo
+quy định tại Điều 39 Luật xử lý vi phạm hành chính.
+
+      Điều 25. Phân định thẩm quyền xử phạt vi phạm hành  chính  trong  lĩnh
+vực du lịch
+
+      1. Chủ tịch Ủy ban nhân dân các cấp có thẩm quyền lập biên bản vi phạm
+hành chính, xử phạt vi phạm hành chính và áp dụng các biện  pháp  khắc  phục
+hậu quả đối với hành vi vi phạm hành chính quy định tại các Điều  6,  7,  8,
+9, 10, 11, 12, 13, 14, 15, 16, 17 và 18 theo thẩm quyền quy  định  tại  Điều
+20 Nghị định này và chức năng, nhiệm vụ, quyền hạn được giao.
+
+      2. Người có thẩm quyền xử phạt của cơ quan Thanh tra chuyên  ngành  có
+thẩm quyền lập biên bản vi phạm hành chính, xử phạt vi phạm  hành  chính  và
+áp dụng biện pháp khắc phục hậu quả đối với hành vi vi phạm hành  chính  quy
+định tại Chương II Nghị định này theo thẩm quyền quy định tại Điều  19  Nghị
+định này và chức năng, nhiệm vụ, quyền hạn được giao, cụ thể như sau:
+
+      a) Thanh tra Văn hóa, Thể thao và Du lịch có thẩm  quyền  xử  phạt  vi
+phạm hành chính, áp dụng biện pháp khắc phục hậu quả  đối  với  hành  vi  vi
+phạm hành chính quy định tại các Điều 6, 7, 8, 9, 10, 11, 12,  13,  14,  15,
+16, 17 và 18 Chương II Nghị định này;
+
+      b) Thanh tra Giao thông vận tải có thẩm quyền xử  phạt  vi  phạm  hành
+chính, áp dụng biện pháp khắc phục hậu quả đối với  hành  vi  vi  phạm  hành
+chính quy định tại Điều 17 và Điều 18 Nghị định này tại các  điểm  dừng  xe,
+đỗ xe trên đường bộ, bến xe, bãi đỗ xe, trạm dừng nghỉ, trạm kiểm tra  trọng
+tải xe, trạm thu phí, cơ sở kinh doanh vận tải đường  bộ,  khi  phương  tiện
+(có hành vi vi phạm) dừng, đỗ trên đường bộ;
+
+      c) Thanh tra Lao động - Thương binh và Xã hội có thẩm quyền xử phạt vi
+phạm hành chính, áp dụng biện pháp khắc phục hậu quả  đối  với  hành  vi  vi
+phạm hành chính quy định tại điểm a khoản 5, điểm d khoản 13  Điều  7;  hành
+vi không có hợp đồng lao động với doanh nghiệp kinh doanh dịch  vụ  lữ  hành
+hoặc doanh nghiệp cung cấp dịch vụ hướng dẫn du lịch quy  định  tại  điểm  d
+khoản 5, khoản 9 Điều 9 Nghị định này;
+
+      d) Thanh tra Tài nguyên - Môi trường có thẩm quyền  xử  phạt  vi  phạm
+hành chính, áp dụng biện pháp khắc phục hậu quả đối  với  hành  vi  vi  phạm
+hành chính quy định tại khoản 4 Điều 11; điểm a khoản  5  Điều  13;  điểm  e
+khoản 3, các điểm g, h và i khoản 4; điểm b khoản 5 Điều 16 Nghị định này;
+
+      đ) Thanh tra Tài chính có thẩm quyền xử phạt vi phạm  hành  chính,  áp
+dụng biện pháp khắc phục hậu quả đối với hành vi  vi  phạm  hành  chính  quy
+định tại điểm b khoản 1, khoản 4 Điều 10; khoản 1, điểm h khoản 4  Điều  13;
+khoản 1 và khoản 2 Điều 14 Nghị định này.
+
+      3. Những người có thẩm quyền xử phạt của cơ quan Quản lý thị trường có
+thẩm quyền lập biên bản vi phạm hành chính, xử phạt vi phạm  hành  chính  và
+áp dụng biện pháp khắc phục hậu quả đối với hành vi vi phạm hành  chính  quy
+định tại điểm a khoản 3, điểm c khoản 4 Điều 6; điểm  b  khoản  1,  khoản  4
+Điều 10; khoản 1, điểm a khoản 3, điểm h khoản 4 Điều  13  theo  thẩm  quyền
+quy định tại Điều 21 Nghị định này và chức năng, nhiệm vụ,  quyền  hạn  được
+giao.
+
+      4. Người có thẩm quyền xử phạt của Bộ đội biên phòng có thẩm quyền lập
+biên bản vi phạm hành chính, xử phạt vi phạm hành  chính  và  áp  dụng  biện
+pháp khắc phục hậu quả đối với hành vi vi phạm hành chính quy định  tại  các
+khoản 5, 6 và 7 Điều 6; khoản 4 Điều 7; Điều 9; Điều 14; các khoản 2, 3,  4,
+5, 6 và 7 Điều 15; Điều 17 theo thẩm quyền quy định tại Điều  22  Nghị  định
+này và chức năng, nhiệm vụ, quyền hạn được giao.
+
+      5. Người có thẩm quyền xử phạt của Cảnh sát biển  có  thẩm  quyền  lập
+biên bản vi phạm hành chính, xử phạt vi phạm hành  chính  và  áp  dụng  biện
+pháp khắc phục hậu quả đối với hành vi vi phạm hành chính quy định  tại  các
+khoản 5, 6 và 7 Điều 6; khoản 4 Điều 7; Điều 9; Điều 14; các khoản 2, 3,  4,
+5, 6 và 7 Điều 15; Điều 17; Điều 18 theo thẩm quyền quy  định  tại  Điều  23
+Nghị định này và chức năng, nhiệm vụ, quyền hạn được giao.
+
+      6. Người có thẩm quyền xử phạt của cơ quan Công an có thẩm  quyền  lập
+biên bản vi phạm hành chính, xử phạt vi phạm hành  chính  và  áp  dụng  biện
+pháp khắc phục hậu quả đối với hành vi vi phạm hành chính quy định tại  điểm
+a và điểm b khoản 3, điểm a và điểm c khoản 4, các khoản 5, 6 và 7  Điều  6;
+khoản 1, điểm b và điểm c khoản 2, điểm a và điểm c khoản 4,  điểm  d  khoản
+5, điểm c khoản 8, điểm b và điểm c khoản 9, điểm c  và  điểm  d  khoản  13,
+điểm d và điểm đ khoản 14 Điều 7; khoản 7 và khoản 8  Điều  8;  khoản  3  và
+khoản 4, điểm a và điểm b khoản 6, các khoản 7, 8 và 9 Điều 9; khoản 6  Điều
+10; khoản 4 Điều 12; điểm b khoản 5 Điều 13; Điều 14; các khoản 2, 3, 4,  5,
+6, 7 và 8 Điều 15; khoản 1, điểm a khoản 2, điểm c khoản 3, điểm k  và  điểm
+l khoản 4, điểm a khoản 5 Điều 16 theo thẩm quyền quy định tại Điều 24  Nghị
+định này và chức năng, nhiệm vụ, quyền hạn được giao.
+
+      Điều 26. Thẩm quyền lập biên bản vi phạm hành chính
+
+      1. Người có thẩm quyền xử phạt vi phạm hành chính quy định từ Điều  19
+đến Điều 24 Nghị định này theo chức năng, nhiệm vụ, quyền hạn được giao.
+
+      2. Trưởng đoàn kiểm tra, công chức được giao nhiệm vụ  kiểm  tra,  xác
+minh về du lịch được quyền lập biên bản vi phạm hành chính và chuyển  hồ  sơ
+vi phạm hành chính đến người có thẩm quyền xử phạt  để  tiến  hành  xử  phạt
+theo quy định của pháp luật.
+
+      3. Chỉ huy tàu bay, trưởng tàu, thuyền trưởng đang thi hành  nhiệm  vụ
+theo chức năng, quyền hạn được giao thuộc lĩnh vực du lịch  được  quyền  lập
+biên bản vi phạm hành chính đối với các hành vi vi  phạm  xảy  ra  trên  tàu
+bay, trên tàu, trên phương tiện thủy nội địa.
+
+                                  Chương IV
+                             ĐIỀU KHOẢN THI HÀNH
+
+      Điều 27. Hiệu lực thi hành
+
+      1. Nghị định này có hiệu lực thi hành từ ngày 01 tháng 8 năm 2019.
+
+      2. Kể từ ngày Nghị định này có hiệu lực thi hành, Mục 3 Chương II Nghị
+định số 158/2013/NĐ-CP ngày 12 tháng 11 năm 2013 của Chính phủ quy  định  xử
+phạt vi phạm hành chính trong lĩnh vực văn hóa, thể thao, du lịch  và  quảng
+cáo và các khoản 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40 và  41  Điều
+2 Nghị định số 28/2017/NĐ-CP ngày 20 tháng 3 năm  2017  của  Chính  phủ  sửa
+đổi, bổ sung một số điều của Nghị định số 131/2013/NĐ-CP ngày  16  tháng  10
+năm 2013 của Chính phủ quy định xử phạt vi phạm  hành  chính  về  quyền  tác
+giả, quyền liên quan và Nghị định số 158/2013/NĐ-CP ngày  12  tháng  11  năm
+2013 của Chính phủ quy định xử phạt vi phạm hành chính trong  lĩnh  vực  văn
+hóa, thể thao, du lịch và quảng cáo hết hiệu lực.
+
+      Điều 28. Điều khoản chuyển tiếp
+
+      Đối với những hành vi vi phạm hành chính trong lĩnh vực du lịch xảy ra
+trước ngày Nghị định này có hiệu lực thi hành mà sau đó mới được  phát  hiện
+hoặc đang xem xét giải quyết thì áp dụng các quy định có lợi  cho  cá  nhân,
+tổ chức vi phạm.
+
+      Điều 29. Trách nhiệm thi hành
+
+      1. Bộ trưởng Bộ Văn hóa, Thể thao và Du lịch có trách  nhiệm  tổ  chức
+thi hành Nghị định này.
+
+      2. Các Bộ trưởng, Thủ trưởng cơ quan ngang  bộ,  Thủ  trưởng  cơ  quan
+thuộc Chính phủ, Chủ tịch Ủy ban nhân dân các tỉnh,  thành  phố  trực  thuộc
+trung ương chịu trách nhiệm thi hành Nghị định này./.
+ 
+| Nơi nhận:                                  |TM. CHÍNH PHỦ              |
+|- Ban Bí thư Trung ương Đảng;               |THỦ TƯỚNG                  |
+|- Thủ tướng, các Phó Thủ tướng Chính phủ;   |                           |
+|- Các Bộ, cơ quan ngang Bộ, cơ quan thuộc   |                           |
+|Chính phủ;                                  |                           |
+|- HĐND, UBND các tỉnh, thành phố trực thuộc |                           |
+|trung ương;                                 |Nguyễn Xuân Phúc           |
+|- Văn phòng Trung ương và các Ban của Đảng; |                           |
+|- Văn phòng Tổng Bí thư;                    |                           |
+|- Văn phòng Chủ tịch nước;                  |                           |
+|- Hội đồng Dân tộc và các Ủy ban của Quốc   |                           |
+|hội;                                        |                           |
+|- Văn phòng Quốc hội;                       |                           |
+|- Tòa án nhân dân tối cao;                  |                           |
+|- Viện kiểm sát nhân dân tối cao;           |                           |
+|- Kiểm toán Nhà nước;                       |                           |
+|- Ủy ban Giám sát tài chính Quốc gia;       |                           |
+|- Ngân hàng Chính sách Xã hội;              |                           |
+|- Ngân hàng Phát triển Việt Nam;            |                           |
+|- Ủy ban trung ương Mặt trận Tổ quốc Việt   |                           |
+|Nam;                                        |                           |
+|- Cơ quan trung ương của các đoàn thể;      |                           |
+|- VPCP: BTCN, các PCN, Trợ lý TTg, TGĐ Cổng |                           |
+|TTĐT, các Vụ, Cục, đơn vị trực thuộc, Công  |                           |
+|báo;                                        |                           |
+|- Lưu: VT, KGVX (2)                         |                           |
