@@ -5,7 +5,7 @@
 | Field                              | Value |
 | ---------------------------------- | ----- |
 | Evaluation date                    | 2026-09-20 |
-| Framework and version              | Custom deterministic Unicode-token evaluator (`src/task11_evaluation.py`) |
+| Framework and version              | Custom deterministic Unicode-token evaluator; results recorded in `evaluation_runs.json` |
 | Evaluator model                    | None; lexical overlap against the grounded golden answers/contexts |
 | Generator model                    | OpenAI `o4-mini` |
 | Embedding model                    | `BAAI/bge-m3` |

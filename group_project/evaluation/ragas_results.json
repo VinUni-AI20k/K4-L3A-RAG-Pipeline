@@ -1,0 +1,17 @@
+{
+  "generator_model": "gpt-4o-mini",
+  "embedding_model": "BAAI/bge-m3",
+  "dataset_size": 15,
+  "dense": {
+    "faithfulness": 0.9055555555555554,
+    "answer_relevancy": 0.5017061251547934,
+    "context_recall": 0.9333333333333333,
+    "llm_context_precision_with_reference": 0.8708333333045993
+  },
+  "hybrid": {
+    "faithfulness": 0.9166666666666666,
+    "answer_relevancy": 0.4909722836829156,
+    "context_recall": 0.7333333333333333,
+    "llm_context_precision_with_reference": 0.8937037036569413
+  }
+}

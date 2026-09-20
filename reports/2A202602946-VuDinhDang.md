@@ -3,7 +3,7 @@
 ## Thông tin
 
 - Họ và tên: Vũ Đình Đăng
-- Mã học viên: Bổ sung khi nộp bài
+- Mã học viên: 2A202602946
 - Nhóm: Vật lí 10–12 — Kết nối tri thức với cuộc sống
 - Repository/branch: K4-L3A-RAG-Pipeline-Akatsuki
 
@@ -13,7 +13,7 @@
 |---|---|---|---|
 | Chunk/index | Chunk recursive 500/50, embedding BGE-M3, Chroma cosine | `src/task4_chunking_indexing.py` | Done |
 | Hybrid retrieval | Dense, BM25L và RRF theo ID | `src/task5_semantic_search.py`, `src/task6_lexical_search.py`, `src/task7_reranking.py` | Done |
-| Evaluation A/B | Chạy dense-only và hybrid + RRF với 4 metric | `src/task11_evaluation.py`, `group_project/evaluation/evaluation_runs.json` | Done |
+| Evaluation A/B | Chạy dense-only và hybrid + RRF với 4 metric | `src/evaluate_ragas.py`, `group_project/evaluation/evaluation_runs.json` | Done |
 
 ## Quyết định kỹ thuật
 

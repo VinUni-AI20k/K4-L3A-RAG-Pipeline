@@ -3,7 +3,7 @@
 ## Thông tin
 
 - Họ và tên: Hoàng Trung Anh
-- Mã học viên: Bổ sung khi nộp bài
+- Mã học viên: 2A202602521
 - Nhóm: Vật lí 10–12 — Kết nối tri thức với cuộc sống
 - Repository/branch: K4-L3A-RAG-Pipeline-Akatsuki
 
