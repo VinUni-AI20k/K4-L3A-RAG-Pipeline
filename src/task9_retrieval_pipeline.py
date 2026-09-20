@@ -4,9 +4,11 @@ Task 9 — Retrieval pipeline hoàn chỉnh.
 Luồng xử lý:
     1. Chạy semantic_search và lexical_search.
     2. Fuse hai danh sách bằng RRF đúng một lần.
-    3. Lấy best cosine score gốc từ dense results.
-    4. Nếu score dưới threshold, thử PageIndex fallback.
-    5. Nếu fallback lỗi hoặc rỗng, trả hybrid results thay vì crash.
+    3. (Tuỳ chọn, RERANKER_ENABLED=1) cross-encoder chấm lại 2×top_k ứng viên
+       RRF rồi cắt top_k — xem Task 12. Reranker lỗi thì dùng kết quả RRF.
+    4. Lấy best cosine score gốc từ dense results.
+    5. Nếu score dưới threshold, thử PageIndex fallback.
+    6. Nếu fallback lỗi hoặc rỗng, trả hybrid results thay vì crash.
 
 Không so sánh threshold với RRF score vì hai thang đo khác nhau: cosine nằm
 trong [0, 1] và phản ánh độ gần ngữ nghĩa; RRF chỉ là tổng nghịch đảo thứ hạng,
@@ -35,6 +37,7 @@ from .task5_semantic_search import semantic_search
 from .task6_lexical_search import lexical_search
 from .task7_reranking import rerank_rrf
 from .task8_pageindex_vectorless import pageindex_search
+from .task12_cross_encoder_rerank import rerank_cross_encoder
 
 
 load_dotenv()
@@ -51,6 +54,9 @@ def _threshold_from_env(default: float) -> float:
 SCORE_THRESHOLD = _threshold_from_env(0.53)
 DEFAULT_TOP_K = 5
 CANDIDATE_MULTIPLIER = 2   # lấy dư ứng viên cho RRF có chỗ gộp
+# Bật cross-encoder sau RRF (Task 12). Tắt mặc định để contract test và config
+# B của evaluation đo đúng "hybrid + RRF"; config C và .env của nhóm bật lên.
+RERANKER_ENABLED = os.getenv("RERANKER_ENABLED", "0").strip().lower() in {"1", "true", "yes"}
 
 
 def retrieve_detailed(
@@ -58,21 +64,43 @@ def retrieve_detailed(
     top_k: int = DEFAULT_TOP_K,
     score_threshold: float = SCORE_THRESHOLD,
     use_reranking: bool = True,
+    use_cross_encoder: bool | None = None,
 ) -> dict:
     """Như retrieve() nhưng kèm thông tin để UI/Task 10 giải thích kết quả.
+
+    ``use_reranking`` bật RRF (hybrid); ``use_cross_encoder`` bật cross-encoder
+    sau RRF, None thì theo RERANKER_ENABLED. Cross-encoder chỉ có tác dụng khi
+    use_reranking=True.
 
     Trả về dict:
         results            list[SearchResult]
         retrieval_source   "hybrid" | "pageindex" | "none"
         best_dense_score   cosine gốc cao nhất của dense search
+        reranked           bool — cross-encoder đã chấm lại kết quả
+        reranker_error     str | None
         fallback_tried     bool
         fallback_error     str | None
     """
+    if use_cross_encoder is None:
+        use_cross_encoder = RERANKER_ENABLED
+    use_cross_encoder = use_cross_encoder and use_reranking
+
     candidates = max(top_k * CANDIDATE_MULTIPLIER, top_k)
     dense = semantic_search(query, top_k=candidates)
     sparse = lexical_search(query, top_k=candidates)
 
-    if use_reranking:
+    reranked = False
+    reranker_error = None
+    if use_reranking and use_cross_encoder:
+        # RRF vẫn chạy một lần; chỉ lấy dư ứng viên để cross-encoder có chỗ chọn.
+        fused = rerank_rrf([dense, sparse], top_k=candidates)
+        try:
+            hybrid = rerank_cross_encoder(query, fused, top_k=top_k)
+            reranked = True
+        except Exception as error:  # noqa: BLE001 - model/API ngoài, không được làm UI chết
+            reranker_error = f"{type(error).__name__}: {error}"
+            hybrid = fused[:top_k]
+    elif use_reranking:
         hybrid = rerank_rrf([dense, sparse], top_k=top_k)
     else:
         hybrid = dense[:top_k]
@@ -82,6 +110,8 @@ def retrieve_detailed(
         "results": hybrid,
         "retrieval_source": "hybrid" if hybrid else "none",
         "best_dense_score": best_dense_score,
+        "reranked": reranked,
+        "reranker_error": reranker_error,
         "fallback_tried": False,
         "fallback_error": None,
     }
@@ -167,7 +197,8 @@ if __name__ == "__main__":
         print(f"Query: {question}")
         print(
             f"source={detail['retrieval_source']}  best_dense={detail['best_dense_score']:.4f}"
-            f"  fallback_tried={detail['fallback_tried']}  error={detail['fallback_error']}\n"
+            f"  reranked={detail['reranked']}  fallback_tried={detail['fallback_tried']}"
+            f"  error={detail['reranker_error'] or detail['fallback_error']}\n"
         )
         for rank, result in enumerate(detail["results"], 1):
             head = result["content"].split("\n", 1)[0]

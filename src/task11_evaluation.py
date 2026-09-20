@@ -3,8 +3,10 @@ Task 11 — Evaluation 4 metric và so sánh A/B.
 
 Hai cấu hình chỉ khác retrieval strategy, mọi thứ còn lại giữ nguyên
 (golden dataset, generator, prompt, evaluator, top_k, fallback threshold):
-    A  dense-only    : semantic_search, cắt top_k, không chạy RRF
-    B  hybrid + RRF  : semantic_search + lexical_search gộp bằng RRF một lần
+    A  dense-only           : semantic_search, cắt top_k, không chạy RRF
+    B  hybrid + RRF         : semantic_search + lexical_search gộp bằng RRF một lần
+    C  hybrid + RRF + rerank: như B nhưng RRF lấy 2×top_k rồi cross-encoder
+                              (Task 12, bonus) chấm lại và cắt top_k
 
 Metric (ragas 0.4.3, API collections):
     faithfulness       answer có bám vào retrieved contexts không
@@ -19,6 +21,8 @@ provider này.
 Chạy:
     python -m src.task11_evaluation                 # cả A và B, 20 câu
     python -m src.task11_evaluation --config B      # chỉ một config
+    python -m src.task11_evaluation --config C --skip-generate --skip-score
+                                                    # in lại summary từ JSON đã có
     python -m src.task11_evaluation --limit 3       # smoke test
     python -m src.task11_evaluation --skip-generate # chấm lại từ answers đã lưu
 
@@ -59,8 +63,9 @@ EVAL_EMBEDDING_MODEL = os.getenv("EVAL_EMBEDDING_MODEL", "text-embedding-3-small
 EVAL_CONCURRENCY = 4   # số câu chấm song song; giữ thấp để tránh rate limit
 
 CONFIGS = {
-    "A": {"label": "dense-only", "use_reranking": False},
-    "B": {"label": "hybrid + RRF", "use_reranking": True},
+    "A": {"label": "dense-only", "use_reranking": False, "use_cross_encoder": False},
+    "B": {"label": "hybrid + RRF", "use_reranking": True, "use_cross_encoder": False},
+    "C": {"label": "hybrid + RRF + rerank", "use_reranking": True, "use_cross_encoder": True},
 }
 METRICS = ("faithfulness", "answer_relevancy", "context_recall", "context_precision")
 
@@ -83,7 +88,10 @@ def run_config(config_key: str, golden: list[dict]) -> list[dict]:
 
         started = time.perf_counter()
         detail = retrieve_detailed(
-            question, top_k=TOP_K, use_reranking=config["use_reranking"]
+            question,
+            top_k=TOP_K,
+            use_reranking=config["use_reranking"],
+            use_cross_encoder=config["use_cross_encoder"],
         )
         retrieval_ms = (time.perf_counter() - started) * 1000
         chunks = detail["results"][:TOP_K]
@@ -105,6 +113,8 @@ def run_config(config_key: str, golden: list[dict]) -> list[dict]:
             "retrieval_source": detail["retrieval_source"],
             "best_dense_score": round(detail["best_dense_score"], 4),
             "fallback_tried": detail["fallback_tried"],
+            "reranked": detail.get("reranked", False),
+            "reranker_error": detail.get("reranker_error"),
             "contexts": [
                 {
                     "id": chunk["id"],
@@ -252,18 +262,22 @@ def write_summary(all_records: dict[str, list[dict]]) -> None:
         encoding="utf-8",
     )
 
-    a, b = summaries.get("A"), summaries.get("B")
+    keys = list(summaries)
+    base = summaries.get("A") or summaries[keys[0]]
+    others = [key for key in keys if summaries[key] is not base]
     lines = ["# Evaluation summary", "", "## Run information", ""]
     lines += [f"- {key}: `{value}`" for key, value in run_info.items()]
     lines += ["", "## Overall scores", ""]
-    lines += ["| Metric | Config A | Config B | Delta B−A |", "| --- | ---: | ---: | ---: |"]
+    header = "| Metric | " + " | ".join(f"Config {key}" for key in keys)
+    header += "".join(f" | Delta {key}−A" for key in others) + " |"
+    lines += [header, "| --- |" + " ---: |" * (len(keys) + len(others))]
     for name in METRICS:
-        va = a["metrics"][name] if a else None
-        vb = b["metrics"][name] if b else None
-        lines.append(f"| {name} | {_fmt(va)} | {_fmt(vb)} | {_delta(va, vb)} |")
-    va = a["average"] if a else None
-    vb = b["average"] if b else None
-    lines.append(f"| **Average** | {_fmt(va)} | {_fmt(vb)} | {_delta(va, vb)} |")
+        row = f"| {name} | " + " | ".join(_fmt(summaries[key]["metrics"][name]) for key in keys)
+        row += "".join(f" | {_delta(base['metrics'][name], summaries[key]['metrics'][name])}" for key in others)
+        lines.append(row + " |")
+    row = "| **Average** | " + " | ".join(_fmt(summaries[key]["average"]) for key in keys)
+    row += "".join(f" | {_delta(base['average'], summaries[key]['average'])}" for key in others)
+    lines.append(row + " |")
 
     lines += ["", "## Latency and refusals", ""]
     lines += ["| Config | Refusals | PageIndex fallback | Retrieval ms | Generation ms |",
@@ -332,7 +346,8 @@ def main(argv: list[str] | None = None) -> None:
                 print(f"[{key}] {errors} metric call(s) failed; see 'errors' in {path.name}")
         all_records[key] = records
 
-    if not args.skip_score:
+    if not args.skip_score or args.skip_generate:
+        # skip-generate + skip-score: chỉ dựng lại summary từ JSON đã chấm.
         write_summary(all_records)
         print(f"\nWrote {RESULTS_DIR.relative_to(ROOT)}/summary.json and summary.md")
 

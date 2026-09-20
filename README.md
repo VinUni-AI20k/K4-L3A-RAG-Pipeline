@@ -1,12 +1,12 @@
 # K4-DAY08-DuoH — RAG Chatbot về IELTS Writing
 
-Chatbot hỏi đáp về **IELTS Writing** (band descriptors, tiêu chí chấm điểm, yêu cầu đề bài, bài mẫu và lời khuyên) dựa trên tài liệu chính thức của ielts.org và các trang luyện thi uy tín. Pipeline: convert → chunk → index → dense + BM25 → RRF → fallback → generation có citation, kèm giao diện Streamlit và báo cáo đánh giá 4 metric.
+Chatbot hỏi đáp về **IELTS Writing** (band descriptors, tiêu chí chấm điểm, yêu cầu đề bài, bài mẫu và lời khuyên) dựa trên tài liệu chính thức của ielts.org và các trang luyện thi uy tín. Pipeline: convert → chunk → index → dense + BM25 → RRF → cross-encoder rerank (bonus) → fallback → generation có citation, kèm giao diện Streamlit và báo cáo đánh giá 4 metric.
 
 ## Thành viên
 
 | Họ tên | Mã học viên | Phần việc chính | Báo cáo cá nhân |
 | --- | --- | --- | --- |
-| Lê Chí Hùng | 2A202602863 | Task 2, 6, 7, 8, 9, golden dataset, Task 11, `RESULT.md` | [reports/2A202602863-LeChiHung.md](reports/2A202602863-LeChiHung.md) |
+| Lê Chí Hùng | 2A202602863 | Task 2, 6, 7, 8, 9, 12 (reranker), golden dataset, Task 11, `RESULT.md` | [reports/2A202602863-LeChiHung.md](reports/2A202602863-LeChiHung.md) |
 | Nguyễn Văn Hưởng | 2A202602743 | Task 1, 3, 4, 5, 10, Streamlit UI, test Task 5/10 | [reports/2A202602743-NguyenVanHuong.md](reports/2A202602743-NguyenVanHuong.md) |
 
 ## Dữ liệu
@@ -26,10 +26,11 @@ Chatbot hỏi đáp về **IELTS Writing** (band descriptors, tiêu chí chấm 
 | Dense search | `task5_semantic_search` | cosine similarity, `retrieval_method="dense"` |
 | BM25 | `task6_lexical_search` | BM25Okapi trên cùng corpus chunks, unigram + bigram |
 | RRF | `task7_reranking` | k = 60, chạy đúng một lần, `retrieval_method="hybrid"` |
+| Reranker (bonus) | `task12_cross_encoder_rerank` | cross-encoder `BAAI/bge-reranker-v2-m3` chấm lại 10 ứng viên RRF, cắt 5; bật bằng `RERANKER_ENABLED=1` |
 | Fallback | `task8_pageindex_vectorless` | PageIndex vectorless, `retrieval_method="pageindex"` |
-| Pipeline | `task9_retrieval_pipeline` | dense + BM25 → RRF → fallback khi cosine top-1 < 0.53 |
+| Pipeline | `task9_retrieval_pipeline` | dense + BM25 → RRF → (rerank) → fallback khi cosine top-1 < 0.53 |
 | Generation | `task10_generation` | OpenAI / Gemini / Anthropic, citation `[chunk-id]`, safe refusal |
-| Evaluation | `task11_evaluation` | ragas 0.4.3, 4 metric, A/B dense-only vs hybrid + RRF |
+| Evaluation | `task11_evaluation` | ragas 0.4.3, 4 metric, A/B dense-only vs hybrid + RRF, C = B + rerank |
 
 Threshold fallback 0.53 hiệu chỉnh bằng `python -m src.task9_retrieval_pipeline --calibrate` (in-domain min 0.59, out-of-domain max 0.47). Fallback dùng cosine score gốc của dense, không dùng RRF score.
 
@@ -46,7 +47,7 @@ python -m playwright install chromium
 cp .env.example .env
 ```
 
-Điền `OPENAI_API_KEY` (generator + evaluator) trong `.env`; không commit file này. Cấu hình mặc định của nhóm: `LLM_PROVIDER=openai`, `LLM_MODEL=gpt-4o-mini`, `EMBEDDING_PROVIDER=sentence_transformers`, `EMBEDDING_MODEL=BAAI/bge-m3`, `SCORE_THRESHOLD=0.53`. Trên macOS Intel đặt `EMBEDDING_DEVICE=cpu` và `EMBEDDING_MODEL_REVISION=refs/pr/130` (xem chú thích trong `.env.example`).
+Điền `OPENAI_API_KEY` (generator + evaluator) trong `.env`; không commit file này. Cấu hình mặc định của nhóm: `LLM_PROVIDER=openai`, `LLM_MODEL=gpt-4o-mini`, `EMBEDDING_PROVIDER=sentence_transformers`, `EMBEDDING_MODEL=BAAI/bge-m3`, `SCORE_THRESHOLD=0.53`, `RERANKER_ENABLED=1` (cross-encoder local, tải `bge-reranker-v2-m3` ~2.2 GB lần đầu; đặt `0` nếu máy yếu, chatbot quay về hybrid + RRF). Trên macOS Intel đặt `EMBEDDING_DEVICE=cpu` và `EMBEDDING_MODEL_REVISION=refs/pr/130` (xem chú thích trong `.env.example`).
 
 ```bash
 # 1. Thu thập và chuẩn hoá (dữ liệu đã có sẵn trong repo, chạy lại nếu muốn cập nhật)
@@ -68,7 +69,8 @@ streamlit run app.py
 # 5. Evaluation 4 metric + A/B (dense-only vs hybrid + RRF)
 python -m src.task11_evaluation            # kết quả: group_project/evaluation/results/
 python -m src.task11_evaluation --limit 3  # smoke test
-python -m src.task11_evaluation --config B # chỉ một config
+python -m src.task11_evaluation --config C # chỉ một config (C = bonus reranker)
+python -m src.task11_evaluation --skip-generate --skip-score  # dựng lại summary từ JSON đã chấm
 ```
 
 Evaluator dùng OpenAI (`EVAL_MODEL`, `EVAL_EMBEDDING_MODEL` trong `.env`, mặc định `gpt-4o-mini` và `text-embedding-3-small`) nên cần `OPENAI_API_KEY` kể cả khi generator dùng provider khác.
@@ -78,6 +80,7 @@ Thử nhanh từng bước retrieval từ dòng lệnh:
 ```bash
 python -m src.task6_lexical_search "band 7 lexical resource task 2"
 python -m src.task7_reranking "band 7 lexical resource task 2"
+python -m src.task12_cross_encoder_rerank "band 7 lexical resource task 2"   # so RRF vs cross-encoder
 python -m src.task9_retrieval_pipeline "How many words for Task 2?"
 python -m src.task9_retrieval_pipeline "How do I cook pho?"   # out-of-domain → fallback_tried=True
 ```
@@ -86,26 +89,27 @@ python -m src.task9_retrieval_pipeline "How do I cook pho?"   # out-of-domain �
 
 Golden dataset 20 câu (12 EN + 8 VI, 6 nhóm) tại `group_project/evaluation/golden_dataset.json`; 6 câu out-of-domain tại `out_of_domain.json`. Chi tiết, phân tích lỗi và đề xuất trong [group_project/evaluation/RESULT.md](group_project/evaluation/RESULT.md).
 
-| Metric | A: dense-only | B: hybrid + RRF | Delta B−A |
-| --- | ---: | ---: | ---: |
-| Faithfulness | 0.6833 | 0.7000 | +0.0167 |
-| Answer relevance | 0.6128 | 0.5802 | −0.0326 |
-| Context recall | 0.7881 | 0.8476 | +0.0595 |
-| Context precision | 0.7767 | 0.6160 | −0.1607 |
+| Metric | A: dense-only | B: hybrid + RRF | C: B + rerank (bonus) | Delta B−A | Delta C−B |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Faithfulness | 0.6833 | 0.7000 | 0.7536 | +0.0167 | +0.0536 |
+| Answer relevance | 0.6128 | 0.5802 | 0.6352 | −0.0326 | +0.0550 |
+| Context recall | 0.7881 | 0.8476 | 0.8393 | +0.0595 | −0.0083 |
+| Context precision | 0.7767 | 0.6160 | 0.8675 | −0.1607 | +0.2515 |
+| Refusal | 5/20 | 6/20 | 4/20 | | |
 
-Nhóm giữ Config B làm mặc định của chatbot vì recall và faithfulness cao hơn; precision giảm do BM25 kéo chunk boilerplate "Band 1" vào top-5 — nguyên nhân gốc là chunking tách heading band khỏi nội dung tiêu chí (xem recommendation #1 trong `RESULT.md`).
+Hybrid + RRF (B) tăng recall nhưng mất precision vì BM25 kéo chunk boilerplate "Band 1" vào top-5. Cross-encoder reranker (C, bonus) lấy lại precision (+0.25 so với B, vượt cả dense-only) mà recall gần như không đổi, nên **nhóm bật C làm mặc định của chatbot**. Đổi lại retrieval chậm hơn (median 113 ms → ~4.5 s trên CPU). 4 refusal còn lại là câu "Band N + tiêu chí" do chunking tách heading band khỏi nội dung (xem recommendation #1 trong `RESULT.md`).
 
 ## Cấu trúc repo
 
 ```
 app.py                         Streamlit chatbot: answer, citation, nguồn, retrieval method, score
-src/task1..task11_*.py         Pipeline theo từng task
+src/task1..task12_*.py         Pipeline theo từng task (task12 = reranker bonus)
 src/contracts.py               Schema Document / Chunk / SearchResult / GenerationResult + validator
 data/landing/                  Dữ liệu gốc (PDF, JSON crawl)
 data/standardized/             Markdown chuẩn hoá có front matter
 group_project/evaluation/      golden_dataset.json, out_of_domain.json, RESULT.md, results/
 reports/                       Báo cáo cá nhân (<student-id>-<short-name>.md), template INDIVIDUAL_REPORT.md
-tests/                         Contract, acceptance và test offline Task 5/10
+tests/                         Contract, acceptance, test offline Task 5/10 và Task 12
 docs/                          Module contracts, step-by-step, rubric, gợi ý đề tài
 ```
 
@@ -115,7 +119,8 @@ docs/                          Module contracts, step-by-step, rubric, gợi ý 
 pytest tests/test_contracts.py -q      # contract
 pytest tests/test_acceptance.py -q     # acceptance: dữ liệu, golden set, RESULT.md
 pytest tests/test_task5_task10.py -q   # offline, không cần mạng
-pytest -q                              # toàn bộ (30 tests)
+pytest tests/test_task12_reranker.py -q # offline, reranker + nhánh pipeline
+pytest -q                              # toàn bộ (36 tests)
 ```
 
 ## Tài liệu

@@ -7,20 +7,20 @@
 - evaluator_model: `gpt-4o-mini (+ text-embedding-3-small for answer_relevancy)`
 - generator_model: `openai/gpt-4o-mini`
 - embedding_model: `BAAI/bge-m3`
-- corpus_commit: `0fb3190`
+- corpus_commit: `0a63929`
 - golden_dataset_size: `20`
 - top_k: `5`
 - score_threshold: `0.53`
 
 ## Overall scores
 
-| Metric | Config A | Config B | Delta B−A |
-| --- | ---: | ---: | ---: |
-| faithfulness | 0.6833 | 0.7000 | +0.0167 |
-| answer_relevancy | 0.6128 | 0.5802 | -0.0326 |
-| context_recall | 0.7881 | 0.8476 | +0.0595 |
-| context_precision | 0.7767 | 0.6160 | -0.1607 |
-| **Average** | 0.7152 | 0.6860 | -0.0292 |
+| Metric | Config A | Config B | Config C | Delta B−A | Delta C−A |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| faithfulness | 0.6833 | 0.7000 | 0.7536 | +0.0167 | +0.0703 |
+| answer_relevancy | 0.6128 | 0.5802 | 0.6352 | -0.0326 | +0.0224 |
+| context_recall | 0.7881 | 0.8476 | 0.8393 | +0.0595 | +0.0512 |
+| context_precision | 0.7767 | 0.6160 | 0.8675 | -0.1607 | +0.0908 |
+| **Average** | 0.7152 | 0.6860 | 0.7739 | -0.0292 | +0.0587 |
 
 ## Latency and refusals
 
@@ -28,6 +28,7 @@
 | --- | ---: | ---: | ---: | ---: |
 | A (dense-only) | 5/20 | 0 | 867.7350 | 1425.8800 |
 | B (hybrid + RRF) | 6/20 | 0 | 113.4450 | 1342.4800 |
+| C (hybrid + RRF + rerank) | 4/20 | 0 | 5890.1950 | 1550.7950 |
 
 ## Per-question scores
 
@@ -73,3 +74,23 @@
 | g18 | B | 0.0000 | 0.0000 | 1.0000 | 0.3333 | yes | Điểm Writing tổng được tính như thế nào từ bốn tiêu chí? |
 | g19 | B | 1.0000 | 1.0000 | 0.2857 | 0.2000 |  | What are common mistakes candidates make in IELTS Writing Task 2? |
 | g20 | B | 1.0000 | 0.5874 | 1.0000 | 0.7556 |  | Tại sao trả lời không đầy đủ câu hỏi lại làm giảm điểm Task 2? |
+| g01 | C | 1.0000 | 1.0000 | 1.0000 | 1.0000 |  | What are the four criteria used to assess IELTS Writing Task 1? |
+| g02 | C | 1.0000 | 0.9776 | 1.0000 | 0.9167 |  | What is the difference between the criteria for Task 1 and Task 2 in IELTS Writing? |
+| g03 | C | 1.0000 | 0.8853 | 0.7500 | 1.0000 |  | Does Task 2 carry more weight than Task 1 in the IELTS Writing score? |
+| g04 | C | 1.0000 | 0.7184 | 1.0000 | 1.0000 |  | Bài IELTS Writing Task 2 cần viết tối thiểu bao nhiêu từ? |
+| g05 | C | 1.0000 | 0.9741 | 1.0000 | 1.0000 |  | How many words must I write for IELTS Writing Task 1? |
+| g06 | C | 1.0000 | 0.6354 | 1.0000 | 1.0000 |  | Nên phân bổ thời gian như thế nào giữa Task 1 và Task 2 trong bài thi Writing? |
+| g07 | C | 0.0000 | 0.0000 | 0.7500 | 0.2000 | yes | What does Band 7 require for Lexical Resource in Writing Task 2? |
+| g08 | C | 1.0000 | 0.4525 | 1.0000 | 1.0000 |  | Describe the Task Response descriptor for Band 9 in Writing Task 2. |
+| g09 | C | 0.0000 | 0.0000 | 1.0000 | 0.8056 | yes | Tiêu chí Coherence and Cohesion ở Band 6 của Writing Task 1 yêu cầu gì? |
+| g10 | C | 0.0000 | 0.0000 | 0.0000 | 0.4778 | yes | What characterises Grammatical Range and Accuracy at Band 5 in Writing Task 2? |
+| g11 | C | 1.0000 | 0.9106 | 1.0000 | 1.0000 |  | In Writing Task 1 at Band 8, what does Task Achievement require for the Academic test? |
+| g12 | C | 0.5000 | 0.4227 | 1.0000 | 0.9500 |  | Bài viết Task 2 có 20 từ trở xuống sẽ được chấm band mấy? |
+| g13 | C | 0.0000 | 0.0000 | 1.0000 | 0.0000 | yes | Compare Lexical Resource at Band 8 and Band 9 for Writing Task 1. |
+| g14 | C | 1.0000 | 0.9826 | 1.0000 | 1.0000 |  | What does the Band 4 Task Achievement descriptor say about General Training letters? |
+| g15 | C | 1.0000 | 0.7712 | 0.0000 | 1.0000 |  | Tiêu chí Task Response đánh giá những gì trong Writing Task 2? |
+| g16 | C | 1.0000 | 0.9464 | 1.0000 | 1.0000 |  | Can I use bullet points in my IELTS Writing answer? |
+| g17 | C | 1.0000 | 0.9667 | 1.0000 | 1.0000 |  | What kind of task is Academic Writing Task 1? |
+| g18 | C | 1.0000 | 0.4879 | 1.0000 | 1.0000 |  | Điểm Writing tổng được tính như thế nào từ bốn tiêu chí? |
+| g19 | C | 0.5714 | 0.9952 | 0.2857 | 1.0000 |  | What are common mistakes candidates make in IELTS Writing Task 2? |
+| g20 | C | 1.0000 | 0.5780 | 1.0000 | 1.0000 |  | Tại sao trả lời không đầy đủ câu hỏi lại làm giảm điểm Task 2? |

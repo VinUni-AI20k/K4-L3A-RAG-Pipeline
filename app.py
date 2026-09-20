@@ -1,6 +1,7 @@
 import streamlit as st
 from dotenv import load_dotenv
 
+from src.task9_retrieval_pipeline import RERANKER_ENABLED
 from src.task10_generation import generate_with_citation
 
 
@@ -40,6 +41,11 @@ with st.sidebar:
     st.title("RAG Chatbot")
     st.caption("Hỏi đáp dựa trên bộ tài liệu đã lập chỉ mục.")
     top_k = st.slider("Số chunks", 3, 10, 5)
+    st.caption(
+        "Retrieval: dense + BM25 → RRF"
+        + (" → cross-encoder rerank" if RERANKER_ENABLED else "")
+        + " → PageIndex fallback"
+    )
 
 st.title("RAG Chatbot")
 st.caption("Nhập câu hỏi để nhận câu trả lời kèm citation và nguồn kiểm chứng.")

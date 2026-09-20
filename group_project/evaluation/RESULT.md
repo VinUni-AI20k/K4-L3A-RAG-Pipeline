@@ -9,31 +9,32 @@
 | Evaluator model                    | OpenAI `gpt-4o-mini` (judge) + `text-embedding-3-small` (cho answer relevancy) |
 | Generator model                    | OpenAI `gpt-4o-mini`, temperature 0.3, top_p 0.9, prompt trong `src/task10_generation.py` |
 | Embedding model                    | `BAAI/bge-m3` (sentence-transformers, CPU), ChromaDB cosine, 985 chunks |
-| Corpus version/commit              | `0fb3190` (5 PDF legal + 10 bài news, chuẩn hoá Markdown) |
+| Corpus version/commit              | `0fb3190` (5 PDF legal + 10 bài news, chuẩn hoá Markdown); config C chạy tại `0a63929`, cùng corpus và index |
 | Golden dataset size                | 20 câu (`golden_dataset.json`), 12 tiếng Anh + 8 tiếng Việt, 6 nhóm: criteria, requirements, scoring, band_descriptor (8 câu), task_format, advice |
-| `top_k`                            | 5 (RRF lấy 10 ứng viên mỗi nhánh rồi cắt còn 5) |
+| `top_k`                            | 5 (RRF lấy 10 ứng viên mỗi nhánh rồi cắt còn 5; config C giữ 10 sau RRF rồi cross-encoder cắt còn 5) |
 | Fallback threshold and calibration | Cosine dense top-1 ≥ 0.53 thì dùng hybrid, dưới thì thử PageIndex. Hiệu chỉnh bằng 6 query in-domain (min 0.5907) và 6 query out-of-domain (max 0.4714), chọn giữa khoảng trống. Trong run này **0/20** câu golden rơi xuống fallback (dense top-1 thấp nhất 0.631). |
 
-Số liệu chi tiết từng câu, context đã lấy, latency và câu trả lời nằm trong `results/config_A.json`, `results/config_B.json`, tổng hợp ở `results/summary.md`. Chạy lại bằng `python -m src.task11_evaluation`.
+Số liệu chi tiết từng câu, context đã lấy, latency và câu trả lời nằm trong `results/config_A.json`, `results/config_B.json`, `results/config_C.json`, tổng hợp ở `results/summary.md`. Chạy lại bằng `python -m src.task11_evaluation` (A+B+C) hoặc `--config C`.
 
 ## Configurations
 
 - **Config A — dense-only:** `semantic_search(query, top_k=10)` bằng bge-m3 trên ChromaDB, cắt còn 5 chunk đầu theo cosine; không chạy BM25, không RRF (`retrieve_detailed(..., use_reranking=False)`).
-- **Config B — hybrid + RRF:** `semantic_search` + `lexical_search` (BM25Okapi trên cùng 985 chunk), mỗi nhánh 10 ứng viên, gộp bằng `rerank_rrf` (k=60) đúng một lần, lấy 5 chunk đầu (`use_reranking=True`). Đây là cấu hình mặc định của chatbot.
+- **Config B — hybrid + RRF:** `semantic_search` + `lexical_search` (BM25Okapi trên cùng 985 chunk), mỗi nhánh 10 ứng viên, gộp bằng `rerank_rrf` (k=60) đúng một lần, lấy 5 chunk đầu (`use_reranking=True`). Đây là so sánh A/B bắt buộc.
+- **Config C — hybrid + RRF + rerank (bonus):** như B nhưng RRF giữ 10 ứng viên, cross-encoder `BAAI/bge-reranker-v2-m3` (`src/task12_cross_encoder_rerank.py`, chạy CPU) chấm lại cặp (query, chunk) rồi cắt còn 5 (`use_cross_encoder=True`). Cross-encoder chỉ sắp xếp lại danh sách RRF, không thêm ứng viên; fallback vẫn quyết định bằng cosine dense trước khi rerank. **Đây là cấu hình mặc định của chatbot** (`RERANKER_ENABLED=1`).
 
-Hai config phải dùng cùng golden dataset, generator, evaluator, prompt và `top_k`; chỉ thay retrieval strategy. Cả hai đi qua cùng ngưỡng fallback và cùng bước reorder + citation check trong `generate_from_chunks`.
+Các config phải dùng cùng golden dataset, generator, evaluator, prompt và `top_k`; chỉ thay retrieval strategy. Tất cả đi qua cùng ngưỡng fallback và cùng bước reorder + citation check trong `generate_from_chunks`.
 
 ## Overall scores
 
-| Metric            | Config A | Config B | Delta B−A |
-| ----------------- | -------: | -------: | --------: |
-| Faithfulness      |   0.6833 |   0.7000 |   +0.0167 |
-| Answer relevance  |   0.6128 |   0.5802 |   −0.0326 |
-| Context recall    |   0.7881 |   0.8476 |   +0.0595 |
-| Context precision |   0.7767 |   0.6160 |   −0.1607 |
-| **Average**       |   0.7152 |   0.6860 |   −0.0292 |
+| Metric            | Config A | Config B | Config C (bonus) | Delta B−A | Delta C−B |
+| ----------------- | -------: | -------: | ---------------: | --------: | --------: |
+| Faithfulness      |   0.6833 |   0.7000 |           0.7536 |   +0.0167 |   +0.0536 |
+| Answer relevance  |   0.6128 |   0.5802 |           0.6352 |   −0.0326 |   +0.0550 |
+| Context recall    |   0.7881 |   0.8476 |           0.8393 |   +0.0595 |   −0.0083 |
+| Context precision |   0.7767 |   0.6160 |           0.8675 |   −0.1607 |   +0.2515 |
+| **Average**       |   0.7152 |   0.6860 |           0.7739 |   −0.0292 |   +0.0879 |
 
-Ghi chú cách đọc: safe refusal được chấm faithfulness = 0 và relevance = 0 (câu trả lời không chứa nội dung), nên hai metric này bị kéo xuống trực tiếp bởi số câu refusal: A 5/20, B 6/20. Nếu chỉ tính 14 câu cả hai config đều trả lời, faithfulness A = 0.905, B = 1.000; precision A = 0.931, B = 0.747.
+Ghi chú cách đọc: safe refusal được chấm faithfulness = 0 và relevance = 0 (câu trả lời không chứa nội dung), nên hai metric này bị kéo xuống trực tiếp bởi số câu refusal: A 5/20, B 6/20, C 4/20. Nếu chỉ tính các câu có trả lời, faithfulness A = 0.911 (15 câu), B = 1.000 (14 câu), C = 0.942 (16 câu); precision A = 0.923, B = 0.747, C = 0.992.
 
 ## A/B comparison
 
@@ -59,11 +60,12 @@ Các câu g07, g09, g10 (band descriptor, refusal ở cả hai config) có cùng
 | Priority | Action | Evidence from failure analysis | Expected impact | How to verify |
 | -------: | ------ | ------------------------------ | --------------- | ------------- |
 |        1 | Chunking giữ heading context: khi tách `ielts-writing-band-descriptors.md`, prepend heading cha (`Writing Task 1 — Band 8`) vào mỗi chunk `### <criterion>` (hoặc chunk theo cặp band × criterion). | 4/6 refusal (g07, g09, g10, g13) là câu hỏi "Band N + tiêu chí" mà top-5 không có chunk đúng; chunk lấy được là Band 1 vì mọi chunk band đều thiếu số band. | Recall của nhóm band_descriptor (8 câu, hiện 0.77 ở B, 4/8 refusal) lên >0.9; refusal toàn bộ golden set 6 → ≤2. | Re-index, chạy `python -m src.task11_evaluation --config B`; so recall và refusal trên g07/g09/g10/g13. |
-|        2 | Thêm reranker (bge-reranker hoặc Jina) sau RRF: lấy 10 ứng viên hybrid, rerank cross-encoder, cắt 5. | Precision B thấp hơn A 0.16 do BM25 đưa chunk khớp từ khoá nhưng không liên quan (g08, g17, g05); RRF chỉ gộp thứ hạng, không nhìn nội dung. | Precision B lên ngang A (~0.78) mà vẫn giữ recall của hybrid. | Chạy A/B thứ ba "hybrid + RRF + rerank" cùng golden set; precision tăng, recall không giảm. |
+|        2 | **Đã làm (Config C, mục Bonus experiments).** Thêm reranker (bge-reranker hoặc Jina) sau RRF: lấy 10 ứng viên hybrid, rerank cross-encoder, cắt 5. | Precision B thấp hơn A 0.16 do BM25 đưa chunk khớp từ khoá nhưng không liên quan (g08, g17, g05); RRF chỉ gộp thứ hạng, không nhìn nội dung. | Precision B lên ngang A (~0.78) mà vẫn giữ recall của hybrid. | Đã chạy: precision 0.616 → 0.868 (vượt A 0.777), recall 0.848 → 0.839 (−0.008). Kết luận đúng với dự đoán. |
 |        3 | Ổn định generation: temperature 0 cho generator và cho phép LLM trả lời khi context đủ nhưng citation lệch format (đã có `normalize_citations`); log câu trả lời thô trước khi refusal để phân loại refusal thật/giả. | g18 (B) refusal dù recall 1.0; cùng input chạy 6 lần thì 2 lần citation sai format, 1 lần refusal. | Loại bỏ refusal giả do generation; faithfulness B ≥ 0.75. | Chạy g18 và 5 câu refusal 5 lần mỗi câu, tỉ lệ refusal trên câu có context đúng phải = 0. |
 
 ## Bonus experiments
 
 | Experiment | Baseline | Metric delta | Latency/cost delta | Conclusion |
 | ---------- | -------- | -----------: | -----------------: | ---------- |
-| Không thực hiện | — | — | — | Nhóm ưu tiên hoàn thiện pipeline bắt buộc và A/B; PageIndex fallback đã tích hợp nhưng không kích hoạt trên golden set (0/20) nên chưa đo được. |
+| Reranker cross-encoder `bge-reranker-v2-m3` sau RRF (Config C, `src/task12_cross_encoder_rerank.py`) | Config B (hybrid + RRF) | Precision +0.2515 (0.616 → 0.868), faithfulness +0.054, relevance +0.055, recall −0.008; average +0.088 (0.686 → 0.774), cao nhất trong 3 config. Refusal 6 → 4: g16 (bullet points) và g18 (cách tính điểm) từ refusal thành trả lời đúng vì cross-encoder đẩy chunk trả lời lên top-5 (g16 precision 0.00 → 1.00, g18 0.33 → 1.00). Precision tăng ở 15/20 câu, chỉ giảm ở g07 (0.33 → 0.20). | Retrieval median 113 ms → 4 471 ms (chạy CPU macOS Intel, 10 cặp query–chunk mỗi câu; lần đầu thêm ~5 s load model). Không tốn API vì model local; generation không đổi. | **Reranker chứng minh cải thiện so với RRF** trên cùng golden set, đúng recommendation #2 ở trên: lấy lại precision mà hybrid đánh mất mà không giảm recall đáng kể. Nhóm bật mặc định cho chatbot (`RERANKER_ENABLED=1`). 4 refusal còn lại (g07, g09, g10, g13) vẫn là câu "Band N + tiêu chí" — reranker không cứu được vì chunk đúng không có trong 10 ứng viên RRF (lỗi chunking, recommendation #1). |
+| PageIndex fallback | — | — | — | Đã tích hợp (Task 8) nhưng không kích hoạt trên golden set (0/20, dense top-1 thấp nhất 0.631 > 0.53) nên chưa đo được. |
