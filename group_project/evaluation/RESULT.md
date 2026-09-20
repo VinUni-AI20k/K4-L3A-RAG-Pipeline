@@ -1,6 +1,6 @@
 # Báo cáo đánh giá hệ thống RAG (Chatbot Du lịch Việt Nam)
 
-## 1. Kết quả trung bình (A/B Testing)
+## 1. Overall scores và A/B comparison
 
 So sánh giữa hai cấu hình:
 - **A_dense_only**: Truy hồi dựa trên vector (Dense Retrieval)
@@ -17,7 +17,7 @@ So sánh giữa hai cấu hình:
 **Nhận xét:**
 Cấu hình Hybrid + RRF mang lại hiệu quả vượt trội trên tất cả các thang đo. Độ trúng ngữ cảnh (context_recall) và độ chính xác (context_precision) tăng mạnh hơn 10% nhờ việc kết hợp từ khóa (BM25) với tìm kiếm ngữ nghĩa, đặc biệt là với các câu hỏi về chính sách và tên địa danh cụ thể. Tuy nhiên, thời gian truy hồi trung bình (latency) tăng khoảng 400ms do phải chạy thêm một pipeline BM25 và rank lại kết quả.
 
-## 2. Các câu trả lời kém nhất (Worst Performers)
+## 2. Worst performers
 
 Từ số liệu `results_raw.json` của cấu hình tốt nhất (Hybrid), dưới đây là 3 trường hợp hệ thống có điểm số thấp nhất:
 
@@ -33,7 +33,7 @@ Từ số liệu `results_raw.json` của cấu hình tốt nhất (Hybrid), dư
    - *Vấn đề*: Điểm `faithfulness` thấp (0.85).
    - *Nguyên nhân*: Mô hình sinh văn bản (LLM) có khuynh hướng tự bổ sung thêm các loại rau sống hoặc gia vị (nhờ kiến thức có sẵn của mô hình) thay vì chỉ bám sát hoàn toàn vào context do RAG cung cấp.
 
-## 3. Khuyến nghị cải tiến
+## 3. Recommendations
 
 - **Tối ưu Chunking cho tài liệu Luật**: Cần sử dụng phương pháp băm văn bản dựa trên cấu trúc (Structure-Aware Chunking), ví dụ băm theo Điều/Khoản, thay vì băm theo số lượng ký tự như hiện tại.
 - **Hyde (Hypothetical Document Embeddings)**: Để giải quyết các query ngắn mập mờ (như tên địa danh), có thể tích hợp thuật toán Hyde để LLM sinh câu trả lời giả định trước khi truy hồi.
