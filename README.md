@@ -41,7 +41,13 @@ pytest -q
 
 # 3. Chạy sản phẩm
 streamlit run app.py
+
+# 4. Evaluation 4 metric + A/B (dense-only vs hybrid+RRF)
+python -m src.task11_evaluation            # kết quả: group_project/evaluation/results/
+python -m src.task11_evaluation --limit 3  # smoke test
 ```
+
+Evaluator dùng OpenAI (`EVAL_MODEL`, `EVAL_EMBEDDING_MODEL` trong `.env`, mặc định `gpt-4o-mini` và `text-embedding-3-small`) nên cần `OPENAI_API_KEY` kể cả khi generator dùng provider khác.
 
 ## Lộ trình 3 giờ
 
@@ -98,13 +104,12 @@ python -m src.task10_generation
 streamlit run app.py
 ```
 
-Đặt `LLM_PROVIDER`, `LLM_MODEL` và API key của cùng provider trong `.env`. Model embedding `BAAI/bge-m3` cần được tải lần đầu. Corpus tải từ các URL trong Task 1–2 và index Chroma được tạo trên máy; chúng chưa nằm trong Git. Do nội dung trang web có thể thay đổi, kết quả chạy lại có thể khác lần đánh giá ngày 2026-09-20.
+Đặt `LLM_PROVIDER`, `LLM_MODEL` và API key của cùng provider trong `.env`. Model embedding `BAAI/bge-m3` cần được tải lần đầu. Corpus đã có trong Git; index Chroma được tạo trên máy. Do nội dung trang web có thể thay đổi, kết quả chạy lại sau khi thu thập dữ liệu có thể khác lần đánh giá ngày 2026-09-20.
 
-Để chạy so sánh A/B trên 15 câu trong `group_project/evaluation/golden_dataset.json`:
+Để chạy so sánh A/B trên 20 câu trong `group_project/evaluation/golden_dataset.json`:
 
 ```bash
-python -m group_project.evaluation.run_evaluation --generate
-python -m group_project.evaluation.run_evaluation --score
+python -m src.task11_evaluation
 ```
 
-Hai lệnh này gọi OpenAI cho câu trả lời và chấm bốn metric Ragas; kết quả chi tiết được lưu cục bộ trong `group_project/evaluation/run_results.json`, còn tổng hợp và phân tích nằm trong `group_project/evaluation/RESULT.md`. Chạy `python -m pytest -q` sau khi thu thập dữ liệu và index.
+Lệnh này dùng OpenAI để chấm bốn metric Ragas; kết quả chi tiết được lưu trong `group_project/evaluation/results/`, còn tổng hợp và phân tích nằm trong `group_project/evaluation/RESULT.md`. Chạy `python -m pytest -q` sau khi thu thập dữ liệu và index.

@@ -19,6 +19,12 @@ CHUNK_OVERLAP = 50
 CHUNKING_METHOD = "recursive"
 
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "BAAI/bge-m3")
+# Tuỳ chọn: git revision trên Hugging Face Hub. Máy có torch < 2.6 (macOS Intel)
+# không load được pytorch_model.bin, bge-m3 chỉ có safetensors ở refs/pr/130.
+EMBEDDING_MODEL_REVISION = os.getenv("EMBEDDING_MODEL_REVISION", "").strip() or None
+# Tuỳ chọn: cpu | mps | cuda. Để trống thì sentence-transformers tự chọn; GPU MPS
+# trên macOS Intel giới hạn ~6.7GB nên bge-m3 dễ out-of-memory, khi đó đặt cpu.
+EMBEDDING_DEVICE = os.getenv("EMBEDDING_DEVICE", "").strip() or None
 EMBEDDING_DIM = 1024  # Default BAAI/bge-m3 dimension.
 EMBED_BATCH_SIZE = 32
 INDEX_BATCH_SIZE = 100
@@ -30,7 +36,9 @@ COLLECTION_NAME = "rag_documents"
 def _local_model():
     from sentence_transformers import SentenceTransformer
 
-    return SentenceTransformer(EMBEDDING_MODEL)
+    return SentenceTransformer(
+        EMBEDDING_MODEL, revision=EMBEDDING_MODEL_REVISION, device=EMBEDDING_DEVICE
+    )
 
 
 def embed_texts(texts: list[str]) -> list[list[float]]:

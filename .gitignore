@@ -57,3 +57,6 @@ group_project/evaluation/run_results.json
 # OS
 .DS_Store
 Thumbs.db
+
+# Vector index (tạo lại bằng python -m src.task4_chunking_indexing)
+chroma_db/

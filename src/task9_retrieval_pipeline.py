@@ -13,8 +13,13 @@ trong [0, 1] và phản ánh độ gần ngữ nghĩa; RRF chỉ là tổng ngh�
 luôn ~0.03 bất kể query có liên quan hay không.
 
 Threshold được hiệu chỉnh trên query in-domain và out-of-domain (xem
-calibrate_threshold bên dưới); đo trên corpus IELTS: in-domain top-1 thấp nhất
-~0.63, out-of-domain cao nhất ~0.41, nên mặc định 0.5 nằm giữa khoảng trống.
+calibrate_threshold bên dưới). Đo trên corpus IELTS (bge-m3, 985 chunks) với
+6 query hiệu chỉnh + 20 câu golden dataset và 6 câu out_of_domain.json:
+    - in-domain top-1 thấp nhất  0.5907 (golden: 0.6309)
+    - unrelated top-1 cao nhất   0.4714
+nên chọn 0.53 ở giữa khoảng trống (0.47, 0.59), mỗi phía dư ~0.06.
+Query near-domain (IELTS Listening/Speaking) đạt 0.65-0.73, không tách được
+bằng cosine; trường hợp này để Task 10 safe refusal xử lý.
 
 Chạy:
     python -m src.task9_retrieval_pipeline "câu hỏi"
@@ -43,7 +48,7 @@ def _threshold_from_env(default: float) -> float:
         return default
 
 
-SCORE_THRESHOLD = _threshold_from_env(0.5)
+SCORE_THRESHOLD = _threshold_from_env(0.53)
 DEFAULT_TOP_K = 5
 CANDIDATE_MULTIPLIER = 2   # lấy dư ứng viên cho RRF có chỗ gộp
 

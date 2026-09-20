@@ -1,0 +1,40 @@
+[
+  {
+    "id": "o01",
+    "category": "unrelated",
+    "question": "How do I cook Vietnamese pho at home?",
+    "expected_behaviour": "refuse"
+  },
+  {
+    "id": "o02",
+    "category": "unrelated",
+    "question": "What is the capital of Brazil?",
+    "expected_behaviour": "refuse"
+  },
+  {
+    "id": "o03",
+    "category": "unrelated",
+    "question": "How to fix a Python ImportError?",
+    "expected_behaviour": "refuse"
+  },
+  {
+    "id": "o04",
+    "category": "unrelated",
+    "question": "Thời điểm tốt nhất để đi Nhật ngắm hoa anh đào là khi nào?",
+    "expected_behaviour": "refuse"
+  },
+  {
+    "id": "o05",
+    "category": "near_domain",
+    "question": "What is the IELTS Speaking test format?",
+    "expected_behaviour": "refuse",
+    "note": "Cùng miền IELTS, khác kỹ năng. Dense cosine 0.65 vượt threshold nên phải dựa vào safe refusal của LLM."
+  },
+  {
+    "id": "o06",
+    "category": "near_domain",
+    "question": "Bài thi IELTS Listening có bao nhiêu phần?",
+    "expected_behaviour": "refuse",
+    "note": "Cùng miền IELTS, khác kỹ năng, tiếng Việt."
+  }
+]
