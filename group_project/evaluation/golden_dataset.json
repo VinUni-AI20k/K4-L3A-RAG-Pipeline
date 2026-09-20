@@ -1,92 +1,92 @@
 [
   {
-    "question": "Người mua có thể yêu cầu trả hàng/hoàn tiền trong thời hạn bao lâu sau khi nhận hàng?",
-    "expected_answer": "Trong vòng 15 ngày kể từ ngày nhận hàng đối với sản phẩm thuộc Shopee Mall, và 3 ngày đối với sản phẩm thường.",
-    "expected_context": "Người mua có thể yêu cầu trả hàng/hoàn tiền trong vòng 15 ngày kể từ ngày nhận hàng đối với sản phẩm thuộc Shopee Mall, và 3 ngày đối với sản phẩm thường.",
-    "source_file": "returns-refund-policy-shopee.md"
+    "question": "Sinh viên chương trình chuẩn của UET cần đạt điều kiện gì để được xét học bổng khuyến khích học tập?",
+    "expected_answer": "Kết quả học tập đạt loại Khá trở lên và rèn luyện đạt loại Khá trở lên.",
+    "expected_context": "Chương trình chuẩn: Kết quả học tập đạt loại Khá trở lên. Rèn luyện đạt loại Khá trở lên.",
+    "source_doc_id": "hoc-bong-uet-2025-2026"
   },
   {
-    "question": "Shopee hỗ trợ những phương thức thanh toán nào?",
-    "expected_answer": "Thẻ Tín dụng/Ghi nợ (Visa, Mastercard, JCB), Ví ShopeePay, Thanh toán khi nhận hàng (COD), và Trả góp qua thẻ tín dụng hoặc SPayLater.",
-    "expected_context": "Khách hàng có thể thanh toán bằng: 1. Thẻ Tín dụng/Ghi nợ (Visa, Mastercard, JCB). 2. Ví ShopeePay (ưu tiên với nhiều voucher giảm giá). 3. Thanh toán khi nhận hàng (COD). 4. Trả góp qua thẻ tín dụng hoặc SPayLater.",
-    "source_file": "payment-methods-shopee.md"
+    "question": "Quỹ học bổng khuyến khích học tập của UET được trích từ nguồn nào và bao nhiêu phần trăm?",
+    "expected_answer": "Thường được trích 8% từ nguồn thu học phí hệ chính quy.",
+    "expected_context": "Danh sách sinh viên nhận học bổng được lập dựa trên quỹ học bổng (thường được trích 8% từ nguồn thu học phí hệ chính quy), xét từ cao xuống thấp cho đến khi hết kinh phí.",
+    "source_doc_id": "hoc-bong-uet-2025-2026"
   },
   {
-    "question": "Người bán không được đăng bán những sản phẩm nào?",
-    "expected_answer": "Hàng giả, hàng nhái và hàng vi phạm bản quyền.",
-    "expected_context": "Không đăng bán hàng giả, hàng nhái, hàng vi phạm bản quyền.",
-    "source_file": "product-listing-regulations-shopee.md"
+    "question": "Sinh viên hệ chính quy của PTIT được mượn tối đa bao nhiêu cuốn sách và trong bao lâu?",
+    "expected_answer": "Tối đa 08 cuốn, thời hạn 01 học kỳ tương đương 150 ngày.",
+    "expected_context": "Sinh viên hệ chính quy (cao đẳng, đại học): Số lượng tối đa 08 cuốn. Thời hạn mượn 01 học kỳ, tương đương 150 ngày.",
+    "source_doc_id": "noi-quy-thu-vien-ptit-sinh-vien"
   },
   {
-    "question": "Làm thế nào để theo dõi đơn hàng?",
-    "expected_answer": "Vào mục Tôi > Đơn mua > Đang giao để xem chi tiết hành trình đơn hàng.",
-    "expected_context": "Để theo dõi đơn hàng của bạn trên Shopee, hãy vào mục Tôi > Đơn mua > Đang giao. Tại đây, bạn sẽ thấy chi tiết hành trình đơn hàng.",
-    "source_file": "article_01.md"
+    "question": "Cán bộ, giảng viên PTIT được mượn tối đa bao nhiêu cuốn và thời hạn bao lâu?",
+    "expected_answer": "Tối đa 07 cuốn, thời hạn 02 tháng tương đương 60 ngày.",
+    "expected_context": "Số lượng tối đa: 07 cuốn. Thời hạn mượn: 02 tháng, tương đương 60 ngày.",
+    "source_doc_id": "noi-quy-thu-vien-ptit-can-bo"
   },
   {
-    "question": "Có thể đổi phương thức thanh toán sau khi người bán xác nhận đơn không?",
-    "expected_answer": "Không. Chỉ đổi được trước khi người bán xác nhận đơn hàng; sau đó lựa chọn duy nhất là hủy đơn và đặt lại.",
-    "expected_context": "Bạn có thể thay đổi phương thức thanh toán trước khi người bán xác nhận đơn hàng. Nếu đơn hàng đã được người bán xác nhận, bạn không thể thay đổi phương thức thanh toán nữa; khi đó lựa chọn duy nhất là hủy đơn và đặt lại từ đầu.",
-    "source_file": "article_02.md"
+    "question": "Những loại tài liệu nào của thư viện PTIT không được mượn về nhà?",
+    "expected_answer": "Tài liệu có dấu đỏ, sách tra cứu, luận án, luận văn, báo và tạp chí — chỉ được đọc tại chỗ.",
+    "expected_context": "Tài liệu có dấu đỏ, sách tra cứu, luận án, luận văn, báo và tạp chí chỉ được đọc tại chỗ, không được mượn về nhà.",
+    "source_doc_id": "noi-quy-thu-vien-ptit-can-bo"
   },
   {
-    "question": "Cần cung cấp bằng chứng gì để yêu cầu hoàn tiền cho sản phẩm bị lỗi?",
-    "expected_answer": "Video mở hộp không cắt ghép, quay rõ mã vận đơn, toàn cảnh quá trình bóc hàng và tình trạng sản phẩm; có thể cần thêm hình ảnh rõ nét về lỗi.",
-    "expected_context": "Khi yêu cầu hoàn tiền cho sản phẩm bị lỗi hoặc thiếu, bạn cần cung cấp video mở hộp (unboxing video) không cắt ghép. Video phải quay rõ mã vận đơn, toàn cảnh quá trình bóc hàng và tình trạng thực tế của sản phẩm.",
-    "source_file": "article_03.md"
+    "question": "Tổng ngân sách thí điểm của chương trình Học bổng Jensen Huang là bao nhiêu và phân bổ ra sao?",
+    "expected_answer": "Tổng 1 triệu USD: 200.000 USD đầu tư trực tiếp cho sinh viên và 800.000 USD cung cấp tài nguyên GPU.",
+    "expected_context": "Tổng ngân sách thí điểm của chương trình là 1 triệu USD: 200.000 USD đầu tư trực tiếp cho sinh viên; 800.000 USD cung cấp tài nguyên GPU phục vụ các dự án nghiên cứu, khởi nghiệp và đổi mới sáng tạo trong lĩnh vực AI.",
+    "source_doc_id": "hoc-bong-jensen-huang-2025"
   },
   {
-    "question": "Mua hàng quốc tế thì bao lâu nhận được?",
-    "expected_answer": "Thường mất từ 7 đến 15 ngày làm việc, tùy thủ tục hải quan và thời tiết.",
-    "expected_context": "Đơn hàng từ quốc tế thường mất từ 7 đến 15 ngày làm việc để giao đến tay bạn, tùy thuộc vào thủ tục hải quan và tình hình thời tiết.",
-    "source_file": "article_04.md"
+    "question": "Học bổng Jensen Huang yêu cầu GPA và chứng chỉ ngoại ngữ tối thiểu bao nhiêu?",
+    "expected_answer": "GPA tối thiểu 3.5/4.0 (tương đương 8.75/10) và IELTS tối thiểu 6.0 hoặc TOEFL iBT từ 80 trở lên.",
+    "expected_context": "Học tập: Điểm trung bình (GPA) tối thiểu 3.5/4.0 (tương đương 8.75/10). Ngoại ngữ: IELTS tối thiểu 6.0 hoặc TOEFL iBT từ 80 trở lên.",
+    "source_doc_id": "hoc-bong-jensen-huang-2025"
   },
   {
-    "question": "Phải làm gì nếu ứng dụng báo đã giao nhưng chưa nhận được hàng?",
-    "expected_answer": "Khoan bấm Đã nhận hàng; liên hệ người thân, bảo vệ hoặc hàng xóm, gọi shipper, hoặc bấm Yêu cầu Trả hàng/Hoàn tiền với lý do chưa nhận được hàng trong vòng 24 giờ.",
-    "expected_context": "Nếu ứng dụng báo Đã giao nhưng bạn chưa nhận được hàng, hãy khoan bấm Đã nhận hàng. Bạn có thể gọi cho shipper qua số điện thoại trên hệ thống, hoặc bấm nút Yêu cầu Trả hàng/Hoàn tiền với lý do 'Chưa nhận được hàng' trong vòng 24 giờ.",
-    "source_file": "article_05.md"
+    "question": "Học bổng Sigma Gold hỗ trợ sinh viên những gì về tài chính?",
+    "expected_answer": "Hỗ trợ 100% học phí và cấp sinh hoạt phí lên tới 15.000.000 đồng/tháng, cấp 10 tháng mỗi năm học.",
+    "expected_context": "Hỗ trợ tài chính: Hỗ trợ 100% học phí và cấp sinh hoạt phí lên tới 15.000.000 đồng/tháng. Mỗi học kỳ được cấp 05 tháng, tương đương 10 tháng/năm học.",
+    "source_doc_id": "hoc-bong-sigma-gold-2026"
   },
   {
-    "question": "Thanh toán bằng thẻ tín dụng trên Shopee có an toàn không?",
-    "expected_answer": "Có. Mọi giao dịch qua thẻ đều được mã hóa và bảo mật theo tiêu chuẩn quốc tế.",
-    "expected_context": "Mọi giao dịch qua thẻ đều được mã hóa và bảo mật theo tiêu chuẩn quốc tế.",
-    "source_file": "payment-methods-shopee.md"
+    "question": "Bài luận nộp hồ sơ học bổng Sigma Gold có yêu cầu gì về hình thức?",
+    "expected_answer": "Độ dài không quá 04 trang A4, trình bày bằng LaTeX, nộp kèm tệp nguồn và bản PDF.",
+    "expected_context": "Bài luận: Trình bày về một định lý, khái niệm, ý tưởng hoặc ứng dụng Toán học mà sinh viên yêu thích (độ dài không quá 04 trang A4, trình bày bằng LaTeX, nộp kèm tệp nguồn và bản PDF).",
+    "source_doc_id": "hoc-bong-sigma-gold-2026"
   },
   {
-    "question": "Nếu người bán từ chối yêu cầu trả hàng thì ai giải quyết?",
-    "expected_answer": "Shopee sẽ đứng ra giải quyết tranh chấp dựa trên bằng chứng của cả hai bên.",
-    "expected_context": "Trong trường hợp người bán từ chối yêu cầu, Shopee sẽ đứng ra giải quyết tranh chấp dựa trên bằng chứng của cả hai bên.",
-    "source_file": "returns-refund-policy-shopee.md"
+    "question": "Học bổng FPTU Tuổi 18 trị giá bao nhiêu và yêu cầu điểm thi thế nào?",
+    "expected_answer": "Trị giá 180 triệu đồng/suất, trừ trực tiếp 20 triệu đồng mỗi học kỳ chuyên ngành trong 9 học kỳ; yêu cầu điểm tổ hợp 3 môn đạt từ 25 điểm trở lên.",
+    "expected_context": "Tiêu chí điểm: Điểm tổ hợp 3 môn (Toán + 2 môn bất kỳ) trong kỳ thi tốt nghiệp THPT năm 2024 đạt từ 25 điểm trở lên. Giá trị: 180 triệu đồng/suất, thực hiện bằng cách trừ trực tiếp 20 triệu đồng/học kỳ chuyên ngành (áp dụng cho 9 học kỳ).",
+    "source_doc_id": "hoc-bong-fpt-2024"
   },
   {
-    "question": "Shopee có hỗ trợ chuyển khoản ngân hàng trực tiếp cho người bán không?",
-    "expected_answer": "Không. Shopee không hỗ trợ thanh toán qua chuyển khoản ngân hàng trực tiếp cho người bán.",
-    "expected_context": "Shopee không hỗ trợ thanh toán qua chuyển khoản ngân hàng trực tiếp cho người bán.",
-    "source_file": "payment-methods-shopee.md"
+    "question": "Kỳ thi học bổng Đại học FPT có các mức học bổng nào?",
+    "expected_answer": "Đa dạng các mức 10%, 30%, 50%, 70% và 100% học phí toàn khóa học, tùy điểm số đạt được tại kỳ thi.",
+    "expected_context": "Mức học bổng: Đa dạng các mức 10%, 30%, 50%, 70% và 100% học phí toàn khóa học, tùy theo điểm số đạt được tại kỳ thi.",
+    "source_doc_id": "hoc-bong-fpt-2024"
   },
   {
-    "question": "Hình ảnh sản phẩm cần đáp ứng yêu cầu gì khi đăng bán?",
-    "expected_answer": "Phải rõ nét, không chứa thông tin liên hệ bên ngoài hoặc logo của sàn thương mại điện tử khác.",
-    "expected_context": "Hình ảnh sản phẩm phải rõ nét, không chứa thông tin liên hệ bên ngoài hoặc logo của sàn TMĐT khác.",
-    "source_file": "product-listing-regulations-shopee.md"
+    "question": "Học phí ngành Dược học tại Đại học Tôn Đức Thắng năm 2026 là bao nhiêu?",
+    "expected_answer": "68,46 triệu đồng/năm, cao hơn mức 31,26 – 36,59 triệu đồng/năm của chương trình tiêu chuẩn.",
+    "expected_context": "Chương trình tiêu chuẩn: Học phí trung bình dao động từ 31,26 – 36,59 triệu đồng/năm tùy ngành. Riêng ngành Dược học có mức học phí là 68,46 triệu đồng/năm.",
+    "source_doc_id": "hoc-bong-tdtu-2026"
   },
   {
-    "question": "Đơn hàng quốc tế giao trễ thì có được bồi thường không?",
-    "expected_answer": "Có. Hệ thống tự động bồi thường voucher hoặc Xu theo chính sách Đảm Bảo Giao Hàng, không cần gửi yêu cầu thủ công.",
-    "expected_context": "Nếu đơn hàng bị giao trễ quá thời gian dự kiến, hệ thống sẽ tự động bồi thường cho bạn một voucher hoặc Xu theo chính sách Đảm Bảo Giao Hàng mà không cần bạn phải gửi yêu cầu thủ công.",
-    "source_file": "article_04.md"
+    "question": "Năm 2026 Đại học Tôn Đức Thắng dành bao nhiêu tiền để cấp học bổng?",
+    "expected_answer": "Hơn 95 tỷ đồng.",
+    "expected_context": "Năm 2026, nhà trường dành hơn 95 tỷ đồng để cấp học bổng cho người học.",
+    "source_doc_id": "hoc-bong-tdtu-2026"
   },
   {
-    "question": "Người bán vi phạm quy định đăng bán sẽ bị xử lý thế nào?",
-    "expected_answer": "Bị khóa tài khoản hoặc xóa sản phẩm mà không cần báo trước.",
-    "expected_context": "Người bán vi phạm sẽ bị khóa tài khoản hoặc xóa sản phẩm mà không cần báo trước.",
-    "source_file": "product-listing-regulations-shopee.md"
+    "question": "Học bổng JAIF của VJU dành cho ai và bao gồm những gì?",
+    "expected_answer": "Dành cho công dân Campuchia, Lào và Myanmar, gồm 100% học phí (khoảng 110 triệu VND), phí nhập học, sinh hoạt phí 250 USD/tháng, vé máy bay và bảo hiểm y tế; có 10 suất.",
+    "expected_context": "JAIF Scholarship: Coverage 100% tuition fee (approximately 110 million VND), plus enrollment fee, admission fee, living expenses of 250 USD/month, airfare, and health insurance. Eligibility: nationals of Cambodia, Laos, and Myanmar. Quota: 10 awards.",
+    "source_doc_id": "hoc-bong-vju-2025"
   },
   {
-    "question": "Ví ShopeePay có ưu đãi gì khi thanh toán?",
-    "expected_answer": "ShopeePay được ưu tiên với nhiều voucher giảm giá.",
-    "expected_context": "Ví ShopeePay (ưu tiên với nhiều voucher giảm giá).",
-    "source_file": "payment-methods-shopee.md"
+    "question": "Học bổng khuyến khích học tập của Bách khoa Hà Nội chia làm mấy mức và tiêu chí ra sao?",
+    "expected_answer": "Ba mức: loại A cần GPA từ 3.6 và rèn luyện từ 90 (bằng 150% học phí), loại B cần GPA từ 3.2 và rèn luyện từ 80 (120% học phí), loại C cần GPA từ 2.5 và rèn luyện từ 65 (100% học phí).",
+    "expected_context": "Loại A: GPA từ 3.6 trở lên và điểm rèn luyện từ 90 trở lên — giá trị bằng 150% học phí. Loại B: GPA từ 3.2 trở lên và điểm rèn luyện từ 80 trở lên — giá trị bằng 120% học phí. Loại C: GPA từ 2.5 trở lên và điểm rèn luyện từ 65 trở lên — giá trị bằng 100% học phí.",
+    "source_doc_id": "ho-tro-tai-chinh-hust"
   }
 ]

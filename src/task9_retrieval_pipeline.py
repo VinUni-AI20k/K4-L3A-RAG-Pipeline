@@ -26,13 +26,13 @@ from .task8_pageindex_vectorless import pageindex_search
 load_dotenv()
 
 # Hiệu chỉnh trên corpus của nhóm với paraphrase-multilingual-MiniLM-L12-v2,
-# đo bằng 8 query in-domain và 8 query out-of-domain:
-#   in-domain      : 0.360 - 0.791
-#   out-of-domain  : 0.135 - 0.336
-# 0.35 là điểm duy nhất tách được hai vùng. Biên chỉ rộng 0.024 (0.360 so với
-# 0.336), nên khi mở rộng corpus phải đo lại bằng nhiều query OOD hơn trước
-# khi tin vào con số này. Đổi embedding model cũng phải đo lại từ đầu.
-SCORE_THRESHOLD = float(os.getenv("SCORE_THRESHOLD") or 0.35)
+# đo bằng 10 query in-domain và 8 query out-of-domain:
+#   in-domain      : 0.621 - 0.874
+#   out-of-domain  : 0.105 - 0.442
+# 0.53 nằm giữa hai vùng, cách mỗi bên khoảng 0.09. Khoảng trống rộng 0.18 này
+# là nhờ corpus đủ lớn (88 chunk) và đúng một miền chủ đề; bản corpus nhỏ
+# trước đó chỉ tách được 0.024. Đổi corpus hoặc embedding model phải đo lại.
+SCORE_THRESHOLD = float(os.getenv("SCORE_THRESHOLD") or 0.53)
 DEFAULT_TOP_K = 5
 
 

@@ -29,7 +29,8 @@ CHUNK_OVERLAP = 50
 CHUNKING_METHOD = "recursive"
 
 # paraphrase-multilingual-MiniLM-L12-v2 (384 chiều) thay cho bge-m3: nhẹ hơn
-# nhiều lần trên CPU nhưng vẫn hiểu tiếng Việt.
+# nhiều lần trên CPU nhưng vẫn hiểu tiếng Việt — bắt buộc vì corpus là văn bản
+# học bổng tiếng Việt.
 #
 # Đã thử all-MiniLM-L6-v2 (model tiếng Anh) và phải loại: trên corpus này nó
 # chấm query ngoài miền bằng tiếng Việt tới 0.58-0.69, chồng lấn hoàn toàn với
@@ -49,6 +50,18 @@ COLLECTION_NAME = "rag_documents"
 _MODEL = None
 
 _HEADING_PATTERN = re.compile(r"^#\s+(.+)$", re.MULTILINE)
+
+# Task 1 in khối nguồn lên đầu mỗi PDF và Task 3 in lên đầu mỗi bài news, để
+# người đọc truy ngược được URL. URL được tách ra metadata vì đó mới là chỗ của
+# nó theo contract (DocumentMetadata.url).
+#
+# Đã thử loại luôn khối nguồn khỏi text trước khi chunk — lập luận là nó chiếm
+# gần trọn chunk đầu và dense search chấm nó cao trong khi nó không trả lời được
+# câu nào. Nhưng đo bằng eval_pipeline thì cấu hình đó KÉM HƠN, nên giữ nguyên
+# text. Số liệu ở mục "Bonus experiments" trong group_project/evaluation/RESULT.md.
+_SOURCE_URL_PATTERN = re.compile(
+    r"^\s*(?:\*\*Source:\*\*|Nguồn:)\s*(\S+)", re.MULTILINE
+)
 
 
 def _get_sentence_transformer():
@@ -119,6 +132,12 @@ def _extract_title(content: str, fallback: str) -> str:
     return fallback
 
 
+def _extract_source_url(content: str) -> str | None:
+    """Lấy URL nguồn từ khối header để đưa vào metadata."""
+    match = _SOURCE_URL_PATTERN.search(content)
+    return match.group(1).strip() if match else None
+
+
 def load_documents() -> list[dict]:
     """Đọc Markdown và trả về danh sách Document."""
     documents: list[dict] = []
@@ -126,22 +145,23 @@ def load_documents() -> list[dict]:
         return documents
 
     for path in sorted(STANDARDIZED_DIR.rglob("*.md")):
-        content = path.read_text(encoding="utf-8")
-        if not content.strip():
+        raw = path.read_text(encoding="utf-8")
+        if not raw.strip():
             continue
-        # Chi xet phan duong dan ben trong data/standardized/, khong xet duong
-        # dan tuyet doi: mot thu muc cha ten "legal" se lam lech doc_type.
+        url = _extract_source_url(raw)
+        # Chỉ xét phần đường dẫn bên trong data/standardized/, không xét đường
+        # dẫn tuyệt đối: một thư mục cha tên "legal" sẽ làm lệch doc_type.
         relative = path.relative_to(STANDARDIZED_DIR)
         doc_type = "legal" if "legal" in relative.parts[:-1] else "news"
         documents.append(
             {
                 "id": relative.as_posix(),
-                "content": content,
+                "content": raw,
                 "metadata": {
                     "source": path.name,
-                    "title": _extract_title(content, path.stem),
+                    "title": _extract_title(raw, path.stem),
                     "doc_type": doc_type,
-                    "url": None,
+                    "url": url,
                 },
             }
         )

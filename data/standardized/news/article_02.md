@@ -1,9 +1,0 @@
-# Cách Đổi Phương Thức Thanh Toán
-
-**Source:** https://help.shopee.vn/portal/4/article/2
-
-**Crawled:** 2026-09-20T15:07:43.684847
-
----
-
-Bạn có thể thay đổi phương thức thanh toán trước khi người bán xác nhận đơn hàng. Vào trang **Chi tiết đơn hàng**, chọn **Đổi phương thức thanh toán** và chọn phương thức mong muốn (ví dụ: Ví ShopeePay, Thẻ tín dụng, hoặc Thanh toán khi nhận hàng). Xin lưu ý, nếu đơn hàng đã được người bán xác nhận, bạn không thể thay đổi phương thức thanh toán nữa; khi đó lựa chọn duy nhất là hủy đơn và đặt lại từ đầu.

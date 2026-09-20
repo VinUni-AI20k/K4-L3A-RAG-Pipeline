@@ -1,20 +1,32 @@
 # Day 8 — RAG Pipeline
 
-Chatbot RAG trả lời câu hỏi hỗ trợ khách hàng trên sàn thương mại điện tử:
-chính sách trả hàng/hoàn tiền, phương thức thanh toán, quy định đăng bán và các
-hướng dẫn thường gặp cho người mua.
+Chatbot RAG tra cứu **dịch vụ đại học**: điều kiện và mức học bổng, chính sách
+hỗ trợ tài chính, học phí và nội quy mượn tài liệu thư viện.
 
 ## Nguồn dữ liệu
 
-Trang chính sách và help center của các sàn TMĐT Việt Nam đều đứng sau WAF/Captcha
-và cấm crawler trong `robots.txt`. Bài lab không cho phép vượt WAF, nên nhóm dựng
-một **corpus synthetic**: 3 tài liệu chính sách (PDF, sinh bằng `fpdf2`) và 5 bài
-hướng dẫn (JSON), tự soạn theo đúng cấu trúc và văn phong của tài liệu thật.
+Corpus gồm **10 tài liệu do nhóm thu thập từ cổng thông tin chính thức** của các
+trường đại học và quỹ học bổng. Mỗi tài liệu có `source_url`, `retrieved_at`,
+`document_version` và `license_or_permission`, đối chiếu 1-1 trong
+[`data/sources/sources.csv`](data/sources/sources.csv).
 
-Toàn bộ nội dung corpus là do nhóm viết, **không phải trích dẫn nguyên văn từ
-Shopee**. Nội dung nằm trong `src/task1_collect_legal_docs.py` và
-`src/task2_crawl_news.py`; đổi sang nguồn thật chỉ cần thay phần dữ liệu ở hai
-file đó, phần còn lại của pipeline giữ nguyên.
+| Nhóm | Số lượng | Nguồn |
+| ---- | -------: | ----- |
+| Quy chế, quy định (`data/landing/legal/`) | 5 | PTIT (nội quy thư viện, 2 bản), FPT, UET, TDTU |
+| Thông báo học bổng (`data/landing/news/`) | 5 | HUST, VIASM, IU-VNUHCM, LSTF, VJU |
+
+Tổng ~42.000 ký tự, 88 chunk sau khi chunking.
+
+Các cổng thông tin này publish dưới dạng HTML chứ không phát hành PDF, nên Task 1
+render các văn bản quy chế ra PDF trong `data/landing/legal/` để pipeline có định
+dạng đồng nhất. **Nội dung là nguyên văn nguồn đã thu thập, PDF chỉ là vật chứa
+local**; mỗi PDF đều in kèm URL gốc, ngày thu thập và phiên bản ở đầu tài liệu
+nên người chấm truy ngược được.
+
+Task 2 đọc lại bản đã thu thập trong `data/sources/` thay vì crawl lại mỗi lần
+chạy, vì crawl lại làm kết quả đổi giữa các lần chạy và nhiều trang nguồn đã thay
+đổi so với `retrieved_at`. Muốn crawl trực tiếp: `pip install -e ".[crawl]"` rồi
+bật lại nhánh Crawl4AI trong `crawl_article()`.
 
 ## Sản phẩm phải nộp
 
@@ -39,12 +51,10 @@ cp .env.example .env
 Điền API key cần dùng trong `.env`; không commit file này.
 
 > `crawl4ai` đã được chuyển sang extra `[crawl]` vì nó kéo theo toolchain Rust và
-> fail khi cài trên khá nhiều máy. Pipeline không cần nó (corpus là synthetic).
-> Ai muốn crawl nguồn thật: `pip install -e ".[crawl]"` rồi
-> `python -m playwright install chromium`.
+> fail khi cài trên khá nhiều máy. Pipeline không cần nó để chạy.
 
 ```bash
-# 1. Thu thập và chuẩn hoá
+# 1. Dựng corpus từ nguồn đã thu thập và chuẩn hoá
 python -m src.task1_collect_legal_docs
 python -m src.task2_crawl_news
 python -m src.task3_convert_markdown
@@ -75,19 +85,23 @@ python -m group_project.evaluation.eval_pipeline
 ### Vì sao không dùng `all-MiniLM-L6-v2`
 
 Nhóm thử trước bằng `all-MiniLM-L6-v2` (model tiếng Anh) và phải loại. Đo trên
-corpus này, nó chấm query **ngoài miền bằng tiếng Việt** tới 0.58–0.69, chồng lấn
-hoàn toàn với query trong miền (0.63–0.84) — tức là nó đang nhận ra "đây là tiếng
-Việt" chứ không hiểu nội dung, và không thể đặt threshold fallback ở đâu cả.
+corpus tiếng Việt, nó chấm query **ngoài miền** ngang với query trong miền — tức
+là nó chỉ nhận ra "đây là tiếng Việt" chứ không hiểu nội dung, nên không thể đặt
+ngưỡng fallback ở đâu cả.
 
-Bản multilingual tách được hai vùng:
+### Hiệu chỉnh `SCORE_THRESHOLD`
 
-| | dải cosine của chunk tốt nhất |
+Đo cosine của chunk tốt nhất, trên chính corpus này:
+
+| | dải cosine |
 | --- | --- |
-| 8 query in-domain | 0.360 – 0.791 |
-| 8 query out-of-domain | 0.135 – 0.336 |
+| 10 query in-domain | 0.621 – 0.874 |
+| 8 query out-of-domain | 0.105 – 0.442 |
 
-`SCORE_THRESHOLD=0.35` là điểm duy nhất nằm giữa. Biên chỉ rộng 0.024 (0.360 so
-với 0.336), nên khi mở rộng corpus phải đo lại bằng nhiều query OOD hơn.
+`SCORE_THRESHOLD = 0.53` nằm giữa, cách mỗi bên khoảng 0.09. Khoảng trống rộng
+0.18 này có được là nhờ corpus đủ lớn (88 chunk) và tập trung đúng một miền chủ
+đề — một bản corpus nhỏ hơn thử trước đó chỉ tách được 0.024. Đổi corpus hoặc
+embedding model thì phải đo lại.
 
 ## Lưu ý quy tắc để có code quality tốt:
 
@@ -127,6 +141,10 @@ nằm ngoài package `src`, chạy `set PYTHONIOENCODING=utf-8` trước.
 **`400 Invalid n value` khi chạy evaluation** — Ragas mặc định gọi metric
 `answer_relevancy` với `n=3`, nhưng DeepSeek và nhiều endpoint OpenAI-compatible
 khác chỉ nhận `n=1`. `eval_pipeline.py` đã đặt `strictness=1` để tránh lỗi này.
+
+**`FileNotFoundError` về font khi chạy Task 1** — cần một file `.ttf` Unicode để
+render tiếng Việt. Thêm đường dẫn font của máy bạn vào `FONT_CANDIDATES` trong
+`src/task1_collect_legal_docs.py`.
 
 **Đổi embedding model** — phải xoá `chroma_db/` rồi chạy lại
 `python -m src.task4_chunking_indexing`, vì dimension và không gian vector không

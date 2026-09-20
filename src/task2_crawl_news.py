@@ -1,124 +1,102 @@
 """
-Task 2 — Thu thập bài viết hướng dẫn / hỗ trợ khách hàng.
+Task 2 — Thu thập bài viết/thông báo công khai.
 
-Cùng lý do với Task 1: help center của sàn TMĐT chặn crawler, nên nhóm dùng bộ
-bài viết SYNTHETIC mô phỏng các câu hỏi thường gặp của người mua. Mỗi bài được
-lưu thành một JSON trong data/landing/news/ với đủ metadata mà Task 3 cần.
+Năm thông báo học bổng còn lại trong data/sources/ (phần không mang tính quy
+chế, do Task 1 xử lý) được ghi ra JSON trong data/landing/news/ kèm đủ metadata
+mà Task 3 cần: url, title, date_crawled, content_markdown.
 
-Nếu sau này nhóm đổi sang nguồn thật, chỉ cần điền ARTICLE_URLS và bật lại
-nhánh crawl trong crawl_article(); phần ghi file phía dưới giữ nguyên.
+Nội dung đã được nhóm thu thập sẵn từ các URL trong data/sources/sources.csv,
+nên Task 2 đọc lại từ đó thay vì crawl lại mỗi lần chạy — crawl lại vừa chậm
+vừa làm kết quả thay đổi giữa các lần chạy, và nhiều trang nguồn đã đổi nội
+dung so với `retrieved_at` ghi trong sources.csv.
+
+Muốn crawl trực tiếp: cài `pip install -e ".[crawl]"`, `python -m playwright
+install chromium`, rồi bật lại nhánh Crawl4AI trong crawl_article().
 """
 
 import asyncio
 import json
-from datetime import datetime
 from pathlib import Path
 
+from .task1_collect_legal_docs import (
+    LEGAL_DOC_IDS,
+    load_sources,
+    read_source_document,
+)
 
-DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
 
-# Để trống vì nhóm không crawl nguồn thật. Xem docstring ở trên.
-ARTICLE_URLS: list[str] = []
+ROOT = Path(__file__).parent.parent
+DATA_DIR = ROOT / "data" / "landing" / "news"
 
-ARTICLES = [
-    {
-        "url": "https://help.shopee.vn/portal/4/article/1",
-        "title": "Hướng Dẫn Theo Dõi Đơn Hàng",
-        "content_markdown": (
-            "Để theo dõi đơn hàng của bạn trên Shopee, hãy vào mục **Tôi** > "
-            "**Đơn mua** > **Đang giao**. Tại đây, bạn sẽ thấy chi tiết hành trình "
-            "đơn hàng, từ lúc người bán chuẩn bị hàng, giao cho đơn vị vận chuyển, "
-            "đến khi hàng được giao tới bạn. Trạng thái đơn hàng được cập nhật liên "
-            "tục theo thời gian thực. Nếu quá 3 ngày trạng thái không thay đổi, bạn "
-            "nên liên hệ người bán hoặc đơn vị vận chuyển để được kiểm tra lại."
-        ),
-    },
-    {
-        "url": "https://help.shopee.vn/portal/4/article/2",
-        "title": "Cách Đổi Phương Thức Thanh Toán",
-        "content_markdown": (
-            "Bạn có thể thay đổi phương thức thanh toán trước khi người bán xác nhận "
-            "đơn hàng. Vào trang **Chi tiết đơn hàng**, chọn **Đổi phương thức thanh "
-            "toán** và chọn phương thức mong muốn (ví dụ: Ví ShopeePay, Thẻ tín dụng, "
-            "hoặc Thanh toán khi nhận hàng). Xin lưu ý, nếu đơn hàng đã được người bán "
-            "xác nhận, bạn không thể thay đổi phương thức thanh toán nữa; khi đó lựa "
-            "chọn duy nhất là hủy đơn và đặt lại từ đầu."
-        ),
-    },
-    {
-        "url": "https://help.shopee.vn/portal/4/article/3",
-        "title": "Bằng Chứng Cần Thiết Để Hoàn Tiền",
-        "content_markdown": (
-            "Khi yêu cầu hoàn tiền cho sản phẩm bị lỗi hoặc thiếu, bạn cần cung cấp "
-            "**video mở hộp (unboxing video)** không cắt ghép. Video phải quay rõ mã "
-            "vận đơn, toàn cảnh quá trình bóc hàng và tình trạng thực tế của sản phẩm. "
-            "Hình ảnh rõ nét về lỗi sản phẩm cũng có thể được yêu cầu để hỗ trợ quá "
-            "trình đối soát nhanh chóng hơn. Thiếu video mở hộp là lý do từ chối phổ "
-            "biến nhất đối với các yêu cầu hoàn tiền hàng giá trị cao."
-        ),
-    },
-    {
-        "url": "https://help.shopee.vn/portal/4/article/4",
-        "title": "Mua Hàng Xuyên Biên Giới Giao Nhận Bao Lâu?",
-        "content_markdown": (
-            "Đơn hàng từ quốc tế thường mất từ **7 đến 15 ngày làm việc** để giao đến "
-            "tay bạn, tùy thuộc vào thủ tục hải quan và tình hình thời tiết. Bạn có "
-            "thể theo dõi mã vận đơn quốc tế ngay trên ứng dụng Shopee. Nếu đơn hàng "
-            "bị giao trễ quá thời gian dự kiến, hệ thống sẽ tự động bồi thường cho bạn "
-            "một voucher hoặc Xu theo chính sách Đảm Bảo Giao Hàng mà không cần bạn "
-            "phải gửi yêu cầu thủ công."
-        ),
-    },
-    {
-        "url": "https://help.shopee.vn/portal/4/article/5",
-        "title": "Làm Gì Khi Không Nhận Được Hàng Nhưng Báo Đã Giao?",
-        "content_markdown": (
-            "Nếu ứng dụng báo **Đã giao** nhưng bạn chưa nhận được hàng, hãy khoan bấm "
-            "*Đã nhận hàng*. Vui lòng liên hệ ngay với người thân, bảo vệ hoặc hàng "
-            "xóm để xem có ai nhận hộ không. Nếu vẫn không thấy, bạn có thể gọi cho "
-            "shipper qua số điện thoại trên hệ thống, hoặc bấm nút **Yêu cầu Trả "
-            "hàng/Hoàn tiền** với lý do 'Chưa nhận được hàng' trong vòng 24 giờ kể từ "
-            "khi đơn được đánh dấu đã giao thành công."
-        ),
-    },
-]
+
+def news_doc_ids() -> list[str]:
+    """Mọi tài liệu nguồn không thuộc nhóm quy chế của Task 1."""
+    return [
+        doc_id for doc_id in load_sources() if doc_id not in set(LEGAL_DOC_IDS)
+    ]
+
+
+def article_urls() -> list[str]:
+    """URL của các bài Task 2 phụ trách.
+
+    Đọc lúc gọi chứ không phải lúc import: import package không nên phụ thuộc
+    vào việc data/sources/sources.csv đã tồn tại hay chưa.
+    """
+    sources = load_sources()
+    return [sources[doc_id]["source_url"] for doc_id in news_doc_ids()]
 
 
 async def crawl_article(url: str) -> dict:
-    """Lấy nội dung một bài viết.
+    """Lấy nội dung một bài viết theo URL.
 
-    Nhóm đang dùng corpus synthetic nên hàm này trả về bài tương ứng trong
-    ARTICLES. Khi đổi sang nguồn thật, thay phần thân bằng Crawl4AI/Firecrawl
-    và giữ nguyên 4 field output.
-    """
-    for article in ARTICLES:
-        if article["url"] == url:
+    Hiện đọc lại bản đã thu thập trong data/sources/. Khi muốn crawl trực tiếp,
+    thay thân hàm bằng Crawl4AI/Firecrawl và giữ nguyên 4 field output:
+
+        from crawl4ai import AsyncWebCrawler
+        async with AsyncWebCrawler() as crawler:
+            result = await crawler.arun(url=url)
             return {
                 "url": url,
-                "title": article["title"],
+                "title": result.metadata.get("title", "Unknown"),
                 "date_crawled": datetime.now().isoformat(),
-                "content_markdown": article["content_markdown"],
+                "content_markdown": result.markdown,
             }
-    raise ValueError(f"Không có nội dung cho URL: {url}")
+    """
+    sources = load_sources()
+    for doc_id, source in sources.items():
+        if source["source_url"] != url:
+            continue
+        metadata, body = read_source_document(doc_id)
+        return {
+            "url": url,
+            "title": metadata.get("title") or source["title"],
+            "date_crawled": source["retrieved_at"],
+            "content_markdown": body,
+            "document_version": source.get("document_version", "not-stated"),
+            "license_or_permission": source.get(
+                "license_or_permission", "public-source"
+            ),
+        }
+    raise ValueError(f"Không có bản thu thập nào cho URL: {url}")
 
 
 async def crawl_all() -> None:
-    """Crawl và lưu từng bài thành một file JSON."""
+    """Ghi mỗi bài thành một file JSON."""
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-    urls = ARTICLE_URLS or [article["url"] for article in ARTICLES]
-
-    for index, url in enumerate(urls, 1):
+    sources = load_sources()
+    for index, doc_id in enumerate(news_doc_ids(), 1):
+        url = sources[doc_id]["source_url"]
         try:
             article = await crawl_article(url)
-            output = DATA_DIR / f"article_{index:02d}.json"
+            output = DATA_DIR / f"{doc_id}.json"
             output.write_text(
                 json.dumps(article, ensure_ascii=False, indent=2),
                 encoding="utf-8",
             )
-            print(f"Saved: {output}")
+            print(f"[{index}] Saved: {output.name}")
         except Exception as error:
-            print(f"Failed: {url} — {error}")
+            print(f"[{index}] Failed: {url} — {error}")
 
 
 if __name__ == "__main__":

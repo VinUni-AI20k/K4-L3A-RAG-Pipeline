@@ -1,4 +1,4 @@
-"""Day 8 — RAG Pipeline: chatbot hỗ trợ khách hàng sàn thương mại điện tử."""
+"""Day 8 — RAG Pipeline: chatbot tra cứu dịch vụ đại học (học bổng, thư viện)."""
 
 import sys
 

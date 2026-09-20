@@ -50,6 +50,14 @@ ANALYSIS_PLACEHOLDER = """| Priority | Action | Evidence from failure analysis |
 | -------: | ------ | ------------------------------ | --------------- | ------------- |
 | 1 | Chưa viết — tạo `group_project/evaluation/analysis.md` rồi chạy lại | | | |"""
 
+# Thí nghiệm phải chạy tay (đổi cấu hình rồi chạy lại eval), nên kết quả cũng
+# giữ ở sidecar thay vì sinh tự động.
+EXPERIMENTS_PATH = EVALUATION_DIR / "experiments.md"
+
+EXPERIMENTS_PLACEHOLDER = """| Experiment | Baseline | Metric delta | Latency/cost delta | Conclusion |
+| ---------- | -------- | -----------: | -----------------: | ---------- |
+| — | — | — | — | Chưa chạy |"""
+
 RAGAS_VERSION = tuple(int(part) for part in ragas.__version__.split(".")[:2])
 
 METRIC_KEYS = ("faithfulness", "answer_relevancy", "context_recall", "context_precision")
@@ -282,6 +290,11 @@ def export_results(summaries: dict, frames: dict, golden_dataset: list[dict]) ->
     else:
         analysis = ANALYSIS_PLACEHOLDER
 
+    if EXPERIMENTS_PATH.is_file():
+        experiments = EXPERIMENTS_PATH.read_text(encoding="utf-8").strip()
+    else:
+        experiments = EXPERIMENTS_PLACEHOLDER
+
     metric_rows = "\n".join(
         f"| {METRIC_LABELS[key]} | {_fmt(a[key])} | {_fmt(b[key])} | "
         f"{_delta(b[key], a[key])} |"
@@ -315,7 +328,7 @@ từ một lần chạy thật trên golden dataset. Không có giá trị nào 
 | Corpus version/commit              | 3 legal PDF + 5 news JSON, 16 chunks |
 | Golden dataset size                | {len(golden_dataset)} |
 | `top_k`                            | {TOP_K} |
-| Fallback threshold and calibration | {SCORE_THRESHOLD} — đo trên 8 query in-domain (0.360–0.791) và 8 query out-of-domain (0.135–0.336) |
+| Fallback threshold and calibration | {SCORE_THRESHOLD} — đo trên 10 query in-domain (0.621–0.874) và 8 query out-of-domain (0.105–0.442) |
 
 ## Configurations
 
@@ -349,9 +362,7 @@ Hai config dùng cùng golden dataset, generator, evaluator, prompt và `top_k`;
 
 ## Bonus experiments
 
-| Experiment | Baseline | Metric delta | Latency/cost delta | Conclusion |
-| ---------- | -------- | -----------: | -----------------: | ---------- |
-| — | — | — | — | Chưa chạy |
+{experiments}
 """
     RESULTS_PATH.write_text(content, encoding="utf-8")
     print(f"\nĐã ghi {RESULTS_PATH}")

@@ -16,7 +16,7 @@
 
 | Module/deliverable | Việc tôi trực tiếp làm | File/commit/PR | Trạng thái |
 |---|---|---|---|
-| Task 1–3: thu thập & chuẩn hoá | Sinh corpus synthetic (3 PDF chính sách + 5 bài JSON), convert sang Markdown bằng MarkItDown, chuẩn hoá khoảng trắng do PDF trích ra | `src/task1_collect_legal_docs.py`, `src/task2_crawl_news.py`, `src/task3_convert_markdown.py` | Done |
+| Task 1–3: thu thập & chuẩn hoá | Dựng corpus từ 10 tài liệu nhóm thu thập (5 quy chế render ra PDF kèm URL gốc, 5 thông báo ra JSON), convert sang Markdown bằng MarkItDown, chuẩn hoá khoảng trắng do PDF trích ra | `src/task1_collect_legal_docs.py`, `src/task2_crawl_news.py`, `src/task3_convert_markdown.py` | Done |
 | Task 4: chunking & indexing | `RecursiveCharacterTextSplitter` (500/50), `embed_texts()` dispatch theo provider, upsert ChromaDB cosine với ID ổn định | `src/task4_chunking_indexing.py` | Done |
 | Task 5–6: dense & lexical | Semantic search qua ChromaDB, BM25Okapi trên cùng bộ chunks để ID khớp nhau | `src/task5_semantic_search.py`, `src/task6_lexical_search.py` | Done |
 | Task 7: RRF | Fuse nhiều ranked list theo `sum(1/(k+rank))`, dedupe theo `id` | `src/task7_reranking.py` | Done |
@@ -24,7 +24,7 @@
 | Task 9: retrieval pipeline | Điều phối dense + BM25 → RRF một lần → fallback theo cosine score gốc; hiệu chỉnh `SCORE_THRESHOLD` | `src/task9_retrieval_pipeline.py` | Done |
 | Task 10: generation | Lost-in-the-middle reordering, context kèm title/source, citation `[Document N]`, safe refusal | `src/task10_generation.py` | Done |
 | Chatbot UI | Streamlit hiển thị câu trả lời + panel nguồn (title, file, doc_type, chunk index, score, retrieval method) | `app.py` | Done |
-| Evaluation | Golden dataset 15 câu kèm đoạn văn gốc; pipeline Ragas 4 metric, A/B dense-only vs hybrid+RRF, xuất báo cáo | `group_project/evaluation/` | Done |
+| Evaluation | Golden dataset 15 câu bám nguyên văn corpus, phủ 9/10 tài liệu; pipeline Ragas 4 metric, A/B dense-only vs hybrid+RRF, xuất báo cáo | `group_project/evaluation/` | Done |
 
 Kiểm chứng: `pytest -q` → 20/20 pass (15 contract + 5 acceptance).
 
@@ -32,13 +32,17 @@ Các commit `7a43099`–`6a2a2d4` là bộ khung đề bài có sẵn (docs/, `s
 các file task ở dạng stub, template báo cáo), không phải phần code của nhóm.
 
 Phần việc kê ở bảng trên nằm trong các commit của tôi trên nhánh `Huy`
-(`b4e7322` trở đi).
+(`b4e7322` trở đi). Các thành viên còn lại đóng góp ở phần việc riêng, xem báo
+cáo cá nhân của từng người trong `reports/`.
+
+Corpus dịch vụ đại học được nhóm thu thập từ Lab 7 (Embedding & Vector Store) và
+tái sử dụng cho bài này; danh mục nguồn đầy đủ ở `data/sources/sources.csv`.
 
 ## Quyết định kỹ thuật quan trọng
 
 1. **Quyết định:** Bỏ `all-MiniLM-L6-v2`, chuyển sang `paraphrase-multilingual-MiniLM-L12-v2`.
-   **Lý do/evidence:** Đo trên corpus thật, model tiếng Anh chấm query **ngoài miền bằng tiếng Việt** ở 0.58–0.69, chồng lấn hoàn toàn với query trong miền (0.63–0.84) — tức là nó chỉ nhận ra "đây là tiếng Việt" chứ không hiểu nội dung, và không thể đặt ngưỡng fallback ở đâu cả. Bản multilingual tách được hai vùng: in-domain 0.360–0.791, out-of-domain 0.135–0.336, nên chọn `SCORE_THRESHOLD = 0.35`.
-   **Trade-off:** Model multilingual nặng hơn bản tiếng Anh (118M so với 22M params) nên index chậm hơn; đổi lại fallback mới có cơ sở hoạt động. Biên giữa hai vùng chỉ rộng 0.024 nên vẫn phải đo lại khi corpus lớn lên.
+   **Lý do/evidence:** Model tiếng Anh chấm query **ngoài miền bằng tiếng Việt** ngang với query trong miền — nó chỉ nhận ra "đây là tiếng Việt" chứ không hiểu nội dung, nên không thể đặt ngưỡng fallback ở đâu cả. Bản multilingual tách được hai vùng rõ rệt trên corpus hiện tại: in-domain 0.621–0.874, out-of-domain 0.105–0.442, nên chọn `SCORE_THRESHOLD = 0.53`.
+   **Trade-off:** Model multilingual nặng hơn bản tiếng Anh (118M so với 22M params) nên index chậm hơn; đổi lại fallback mới có cơ sở hoạt động.
 
 2. **Quyết định:** RRF fuse theo `id`, không theo `content`.
    **Lý do/evidence:** `chunk_overlap = 50` làm nhiều chunk khác nhau có đoạn text trùng nhau. Fuse theo `content` sẽ gộp chúng làm một và nuốt mất kết quả hợp lệ. Contract test `test_rrf_uses_rank_deduplicates_and_marks_hybrid` bắt đúng trường hợp này.
@@ -65,9 +69,10 @@ Phần việc kê ở bảng trên nằm trong các commit của tôi trên nhá
 
 ## Điều còn hạn chế
 
-- Corpus là synthetic, chỉ 8 tài liệu / 16 chunk, và golden dataset được soạn từ chính corpus đó. Điểm Ragas cao chỉ chứng minh pipeline nối đúng từ đầu tới cuối, không chứng minh hệ thống chạy tốt trên tài liệu thật. Chênh lệch A/B chỉ +0.006 — nằm trong vùng nhiễu, chưa đủ để kết luận hybrid thắng dense.
+- Corpus 10 tài liệu / 88 chunk vẫn là nhỏ so với hệ thống thật, và golden dataset được soạn từ chính corpus đó nên điểm Ragas có thiên lệch lạc quan.
+- Golden dataset mới phủ 9/10 tài liệu; `hoc-bong-dinh-thien-ly.md` (tài liệu dài nhất, 17KB) chưa có câu hỏi nào.
 - PageIndex fallback viết xong nhưng chưa kiểm chứng end-to-end vì chưa có `PAGEINDEX_API_KEY`.
-- **Nếu có thêm thời gian:** việc đầu tiên tôi làm là thay corpus synthetic bằng tài liệu thật từ nguồn công khai cho phép crawl, rồi chạy lại toàn bộ A/B — vì mọi kết luận hiện tại đều bị giới hạn bởi corpus quá nhỏ.
+- **Nếu có thêm thời gian:** việc đầu tiên tôi làm là mở rộng golden dataset lên 30–40 câu phủ đều toàn bộ tài liệu, để chênh lệch A/B đủ tin cậy thay vì nằm trong vùng nhiễu như hiện tại.
 
 ## Xác nhận đóng góp
 

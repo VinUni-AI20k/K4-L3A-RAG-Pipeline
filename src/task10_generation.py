@@ -36,7 +36,7 @@ DEFAULT_MODELS = {
 
 REFUSAL = "Tôi không thể xác minh thông tin này từ nguồn hiện có."
 
-SYSTEM_PROMPT = f"""Bạn là trợ lý trả lời câu hỏi về chính sách thương mại điện tử và hỗ trợ khách hàng.
+SYSTEM_PROMPT = f"""Bạn là trợ lý tra cứu thông tin dịch vụ đại học: học bổng, hỗ trợ tài chính và nội quy thư viện.
 
 Quy tắc bắt buộc:
 1. Chỉ dùng thông tin có trong context được cung cấp. Không suy luận, không bổ sung kiến thức ngoài.

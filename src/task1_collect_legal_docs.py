@@ -1,24 +1,39 @@
 """
 Task 1 — Thu thập tài liệu chính sách/quy định.
 
-Chủ đề nhóm: hỗ trợ khách hàng trên sàn thương mại điện tử (Shopee).
+Chủ đề nhóm: dịch vụ đại học — học bổng, hỗ trợ tài chính và nội quy thư viện.
 
-Lưu ý về nguồn dữ liệu:
-    Trung tâm trợ giúp và trang chính sách của các sàn TMĐT Việt Nam đều đứng
-    sau WAF/Captcha và cấm crawler trong robots.txt. Vì bài lab không cho phép
-    vượt WAF, nhóm dựng bộ corpus SYNTHETIC mô phỏng lại đúng cấu trúc và văn
-    phong của tài liệu chính sách thật, rồi xuất ra PDF bằng fpdf2.
+Nguồn dữ liệu:
+    Toàn bộ nội dung được nhóm thu thập từ cổng thông tin chính thức của các
+    trường và quỹ học bổng. Mỗi tài liệu có `source_url`, `retrieved_at` và
+    `document_version` ghi trong YAML frontmatter của file gốc ở data/sources/,
+    đối chiếu 1-1 với data/sources/sources.csv.
 
-    Toàn bộ nội dung trong file này là dữ liệu tự soạn, KHÔNG phải trích dẫn
-    nguyên văn từ Shopee. Mọi báo cáo dùng corpus này phải ghi rõ điều đó.
+    Các trang này publish dưới dạng HTML chứ không phát hành PDF. Task 1 render
+    chúng ra PDF trong data/landing/legal/ để pipeline có định dạng tài liệu
+    chính sách đồng nhất; nội dung là nguyên văn nguồn đã thu thập, PDF chỉ là
+    vật chứa local. URL gốc luôn đi kèm nên người chấm kiểm chứng được.
 """
 
+import csv
 from pathlib import Path
 
 
-DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "legal"
+ROOT = Path(__file__).parent.parent
+SOURCES_DIR = ROOT / "data" / "sources"
+SOURCES_CSV = SOURCES_DIR / "sources.csv"
+DATA_DIR = ROOT / "data" / "landing" / "legal"
 
-# Font Unicode để render được tiếng Việt có dấu; fpdf2 core font chỉ có latin-1.
+# Tài liệu mang tính quy chế/quy định — phần còn lại là thông báo, Task 2 xử lý.
+LEGAL_DOC_IDS = (
+    "noi-quy-thu-vien-ptit-sinh-vien",
+    "noi-quy-thu-vien-ptit-can-bo",
+    "hoc-bong-fpt-2024",
+    "hoc-bong-uet-2025-2026",
+    "hoc-bong-tdtu-2026",
+)
+
+# Font Unicode để render được tiếng Việt; fpdf2 core font chỉ có latin-1.
 FONT_CANDIDATES = (
     Path("C:/Windows/Fonts/arial.ttf"),
     Path("C:/Windows/Fonts/segoeui.ttf"),
@@ -26,51 +41,36 @@ FONT_CANDIDATES = (
     Path("/System/Library/Fonts/Supplemental/Arial.ttf"),
 )
 
-DOCUMENTS = [
-    {
-        "filename": "returns-refund-policy-shopee.pdf",
-        "title": "Chính Sách Trả Hàng và Hoàn Tiền",
-        "content": (
-            "Người mua có thể yêu cầu trả hàng/hoàn tiền trong vòng 15 ngày kể từ ngày "
-            "nhận hàng đối với sản phẩm thuộc Shopee Mall, và 3 ngày đối với sản phẩm "
-            "thường. Các trường hợp được chấp nhận bao gồm: hàng bị lỗi, giao sai sản "
-            "phẩm, hoặc hàng giả/nhái. Người mua cần cung cấp video mở hộp và hình ảnh "
-            "rõ nét làm bằng chứng. Trong trường hợp người bán từ chối yêu cầu, Shopee "
-            "sẽ đứng ra giải quyết tranh chấp dựa trên bằng chứng của cả hai bên."
-        ),
-    },
-    {
-        "filename": "payment-methods-shopee.pdf",
-        "title": "Phương Thức Thanh Toán Hợp Lệ",
-        "content": (
-            "Shopee hỗ trợ nhiều phương thức thanh toán nhằm mang lại sự tiện lợi cho "
-            "người dùng. Khách hàng có thể thanh toán bằng: 1. Thẻ Tín dụng/Ghi nợ "
-            "(Visa, Mastercard, JCB). 2. Ví ShopeePay (ưu tiên với nhiều voucher giảm "
-            "giá). 3. Thanh toán khi nhận hàng (COD). 4. Trả góp qua thẻ tín dụng hoặc "
-            "SPayLater. Mọi giao dịch qua thẻ đều được mã hóa và bảo mật theo tiêu "
-            "chuẩn quốc tế. Shopee không hỗ trợ thanh toán qua chuyển khoản ngân hàng "
-            "trực tiếp cho người bán."
-        ),
-    },
-    {
-        "filename": "product-listing-regulations-shopee.pdf",
-        "title": "Quy Định Đăng Bán Sản Phẩm Cho Người Bán",
-        "content": (
-            "Người bán trên Shopee phải tuân thủ nghiêm ngặt các quy định về đăng bán "
-            "sản phẩm. Cụ thể: 1. Không đăng bán hàng giả, hàng nhái, hàng vi phạm bản "
-            "quyền. 2. Hình ảnh sản phẩm phải rõ nét, không chứa thông tin liên hệ bên "
-            "ngoài hoặc logo của sàn TMĐT khác. 3. Mô tả sản phẩm phải chính xác, không "
-            "dùng từ ngữ gây hiểu lầm hoặc vi phạm thuần phong mỹ tục. Người bán vi "
-            "phạm sẽ bị khóa tài khoản hoặc xóa sản phẩm mà không cần báo trước."
-        ),
-    },
-]
-
 
 def setup_directory() -> None:
     """Tạo thư mục lưu tài liệu gốc."""
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     print(f"Ready: {DATA_DIR}")
+
+
+def load_sources() -> dict[str, dict]:
+    """Đọc sources.csv thành mapping doc_id -> metadata."""
+    with SOURCES_CSV.open(encoding="utf-8-sig", newline="") as handle:
+        return {row["doc_id"]: row for row in csv.DictReader(handle)}
+
+
+def read_source_document(doc_id: str) -> tuple[dict, str]:
+    """Tách YAML frontmatter và body của một file nguồn."""
+    path = SOURCES_DIR / f"{doc_id}.md"
+    text = path.read_text(encoding="utf-8")
+
+    metadata: dict[str, str] = {}
+    body = text
+    if text.startswith("---"):
+        _, _, remainder = text.partition("---")
+        front_matter, separator, body = remainder.partition("---")
+        if not separator:
+            body = remainder
+        for line in front_matter.splitlines():
+            key, sep, value = line.partition(":")
+            if sep and key.strip():
+                metadata[key.strip()] = value.strip()
+    return metadata, body.strip()
 
 
 def find_unicode_font() -> Path:
@@ -85,44 +85,52 @@ def find_unicode_font() -> Path:
     )
 
 
-def create_policy_pdf(filename: str, title: str, content: str) -> Path:
-    """Render một tài liệu chính sách ra PDF."""
+def render_pdf(doc_id: str, metadata: dict, body: str, source: dict) -> Path:
+    """Render một tài liệu nguồn ra PDF kèm khối trích dẫn nguồn."""
     from fpdf import FPDF
 
     font_path = find_unicode_font()
-    filepath = DATA_DIR / filename
+    filepath = DATA_DIR / f"{doc_id}.pdf"
+    title = metadata.get("title") or source.get("title") or doc_id
 
     pdf = FPDF()
     pdf.add_page()
     pdf.add_font("body", "", str(font_path))
 
     pdf.set_font("body", size=14)
-    pdf.multi_cell(0, 10, title, align="C")
-    pdf.ln(6)
+    pdf.multi_cell(0, 9, title, align="C")
+    pdf.ln(4)
 
-    pdf.set_font("body", size=12)
-    pdf.multi_cell(0, 8, content)
-    pdf.ln(6)
-
+    # Khối nguồn nằm ngay trong tài liệu để citation truy ngược được tới URL.
     pdf.set_font("body", size=9)
     pdf.multi_cell(
         0,
-        6,
-        "Ghi chú: tài liệu synthetic do nhóm tự soạn phục vụ bài lab RAG, "
-        "không phải văn bản chính thức của Shopee.",
+        5,
+        f"Nguồn: {source.get('source_url', 'n/a')}\n"
+        f"Ngày thu thập: {source.get('retrieved_at', 'n/a')} | "
+        f"Phiên bản: {source.get('document_version', 'n/a')} | "
+        f"Quyền sử dụng: {source.get('license_or_permission', 'n/a')}",
     )
+    pdf.ln(4)
+
+    pdf.set_font("body", size=11)
+    pdf.multi_cell(0, 7, body)
 
     pdf.output(str(filepath))
-    print(f"Saved: {filepath} ({filepath.stat().st_size} bytes)")
+    print(f"Saved: {filepath.name} ({filepath.stat().st_size} bytes)")
     return filepath
 
 
 def download_documents() -> None:
-    """Sinh đủ 3 tài liệu chính sách vào data/landing/legal/."""
-    for document in DOCUMENTS:
-        create_policy_pdf(
-            document["filename"], document["title"], document["content"]
-        )
+    """Dựng tài liệu chính sách vào data/landing/legal/ từ nguồn đã thu thập."""
+    sources = load_sources()
+    missing = [doc_id for doc_id in LEGAL_DOC_IDS if doc_id not in sources]
+    if missing:
+        raise KeyError(f"Thiếu trong sources.csv: {', '.join(missing)}")
+
+    for doc_id in LEGAL_DOC_IDS:
+        metadata, body = read_source_document(doc_id)
+        render_pdf(doc_id, metadata, body, sources[doc_id])
 
 
 if __name__ == "__main__":
