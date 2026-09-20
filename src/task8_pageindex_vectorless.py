@@ -95,12 +95,15 @@ def _read_standardized(path: Path) -> tuple[dict[str, str], str]:
 def _markdown_to_pdf(title: str, body: str, output: Path) -> None:
     """PDF văn bản thuần, đủ để PageIndex OCR và dựng cây theo heading."""
     from fpdf import FPDF, XPos, YPos
-
-    # fpdf2 >= 2.5 để con trỏ ở mép phải sau multi_cell; ô kế tiếp w=0 sẽ rộng 0
-    # và treo/ném lỗi. Luôn đưa con trỏ về lề trái, xuống dòng.
-    cell = dict(new_x=XPos.LMARGIN, new_y=YPos.NEXT, wrapmode="CHAR")
+    from fpdf.enums import WrapMode
 
     pdf = FPDF()
+
+    def cell(height: float, text: str) -> None:
+        # fpdf2 >= 2.5 để con trỏ ở mép phải sau multi_cell; ô kế tiếp w=0 sẽ rộng 0
+        # và treo/ném lỗi. Luôn đưa con trỏ về lề trái, xuống dòng.
+        pdf.multi_cell(0, height, text, new_x=XPos.LMARGIN, new_y=YPos.NEXT, wrapmode=WrapMode.CHAR)
+
     pdf.set_auto_page_break(auto=True, margin=15)
     pdf.add_page()
 
@@ -115,7 +118,7 @@ def _markdown_to_pdf(title: str, body: str, output: Path) -> None:
         title = title.encode("latin-1", "replace").decode("latin-1")
 
     pdf.set_font(family, size=16)
-    pdf.multi_cell(0, 8, title, **cell)
+    cell(8, title)
     pdf.ln(4)
 
     for line in body.splitlines():
@@ -126,11 +129,11 @@ def _markdown_to_pdf(title: str, body: str, output: Path) -> None:
         level = len(stripped) - len(stripped.lstrip("#"))
         if 0 < level <= 3 and stripped.startswith("#"):
             pdf.set_font(family, size=15 - level)
-            pdf.multi_cell(0, 7, stripped.lstrip("#").strip(), **cell)
+            cell(7, stripped.lstrip("#").strip())
             pdf.set_font(family, size=10)
         else:
             pdf.set_font(family, size=10)
-            pdf.multi_cell(0, 5, stripped, **cell)
+            cell(5, stripped)
 
     output.parent.mkdir(parents=True, exist_ok=True)
     pdf.output(str(output))
