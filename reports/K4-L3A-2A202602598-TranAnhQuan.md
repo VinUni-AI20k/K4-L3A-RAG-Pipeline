@@ -4,7 +4,7 @@
 
 - Họ và tên: Trần Anh Quân
 - Mã học viên: 2A202602598
-- Nhóm: GICUNGDCA (K4-L3A)
+- Nhóm: GICUNGDC
 - Repository/branch: https://github.com/thangws4/K4-L3A-RAG-Pipeline / branch `tran_anh_quan`
 
 ## Phần việc đã thực hiện
