@@ -1,10 +1,13 @@
 """Generate grounded answers from retrieved chunks with source citations."""
 
 import os
+
 from dotenv import load_dotenv
+
 from .contracts import validate_generation_result
 from .task4_chunking_indexing import ROOT
 from .task9_retrieval_pipeline import retrieve
+
 
 load_dotenv(ROOT / ".env")
 TOP_K = 5
@@ -52,9 +55,9 @@ def call_llm(system_prompt: str, user_message: str) -> str:
     if not OPENAI_API_KEY:
         raise RuntimeError("Thiếu OPENAI_API_KEY trong .env")
     from openai import OpenAI
+
     client = OpenAI(api_key=OPENAI_API_KEY, timeout=60.0, max_retries=2)
     request = {"model": LLM_MODEL, "instructions": system_prompt, "input": user_message}
-    # Reasoning models such as o4-mini reject sampling controls like top_p.
     if not LLM_MODEL.lower().startswith(("o1", "o3", "o4")):
         request["top_p"] = TOP_P
     response = client.responses.create(**request)
@@ -71,14 +74,14 @@ def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
         result = {"answer": REFUSAL, "sources": [], "retrieval_source": "none"}
         validate_generation_result(result)
         return result
+    ordered_sources = reorder_for_llm(chunks)
     try:
-        context = format_context(reorder_for_llm(chunks))
+        context = format_context(ordered_sources)
         answer = call_llm(SYSTEM_PROMPT, f"Context:\n{context}\n\nQuestion: {query}")
     except Exception:
-        result = {"answer": REFUSAL, "sources": chunks, "retrieval_source": "hybrid"}
+        result = {"answer": REFUSAL, "sources": ordered_sources, "retrieval_source": "hybrid"}
         validate_generation_result(result)
         return result
-    ordered_sources = reorder_for_llm(chunks)
     retrieval_method = ordered_sources[0]["retrieval_method"]
     result = {
         "answer": answer,

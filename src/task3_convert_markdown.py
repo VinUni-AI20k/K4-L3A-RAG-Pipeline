@@ -26,11 +26,7 @@ BOOK_TITLES = {
 
 def _tesseract_command() -> str:
     configured = os.getenv("TESSERACT_CMD")
-    candidates = [
-        configured,
-        shutil.which("tesseract"),
-        r"C:\Program Files\Tesseract-OCR\tesseract.exe",
-    ]
+    candidates = [configured, shutil.which("tesseract"), r"C:\Program Files\Tesseract-OCR\tesseract.exe"]
     for candidate in candidates:
         if candidate and Path(candidate).is_file():
             return str(candidate)
@@ -39,8 +35,7 @@ def _tesseract_command() -> str:
 
 def _clean_text(text: str) -> str:
     text = unicodedata.normalize("NFC", text.replace("\r\n", "\n").replace("\r", "\n"))
-    lines = [" ".join(line.split()) for line in text.splitlines()]
-    return "\n".join(lines).strip()
+    return "\n".join(" ".join(line.split()) for line in text.splitlines()).strip()
 
 
 def _ocr_page(page, tesseract: str) -> str:
@@ -59,9 +54,7 @@ def _write_markdown(path: Path, content: str) -> None:
     if len(content.strip()) < 200:
         raise ValueError(f"Markdown quá ngắn hoặc rỗng: {path}")
     path.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.NamedTemporaryFile(
-        mode="w", encoding="utf-8", newline="\n", suffix=".tmp", dir=path.parent, delete=False
-    ) as stream:
+    with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", newline="\n", suffix=".tmp", dir=path.parent, delete=False) as stream:
         temporary = Path(stream.name)
         stream.write(content)
     try:
@@ -84,11 +77,8 @@ def convert_legal_docs() -> None:
             grade = source.stem if source.stem in BOOK_TITLES else ""
             title = BOOK_TITLES.get(source.stem, source.stem)
             parts = [
-                f"# {title}",
-                f"**Source file:** {source.name}",
-                "**Document type:** textbook",
-                f"**Grade:** {grade or 'unknown'}",
-                "**Publisher:** Nhà xuất bản Giáo dục Việt Nam",
+                f"# {title}", f"**Source file:** {source.name}", "**Document type:** textbook",
+                f"**Grade:** {grade or 'unknown'}", "**Publisher:** Nhà xuất bản Giáo dục Việt Nam",
                 f"**PDF pages:** {len(document.pages)}",
                 f"**Extraction:** PDF text layer or Tesseract Vietnamese OCR at {OCR_DPI} dpi",
                 "**OCR warning:** Verify formulas, figures and tables against the original PDF.",
@@ -115,7 +105,6 @@ def convert_news_articles() -> None:
     articles = sorted((LANDING_DIR / "news").glob("*.json"))
     if len(articles) < 5:
         raise ValueError("Cần ít nhất năm JSON trong data/landing/news")
-
     required = ("url", "title", "date_crawled", "content_markdown")
     for source in articles:
         article = json.loads(source.read_text(encoding="utf-8"))
@@ -126,10 +115,8 @@ def convert_news_articles() -> None:
         if body.startswith(f"# {title}"):
             body = body[len(f"# {title}"):].strip()
         parts = [
-            f"# {title}",
-            f"**Source URL:** {article['url']}",
-            f"**Crawled:** {article['date_crawled']}",
-            "**Document type:** public article",
+            f"# {title}", f"**Source URL:** {article['url']}",
+            f"**Crawled:** {article['date_crawled']}", "**Document type:** public article",
         ]
         for key, label in (("content_scope", "Content scope"), ("license", "License")):
             if article.get(key):
