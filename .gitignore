@@ -43,6 +43,7 @@ data/_tmp_pdf/
 *.tmp
 *.log
 pageindex_doc_ids.json
+chroma_db/
 pageindex_pdfs/
 
 # Jupyter
