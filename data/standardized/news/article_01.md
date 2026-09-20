@@ -6,7 +6,7 @@
 
 **Doc type:** news
 
-**Crawled:** 2026-09-20T15:39:04
+**Crawled:** 2026-09-20T17:01:19
 
 **Published:** 2025-07-09T17:44:00+07:00
 
@@ -14,6 +14,7 @@
 
 # Quy định mới nhất về đào tạo lái xe
 ##  (Chinhphu.vn) - Bộ Xây dựng đã ban hành Thông tư số 14/2025/TT-BXD quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ. 
+Tải xuống
 Bộ Xây dựng đã ban hành quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ
 Thông tư này quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp, cấp lại chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ; tiêu chuẩn của cơ sở đào tạo người điều khiển xe máy chuyên dùng thực hiện bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ và tiêu chuẩn của cơ sở đào tạo lái xe mô tô.
 Thông tư này áp dụng đối với tổ chức, cá nhân có liên quan tới đào tạo lái xe; bồi dưỡng, kiểm tra, cấp, cấp lại chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ và tiêu chuẩn của cơ sở đào tạo người điều khiển xe máy chuyên dùng thực hiện bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ.
