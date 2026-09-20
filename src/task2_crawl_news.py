@@ -21,25 +21,42 @@ from pathlib import Path
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
 
 ARTICLE_URLS = [
-    # TODO: Thêm ít nhất 5 public URL.
+    "https://baochinhphu.vn/quy-dinh-moi-nhat-ve-dao-tao-lai-xe-102250709174518501.htm",
+    "https://baochinhphu.vn/cap-giay-phep-lai-xe-cho-nguoi-dat-ket-qua-sat-hach-trong-thoi-han-07-ngay-lam-viec-102250304091552224.htm",
+    "https://baochinhphu.vn/bao-dam-trat-tu-an-toan-giao-thong-doi-voi-hoat-dong-kinh-doanh-van-tai-bang-xe-o-to-102260821114408935.htm",
+    "https://baochinhphu.vn/tu-15-8-phat-canh-cao-o-to-cho-tre-em-duoi-10-tuoi-khong-co-thiet-bi-an-toan-phu-hop-102260630121104271.htm",
+    "https://baochinhphu.vn/sua-doi-bo-sung-mot-so-quy-dinh-ve-trat-tu-an-toan-giao-thong-duong-bo-102260629181414298.htm",
 ]
 
 
+def repair_mojibake(value: str) -> str:
+    """Repair UTF-8 text that was decoded as Windows-1252."""
+    try:
+        repaired = value.encode("cp1252").decode("utf-8")
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return value
+    broken_markers = ("Ã", "Ä", "Æ", "áº", "á»")
+    if sum(repaired.count(marker) for marker in broken_markers) < sum(
+        value.count(marker) for marker in broken_markers
+    ):
+        return repaired
+    return value
+
+
 async def crawl_article(url: str) -> dict:
-    # TODO: Implement crawling logic.
-    #
-    # from datetime import datetime
-    # from crawl4ai import AsyncWebCrawler
-    #
-    # async with AsyncWebCrawler() as crawler:
-    #     result = await crawler.arun(url=url)
-    #     return {
-    #         "url": url,
-    #         "title": result.metadata.get("title", "Unknown"),
-    #         "date_crawled": datetime.now().isoformat(),
-    #         "content_markdown": result.markdown,
-    #     }
-    raise NotImplementedError("Implement crawl_article")
+    from datetime import datetime
+    from crawl4ai import AsyncWebCrawler
+
+    clean_url = url.split("?")[0]
+    async with AsyncWebCrawler() as crawler:
+        result = await crawler.arun(url=clean_url)
+        title = result.metadata.get("title", "").strip() or clean_url.split("/")[-1]
+        return {
+            "url": clean_url,
+            "title": repair_mojibake(title),
+            "date_crawled": datetime.now().isoformat(),
+            "content_markdown": repair_mojibake(result.markdown or ""),
+        }
 
 
 async def crawl_all() -> None:

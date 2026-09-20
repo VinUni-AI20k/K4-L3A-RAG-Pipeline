@@ -1,0 +1,77 @@
+[
+  {
+    "question": "Thông tư nào quy định mới về đào tạo lái xe và cơ quan nào ban hành?",
+    "expected_answer": "Thông tư 14/2025/TT-BXD do Bộ Xây dựng ban hành.",
+    "expected_context": "Bộ Xây dựng đã ban hành Thông tư số 14/2025/TT-BXD quy định về đào tạo lái xe và bồi dưỡng kiến thức pháp luật giao thông đường bộ. Nguồn: article_01.md"
+  },
+  {
+    "question": "Người học lái xe phải tham dự tối thiểu bao nhiêu phần trăm thời gian học lý thuyết để được kiểm tra kết thúc?",
+    "expected_answer": "Tối thiểu 70% thời gian học nội dung đào tạo lý thuyết.",
+    "expected_context": "Người học lái xe được kiểm tra kết thúc nội dung đào tạo khi tham dự tối thiểu 70% thời gian học nội dung đào tạo lý thuyết. Nguồn: article_01.md"
+  },
+  {
+    "question": "Yêu cầu tối thiểu về quãng đường thực hành trên sân tập lái là bao nhiêu?",
+    "expected_answer": "Người học phải học đủ thời gian và tối thiểu 50% quãng đường thực hành trên sân tập lái.",
+    "expected_context": "Người học phải học đủ thời gian và tối thiểu 50% quãng đường học thực hành lái xe trên sân tập lái. Nguồn: article_01.md"
+  },
+  {
+    "question": "Yêu cầu tối thiểu về thời gian thực hành lái xe trên đường là bao nhiêu?",
+    "expected_answer": "Người học phải học đủ quãng đường và tối thiểu 50% thời gian thực hành lái xe trên đường.",
+    "expected_context": "Người học phải học đủ quãng đường và tối thiểu 50% thời gian học thực hành lái xe trên đường. Nguồn: article_01.md"
+  },
+  {
+    "question": "Thông tư 14/2025/TT-BXD có hiệu lực từ ngày nào?",
+    "expected_answer": "Từ ngày 01/9/2025.",
+    "expected_context": "Thông tư này có hiệu lực thi hành từ ngày 01/9/2025. Nguồn: article_01.md"
+  },
+  {
+    "question": "Thời gian thực hành lái xe trên đường của học viên các hạng B số tự động, B số sàn và C1 lần lượt là bao nhiêu?",
+    "expected_answer": "Lần lượt là 24 giờ, 40 giờ và 48 giờ.",
+    "expected_context": "Bảng chương trình đào tạo ghi thời gian thực hành trên đường của một học viên lần lượt là 24, 40 và 48 giờ cho các cột hạng B số tự động, B số sàn và C1. Nguồn: article_01.md"
+  },
+  {
+    "question": "Giấy phép lái xe được cấp cho người đạt kỳ sát hạch trong thời hạn bao lâu?",
+    "expected_answer": "Trong thời hạn 7 ngày làm việc kể từ ngày kết thúc kỳ sát hạch.",
+    "expected_context": "Bài viết nêu việc cấp giấy phép lái xe cho người đạt kết quả kỳ sát hạch trong thời hạn 7 ngày làm việc. Nguồn: article_02.md"
+  },
+  {
+    "question": "Thông tư 12/2025/TT-BCA có hiệu lực từ ngày nào?",
+    "expected_answer": "Từ ngày 01/3/2025.",
+    "expected_context": "Bộ Công an ban hành Thông tư 12/2025/TT-BCA ngày 28/02/2025 và Thông tư có hiệu lực từ ngày 01/3/2025. Nguồn: article_02.md"
+  },
+  {
+    "question": "Công điện 56/CĐ-TTg tập trung vào vấn đề gì?",
+    "expected_answer": "Bảo đảm trật tự, an toàn giao thông đối với hoạt động kinh doanh vận tải bằng xe ô tô.",
+    "expected_context": "Công điện số 56/CĐ-TTg ngày 21/8/2026 của Thủ tướng Chính phủ về bảo đảm trật tự, an toàn giao thông đối với hoạt động kinh doanh vận tải bằng xe ô tô. Nguồn: article_03.md"
+  },
+  {
+    "question": "Địa phương được yêu cầu xử lý dứt điểm tình trạng nào liên quan đến bến bãi vận tải?",
+    "expected_answer": "Tình trạng hoạt động bến bãi trái phép, còn gọi là bến cóc.",
+    "expected_context": "Ủy ban nhân dân các tỉnh, thành phố được yêu cầu xử lý dứt điểm hoạt động bến bãi trái phép, bến cóc. Nguồn: article_03.md"
+  },
+  {
+    "question": "Từ 15/8, hành vi chở trẻ em không có thiết bị an toàn phù hợp bị xử lý thế nào?",
+    "expected_answer": "Bị phạt cảnh cáo theo quy định được nêu trong Nghị định 238/2026/NĐ-CP.",
+    "expected_context": "Bài viết nêu từ 15/8 áp dụng phạt cảnh cáo ô tô chở trẻ em không có thiết bị an toàn phù hợp. Nguồn: article_04.md"
+  },
+  {
+    "question": "Nghị định 238/2026/NĐ-CP xử lý hành vi làm thay đổi khả năng nhận diện biển số như thế nào?",
+    "expected_answer": "Bổ sung xử phạt người điều khiển xe gắn biển số dùng vật liệu hoặc thiết bị làm thay đổi khả năng nhận diện của thiết bị kỹ thuật nghiệp vụ.",
+    "expected_context": "Nghị định bổ sung phạt hành vi điều khiển xe gắn biển số sử dụng vật liệu, thiết bị làm thay đổi khả năng nhận diện biển số của thiết bị kỹ thuật nghiệp vụ. Nguồn: article_04.md"
+  },
+  {
+    "question": "Xe kinh doanh vận tải từ bao nhiêu chỗ phải lắp thiết bị ghi nhận hình ảnh khoang chở khách?",
+    "expected_answer": "Từ 8 chỗ trở lên.",
+    "expected_context": "Nghị định bổ sung xử phạt lái xe kinh doanh vận tải từ 08 chỗ trở lên không lắp thiết bị ghi nhận hình ảnh khoang chở khách. Nguồn: article_04.md"
+  },
+  {
+    "question": "Nghị định 236/2026/NĐ-CP sửa đổi nghị định nào về trật tự, an toàn giao thông đường bộ?",
+    "expected_answer": "Sửa đổi, bổ sung Nghị định 151/2024/NĐ-CP, văn bản đã được sửa đổi bởi Nghị định 184/2025/NĐ-CP.",
+    "expected_context": "Nghị định 236/2026/NĐ-CP sửa đổi Nghị định 151/2024/NĐ-CP ngày 15/11/2024, được sửa đổi bổ sung bởi Nghị định 184/2025/NĐ-CP. Nguồn: article_05.md"
+  },
+  {
+    "question": "Mục tiêu hoàn thiện cơ sở dữ liệu trật tự, an toàn giao thông đường bộ là gì?",
+    "expected_answer": "Xây dựng hệ thống cơ sở dữ liệu đồng bộ, thống nhất trên phạm vi toàn quốc.",
+    "expected_context": "Nghị định 236/2026/NĐ-CP hoàn thiện hệ thống cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ theo hướng đồng bộ, thống nhất trên phạm vi toàn quốc. Nguồn: article_05.md"
+  }
+]

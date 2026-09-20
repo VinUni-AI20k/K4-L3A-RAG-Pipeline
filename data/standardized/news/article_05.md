@@ -1,0 +1,199 @@
+# Sửa đổi, bổ sung một số quy định về trật tự, an toàn giao thông đường bộ
+
+**Source:** https://baochinhphu.vn/sua-doi-bo-sung-mot-so-quy-dinh-ve-trat-tu-an-toan-giao-thong-duong-bo-102260629181414298.htm
+
+**Crawled:** 2026-09-20T15:25:08.703752
+
+---
+
+[ ![Báo chính phủ](https://static-cttcp.cdnchinhphu.vn/baochinhphu/image/logo_bcp.png) ](https://baochinhphu.vn/)
+chính phủ nước cộng hòa xã hội chủ nghĩa việt nam
+Báo Điện tử Chính phủ
+[English](https://en.baochinhphu.vn/ "Tiếng Anh") [中文](https://cn.baochinhphu.vn/ "Tiếng Trung")
+  * [ trang chủ ](https://baochinhphu.vn/ "Trang chủ")
+  * [Chính trị](https://baochinhphu.vn/chinh-tri.htm "Chính trị")
+[Đối ngoại](https://baochinhphu.vn/chinh-tri/doi-ngoai.htm "Đối ngoại") [Tổ chức nhân sự](https://baochinhphu.vn/chinh-tri/to-chuc-nhan-su.htm "Tổ chức nhân sự") [Hội nhập](https://baochinhphu.vn/chinh-tri/hoi-nhap.htm "Hội nhập")
+  * [Kinh tế](https://baochinhphu.vn/kinh-te.htm "Kinh tế")
+[Ngân hàng](https://baochinhphu.vn/kinh-te/ngan-hang.htm "Ngân hàng") [Chứng khoán](https://baochinhphu.vn/kinh-te/chung-khoan.htm "Chứng khoán") [Kinh doanh](https://baochinhphu.vn/kinh-te/kinh-doanh.htm "Kinh doanh")
+  * [Văn hóa](https://baochinhphu.vn/van-hoa.htm "Văn hóa")
+[Thể thao](https://baochinhphu.vn/van-hoa/the-thao.htm "Thể thao") [Du lịch](https://baochinhphu.vn/van-hoa/du-lich.htm "Du lịch")
+  * [Xã hội](https://baochinhphu.vn/xa-hoi.htm "Xã hội")
+[Pháp luật](https://baochinhphu.vn/xa-hoi/phap-luat.htm "Pháp luật") [Đời sống](https://baochinhphu.vn/xa-hoi/doi-song.htm "Đời sống") [Y tế](https://baochinhphu.vn/xa-hoi/y-te.htm "Y tế")
+  * [Khoa giáo](https://baochinhphu.vn/khoa-giao.htm "Khoa giáo")
+[Giáo dục](https://baochinhphu.vn/khoa-giao/giao-duc.htm "Giáo dục") [Khoa học - Công nghệ](https://baochinhphu.vn/khoa-giao/khoa-hoc-cong-nghe.htm "Khoa học - Công nghệ")
+  * [Quốc tế](https://baochinhphu.vn/quoc-te.htm "Quốc tế")
+  * [ Góp Ý Hiến Kế ](https://baochinhphu.vn/#gop-y-hien-ke "Góp Ý Hiến Kế")
+
+
+[ Mới Nhất ](https://baochinhphu.vn/tin-moi.htm "Mới Nhất") [ ](javascript:; "Tìm kiếm")
+[ ](https://baochinhphu.vn/sua-doi-bo-sung-mot-so-quy-dinh-ve-trat-tu-an-toan-giao-thong-duong-bo-102260629181414298.htm)
+[ Tổng Bí thư, Chủ tịch nước Tô Lâm và Phu nhân thăm Liên bang Nga, Cộng hòa Pháp ](https://baochinhphu.vn/chu-de/tong-bi-thu-chu-tich-nuoc-to-lam-va-phu-nhan-tham-lien-bang-nga-cong-hoa-phap-294.htm "Tổng Bí thư, Chủ tịch nước Tô Lâm và Phu nhân thăm Liên bang Nga, Cộng hòa Pháp")
+[ Chiến dịch 500 ngày đêm tìm kiếm, quy tập và xác định danh tính hài cốt liệt sĩ ](https://baochinhphu.vn/chu-de/chien-dich-500-ngay-dem-tim-kiem-quy-tap-va-xac-dinh-danh-tinh-hai-cot-liet-si-291.htm "Chiến dịch 500 ngày đêm tìm kiếm, quy tập và xác định danh tính hài cốt liệt sĩ")
+[ Bảo vệ nền tảng tư tưởng của Đảng trong kỷ nguyên phát triển mới ](https://baochinhphu.vn/chu-de/bao-ve-nen-tang-tu-tuong-cua-dang-trong-ky-nguyen-phat-trien-moi-290.htm "Bảo vệ nền tảng tư tưởng của Đảng trong kỷ nguyên phát triển mới")
+[ 100 ngày xử lý các điểm nghẽn về chuyển đổi số ](https://baochinhphu.vn/chu-de/100-ngay-xu-ly-cac-diem-nghen-ve-chuyen-doi-so-295.htm "100 ngày xử lý các điểm nghẽn về chuyển đổi số")
+[ Phát triển nhà ở cho thuê - Trụ cột chiến lược, lâu dài ](https://baochinhphu.vn/chu-de/phat-trien-nha-o-cho-thue-tru-cot-chien-luoc-lau-dai-293.htm "Phát triển nhà ở cho thuê - Trụ cột chiến lược, lâu dài")
+[ Cổng TTĐT Chính phủ ](https://chinhphu.vn "Cổng TTĐT Chính phủ") [ Văn phòng Chính phủ ](https://vpcp.chinhphu.vn/ "Văn phòng Chính phủ") [ ](https://mail.chinhphu.vn/ "email")
+  * An Giang
+  * Bình Dương
+  * Bình Phước
+  * Bình Thuận
+  * Bình Định
+  * Bạc Liêu
+  * Bắc Giang
+  * Bắc Kạn
+  * Bắc Ninh
+  * Bến Tre
+  * Cao Bằng
+  * Cà Mau
+  * Cần Thơ
+  * Điện Biên
+  * Đà Nẵng
+  * Đà Lạt
+  * Đắk Lắk
+  * Đắk Nông
+  * Đồng Nai
+  * Đồng Tháp
+  * Gia Lai
+  * Hà Nội
+  * Hồ Chí Minh
+  * Hà Giang
+  * Hà Nam
+  * Hà Tây
+  * Hà Tĩnh
+  * Hòa Bình
+  * Hưng Yên
+  * Hải Dương
+  * Hải Phòng
+  * Hậu Giang
+  * Khánh Hòa
+  * Kiên Giang
+  * Kon Tum
+  * Lai Châu
+  * Long An
+  * Lào Cai
+  * Lâm Đồng
+  * Lạng Sơn
+  * Nam Định
+  * Nghệ An
+  * Ninh Bình
+  * Ninh Thuận
+  * Phú Thọ
+  * Phú Yên
+  * Quảng Bình
+  * Quảng Nam
+  * Quảng Ngãi
+  * Quảng Ninh
+  * Quảng Trị
+  * Sóc Trăng
+  * Sơn La
+  * Thanh Hóa
+  * Thái Bình
+  * Thái Nguyên
+  * Thừa Thiên Huế
+  * Tiền Giang
+  * Trà Vinh
+  * Tuyên Quang
+  * Tây Ninh
+  * Vĩnh Long
+  * Vĩnh Phúc
+  * Vũng Tàu
+  * Yên Bái
+
+
+[ ](javascript:; "chia sẻ facebook") [ ](javascript:; "chia sẻ zalo") [ 0 ](https://baochinhphu.vn/sua-doi-bo-sung-mot-so-quy-dinh-ve-trat-tu-an-toan-giao-thong-duong-bo-102260629181414298.htm#commentpage "bình luận") [ ](https://baochinhphu.vn/print/sua-doi-bo-sung-mot-so-quy-dinh-ve-trat-tu-an-toan-giao-thong-duong-bo-102260629181414298.htm "In bài viết") [ aA  ](javascript:; "Tăng cỡ chữ")
+  * [ Chỉ đạo, quyết định của Chính phủ - Thủ tướng Chính phủ ](https://baochinhphu.vn/chi-dao-quyet-dinh-cua-chinh-phu-thu-tuong-chinh-phu.htm "Chỉ đạo, quyết định của Chính phủ - Thủ tướng Chính phủ")
+
+
+# Sửa đổi, bổ sung một số quy định về trật tự, an toàn giao thông đường bộ
+##  (Chinhphu.vn) - Chính phủ ban hành Nghị định số 236/2026/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 151/2024/NĐ-CP ngày 15/11/2024 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Trật tự, an toàn giao thông đường bộ được sửa đổi, bổ sung bởi Nghị định số 184/2025/NĐ-CP ngày 01/7/2025 của Chính phủ. 
+29/06/2026 18:42 
+![Sửa đổi, bổ sung một số quy định về trật tự, an toàn giao thông đường bộ- Ảnh 1.](https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2026/6/29/giaothong-17827314314081657802309.jpg)
+Hoàn thiện cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ
+## Hoàn thiện cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ
+Trong đó, Nghị định số 236/2026/NĐ-CP sửa đổi, bổ sung quy định cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ (khoản 1 Điều 9, một số điểm, khoản của Điều 10 của Nghị định số [151/2024/NĐ-CP](https://vanban.chinhphu.vn/?pageid=27160&docid=211956 "151/2024/NĐ-CP")) nhằm hoàn thiện hệ thống cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ theo hướng đồng bộ, thống nhất trên phạm vi toàn quốc.
+Theo đó, cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ được xây dựng thống nhất trên toàn quốc, do lực lượng Cảnh sát giao thông quản lý, vận hành, khai thác, dùng chung cho các cơ quan, tổ chức, cá nhân có thẩm quyền, trừ cơ sở dữ liệu liên quan đến lĩnh vực quốc phòng, an ninh.
+Bộ Công an có trách nhiệm xây dựng, quản lý Cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ và các cơ sở dữ liệu chuyên ngành có liên quan; các bộ, ngành có trách nhiệm xây dựng cơ sở dữ liệu quốc gia, cơ sở dữ liệu chuyên ngành, kết nối, chia sẻ thông tin theo quy định của pháp luật với Cơ sở dữ liệu vê trật tự, an toàn giao thông đường bộ phục vụ công tác quản lý nhà nước về trật tự, an toàn giao thông đường bộ và giải quyết các thủ tục hành chính cho người dân, doanh nghiệp.
+Bộ Công an có trách nhiệm xây dựng, quản lý cơ sở dữ liệu sau đây: Cơ sở dữ liệu về đăng ký, quản lý xe cơ giới, xe máy chuyên dùng (trừ xe quân sự); Cơ sở dữ liệu về xử lý vi phạm hành chính về trật tự, an toàn giao thông đường bộ; Cơ sở dữ liệu về tai nạn giao thông đường bộ; Cơ sở dữ liệu về hành trình của phương tiện giao thông đường bộ, hình ảnh người lái xe (trừ xe quân sự); Cơ sở dữ liệu về quản lý thời gian điều khiển phương tiện của người lái xe (trừ xe quân sự); Cơ sở dữ liệu về đăng kiểm xe cơ giới, xe máy chuyên dùng trong Công an nhân dân; Cơ sở dữ liệu về sát hạch, cấp giấy phép lái xe; Cơ sở dữ liệu về đào tạo lái xe, chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ trong Công an nhân dân; Cơ sở dữ liệu về xe cơ giới nước ngoài do người nước ngoài điều khiển tham gia giao thông tại Việt Nam.
+Bộ Xây dựng có trách nhiệm xây dựng, quản lý cơ sở dữ liệu sau đây: Cơ sở dữ liệu về đăng kiểm xe cơ giới, xe máy chuyên dùng (trừ xe quân sự, xe công an); Cơ sở dữ liệu về đào tạo lái xe, chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ cho người điều khiển xe máy chuyên dùng (trừ dữ liệu về đào tạo lái xe, chứng chỉ bồi dưỡng kiến thức pháp luật của lực lượng quân đội, công an); Cơ sở dữ liệu về đơn vị kinh doanh vận tải và phù hiệu xe kinh doanh vận tải.
+Bộ Tài chính có trách nhiệm xây dựng, quản lý cơ sở dữ liệu sau đây: Cơ sở dữ liệu về xe xuất khẩu, nhập khẩu; Cơ sở dữ liệu về hóa đơn, chứng từ; Cơ sở dữ liệu về lệ phí trước bạ xe.
+Bộ Quốc phòng có trách nhiệm xây dựng, quản lý cơ sở dữ liệu thuộc phạm vi quản lý của Bộ Quốc phòng sau đây: Cơ sở dữ liệu về đăng ký, kiểm định xe cơ giới, xe máy chuyên dùng; Cơ sở dữ liệu về đào tạo, sát hạch, cấp giấy phép lái xe, chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ; Cơ sở dữ liệu về tai nạn giao thông đường bộ; Cơ sở dữ liệu về xử lý vi phạm hành chính về trật tự, an toàn giao thông đường bộ.
+## Bổ sung dữ liệu về giấy phép lái xe, quản lý điểm giấy phép lái xe
+Một điểm mới đáng chú ý của Nghị định là việc bổ sung các trường thông tin liên quan đến công tác sát hạch, cấp giấy phép lái xe và quản lý điểm giấy phép lái xe; thông tin về xe cơ giới nước ngoài do người nước ngoài điều khiển tham gia giao thông tại Việt Nam; thông tin về đơn vị kinh doanh vận tải, phù hiệu xe kinh doanh vận tải (bổ sung khoản 14, khoản 15, khoản 16 vào sau khoản 13 Điều 11):
+**Cụ thể, bổ sung khoản 14 Điều 11 - Thông tin về sát hạch, cấp giấy phép lái xe gồm** : họ, tên; số định danh cá nhân; ngày, tháng, năm sinh; giới tính; quốc tịch; nơi cư trú; số giấy phép lái xe; ngày, tháng, năm cấp giấy xác nhận hoàn thành khóa đào tạo lái xe; cơ quan sát hạch; địa điểm tổ chức sát hạch (trung tâm sát hạch hoặc sân tập lái dùng để sát hạch); ngày, tháng, năm cấp, đổi, cấp lại giấy phép lái xe; cơ quan cấp, đổi, cấp lại giấy phép lái xe; giấy phép lái xe trước khi đổi (giấy phép lái xe hệ dân sự, giấy phép lái xe trong Công an nhân dân, giấy phép lái xe quân sự, giấy phép lái xe của nước ngoài); hạng giấy phép lái xe; thời hạn sử dụng của giấy phép lái xe; số phôi giấy phép lái xe; điều kiện hạn chế của giấy phép lái xe; số điểm hiện tại của giấy phép lái xe và lịch sử trừ điểm giấy phép lái xe.
+**Bổ sung khoản 15 Điều 11 - Thông tin về xe cơ giới nước ngoài do người nước ngoài điều khiển tham gia giao thông tại Việt Nam gồm:**
+Thông tin người điều khiển phương tiện: họ, tên; số định danh cá nhân hoặc hộ chiếu; ngày, tháng, năm sinh; quốc tịch; địa chỉ; số giấy phép lái xe; cơ quan cấp.
+Thông tin phương tiện: biển số xe; màu biển số xe; loại xe; nhãn hiệu; số loại; số máy; số khung; màu sơn; số chỗ ngồi hoặc đứng hoặc nằm; số hiệu giấy chứng nhận kiểm định an toàn kỹ thuật.
+Thông tin xuất nhập cảnh: cửa khẩu tạm nhập hoặc tái xuất; thời gian tạm nhập, tái xuất; cơ quan hải quan làm thủ tục tạm nhập, tái xuất; tên doanh nghiệp kinh doanh dịch vụ lữ hành quốc tế hoặc tổ chức, cá nhân nộp hồ sơ đề nghị chấp thuận đưa xe cơ giới vào Việt Nam.
+Thông tin khác về văn bản chấp thuận của cơ quan có thẩm quyền.
+**Bổ sung khoản 16 Điều 11 - Thông tin về đơn vị kinh doanh vận tải, phù hiệu xe kinh doanh vận tải gồm:**
+Thông tin về đơn vị kinh doanh vận tải: tên đơn vị, mã số doanh nghiệp, số Giấy phép kinh doanh vận tải, địa chỉ, cơ quan cấp Giấy phép kinh doanh vận tải, người điều hành vận tải, loại hình kinh doanh vận tải.
+Thông tin về phù hiệu vận tải: biển số xe, số phù hiệu, cơ quan cấp phù hiệu, thời hạn, loại hình kinh doanh vận tải.
+## Sửa đổi, bổ sung các quy định liên quan đến xe ưu tiên và xe làm nhiệm vụ khẩn cấp
+Ngoài ra, Nghị định 236/2026/NĐ-CP tiếp tục sửa đổi, bổ sung các quy định liên quan đến xe ưu tiên và xe làm nhiệm vụ khẩn cấp nhằm phù hợp với yêu cầu thực tiễn. Trong đó, Nghị định thống nhất quy định về hệ thống đèn, còi và tín hiệu ưu tiên sử dụng trên các phương tiện này.
+Cơ quan, tổ chức, cá nhân chỉ được lắp đặt thiết bị phát tín hiệu của xe ưu tiên trên các loại xe quy định tại khoản 1 Điều 27 Luật Trật tự, an toàn giao thông đường bộ (trừ đoàn xe tang) và phải có giấy phép sử dụng do cơ quan có thẩm quyền cấp; đối với xe đi làm nhiệm vụ trong tình trạng khẩn cấp theo quy định của pháp luật là xe phục vụ Ban chỉ đạo, xe phục vụ các lực lượng chức năng được huy động tham gia thực hiện nhiệm vụ khi tình trạng khẩn cấp được ban bố.
+Thiết bị phát tín hiệu của xe ưu tiên chỉ được sử dụng khi thực hiện nhiệm vụ và phải tuân thủ các quy định của pháp luật về trật tự, an toàn giao thông đường bộ.
+Nghị định có hiệu lực thi hành từ 1/7/2026./.
+  * Tham khảo thêm
+#### [Tăng thời gian lưu trữ Chứng chỉ bồi dưỡng kiến thức pháp luật giao thông đường bộ lên 50 năm](https://baochinhphu.vn/tang-thoi-gian-luu-tru-chung-chi-boi-duong-kien-thuc-phap-luat-giao-thong-duong-bo-len-50-nam-102260510221313099.htm)
+[![Tăng thời gian lưu trữ Chứng chỉ bồi dưỡng kiến thức pháp luật giao thông đường bộ lên 50 năm](https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2026/5/10/cd6b192c793df863a12c-177842586380915146239.jpg)](https://baochinhphu.vn/tang-thoi-gian-luu-tru-chung-chi-boi-duong-kien-thuc-phap-luat-giao-thong-duong-bo-len-50-nam-102260510221313099.htm)
+  * Tham khảo thêm
+#### [Đề xuất tiêu chuẩn đăng kiểm viên phương tiện giao thông đường bộ](https://baochinhphu.vn/de-xuat-tieu-chuan-dang-kiem-vien-phuong-tien-giao-thong-duong-bo-10226030316242354.htm)
+[![Đề xuất tiêu chuẩn đăng kiểm viên phương tiện giao thông đường bộ](https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2026/3/3/dk-1772529625730504488829-12-0-512-800-crop-1772529781294785925352.jpg)](https://baochinhphu.vn/de-xuat-tieu-chuan-dang-kiem-vien-phuong-tien-giao-thong-duong-bo-10226030316242354.htm)
+  * Tham khảo thêm
+#### [Xây dựng Thông tư sửa đổi về hệ thống giám sát bảo đảm an ninh, trật tự, an toàn giao thông đường bộ](https://baochinhphu.vn/xay-dung-thong-tu-sua-doi-ve-he-thong-giam-sat-bao-dam-an-ninh-trat-tu-an-toan-giao-thong-duong-bo-102260126193919789.htm)
+[![Xây dựng Thông tư sửa đổi về hệ thống giám sát bảo đảm an ninh, trật tự, an toàn giao thông đường bộ](https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2026/1/27/gs-16720486623681873119733-17694864623961840106712-0-0-437-700-crop-1769486541398677022407.jpg)](https://baochinhphu.vn/xay-dung-thong-tu-sua-doi-ve-he-thong-giam-sat-bao-dam-an-ninh-trat-tu-an-toan-giao-thong-duong-bo-102260126193919789.htm)
+  * Tham khảo thêm
+#### [Kế hoạch thực hiện Hiệp định UNECE 1958 về phương tiện giao thông đường bộ](https://baochinhphu.vn/ke-hoach-thuc-hien-hiep-dinh-unece-1958-ve-phuong-tien-giao-thong-duong-bo-102260113115558358.htm)
+[![Kế hoạch thực hiện Hiệp định UNECE 1958 về phương tiện giao thông đường bộ](https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2026/1/13/a1e3d2c2d3803ade6391-1768279524277607359757-0-34-392-661-crop-17682800799871840588639.jpg)](https://baochinhphu.vn/ke-hoach-thuc-hien-hiep-dinh-unece-1958-ve-phuong-tien-giao-thong-duong-bo-102260113115558358.htm)
+  * Tham khảo thêm
+#### [Gỡ vướng thẩm tra, thẩm định an toàn giao thông đường bộ](https://baochinhphu.vn/go-vuong-tham-tra-tham-dinh-an-toan-giao-thong-duong-bo-102251128231445041.htm)
+[![Gỡ vướng thẩm tra, thẩm định an toàn giao thông đường bộ](https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2025/11/28/tranvantuan-1764346251939604071728-0-0-476-762-crop-17643462546461104022600.jpg)](https://baochinhphu.vn/go-vuong-tham-tra-tham-dinh-an-toan-giao-thong-duong-bo-102251128231445041.htm)
+  * Tham khảo thêm
+#### [Lộ trình áp dụng quy chuẩn kỹ thuật quốc gia về khí thải xe ô tô tham gia giao thông đường bộ](https://baochinhphu.vn/lo-trinh-ap-dung-quy-chuan-ky-thuat-quoc-gia-ve-khi-thai-xe-o-to-tham-gia-giao-thong-duong-bo-102251129133604612.htm)
+[![Lộ trình áp dụng quy chuẩn kỹ thuật quốc gia về khí thải xe ô tô tham gia giao thông đường bộ](https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2025/11/29/khi-thai-176439799091646780076-45-0-645-960-crop-17643980727831752479117.jpg)](https://baochinhphu.vn/lo-trinh-ap-dung-quy-chuan-ky-thuat-quoc-gia-ve-khi-thai-xe-o-to-tham-gia-giao-thong-duong-bo-102251129133604612.htm)
+  * Tham khảo thêm
+#### [Nghị định quy định về thành lập, nguồn tài chính hình thành, quản lý, hoạt động chi, sử dụng Quỹ giảm thiểu thiệt hại tai nạn giao thông đường bộ](https://baochinhphu.vn/nghi-dinh-quy-dinh-ve-thanh-lap-nguon-tai-chinh-hinh-thanh-quan-ly-hoat-dong-chi-su-dung-quy-giam-thieu-thiet-hai-tai-nan-giao-thong-duong-bo-102251024081601311.htm)
+[![Nghị định quy định về thành lập, nguồn tài chính hình thành, quản lý, hoạt động chi, sử dụng Quỹ giảm thiểu thiệt hại tai nạn giao thông đường bộ](https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2025/10/24/an-toan-giao-thong-1761268406939205857155-0-5-400-645-crop-1761268442439264254701.jpeg)](https://baochinhphu.vn/nghi-dinh-quy-dinh-ve-thanh-lap-nguon-tai-chinh-hinh-thanh-quan-ly-hoat-dong-chi-su-dung-quy-giam-thieu-thiet-hai-tai-nan-giao-thong-duong-bo-102251024081601311.htm)
+  * Tham khảo thêm
+#### [Nghị định về Quỹ giảm thiểu thiệt hại tai nạn giao thông đường bộ](https://baochinhphu.vn/nghi-dinh-ve-quy-giam-thieu-thiet-hai-tai-nan-giao-thong-duong-bo-102251023221623674.htm)
+[![Nghị định về Quỹ giảm thiểu thiệt hại tai nạn giao thông đường bộ](https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2025/10/23/an-toan-giao-thong-1761232006579349619225-27-0-780-1204-crop-1761232297765296715774.jpg)](https://baochinhphu.vn/nghi-dinh-ve-quy-giam-thieu-thiet-hai-tai-nan-giao-thong-duong-bo-102251023221623674.htm)
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+![](https://static-cmsads.admicro.vn/cmsads/2022/03/Logo-1648245020786.jpeg)
+![](https://static-cmsads.admicro.vn/cmsads/2022/03/Logo-1648244971394.jpeg)
+![](https://static-cmsads.admicro.vn/cmsads/2026/09/Logo-Nam-A-Bankyello-1789120083994.jpeg)
+  * [ trang chủ ](https://baochinhphu.vn/ "trang chủ")
+  * [ Chính trị ](https://baochinhphu.vn/chinh-tri.htm "Chính trị")
+  * [ Kinh tế ](https://baochinhphu.vn/kinh-te.htm "Kinh tế")
+  * [ Văn hóa ](https://baochinhphu.vn/van-hoa.htm "Văn hóa")
+  * [ Xã hội ](https://baochinhphu.vn/xa-hoi.htm "Xã hội")
+  * [ Khoa giáo ](https://baochinhphu.vn/khoa-giao.htm "Khoa giáo")
+  * [ Quốc tế ](https://baochinhphu.vn/quoc-te.htm "Quốc tế")
+  * [ GÓP Ý HIẾN KẾ ](https://baochinhphu.vn/#gop-y-hien-ke "GÓP Ý HIẾN KẾ")
+
+
+© BÁO ĐIỆN TỬ CỦA CHÍNH PHỦ NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM 
+Tổng Biên tập: Nguyễn Hồng Sâm
+Giấy phép số: 102/GP-BTTTT, cấp ngày 15/04/2024.
+Trụ sở: 16 Lê Hồng Phong - Ba Đình - Hà Nội;
+Điện thoại: Văn phòng: 080.43162;Fax: 080.48924;
+Email: thongtinchinhphu@chinhphu.vn. 
+[ ![logo](https://static-cttcp.cdnchinhphu.vn/baochinhphu/image/logo-footrer-ap.png) ](https://baochinhphu.vn/ "trang chủ")
+Tải ứng dụng: 
+BÁO ĐIỆN TỬ CHÍNH PHỦ 
+[ ![app store](https://static-cttcp.cdnchinhphu.vn/baochinhphu/image/ip.png) ](https://apps.apple.com/app/b%C3%A1o-%C4%91t-ch%C3%ADnh-ph%E1%BB%A7/id6503898662 "appstore") [ ![google play](https://static-cttcp.cdnchinhphu.vn/baochinhphu/image/gg.png) ](https://play.google.com/store/apps/details?id=vn.chinhphu.baochinhphu "googleplays")
+![Quét ma QR](https://static-cttcp.cdnchinhphu.vn/thumb_w/200/baochinhphu/image/download-app-qrcode.png)
+Quét mã QR để tải
+Bản quyền thuộc Báo Điện tử Chính phủ - Cục Thông tin và Truyền thông Chính phủ. 
+Ghi rõ nguồn "Cục Thông tin và Truyền thông Chính phủ", "Báo Điện tử Chính phủ" hoặc "www.chinhphu.vn" khi phát hành lại thông tin từ các nguồn này. 
+[ ](javascript:;)
