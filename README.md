@@ -41,7 +41,13 @@ pytest -q
 
 # 3. Chạy sản phẩm
 streamlit run app.py
+
+# 4. Evaluation 4 metric + A/B (dense-only vs hybrid+RRF)
+python -m src.task11_evaluation            # kết quả: group_project/evaluation/results/
+python -m src.task11_evaluation --limit 3  # smoke test
 ```
+
+Evaluator dùng OpenAI (`EVAL_MODEL`, `EVAL_EMBEDDING_MODEL` trong `.env`, mặc định `gpt-4o-mini` và `text-embedding-3-small`) nên cần `OPENAI_API_KEY` kể cả khi generator dùng provider khác.
 
 ## Lộ trình 3 giờ
 
