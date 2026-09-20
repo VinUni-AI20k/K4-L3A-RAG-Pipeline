@@ -1,0 +1,24 @@
+{
+  "source_id": "nd163_2026",
+  "file_name": "nghi_dinh_163_2026_huong_dan_luat.pdf",
+  "file_sha256": "ac8c5e780d9b411e712217f168691674f01a695032d04f5722acb749b10a7ece",
+  "total_pages": 100,
+  "processed_pages": 100,
+  "extracted_at": "2026-09-20T08:51:35.125905+00:00",
+  "schema_version": "1.0",
+  "errors": [],
+  "landing_url": "https://chinhphu.vn/?docid=218256&pageid=27160&typegroupid=4",
+  "pdf_url": null,
+  "structuring_model": "gemini-3.5-flash-lite",
+  "document_title": "Nghị định 163/2026/NĐ-CP",
+  "document_number": "163/2026/NĐ-CP",
+  "document_type": "Nghị định",
+  "issuer": "Chính phủ",
+  "issued_date": null,
+  "effective_date": null,
+  "signer": null,
+  "legal_basis": [
+    "Luật Phòng, chống ma túy"
+  ],
+  "source_url": "https://chinhphu.vn/?docid=218256&pageid=27160&typegroupid=4"
+}

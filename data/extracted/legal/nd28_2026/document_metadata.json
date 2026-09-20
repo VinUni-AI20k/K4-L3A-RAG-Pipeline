@@ -1,0 +1,22 @@
+{
+  "source_id": "nd28_2026",
+  "file_name": "nghi_dinh_28_2026_danh_muc_ma_tuy.pdf",
+  "file_sha256": "4ad290d7ab588acc61e056c1b154a2eb4294a11f78b03eef710db333d17e11d0",
+  "total_pages": 40,
+  "processed_pages": 40,
+  "extracted_at": "2026-09-20T08:43:40.998419+00:00",
+  "schema_version": "1.0",
+  "errors": [],
+  "landing_url": "https://chinhphu.vn/?classid=1&docid=216717&pageid=27160",
+  "pdf_url": null,
+  "structuring_model": "gemini-3.5-flash-lite",
+  "document_title": "Nghị định 28/2026/NĐ-CP",
+  "document_number": "28/2026/NĐ-CP",
+  "document_type": "Nghị định",
+  "issuer": "Chính phủ",
+  "issued_date": null,
+  "effective_date": "19 tháng 01 năm 2026",
+  "signer": "CỔNG THÔNG TIN ĐIỆN TỬ CHÍNH PHỦ",
+  "legal_basis": [],
+  "source_url": "https://chinhphu.vn/?classid=1&docid=216717&pageid=27160"
+}

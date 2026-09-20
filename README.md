@@ -82,3 +82,38 @@ pytest tests/test_acceptance.py -q
 # Toàn bộ
 pytest -q
 ```
+
+## Etomidate Citation-Ready Corpus Pipeline
+
+Corpus gồm 3 PDF pháp lý chính thức và 5 bài báo về Etomidate/Pod Chill. Metadata
+canonical của cả 8 nguồn nằm tại `data/sources.json`. Luồng PDF là: PDF bất biến →
+native text theo trang → OCR Tesseract `vie+eng` khi text kém → raw page JSON →
+Gemini structured output → validation → JSONL/Markdown. Bài báo giữ raw Crawl4AI,
+SHA256, URL/ngày đăng và được chuẩn hóa riêng. Gemini chỉ cấu trúc, không phải nguồn sự thật.
+
+```bash
+pip install -e ".[dev]"
+# OCR là tùy chọn; cần cài Tesseract và language pack vie trên hệ điều hành:
+pip install -e ".[ocr]"
+cp .env.example .env
+
+# Smoke test offline 3 trang (không gọi Gemini, không OCR):
+python -m src.data_pipeline --pdf --source-id nd28_2026 --max-pages 3 --skip-ocr --skip-gemini
+
+# Chạy PDF bằng Gemini/OCR hoặc toàn corpus:
+python -m src.data_pipeline --pdf --source-id nd28_2026 --max-pages 3
+python -m src.data_pipeline --all
+```
+
+Outputs: raw pages ở `data/extracted/legal/<source_id>/`, canonical legal JSONL ở
+`data/structured/legal/`, article JSON ở `data/structured/news/`, và compatibility
+outputs ở `data/standardized/`. JSONL chứa một legal element mỗi dòng, stable ID,
+SHA256 file, page range và `legal_path`. Task 4 ưu tiên một clause/point thành một
+logical chunk và chỉ subchunk record dài.
+
+Citation được render từ metadata đã retrieve, ví dụ
+`Nghị định 28/2026/NĐ-CP — Điều 4, Khoản 2 — Trang 13`; generation chỉ được dùng
+evidence ID `[E1]`, `[E2]`, không tự sinh URL. Khi OCR lỗi, xem `data/errors.jsonl`
+và các `page_NNN.json`; có thể dùng `--skip-ocr` để kiểm tra native extraction.
+Cache/outputs dùng stable hash và ghi đè cùng path nên chạy lại không tạo duplicate;
+`--force` dành cho lần cần tái xử lý.

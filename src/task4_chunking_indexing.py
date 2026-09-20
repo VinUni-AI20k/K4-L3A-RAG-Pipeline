@@ -2,30 +2,26 @@
 Task 4 — Chunking, embedding và indexing.
 
 Hướng dẫn:
-    1. Đọc toàn bộ Markdown trong data/standardized/.
-    2. Chia văn bản bằng strategy đã chọn.
+    1. Đọc toàn bộ Markdown/JSON/JSONL trong data/standardized/.
+    2. Chia văn bản bằng strategy đã chọn (structure_aware).
     3. Embed chunks bằng một provider duy nhất.
     4. Upsert vào ChromaDB với cosine distance.
-
-Mỗi document/chunk phải theo docs/MODULE_CONTRACTS.md. ID cần ổn định để
-chạy lại pipeline không tạo dữ liệu trùng. Task 5 phải dùng chung embed_texts().
 """
 
+import json
+import os
+import re
 from pathlib import Path
+from dotenv import load_dotenv
 
+load_dotenv()
 
 STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
 CHROMA_DIR = Path(__file__).parent.parent / "chroma_db"
 
-# Giải thích lựa chọn tham số trong báo cáo nhóm.
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 CHUNKING_METHOD = "structure_aware"
-
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 EMBEDDING_PROVIDER = os.getenv("EMBEDDING_PROVIDER", "gemini")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "gemini-embedding-001")
@@ -36,11 +32,18 @@ COLLECTION_NAME = "rag_documents"
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
     """Embed danh sách text bằng provider được cấu hình trong .env (Gemini hoặc SentenceTransformer)."""
+    if not texts:
+        return []
+
     provider = os.getenv("EMBEDDING_PROVIDER", "gemini").lower()
     if provider == "gemini":
         from google import genai
+        from google.genai import types
 
         api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            raise RuntimeError("GEMINI_API_KEY is required in .env")
+
         client = genai.Client(api_key=api_key)
         model_name = os.getenv("EMBEDDING_MODEL", "gemini-embedding-001")
         response = client.models.embed_content(
@@ -71,28 +74,75 @@ def get_collection():
 
 def extract_url(content: str) -> str | None:
     """Trích xuất URL nguồn từ header Markdown nếu có."""
-    import re
     match = re.search(r"(?:\*\*Source:\*\*|Source:|URL:)\s*(https?://[^\s\)]+)", content, re.IGNORECASE)
     return match.group(1).strip() if match else None
 
 
 def load_documents() -> list[dict]:
-    """Đọc Markdown và trả về danh sách Document kèm URL nếu có."""
+    """Đọc dữ liệu chuẩn hóa (JSONL, JSON, Markdown) và trả về danh sách Document."""
     documents = []
-    for path in STANDARDIZED_DIR.rglob("*.md"):
-        doc_type = "legal" if "legal" in path.parts else "news"
-        content = path.read_text(encoding="utf-8")
-        url = extract_url(content)
+    legal_dir = STANDARDIZED_DIR / "legal"
+    news_dir = STANDARDIZED_DIR / "news"
+
+    legal_files = list(legal_dir.glob("*.jsonl")) if legal_dir.exists() else []
+    news_files = list(news_dir.glob("*.json")) if news_dir.exists() else []
+
+    # Đọc cấu trúc pháp luật chi tiết nếu có
+    for path in sorted(legal_files):
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            x = json.loads(line)
+            m = {
+                "source": x.get("issuer") or x.get("document_title") or x.get("file_name") or path.name,
+                "title": x.get("document_title") or x.get("source_id") or path.stem,
+                "doc_type": "legal",
+                "url": x.get("source_url"),
+                "document_number": x.get("document_number"),
+                "article_number": x.get("article_number"),
+                "clause_number": x.get("clause_number"),
+            }
+            documents.append({
+                "id": x["id"],
+                "content": x.get("normalized_text") or x.get("content", ""),
+                "metadata": m,
+            })
+
+    # Đọc tin tức JSON có metadata đầy đủ nếu có
+    for path in sorted(news_files):
+        x = json.loads(path.read_text(encoding="utf-8"))
+        m = {
+            "source": x.get("publisher") or path.name,
+            "title": x.get("title") or path.stem,
+            "doc_type": "news",
+            "url": x.get("canonical_url") or x.get("url"),
+        }
         documents.append({
-            "id": path.relative_to(STANDARDIZED_DIR).as_posix(),
-            "content": content,
-            "metadata": {
-                "source": path.name,
-                "title": path.stem,
-                "doc_type": doc_type,
-                "url": url,
-            },
+            "id": x.get("source_id") or path.stem,
+            "content": x.get("content") or x.get("content_markdown", ""),
+            "metadata": m,
         })
+
+    # Đọc các file .md chuẩn nếu chưa được đọc qua jsonl/json
+    canonical = {p.stem for p in legal_files + news_files}
+    if STANDARDIZED_DIR.exists():
+        for path in STANDARDIZED_DIR.rglob("*.md"):
+            if path.stem in canonical:
+                continue
+            doc_type = "legal" if "legal" in path.parts else "news"
+            content = path.read_text(encoding="utf-8")
+            url = extract_url(content)
+            documents.append({
+                "id": path.relative_to(STANDARDIZED_DIR).as_posix(),
+                "content": content,
+                "metadata": {
+                    "source": path.name,
+                    "title": path.stem,
+                    "doc_type": doc_type,
+                    "url": url,
+                },
+            })
+
     return documents
 
 
@@ -100,7 +150,6 @@ def chunk_documents(documents: list[dict]) -> list[dict]:
     """Chia Document thành chunks theo cấu trúc pháp luật (Điều, Chương, Khoản)."""
     from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-    # Structure-aware: Ưu tiên ngắt theo ranh giới Điều, Chương trước khi cắt theo đoạn
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=CHUNK_SIZE,
         chunk_overlap=CHUNK_OVERLAP,
@@ -133,6 +182,8 @@ def chunk_documents(documents: list[dict]) -> list[dict]:
 
 def embed_chunks(chunks: list[dict]) -> list[dict]:
     """Thêm embedding vào từng chunk."""
+    if not chunks:
+        return []
     vectors = embed_texts([chunk["content"] for chunk in chunks])
     for chunk, vector in zip(chunks, vectors):
         chunk["embedding"] = vector
@@ -141,12 +192,19 @@ def embed_chunks(chunks: list[dict]) -> list[dict]:
 
 def index_to_vectorstore(chunks: list[dict]) -> None:
     """Upsert chunks vào ChromaDB."""
+    if not chunks:
+        return
     collection = get_collection()
+    # Loại bỏ giá trị None trong metadata vì ChromaDB có thể reject None
+    clean_metadatas = [
+        {k: v for k, v in chunk["metadata"].items() if v is not None}
+        for chunk in chunks
+    ]
     collection.upsert(
         ids=[chunk["id"] for chunk in chunks],
         documents=[chunk["content"] for chunk in chunks],
         embeddings=[chunk["embedding"] for chunk in chunks],
-        metadatas=[chunk["metadata"] for chunk in chunks],
+        metadatas=clean_metadatas,
     )
 
 
