@@ -1,0 +1,54 @@
+---
+title: "Hướng dẫn TUYỂN SINH ĐẠI HỌC, CAO ĐẲNG năm 2026"
+source: "01_toan_van_cong_van_2304_bgddt_gddh_huong_dan_tuyen_sinh_dai_hoc_cao_dang_2026.json"
+doc_type: "news"
+url: "https://xaydungchinhsach.chinhphu.vn/toan-van-cong-van-2304-bgddt-gddh-huong-dan-tuyen-sinh-dai-hoc-cao-dang-2026-119260505052505936.htm"
+date_published: "2026-07-01"
+date_crawled: "2026-09-20T06:58:09.919220+00:00"
+publisher: "Cổng Thông tin điện tử Chính phủ"
+---
+# Hướng dẫn TUYỂN SINH ĐẠI HỌC, CAO ĐẲNG năm 2026
+
+## Hướng dẫn tuyển sinh đại học, cao đẳng 2026
+
+Bộ Giáo dục và Đào tạo (GDĐT) đã ban hành văn bản hướng dẫn tuyển sinh đại học, tuyển sinh cao đẳng năm 2026, áp dụng thống nhất trên Hệ thống hỗ trợ tuyển sinh chung. Hướng dẫn năm nay tiếp tục đẩy mạnh chuyển đổi số, thực hiện đăng kí xét tuyển hoàn toàn trực tuyến, đồng thời tăng cường yêu cầu về tính chủ động và trách nhiệm của thí sinh.
+
+#### Đăng kí trên Hệ thống – một quy trình chung cho tất cả thí sinh
+
+Theo hướng dẫn, tất cả thí sinh, bao gồm cả thí sinh xét tuyển thẳng, bắt buộc phải đăng kí xét tuyển trực tuyến trên Hệ thống hỗ trợ tuyển sinh chung của Bộ GDĐT hoặc Cổng dịch vụ công quốc gia (đến thời điểm hiện tại). Toàn bộ nguyện vọng xét tuyển của thí sinh đều phải được đăng kí trên Hệ thống để xử lí chung.
+
+Quy định này áp dụng thống nhất kể cả trong trường hợp thí sinh đã tham gia xét tuyển theo các phương thức riêng của cơ sở đào tạo (nếu có). Việc xử lí nguyện vọng tập trung nhằm bảo đảm nguyên tắc mỗi thí sinh chỉ trúng tuyển một nguyện vọng cao nhất, góp phần nâng cao tính công bằng, minh bạch trong tuyển sinh.
+
+Tất cả thí sinh bắt buộc phải đăng kí xét tuyển trực tuyến trên Hệ thống hỗ trợ tuyển sinh chung của Bộ GDĐT hoặc Cổng dịch vụ công quốc gia
+
+Thí sinh được đăng kí tối đa 15 nguyện vọng và sắp xếp theo thứ tự ưu tiên từ cao xuống thấp, đối với các thí sinh đăng kí xét tuyển vào các ngành đào tạo giáo viên, các cơ sở đào tạo chỉ xét tuyển các nguyện vọng từ 01 đến 05. Thứ tự nguyện vọng có ý nghĩa quyết định đến kết quả trúng tuyển.
+
+#### Mốc thời gian “then chốt” thí sinh không được bỏ lỡ
+
+Thí sinh thực hiện đăng kí, điều chỉnh, bổ sung nguyện vọng từ ngày 02/7 đến 17h00 ngày 14/7/2026. Trong khoảng thời gian này, thí sinh được phép thay đổi nhiều lần, nhưng phải hoàn tất trước thời hạn quy định.
+
+Ngay sau đó, từ ngày 15/7 đến 17h00 ngày 21/7/2026, thí sinh nộp lệ phí xét tuyển trực tuyến theo số lượng nguyện vọng đã đăng kí.
+
+Sau khi có kết quả trúng tuyển, tất cả thí sinh, kể cả thí sinh trúng tuyển thẳng, phải xác nhận nhập học trực tuyến trước 17h00 ngày 21/8/2026 nếu có nguyện vọng theo học. Đây là bước bắt buộc để hoàn tất quá trình trúng tuyển.
+
+#### Chủ động, chính xác – yêu cầu xuyên suốt với mỗi thí sinh
+
+Bộ GDĐT nhấn mạnh yêu cầu thí sinh phải khai báo trung thực, chính xác và chịu trách nhiệm về toàn bộ thông tin đã cung cấp trên Hệ thống. Các thông tin liên quan đến khu vực ưu tiên, đối tượng ưu tiên, chứng chỉ… cần được rà soát kĩ và có minh chứng đầy đủ.
+
+Thí sinh cần sử dụng tài khoản được cấp để kiểm tra thông tin học tập (học bạ) trên Hệ thống và kịp thời đề nghị điều chỉnh nếu phát hiện sai sót trước thời hạn quy định.
+
+Đối với thí sinh tự do chưa có tài khoản, việc đăng kí thông tin cá nhân để được cấp tài khoản phải hoàn thành trong khoảng thời gian từ ngày 01/5 đến 20/5/2026.
+
+#### Tăng hỗ trợ, giảm thủ tục – bảo đảm thuận lợi tối đa cho thí sinh
+
+Để hỗ trợ thí sinh, Bộ GDĐT yêu cầu các sở GDĐT chỉ đạo các trường THPT bố trí phòng máy tính có kết nối internet, đồng thời cử cán bộ trực hướng dẫn trong suốt thời gian tuyển sinh.
+
+Đáng chú ý, việc xác nhận thông tin ưu tiên của thí sinh được thực hiện trên cơ sở kết nối với cơ sở dữ liệu quốc gia về dân cư, giúp giảm yêu cầu nộp giấy tờ và hạn chế sai sót trong xác nhận thông tin.
+
+Việc tiếp tục vận hành Hệ thống xét tuyển chung với quy trình đăng kí hoàn toàn trực tuyến không chỉ bảo đảm công bằng, minh bạch trong tuyển sinh mà còn đặt ra yêu cầu cao hơn đối với sự chủ động, trách nhiệm của mỗi thí sinh trong việc lựa chọn và đăng kí nguyện vọng.
+
+## Toàn văn Công văn 2304/BGDĐT-GDĐH hướng dẫn tuyển sinh đại học, tuyển sinh cao đẳng 2026
+
+- Tham khảo thêm TUYỂN SINH 2026: Các MỐC THỜI GIAN quan trọng cần nhớ
+
+#### TUYỂN SINH 2026: Các MỐC THỜI GIAN quan trọng cần nhớ
