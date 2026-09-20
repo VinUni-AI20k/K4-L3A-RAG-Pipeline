@@ -1,6 +1,19 @@
-# Day 8 — RAG Pipeline
+# RAG Chatbot — Pháp luật Hộ kinh doanh
 
-## Mục tiêu
+Chatbot RAG trả lời câu hỏi về pháp luật hộ kinh doanh Việt Nam (đăng ký, thuế,
+hóa đơn điện tử, thương mại điện tử), dựa trên **4 văn bản luật hiện hành**
+(Nghị định 168/2025/NĐ-CP, 70/2025/NĐ-CP, Nghị quyết 198/2025/QH15, Luật
+122/2025/QH15) và **6 bài báo** về thuế hộ kinh doanh 2025-2026, thu thập từ
+nguồn chính thức (chinhphu.vn) và báo chí công khai (Tuổi Trẻ, VnExpress).
+
+Pipeline: hybrid retrieval (dense + BM25 → RRF), fallback PageIndex, generation
+có citation bắt buộc và safe refusal, chatbot Streamlit, đánh giá bằng golden
+dataset 15 câu + 4 metric ragas (dense-only vs hybrid+RRF). Kết quả đánh giá
+đầy đủ: [group_project/evaluation/RESULT.md](group_project/evaluation/RESULT.md).
+
+---
+
+## Mục tiêu (đề bài gốc)
 
 Mỗi nhóm xây dựng một chatbot RAG trả lời câu hỏi từ bộ tài liệu do nhóm thu thập. Sản phẩm phải có hybrid retrieval, citation, giao diện chat và báo cáo đánh giá.
 
@@ -40,8 +53,13 @@ python -m src.task4_chunking_indexing
 pytest -q
 
 # 3. Chạy sản phẩm
-streamlit run app.py
+python -m streamlit run app.py
 ```
+
+> Dùng `python -m streamlit` (không gọi thẳng `streamlit`) để chắc chắn chạy
+> đúng interpreter của `.venv` — nếu máy có nhiều bản Python, lệnh `streamlit`
+> trên PATH có thể trỏ nhầm sang môi trường khác và báo lỗi kết nối API dù
+> `.env` đã điền đúng key.
 
 ## Lộ trình 3 giờ
 

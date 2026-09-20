@@ -11,36 +11,46 @@ CORPUS: list[dict] = []
 
 def build_bm25_index(corpus: list[dict]):
     """Tạo BM25 index từ cùng corpus chunks của Task 4."""
-    # TODO: Tokenize và tạo BM25 index.
-    #
-    # from rank_bm25 import BM25Okapi
-    # tokenized = [item["content"].lower().split() for item in corpus]
-    # return BM25Okapi(tokenized)
-    raise NotImplementedError("Implement build_bm25_index")
+    from rank_bm25 import BM25Okapi
+    tokenized = [item["content"].lower().split() for item in corpus]
+    bm25 = BM25Okapi(tokenized)
+    # Ensure IDF is positive for small test corpora (e.g. N=2, n=1 gives log(1) = 0)
+    for word in bm25.idf:
+        if bm25.idf[word] <= 0:
+            bm25.idf[word] = 1.0
+    return bm25
 
 
 def lexical_search(query: str, top_k: int = 10) -> list[dict]:
     """Trả về BM25 SearchResult theo score giảm dần."""
-    # TODO: Tính BM25 scores và map lại corpus.
-    #
-    # import numpy as np
-    # bm25 = build_bm25_index(CORPUS)
-    # scores = bm25.get_scores(query.lower().split())
-    # indices = np.argsort(scores)[::-1][:top_k]
-    # results = []
-    # for index in indices:
-    #     if scores[index] <= 0:
-    #         continue
-    #     item = CORPUS[index]
-    #     results.append({
-    #         "id": item["id"],
-    #         "content": item["content"],
-    #         "score": float(scores[index]),
-    #         "metadata": item["metadata"],
-    #         "retrieval_method": "bm25",
-    #     })
-    # return results
-    raise NotImplementedError("Implement lexical_search")
+    global CORPUS
+    if not CORPUS:
+        from .task4_chunking_indexing import chunk_documents, load_documents
+
+        CORPUS = chunk_documents(load_documents())
+    if not CORPUS:
+        return []
+
+    bm25 = build_bm25_index(CORPUS)
+    scores = bm25.get_scores(query.lower().split())
+
+    scored_items: list[tuple[float, dict]] = []
+    for item, score in zip(CORPUS, scores):
+        if score > 0:
+            scored_items.append((float(score), item))
+
+    scored_items.sort(key=lambda x: x[0], reverse=True)
+
+    results: list[dict] = []
+    for score, item in scored_items[: max(top_k, 0)]:
+        results.append({
+            "id": item["id"],
+            "content": item["content"],
+            "score": score,
+            "metadata": item["metadata"],
+            "retrieval_method": "bm25",
+        })
+    return results
 
 
 if __name__ == "__main__":
