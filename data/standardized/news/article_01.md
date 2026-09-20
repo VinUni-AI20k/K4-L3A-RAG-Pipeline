@@ -1,0 +1,17 @@
+# Động năng
+
+**Source URL:** https://vi.wikipedia.org/wiki/%C4%90%E1%BB%99ng_n%C4%83ng
+
+**Crawled:** 2026-09-20T08:10:37.220350+00:00
+
+**Document type:** public article
+
+**Content scope:** Phần mở đầu của bài viết công khai
+
+**License:** CC BY-SA; xem giấy phép và lịch sử tác giả tại URL nguồn
+
+---
+
+Động năng (Tiếng Anh: kinetic energy) của một vật là năng lượng mà nó có được từ chuyển động của nó. Nó được định nghĩa là công cần thực hiện để gia tốc một vật với khối lượng cho trước từ trạng thái nghỉ tới vận tốc hiện thời của nó. Sau khi đạt được năng lượng này bởi gia tốc của nó, vật sẽ duy trì động năng này trừ khi tốc độ của nó thay đổi.
+Tốc độ, và do đó động năng của một vật duy nhất phụ thuộc hệ quy chiếu (có tính tương đối): nó có thể nhận bất kỳ giá trị dương nào, bởi việc chọn hệ quy chiếu quán tính thích hợp. Ví dụ, một viên đạn bay qua một quan sát viên có động năng trong hệ quy chiếu gắn với quan sát viên đó. Viên đạn giống vậy sẽ đứng yên trong quan điểm của một quan sát viên khác chuyển động cùng vận tốc với viên đạn, vì vậy nó có động năng bằng không. Trái lại, tổng động năng của một hệ vật không thể giảm tới không bởi cách chọn hệ quy chiếu quán tính thích hợp, trừ khi tất cả các vật đó có cùng vận tốc. Trong bất kỳ trường hợp khác, tổng động năng có giá trị nhỏ nhất khác không, và không có hệ quy chiếu quán tính nào có thể được chọn để tất cả vật đều đứng yên. Động năng nhỏ nhất này góp phần vào khối lượng bất biến của hệ, và nó độc lập với hệ quy chiếu.
+Trong cơ học cổ điển, động năng của một vật không quay có khối lượng m di chuyển với tốc độ v là ½ mv². Trong cơ học tương đối tính, điều này chỉ còn xấp xỉ đúng khi v rất nhỏ so với tốc độ ánh sáng.

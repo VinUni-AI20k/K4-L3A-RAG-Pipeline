@@ -27,6 +27,12 @@ python -m src.task2_crawl_news
 
 Trong repo có setup sẵn Crawl4AI, các bạn tùy ý sử dụng công cụ khác của mình
 
+### Dữ liệu nhóm: Vật lí 10–12 (Kết nối tri thức với cuộc sống)
+
+- Ba PDF sách giáo khoa đã được đặt thủ công trong `data/landing/legal/`. Tên thư mục `legal` là tên cũ của bộ khung; ở đề tài này các file là sách giáo khoa, không phải văn bản pháp luật. Task 1 kiểm tra sự hiện diện và định dạng PDF.
+- Năm trang Vật lí công khai được thu thập riêng vào `data/landing/news/article_01.json` đến `article_05.json` bằng Task 2. JSON lưu URL, tiêu đề, thời điểm thu thập, phần mở đầu của trang và thông tin giấy phép. Chúng là nguồn bổ sung, không phải bản sao của năm bài đã gộp trong PDF.
+- Danh mục và tình trạng nguồn nằm tại `data/landing/SOURCES.md`. Các PDF là ảnh scan, nên cần OCR và kiểm tra công thức ở bước 4 trước khi tạo Markdown.
+
 ## 4. Chuẩn hóa Markdown
 
 Hoàn thiện Task 3 rồi chạy:
@@ -35,7 +41,18 @@ Hoàn thiện Task 3 rồi chạy:
 python -m src.task3_convert_markdown
 ```
 
-Trong repo có setup sẵn marktidown, các bạn tùy ý sử dụng công cụ khác
+Với corpus Vật lí của nhóm, ba PDF là ảnh scan nên Task 3 dùng `pdfplumber` và Tesseract OCR tiếng Việt; chỉ dùng lớp chữ PDF khi có thể trích xuất. Đầu ra `data/standardized/legal/*.md` có metadata sách và mốc `PDF page` để truy nguồn. Năm JSON được chuyển sang `data/standardized/news/*.md`, giữ URL, thời điểm thu thập và giấy phép.
+
+Trên Windows, cần Tesseract và mô hình `vie.traineddata` trong `.cache/tessdata/` (hoặc đặt `TESSERACT_CMD` và `TESSDATA_DIR`). Có thể cài và tải mô hình từ [tessdata_fast chính thức](https://github.com/tesseract-ocr/tessdata_fast/blob/main/vie.traineddata):
+
+```powershell
+winget install --id UB-Mannheim.TesseractOCR --exact --accept-package-agreements --accept-source-agreements
+New-Item -ItemType Directory -Path .cache\tessdata -Force
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/main/vie.traineddata -OutFile .cache\tessdata\vie.traineddata
+.\.venv\Scripts\python.exe -m src.task3_convert_markdown
+```
+
+Kiểm tra thủ công một số trang của mỗi sách, đặc biệt là công thức, bảng và dấu tiếng Việt vì OCR không đảm bảo chính xác tuyệt đối.
 
 ## 5. Chunk, embedding và index
 
