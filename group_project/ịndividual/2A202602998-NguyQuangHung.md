@@ -1,42 +1,55 @@
-# Individual contribution report
+# Individual Contribution Report
+
+---
 
 ## Thông tin
 
-- Họ và tên: Nguỵ Quang Hùng
-- Mã học viên: 2A202602998
-- Nhóm: K4-L3A
-- Repository/branch:  tài khoản github: diggoryQH
+- **Họ và tên:** Ngụy Quang Hùng
+- **Mã học viên:** 2A202602998
+- **Nhóm:** K4-L3A
+- **Repository/branch:** K4-L3A-RAG-Pipeline-MegaLive / quanghung (github user: diggoryQH)
+
+---
 
 ## Phần việc đã thực hiện
 
-| Module/deliverable    | Việc tôi trực tiếp làm                                        | File/commit/PR                   | Trạng thái |
-| --------------------- | ------------------------------------------------------------------ | -------------------------------- | ------------ |
-| Task 1: Collect Legal | Tìm kiếm và tải mấy file PDF quy chế tuyển sinh, học phí. | Thư mục`data/landing/legal/` | Done         |
-| Task 7: Fallback      | Bắt lỗi nếu user hỏi linh tinh thì chatbot phải chặn lại.  | `src/task7_fallback.py`        | Done         |
+| Module/deliverable                | Việc tôi trực tiếp làm                                                                                                | File/commit/PR                      | Trạng thái |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ------------ |
+| Thu thập tài liệu PDF (Task 1) | Lên web PTIT tải 3 file điểm chuẩn, học phí, thông báo tuyển sinh bản PDF vào thư mục`data/landing/legal/` | `src/task1_collect_legal_docs.py` | Hoàn thành |
+| Thuật toán RRF (Task 7)         | Code hàm`rerank_rrf()` nhận list kết quả của Dense và BM25, cộng điểm theo công thức `1 / (k + rank)`       | `src/task7_reranking.py`          | Hoàn thành |
+| Unit Test RRF                     | Chạy pytest để test hàm RRF trả về đúng chuẩn, đảm bảo không bị trùng ID giữa 2 list kết quả             | `tests/test_contracts.py`         | Hoàn thành |
+
+---
 
 ## Quyết định kỹ thuật quan trọng
 
-1. **Quyết định:** Lấy dữ liệu tuyển sinh chính thức năm 2026 của PTIT từ trang web trường.
-   **Lý do/evidence:** Nguồn chính thống nhất, sinh viên hay thắc mắc về điểm chuẩn và học phí nên em gom 3 file PDF này.
-   **Trade-off:** Dữ liệu khá ít và ngắn nên pipeline xử lý nhàn, nhưng test mở rộng thì khó.
-2. **Quyết định:** Set cái `SCORE_THRESHOLD = 0.3` để làm fallback.
-   **Lý do/evidence:** Test thử thấy dưới 0.3 toàn là mấy kết quả không liên quan gì đến câu hỏi.
-   **Trade-off:** Nhiều lúc người dùng hỏi hơi tắt, điểm cosine thấp một xíu bị chặn nhầm luôn không thèm trả lời.
+1. **Quyết định:** Tải PDF bằng tay thay vì code tool tự tải.
+   **Lý do/evidence:** Website của trường hay chặn script crawl, link file PDF lại không có API cố định. Có đúng 3 file văn bản pháp lý quan trọng nhất nên tôi quyết định tải tay lưu vào thư mục cho an toàn, tránh lỗi mạng ảnh hưởng cả dự án.
+   **Trade-off:** Sẽ không thể tự động update có file mới nếu trường ra công văn sửa đổi đột xuất.
+2. **Quyết định:** Chọn thông số k=60 làm mặc định cho thuật toán RRF.
+   **Lý do/evidence:** Vì bộ dữ liệu bài tập lớn của nhóm khá nhỏ, tôi dùng k=60 theo kinh nghiệm cấu hình phổ biến trên mạng. Chạy test A/B thử thấy có cải thiện điểm.
+   **Trade-off:** Chưa có thời gian để viết vòng lặp test dò tìm tham số k tối ưu nhất cho riêng bộ dữ liệu này.
+
+---
 
 ## Kiểm thử và kết quả
 
-- Test hoặc query tôi đã dùng: Thử gõ mấy câu kiểu "thời tiết hôm nay thế nào", "tối nay ăn gì".
-- Kết quả trước/sau nếu có: Lúc đầu bot vẫn ráng chém gió từ thông tin tuyển sinh, sau khi ép threshold vào thì nó báo lỗi gọn gàng "không xác minh được thông tin".
-- Lỗi đã phát hiện và cách xử lý: Lỗi để file dummy quá ngắn làm fail test, em đã fix bằng cách xóa file dummy đi chỉ xài đồ thật.
+- **Test đã dùng:** Chạy lệnh `pytest tests/test_contracts.py -q -k "rerank"`
+- **Kết quả:** Code RRF chạy pass, giúp nâng điểm Faithfulness của hệ thống từ 0.69 (chỉ dùng Dense) lên 0.79.
+- **Lỗi đã phát hiện và cách xử lý:** Lúc đầu code bị lỗi khi có cùng một đoạn văn (chunk) xuất hiện ở cả kết quả Dense và BM25 thì điểm bị tính đè lên nhau sai. Đã sửa lại code để gom nhóm các ID trùng lặp lại trước khi cộng dồn tổng điểm.
+
+---
 
 ## Điều còn hạn chế
 
-- Một hạn chế cụ thể của phần tôi làm: Tải file PDF toàn làm bằng tay, bấm nút download thủ công.
-- Nếu có thêm thời gian, thay đổi đầu tiên tôi sẽ thực hiện: Viết hẳn tool tự động chui vào trang PTIT tải hết PDF về cho xịn xò.
+- Việc kết hợp Dense và BM25 hiện tại đang bắt chương trình chạy tuần tự từng cái một nên thời gian truy vấn bị chậm đi một chút.
+- Nếu có thời gian, thay đổi đầu tiên tôi sẽ làm là cấu hình thêm thư viện async để 2 cục tìm kiếm chạy song song rồi mới dùng RRF gom lại, sẽ tối ưu được tốc độ.
+
+---
 
 ## Xác nhận đóng góp
 
 Tôi xác nhận nội dung trên phản ánh đúng phần việc của mình và có thể giải thích hoặc chạy lại trong buổi demo.
 
-- Ngày: 20/09/2026
-- Tên thành viên: Nguỵ Quang Hùng
+- **Ngày:** 2026-09-20
+- **Tên thành viên:** Ngụy Quang Hùng

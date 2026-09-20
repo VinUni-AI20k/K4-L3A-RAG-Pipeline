@@ -20,7 +20,7 @@
 
 *Hai cấu hình dùng chung prompt, dataset và LLM, chỉ khác phương pháp truy xuất.*
 
-## Điểm tổng quan (overall scores)
+## Điểm tổng quan
 
 | Metric | Cấu hình A | Cấu hình B | Chênh lệch (B-A) |
 | ------ | ---------: | ---------: | --------------: |
@@ -30,13 +30,13 @@
 | Context precision | 0.50 | 0.54 | +0.04 |
 | **Trung bình** | 0.69 | 0.74 | +0.05 |
 
-## Phân tích so sánh A/B (a/b comparison)
+## Phân tích so sánh A/B
 
 - **Kết luận:** Cấu hình B (Hybrid + RRF) tốt hơn rõ rệt. 
 - **Lý do thực tế:** Các câu hỏi về tuyển sinh PTIT có nhiều mã ngành, con số học phí cụ thể (ví dụ "7320104", "23 triệu"). Dense search thuần túy bắt các từ khóa này không tốt bằng BM25. Khi gộp bằng RRF, ta lấy được ưu điểm của cả hai, giúp chatbot trả lời chính xác số liệu hơn.
 - **Đánh đổi:** Cấu hình B tốn thời gian chạy BM25 trên toàn bộ chunks nên chậm hơn một chút, nhưng chưa đáng kể vì bộ dữ liệu hiện tại còn mỏng.
 
-## Các ca kém nhất (worst performers)
+## Các ca kém nhất (Worst performers)
 
 | # | Câu hỏi | Cấu hình | Faithfulness | Relevance | Recall | Precision | Lỗi ở đâu? | Giải thích thực tế |
 | -: | ------- | -------- | -----------: | --------: | -----: | --------: | ------------- | --------------- |
@@ -44,7 +44,7 @@
 | 2 | Corpus có bao nhiêu tài liệu legal PDF gốc? | Hybrid | 0.00 | 0.00 | 0.50 | 0.20 | Retrieval | RAG đọc nội dung chữ (chunks), không đọc được cấu trúc thư mục ổ cứng nên không thể đếm số lượng file PDF. Câu này nằm ngoài khả năng của bộ RAG hiện tại. |
 | 3 | Nếu câu hỏi ngoài phạm vi corpus, chatbot nên làm gì? | Hybrid | 0.50 | 1.00 | 0.00 | 0.00 | Retrieval | System prompt định nghĩa luật từ chối nằm trong code hệ thống chứ không nằm trong tài liệu cơ sở dữ liệu. Retriever tìm không thấy nên recall = 0, nhưng LLM vẫn hiểu và tự sinh câu trả lời hợp lý. |
 
-## Khuyến nghị cải tiến (recommendations)
+## Khuyến nghị cải tiến
 
 | Ưu tiên | Việc cần làm | Lý do thực tế | Cách kiểm tra |
 | ------: | --------- | --------------------------- | --------------- |
