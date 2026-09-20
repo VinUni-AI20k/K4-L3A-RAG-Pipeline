@@ -1,0 +1,164 @@
+[
+  {
+    "id": "legal-001",
+    "question": "Theo Luật Du lịch 2017, du lịch được định nghĩa như thế nào?",
+    "expected_answer": "Du lịch là các hoạt động liên quan đến chuyến đi của con người ngoài nơi cư trú thường xuyên trong thời gian không quá một năm liên tục, nhằm tham quan, nghỉ dưỡng, giải trí, tìm hiểu, khám phá tài nguyên du lịch hoặc kết hợp mục đích hợp pháp khác.",
+    "expected_context": "Du lịch là các hoạt động có liên quan đến chuyến đi của con người ngoài nơi cư trú thường xuyên trong thời gian không quá 01 năm liên tục nhằm đáp ứng nhu cầu tham quan, nghỉ dưỡng, giải trí, tìm hiểu, khám phá tài nguyên du lịch hoặc kết hợp với mục đích hợp pháp khác.",
+    "source": "legal/luat_du_lich_09_2017_qh14.md",
+    "category": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "id": "legal-002",
+    "question": "Luật Du lịch 2017 định nghĩa du lịch cộng đồng ra sao?",
+    "expected_answer": "Du lịch cộng đồng là loại hình phát triển trên cơ sở các giá trị văn hóa của cộng đồng, do cộng đồng dân cư quản lý, tổ chức khai thác và hưởng lợi.",
+    "expected_context": "Du lịch cộng đồng là loại hình du lịch được phát triển trên cơ sở các giá trị văn hóa của cộng đồng, do cộng đồng dân cư quản lý, tổ chức khai thác và hưởng lợi.",
+    "source": "legal/luat_du_lich_09_2017_qh14.md",
+    "category": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "id": "legal-003",
+    "question": "Khách du lịch có những quyền gì liên quan đến an toàn và bồi thường thiệt hại?",
+    "expected_answer": "Khách du lịch được bảo đảm an toàn về tính mạng, sức khỏe và tài sản; được cứu hộ, cứu nạn khi khẩn cấp; và được bồi thường thiệt hại theo quy định pháp luật.",
+    "expected_context": "Khách du lịch được đối xử bình đẳng; được bảo đảm an toàn về tính mạng, sức khỏe, tài sản khi sử dụng dịch vụ du lịch; được cứu hộ, cứu nạn trong trường hợp khẩn cấp; được bồi thường thiệt hại theo quy định của pháp luật.",
+    "source": "legal/luat_du_lich_09_2017_qh14.md",
+    "category": "tourist_rights",
+    "difficulty": "medium"
+  },
+  {
+    "id": "legal-004",
+    "question": "Khách du lịch có những nghĩa vụ chính nào theo Điều 12 Luật Du lịch?",
+    "expected_answer": "Khách du lịch phải tuân thủ pháp luật và ứng xử văn minh; thực hiện nội quy tại điểm đến; thanh toán tiền dịch vụ, phí và lệ phí; đồng thời bồi thường thiệt hại theo pháp luật dân sự.",
+    "expected_context": "Điều 12 quy định khách du lịch phải tuân thủ pháp luật, ứng xử văn minh, tôn trọng phong tục và bảo vệ tài nguyên, môi trường; thực hiện nội quy; thanh toán tiền dịch vụ, phí, lệ phí và các khoản thu khác; bồi thường thiệt hại theo pháp luật dân sự.",
+    "source": "legal/luat_du_lich_09_2017_qh14.md",
+    "category": "tourist_obligations",
+    "difficulty": "medium"
+  },
+  {
+    "id": "legal-005",
+    "question": "Điểm du lịch cần đáp ứng những điều kiện nào để được công nhận?",
+    "expected_answer": "Điểm du lịch phải có tài nguyên du lịch và ranh giới xác định; có hạ tầng, dịch vụ cần thiết; đồng thời đáp ứng yêu cầu về an ninh, trật tự, an toàn xã hội và bảo vệ môi trường.",
+    "expected_context": "Điều kiện công nhận điểm du lịch gồm: có tài nguyên du lịch, có ranh giới xác định; có kết cấu hạ tầng, dịch vụ cần thiết bảo đảm phục vụ khách du lịch; đáp ứng điều kiện về an ninh, trật tự, an toàn xã hội, bảo vệ môi trường.",
+    "source": "legal/luat_du_lich_09_2017_qh14.md",
+    "category": "tourism_site",
+    "difficulty": "easy"
+  },
+  {
+    "id": "legal-006",
+    "question": "Doanh nghiệp có vốn đầu tư nước ngoài được kinh doanh dịch vụ lữ hành trong phạm vi nào?",
+    "expected_answer": "Doanh nghiệp có vốn đầu tư nước ngoài chỉ được kinh doanh lữ hành quốc tế phục vụ khách quốc tế đến Việt Nam, trừ khi điều ước quốc tế mà Việt Nam là thành viên quy định khác.",
+    "expected_context": "Doanh nghiệp có vốn đầu tư nước ngoài chỉ được kinh doanh dịch vụ lữ hành quốc tế phục vụ khách du lịch quốc tế đến Việt Nam, trừ trường hợp điều ước quốc tế mà Việt Nam là thành viên có quy định khác.",
+    "source": "legal/luat_du_lich_09_2017_qh14.md",
+    "category": "travel_business",
+    "difficulty": "medium"
+  },
+  {
+    "id": "legal-007",
+    "question": "Điều kiện kinh doanh dịch vụ lữ hành nội địa gồm những gì?",
+    "expected_answer": "Doanh nghiệp phải được thành lập hợp pháp, ký quỹ kinh doanh lữ hành nội địa tại ngân hàng và có người phụ trách tốt nghiệp trung cấp trở lên chuyên ngành lữ hành; nếu học chuyên ngành khác thì phải có chứng chỉ nghiệp vụ điều hành du lịch nội địa.",
+    "expected_context": "Điều kiện kinh doanh dịch vụ lữ hành nội địa gồm: là doanh nghiệp được thành lập theo pháp luật doanh nghiệp; ký quỹ tại ngân hàng; người phụ trách phải tốt nghiệp trung cấp trở lên chuyên ngành lữ hành hoặc có chứng chỉ nghiệp vụ điều hành du lịch nội địa nếu tốt nghiệp chuyên ngành khác.",
+    "source": "legal/luat_du_lich_09_2017_qh14.md",
+    "category": "travel_business",
+    "difficulty": "medium"
+  },
+  {
+    "id": "legal-008",
+    "question": "Mức ký quỹ kinh doanh lữ hành nội địa và lữ hành đưa khách ra nước ngoài là bao nhiêu?",
+    "expected_answer": "Lữ hành nội địa phải ký quỹ 100 triệu đồng; kinh doanh lữ hành đối với khách du lịch ra nước ngoài phải ký quỹ 500 triệu đồng.",
+    "expected_context": "Mức ký quỹ kinh doanh dịch vụ lữ hành nội địa là 100.000.000 đồng. Mức ký quỹ kinh doanh dịch vụ lữ hành đối với khách du lịch ra nước ngoài là 500.000.000 đồng.",
+    "source": "legal/nghi_dinh_168_2017_nd_cp_huong_dan_luat_du_lich.md",
+    "category": "travel_deposit",
+    "difficulty": "easy"
+  },
+  {
+    "id": "legal-009",
+    "question": "Khu du lịch cấp tỉnh phải đáp ứng tối thiểu bao nhiêu lượt khách ăn uống, mua sắm và lưu trú mỗi năm?",
+    "expected_answer": "Cơ sở ăn uống, mua sắm phải đáp ứng tối thiểu 100.000 lượt khách mỗi năm và hệ thống lưu trú phải đáp ứng tối thiểu 50.000 lượt khách lưu trú mỗi năm.",
+    "expected_context": "Cơ sở kinh doanh dịch vụ ăn uống, mua sắm đạt tiêu chuẩn phục vụ khách du lịch, đáp ứng tối thiểu 100.000 lượt khách mỗi năm; hệ thống cơ sở lưu trú du lịch đáp ứng tối thiểu 50.000 lượt khách lưu trú mỗi năm.",
+    "source": "legal/nghi_dinh_168_2017_nd_cp_huong_dan_luat_du_lich.md",
+    "category": "provincial_tourism_area",
+    "difficulty": "medium"
+  },
+  {
+    "id": "legal-010",
+    "question": "Khu du lịch quốc gia phải có năng lực phục vụ khách và cơ sở lưu trú tối thiểu như thế nào?",
+    "expected_answer": "Các dịch vụ ăn uống, mua sắm, thể thao, vui chơi, giải trí và chăm sóc sức khỏe phải đáp ứng tối thiểu 500.000 lượt khách mỗi năm; lưu trú phải đáp ứng ít nhất 300.000 lượt khách mỗi năm và có cơ sở từ 4 sao trở lên.",
+    "expected_context": "Khu du lịch quốc gia phải có cơ sở dịch vụ chất lượng cao đáp ứng tối thiểu 500.000 lượt khách mỗi năm; hệ thống cơ sở lưu trú đáp ứng tối thiểu 300.000 lượt khách lưu trú mỗi năm, trong đó có cơ sở lưu trú được công nhận hạng từ 4 sao trở lên.",
+    "source": "legal/nghi_dinh_168_2017_nd_cp_huong_dan_luat_du_lich.md",
+    "category": "national_tourism_area",
+    "difficulty": "hard"
+  },
+  {
+    "id": "policy-011",
+    "question": "Chiến lược du lịch đặt mục tiêu về khách quốc tế và khách nội địa đến năm 2025 như thế nào?",
+    "expected_answer": "Đến năm 2025, Việt Nam phấn đấu đón ít nhất 35 triệu lượt khách quốc tế và 120 triệu lượt khách nội địa.",
+    "expected_context": "Đến năm 2025, phấn đấu đón được ít nhất 35 triệu lượt khách quốc tế và 120 triệu lượt khách nội địa; duy trì tăng trưởng khách quốc tế 12-14% mỗi năm và khách nội địa 6-7% mỗi năm.",
+    "source": "legal/quyet_dinh_147_qd_ttg_chien_luoc_phat_trien_du_lich_2030.md",
+    "category": "strategy_2025",
+    "difficulty": "easy"
+  },
+  {
+    "id": "policy-012",
+    "question": "Mục tiêu tổng thu, đóng góp GDP và việc làm của du lịch Việt Nam đến năm 2030 là gì?",
+    "expected_answer": "Đến năm 2030, tổng thu từ khách du lịch đạt 3.100-3.200 nghìn tỷ đồng, đóng góp trực tiếp 15-17% GDP và tạo khoảng 8,5 triệu việc làm, trong đó khoảng 3 triệu việc làm trực tiếp.",
+    "expected_context": "Đến năm 2030, tổng thu từ khách du lịch đạt 3.100-3.200 nghìn tỷ đồng; đóng góp trực tiếp vào GDP đạt 15-17%; tạo ra khoảng 8,5 triệu việc làm, trong đó có khoảng 3 triệu việc làm trực tiếp.",
+    "source": "legal/quyet_dinh_147_qd_ttg_chien_luoc_phat_trien_du_lich_2030.md",
+    "category": "strategy_2030",
+    "difficulty": "hard"
+  },
+  {
+    "id": "news-013",
+    "question": "Du lịch ẩm thực được hiểu là gì?",
+    "expected_answer": "Du lịch ẩm thực là hành trình khám phá văn hóa qua món ăn đặc trưng của một vùng miền hoặc quốc gia, qua đó tìm hiểu lịch sử, phong tục và lối sống địa phương chứ không chỉ thưởng thức đồ ăn.",
+    "expected_context": "Khái niệm du lịch ẩm thực đề cập đến hành trình khám phá văn hóa qua món ăn đặc trưng của từng vùng miền hoặc quốc gia. Đây không chỉ là việc thưởng thức đồ ăn mà còn là cách tìm hiểu lịch sử, phong tục và lối sống của người dân địa phương.",
+    "source": "news/article_04.md",
+    "category": "culinary_tourism",
+    "difficulty": "easy"
+  },
+  {
+    "id": "news-014",
+    "question": "Theo bài viết của Cục Du lịch Quốc gia, khách du lịch sẵn sàng chi thêm bao nhiêu cho dịch vụ ẩm thực?",
+    "expected_answer": "Khách du lịch được cho là sẵn sàng chi thêm khoảng 25-30% cho các dịch vụ ẩm thực nói chung.",
+    "expected_context": "Theo các khảo sát được dẫn trong bài, khách du lịch sẵn sàng có thể chi thêm khoảng từ 25 đến 30% cho các dịch vụ ẩm thực nói chung.",
+    "source": "news/article_03.md",
+    "category": "culinary_spending",
+    "difficulty": "easy"
+  },
+  {
+    "id": "news-015",
+    "question": "Những hạn chế chính trong việc khai thác ẩm thực Việt Nam thành sản phẩm du lịch là gì?",
+    "expected_answer": "Sản phẩm còn nhỏ lẻ, tập trung ở thành phố lớn; quảng bá mang tính tự phát, thiếu kế hoạch và chiến lược lâu dài; nhiều đặc sản địa phương chưa tiếp cận được đông đảo du khách, nhất là khách quốc tế.",
+    "expected_context": "Các sản phẩm du lịch ẩm thực chủ yếu ở thành phố lớn, tại địa phương còn nhỏ lẻ và chưa có hệ thống. Hoạt động xúc tiến quảng bá còn tự phát, thiếu kế hoạch và chiến lược lâu dài; nhiều đặc sản chưa tiếp cận được lượng lớn du khách, đặc biệt là khách quốc tế.",
+    "source": "news/article_03.md",
+    "category": "culinary_challenges",
+    "difficulty": "hard"
+  },
+  {
+    "id": "news-016",
+    "question": "Những đặc sản nào của Cao Bằng được vinh danh trong Top 100 món ăn hoặc quà tặng Việt Nam giai đoạn 2020-2022?",
+    "expected_answer": "Các đặc sản được nêu gồm xôi trám, bánh coóng phù, hạt dẻ Trùng Khánh, bánh cuốn, bánh áp chao, bánh chè lam và miến dong đen Phja Đén.",
+    "expected_context": "Xôi trám và bánh coóng phù vào Top 100 món ăn đặc sản Việt Nam 2020-2021; hạt dẻ Trùng Khánh vào Top 100 đặc sản quà tặng 2020-2021; bánh cuốn và bánh áp chao vào Top 100 món ăn 2021-2022; bánh chè lam và miến dong đen Phja Đén vào Top 100 đặc sản quà tặng 2021-2022.",
+    "source": "news/article_05.md",
+    "category": "cao_bang_cuisine",
+    "difficulty": "hard"
+  },
+  {
+    "id": "news-017",
+    "question": "Sáu món ăn của Thừa Thiên Huế được chứng nhận món ẩm thực tiêu biểu Việt Nam giai đoạn I năm 2022 là gì?",
+    "expected_answer": "Đó là bún bò Huế, chè bột lọc bọc heo quay, cơm hến, bánh lọc, vả trộn hoa màu chay và cơm hấp lá sen chay.",
+    "expected_context": "Thừa Thiên Huế có 6 món được trao chứng nhận: Bún bò Huế, chè bột lọc bọc heo quay, cơm hến, bánh lọc, vả trộn hoa màu chay, cơm hấp lá sen chay.",
+    "source": "news/article_09.md",
+    "category": "hue_cuisine",
+    "difficulty": "medium"
+  },
+  {
+    "id": "news-018",
+    "question": "Nem chua Thanh Hóa được chế biến và có hương vị như thế nào?",
+    "expected_answer": "Nem được cuốn nhiều lớp lá chuối, phần thịt màu hồng kết hợp lá ổi, ớt hiểm thái nhỏ và tiêu; khi ăn có vị chua nhẹ và giòn.",
+    "expected_context": "Nem chua Thanh Hóa được cuốn bằng nhiều lớp lá chuối; phần thịt bên trong màu hồng, dùng lá ổi, ớt hiểm thái nhỏ và tiêu. Nem có vị chua nhẹ, giòn.",
+    "source": "news/article_10.md",
+    "category": "thanh_hoa_cuisine",
+    "difficulty": "medium"
+  }
+]
