@@ -1,0 +1,137 @@
+[
+  {
+    "id": "news_01",
+    "category": "news",
+    "question": "Theo chính sách Ocean Park 2 dành cho nhà hoàn thiện ngày 05/03/2024, nhà có diện tích đất dưới 70m2 được cam kết tiền thuê bao nhiêu và trong bao lâu?",
+    "expected_answer": "Nhà có diện tích đất dưới 70m2 được hỗ trợ 21 triệu đồng/tháng trong 02 năm đầu kể từ ngày bàn giao, theo chính sách ngày 05/03/2024 trong tài liệu.",
+    "expected_context": ["Nhà ở có diện tích đất dưới 70m2: 21 triệu/tháng", "Thời hạn cam kết: 02 năm đầu kể từ Ngày Bàn Giao."],
+    "source_ids": ["news/chinh-sach-ban-hang-nha-hoan-thien-ocean-park-2.md"],
+    "should_refuse": false
+  },
+  {
+    "id": "news_02",
+    "category": "news",
+    "question": "Theo bài Chính sách bán hàng Vinhomes Ocean Park 3 ngày 27/06/2025, mức vay tối đa và thời gian hỗ trợ lãi suất 0% là bao nhiêu?",
+    "expected_answer": "Theo bài ngày 27/06/2025, khách hàng được vay tối đa 70% giá bán nhà ở gồm VAT, hỗ trợ lãi suất 0% trong 30 tháng kể từ ngày giải ngân đầu tiên, không muộn hơn 31/03/2028.",
+    "expected_context": ["- Mức dư nợ vay tối đa: Tối đa 70% giá bán Nhà ở (gồm VAT)", "- Lãi suất hỗ trợ: 0% trong 30 tháng kể từ ngày giải ngân đầu tiên (không muộn hơn 31/03/2028)"],
+    "source_ids": ["news/chinh-sach-ban-hang-vinhomes-ocean-park-3.md"],
+    "should_refuse": false
+  },
+  {
+    "id": "news_03",
+    "category": "news",
+    "question": "Theo bài HouseNow cập nhật 05/02/2026 trong bộ tài liệu, chính sách 3 Không của Vinhomes Ocean Park gồm những gì?",
+    "expected_answer": "Ba nội dung là Không đồng vốn, Không áp lực tài chính và Không chờ đợi. Bài viết mô tả đặt cọc nhỏ (thường 50 triệu đồng) và có tài sản bảo đảm khác để vay 100%; hỗ trợ lãi suất 0% thường 18–24 tháng, không trả gốc và lãi trong thời gian đó; nhận nhà ở ngay hoặc khai thác cho thuê. Gói vay 100% yêu cầu lịch sử tín dụng tốt và tài sản bảo đảm.",
+    "expected_context": ["- Không đồng vốn: Khách hàng chỉ cần đặt cọc một khoản nhỏ (thường là 50 triệu đồng) và tài sản đảm bảo khác để được ngân hàng giải ngân 100% giá trị căn hộ.", "- Không áp lực tài chính: Chủ đầu tư hỗ trợ lãi suất 0% trong thời gian dài (thường từ 18-24 tháng). Trong thời gian này, bạn không phải trả cả gốc và lãi.", "- Không chờ đợi: Nhận nhà ở ngay hoặc khai thác cho thuê để sinh lời, thay vì phải chờ đợi dự án hoàn thiện như các hình thức mua bán hình thành trong tương lai truyền thống.", "Điều kiện tiên quyết là khách hàng phải có lịch sử tín dụng tốt (không nợ xấu) và có tài sản đảm bảo (bất động sản khác hoặc sổ tiết kiệm) nếu tham gia gói vay 100%."],
+    "source_ids": ["news/chinh-sach-mua-nha-3-khong-vinhomes-ocean-park.md"],
+    "should_refuse": false
+  },
+  {
+    "id": "news_04",
+    "category": "news",
+    "question": "Trong bảng giá Ocean Park 2 – The Empire của bộ tài liệu, liền kề Chà Là có diện tích, giá cập nhật và tình trạng mở bán như thế nào?",
+    "expected_answer": "Liền kề Chà Là có diện tích 48–134 m², giá cập nhật trong bảng là 6–13 tỷ đồng và tình trạng đã mở bán. Đây là giá trong tài liệu, không phải xác nhận giá giao dịch hiện tại.",
+    "expected_context": ["| Chà Là | Liền kề 48–134 m² | 110–150 triệu/m² | 6–13 tỷ | Đã mở bán |"],
+    "source_ids": ["news/tong-quan-bang-gia-vinhomes-ocean-park-2-the-empire.md"],
+    "should_refuse": false
+  },
+  {
+    "id": "news_05",
+    "category": "news",
+    "question": "Theo bài Ocean Park 3 ngày 27/06/2025, khách hàng mua dưới 10 tỷ được tặng các gói Vinpearl/VinWonders nào và chương trình áp dụng trong thời gian nào?",
+    "expected_answer": "Khách hàng mua dưới 10 tỷ được 01 gói Vinpearl Resort & Hotel trị giá 70 triệu đồng, 01 gói Wonder Passport 35 triệu đồng và 01 gói Wonder Exclusive 30 triệu đồng. Chương trình trong bài áp dụng từ 11/04/2025 đến 30/06/2025.",
+    "expected_context": ["  + Dưới 10 tỷ: 01 gói Vinpearl Resort & Hotel (70 triệu VNĐ), 01 gói Wonder Passport (35 triệu VNĐ), 01 gói Wonder Exclusive (30 triệu VNĐ)", "  (Áp dụng từ 11/04/2025 đến 30/06/2025)"],
+    "source_ids": ["news/chinh-sach-ban-hang-vinhomes-ocean-park-3.md"],
+    "should_refuse": false
+  },
+  {
+    "id": "legal_01",
+    "category": "legal",
+    "question": "Theo quy định xử lý khiếu nại Vinhomes cập nhật 05/05/2025, khách hàng có thể gửi phản ánh qua những kênh nào?",
+    "expected_answer": "Khách hàng có thể gọi tổng đài 1900 2323 89, nhánh 4; gửi email info@vinhomes.vn; gửi bản cứng đến địa chỉ Công ty; hoặc phản ánh trực tiếp với nhân viên phụ trách hồ sơ, phân khu/tòa nhà hay tại văn phòng Ban Quản lý.",
+    "expected_context": ["(i)              Điện thoại (Tổng đài: 1900 2323 89 – nhánh số 4)", "(ii)            Email: info@vinhomes.vn", "(iii)          Bản cứng đến địa chỉ Công ty", "(iv)          Phản ánh trực tiếp với cán bộ nhân viên phụ trách hồ sơ hoặc phụ trách phân khu/tòa nhà đang sinh sống, hoặc tại văn phòng Ban Quản lý."],
+    "source_ids": ["legal/quy-dinh-xu-ly-khieu-nai.md"],
+    "should_refuse": false
+  },
+  {
+    "id": "legal_02",
+    "category": "legal",
+    "question": "Theo quy định khiếu nại Vinhomes, thời gian xử lý yêu cầu đơn giản, phức tạp và khẩn cấp liên quan an toàn tính mạng khác nhau thế nào?",
+    "expected_answer": "Yêu cầu đơn giản được xử lý trong 04 ngày làm việc. Yêu cầu phức tạp trở lên, cần nhiều đơn vị phối hợp, được hẹn phản hồi chính thức trong 06 ngày làm việc. Yêu cầu khẩn/gấp liên quan an toàn tính mạng được phối hợp xử lý ngay khi tiếp nhận. Mốc 06 ngày là hẹn phản hồi chính thức, không phải cam kết giải quyết dứt điểm.",
+    "expected_context": ["Yêu cầu đơn giản\n\nTrong vòng 04 ngày làm việc.", "Yêu cầu phức tạp trở lên, cần sự phối hợp của nhiều đơn vị tại Ban Quản\n\nlý/Khối Hỗ trợ\n\nHẹn phản hồi chính thức trong vòng 06 ngày làm việc.", "Yêu cầu khẩn/gấp (liên quan đến an toàn tính mạng của KH)\n\nPhối hợp xử lý ngay khi tiếp nhận."],
+    "source_ids": ["legal/quy-dinh-xu-ly-khieu-nai.md"],
+    "should_refuse": false
+  },
+  {
+    "id": "legal_03",
+    "category": "legal",
+    "question": "Khách hàng Vinhomes đang mang thai có được ưu tiên xử lý khiếu nại không, và nếu bị từ chối thì Công ty phải phản hồi bằng hình thức nào?",
+    "expected_answer": "Phụ nữ đang mang thai thuộc nhóm khách hàng dễ bị tổn thương. Công ty phải ưu tiên tiếp nhận, hỗ trợ xử lý phản ánh/yêu cầu hợp pháp, hợp lý của nhóm này. Nếu từ chối giải quyết, Công ty phải trả lời bằng văn bản và bảo đảm đúng quy định pháp luật.",
+    "expected_context": ["Phụ nữ đang mang thai hoặc nuôi con dưới 36 tháng tuổi;", "trong mọi trường hợp, Công ty phải ưu tiên tiếp nhận, hỗ trợ xử lý các phản ánh/yêu cầu hợp pháp, hợp lý từ các KH này.", "Trường hợp từ chối giải quyết yêu cầu của KH dễ bị tổn thương, Công ty trả lời bằng văn bản và bảo đảm đúng quy định của pháp luật."],
+    "source_ids": ["legal/quy-dinh-xu-ly-khieu-nai.md"],
+    "should_refuse": false
+  },
+  {
+    "id": "legal_04",
+    "category": "legal",
+    "question": "Theo Quy tắc bảo vệ thông tin người tiêu dùng Vinhomes, khách hàng có quyền chỉnh sửa thông tin và rút lại sự đồng ý không?",
+    "expected_answer": "Có. Mục 4.3 quy định quyền truy cập để xem, chỉnh sửa hoặc yêu cầu chỉnh sửa thông tin của mình, trừ trường hợp pháp luật có quy định khác. Mục 4.4 quy định quyền rút lại sự đồng ý.",
+    "expected_context": ["4.3         Quyền truy cập để xem, chỉnh sửa hoặc yêu cầu chỉnh sửa thông tin của mình, trừ trường hợp pháp luật có quy định khác.", "4.4         Quyền rút lại sự đồng ý."],
+    "source_ids": ["legal/quy-tac-bao-ve-thong-tin.md"],
+    "should_refuse": false
+  },
+  {
+    "id": "legal_05",
+    "category": "legal",
+    "question": "Theo Chính sách bảo vệ dữ liệu cá nhân Vinhomes, dữ liệu cá nhân được định nghĩa như thế nào và gồm những nhóm nào?",
+    "expected_answer": "Dữ liệu cá nhân là thông tin dưới dạng ký hiệu, chữ viết, chữ số, hình ảnh, âm thanh hoặc dạng tương tự trên môi trường điện tử gắn liền với một con người cụ thể hoặc giúp xác định một con người cụ thể. Dữ liệu cá nhân gồm dữ liệu cá nhân cơ bản và dữ liệu cá nhân nhạy cảm.",
+    "expected_context": ["1.1        Dữ Liệu Cá Nhân: là thông tin dưới dạng ký hiệu, chữ viết, chữ số, hình ảnh, âm thanh hoặc dạng tương tự trên môi trường điện tử gắn liền với con người cụ thể hoặc giúp xác định con người cụ thể. Dữ Liệu Cá Nhân bao gồm Dữ Liệu Cá Nhân cơ bản và Dữ Liệu Cá Nhân nhạy cảm."],
+    "source_ids": ["legal/chinh-sach-bao-ve-du-lieu-ca-nhan.md"],
+    "should_refuse": false
+  },
+  {
+    "id": "cross_01",
+    "category": "cross_domain",
+    "question": "Tôi mua nhà hoàn thiện Ocean Park 2 diện tích đất 65m2 theo chính sách 05/03/2024. Mức cam kết tiền thuê trong tài liệu là bao nhiêu, và nếu có khiếu nại thì gọi số nào theo quy định Vinhomes?",
+    "expected_answer": "Nhà 65m2 thuộc nhóm dưới 70m2, nên mức cam kết tiền thuê là 21 triệu đồng/tháng trong 02 năm đầu kể từ ngày bàn giao theo chính sách 05/03/2024. Theo quy định xử lý khiếu nại, khách hàng có thể gọi 1900 2323 89, nhánh 4 để phản ánh.",
+    "expected_context": ["Nhà ở có diện tích đất dưới 70m2: 21 triệu/tháng", "Thời hạn cam kết: 02 năm đầu kể từ Ngày Bàn Giao.", "(i)              Điện thoại (Tổng đài: 1900 2323 89 – nhánh số 4)"],
+    "source_ids": ["news/chinh-sach-ban-hang-nha-hoan-thien-ocean-park-2.md", "legal/quy-dinh-xu-ly-khieu-nai.md"],
+    "should_refuse": false
+  },
+  {
+    "id": "cross_02",
+    "category": "cross_domain",
+    "question": "Theo bài HouseNow ngày 05/02/2026, mua căn hộ Ocean Park 1 cần bao nhiêu vốn tự có để nhận nhà? Khi giao dịch với Vinhomes, tôi có quyền yêu cầu chỉnh sửa thông tin cá nhân bị sai không?",
+    "expected_answer": "Bài HouseNow nêu khách hàng Ocean Park 1 thanh toán 20% vốn tự có để nhận bàn giao nhà ngay. Theo mục 4.3 Quy tắc bảo vệ thông tin người tiêu dùng Vinhomes, khách hàng có quyền truy cập để xem, chỉnh sửa hoặc yêu cầu chỉnh sửa thông tin của mình, trừ trường hợp pháp luật có quy định khác.",
+    "expected_context": ["- Thanh toán nhận nhà: Khách hàng chỉ cần thanh toán 20% vốn tự có là có thể nhận bàn giao nhà ngay.", "4.3         Quyền truy cập để xem, chỉnh sửa hoặc yêu cầu chỉnh sửa thông tin của mình, trừ trường hợp pháp luật có quy định khác."],
+    "source_ids": ["news/chinh-sach-mua-nha-3-khong-vinhomes-ocean-park.md", "legal/quy-tac-bao-ve-thong-tin.md"],
+    "should_refuse": false
+  },
+  {
+    "id": "cross_03",
+    "category": "cross_domain",
+    "question": "Trong bài Tổng hợp các dự án tại Vinhomes Ocean Park, căn hộ The Sapphire 1 được bàn giao từ khi nào? Người cao tuổi mua và sử dụng căn hộ có được ưu tiên xử lý khiếu nại theo quy định Vinhomes không?",
+    "expected_answer": "Bài tổng hợp ghi The Sapphire 1 bàn giao từ quý II/2020. Người cao tuổi thuộc nhóm khách hàng dễ bị tổn thương theo quy định xử lý khiếu nại Vinhomes; Công ty phải ưu tiên tiếp nhận, hỗ trợ xử lý các phản ánh/yêu cầu hợp pháp, hợp lý của nhóm này.",
+    "expected_context": ["#### 1. The Sapphire 1", "- Thời điểm bàn giao: Từ quý II/2020", "Người cao tuổi theo quy định của pháp luật về người cao tuổi;", "trong mọi trường hợp, Công ty phải ưu tiên tiếp nhận, hỗ trợ xử lý các phản ánh/yêu cầu hợp pháp, hợp lý từ các KH này."],
+    "source_ids": ["news/tong-hop-cac-du-an-vinhomes-ocean-park.md", "legal/quy-dinh-xu-ly-khieu-nai.md"],
+    "should_refuse": false
+  },
+  {
+    "id": "ood_01",
+    "category": "out_of_domain",
+    "question": "Ecopark đang có ưu đãi lãi suất và chiết khấu mua căn hộ nào?",
+    "expected_answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+    "expected_context": [],
+    "source_ids": [],
+    "should_refuse": true
+  },
+  {
+    "id": "ood_02",
+    "category": "out_of_domain",
+    "question": "Novaworld Phan Thiết cam kết lợi nhuận cho thuê bao nhiêu phần trăm một năm?",
+    "expected_answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+    "expected_context": [],
+    "source_ids": [],
+    "should_refuse": true
+  }
+]
