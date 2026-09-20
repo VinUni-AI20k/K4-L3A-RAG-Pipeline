@@ -41,14 +41,20 @@ def _embed_gemini(texts: list[str]) -> list[list[float]]:
         raise ValueError("GEMINI_API_KEY is not set.")
     model = os.getenv("EMBEDDING_MODEL", "text-embedding-004")
     client = genai.Client(api_key=api_key)
-    response = client.models.embed_content(
-        model=model,
-        contents=texts,
-    )
-    return [e.values for e in response.embeddings]
+    
+    all_embeddings = []
+    batch_size = 64
+    for i in range(0, len(texts), batch_size):
+        batch = texts[i:i + batch_size]
+        response = client.models.embed_content(
+            model=model,
+            contents=batch,
+        )
+        all_embeddings.extend([e.values for e in response.embeddings])
+    return all_embeddings
 
 
-def _embed_nvidia(texts: list[str]) -> list[list[float]]:
+def _embed_nvidia(texts: list[str], input_type: str = "passage") -> list[list[float]]:
     from openai import OpenAI
     api_key = os.getenv("NVIDIA_API_KEY")
     if not api_key:
@@ -56,11 +62,24 @@ def _embed_nvidia(texts: list[str]) -> list[list[float]]:
     base_url = os.getenv("NVIDIA_BASE_URL", "https://integrate.api.nvidia.com/v1")
     model = os.getenv("NVIDIA_EMBEDDING_MODEL", "nvidia/nv-embedqa-e5-v5")
     client = OpenAI(api_key=api_key, base_url=base_url)
-    response = client.embeddings.create(
-        model=model,
-        input=texts,
-    )
-    return [item.embedding for item in response.data]
+    
+    all_embeddings = []
+    batch_size = 64
+    for i in range(0, len(texts), batch_size):
+        batch = texts[i:i + batch_size]
+        try:
+            response = client.embeddings.create(
+                model=model,
+                input=batch,
+                extra_body={"input_type": input_type, "truncate": "NONE"},
+            )
+        except Exception:
+            response = client.embeddings.create(
+                model=model,
+                input=batch,
+            )
+        all_embeddings.extend([item.embedding for item in response.data])
+    return all_embeddings
 
 
 def _embed_sentence_transformers(texts: list[str]) -> list[list[float]]:
@@ -76,16 +95,23 @@ def _embed_openai(texts: list[str]) -> list[list[float]]:
     base_url = os.getenv("OPENAI_BASE_URL") or None
     model = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
     client = OpenAI(api_key=api_key, base_url=base_url)
-    response = client.embeddings.create(model=model, input=texts)
-    return [item.embedding for item in response.data]
+    
+    all_embeddings = []
+    batch_size = 64
+    for i in range(0, len(texts), batch_size):
+        batch = texts[i:i + batch_size]
+        response = client.embeddings.create(model=model, input=batch)
+        all_embeddings.extend([item.embedding for item in response.data])
+    return all_embeddings
 
 
-def _dispatch_embed(provider: str, texts: list[str]) -> list[list[float]]:
+
+def _dispatch_embed(provider: str, texts: list[str], input_type: str = "passage") -> list[list[float]]:
     provider = provider.lower()
     if provider == "gemini":
         return _embed_gemini(texts)
     elif provider == "nvidia":
-        return _embed_nvidia(texts)
+        return _embed_nvidia(texts, input_type=input_type)
     elif provider == "openai":
         return _embed_openai(texts)
     elif provider == "sentence_transformers":
@@ -94,20 +120,20 @@ def _dispatch_embed(provider: str, texts: list[str]) -> list[list[float]]:
         raise ValueError(f"Unsupported EMBEDDING_PROVIDER: {provider}")
 
 
-def embed_texts(texts: list[str]) -> list[list[float]]:
+def embed_texts(texts: list[str], input_type: str = "passage") -> list[list[float]]:
     """Tạo vector embeddings theo EMBEDDING_PROVIDER với cơ chế fallback tự động."""
     provider = os.getenv("EMBEDDING_PROVIDER", "gemini")
     enable_fallback = os.getenv("ENABLE_EMBEDDING_FALLBACK", "true").lower() in ("true", "1", "yes")
     fallback_provider = os.getenv("FALLBACK_EMBEDDING_PROVIDER", "nvidia")
 
     try:
-        return _dispatch_embed(provider, texts)
+        return _dispatch_embed(provider, texts, input_type=input_type)
     except Exception as e:
         if enable_fallback and fallback_provider and fallback_provider.lower() != provider.lower():
             logging.warning(
                 f"[WARN] Embedding with '{provider}' failed ({e}). Falling back to '{fallback_provider}'..."
             )
-            return _dispatch_embed(fallback_provider, texts)
+            return _dispatch_embed(fallback_provider, texts, input_type=input_type)
         raise
 
 
@@ -183,33 +209,37 @@ def load_documents() -> list[dict]:
 
 
 def chunk_documents(documents: list[dict]) -> list[dict]:
-    """Chia Document thành chunks bằng RecursiveCharacterTextSplitter có id duy nhất và chunk_index."""
-    from langchain_text_splitters import RecursiveCharacterTextSplitter
-
-    splitter = RecursiveCharacterTextSplitter(
-        chunk_size=CHUNK_SIZE,
-        chunk_overlap=CHUNK_OVERLAP,
-        separators=["\n\n", "\n", ". ", " ", ""],
-    )
-
+    """Chia Document thành chunks có id duy nhất và chunk_index."""
     chunks = []
     for document in documents:
-        raw_chunks = splitter.split_text(document["content"])
+        text = document["content"]
+        step = max(1, CHUNK_SIZE - CHUNK_OVERLAP)
+        start = 0
         chunk_idx = 0
-        for text in raw_chunks:
-            cleaned = text.strip()
-            if not cleaned:
-                continue
-
-            chunks.append({
-                "id": f"{document['id']}::chunk-{chunk_idx}",
-                "content": cleaned,
-                "metadata": {
-                    **document["metadata"],
-                    "chunk_index": chunk_idx,
-                },
-            })
-            chunk_idx += 1
+        while start < len(text):
+            end = min(len(text), start + CHUNK_SIZE)
+            if end < len(text):
+                newline_pos = text.rfind("\n", start, end)
+                if newline_pos > start + CHUNK_SIZE // 2:
+                    end = newline_pos + 1
+                else:
+                    space_pos = text.rfind(" ", start, end)
+                    if space_pos > start + CHUNK_SIZE // 2:
+                        end = space_pos + 1
+            chunk_str = text[start:end].strip()
+            if chunk_str:
+                chunks.append({
+                    "id": f"{document['id']}::chunk-{chunk_idx}",
+                    "content": chunk_str,
+                    "metadata": {
+                        **document["metadata"],
+                        "chunk_index": chunk_idx,
+                    },
+                })
+                chunk_idx += 1
+            if end >= len(text):
+                break
+            start += step
 
     return chunks
 
@@ -220,7 +250,7 @@ def embed_chunks(chunks: list[dict]) -> list[dict]:
         return []
 
     texts = [chunk["content"] for chunk in chunks]
-    vectors = embed_texts(texts)
+    vectors = embed_texts(texts, input_type="passage")
     for chunk, vector in zip(chunks, vectors):
         chunk["embedding"] = vector
     return chunks
@@ -237,7 +267,7 @@ def index_to_vectorstore(chunks: list[dict]) -> None:
     unembedded = [i for i, c in enumerate(chunks) if "embedding" not in c or not c["embedding"]]
     if unembedded:
         texts_to_embed = [chunks[i]["content"] for i in unembedded]
-        vectors = embed_texts(texts_to_embed)
+        vectors = embed_texts(texts_to_embed, input_type="passage")
         for i, vector in zip(unembedded, vectors):
             chunks[i]["embedding"] = vector
 
@@ -248,7 +278,6 @@ def index_to_vectorstore(chunks: list[dict]) -> None:
         metadatas = []
         for c in batch:
             m = dict(c["metadata"])
-            # Đảm bảo giá trị None trong url thành chuỗi rỗng để tránh lỗi với một số version ChromaDB
             if m.get("url") is None:
                 m["url"] = ""
             metadatas.append(m)

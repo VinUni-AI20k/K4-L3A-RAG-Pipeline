@@ -27,35 +27,40 @@ TEMPERATURE = 0.3
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai")
 LLM_MODEL = os.getenv("LLM_MODEL", "")
 
-SYSTEM_PROMPT = """Trả lời chỉ từ context được cung cấp.
-Mỗi khẳng định phải có citation. Nếu thiếu evidence, hãy từ chối xác minh."""
+SYSTEM_PROMPT = """Bạn là trợ lý AI chuyên viên tư vấn thông tin và chính sách của Vinhomes.
+Nhiệm vụ: Trả lời câu hỏi dựa CHÍNH XÁC trên phần Context được cung cấp.
+
+Quy tắc bắt buộc:
+1. Chỉ sử dụng dữ liệu trong Context. Tuyệt đối không suy diễn hoặc bịa đặt thông tin.
+2. Với mỗi luận điểm quan trọng, hãy ghi rõ trích dẫn nguồn (ví dụ: [Document 1], [Document 2]...).
+3. Nếu Context không có đủ thông tin để trả lời câu hỏi, hãy từ chối một cách an toàn bằng câu:
+"Tôi không thể xác minh thông tin này từ nguồn hiện có."
+4. Trình bày mạch lạc, lịch sự, rõ ràng."""
+
 
 
 def reorder_for_llm(chunks: list[dict]) -> list[dict]:
-    """Đưa chunks quan trọng về đầu và cuối context."""
-    # TODO: Implement document reordering.
-    #
-    # if len(chunks) <= 2:
-    #     return list(chunks)
-    # front = chunks[::2]
-    # back = chunks[1::2]
-    # return front + back[::-1]
-    raise NotImplementedError("Implement reorder_for_llm")
+    """Đưa chunks quan trọng về đầu và cuối context (chống lost-in-the-middle)."""
+    if len(chunks) <= 2:
+        return [item.copy() for item in chunks]
+    front = [chunks[i] for i in range(0, len(chunks), 2)]
+    back = [chunks[i] for i in range(1, len(chunks), 2)]
+    return list(front + back[::-1])
 
 
 def format_context(chunks: list[dict]) -> str:
     """Tạo context có title và source label."""
-    # TODO: Format chunks để LLM tạo citation kiểm chứng được.
-    #
-    # parts = []
-    # for index, chunk in enumerate(chunks, 1):
-    #     metadata = chunk["metadata"]
-    #     parts.append(
-    #         f"[Document {index} | Title: {metadata['title']} | "
-    #         f"Source: {metadata['source']}]\n{chunk['content']}"
-    #     )
-    # return "\n\n---\n\n".join(parts)
-    raise NotImplementedError("Implement format_context")
+    parts = []
+    for index, chunk in enumerate(chunks, 1):
+        metadata = chunk.get("metadata", {})
+        title = metadata.get("title", "Tài liệu")
+        source = metadata.get("source", "Nguồn")
+        parts.append(
+            f"[Document {index} | Title: {title} | "
+            f"Source: {source}]\n{chunk['content']}"
+        )
+    return "\n\n---\n\n".join(parts)
+
 
 
 import logging
@@ -177,27 +182,51 @@ def call_llm(system_prompt: str, user_message: str) -> str:
 
 
 
+SAFE_REFUSAL = "Tôi không thể xác minh thông tin này từ nguồn hiện có."
+
+
 def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
-    """Trả về GenerationResult."""
-    # TODO: Implement end-to-end generation.
-    #
-    # chunks = retrieve(query, top_k=top_k)
-    # if not chunks:
-    #     return {
-    #         "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
-    #         "sources": [],
-    #         "retrieval_source": "none",
-    #     }
-    # reordered = reorder_for_llm(chunks)
-    # context = format_context(reordered)
-    # user_message = f"Context:\n{context}\n\nQuestion: {query}"
-    # answer = call_llm(SYSTEM_PROMPT, user_message)
-    # return {
-    #     "answer": answer,
-    #     "sources": chunks,
-    #     "retrieval_source": chunks[0]["retrieval_method"],
-    # }
-    raise NotImplementedError("Implement generate_with_citation")
+    """Trả về GenerationResult kèm trích dẫn nguồn và từ chối an toàn."""
+    chunks = retrieve(query, top_k=top_k)
+    if not chunks:
+        return {
+            "answer": SAFE_REFUSAL,
+            "sources": [],
+            "retrieval_source": "none",
+        }
+
+    reordered = reorder_for_llm(chunks)
+    context = format_context(reordered)
+    user_message = f"Context:\n{context}\n\nQuestion: {query}"
+
+    try:
+        answer = call_llm(SYSTEM_PROMPT, user_message)
+    except Exception as e:
+        logger.error(f"Generation error across all LLM tiers: {e}")
+        return {
+            "answer": SAFE_REFUSAL,
+            "sources": [],
+            "retrieval_source": "none",
+        }
+
+    if not answer or not answer.strip() or SAFE_REFUSAL.lower() in answer.lower():
+        return {
+            "answer": SAFE_REFUSAL,
+            "sources": [],
+            "retrieval_source": "none",
+        }
+
+    # Contract chỉ chấp nhận 'hybrid' | 'pageindex' | 'none'
+    first_method = chunks[0].get("retrieval_method", "hybrid")
+    retrieval_source = "pageindex" if first_method == "pageindex" else "hybrid"
+
+    return {
+        "answer": answer,
+        "sources": chunks,
+        "retrieval_source": retrieval_source,
+    }
+
+
 
 
 if __name__ == "__main__":
