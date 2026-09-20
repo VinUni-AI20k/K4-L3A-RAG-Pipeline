@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trợ lý Luật Giao thông AI — Vercel AI Chatbot</title>
+  <meta name="description" content="Trợ lý AI tra cứu Luật Giao thông Đường bộ Việt Nam sử dụng kiến trúc Hybrid RAG (BGE-M3 + BM25 + Gemini 2.5)." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'><path d='M12 2L2 22h20L12 2z'/></svg>" />
+  
+  <!-- Typography: Geist & Geist Mono (Vercel signature fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Markdown parser & Highlight.js -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark-dimmed.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="brand">
+          <svg class="vercel-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 22h20L12 2z"/>
+          </svg>
+          <span class="brand-name">Traffic Law RAG</span>
+        </div>
+        <button class="icon-btn" id="newChatBtn" title="Cuộc trò chuyện mới">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="section-label">Lịch sử tra cứu</div>
+        <div class="history-list" id="historyList">
+          <!-- Chat sessions rendered dynamically -->
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="model-badge">
+          <span class="status-dot"></span>
+          <div class="model-info">
+            <span class="model-name">Gemini 2.5 + BGE-M3</span>
+            <span class="model-tech">Hybrid RRF + Safe Fallback</span>
+          </div>
+        </div>
+        <div class="footer-meta">
+          <span>VinUni K4 • Day 8 Lab</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Chat Workspace -->
+    <main class="main-content">
+      <!-- Navbar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-btn mobile-toggle" id="sidebarToggle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 12h18M3 6h18M3 18h18"/>
+            </svg>
+          </button>
+          <div class="pipeline-pill">
+            <span class="pill-dot"></span>
+            <span>RAG Active: 5 Luật & 5 Báo chí</span>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <div class="k-selector">
+            <label for="topKSelect">Top-K Chunks:</label>
+            <select id="topKSelect">
+              <option value="3">3</option>
+              <option value="5" selected>5 (Default)</option>
+              <option value="8">8</option>
+            </select>
+          </div>
+          <a href="https://github.com/vercel/chatbot" target="_blank" rel="noopener noreferrer" class="gh-link" title="Vercel Chatbot UI Reference">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <!-- Chat Scroll Container -->
+      <div class="chat-container" id="chatContainer">
+        <!-- Hero screen (shows when messages is empty) -->
+        <div class="hero-screen" id="heroScreen">
+          <div class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L2 22h20L12 2z"/>
+            </svg>
+            <span>VinUni Traffic Law RAG</span>
+          </div>
+          <h1 class="hero-title">Tôi có thể giúp bạn tra cứu điều gì về Luật Giao thông?</h1>
+          <p class="hero-desc">
+            Hệ thống trả lời câu hỏi dựa trên 100% ngữ cảnh được trích xuất từ 5 văn bản pháp luật chính thức và 5 bài báo chí tiêu chuẩn. Mọi câu trả lời đều có dẫn chứng cụ thể.
+          </p>
+
+          <div class="suggestion-grid" id="suggestionGrid">
+            <!-- Rendered by app.js -->
+          </div>
+        </div>
+
+        <!-- Messages Feed -->
+        <div class="messages-feed" id="messagesFeed"></div>
+      </div>
+
+      <!-- Floating Input Area (Vercel Style) -->
+      <div class="input-wrapper">
+        <div class="input-card">
+          <textarea
+            id="chatInput"
+            placeholder="Hỏi về quy định đào tạo lái xe, mức phạt, trẻ em, camera trên xe..."
+            rows="1"
+          ></textarea>
+          <div class="input-actions">
+            <div class="input-hints">
+              <span class="shortcut-badge">Shift + Enter</span> để xuống dòng
+            </div>
+            <button class="send-btn" id="sendBtn" disabled title="Gửi tin nhắn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="disclaimer">
+          Thông tin được trích xuất tự động từ hệ thống RAG. Vui lòng đối chiếu với văn bản pháp luật chính thức.
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Citations Modal / Drawer -->
+  <div class="modal-overlay" id="citationsModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-icon">📚</span>
+          <h3 class="modal-title" id="modalTitle">Tài liệu căn cứ trích dẫn</h3>
+        </div>
+        <button class="icon-btn" id="closeModalBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
