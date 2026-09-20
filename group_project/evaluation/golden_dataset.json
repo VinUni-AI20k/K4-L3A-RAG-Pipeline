@@ -1,92 +1,92 @@
 [
-  {
-    "question": "Quy?t ??nh 704/Q?-TTg n?m 2026 li?n quan ??n nhi?m v? l?p quy ho?ch g? ? V?nh H? Long?",
-    "expected_answer": "Quy?t ??nh 704/Q?-TTg n?m 2026 ph? duy?t Nhi?m v? l?p Quy ho?ch b?o qu?n, tu b?, ph?c h?i Di t?ch qu?c gia ??c bi?t Danh lam th?ng c?nh V?nh H? Long, t?nh Qu?ng Ninh.",
-    "expected_context": "Quy?t ??nh 704/Q?-TTg n?m 2026 ph? duy?t Nhi?m v? l?p Quy ho?ch b?o qu?n, tu b?, ph?c h?i Di t?ch qu?c gia ??c bi?t Danh lam th?ng c?nh V?nh H? Long, t?nh Qu?ng Ninh."
-  },
-  {
-    "question": "C? quan ban h?nh Quy?t ??nh 704/Q?-TTg l? c? quan n?o?",
-    "expected_answer": "Quy?t ??nh 704/Q?-TTg do Th? t??ng Ch?nh ph? ban h?nh.",
-    "expected_context": "C? quan ban h?nh: Th? t??ng Ch?nh ph?; S? hi?u: 704/Q?-TTg."
-  },
-  {
-    "question": "Quy?t ??nh 72/Q?-TTg c?a Th? t??ng Ch?nh ph? c? n?i dung ch?nh l? g??",
-    "expected_answer": "Quy?t ??nh 72/Q?-TTg ph? duy?t Quy ho?ch chung th?nh ph? H? Long ??n n?m 2040.",
-    "expected_context": "Quy?t ??nh 72/Q?-TTg: Ph? duy?t Quy ho?ch chung th?nh ph? H? Long ??n n?m 2040."
-  },
-  {
-    "question": "Quy?t ??nh 43/2024/Q?-UBND t?nh Qu?ng Ninh quy ??nh v?n ?? g??",
-    "expected_answer": "Quy?t ??nh 43/2024/Q?-UBND quy ??nh c?c bi?n ph?p qu?n l? ho?t ??ng c?a ph??ng ti?n th?y n?i ??a ph?c v? kh?ch du l?ch tr?n V?nh H? Long, V?nh B?i T? Long.",
-    "expected_context": "Quy?t ??nh 43/2024/Q?-UBND t?nh Qu?ng Ninh quy ??nh c?c bi?n ph?p qu?n l? ph??ng ti?n th?y n?i ??a ph?c v? kh?ch du l?ch tr?n V?nh H? Long, V?nh B?i T? Long."
-  },
-  {
-    "question": "B?i vi?t ng?y 14/06/2024 c?a C?c Du l?ch Qu?c gia Vi?t Nam n?i v? ch? ?? g??",
-    "expected_answer": "B?i vi?t n?i v? vi?c t?nh Qu?ng Ninh ph?t tri?n s?n ph?m du l?ch v?nh H? Long - v?nh B?i T? Long.",
-    "expected_context": "Qu?ng Ninh ph?t tri?n s?n ph?m du l?ch v?nh H? Long - v?nh B?i T? Long."
-  },
-  {
-    "question": "T?nh Qu?ng Ninh ?? ban h?nh k? ho?ch ph?t tri?n s?n ph?m du l?ch n?o n?m 2024?",
-    "expected_answer": "UBND t?nh Qu?ng Ninh ?? ban h?nh K? ho?ch s? 39/KH-UBND v? ph?t tri?n s?n ph?m du l?ch t?nh Qu?ng Ninh n?m 2024.",
-    "expected_context": "K? ho?ch s? 39/KH-UBND v? ph?t tri?n s?n ph?m du l?ch t?nh Qu?ng Ninh n?m 2024."
-  },
-  {
-    "question": "H?nh tr?nh n?o k?t n?i v?nh H? Long v? v?nh B?i T? Long?",
-    "expected_answer": "H?nh tr?nh ?H?nh tr?nh di s?n? v?i du thuy?n Grand Pioneers 2 ???c ??a v?o khai th?c nh?m k?t n?i v?nh H? Long v? v?nh B?i T? Long.",
-    "expected_context": "H?nh tr?nh di s?n v?i du thuy?n Grand Pioneers 2 k?t n?i v?nh H? Long - v?nh B?i T? Long."
-  },
-  {
-    "question": "Ai l? ng??i ch? ??o ki?m tra, r? so?t an to?n k? thu?t to?n b? ??i t?u du l?ch tr?n V?nh H? Long?",
-    "expected_answer": "Ph? Th? t??ng Ch?nh ph? Mai V?n Ch?nh y?u c?u ki?m tra, r? so?t ?i?u ki?n an to?n, k? thu?t c?a to?n b? ??i t?u du l?ch tr?n V?nh H? Long.",
-    "expected_context": "Ph? Th? t??ng Ch?nh ph? Mai V?n Ch?nh ch? ??o ki?m tra ?i?u ki?n an to?n, k? thu?t c?a to?n b? ??i t?u du l?ch tr?n V?nh H? Long."
-  },
-  {
-    "question": "V? ch?y t?u du l?ch t?i V?nh H? Long ???c n?u trong b?i vi?t B?o ?i?n t? Ch?nh ph? x?y ra v?o ng?y n?o?",
-    "expected_answer": "V? ch?y t?u du l?ch x?y ra v?o ng?y 27/02/2026 tr?n V?nh H? Long.",
-    "expected_context": "S? c? ch?y t?u du l?ch x?y ra ng?y 27/02/2026 tr?n V?nh H? Long."
-  },
-  {
-    "question": "V?nh H? Long ???c UNESCO c?ng nh?n l? g??",
-    "expected_answer": "V?nh H? Long ???c UNESCO c?ng nh?n l? Di s?n thi?n nhi?n th? gi?i.",
-    "expected_context": "???c UNESCO c?ng nh?n l? Di s?n thi?n nhi?n th? gi?i, v?nh H? Long n?i ti?ng v?i nh?ng ng?n n?i ?? v?i."
-  },
-  {
-    "question": "Vietnam.travel m? t? V?nh H? Long l? g??",
-    "expected_answer": "V?nh H? Long ???c mi?u t? l? vi?n ng?c l?c b?o l?p l?nh tr?n v??ng mi?n c?a du l?ch Vi?t Nam.",
-    "expected_context": "V?nh H? Long l? vi?n ng?c l?c b?o l?p l?nh tr?n v??ng mi?n c?a du l?ch Vi?t Nam."
-  },
-  {
-    "question": "Di?n t?ch trung t?m v?nh H? Long c? m?t ?? bao nhi?u h?n ??o theo b?i vi?t Vietnam.travel?",
-    "expected_answer": "Khu v?c trung t?m c?a V?nh B?c B? c? di?n t?ch 335 km2 v?i m?t ?? 775 h?n ??o l?n nh?.",
-    "expected_context": "Khu v?c trung t?m c?a V?nh B?c B? c? di?n t?ch 335 km2 v?i m?t ?? 775 h?n ??o l?n nh?."
-  },
-  {
-    "question": "B?o VietnamNet ??nh gi? V?nh H? Long trong n?m 2022 nh? th? n?o?",
-    "expected_answer": "V?nh H? Long n?m trong top 10 ?i?m ??n ??p nh?t th? gi?i n?m 2022.",
-    "expected_context": "V?nh H? Long n?m trong top 10 ?i?m ??n ??p nh?t th? gi?i n?m 2022."
-  },
-  {
-    "question": "The Travel vinh danh V?nh H? Long ? h?ng m?c n?o?",
-    "expected_answer": "The Travel vinh danh v?nh H? Long l? m?t trong 10 ?i?m ??n ??p nh?t ch?u ?.",
-    "expected_context": "The Travel vinh danh v?nh H? Long l? m?t trong 10 ?i?m ??n ??p nh?t, mang nh?ng n?t ??c tr?ng c?a m?t qu?c gia ch?u ?."
-  },
-  {
-    "question": "Hang n?o ???c ghi ch? trong b?i vi?t c?a C?c Du l?ch Qu?c gia?",
-    "expected_answer": "Hang S?ng S?t ???c ghi ch? trong b?i vi?t.",
-    "expected_context": "B?n trong hang S?ng S?t."
-  },
-  {
-    "question": "T?nh Qu?ng Ninh ??t m?c ti?u g? ??i v?i ng?nh du l?ch?",
-    "expected_answer": "Qu?ng Ninh ??a du l?ch tr? th?nh ng?nh kinh t? m?i nh?n.",
-    "expected_context": "T?nh Qu?ng Ninh ??a du l?ch tr? th?nh ng?nh kinh t? m?i nh?n."
-  },
-  {
-    "question": "Quy?t ??nh 43/2024/Q?-UBND do ai k? ban h?nh?",
-    "expected_answer": "Quy?t ??nh 43/2024/Q?-UBND do V? V?n Di?n k? ban h?nh.",
-    "expected_context": "Quy?t ??nh 43/2024/Q?-UBND ng?y 08/10/2024, ng??i k?: V? V?n Di?n."
-  },
-  {
-    "question": "Quy?t ??nh 704/Q?-TTg c? ng?y ban h?nh v? ng??i k? l? ai?",
-    "expected_answer": "Quy?t ??nh 704/Q?-TTg ng?y 21/04/2026 do Ph?m Th? Thanh Tr? k?.",
-    "expected_context": "Quy?t ??nh 704/Q?-TTg ng?y 21/04/2026, ng??i k? Ph?m Th? Thanh Tr?."
-  }
+{
+"question": "Quyết định 704/QĐ-TTg năm 2026 liên quan đến nhiệm vụ lập quy hoạch gì ở Vịnh Hạ Long?",
+"expected_answer": "Quyết định 704/QĐ-TTg năm 2026 phê duyệt Nhiệm vụ lập Quy hoạch bảo quản, tu bổ, phục hồi Di tích quốc gia đặc biệt Danh lam thắng cảnh Vịnh Hạ Long, tỉnh Quảng Ninh.",
+"expected_context": "Quyết định 704/QĐ-TTg năm 2026 phê duyệt Nhiệm vụ lập Quy hoạch bảo quản, tu bổ, phục hồi Di tích quốc gia đặc biệt Danh lam thắng cảnh Vịnh Hạ Long, tỉnh Quảng Ninh."
+},
+{
+"question": "Cơ quan ban hành Quyết định 704/QĐ-TTg là cơ quan nào?",
+"expected_answer": "Quyết định 704/QĐ-TTg do Thủ tướng Chính phủ ban hành.",
+"expected_context": "Cơ quan ban hành: Thủ tướng Chính phủ; Số hiệu: 704/QĐ-TTg."
+},
+{
+"question": "Quyết định 72/QĐ-TTg của Thủ tướng Chính phủ có nội dung chính là gì?",
+"expected_answer": "Quyết định 72/QĐ-TTg phê duyệt Quy hoạch chung thành phố Hạ Long đến năm 2040.",
+"expected_context": "Quyết định 72/QĐ-TTg: Phê duyệt Quy hoạch chung thành phố Hạ Long đến năm 2040."
+},
+{
+"question": "Quyết định 43/2024/QĐ-UBND tỉnh Quảng Ninh quy định vấn đề gì?",
+"expected_answer": "Quyết định 43/2024/QĐ-UBND quy định các biện pháp quản lý hoạt động của phương tiện thủy nội địa phục vụ khách du lịch trên Vịnh Hạ Long, Vịnh Bái Tử Long.",
+"expected_context": "Quyết định 43/2024/QĐ-UBND tỉnh Quảng Ninh quy định các biện pháp quản lý phương tiện thủy nội địa phục vụ khách du lịch trên Vịnh Hạ Long, Vịnh Bái Tử Long."
+},
+{
+"question": "Bài viết ngày 14/06/2024 của Cục Du lịch Quốc gia Việt Nam nói về chủ đề gì?",
+"expected_answer": "Bài viết nói về việc tỉnh Quảng Ninh phát triển sản phẩm du lịch Vịnh Hạ Long - Vịnh Bái Tử Long.",
+"expected_context": "Quảng Ninh phát triển sản phẩm du lịch Vịnh Hạ Long - Vịnh Bái Tử Long."
+},
+{
+"question": "Tỉnh Quảng Ninh đã ban hành kế hoạch phát triển sản phẩm du lịch nào năm 2024?",
+"expected_answer": "UBND tỉnh Quảng Ninh đã ban hành Kế hoạch số 39/KH-UBND về phát triển sản phẩm du lịch tỉnh Quảng Ninh năm 2024.",
+"expected_context": "Kế hoạch số 39/KH-UBND về phát triển sản phẩm du lịch tỉnh Quảng Ninh năm 2024."
+},
+{
+"question": "Hành trình nào kết nối Vịnh Hạ Long và Vịnh Bái Tử Long?",
+"expected_answer": "Hành trình “Hành trình di sản” với du thuyền Grand Pioneers 2 được đưa vào khai thác nhằm kết nối Vịnh Hạ Long và Vịnh Bái Tử Long.",
+"expected_context": "Hành trình di sản với du thuyền Grand Pioneers 2 kết nối Vịnh Hạ Long - Vịnh Bái Tử Long."
+},
+{
+"question": "Ai là người chỉ đạo kiểm tra, rà soát an toàn kỹ thuật toàn bộ đội tàu du lịch trên Vịnh Hạ Long?",
+"expected_answer": "Phó Thủ tướng Chính phủ Mai Văn Chính yêu cầu kiểm tra, rà soát điều kiện an toàn, kỹ thuật của toàn bộ đội tàu du lịch trên Vịnh Hạ Long.",
+"expected_context": "Phó Thủ tướng Chính phủ Mai Văn Chính chỉ đạo kiểm tra điều kiện an toàn, kỹ thuật của toàn bộ đội tàu du lịch trên Vịnh Hạ Long."
+},
+{
+"question": "Vụ cháy tàu du lịch tại Vịnh Hạ Long được nêu trong bài viết Báo Điện tử Chính phủ xảy ra vào ngày nào?",
+"expected_answer": "Vụ cháy tàu du lịch xảy ra vào ngày 27/02/2026 trên Vịnh Hạ Long.",
+"expected_context": "Sự cố cháy tàu du lịch xảy ra ngày 27/02/2026 trên Vịnh Hạ Long."
+},
+{
+"question": "Vịnh Hạ Long được UNESCO công nhận là gì?",
+"expected_answer": "Vịnh Hạ Long được UNESCO công nhận là Di sản thiên nhiên thế giới.",
+"expected_context": "Được UNESCO công nhận là Di sản thiên nhiên thế giới, Vịnh Hạ Long nổi tiếng với những ngọn núi đá vôi."
+},
+{
+"question": "Vietnam.travel mô tả Vịnh Hạ Long là gì?",
+"expected_answer": "Vịnh Hạ Long được miêu tả là viên ngọc lục bảo lấp lánh trên vương miện của du lịch Việt Nam.",
+"expected_context": "Vịnh Hạ Long là viên ngọc lục bảo lấp lánh trên vương miện của du lịch Việt Nam."
+},
+{
+"question": "Diện tích trung tâm Vịnh Hạ Long có mật độ bao nhiêu hòn đảo theo bài viết Vietnam.travel?",
+"expected_answer": "Khu vực trung tâm của Vịnh Bắc Bộ có diện tích 335 km2 với mật độ 775 hòn đảo lớn nhỏ.",
+"expected_context": "Khu vực trung tâm của Vịnh Bắc Bộ có diện tích 335 km2 với mật độ 775 hòn đảo lớn nhỏ."
+},
+{
+"question": "Báo VietnamNet đánh giá Vịnh Hạ Long trong năm 2022 như thế nào?",
+"expected_answer": "Vịnh Hạ Long nằm trong top 10 điểm đến đẹp nhất thế giới năm 2022.",
+"expected_context": "Vịnh Hạ Long nằm trong top 10 điểm đến đẹp nhất thế giới năm 2022."
+},
+{
+"question": "The Travel vinh danh Vịnh Hạ Long ở hạng mục nào?",
+"expected_answer": "The Travel vinh danh Vịnh Hạ Long là một trong 10 điểm đến đẹp nhất châu Á.",
+"expected_context": "The Travel vinh danh Vịnh Hạ Long là một trong 10 điểm đến đẹp nhất, mang những nét đặc trưng của một quốc gia châu Á."
+},
+{
+"question": "Hang nào được ghi chú trong bài viết của Cục Du lịch Quốc gia?",
+"expected_answer": "Hang Sửng Sốt được ghi chú trong bài viết.",
+"expected_context": "Bên trong hang Sửng Sốt."
+},
+{
+"question": "Tỉnh Quảng Ninh đặt mục tiêu gì đối với ngành du lịch?",
+"expected_answer": "Quảng Ninh đưa du lịch trở thành ngành kinh tế mũi nhọn.",
+"expected_context": "Tỉnh Quảng Ninh đưa du lịch trở thành ngành kinh tế mũi nhọn."
+},
+{
+"question": "Quyết định 43/2024/QĐ-UBND do ai ký ban hành?",
+"expected_answer": "Quyết định 43/2024/QĐ-UBND do Vũ Văn Diện ký ban hành.",
+"expected_context": "Quyết định 43/2024/QĐ-UBND ngày 08/10/2024, người ký: Vũ Văn Diện."
+},
+{
+"question": "Quyết định 704/QĐ-TTg có ngày ban hành và người ký là ai?",
+"expected_answer": "Quyết định 704/QĐ-TTg ngày 21/04/2026 do Phạm Thị Thanh Trà ký.",
+"expected_context": "Quyết định 704/QĐ-TTg ngày 21/04/2026, người ký Phạm Thị Thanh Trà."
+}
 ]
