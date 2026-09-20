@@ -1,0 +1,650 @@
+[
+  {
+    "case": 1,
+    "config": "A",
+    "question": "Sinh viên được đăng ký tối đa bao nhiêu tín chỉ trong học kỳ hè 2025-2026?",
+    "answer": "Sinh viên được đăng ký tối đa **8 tín chỉ (TC)** trong học kỳ hè 2025-2026 [S1][S2][S5].",
+    "context_ids": [
+      "legal/quy-che-dao-tao-2025.md::chunk-72",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-8",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-3",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-1",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-2"
+    ],
+    "latency_seconds": 57.61,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.9091,
+    "context_recall": 1.0,
+    "context_precision": 1.0
+  },
+  {
+    "case": 2,
+    "config": "A",
+    "question": "Sinh viên K70 có được đăng ký học kỳ hè 20253 không?",
+    "answer": "Sinh viên K70 không được đăng ký học kỳ hè 2025.3. Theo thông báo, K70 sẽ không tham gia học kỳ hè theo kế hoạch năm học đã công bố, ngoại trừ nhóm sinh viên có kế hoạch học GDQP [S1][S2]. Ngoài ra, thông báo khác cũng nêu rõ \"K70 sẽ không mở đăng ký học kỳ hè 20253\" [S3][S5].",
+    "context_ids": [
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-1",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-4",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-2",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-3",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-3"
+    ],
+    "latency_seconds": 2.724,
+    "faithfulness": 0.7931,
+    "answer_relevance": 0.3889,
+    "context_recall": 1.0,
+    "context_precision": 1.0
+  },
+  {
+    "case": 3,
+    "config": "A",
+    "question": "Thời gian đăng ký học phần cho học kỳ hè 2025-2026 là khi nào?",
+    "answer": "Thời gian đăng ký học phần cho học kỳ hè 2025-2026 là từ 10h00 ngày 16/3/2026 đến 16h ngày 19/4/2026 [S5].",
+    "context_ids": [
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-2",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-4",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-1",
+      "news/tiep-nhan-tro-lai-hoc-2026-1.md::chunk-6",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-1"
+    ],
+    "latency_seconds": 2.554,
+    "faithfulness": 0.9286,
+    "answer_relevance": 0.5,
+    "context_recall": 1.0,
+    "context_precision": 1.0
+  },
+  {
+    "case": 4,
+    "config": "A",
+    "question": "Hạn đăng ký học phần kỳ 1 năm học 2026-2027 là ngày nào?",
+    "answer": "Theo [S1], hạn đăng ký học phần kỳ 1 năm học 2026-2027 là **16h ngày 27/4/2026**. \n\n(Lưu ý: [S3] lại ghi hạn là 16h ngày 19/4/2026, tuy nhiên [S1] được coi là thông báo chính thức với đầy đủ chi tiết về khối lượng đăng ký.)",
+    "context_ids": [
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-5",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-1",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-0",
+      "news/tiep-nhan-tro-lai-hoc-2026-1.md::chunk-2",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-4"
+    ],
+    "latency_seconds": 41.212,
+    "faithfulness": 0.5714,
+    "answer_relevance": 0.2,
+    "context_recall": 1.0,
+    "context_precision": 0.8
+  },
+  {
+    "case": 5,
+    "config": "A",
+    "question": "Sinh viên bình thường chương trình chuẩn được đăng ký bao nhiêu tín chỉ kỳ 2026.1?",
+    "answer": "Sinh viên bình thường chương trình chuẩn được đăng ký tối thiểu 12 TC và tối đa 24 TC trong kỳ 2026.1 [S1].",
+    "context_ids": [
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-7",
+      "legal/quy-che-dao-tao-2025.md::chunk-72",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-8",
+      "legal/quy-che-dao-tao-2025.md::chunk-117",
+      "legal/quy-che-dao-tao-2025.md::chunk-120"
+    ],
+    "latency_seconds": 2.589,
+    "faithfulness": 0.9333,
+    "answer_relevance": 0.4545,
+    "context_recall": 1.0,
+    "context_precision": 1.0
+  },
+  {
+    "case": 6,
+    "config": "A",
+    "question": "Sinh viên chương trình Elitech bị cảnh cáo học tập mức 2 hoặc 3 được đăng ký bao nhiêu tín chỉ?",
+    "answer": "Sinh viên chương trình Elitech bị cảnh cáo học tập mức 2 hoặc 3 được đăng ký tối thiểu 08 TC và tối đa 18 TC. [S1]",
+    "context_ids": [
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-7",
+      "legal/quy-che-dao-tao-2025.md::chunk-117",
+      "legal/quy-che-dao-tao-2025.md::chunk-73",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-7",
+      "legal/quy-che-dao-tao-2025.md::chunk-115"
+    ],
+    "latency_seconds": 7.353,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.32,
+    "context_recall": 1.0,
+    "context_precision": 0.8
+  },
+  {
+    "case": 7,
+    "config": "A",
+    "question": "Ba đợt đăng ký lớp chính kỳ 2026.1 diễn ra trong khoảng thời gian nào?",
+    "answer": "Ba đợt đăng ký lớp chính kỳ 2026.1 diễn ra như sau:  \n- **Đăng ký chính thức:** từ 16h00 ngày 22/07/2026 đến 14h00 ngày 03/08/2026.  \n- **Đăng ký điều chỉnh:** từ 16h00 ngày 03/08/2026 đến 14h00 ngày 15/08/2026.  \n- **Đăng ký thêm:** từ 16h00 ngày 15/08/2026 đến 16h00 ngày 22/08/2026. [S1]",
+    "context_ids": [
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-9",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-11",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-14",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-11",
+      "news/tiep-nhan-tro-lai-hoc-2026-1.md::chunk-6"
+    ],
+    "latency_seconds": 8.212,
+    "faithfulness": 0.8696,
+    "answer_relevance": 0.5714,
+    "context_recall": 1.0,
+    "context_precision": 0.8
+  },
+  {
+    "case": 8,
+    "config": "A",
+    "question": "Hệ thống đăng ký lớp bảo trì định kỳ vào khung giờ nào?",
+    "answer": "Hệ thống đăng ký lớp bảo trì định kỳ từ **00h00 đến 02h00 sáng hàng ngày** [S2][S5].",
+    "context_ids": [
+      "news/su-co-he-thong-dang-ky-2026.md::chunk-1",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-13",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-9",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-12",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-9"
+    ],
+    "latency_seconds": 4.741,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.3478,
+    "context_recall": 1.0,
+    "context_precision": 0.6
+  },
+  {
+    "case": 9,
+    "config": "A",
+    "question": "Sự cố hệ thống đăng ký ngày 25/07/2026 được khắc phục hoàn toàn lúc mấy giờ?",
+    "answer": "Sự cố hệ thống đăng ký ngày 25/07/2026 được khắc phục hoàn toàn vào 19h15 cùng ngày [S1].",
+    "context_ids": [
+      "news/su-co-he-thong-dang-ky-2026.md::chunk-1",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-17",
+      "news/su-co-he-thong-dang-ky-2026.md::chunk-0",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-12",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-13"
+    ],
+    "latency_seconds": 5.876,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.7857,
+    "context_recall": 1.0,
+    "context_precision": 0.4
+  },
+  {
+    "case": 10,
+    "config": "A",
+    "question": "Sinh viên tra cứu và đóng học phí kỳ hè 2025-2026 trong thời gian nào?",
+    "answer": "Sinh viên tra cứu học phí từ ngày **10/08/2026** [S1] và đóng học phí từ ngày **10/08/2026** đến hết ngày **16/08/2026** [S2].",
+    "context_ids": [
+      "news/hoc-phi-ky-he-2025-2026.md::chunk-1",
+      "news/hoc-phi-ky-he-2025-2026.md::chunk-3",
+      "news/hoc-phi-ky-he-2025-2026.md::chunk-2",
+      "news/tiep-nhan-tro-lai-hoc-2026-1.md::chunk-6",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-3"
+    ],
+    "latency_seconds": 4.968,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.9091,
+    "context_recall": 1.0,
+    "context_precision": 0.8
+  },
+  {
+    "case": 11,
+    "config": "A",
+    "question": "Sinh viên thuộc diện chính sách có được miễn giảm học phí kỳ hè không?",
+    "answer": "Không. Theo [S1], sinh viên thuộc diện chế độ chính sách (của tất cả các khóa) đều phải đóng học phí kỳ hè và không được miễn giảm vì kỳ hè là kỳ tự nguyện.",
+    "context_ids": [
+      "news/hoc-phi-ky-he-2025-2026.md::chunk-2",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-3",
+      "legal/quy-che-dao-tao-2025.md::chunk-66",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-2",
+      "legal/quy-che-to-chuc-quan-ly-dao-tao-2024.md::chunk-272"
+    ],
+    "latency_seconds": 3.069,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.75,
+    "context_recall": 1.0,
+    "context_precision": 0.8
+  },
+  {
+    "case": 12,
+    "config": "A",
+    "question": "Sinh viên trở lại học kỳ 1 năm học 2026-2027 nộp hồ sơ khi nào và có cần đăng ký học phần không?",
+    "answer": "__INSUFFICIENT_EVIDENCE__",
+    "context_ids": [
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-5",
+      "news/tiep-nhan-tro-lai-hoc-2026-1.md::chunk-1",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-0",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-2",
+      "news/tiep-nhan-tro-lai-hoc-2026-1.md::chunk-6"
+    ],
+    "latency_seconds": 4.394,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_recall": 0.5714,
+    "context_precision": 1.0
+  },
+  {
+    "case": 13,
+    "config": "A",
+    "question": "Học phần tiên quyết, học trước và song hành khác nhau như thế nào?",
+    "answer": "Theo quy định, ba loại học phần này khác nhau ở mức độ yêu cầu trước khi được dự lớp học phần tiếp theo:\n\n- **Học phần tiên quyết**: Sinh viên phải **hoàn thành** học phần A (với mức điểm đạt) mới được dự lớp học phần B [S5].\n- **Học phần học trước**: Sinh viên phải **đăng ký và học xong** học phần A (có thể chưa đạt) mới được dự lớp học phần B [S1].\n- **Học phần song hành**: Sinh viên phải **theo học trước hoặc học đồng thời** với học phần B, không yêu cầu hoàn thành trước [S1].\n\nNhư vậy, mức độ ràng buộc giảm dần từ tiên quyết (phải đạt) → học trước (chỉ cần học xong) → song hành (học trước hoặc cùng lúc).",
+    "context_ids": [
+      "legal/quy-che-dao-tao-2025.md::chunk-50",
+      "legal/quy-che-dao-tao-2025.md::chunk-49",
+      "legal/quy-che-to-chuc-quan-ly-dao-tao-2024.md::chunk-30",
+      "legal/quy-che-to-chuc-quan-ly-dao-tao-2024.md::chunk-32",
+      "legal/quy-che-dao-tao-2025.md::chunk-48"
+    ],
+    "latency_seconds": 8.8,
+    "faithfulness": 0.7317,
+    "answer_relevance": 0.5333,
+    "context_recall": 1.0,
+    "context_precision": 0.6
+  },
+  {
+    "case": 14,
+    "config": "A",
+    "question": "Khi nào hai học phần được coi là tương đương?",
+    "answer": "Hai học phần được coi là tương đương khi có nội dung chuyên môn trùng lặp tối thiểu 70% [S1].",
+    "context_ids": [
+      "legal/quy-che-dao-tao-2025.md::chunk-47",
+      "legal/quy-che-to-chuc-quan-ly-dao-tao-2024.md::chunk-52",
+      "legal/quy-che-dao-tao-2025.md::chunk-112",
+      "legal/quy-che-dao-tao-2025.md::chunk-48",
+      "legal/quy-che-dao-tao-2025.md::chunk-110"
+    ],
+    "latency_seconds": 5.414,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.75,
+    "context_recall": 1.0,
+    "context_precision": 0.8
+  },
+  {
+    "case": 15,
+    "config": "A",
+    "question": "Điều kiện sớm nhất để sinh viên đăng ký học chương trình thứ hai là gì?",
+    "answer": "Sinh viên được phép đăng ký học chương trình thứ hai sớm nhất khi đã được xếp trình độ năm thứ hai của chương trình thứ nhất [S5].",
+    "context_ids": [
+      "legal/quy-che-dao-tao-2025.md::chunk-111",
+      "legal/quy-che-dao-tao-2025.md::chunk-110",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-5",
+      "legal/quy-che-dao-tao-2025.md::chunk-112",
+      "legal/quy-che-dao-tao-2025.md::chunk-69"
+    ],
+    "latency_seconds": 3.245,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.5,
+    "context_recall": 1.0,
+    "context_precision": 0.6
+  },
+  {
+    "case": 16,
+    "config": "A",
+    "question": "Sinh viên có thể rút học phần trong bao lâu và có phải đóng học phí học phần đã rút không?",
+    "answer": "Sinh viên có thể rút học phần trong khoảng thời gian 7 tuần đầu của học kỳ (đối với lớp học 16 tuần) [S1], [S5]. \n\nVề học phí, sinh viên vẫn phải đóng học phí cho học phần đã rút, cụ thể là đóng một nửa (50%) học phí của học phần đó nếu được giải quyết theo nguyện vọng [S1], [S5]. Tuy nhiên, có ngoại lệ: nếu đề nghị rút học phần trong tuần đầu tiên của học kỳ thứ 2 và được giải quyết theo nguyện vọng thì không phải đóng học phí của học phần đó [S1]. Quy định này không áp dụng với các học phần học ở học kỳ hè [S1].",
+    "context_ids": [
+      "legal/quy-che-dao-tao-2025.md::chunk-66",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-23",
+      "legal/quy-che-dao-tao-2025.md::chunk-67",
+      "legal/quy-che-dao-tao-2025.md::chunk-103",
+      "legal/quy-che-dao-tao-2025.md::chunk-132"
+    ],
+    "latency_seconds": 11.816,
+    "faithfulness": 0.9474,
+    "answer_relevance": 0.3929,
+    "context_recall": 1.0,
+    "context_precision": 0.6
+  },
+  {
+    "case": 17,
+    "config": "A",
+    "question": "Một tín chỉ tương đương bao nhiêu giờ học tập định mức?",
+    "answer": "Một tín chỉ được tính tương đương 50 giờ học tập định mức của người học [S1].",
+    "context_ids": [
+      "legal/quy-che-dao-tao-2025.md::chunk-44",
+      "legal/quy-che-dao-tao-2025.md::chunk-34",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-7",
+      "legal/quy-che-dao-tao-2025.md::chunk-45",
+      "legal/quy-che-dao-tao-2025.md::chunk-43"
+    ],
+    "latency_seconds": 2.806,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.9524,
+    "context_recall": 1.0,
+    "context_precision": 1.0
+  },
+  {
+    "case": 18,
+    "config": "A",
+    "question": "Trường hợp nào sinh viên bị buộc thôi học do cảnh báo học tập?",
+    "answer": "Sinh viên bị buộc thôi học do cảnh báo học tập khi bị cảnh báo học tập mức 3 lần thứ hai liên tiếp [S1].",
+    "context_ids": [
+      "legal/quy-che-dao-tao-2025.md::chunk-118",
+      "legal/quy-che-dao-tao-2025.md::chunk-114",
+      "legal/quy-che-dao-tao-2025.md::chunk-159",
+      "legal/quy-che-dao-tao-2025.md::chunk-133",
+      "legal/quy-che-dao-tao-2025.md::chunk-115"
+    ],
+    "latency_seconds": 6.349,
+    "faithfulness": 0.9231,
+    "answer_relevance": 0.9231,
+    "context_recall": 1.0,
+    "context_precision": 1.0
+  },
+  {
+    "case": 1,
+    "config": "B",
+    "question": "Sinh viên được đăng ký tối đa bao nhiêu tín chỉ trong học kỳ hè 2025-2026?",
+    "answer": "Sinh viên được đăng ký tối đa 8 tín chỉ trong học kỳ hè 2025-2026 [S4][S2].",
+    "context_ids": [
+      "legal/quy-che-dao-tao-2025.md::chunk-72",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-2",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-3",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-8",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-1"
+    ],
+    "latency_seconds": 10.977,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.9524,
+    "context_recall": 1.0,
+    "context_precision": 1.0
+  },
+  {
+    "case": 2,
+    "config": "B",
+    "question": "Sinh viên K70 có được đăng ký học kỳ hè 20253 không?",
+    "answer": "Không. Theo thông báo, sinh viên K70 sẽ không được mở đăng ký học kỳ hè 20253 [S2][S5].",
+    "context_ids": [
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-1",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-4",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-3",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-3",
+      "news/tiep-nhan-tro-lai-hoc-2026-1.md::chunk-1"
+    ],
+    "latency_seconds": 2.371,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.8235,
+    "context_recall": 1.0,
+    "context_precision": 1.0
+  },
+  {
+    "case": 3,
+    "config": "B",
+    "question": "Thời gian đăng ký học phần cho học kỳ hè 2025-2026 là khi nào?",
+    "answer": "Thời gian đăng ký học phần cho học kỳ hè 2025-2026 là từ **10h00 ngày 16/3/2026 đến 16h ngày 19/4/2026** [S5].",
+    "context_ids": [
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-2",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-4",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-1",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-0",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-1"
+    ],
+    "latency_seconds": 3.234,
+    "faithfulness": 0.9286,
+    "answer_relevance": 0.5,
+    "context_recall": 1.0,
+    "context_precision": 1.0
+  },
+  {
+    "case": 4,
+    "config": "B",
+    "question": "Hạn đăng ký học phần kỳ 1 năm học 2026-2027 là ngày nào?",
+    "answer": "Hạn đăng ký học phần kỳ 1 năm học 2026-2027 là đến **16h ngày 27/4/2026** [S5].",
+    "context_ids": [
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-1",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-5",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-0",
+      "news/tiep-nhan-tro-lai-hoc-2026-1.md::chunk-1",
+      "news/tiep-nhan-tro-lai-hoc-2026-1.md::chunk-2"
+    ],
+    "latency_seconds": 2.827,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.3478,
+    "context_recall": 1.0,
+    "context_precision": 0.6
+  },
+  {
+    "case": 5,
+    "config": "B",
+    "question": "Sinh viên bình thường chương trình chuẩn được đăng ký bao nhiêu tín chỉ kỳ 2026.1?",
+    "answer": "Sinh viên bình thường chương trình chuẩn được đăng ký tối thiểu 12 TC và tối đa 24 TC trong kỳ 2026.1 [S1].",
+    "context_ids": [
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-7",
+      "legal/quy-che-dao-tao-2025.md::chunk-117",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-7",
+      "legal/quy-che-dao-tao-2025.md::chunk-72",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-5"
+    ],
+    "latency_seconds": 2.568,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.4545,
+    "context_recall": 1.0,
+    "context_precision": 1.0
+  },
+  {
+    "case": 6,
+    "config": "B",
+    "question": "Sinh viên chương trình Elitech bị cảnh cáo học tập mức 2 hoặc 3 được đăng ký bao nhiêu tín chỉ?",
+    "answer": "Sinh viên chương trình Elitech bị cảnh cáo học tập mức 2 hoặc 3 được đăng ký tối thiểu 08 TC và tối đa 18 TC cho một học kỳ chính. [S1]",
+    "context_ids": [
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-7",
+      "legal/quy-che-dao-tao-2025.md::chunk-117",
+      "legal/quy-che-dao-tao-2025.md::chunk-115",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-7",
+      "legal/quy-che-dao-tao-2025.md::chunk-114"
+    ],
+    "latency_seconds": 3.308,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.4444,
+    "context_recall": 1.0,
+    "context_precision": 0.8
+  },
+  {
+    "case": 7,
+    "config": "B",
+    "question": "Ba đợt đăng ký lớp chính kỳ 2026.1 diễn ra trong khoảng thời gian nào?",
+    "answer": "Ba đợt đăng ký lớp chính kỳ 2026.1 diễn ra trong khoảng thời gian sau [S1]:\n- **Đăng ký chính thức:** Từ 16h00 ngày 22/07/2026 đến 14h00 ngày 03/08/2026.\n- **Đăng ký điều chỉnh:** Từ 16h00 ngày 03/08/2026 đến 14h00 ngày 15/08/2026.\n- **Đăng ký thêm:** Từ 16h00 ngày 15/08/2026 đến 16h00 ngày 22/08/2026.",
+    "context_ids": [
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-9",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-11",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-11",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-15",
+      "news/tiep-nhan-tro-lai-hoc-2026-1.md::chunk-3"
+    ],
+    "latency_seconds": 6.964,
+    "faithfulness": 0.8077,
+    "answer_relevance": 0.5263,
+    "context_recall": 1.0,
+    "context_precision": 1.0
+  },
+  {
+    "case": 8,
+    "config": "B",
+    "question": "Hệ thống đăng ký lớp bảo trì định kỳ vào khung giờ nào?",
+    "answer": "Hệ thống đăng ký lớp bảo trì định kỳ từ **00h00 đến 02h00 sáng hàng ngày**. [S1], [S4]",
+    "context_ids": [
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-13",
+      "news/su-co-he-thong-dang-ky-2026.md::chunk-1",
+      "news/tiep-nhan-tro-lai-hoc-2026-1.md::chunk-3",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-9",
+      "legal/quy-che-to-chuc-quan-ly-dao-tao-2024.md::chunk-84"
+    ],
+    "latency_seconds": 5.244,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.3478,
+    "context_recall": 1.0,
+    "context_precision": 0.6
+  },
+  {
+    "case": 9,
+    "config": "B",
+    "question": "Sự cố hệ thống đăng ký ngày 25/07/2026 được khắc phục hoàn toàn lúc mấy giờ?",
+    "answer": "Sự cố hệ thống đăng ký ngày 25/07/2026 được khắc phục hoàn toàn lúc 19h15 cùng ngày. [S1]",
+    "context_ids": [
+      "news/su-co-he-thong-dang-ky-2026.md::chunk-1",
+      "news/su-co-he-thong-dang-ky-2026.md::chunk-0",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-17",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-12",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-11"
+    ],
+    "latency_seconds": 4.734,
+    "faithfulness": 0.9412,
+    "answer_relevance": 0.8276,
+    "context_recall": 1.0,
+    "context_precision": 0.2
+  },
+  {
+    "case": 10,
+    "config": "B",
+    "question": "Sinh viên tra cứu và đóng học phí kỳ hè 2025-2026 trong thời gian nào?",
+    "answer": "Sinh viên tra cứu học phí kỳ hè 2025-2026 từ ngày **10/08/2026** [S1]. Việc đóng học phí bắt đầu từ ngày **10/08/2026** đến hết ngày **16/08/2026** [S4].",
+    "context_ids": [
+      "news/hoc-phi-ky-he-2025-2026.md::chunk-1",
+      "news/hoc-phi-ky-he-2025-2026.md::chunk-3",
+      "news/hoc-phi-ky-he-2025-2026.md::chunk-0",
+      "news/hoc-phi-ky-he-2025-2026.md::chunk-2",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-2"
+    ],
+    "latency_seconds": 5.039,
+    "faithfulness": 0.9375,
+    "answer_relevance": 0.7143,
+    "context_recall": 1.0,
+    "context_precision": 0.8
+  },
+  {
+    "case": 11,
+    "config": "B",
+    "question": "Sinh viên thuộc diện chính sách có được miễn giảm học phí kỳ hè không?",
+    "answer": "Không. Theo [S1], sinh viên thuộc diện chế độ chính sách (của tất cả các khóa) đều phải đóng học phí kỳ hè và không được miễn giảm vì kỳ hè là kỳ tự nguyện.",
+    "context_ids": [
+      "news/hoc-phi-ky-he-2025-2026.md::chunk-2",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-3",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-8",
+      "legal/quy-che-to-chuc-quan-ly-dao-tao-2024.md::chunk-82",
+      "legal/quy-che-dao-tao-2025.md::chunk-72"
+    ],
+    "latency_seconds": 3.127,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.75,
+    "context_recall": 1.0,
+    "context_precision": 1.0
+  },
+  {
+    "case": 12,
+    "config": "B",
+    "question": "Sinh viên trở lại học kỳ 1 năm học 2026-2027 nộp hồ sơ khi nào và có cần đăng ký học phần không?",
+    "answer": "__INSUFFICIENT_EVIDENCE__",
+    "context_ids": [
+      "news/tiep-nhan-tro-lai-hoc-2026-1.md::chunk-1",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-5",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-0",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-1",
+      "news/dang-ky-ke-hoach-hoc-tap-2026-1.md::chunk-2"
+    ],
+    "latency_seconds": 4.995,
+    "faithfulness": 0.0,
+    "answer_relevance": 0.0,
+    "context_recall": 0.5714,
+    "context_precision": 1.0
+  },
+  {
+    "case": 13,
+    "config": "B",
+    "question": "Học phần tiên quyết, học trước và song hành khác nhau như thế nào?",
+    "answer": "Theo quy định tại [S1] và [S5], ba loại học phần này khác nhau như sau:\n\n- **Học phần tiên quyết**: Sinh viên phải **hoàn thành** (đạt điểm) học phần A trước khi được dự lớp học phần B [S1].\n- **Học phần học trước**: Sinh viên phải **đăng ký và học xong** học phần A (có thể chưa đạt) trước khi được dự lớp học phần B [S5].\n- **Học phần song hành**: Sinh viên phải **theo học trước hoặc học đồng thời** với học phần B [S5].",
+    "context_ids": [
+      "legal/quy-che-dao-tao-2025.md::chunk-49",
+      "legal/quy-che-dao-tao-2025.md::chunk-50",
+      "legal/quy-dinh-ngoai-ngu-k71-2026.md::chunk-19",
+      "legal/quy-che-dao-tao-2025.md::chunk-121",
+      "legal/quy-che-to-chuc-quan-ly-dao-tao-2024.md::chunk-30"
+    ],
+    "latency_seconds": 6.968,
+    "faithfulness": 0.8929,
+    "answer_relevance": 0.5957,
+    "context_recall": 1.0,
+    "context_precision": 0.8
+  },
+  {
+    "case": 14,
+    "config": "B",
+    "question": "Khi nào hai học phần được coi là tương đương?",
+    "answer": "Hai học phần được coi là tương đương khi có nội dung chuyên môn trùng lặp tối thiểu 70% [S1].",
+    "context_ids": [
+      "legal/quy-che-dao-tao-2025.md::chunk-47",
+      "legal/quy-che-dao-tao-2025.md::chunk-112",
+      "legal/quy-che-to-chuc-quan-ly-dao-tao-2024.md::chunk-52",
+      "legal/quy-che-dao-tao-2025.md::chunk-48",
+      "legal/quy-dinh-ngoai-ngu-k71-2026.md::chunk-86"
+    ],
+    "latency_seconds": 6.954,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.75,
+    "context_recall": 1.0,
+    "context_precision": 0.8
+  },
+  {
+    "case": 15,
+    "config": "B",
+    "question": "Điều kiện sớm nhất để sinh viên đăng ký học chương trình thứ hai là gì?",
+    "answer": "Điều kiện sớm nhất để sinh viên đăng ký học chương trình thứ hai là đã được xếp trình độ năm thứ hai của chương trình thứ nhất [S5].",
+    "context_ids": [
+      "legal/quy-che-dao-tao-2025.md::chunk-111",
+      "legal/quy-che-dao-tao-2025.md::chunk-110",
+      "legal/quy-che-dao-tao-2025.md::chunk-112",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-5",
+      "legal/quy-che-dao-tao-2025.md::chunk-113"
+    ],
+    "latency_seconds": 3.719,
+    "faithfulness": 1.0,
+    "answer_relevance": 0.5882,
+    "context_recall": 1.0,
+    "context_precision": 0.6
+  },
+  {
+    "case": 16,
+    "config": "B",
+    "question": "Sinh viên có thể rút học phần trong bao lâu và có phải đóng học phí học phần đã rút không?",
+    "answer": "Theo quy định, sinh viên có thể rút học phần trong khoảng thời gian 7 tuần đầu của học kỳ (đối với lớp học 16 tuần) [S1][S5]. \n\nVề học phí, sinh viên vẫn phải nộp học phí cho học phần đã rút [S5]. Cụ thể, nếu được giải quyết theo nguyện vọng trong khoảng 7 tuần đầu, sinh viên phải đóng một nửa (50%) học phí của học phần đó [S1]. Tuy nhiên, có ngoại lệ: nếu đề nghị rút học phần trong tuần đầu tiên của học kỳ thứ 2 và được giải quyết theo nguyện vọng thì không phải đóng học phí của học phần đó [S1]. Quy định này không áp dụng với các học phần học ở học kỳ hè [S1][S3].",
+    "context_ids": [
+      "legal/quy-che-dao-tao-2025.md::chunk-66",
+      "news/ke-hoach-dang-ky-lop-2026-1.md::chunk-23",
+      "legal/quy-che-dao-tao-2025.md::chunk-67",
+      "news/hoc-phi-ky-he-2025-2026.md::chunk-2",
+      "news/ke-hoach-dang-ky-lop-he-2025-2026.md::chunk-19"
+    ],
+    "latency_seconds": 10.315,
+    "faithfulness": 0.9487,
+    "answer_relevance": 0.386,
+    "context_recall": 0.95,
+    "context_precision": 0.8
+  },
+  {
+    "case": 17,
+    "config": "B",
+    "question": "Một tín chỉ tương đương bao nhiêu giờ học tập định mức?",
+    "answer": "Một tín chỉ tương đương 50 giờ học tập định mức của người học [S1].",
+    "context_ids": [
+      "legal/quy-che-dao-tao-2025.md::chunk-44",
+      "legal/quy-che-to-chuc-quan-ly-dao-tao-2024.md::chunk-33",
+      "legal/quy-che-dao-tao-2025.md::chunk-45",
+      "legal/quy-che-dao-tao-2025.md::chunk-34",
+      "legal/quy-dinh-ngoai-ngu-k71-2026.md::chunk-85"
+    ],
+    "latency_seconds": 2.756,
+    "faithfulness": 1.0,
+    "answer_relevance": 1.0,
+    "context_recall": 1.0,
+    "context_precision": 0.8
+  },
+  {
+    "case": 18,
+    "config": "B",
+    "question": "Trường hợp nào sinh viên bị buộc thôi học do cảnh báo học tập?",
+    "answer": "Sinh viên bị buộc thôi học do cảnh báo học tập khi bị cảnh báo học tập mức 3 lần thứ hai liên tiếp [S5].",
+    "context_ids": [
+      "legal/quy-che-dao-tao-2025.md::chunk-114",
+      "legal/quy-che-dao-tao-2025.md::chunk-118",
+      "legal/quy-che-dao-tao-2025.md::chunk-115",
+      "legal/quy-che-dao-tao-2025.md::chunk-11",
+      "legal/quy-che-dao-tao-2025.md::chunk-159"
+    ],
+    "latency_seconds": 4.907,
+    "faithfulness": 0.9231,
+    "answer_relevance": 0.9231,
+    "context_recall": 1.0,
+    "context_precision": 1.0
+  }
+]

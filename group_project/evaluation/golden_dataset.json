@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Sinh viên được đăng ký tối đa bao nhiêu tín chỉ trong học kỳ hè 2025-2026?",
+    "expected_answer": "Mỗi sinh viên được đăng ký tối đa 8 tín chỉ trong học kỳ hè 2025-2026.",
+    "expected_context": "Mỗi sinh viên được đăng ký tối đa 8TC."
+  },
+  {
+    "question": "Sinh viên K70 có được đăng ký học kỳ hè 20253 không?",
+    "expected_answer": "Không. K70 không được mở đăng ký học kỳ hè 20253.",
+    "expected_context": "Chú ý: K70 sẽ không mở đăng ký học kỳ hè 20253."
+  },
+  {
+    "question": "Thời gian đăng ký học phần cho học kỳ hè 2025-2026 là khi nào?",
+    "expected_answer": "Từ 10h00 ngày 16/3/2026 đến 16h00 ngày 19/4/2026.",
+    "expected_context": "Đăng ký học phần: từ 10h00 ngày 16/3/2026 đến 16h ngày 19/4/2026."
+  },
+  {
+    "question": "Hạn đăng ký học phần kỳ 1 năm học 2026-2027 là ngày nào?",
+    "expected_answer": "Hạn cuối là 16h00 ngày 27/4/2026; đợt bắt đầu lúc 10h00 ngày 16/3/2026.",
+    "expected_context": "Đăng ký học phần: từ 10h00 ngày 16/3/2026 đến 16h ngày 27/4/2026."
+  },
+  {
+    "question": "Sinh viên bình thường chương trình chuẩn được đăng ký bao nhiêu tín chỉ kỳ 2026.1?",
+    "expected_answer": "Tối thiểu 12 tín chỉ và tối đa 24 tín chỉ.",
+    "expected_context": "Sinh viên bình thường chương trình chuẩn: tối thiểu 12 TC – tối đa 24 TC."
+  },
+  {
+    "question": "Sinh viên chương trình Elitech bị cảnh cáo học tập mức 2 hoặc 3 được đăng ký bao nhiêu tín chỉ?",
+    "expected_answer": "Tối thiểu 8 tín chỉ và tối đa 18 tín chỉ trong một học kỳ chính.",
+    "expected_context": "Sinh viên bị cảnh cáo học tập mức 2 và 3 chương trình Elitech: tối thiểu 08 TC – tối đa 18 TC."
+  },
+  {
+    "question": "Ba đợt đăng ký lớp chính kỳ 2026.1 diễn ra trong khoảng thời gian nào?",
+    "expected_answer": "Chính thức từ 16h 22/7 đến 14h 3/8; điều chỉnh từ 16h 3/8 đến 14h 15/8; đăng ký thêm từ 16h 15/8 đến 16h 22/8/2026.",
+    "expected_context": "Đăng ký chính thức: 16h00 22/07/2026–14h00 03/08/2026; điều chỉnh: 16h00 03/08/2026–14h00 15/08/2026; đăng ký thêm: 16h00 15/08/2026–16h00 22/08/2026."
+  },
+  {
+    "question": "Hệ thống đăng ký lớp bảo trì định kỳ vào khung giờ nào?",
+    "expected_answer": "Từ 00h00 đến 02h00 sáng hằng ngày; sinh viên không được truy cập trong thời gian này.",
+    "expected_context": "Hệ thống thực hiện bảo trì định kỳ từ 00h00 đến 02h00 sáng hàng ngày."
+  },
+  {
+    "question": "Sự cố hệ thống đăng ký ngày 25/07/2026 được khắc phục hoàn toàn lúc mấy giờ?",
+    "expected_answer": "Sự cố được khắc phục hoàn toàn lúc 19h15 ngày 25/07/2026.",
+    "expected_context": "Hệ thống chưa thể hoạt động ổn định và chỉ được khắc phục hoàn toàn vào 19h15 cùng ngày."
+  },
+  {
+    "question": "Sinh viên tra cứu và đóng học phí kỳ hè 2025-2026 trong thời gian nào?",
+    "expected_answer": "Tra cứu từ ngày 10/08/2026; thời gian đóng học phí từ 10/08/2026 đến hết 16/08/2026.",
+    "expected_context": "Tra cứu học phí từ ngày 10/08/2026; bắt đầu đóng học phí từ ngày 10/08/2026 đến hết ngày 16/08/2026."
+  },
+  {
+    "question": "Sinh viên thuộc diện chính sách có được miễn giảm học phí kỳ hè không?",
+    "expected_answer": "Không. Tất cả sinh viên diện chính sách vẫn phải đóng học phí vì kỳ hè là kỳ tự nguyện.",
+    "expected_context": "Các sinh viên thuộc diện chế độ chính sách đều phải đóng học phí, không được miễn giảm, vì kỳ hè là kỳ tự nguyện."
+  },
+  {
+    "question": "Sinh viên trở lại học kỳ 1 năm học 2026-2027 nộp hồ sơ khi nào và có cần đăng ký học phần không?",
+    "expected_answer": "Nộp hồ sơ từ 05/05/2026 đến 15/08/2026; đăng ký lớp ở đợt điều chỉnh và không cần đăng ký học phần.",
+    "expected_context": "Vào học tiếp kỳ 1: từ 05/05/2026 đến 15/08/2026; sinh viên đăng ký lớp trong đợt điều chỉnh, không cần đăng ký học phần."
+  },
+  {
+    "question": "Học phần tiên quyết, học trước và song hành khác nhau như thế nào?",
+    "expected_answer": "Tiên quyết phải hoàn thành và đạt A trước B; học trước chỉ cần đã học xong A dù có thể chưa đạt; song hành cho phép học A trước hoặc đồng thời với B.",
+    "expected_context": "Học phần tiên quyết phải hoàn thành với mức điểm đạt; học phần học trước phải đăng ký và học xong nhưng có thể chưa đạt; học phần song hành phải theo học trước hoặc đồng thời."
+  },
+  {
+    "question": "Khi nào hai học phần được coi là tương đương?",
+    "expected_answer": "Khi nội dung chuyên môn trùng lặp tối thiểu 70%; học phần tương đương phải có số tín chỉ tối thiểu bằng học phần yêu cầu.",
+    "expected_context": "Hai học phần tương đương khi nội dung chuyên môn trùng lặp tối thiểu 70% và số tín chỉ của học phần tương đương tối thiểu bằng học phần yêu cầu."
+  },
+  {
+    "question": "Điều kiện sớm nhất để sinh viên đăng ký học chương trình thứ hai là gì?",
+    "expected_answer": "Sinh viên phải được xếp trình độ năm hai của chương trình thứ nhất, có CPA từ trung bình trở lên và đáp ứng điều kiện trúng tuyển chương trình thứ hai.",
+    "expected_context": "Được đăng ký chương trình thứ hai sớm nhất khi xếp trình độ năm thứ hai; CPA từ trung bình trở lên và đáp ứng điều kiện trúng tuyển chương trình thứ hai."
+  },
+  {
+    "question": "Sinh viên có thể rút học phần trong bao lâu và có phải đóng học phí học phần đã rút không?",
+    "expected_answer": "Có thể rút trong 7 tuần đầu với lớp 16 tuần, phải giữ đủ số tín chỉ tối thiểu và vẫn phải đóng học phí học phần đã rút.",
+    "expected_context": "Trong 07 tuần đầu đối với lớp 16 tuần sinh viên được rút học phần; số tín chỉ còn lại phải đủ tối thiểu và vẫn phải nộp học phí cho học phần đã rút."
+  },
+  {
+    "question": "Một tín chỉ tương đương bao nhiêu giờ học tập định mức?",
+    "expected_answer": "Một tín chỉ tương đương 50 giờ học tập định mức của người học.",
+    "expected_context": "Một TC được tính tương đương 50 giờ học tập định mức của người học."
+  },
+  {
+    "question": "Trường hợp nào sinh viên bị buộc thôi học do cảnh báo học tập?",
+    "expected_answer": "Sinh viên bị buộc thôi học nếu bị cảnh báo học tập mức 3 lần thứ hai liên tiếp.",
+    "expected_context": "Sinh viên bị cảnh báo học tập mức 3 lần thứ hai liên tiếp bị buộc thôi học."
+  }
+]
