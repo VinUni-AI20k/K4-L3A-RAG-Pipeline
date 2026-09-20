@@ -175,6 +175,16 @@ def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
 
     clean_answer, references = extract_and_format_citations(raw_answer, chunks)
 
+    # Nếu câu trả lời là từ chối do không xác minh được thông tin, xóa trích dẫn và danh sách nguồn
+    refusal_phrase = "Tôi không thể xác minh thông tin này"
+    if refusal_phrase in raw_answer or refusal_phrase in clean_answer:
+        return {
+            "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+            "sources": [],
+            "retrieval_source": "none",
+            "citations": [],
+        }
+
     retrieval_source = chunks[0].get("retrieval_method", "hybrid")
     if retrieval_source not in {"hybrid", "pageindex", "none"}:
         retrieval_source = "hybrid"

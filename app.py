@@ -447,15 +447,6 @@ for msg in st.session_state.messages:
 
         # Hiển thị khối Dẫn chiếu / Citation theo định dạng (1), (2)
         citations = msg.get("citations", [])
-        if not citations and sources:
-            primary_src = sources[0].get("metadata", {})
-            title = primary_src.get("title", "Quy chế ĐHQGHN & Thông báo UET")
-            source_file = primary_src.get("source", "")
-            citations = [
-                {"num": "(1)", "desc": title},
-                {"num": "(2)", "desc": f"{source_file}."},
-            ]
-
         if citations:
             items_html = "".join(
                 f"<div style='margin-bottom: 3px;'><b>{c['num']}</b> {c['desc']}</div>"
