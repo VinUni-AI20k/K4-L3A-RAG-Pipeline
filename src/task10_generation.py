@@ -52,17 +52,27 @@ def call_llm(system_prompt: str, user_message: str) -> str:
     if provider == "openai":
         from openai import OpenAI
 
+        from openai import BadRequestError
+
         if not os.getenv("OPENAI_API_KEY"):
             raise ValueError("OPENAI_API_KEY is not configured")
-        response = OpenAI().chat.completions.create(
-            model=LLM_MODEL,
-            messages=[
+        request = {
+            "model": LLM_MODEL,
+            "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_message},
             ],
-            temperature=TEMPERATURE,
-            top_p=TOP_P,
-        )
+        }
+        client = OpenAI()
+        try:
+            response = client.chat.completions.create(
+                **request, temperature=TEMPERATURE, top_p=TOP_P
+            )
+        except BadRequestError as error:
+            # Reasoning model (gpt-5.x, o-series) chỉ nhận temperature/top_p mặc định.
+            if "temperature" not in str(error) and "top_p" not in str(error):
+                raise
+            response = client.chat.completions.create(**request)
         return response.choices[0].message.content or ""
 
     if provider == "gemini":
