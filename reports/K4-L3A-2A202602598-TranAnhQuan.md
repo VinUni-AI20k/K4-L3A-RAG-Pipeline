@@ -3,8 +3,8 @@
 ## Thông tin
 
 - Họ và tên: Trần Anh Quân
-- Mã học viên: [Điền mã học viên nếu có]
-- Nhóm: L3A (K4-L3A)
+- Mã học viên: 2A202602598
+- Nhóm: GICUNGDCA (K4-L3A)
 - Repository/branch: https://github.com/thangws4/K4-L3A-RAG-Pipeline / branch `tran_anh_quan`
 
 ## Phần việc đã thực hiện
