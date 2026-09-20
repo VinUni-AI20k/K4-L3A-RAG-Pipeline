@@ -29,6 +29,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
+import src.task7_reranking as reranking  # noqa: E402
 import src.task9_retrieval_pipeline as pipeline  # noqa: E402
 
 
@@ -86,6 +87,7 @@ def run_config(name: str, config: dict, top_k: int) -> dict:
     reciprocal = 0.0
     started = time.monotonic()
     details = []
+    failures_before = reranking.RERANK_FAILURES
 
     for query, expected in LABELLED:
         # score_threshold=0.0 để tắt fallback: đang so retrieval, không so PageIndex.
@@ -104,8 +106,13 @@ def run_config(name: str, config: dict, top_k: int) -> dict:
         print(f"  hạng={rank if rank else '-':>3}  {query[:56]}")
 
     total = len(LABELLED)
+    # Reranker nuốt lỗi và trả lại thứ tự RRF, nên nếu không đếm thì cấu hình
+    # hỏng vẫn ra số đẹp và bị đọc nhầm thành "không cải thiện".
+    failed = reranking.RERANK_FAILURES - failures_before
     return {
         "name": name,
+        "invalid": bool(config["rerank"] and failed),
+        "error": reranking.LAST_RERANK_ERROR if failed else "",
         "hit1": hits1 / total,
         "hit3": hits3 / total,
         "mrr": reciprocal / total,
@@ -121,11 +128,21 @@ def table(rows: list[dict], baseline: str = "B. Hybrid + RRF") -> list[str]:
         "|---|---:|---:|---:|---:|---:|",
     ]
     for row in rows:
+        if row.get("invalid"):
+            lines.append(
+                f"| {row['name']} | — | — | — | — | KHÔNG ĐO ĐƯỢC |"
+            )
+            continue
         delta = row["mrr"] - base["mrr"]
         lines.append(
             f"| {row['name']} | {row['hit1']:.2%} | {row['hit3']:.2%} | "
             f"{row['mrr']:.4f} | {delta:+.4f} | {row['seconds']:.1f}s |"
         )
+    for row in rows:
+        if row.get("invalid"):
+            lines += ["", f"> **{row['name']} không đo được**: reranker lỗi nên "
+                          f"pipeline rơi về thứ tự RRF, số đo sẽ trùng B một cách giả tạo. "
+                          f"Lỗi: `{row['error']}`"]
     return lines
 
 
@@ -160,6 +177,10 @@ def main() -> int:
 
     base = next(row for row in rows if row["name"] == "B. Hybrid + RRF")
     for row in rows:
+        if row.get("invalid"):
+            print(f"\n{row['name']}: KHÔNG ĐO ĐƯỢC — reranker lỗi, "
+                  f"pipeline dùng thứ tự RRF.\n  Lỗi: {row['error']}")
+            continue
         if row["name"].startswith(("C.", "D.")) and row["mrr"] <= base["mrr"]:
             print(f"\nLƯU Ý: {row['name']} KHÔNG cải thiện so với B "
                   f"({row['mrr']:.4f} vs {base['mrr']:.4f}).")

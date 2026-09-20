@@ -71,6 +71,13 @@ JINA_API_KEY = os.getenv("JINA_API_KEY", "")
 
 _cross_encoder = None
 
+# Đếm số lần rerank chạy được và số lần phải rơi về RRF. Nuốt lỗi là đúng cho
+# production nhưng khi đo A/B thì nó sinh ra số liệu giả ("không cải thiện" dù
+# model chưa hề chạy), nên script đo phải đọc được hai biến này.
+RERANK_CALLS = 0
+RERANK_FAILURES = 0
+LAST_RERANK_ERROR: str = ""
+
 
 def _get_cross_encoder():
     """Nạp cross-encoder một lần rồi dùng lại (model ~2.2GB, nạp lại rất tốn)."""
@@ -117,6 +124,9 @@ def rerank_model(query: str, candidates: list[dict], top_k: int = 5) -> list[dic
     if not candidates:
         return []
 
+    global RERANK_CALLS, RERANK_FAILURES, LAST_RERANK_ERROR
+    RERANK_CALLS += 1
+
     documents = [item["content"] for item in candidates]
     try:
         if RERANK_PROVIDER == "jina" and JINA_API_KEY.strip():
@@ -124,7 +134,9 @@ def rerank_model(query: str, candidates: list[dict], top_k: int = 5) -> list[dic
         else:
             scores = _score_local(query, documents)
     except Exception as error:
-        print(f"[rerank] Model lỗi, giữ thứ tự RRF: {type(error).__name__}: {error}")
+        RERANK_FAILURES += 1
+        LAST_RERANK_ERROR = f"{type(error).__name__}: {error}"
+        print(f"[rerank] Model lỗi, giữ thứ tự RRF: {LAST_RERANK_ERROR}")
         return candidates[: max(top_k, 0)]
 
     reranked = []
