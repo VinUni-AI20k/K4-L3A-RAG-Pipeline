@@ -80,35 +80,30 @@ def convert_legal_docs() -> list[Path]:
 
 
 def convert_news_articles() -> None:
-    """Convert từng JSON bài viết thành Markdown có metadata nguồn."""
+    import json
+
     news_dir = LANDING_DIR / "news"
     output_dir = OUTPUT_DIR / "news"
     output_dir.mkdir(parents=True, exist_ok=True)
-    required_fields = {"url", "title", "date_crawled", "content_markdown"}
-
-    for path in news_dir.glob("*.json"):
+    for path in news_dir.rglob("*.json"):
+        if not path.is_file():
+            continue
+        destination = output_dir / path.relative_to(news_dir).with_suffix(".md")
+        if destination.is_file():
+            destination_stat = destination.stat()
+            if destination_stat.st_size > 0 and destination_stat.st_mtime >= path.stat().st_mtime:
+                continue
         data = json.loads(path.read_text(encoding="utf-8"))
-        missing = required_fields - data.keys()
-        if missing:
-            raise ValueError(
-                f"{path.name} thiếu field bắt buộc: {', '.join(sorted(missing))}"
-            )
-        if any(not str(data[field]).strip() for field in required_fields):
-            raise ValueError(f"{path.name} có field bắt buộc bị rỗng")
-
+        content = data["content_markdown"]
+        if not content or not content.strip():
+            continue
         header = (
-            "---\n"
-            f"title: {json.dumps(data['title'], ensure_ascii=False)}\n"
-            f"source: {json.dumps(data['url'], ensure_ascii=False)}\n"
-            "doc_type: news\n"
-            f"date_crawled: {json.dumps(data['date_crawled'], ensure_ascii=False)}\n"
-            "---\n\n"
+            f"# {data['title']}\n\n"
+            f"**Source:** {data['url']}\n\n"
+            f"**Crawled:** {data['date_crawled']}\n\n---\n\n"
         )
-        destination = output_dir / f"{path.stem}.md"
-        destination.write_text(
-            header + str(data["content_markdown"]).strip() + "\n",
-            encoding="utf-8",
-        )
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_text(header + content, encoding="utf-8")
 
 
 def convert_all() -> None:
