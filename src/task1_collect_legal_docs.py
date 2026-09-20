@@ -12,7 +12,7 @@ Nếu website chặn crawler, hãy chọn nguồn công khai khác; không vư�
 """
 
 from pathlib import Path
-
+import requests
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "legal"
 
@@ -26,18 +26,19 @@ def setup_directory() -> None:
 def download_documents() -> None:
     """Tải ít nhất 3 PDF/DOCX từ nguồn công khai."""
     # TODO: Có thể tải thủ công hoặc dùng requests.
-    #
-    # Ví dụ:
-    # import requests
-    #
-    # sources = {
-    #     "policy-a.pdf": "https://example.edu/policy-a.pdf",
-    # }
-    # for filename, url in sources.items():
-    #     response = requests.get(url, timeout=30)
-    #     response.raise_for_status()
-    #     (DATA_DIR / filename).write_bytes(response.content)
-    raise NotImplementedError("Implement download_documents")
+    sources = {
+        "ielts_writing_task1_band_descriptors.pdf": "https://www.e-fellows.net/uploads/NEU-Dokumente/Writing-Band-descriptors-Task-1.pdf",
+        "ielts_writing_task2_band_descriptors.pdf": "https://www.e-fellows.net/uploads/NEU-Dokumente/Writing-Band-descriptors-Task-2.pdf",
+        "ielts_writing_examiner_feedback_criteria.pdf": "https://www.e-fellows.net/uploads/NEU-Dokumente/BC-IELTS-PT-4-AcWriting-FINAL_Feedback.pdf",
+        "ielts_writing_model_answers_assessment.pdf": "https://www.e-fellows.net/uploads/NEU-Dokumente/BC-IELTS-PT-4-AcWriting-FINAL_Model-answer.pdf",
+    }
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+    for filename, url in sources.items():
+        response = requests.get(url, headers=headers, timeout=30)
+        response.raise_for_status()
+        out_path = DATA_DIR / filename
+        out_path.write_bytes(response.content)
+        print(f"Saved: {out_path} ({len(response.content)} bytes)")
 
 
 if __name__ == "__main__":

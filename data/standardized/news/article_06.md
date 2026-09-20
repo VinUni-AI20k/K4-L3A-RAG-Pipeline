@@ -1,0 +1,19 @@
+# IELTS Discussion Essay Video Lesson: Useful Language
+
+**Source:** https://ieltsliz.com/ielts-writing-task-2-discussion-essay-expressions/
+
+**Crawled:** 2026-09-20T12:15:31.386268
+
+---
+
+Learn expressions to use in your discussion essay for IELTS writing task 2 with this video lesson. It is important to use a variety of language to express both sides in your essay. Being able to have flexible language for giving other people’s opinions is a good way to increase your vocabulary band score.
+
+Transcript
+
+Hello in this lesson I’m going to look at some expressions that you can use for a discussion essay for IELTS writing task 2. Now when you have a discussion essay you have to support two different sides and this is not about your opinion this is about what other people think, other people’s opinion and you have to support what they think. so here are some very useful expressions to help you show other people’s thoughts and opinions.
+
+Now there’s quite a lot of expressions you can use. I will run through each one but I will tell you now there are two expressions here that you shouldn’t use. can you see which ones? well I’ll tell you at the end of the lesson let’s have a look the first one. “Many people believe that ” this is a very common expression to use for IELTS It is not high band score but its clear and its academic so don’t worry, please use it. The next one “it is commonly believed that” this is a very nice expression because you can see here “is believed” that is the passive and it’s very good to give the examiner some passive tense in your essay. It will improve your band score and you can see this word here “commonly” that means many people so it has the same meaning as this sentence and this word we can change, we could say “it is frequently believed that” or we could say “it is often believed that”. So we could put a different adverb of frequency here. The next one “some people think that”  again it’s very simple but it is academic and its clear. “It is often thought that” here we’ve got another passive, so very nice to use. But “on the side of” or “the other side of the coin is” this is the other opinion, the other side. “It is considered by many that” this is a very nice expression is very academic. It’s very good to use for IELTS and again you have a passive here and you can change this word if you want and you could say “it is considered by some that”. The next one here “many argue that” is very nice very clear. You don’t need to say “many people”, you could say “many argue that “. Another one, “it is argued by some that”, again here we’ve got the passive and you can change this word, “it is argued by many that”. “On the one hand” and”On the other hand”, so that’s the one side of the argument, on the other hand that’s the other side of the argument. The last one “some people support the opinion that” again this is very nice, very academic.
+
+So can you see the 2 expressions that you shouldn’t use? Well, it is these 2 here this one is not very academic, we use it more for speaking, and this one many students love to use this because it is an idiom however it is very informal and we don’t usually use that for an academic essay for IELTS so please don’t use that one in your discussion essay. But all the others are great and when you’re writing your discussion essay it’s very important that you give the simple tense and then sometimes a passive as well and you can keep changing that through your essay to show flexibility. Well that’s all for this lesson I’ll see you again in another IELTS lesson
+
+[Discussion Essay Model Answer](http://www.ieltsliz.com/ielts-discussion-essay-model-answer)
