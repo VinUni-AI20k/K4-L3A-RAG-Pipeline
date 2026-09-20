@@ -24,7 +24,7 @@ git push -u origin feature/<ten-nhanh-cua-ban>
 | TV1 | Đỗ Thái Sơn | 2A202603021 | Data pipeline + Indexing |
 | TV2 | | | Retrieval (Dense + Lexical) |
 | TV3 | | | Fusion + Fallback + PageIndex |
-| TV4 | | | Generation + UI + Evaluation |
+| TV4 | Đào Ngọc Bình Thiên | 2A202602814 | Generation + UI + Evaluation |
 
 ---
 
