@@ -3,7 +3,7 @@
 ## Thông tin
 
 - Họ và tên: Nguyễn Văn Hưởng
-- Mã học viên:2A202602743
+- Mã học viên: 2A202602743
 - Nhóm: DuoH (K4-DAY08)
 - Repository/branch: https://github.com/lechihung252/K4-DAY08-DuoH — `main`, nhánh `feature/rag-pipeline`
 
