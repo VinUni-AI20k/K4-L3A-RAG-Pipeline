@@ -2,7 +2,7 @@
 
 **Source:** https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/
 
-**Crawled:** 2026-09-20T15:25:40.863750
+**Crawled:** 2026-09-20T16:18:54.934916
 
 ---
 
@@ -13,20 +13,20 @@
     * [Xử lý hóa đơn](https://www.meinvoice.vn/xu-ly-hoa-don-dau-vao/)
     * [Biên lai điện tử](https://www.meinvoice.vn/bien-lai-dien-tu/)
   * [Mua hàng](https://www.meinvoice.vn/bao-gia/)
-    * [Doanh nghiệp](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)
+    * [Doanh nghiệp](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)
       * [Phát hành hóa đơn điện tử](https://www.meinvoice.vn/bao-gia)
       * [Xử lý hóa đơn](https://www.meinvoice.vn/bao-gia-xu-ly-hoa-don/)
-    * [Hộ, cá nhân kinh doanh](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)
+    * [Hộ, cá nhân kinh doanh](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)
       * [Phát hành hóa đơn điện tử](https://store.misa.vn/v3/quote?pid=422&lang=vi)
       * [Xử lý hóa đơn](https://store.misa.vn/v3/quote?pid=424&lang=vi)
   * [Kiến thức](https://www.meinvoice.vn/tin-tuc/)
   * [Tra cứu](https://www.meinvoice.vn/tra-cuu/)
-  * [Tiện ích](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)
+  * [Tiện ích](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)
     * [Tính thuế TNCN](https://www.meinvoice.vn/tien-ich/tinh-thue-thu-nhap-ca-nhan/#can-nop)
     * [Tính hoàn thuế TNCN](https://www.meinvoice.vn/tien-ich/tinh-thue-thu-nhap-ca-nhan/#hoan-thue)
     * [Công cụ tính thuế HKD](https://www.misaeshop.vn/cong-cu-tinh-thue-hkd/)
   * [Download](https://www.meinvoice.vn/download/)
-  * [Hỗ trợ](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)
+  * [Hỗ trợ](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)
     * [Hướng dẫn sử dụng](https://helpv4.meinvoice.vn/)
     * [Hướng dẫn qua video](https://www.youtube.com/@HoadondientuMISA)
     * [Lịch đào tạo/chia sẻ online](https://www.misa.vn/danh-sach-lich-dao-tao/?product=misa-meinvoice&type=seminar)
@@ -39,12 +39,12 @@
 
 Tìm kiếm
 [ ![MEINVOICE - Hóa Đơn Điện Tử MISA | Tiết kiệm 90% Chi Phí | An toàn nhất](https://www.meinvoice.vn/wp-content/uploads/2026/03/meInvoice.svg) meInvoice Hóa Đơn Điện Tử MISA | Tiết kiệm 90% Chi Phí | An toàn nhất ](https://www.meinvoice.vn/)
-[](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)
+[](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)
 Tiếng Việt
   * [ English 🔍 📄 🌍 ](https://www.meinvoice.vn/en/ "Switch to English")
 
 
-[](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)
+[](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)
 [ ![MEINVOICE - Hóa Đơn Điện Tử MISA | Tiết kiệm 90% Chi Phí | An toàn nhất](https://www.meinvoice.vn/wp-content/uploads/2026/03/meInvoice.svg) ](https://www.meinvoice.vn/)
   * [Tính năng](https://www.meinvoice.vn/tinh-nang)
     * [Hóa đơn điện tử](https://www.meinvoice.vn/tinh-nang-hoa-don-dien-tu/)
@@ -53,20 +53,20 @@ Tiếng Việt
     * [Xử lý hóa đơn](https://www.meinvoice.vn/xu-ly-hoa-don-dau-vao/)
     * [Biên lai điện tử](https://www.meinvoice.vn/bien-lai-dien-tu/)
   * [Mua hàng](https://www.meinvoice.vn/bao-gia/)
-    * [Doanh nghiệp](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)
+    * [Doanh nghiệp](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)
       * [Phát hành hóa đơn điện tử](https://www.meinvoice.vn/bao-gia)
       * [Xử lý hóa đơn](https://www.meinvoice.vn/bao-gia-xu-ly-hoa-don/)
-    * [Hộ, cá nhân kinh doanh](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)
+    * [Hộ, cá nhân kinh doanh](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)
       * [Phát hành hóa đơn điện tử](https://store.misa.vn/v3/quote?pid=422&lang=vi)
       * [Xử lý hóa đơn](https://store.misa.vn/v3/quote?pid=424&lang=vi)
   * [Kiến thức](https://www.meinvoice.vn/tin-tuc/)
   * [Tra cứu](https://www.meinvoice.vn/tra-cuu/)
-  * [Tiện ích](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)
+  * [Tiện ích](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)
     * [Tính thuế TNCN](https://www.meinvoice.vn/tien-ich/tinh-thue-thu-nhap-ca-nhan/#can-nop)
     * [Tính hoàn thuế TNCN](https://www.meinvoice.vn/tien-ich/tinh-thue-thu-nhap-ca-nhan/#hoan-thue)
     * [Công cụ tính thuế HKD](https://www.misaeshop.vn/cong-cu-tinh-thue-hkd/)
   * [Download](https://www.meinvoice.vn/download/)
-  * [Hỗ trợ](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)
+  * [Hỗ trợ](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)
     * [Hướng dẫn sử dụng](https://helpv4.meinvoice.vn/)
     * [Hướng dẫn qua video](https://www.youtube.com/@HoadondientuMISA)
     * [Lịch đào tạo/chia sẻ online](https://www.misa.vn/danh-sach-lich-dao-tao/?product=misa-meinvoice&type=seminar)
@@ -88,10 +88,10 @@ Tiếng Việt
 179811
 [Facebook](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.meinvoice.vn%2Ftin-tuc%2F18021%2Ftong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien%2F "Facebook")[Twitter](https://twitter.com/intent/tweet?text=Quy+%C4%91%E1%BB%8Bnh+v%E1%BB%81+h%C3%B3a+%C4%91%C6%A1n+%C4%91i%E1%BB%87n+t%E1%BB%AD+kh%E1%BB%9Fi+t%E1%BA%A1o+t%E1%BB%AB+m%C3%A1y+t%C3%ADnh+ti%E1%BB%81n+2026&url=https%3A%2F%2Fwww.meinvoice.vn%2Ftin-tuc%2F18021%2Ftong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien%2F&via=H%C3%B3a+%C4%90%C6%A1n+%C4%90i%E1%BB%87n+T%E1%BB%AD+MISA+%7C+Ti%E1%BA%BFt+ki%E1%BB%87m+90%25+Chi+Ph%C3%AD+%7C+An+to%C3%A0n+nh%E1%BA%A5t "Twitter")
 [Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.meinvoice.vn%2Ftin-tuc%2F18021%2Ftong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien%2F&title=Quy+%C4%91%E1%BB%8Bnh+v%E1%BB%81+h%C3%B3a+%C4%91%C6%A1n+%C4%91i%E1%BB%87n+t%E1%BB%AD+kh%E1%BB%9Fi+t%E1%BA%A1o+t%E1%BB%AB+m%C3%A1y+t%C3%ADnh+ti%E1%BB%81n+2026 "Linkedin")
-[ ](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/ "More")
+[ ](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/# "More")
 [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20972%20705'%3E%3C/svg%3E)](https://www.meinvoice.vn/wp-content/uploads/2024/04/Thumb-blog-meinvoice.vn_.png)
 Việc nắm vững các quy định về **hóa đơn khởi tạo từ máy tính tiền** là yếu tố quan trọng giúp doanh nghiệp tránh được những sai sót không đáng có trong công tác quản lý thuế. Để giúp doanh nghiệp chủ động hơn trong việc thực hiện nghĩa vụ tài chính, **MISA meInvoice** đã tổng hợp hướng dẫn chi tiết về quy trình đăng ký và sử dụng loại hóa đơn này. Hãy cùng tìm hiểu ở bài viết dưới đây!
-**Mục Lục** [Ẩn](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)
+**Mục Lục** [Ẩn](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)
 [ 1. Hóa đơn điện tử khởi tạo từ máy tính tiền là gì? ](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#1_Hoa_don_dien_tu_khoi_tao_tu_may_tinh_tien_la_gi)
 [ 2. Quy định về hóa đơn điện tử khởi tạo từ máy tính tiền ](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#2_Quy_dinh_ve_hoa_don_dien_tu_khoi_tao_tu_may_tinh_tien)
 [ 2.1. Về đối tượng sử dụng ](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#21_Ve_doi_tuong_su_dung)
@@ -262,14 +262,14 @@ Mã số thuế đơn vị: *
 Tỉnh/Thành phố: *
 Lựa chọn giải pháp bạn quan tâm *
 Lựa chọn giải pháp bạn quan tâm * Quản lý & Xử lý hóa đơn điện tử đầu vào Phát hành hóa đơn điện tử Quan tâm cả 2 giải pháp trên Hóa đơn điện tử khởi tạo từ máy tính tiền
-Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/) của MISA 
+Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#) của MISA 
 **Lưu ý:** Nội dung bài viết được biên soạn dựa trên quy định pháp luật hiện hành tại thời điểm đăng tải, nhằm mục đích cung cấp thông tin tham khảo, không thay thế hoàn toàn tư vấn pháp lý, thuế hoặc kế toán chuyên biệt cho từng trường hợp cụ thể. Do quy định pháp luật có thể thay đổi hoặc áp dụng khác nhau tùy tình huống thực tế, MISA khuyến nghị người đọc đối chiếu văn bản pháp luật gốc (MISA có đính kèm căn cứ pháp lý gốc ở trên bài viết) hoặc liên hệ cơ quan thuế/chuyên gia tư vấn trước khi áp dụng. MISA không chịu trách nhiệm đối với thiệt hại phát sinh từ việc áp dụng thông tin trong bài viết mà không có sự xác minh phù hợp.
   * TAGS
   * [hóa đơn điện tử từ máy tính tiền](https://www.meinvoice.vn/wp-tag/hoa-don-dien-tu-tu-may-tinh-tien/)
 
 
 [Ngô Trần Quỳnh Chi](https://www.meinvoice.vn/author/a-0631/)
-####  [Bài viết liên quan](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)[Bài viết cùng tác giả](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)
+####  [Bài viết liên quan](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)[Bài viết cùng tác giả](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)
 [![cập nhật địa chỉ](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20207%20150'%3E%3C/svg%3E)](https://www.meinvoice.vn/tin-tuc/51227/cap-nhat-hoa-don-dien-tu-quang-ninh-bac-ninh-len-thanh-pho/ "MISA meInvoice hướng dẫn cập nhật địa chỉ, cơ quan thuế khi Quảng Ninh và Bắc Ninh lên thành phố")
 ### [MISA meInvoice hướng dẫn cập nhật địa chỉ, cơ quan thuế khi Quảng Ninh và Bắc Ninh lên thành phố](https://www.meinvoice.vn/tin-tuc/51227/cap-nhat-hoa-don-dien-tu-quang-ninh-bac-ninh-len-thanh-pho/ "MISA meInvoice hướng dẫn cập nhật địa chỉ, cơ quan thuế khi Quảng Ninh và Bắc Ninh lên thành phố")
 [![mẫu 07 người phụ thuộc](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20207%20150'%3E%3C/svg%3E)](https://www.meinvoice.vn/tin-tuc/50893/to-khai-07-xn-npt-tncn/ "Mẫu tờ khai 07/XN-NPT-TNCN mới theo thông tư 90/2026/TT-BTC")
@@ -290,7 +290,7 @@ Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://ww
 ### [Hướng dẫn nộp thuế điện tử CHI TIẾT cho từng đối tượng](https://www.meinvoice.vn/tin-tuc/693/nop-thue-dien-tu/ "Hướng dẫn nộp thuế điện tử CHI TIẾT cho từng đối tượng")
 [![báo cáo thuế là gì các loại báo cáo thuế](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20218%20150'%3E%3C/svg%3E)](https://www.meinvoice.vn/tin-tuc/18791/bao-cao-thue-la-gi/ "Báo cáo thuế là gì? Các loại báo cáo thuế phải nộp hàng tháng, quý")
 ### [Báo cáo thuế là gì? Các loại báo cáo thuế phải nộp hàng tháng, quý](https://www.meinvoice.vn/tin-tuc/18791/bao-cao-thue-la-gi/ "Báo cáo thuế là gì? Các loại báo cáo thuế phải nộp hàng tháng, quý")
-[](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)[](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)
+[](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)[](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)
 [![Dùng thử hóa đơn điện tử](https://www.meinvoice.vn/wp-content/uploads/2020/12/banner-web-meinvoice.jpg)](https://sign-up.meinvoice.vn/)
 > [Hóa đơn điện tử MISA](https://www.facebook.com/MISA.MEINVOICE/)
 [![](https://www.meinvoice.vn/wp-content/uploads/2022/05/trai-nghiem-chu-ky-so-misa-esign.jpeg)](https://esign.misa.vn/dang-ky-dung-thu/)
@@ -307,7 +307,7 @@ Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://ww
 ### [Danh mục hàng hóa thuế suất thuế GTGT 0%, 5%, 10%...](https://www.meinvoice.vn/tin-tuc/14101/thue-suat-thue-gtgt/ "Danh mục hàng hóa thuế suất thuế GTGT 0%, 5%, 10% và 8%")
 [![quy dinh hoa don dien tu moi nhat](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20218%20150'%3E%3C/svg%3E)](https://www.meinvoice.vn/tin-tuc/10056/quy-dinh-hoa-don-dien-tu-thong-tu-78/ "\[Tổng hợp\] Những quy định mới về hóa đơn điện tử đáng lưu ý theo Thông tư 78 & Nghị định 123")
 ### [[Tổng hợp] Những quy định mới về hóa đơn điện tử...](https://www.meinvoice.vn/tin-tuc/10056/quy-dinh-hoa-don-dien-tu-thong-tu-78/ "\[Tổng hợp\] Những quy định mới về hóa đơn điện tử đáng lưu ý theo Thông tư 78 & Nghị định 123")
-[](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)[](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/)
+[](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)[](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#)
 Tìm kiếm nhiều nhất 
 [Hóa đơn điện tử](https://www.meinvoice.vn/)[Hóa đơn điện tử là gì](https://www.meinvoice.vn/tin-tuc/699/hoa-don-dien-tu-la-gi/)[Phần mềm hóa đơn điện tử miễn phí](https://www.meinvoice.vn/tin-tuc/7418/phan-mem-hoa-don-dien-tu-tot-nhat-2/)
 ![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2023%2018'%3E%3C/svg%3E)
@@ -321,11 +321,11 @@ Tôi muốn: * Tư vấn & mua phần mềm Hỗ trợ sau mua Góp ý tới MIS
 Giải pháp tôi quan tâm: *
 Giải pháp tôi quan tâm: * Hóa đơn điện tử MISA meInvoice Chữ ký số MISA eSign PM Thuế thu nhập cá nhân điện tử Nền tảng ký kết hợp đồng điện tử Bộ giải pháp hóa đơn - kế toán cho Hộ KD Khác
 _Lời nhắn của tôi:..._
-Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/) của MISA 
+Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/#) của MISA 
 ![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2020'%3E%3C/svg%3E)
 Hơn 250.000 Doanh nghiệp đã tư vấn và tin dùng 
 ![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20394%20104'%3E%3C/svg%3E)
-[](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/ "Back Top")
+[](https://www.meinvoice.vn/tin-tuc/18021/tong-hop-cac-quy-dinh-ve-hoa-don-dien-tu-khoi-tao-tu-may-tinh-tien/# "Back Top")
 [ ![MISA logo](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2093%2048'%3E%3C/svg%3E)](https://www.misa.vn/) [ ![MISA AMIS badge](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20182%2040'%3E%3C/svg%3E)](https://www.meinvoice.vn/) [ ![MISA meInvoice](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3C/svg%3E)MISA meInvoice ](https://www.meinvoice.vn/)
 CÔNG TY CỔ PHẦN MISA
 Trụ sở chính:

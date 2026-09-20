@@ -2,7 +2,7 @@
 
 **Source:** https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/
 
-**Crawled:** 2026-09-20T15:25:23.647508
+**Crawled:** 2026-09-20T16:18:43.088099
 
 ---
 
@@ -94,7 +94,7 @@
     * [Tài liệu video trên Youtube](https://www.youtube.com/@MISASME/)
     * [Chat hỗ trợ trực tuyến](https://helpsme.misa.vn/2023/?soc=open)
   * [Tính năng mới](https://sme.misa.vn/tinh-nang-moi-misa-sme/)
-  * [Tiện ích](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/)
+  * [Tiện ích](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/#)
     * [Công vụ tính lãi vay](https://sme.misa.vn/cong-cu-tinh-lai-vay/)
   * [Dùng thử miễn phí](https://sme.misa.vn/dang-ky/)
 
@@ -166,9 +166,9 @@ Theo ngành nghề
 135
 [Facebook](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsme.misa.vn%2F349869%2Fthue-thu-nhap-doanh-nghiep%2F "Facebook")
 [Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/&title=Thu%E1%BA%BF+thu+nh%E1%BA%ADp+doanh+nghi%E1%BB%87p+2026%3A+C%C3%A1ch+t%C3%ADnh%2C+thu%E1%BA%BF+su%E1%BA%A5t+v%C3%A0+v%C3%AD+d%E1%BB%A5+minh+h%E1%BB%8Da "Linkedin")
-[ ](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/ "More")
+[ ](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/# "More")
 [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%201080'%3E%3C/svg%3E)](https://sme.misa.vn/wp-content/uploads/2026/09/thue-thu-nhap-doanh-nghiep.png)
-**Mục lục** [hiện](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/)
+**Mục lục** [hiện](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/#)
 [ 1. Thuế thu nhập doanh nghiệp là gì? ](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/#1_Thue_thu_nhap_doanh_nghiep_la_gi)
 [ 2. Thuế suất thuế thu nhập doanh nghiệp ](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/#2_Thue_suat_thue_thu_nhap_doanh_nghiep)
 [ 3. Cách tính thuế thu nhập doanh nghiệp ](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/#3_Cach_tinh_thue_thu_nhap_doanh_nghiep)
@@ -286,7 +286,7 @@ Xác định thuế TNDN không chỉ là áp dụng công thức. Kế toán c�
 Họ và tên đệm *
 Số điện thoại *
 Mã số thuế *
-Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/) của MISA *
+Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/#) của MISA *
 ### **5.2 Các khoản thu nhập được miễn thuế TNDN**  
 | Nhóm thu nhập  | Trường hợp được miễn thuế  |  
 | --- | --- |  
@@ -364,12 +364,11 @@ Thuế thu nhập doanh nghiệp 2026 được xác định dựa trên thu nh�
 [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20552%2069'%3E%3C/svg%3E)](https://sme.misa.vn/ld/act-tu-van-va-dang-ky-dung-thu-phan-mem-ke-toan-misa-sme?utm_source=Misa-sme&utm_medium=seo&utm_content=thue-thu-nhap-doanh-nghiep-%20button2&utm_term=act_dinhtrang_act)
 Đánh giá bài viết
 [Tổng số: 0 Trung bình: 0]
-![yasr-loader](https://sme.misa.vn/wp-content/plugins/yet-another-stars-rating/includes/img/loader.gif)
 Bài viết này hữu ích chứ?
 CóKhông
 **Lưu ý:** Nội dung bài viết được biên soạn dựa trên quy định pháp luật hiện hành tại thời điểm đăng tải, nhằm mục đích cung cấp thông tin tham khảo, không thay thế hoàn toàn tư vấn pháp lý, thuế hoặc kế toán chuyên biệt cho từng trường hợp cụ thể. Do quy định pháp luật có thể thay đổi hoặc áp dụng khác nhau tùy tình huống thực tế, MISA khuyến nghị người đọc đối chiếu văn bản pháp luật gốc (MISA có đính kèm căn cứ pháp lý gốc ở trên bài viết) hoặc liên hệ cơ quan thuế/chuyên gia tư vấn trước khi áp dụng. MISA không chịu trách nhiệm đối với thiệt hại phát sinh từ việc áp dụng thông tin trong bài viết mà không có sự xác minh phù hợp.
 [Đinh Thị Thùy Trang](https://sme.misa.vn/author/c-2120/)
-####  [Bài viết liên quan](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/)[Bài viết cùng tác giả](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/)
+####  [Bài viết liên quan](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/#)[Bài viết cùng tác giả](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/#)
 [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20218%20123'%3E%3C/svg%3E)](https://sme.misa.vn/350183/hach-toan-thue-tndn/ "Nghiệp vụ hạch toán thuế TNDN – TK 821 theo Thông tư 99/2025/TT-BTC")
 ### [Nghiệp vụ hạch toán thuế TNDN – TK 821 theo Thông tư 99/2025/TT-BTC](https://sme.misa.vn/350183/hach-toan-thue-tndn/ "Nghiệp vụ hạch toán thuế TNDN – TK 821 theo Thông tư 99/2025/TT-BTC")
 [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20218%20123'%3E%3C/svg%3E)](https://sme.misa.vn/350169/thu-nhap-chiu-thue-tndn/ "22 khoản thu nhập chịu thuế TNDN năm 2026 kế toán cần biết")
@@ -382,7 +381,7 @@ CóKhông
 ### [5 điểm mới của nghị định 320 về thuế TNDN doanh nghiệp cần biết](https://sme.misa.vn/350011/nghi-dinh-320-ve-thue-tndn/ "5 điểm mới của nghị định 320 về thuế TNDN doanh nghiệp cần biết")
 [![nghị quyết 198 về miễn thuế tndn](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20218%20123'%3E%3C/svg%3E)](https://sme.misa.vn/349989/nghi-quyet-198-mien-thue-tndn/ "Ai được miễn thuế TNDN 3 năm theo Nghị quyết 198?")
 ### [Ai được miễn thuế TNDN 3 năm theo Nghị quyết 198?](https://sme.misa.vn/349989/nghi-quyet-198-mien-thue-tndn/ "Ai được miễn thuế TNDN 3 năm theo Nghị quyết 198?")
-[](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/)[](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/)
+[](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/#)[](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/#)
 > [Phần mềm kế toán doanh nghiệp](https://www.facebook.com/MISA.SME/)
 Tìm kiếm nhiều nhất 
 [phần mềm kế toán](https://sme.misa.vn/)[phần mềm kế toán doanh nghiệp vừa và nhỏ](https://sme.misa.vn/116815/phan-mem-ke-toan-doanh-nghiep-nho/)[quyết toán thuế tndn](https://amis.misa.vn/14398/quyet-toan-thue-thu-nhap-doanh-nghiep/)[htkk mới nhất](https://amis.misa.vn/61453/phan-mem-ho-tro-ke-khai-thue-htkk/)[giá phần mềm kế toán](https://amis.misa.vn/20355/bao-gia-phan-mem-ke-toan-online-misa-amis/)[quyết toán thuế](https://amis.misa.vn/120114/quyet-toan-thue/)
@@ -400,7 +399,7 @@ Số điện thoại *
 Mã số thuế *
 Chức vụ/Vai trò *
 Chức vụ/Vai trò * CEO/ Founder/ Chủ tịch Giám đốc (CFO, CTO, Nhân sự, VP) Quản lý (manager) Nhân viên (staff) Học sinh/ Sinh viên (student) Vị trí khác (other) IT
-Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/) của MISA *
+Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://sme.misa.vn/349869/thue-thu-nhap-doanh-nghiep/#) của MISA *
 ![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20152%200'%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20213%200'%3E%3C/svg%3E)
 MISA SME - PHẦN MỀM KẾ TOÁN UY TÍN CHO DOANH NGHIỆP
 Trụ sở chính:
