@@ -5,21 +5,20 @@
 - Họ và tên: Nguyễn Văn Việt
 - Mã học viên: 2A202602904
 - Nhóm: K4-L3A
-- Repository/branch: main (tài khoản github: little-duck-vie)
+- Repository/branch: tài khoản github: little-duck-vie, branch: viet
 
 ## Phần việc đã thực hiện
 
-| Module/deliverable | Việc tôi trực tiếp làm | File/commit/PR | Trạng thái |
-| --- | --- | --- | --- |
-| Task 2: Crawl News | Viết code cào tin tức tuyển sinh từ web trường PTIT. | `src/task2_crawl_news.py` | Done |
-| Task 8: Evaluation | Chạy script tự động chấm điểm 4 metric và so sánh A/B. | `group_project/evaluation/RESULT.md` | Done |
+| Module/deliverable | Việc tôi trực tiếp làm                                     | File/commit/PR                         | Trạng thái |
+| ------------------ | --------------------------------------------------------------- | -------------------------------------- | ------------ |
+| Task 2: Crawl News | Viết code cào tin tức tuyển sinh từ web trường PTIT.     | `src/task2_crawl_news.py`            | Done         |
+| Task 8: Evaluation | Chạy script tự động chấm điểm 4 metric và so sánh A/B. | `group_project/evaluation/RESULT.md` | Done         |
 
 ## Quyết định kỹ thuật quan trọng
 
 1. **Quyết định:** Sử dụng thư viện `crawl4ai` thay vì code BeautifulSoup chay.
    **Lý do/evidence:** Gói này nó gom sẵn thành markdown gọn gàng luôn, đỡ phải xử lý mấy cái thẻ HTML lằng nhằng rác rưởi.
    **Trade-off:** Cài đặt thư viện này tải hơi lâu và nặng máy.
-
 2. **Quyết định:** Chấm điểm dùng `gpt-4o-mini` làm giám khảo.
    **Lý do/evidence:** Rẻ, chạy nhanh mà kết quả đánh giá vẫn khá ổn, sinh viên dùng API đỡ xót tiền.
    **Trade-off:** Vài câu khó nó chấm điểm hơi ngáo, không tinh tế bằng con gpt-4 xịn.
