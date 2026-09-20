@@ -1,0 +1,162 @@
+[
+  {
+    "id": "g01",
+    "category": "criteria",
+    "question": "What are the four criteria used to assess IELTS Writing Task 1?",
+    "expected_answer": "Task Achievement, Coherence and Cohesion, Lexical Resource, and Grammatical Range and Accuracy.",
+    "expected_context": "For Task 1 of both the AC and GT Writing tests, the key criteria are: Task Achievement, Coherence and Cohesion, Lexical Resource, Grammatical Range and Accuracy.",
+    "source": "ielts-writing-key-assessment-criteria.pdf"
+  },
+  {
+    "id": "g02",
+    "category": "criteria",
+    "question": "What is the difference between the criteria for Task 1 and Task 2 in IELTS Writing?",
+    "expected_answer": "Task 1 is assessed on Task Achievement while Task 2 is assessed on Task Response; the other three criteria (Coherence and Cohesion, Lexical Resource, Grammatical Range and Accuracy) are the same for both tasks.",
+    "expected_context": "For Task 1 of both the AC and GT Writing tests, the key criteria are: Task Achievement, Coherence and Cohesion, Lexical Resource, Grammatical Range and Accuracy. For Task 2 of both the AC and GT Writing tests, the key criteria are: Task Response, Coherence and Cohesion, Lexical Resource, Grammatical Range and Accuracy.",
+    "source": "ielts-writing-key-assessment-criteria.pdf"
+  },
+  {
+    "id": "g03",
+    "category": "scoring",
+    "question": "Does Task 2 carry more weight than Task 1 in the IELTS Writing score?",
+    "expected_answer": "Yes. Task 2 carries more weight in marking than Task 1; it is worth twice as much as Task 1 when calculating the final writing band score.",
+    "expected_context": "Both the Academic and General Training Writing Modules consist of two tasks, Task 1 and Task 2. Each task is assessed independently. The assessment of Task 2 carries more weight in marking than Task 1. Task 2 is worth twice as much as Task 1 when it comes to calculating your final writing band score.",
+    "source": "ielts-writing-key-assessment-criteria.pdf; ielts-article-10-tips-improve-your-ielts-writing-band-score.json"
+  },
+  {
+    "id": "g04",
+    "category": "requirements",
+    "question": "Bài IELTS Writing Task 2 cần viết tối thiểu bao nhiêu từ?",
+    "expected_answer": "Tối thiểu 250 từ.",
+    "expected_context": "For Task 2 of both AC and GT Writing tests, candidates are required to formulate and develop a position in relation to a given prompt in the form of a question or statement, using a minimum of 250 words.",
+    "source": "ielts-writing-key-assessment-criteria.pdf"
+  },
+  {
+    "id": "g05",
+    "category": "requirements",
+    "question": "How many words must I write for IELTS Writing Task 1?",
+    "expected_answer": "A minimum of 150 words.",
+    "expected_context": "For Task 1 of both AC and GT Writing tests, this criterion assesses how fully, appropriately, accurately and relevantly the response fulfils the requirements set out in the task, using a minimum of 150 words.",
+    "source": "ielts-writing-key-assessment-criteria.pdf"
+  },
+  {
+    "id": "g06",
+    "category": "requirements",
+    "question": "Nên phân bổ thời gian như thế nào giữa Task 1 và Task 2 trong bài thi Writing?",
+    "expected_answer": "Khoảng 40 phút cho Task 2 và 20 phút cho Task 1, vì Task 2 có trọng số gấp đôi Task 1.",
+    "expected_context": "Task 2 is worth twice as much as Task 1 when it comes to calculating your final writing band score. With this in mind, plan to spend about 40 minutes on Task 2, and 20 minutes on Task 1. If you spend too much time on Task 1, you may find yourself unable to finish Task 2 which will result in a lower overall Writing band score.",
+    "source": "ielts-article-10-tips-improve-your-ielts-writing-band-score.json"
+  },
+  {
+    "id": "g07",
+    "category": "band_descriptor",
+    "question": "What does Band 7 require for Lexical Resource in Writing Task 2?",
+    "expected_answer": "The resource is sufficient to allow some flexibility and precision, with some ability to use less common and/or idiomatic items; awareness of style and collocation is evident though inappropriacies occur; there are only a few errors in spelling and/or word formation and they do not detract from overall clarity.",
+    "expected_context": "Writing Task 2 — Band 7, Lexical Resource: The resource is sufficient to allow some flexibility and precision. There is some ability to use less common and/or idiomatic items. An awareness of style and collocation is evident, though inappropriacies occur. There are only a few errors in spelling and/or word formation and they do not detract from overall clarity.",
+    "source": "ielts-writing-band-descriptors.pdf"
+  },
+  {
+    "id": "g08",
+    "category": "band_descriptor",
+    "question": "Describe the Task Response descriptor for Band 9 in Writing Task 2.",
+    "expected_answer": "The prompt is appropriately addressed and explored in depth; a clear and fully developed position directly answers the question; ideas are relevant, fully extended and well supported; any lapses in content or support are extremely rare.",
+    "expected_context": "Writing Task 2 — Band 9, Task Response: The prompt is appropriately addressed and explored in depth. A clear and fully developed position is presented which directly answers the question/s. Ideas are relevant, fully extended and well supported. Any lapses in content or support are extremely rare.",
+    "source": "ielts-writing-band-descriptors.pdf"
+  },
+  {
+    "id": "g09",
+    "category": "band_descriptor",
+    "question": "Tiêu chí Coherence and Cohesion ở Band 6 của Writing Task 1 yêu cầu gì?",
+    "expected_answer": "Thông tin và ý tưởng nhìn chung được sắp xếp mạch lạc và có tiến triển tổng thể rõ ràng; các phương tiện liên kết được dùng khá hiệu quả nhưng liên kết trong/giữa câu có thể lỗi hoặc máy móc do dùng sai, lạm dụng hoặc bỏ sót; tham chiếu và thay thế có thể thiếu linh hoạt hoặc rõ ràng, dẫn đến lặp lại hoặc lỗi.",
+    "expected_context": "Writing Task 1 — Band 6, Coherence & Cohesion: Information and ideas are generally arranged coherently and there is a clear overall progression. Cohesive devices are used to some good effect but cohesion within and/or between sentences may be faulty or mechanical due to misuse, overuse or omission. The use of reference and substitution may lack flexibility or clarity and result in some repetition or error.",
+    "source": "ielts-writing-band-descriptors.pdf"
+  },
+  {
+    "id": "g10",
+    "category": "band_descriptor",
+    "question": "What characterises Grammatical Range and Accuracy at Band 5 in Writing Task 2?",
+    "expected_answer": "The range of structures is limited and rather repetitive; complex sentences are attempted but tend to be faulty, with the greatest accuracy on simple sentences; grammatical errors may be frequent and cause some difficulty for the reader; punctuation may be faulty.",
+    "expected_context": "Writing Task 2 — Band 5, Grammatical Range & Accuracy: The range of structures is limited and rather repetitive. Although complex sentences are attempted, they tend to be faulty, and the greatest accuracy is achieved on simple sentences. Grammatical errors may be frequent and cause some difficulty for the reader. Punctuation may be faulty.",
+    "source": "ielts-writing-band-descriptors.pdf"
+  },
+  {
+    "id": "g11",
+    "category": "band_descriptor",
+    "question": "In Writing Task 1 at Band 8, what does Task Achievement require for the Academic test?",
+    "expected_answer": "The response covers all the requirements of the task appropriately, relevantly and sufficiently; key features are skilfully selected and clearly presented, highlighted and illustrated; there may be occasional omissions or lapses in content.",
+    "expected_context": "Writing Task 1 — Band 8, Task Achievement: The response covers all the requirements of the task appropriately, relevantly and sufficiently. (Academic) Key features are skilfully selected, and clearly presented, highlighted and illustrated. (General Training) All bullet points are clearly presented, and appropriately illustrated or extended. There may be occasional omissions or lapses in content.",
+    "source": "ielts-writing-band-descriptors.pdf"
+  },
+  {
+    "id": "g12",
+    "category": "band_descriptor",
+    "question": "Bài viết Task 2 có 20 từ trở xuống sẽ được chấm band mấy?",
+    "expected_answer": "Band 1.",
+    "expected_context": "Writing Task 2 — Band 1, Task Response: Responses of 20 words or fewer are rated at Band 1. The content is wholly unrelated to the prompt. Any copied rubric must be discounted.",
+    "source": "ielts-writing-band-descriptors.pdf"
+  },
+  {
+    "id": "g13",
+    "category": "band_descriptor",
+    "question": "Compare Lexical Resource at Band 8 and Band 9 for Writing Task 1.",
+    "expected_answer": "Band 9 shows full flexibility and precise use with very natural and sophisticated control, and errors are extremely rare. Band 8 shows a wide resource used fluently and flexibly with skilful use of uncommon or idiomatic items, but with occasional inaccuracies in word choice and collocation and occasional spelling or word-formation errors.",
+    "expected_context": "Writing Task 1 — Band 9, Lexical Resource: Full flexibility and precise use are evident within the scope of the task. A wide range of vocabulary is used accurately and appropriately with very natural and sophisticated control of lexical features. Minor errors in spelling and word formation are extremely rare and have minimal impact on communication. Writing Task 1 — Band 8, Lexical Resource: A wide resource is fluently and flexibly used to convey precise meanings within the scope of the task. There is skilful use of uncommon and/or idiomatic items when appropriate, despite occasional inaccuracies in word choice and collocation. Occasional errors in spelling and/or word formation may occur, but have minimal impact on communication.",
+    "source": "ielts-writing-band-descriptors.pdf"
+  },
+  {
+    "id": "g14",
+    "category": "band_descriptor",
+    "question": "What does the Band 4 Task Achievement descriptor say about General Training letters?",
+    "expected_answer": "Not all bullet points are presented; the purpose of the letter is not clearly explained and may be confused; the tone may be inappropriate; the format may be inappropriate.",
+    "expected_context": "Writing Task 1 — Band 4, Task Achievement: The response is an attempt to address the task. (Academic) Few key features have been selected. (General Training) Not all bullet points are presented. (General Training) The purpose of the letter is not clearly explained and may be confused. The tone may be inappropriate. The format may be inappropriate.",
+    "source": "ielts-writing-band-descriptors.pdf"
+  },
+  {
+    "id": "g15",
+    "category": "criteria",
+    "question": "Tiêu chí Task Response đánh giá những gì trong Writing Task 2?",
+    "expected_answer": "Mức độ đầy đủ khi trả lời đề bài; mức độ mở rộng và hỗ trợ các ý chính; độ liên quan của ý tưởng với đề bài; và độ rõ ràng khi mở bài, xác lập quan điểm và kết luận.",
+    "expected_context": "The TR criterion assesses: how fully the candidate responds to the task; how adequately the main ideas are extended and supported; how relevant the candidate's ideas are to the task; how clearly the candidate opens the discourse, establishes their position and formulates conclusions.",
+    "source": "ielts-writing-key-assessment-criteria.pdf"
+  },
+  {
+    "id": "g16",
+    "category": "criteria",
+    "question": "Can I use bullet points in my IELTS Writing answer?",
+    "expected_answer": "No. Scripts may be penalised if they are not written as full, connected text; using bullet points in any part of the response, or note form, is not appropriate.",
+    "expected_context": "Candidates should note that scripts may be penalised if they are a) partly or wholly plagiarised, b) not written as full, connected text (e.g. using bullet points in any part of the response, or note form, is not appropriate, etc.).",
+    "source": "ielts-writing-key-assessment-criteria.pdf"
+  },
+  {
+    "id": "g17",
+    "category": "task_format",
+    "question": "What kind of task is Academic Writing Task 1?",
+    "expected_answer": "An information-transfer task with a defined input and largely predictable output, relating narrowly to the factual content of a diagram, graph, table, chart, map or other visual input, not to speculative explanations outside the given data.",
+    "expected_context": "Academic Writing Task 1: This Writing task has a defined input and a largely predictable output. It is basically an information-transfer task, which relates narrowly to the factual content of a diagram, graph, table, chart, map or other visual input, not to speculative explanations that lie outside the given data.",
+    "source": "ielts-writing-key-assessment-criteria.pdf"
+  },
+  {
+    "id": "g18",
+    "category": "scoring",
+    "question": "Điểm Writing tổng được tính như thế nào từ bốn tiêu chí?",
+    "expected_answer": "Giám khảo cho điểm band cho từng tiêu chí trong bốn tiêu chí; điểm cuối là trung bình của bốn giá trị từ cả Task 1 và Task 2, trong đó Task 2 có trọng số gấp đôi Task 1.",
+    "expected_context": "In the writing test, an examiner will give a band score for each of these four criteria: task achievement/response, coherence and cohesion, lexical resource, grammatical range and accuracy. The final score is an average of the four values from both the task 1 and task 2 test. Note that writing task 2 is longer and so has twice the weight of writing task 1.",
+    "source": "ielts-writing.json (IDP: A close look at what IELTS Writing band scores mean)"
+  },
+  {
+    "id": "g19",
+    "category": "advice",
+    "question": "What are common mistakes candidates make in IELTS Writing Task 2?",
+    "expected_answer": "Not fully addressing the question, lack of clear structure, poor idea development, poor time management, overusing memorised phrases, and using informal language.",
+    "expected_context": "What are the most common mistakes in IELTS Writing Task 2? Not fully addressing the question. Lack of clear structure. Poor idea development. Poor time management. Overusing memorized phrases. Using informal language.",
+    "source": "cathoven-common-mistakes-in-ielts-writing-task-2.json"
+  },
+  {
+    "id": "g20",
+    "category": "advice",
+    "question": "Tại sao trả lời không đầy đủ câu hỏi lại làm giảm điểm Task 2?",
+    "expected_answer": "Vì hiểu sai đề hoặc chỉ trả lời một phần sẽ hạ điểm tiêu chí Task Achievement/Response; ví dụ đề hỏi cả nguyên nhân lẫn giải pháp mà bài chỉ bàn nguyên nhân thì câu trả lời chưa hoàn chỉnh.",
+    "expected_context": "Many test-takers either misunderstand the prompt or only partially answer it, which lowers their Task Achievement score. For example, if a question asks about both the causes and solutions of a problem, but the essay only discusses causes, the response is incomplete.",
+    "source": "cathoven-common-mistakes-in-ielts-writing-task-2.json"
+  }
+]
