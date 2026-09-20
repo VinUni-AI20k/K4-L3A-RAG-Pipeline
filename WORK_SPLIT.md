@@ -52,8 +52,8 @@ dòng vào `experiments.md` với số liệu thật, và số câu bị từ ch
 
 **Nhánh:** `feat/advanced-rerank` · **File chính:** `src/task7_reranking.py`, thêm module mới
 
-1. **Cross-encoder reranking (+3)** — `rerank_cross_encoder(query, candidates, top_k)`
-   trong `task7` hiện vẫn là `NotImplementedError`. Cài bằng Jina API
+1. **Cross-encoder reranking (+3)** — viết mới `rerank_cross_encoder(query,
+   candidates, top_k)` trong `task7` (hiện file chỉ có `rerank_rrf`). Cài bằng Jina API
    (`JINA_API_KEY` đã có chỗ trong `.env.example`) hoặc model local
    `cross-encoder/ms-marco-MiniLM-L-6-v2`.
    - Rubric đòi **có so sánh với RRF**, nên phải chạy A/B ba chiều: dense-only,

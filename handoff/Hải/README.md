@@ -33,12 +33,14 @@ Baseline hiện tại để so:
 
 ## Việc 1: Cross-encoder reranking (+3)
 
-Trong `src/task7_reranking.py` đã có sẵn chỗ cắm:
+`src/task7_reranking.py` hiện **chỉ có `rerank_rrf()`** — bạn viết hàm mới:
 
 ```python
 def rerank_cross_encoder(query: str, candidates: list[dict], top_k: int = 5) -> list[dict]:
-    raise NotImplementedError("Implement rerank_cross_encoder")
+    ...
 ```
+
+Rồi gọi nó từ `retrieve()` trong `src/task9_retrieval_pipeline.py`, sau bước RRF.
 
 Hai hướng, chọn một:
 
