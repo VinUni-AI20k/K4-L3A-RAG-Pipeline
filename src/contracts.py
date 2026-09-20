@@ -1,4 +1,4 @@
-from typing import Literal, TypedDict
+from typing import Literal, NotRequired, TypedDict
 
 
 RetrievalMethod = Literal["dense", "bm25", "hybrid", "pageindex"]
@@ -10,6 +10,14 @@ class DocumentMetadata(TypedDict):
     title: str
     doc_type: str
     url: str | None
+    # Optional provenance fields added by the reviewed Data Snapshot.  The
+    # original course contract only requires the four fields above, so these
+    # remain optional at runtime and are intentionally accepted by validators.
+    mode: NotRequired[str]
+    classification: NotRequired[str]
+    policy_version: NotRequired[str | None]
+    effective_date: NotRequired[str | None]
+    crawl_timestamp: NotRequired[str | None]
 
 
 class ChunkMetadata(DocumentMetadata):
@@ -44,6 +52,7 @@ class GenerationResult(TypedDict):
     answer: str
     sources: list[SearchResult]
     retrieval_source: RetrievalSource
+    evidence_status: NotRequired[Literal["supported", "partial_evidence", "not_found"]]
 
 
 def validate_document(item: object, *, require_chunk: bool = False) -> None:
@@ -115,3 +124,5 @@ def validate_generation_result(result: object) -> None:
     validate_search_results(result.get("sources"))
     if result.get("retrieval_source") not in {"hybrid", "pageindex", "none"}:
         raise ValueError("generation retrieval_source is invalid")
+    if "evidence_status" in result and result["evidence_status"] not in {"supported", "partial_evidence", "not_found"}:
+        raise ValueError("generation evidence_status is invalid")
