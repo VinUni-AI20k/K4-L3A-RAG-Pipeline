@@ -1,0 +1,20 @@
+[
+  {
+    "question": "Học phí đại học Bách khoa Hà Nội năm 2026 là bao nhiêu?",
+    "expected_answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+    "expected_context": "",
+    "note": "Ngoài phạm vi corpus — dùng để kiểm tra safe refusal và hiệu chỉnh threshold."
+  },
+  {
+    "question": "Cách nấu phở bò truyền thống gồm những bước nào?",
+    "expected_answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+    "expected_context": "",
+    "note": "Ngoài phạm vi corpus — dùng để kiểm tra safe refusal và hiệu chỉnh threshold."
+  },
+  {
+    "question": "Thủ tục đăng ký kết hôn với người nước ngoài cần giấy tờ gì?",
+    "expected_answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
+    "expected_context": "",
+    "note": "Ngoài phạm vi corpus — dùng để kiểm tra safe refusal và hiệu chỉnh threshold."
+  }
+]
