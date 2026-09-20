@@ -1,0 +1,45 @@
+# Individual contribution report
+
+## Thông tin
+
+- Họ và tên: Hà Huy Nhất
+- Mã học viên: 2A202602401
+- Nhóm: K4-L3A
+- Repository/branch: main (tài khoản github: huynhat2004)
+
+## Phần việc đã thực hiện
+
+| Module/deliverable | Việc tôi trực tiếp làm | File/commit/PR | Trạng thái |
+| --- | --- | --- | --- |
+| Task 3: Convert Markdown | Dùng markitdown để chuyển đống pdf về file md chuẩn. | `src/task3_convert_markdown.py` | Done |
+| Task 9: Hybrid Search | Gộp kết quả của task 5 và 6 lại dùng thuật toán RRF. | `src/task9_retrieval_pipeline.py` | Done |
+| Task 10: Generation | Gọi API OpenAI để sinh câu trả lời kèm nguồn (citation). | `src/task10_generation.py` | Done |
+| Golden Dataset | Tự ngồi soạn 15 câu hỏi test cho hệ thống. | `group_project/evaluation/golden_dataset.json` | Done |
+
+## Quyết định kỹ thuật quan trọng
+
+1. **Quyết định:** Áp dụng công thức RRF cơ bản `1 / (k + rank)` để trộn điểm.
+   **Lý do/evidence:** Thấy anh em hay xài cách này hiệu quả để cân bằng giữa từ khóa (bm25) và ý nghĩa (dense vector).
+   **Trade-off:** Tốc độ phản hồi bị chậm đi vì phải chờ kết quả từ cả 2 nhánh.
+
+2. **Quyết định:** Bắt LLM phải trích dẫn theo format `[Document N]` trong prompt.
+   **Lý do/evidence:** Ép nó lấy dữ liệu từ context đưa vào chứ không được chém gió bậy bạ ngoài lề.
+   **Trade-off:** Đôi khi LLM hơi máy móc, câu trả lời khô khan và nếu context hơi mờ nhạt là nó từ chối trả lời luôn.
+
+## Kiểm thử và kết quả
+
+- Test hoặc query tôi đã dùng: Thử mấy câu hỏi tự chế trong `golden_dataset.json`.
+- Kết quả trước/sau nếu có: Trả lời ngon nghẻ, UI streamlit hiện nguồn khá mượt.
+- Lỗi đã phát hiện và cách xử lý: Bị lỗi prompt dài quá cắt mất thông tin, em phải viết hàm `reorder_for_llm` để nhét mấy cái chunk điểm cao lên đầu và xuống cuối.
+
+## Điều còn hạn chế
+
+- Một hạn chế cụ thể của phần tôi làm: Prompt viết vẫn còn hơi "phèn", chưa mượt lắm.
+- Nếu có thêm thời gian, thay đổi đầu tiên tôi sẽ thực hiện: Code thêm tính năng ghi nhớ lịch sử chat (memory) để hỏi nối tiếp được.
+
+## Xác nhận đóng góp
+
+Tôi xác nhận nội dung trên phản ánh đúng phần việc của mình và có thể giải thích hoặc chạy lại trong buổi demo.
+
+- Ngày: 20/09/2026
+- Tên thành viên: Hà Huy Nhất
