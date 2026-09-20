@@ -46,11 +46,11 @@ def call_llm(system_prompt: str, user_message: str) -> str:
         raise RuntimeError("Gemini returned an empty response")
     return text
 
-def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
+def generate_with_citation(query: str, top_k: int = TOP_K, score_threshold: float = 0.82, use_reranking: bool = True, **kwargs) -> dict:
     if not query.strip():
         return {"answer": SAFE_REFUSAL, "sources": [], "retrieval_source": "none"}
     try:
-        chunks = retrieve(query, top_k=top_k)
+        chunks = retrieve(query, top_k=top_k, score_threshold=score_threshold, use_reranking=use_reranking)
         if not chunks:
             return {"answer": SAFE_REFUSAL, "sources": [], "retrieval_source": "none"}
         reordered = reorder_for_llm(chunks)
