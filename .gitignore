@@ -55,3 +55,10 @@ pageindex_pdfs/
 # OS
 .DS_Store
 Thumbs.db
+
+# Word owner/temp files
+~$*
+
+# Vector store (local, regenerate)
+chroma_db/
+chroma_db/**
