@@ -1,0 +1,128 @@
+[
+	{
+		"category": "news",
+		"source": "bai-bao-2.md",
+		"question": "Theo chính sách bán hàng Vinhomes Ocean Park 3, khách hàng thanh toán sớm 95% giá trị căn hộ trong vòng 15 ngày từ ngày ký hợp đồng được hưởng chiết khấu bao nhiêu?",
+		"expected_answer": "Khách hàng thanh toán 95% giá trị căn hộ trong vòng 15 ngày kể từ ngày ký hợp đồng được hưởng chiết khấu 14,5% đã bao gồm VAT.",
+		"expected_context": "Khách hàng thanh toán 95% giá trị căn hộ trong vòng 15 ngày kể từ ngày ký hợp đồng sẽ nhận chiết khấu lên tới 14,5% (đã bao gồm VAT)."
+	},
+	{
+		"category": "news",
+		"source": "bai-bao-2.md",
+		"question": "Vinhomes Ocean Park 3 hỗ trợ khách hàng vay tối đa bao nhiêu phần trăm giá trị căn hộ và lãi suất 0% trong bao lâu?",
+		"expected_answer": "Chính sách hỗ trợ vay tối đa 70% giá trị căn hộ, với lãi suất 0% trong 30 tháng kể từ lần giải ngân đầu tiên.",
+		"expected_context": "Mức dư nợ vay tối đa: Tối đa 70% giá bán Nhà ở (gồm VAT). Lãi suất hỗ trợ: 0% trong 30 tháng kể từ ngày giải ngân đầu tiên."
+	},
+	{
+		"category": "news",
+		"source": "bai-bao-2.md",
+		"question": "Quà tặng Vinpearl và VinWonders cho khách hàng mua Vinhomes Ocean Park 3 có giá trị như thế nào?",
+		"expected_answer": "Khách hàng được tặng các gói Vinpearl Resort & Hotel, Wonder Passport và Wonder Exclusive. Với căn dưới 10 tỷ, tổng các gói lần lượt là 70 triệu, 35 triệu và 30 triệu đồng; căn từ 10 tỷ trở lên được tặng 2 gói Vinpearl cùng 1 gói của mỗi loại Wonder.",
+		"expected_context": "Dưới 10 tỷ: 01 gói Vinpearl Resort & Hotel 70 triệu, 01 gói Wonder Passport 35 triệu, 01 gói Wonder Exclusive 30 triệu. Từ 10 tỷ trở lên: 02 gói Vinpearl Resort & Hotel, 01 gói Wonder Passport, 01 gói Wonder Exclusive."
+	},
+	{
+		"category": "news",
+		"source": "bai-bao-4.md",
+		"question": "Chương trình cam kết tiền thuê tại Vinhomes Ocean Park 2 hỗ trợ bao nhiêu mỗi tháng cho nhà có diện tích đất dưới 70 m2?",
+		"expected_answer": "Nhà ở có diện tích đất dưới 70 m2 được hỗ trợ cố định 21 triệu đồng mỗi tháng trong hai năm đầu kể từ ngày bàn giao.",
+		"expected_context": "Nhà ở có diện tích đất dưới 70m2: 21 triệu/tháng. Thời hạn cam kết: 02 năm đầu kể từ Ngày Bàn Giao."
+	},
+	{
+		"category": "news",
+		"source": "bai-bao-4.md",
+		"question": "Nếu thanh toán sớm bằng vốn tự có khi mua nhà tại Vinhomes Ocean Park 2, khách hàng được chiết khấu bao nhiêu?",
+		"expected_answer": "Khách hàng thanh toán sớm trong vòng 15 ngày được chiết khấu 19,3% vào giá bán trước thuế GTGT và kinh phí bảo trì.",
+		"expected_context": "Thanh toán sớm trong vòng 15 ngày: Chiết khấu 19,3% vào giá bán (trước thuế GTGT và KPBT) khi ký HĐMB."
+	},
+	{
+		"category": "legal",
+		"source": "quy-dinh-xu-ly-khieu-nai.md",
+		"question": "Khách hàng Vinhomes có thể gửi yêu cầu hoặc khiếu nại qua những kênh nào?",
+		"expected_answer": "Khách hàng có thể liên hệ qua hotline 1900 2323 89, nhánh 4; email info@vinhomes.vn; gửi bản cứng đến địa chỉ Công ty; hoặc phản ánh trực tiếp với nhân viên phụ trách hồ sơ, phân khu, tòa nhà hay văn phòng Ban Quản lý.",
+		"expected_context": "Các kênh tiếp nhận gồm điện thoại Tổng đài 1900 2323 89 - nhánh số 4, email info@vinhomes.vn, bản cứng đến địa chỉ Công ty và phản ánh trực tiếp tại Ban Quản lý hoặc với nhân viên phụ trách."
+	},
+	{
+		"category": "legal",
+		"source": "quy-dinh-xu-ly-khieu-nai.md",
+		"question": "Trong bao lâu bộ phận chăm sóc khách hàng phải chuyển thông tin khiếu nại qua điện thoại đến bộ phận chuyên trách?",
+		"expected_answer": "Thông tin phải được chuyển đến đúng bộ phận chuyên trách trong vòng 4 giờ làm việc kể từ khi tiếp nhận.",
+		"expected_context": "Trong vòng 04 giờ làm việc kể từ khi tiếp nhận thông tin từ khách hàng, chăm sóc khách hàng tổng đài cần chuyển thông tin tới đúng bộ phận chuyên trách."
+	},
+	{
+		"category": "legal",
+		"source": "quy-dinh-xu-ly-khieu-nai.md",
+		"question": "Theo quy định xử lý yêu cầu khách hàng, yêu cầu đơn giản phải được xử lý trong thời gian bao lâu?",
+		"expected_answer": "Yêu cầu đơn giản phải được xử lý trong vòng 4 ngày làm việc.",
+		"expected_context": "Thời gian xử lý yêu cầu của khách hàng: Yêu cầu đơn giản trong vòng 04 ngày làm việc; yêu cầu phức tạp hẹn phản hồi chính thức trong vòng 06 ngày làm việc."
+	},
+	{
+		"category": "legal",
+		"source": "quy-dinh-xu-ly-khieu-nai.md",
+		"question": "Nếu khiếu nại liên quan đến an toàn tính mạng của khách hàng thì Vinhomes xử lý thế nào?",
+		"expected_answer": "Đây là yêu cầu khẩn/gấp và phải được phối hợp xử lý ngay khi tiếp nhận.",
+		"expected_context": "Yêu cầu khẩn/gấp, liên quan đến an toàn tính mạng của khách hàng: phối hợp xử lý ngay khi tiếp nhận."
+	},
+	{
+		"category": "legal",
+		"source": "quy-dinh-xu-ly-khieu-nai.md",
+		"question": "Nếu chưa có phương án được duyệt khi đến hạn xử lý yêu cầu, Công ty phải làm gì?",
+		"expected_answer": "Công ty phải gia hạn phản hồi qua ứng dụng, email hoặc điện thoại tùy theo kênh khách hàng đã sử dụng.",
+		"expected_context": "Nếu đến hạn xử lý chưa có phương án được duyệt: gia hạn phản hồi qua app/mail/điện thoại, tùy theo kênh tiếp nhận yêu cầu hoặc phản ánh của khách hàng."
+	},
+	{
+		"category": "cross-domain",
+		"source": "bai-bao-2.md + quy-dinh-xu-ly-khieu-nai.md",
+		"question": "Khách hàng mua căn hộ Vinhomes Ocean Park 3 theo gói vay ưu đãi có thể vừa nhận hỗ trợ tài chính vừa gửi khiếu nại qua hotline không?",
+		"expected_answer": "Có. Chính sách bán hàng nêu hỗ trợ vay tối đa 70% giá trị căn hộ với lãi suất 0% trong 30 tháng; đồng thời khách hàng vẫn có thể gửi yêu cầu qua hotline 1900 2323 89, nhánh 4 theo quy định tiếp nhận khiếu nại.",
+		"expected_context": "Ocean Park 3 hỗ trợ vay tối đa 70% và lãi suất 0% trong 30 tháng. Quy định khiếu nại cho phép liên hệ Tổng đài 1900 2323 89 - nhánh số 4."
+	},
+	{
+		"category": "cross-domain",
+		"source": "bai-bao-2.md + quy-dinh-xu-ly-khieu-nai.md",
+		"question": "Người mua căn hộ được tặng voucher Vinmec 100 triệu đồng cần làm gì nếu có vấn đề về việc nhận ưu đãi?",
+		"expected_answer": "Người mua nên liên hệ Công ty qua hotline, email, bản cứng hoặc Ban Quản lý để gửi yêu cầu. Với yêu cầu đơn giản, thời gian xử lý theo quy định là trong vòng 4 ngày làm việc.",
+		"expected_context": "Chính sách bán hàng nêu voucher Vinmec trị giá 100 triệu đồng cho khách hàng đủ điều kiện. Quy định khiếu nại nêu các kênh tiếp nhận và thời hạn xử lý yêu cầu đơn giản trong vòng 04 ngày làm việc.",
+		"root_cause_analysis": {
+			"likely_low_metrics": ["Context Recall", "Context Precision"],
+			"failure_stage": "retrieval",
+			"root_cause": "Câu hỏi cần truy hồi đồng thời chi tiết khuyến mại từ tài liệu news và quy trình khiếu nại từ tài liệu legal. Dense-only dễ chỉ lấy một trong hai nguồn hoặc lấy nhiều đoạn quảng bá không chứa thời hạn xử lý.",
+			"improvement": "Dùng hybrid BM25 + dense và RRF; mở rộng truy vấn bằng các từ khóa 'voucher Vinmec', 'kênh tiếp nhận', 'yêu cầu đơn giản', sau đó kiểm tra tối thiểu một context từ mỗi doc_type trước khi generation.",
+			"verification": "Đo lại Context Recall/Precision riêng cho mẫu này và kiểm tra top-k phải chứa bai-bao-2.md cùng quy-dinh-xu-ly-khieu-nai.md."
+		}
+	},
+	{
+		"category": "cross-domain",
+		"source": "bai-bao-4.md + quy-dinh-xu-ly-khieu-nai.md",
+		"question": "Khách hàng mua nhà Vinhomes Ocean Park 2 tham gia chương trình cam kết tiền thuê nhưng chưa nhận được hỗ trợ đúng hạn thì có quyền yêu cầu phản hồi không?",
+		"expected_answer": "Có. Khách hàng có thể gửi yêu cầu qua các kênh tiếp nhận của Vinhomes. Nếu yêu cầu đơn giản, Công ty phải xử lý trong vòng 4 ngày làm việc; nếu chưa có phương án được duyệt khi đến hạn thì phải gia hạn phản hồi qua app, email hoặc điện thoại.",
+		"expected_context": "Chương trình cam kết tiền thuê quy định khoản hỗ trợ và thời hạn thanh toán. Quy định xử lý khiếu nại cho phép khách hàng gửi yêu cầu, xử lý yêu cầu đơn giản trong 04 ngày và gia hạn phản hồi nếu chưa có phương án được duyệt.",
+		"root_cause_analysis": {
+			"likely_low_metrics": ["Answer Relevance", "Faithfulness", "Context Recall"],
+			"failure_stage": "retrieval/generation",
+			"root_cause": "Câu hỏi kết hợp quyền khiếu nại với điều khoản cam kết tiền thuê. Mô hình có thể trả lời chung chung về quyền phản ánh nhưng bỏ sót điều kiện gia hạn phản hồi, hoặc nhầm thời hạn thanh toán tiền thuê với thời hạn xử lý khiếu nại.",
+			"improvement": "Tách truy vấn thành hai ý: 'cam kết tiền thuê/thời hạn thanh toán' và 'chưa có phương án được duyệt/thời hạn xử lý'. Khi sinh câu trả lời, yêu cầu trích dẫn riêng cho quyền gửi yêu cầu, 4 ngày làm việc và cơ chế gia hạn.",
+			"verification": "Chấm lại mẫu với rubric bắt buộc đủ ba ý: có quyền yêu cầu, 4 ngày làm việc nếu đơn giản, và gia hạn qua app/mail/điện thoại khi chưa có phương án."
+		}
+	},
+	{
+		"category": "out-of-domain",
+		"source": "none",
+		"question": "Ecopark hiện đang mở bán những căn hộ nào và có chương trình khuyến mại gì?",
+		"expected_answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có vì bộ tài liệu chỉ tập trung vào Vinhomes.",
+		"expected_context": "Không có tài liệu về Ecopark trong corpus Vinhomes; hệ thống cần từ chối thay vì suy đoán.",
+		"root_cause_analysis": {
+			"likely_low_metrics": ["Context Recall", "Context Precision", "Answer Relevance"],
+			"failure_stage": "retrieval/safety",
+			"root_cause": "Ecopark nằm ngoài phạm vi corpus. Nếu hệ thống chỉ dựa vào top-k không rỗng hoặc không có ngưỡng confidence, các đoạn Vinhomes có thể bị dùng để trả lời sai thay vì kích hoạt safe refusal.",
+			"improvement": "Thêm domain gate nhận diện thực thể ngoài phạm vi, kết hợp ngưỡng dense score và kiểm tra độ phủ từ khóa thương hiệu. Khi không có bằng chứng đúng thực thể, trả về câu từ chối cố định và không gọi generator để suy đoán.",
+			"verification": "Chạy test với Ecopark và Novaworld: sources phải rỗng hoặc bị loại, retrieval_source là none, và câu trả lời phải giữ nguyên ý không thể xác minh."
+		}
+	},
+	{
+		"category": "out-of-domain",
+		"source": "none",
+		"question": "Novaworld có chính sách khiếu nại và hỗ trợ lãi suất nào cho khách hàng?",
+		"expected_answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có vì bộ tài liệu không bao gồm Novaworld.",
+		"expected_context": "Không có tài liệu về Novaworld trong corpus Vinhomes; hệ thống cần từ chối thay vì suy đoán."
+	}
+]
