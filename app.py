@@ -15,19 +15,57 @@ from src.task4_chunking_indexing import get_collection
 
 load_dotenv()
 st.set_page_config(page_title="Vietnam Travel RAG", page_icon="🧭", layout="wide")
+
+# CSS tương thích hoàn hảo cho cả Light Mode và Dark Mode
 st.markdown("""
 <style>
-.stApp { background: linear-gradient(180deg, #f7fbfa 0%, #fff 32%); }
-.block-container { max-width: 980px; padding-top: 2rem; padding-bottom: 5rem; }
-[data-testid="stSidebar"] { background: #f2f8f6; border-right: 1px solid #dce9e4; }
-.hero { padding: 1.35rem 1.5rem; border: 1px solid #d7e8e1; border-radius: 18px;
-  background: linear-gradient(135deg, #fff, #edf8f4); box-shadow: 0 8px 28px rgba(18,82,64,.07);
-  margin-bottom: 1.25rem; }
-.hero h1 { margin: 0; color: #124f41; font-size: 2rem; }
-.hero p { margin: .45rem 0 0; color: #506760; }
-.source-preview { border-left: 3px solid #49a487; padding: .15rem 0 .15rem .85rem; color: #344b44; }
-[data-testid="stChatMessage"] { border: 1px solid #e2ece8; border-radius: 14px;
-  padding: .65rem .85rem; background: rgba(255,255,255,.82); }
+/* Tự động đổi màu nền và màu chữ chung theo chế độ của Streamlit */
+.stApp {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.block-container { 
+    max-width: 980px; 
+    padding-top: 2rem; 
+    padding-bottom: 5rem; 
+}
+
+/* Sidebar styling tương thích Dark/Light mode */
+[data-testid="stSidebar"] { 
+    background-color: var(--secondary-background-color);
+    border-right: 1px solid rgba(128, 128, 128, 0.2); 
+}
+
+/* Hero Banner dùng màu bán trong suốt hoặc biến đổi linh hoạt */
+.hero { 
+    padding: 1.35rem 1.5rem; 
+    border: 1px solid rgba(73, 164, 135, 0.3); 
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(73, 164, 135, 0.05), rgba(73, 164, 135, 0.15)); 
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.25rem; 
+}
+.hero h1 { 
+    margin: 0; 
+    font-size: 2rem; 
+}
+.hero p { 
+    margin: .45rem 0 0; 
+    opacity: 0.8; 
+}
+
+/* Khung hiển thị trích dẫn nguồn */
+.source-preview { 
+    border-left: 3px solid #49a487; 
+    padding: .15rem 0 .15rem .85rem; 
+}
+
+/* Chat Message khung bọc nội dung */
+[data-testid="stChatMessage"] { 
+    border: 1px solid rgba(128, 128, 128, 0.2); 
+    border-radius: 14px;
+    padding: .65rem .85rem; 
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -196,7 +234,7 @@ if query and query.strip():
         else:
             latency = time.perf_counter() - started_at
             answer = result.get("answer", "Không nhận được câu trả lời.")
-            sources = result.get("sources", [])
+            sources = result.sources if hasattr(result, 'sources') else result.get("sources", [])
             retrieval_source = result.get("retrieval_source", "none")
             st.markdown(answer)
             st.caption(f"Retrieval: **{retrieval_source}** · {len(sources)} nguồn · {latency:.1f}s")
