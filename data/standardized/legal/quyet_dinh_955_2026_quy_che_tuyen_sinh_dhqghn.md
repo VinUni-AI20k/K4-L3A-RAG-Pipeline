@@ -1,0 +1,1507 @@
+---
+title: "Quyết định 955/QĐ-ĐHQGHN ban hành Quy chế tuyển sinh đại học tại Đại học Quốc gia Hà Nội"
+source: "quyet_dinh_955_2026_quy_che_tuyen_sinh_dhqghn.pdf"
+doc_type: "legal"
+url: "https://vnu.edu.vn/ban-hanh-quy-che-tuyen-sinh-dai-hoc-tai-dai-hoc-quoc-gia-ha-noi-doc2759.html"
+download_url: "https://cdnportal.vnu.edu.vn/data/0/documents/2026/03/20/upload_2/955-qd-dhqghn-2026.pdf"
+document_number: "955/QĐ-ĐHQGHN"
+issued_date: "2026-03-20"
+publisher: "Đại học Quốc gia Hà Nội"
+sha256: "4077b0768d562d369dfb97a46df8ac7a47f96beba8f4456b4b17f675ce376fb5"
+pages: 35
+---
+# Quyết định 955/QĐ-ĐHQGHN ban hành Quy chế tuyển sinh đại học tại Đại học Quốc gia Hà Nội
+
+## Trang 1
+
+CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM 
+ Độc lập - Tự do - Hạnh phúc 
+ Hà Nội, ngày tháng năm 2026 
+QUYẾT ĐỊNH 
+Về việc ban hành Quy chế tuyển sinh đại học 
+tại Đại học Quốc gia Hà Nội 
+GIÁM ĐỐC ĐẠI HỌC QUỐC GIA HÀ NỘI 
+Căn cứ Luật Giáo dục số 43/2019/QH14 được sửa đổi bởi Luật Giáo dục 
+123/2025/QH15; 
+Căn cứ Luật Giáo dục đại học số 125/2025/QH15; 
+Căn cứ Nghị định số 201/2025/NĐ-CP ngày 11 tháng 7 năm 2025 của Chính phủ 
+Quy định chức năng nhiệm vụ và quyền hạn của đại học quốc gia; 
+Căn cứ Thông tư số 06/2026/TT-BGDĐT ngày 15 tháng 02 năm 2026 của Bộ trưởng 
+Bộ Giáo dục và Đào tạo ban hành Quy chế tuyển sinh các ngành đào tạo trình độ đại học 
+và ngành Giáo dục mầm non trình độ cao đẳng; 
+Theo đề nghị của Trưởng Ban Đào tạo và Công tác sinh viên. 
+QUYẾT ĐỊNH: 
+Điều 1. Ban hành kèm theo Quyết định này Quy chế tuyển sinh đại học tại Đại học 
+Quốc gia Hà Nội (ĐHQGHN). 
+Điều 2. Quyết định này có hiệu lực kể từ ngày ký và thay thế cho Quy chế tuyển 
+sinh đại học chính quy tại ĐHQGHN ban hành theo Quyết định số 1868/QĐ-ĐHQGHN 
+ngày 18 tháng 4 năm 2025 và Quy chế tuyển sinh đại học vừa làm vừa học tại ĐHQGHN 
+ban hành theo Quyết định số 2319/QĐ-ĐHQGHN ngày 03 tháng 7 năm 2023 của Giám 
+đốc ĐHQGHN. 
+Điều 3. Chánh Văn phòng, trưởng ban chức năng, người đứng đầu đơn vị thành 
+viên, trực thuộc ĐHQGHN và các tổ chức, cá nhân có liên quan chịu trách nhiệm thi hành 
+Quyết định này./. 
+Nơi nhận: 
+- Như Điều 3; 
+- Bộ GD&ĐT (để b/c); 
+- Giám đốc ĐHQGHN (để b/c); 
+- PGĐ.Nguyễn Hiệu (để b/c); 
+- Phòng HC-TH, VP ĐHQGHN 
+(đăng website); 
+- Lưu: VT, ĐT&CTSV (06b). 
+KT. GIÁM ĐỐC 
+PHÓ GIÁM ĐỐC 
+ 
+ 
+ 
+ 
+ 
+Đào Thanh Trường 
+ĐẠI HỌC QUỐC GIA HÀ NỘI 
+Số: /QĐ-ĐHQGHN
+
+## Trang 2
+
+CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM 
+ Độc lập - Tự do - Hạnh phúc 
+ 
+ QUY CHẾ 
+Tuyển sinh đại học tại Đại học Quốc gia Hà Nội 
+(kèm theo Quyết định số /QĐ-ĐHQGHN ngày tháng năm 2026 
+của Giám đốc Đại học Quốc gia Hà Nội) 
+Chương I 
+QUY ĐỊNH CHUNG 
+Điều 1. Phạm vi điều chỉnh và đối tượng áp dụng 
+1. Quy chế này quy định nguồn tuyển, chính sách ưu tiên, ngưỡng bảo đảm chất lượng 
+đầu vào, phương thức tuyển sinh; quy trình, nguyên tắc, yêu cầu; đăng ký xét tuyển, xét tuyển, 
+xét tuyển bổ sung; trúng tuyển, xác nhận nhập học, bảo lưu kết quả trúng tuyển; quyền hạn và 
+trách nhiệm của các bên liên quan trong công tác tuyển sinh trình độ đại học của hình thức 
+đào tạo chính quy, hình thức đào tạo thường xuyên tại Đại học Quốc gia Hà Nội 
+(ĐHQGHN); 
+2. Quy chế này áp dụng đối với các đơn vị, tổ chức, cá nhân có liên quan trong công 
+tác tuyển sinh đại học vào các c hương trình đào tạo do Giám đốc ĐHQGHN, Hiệu trưởng 
+trường thành viên cấp bằng và các chương trình đào tạo liên kết với cơ sở giáo dục nước 
+ngoài do Giám đốc ĐHQGHN cấp bằng, hai bên cùng cấp bằng. Quy chế này không áp dụng 
+đối với tuyển sinh các chương trình đào tạo liên kết do các cơ sở giáo dục nước ngoài cấp bằng. 
+Điều 2. Giải thích từ ngữ 
+Trong văn bản này, các từ ngữ dưới đây được hiểu như sau: 
+1. Phạm vi tuyển sinh là các chương trình, ngành, nhóm ngành (sau đây gọi chung 
+là chương trình đào tạo) và hình thức đào tạo được tổ chức tuyển sinh trong một đợt, hoặc 
+theo một phương thức tuyển sinh nhất định. 
+2. Cổng Thông tin tuyển sinh của Bộ Giáo dục và Đào tạo (GDĐT) là giao diện 
+trang điện tử (website) của Hệ thống hỗ trợ tuyển sinh chung; là một phần của cơ sở dữ liệu 
+ngành về giáo dục đại học. 
+3. Hệ thống hỗ trợ tuyển sinh chung của Bộ GDĐT là hệ thống phần mềm hỗ trợ 
+đăng ký nguyện vọng xét tuyển, trao đổi dữ liệu xét tuyển, xử lý nguyện vọng và quản lý dữ 
+liệu trúng tuyển, nhập học của các đơn vị đào tạo. 
+4. Đơn vị đào tạo là trường đại học thành viên, trường thuộc ĐHQGHN có chức 
+năng nhiệm vụ tổ chức đào tạo đại học. 
+ 
+ĐẠI HỌC QUỐC GIA HÀ NỘI
+
+## Trang 3
+
+2 
+5. Mã trường trong tuyển sinh là một mã quy ước gồm 03 ký tự chữ hoặc số thống 
+nhất toàn quốc dùng để định danh tuyển sinh một đơn vị đào tạo. 
+6. Mã xét tuyển là một mã quy ước định danh của một chương trình (hoặc một ngành 
+hoặc một nhóm ngành hoặc lĩnh vực) sử dụng thống nhất trong một đơn vị đào tạo. Mã xét 
+tuyển do đơn vị đào tạo tự quy ước và tối đa không quá 09 ký tự bao gồm ký tự số và ký tự 
+chữ. 
+7. Kỳ thi tuyển sinh là kỳ thi được tổ chức gắn với quy trình xét tuyển, lấy kết quả 
+thi làm căn cứ duy nhất hoặc kết hợp với các tiêu chí khác để xét tuyển. 
+8. Kỳ thi độc lập là kỳ thi được thiết kế và tổ chức độc lập với quy trình x ét tuyển, 
+lấy kết quả thi làm căn cứ xét tuyển độc lập hoặc xét tuyển kết hợp hoặc sử dụng làm điều 
+kiện để xét tuyển. 
+9. Kỳ thi bổ trợ là kỳ thi được tổ chức bổ sung cho phương thức tuyển sinh (thi năng 
+khiếu, thi tài năng, phỏng vấn) để lấy kết quả làm một căn cứ hoặc một tiêu chí phục vụ xét 
+tuyển; có thể tổ chức theo hình thức thi trực tiếp hoặc trực tuyến; đơn vị tổ chức kỳ thi quy 
+định quy trình tổ chức thi, đề thi, quy chế thi, đề án tổ chức thi và các điều kiện khác. 
+10. Thi trực tiếp là hình thức tổ ch ức thi có người coi thi trực tiếp tại địa điểm thi; 
+thí sinh làm bài trên giấy hoặc trên máy tính, thiết bị nối mạng hoặc trả lời phỏng vấn trước 
+hội đồng. 
+11. Thi trực tuyến là hình thức tổ chức thi có người coi thi trực tuyến và giám sát 
+bằng công nghệ; thí sinh làm bài trên máy tính, thiết bị nối mạng hoặc trả lời phỏng vấn qua 
+mạng. 
+12. Phương thức tuyển sinh là việc đơn vị đào tạo sử dụng độc lập hoặc kết hợp các 
+kết quả sau đây: kết quả học tập cấp THPT, điểm thi tốt nghiệp THPT, kết quả kỳ thi độc 
+lập, kết quả kỳ thi bổ trợ, chứng chỉ quốc tế, chứng chỉ ngoại ngữ dùng để thay thế điểm 
+môn ngoại ngữ, để xét tuyển thí sinh vào một chương trình đào tạo. 
+13. Quy đổi tương đương là việc quy đổi ngưỡng bảo đảm chất lượng đầu vào, điểm 
+trúng tuyển giữa các phương thứ c tuyển sinh, tổ hợp xét tuyển của một mã xét tuyển theo 
+một quy tắc do đơn vị đào tạo quy định, bảo đảm tương đương về mức độ đáp ứng yêu cầu 
+đầu vào của chương trình đào tạo tương ứng (sau đây gọi là độ lệch điểm). 
+14. Tiêu chí đánh giá là việc sử dụng kết q uả thi, kiểm tra để đánh giá năng lực của 
+thí sinh nhằm phân loại thí sinh theo mức độ đáp ứng yêu cầu đầu vào của chương trình đào 
+tạo. 
+15. Tiêu chí xét tuyển là những tiêu chí được dùng để xác định điều kiện trúng tuyển 
+của thí sinh dựa trên kết quả học tập , kết quả thi hoặc cả kết quả học tập và kết quả thi và 
+các tiêu chí đánh giá khác; được quy thành điểm số để xét tuyển (điểm xét tuyển) trong đó 
+đã bao gồm điểm ưu tiên, điểm cộng (nếu có).
+
+## Trang 4
+
+3 
+16. Trọng số tính điểm xét của 01 môn trong 01 tổ hợp xét tuyển là p hần đóng góp 
+của môn đó trong tổ hợp xét tuyển. Tổ hợp có 03 môn (không nhân hệ số) thì trọng số tính 
+điểm xét của 01 môn bất kỳ trong tổ hợp xét tuyển là 1/3. 
+17. Dự tuyển là việc một thí sinh tham dự quy trình tuyển sinh vào chương trình đào 
+tạo của một đơn vị đào tạo, thông qua việc đăng ký nguyện vọng xét tuyển trên Hệ thống hỗ 
+trợ tuyển sinh chung và đăng ký dự thi, đăng ký xét tuyển theo quy định của đơn vị đào tạo 
+(nếu có). 
+18. Ngưỡng bảo đảm chất lượng đầu vào (gọi tắt là ngưỡng đầu vào) là yêu cầu tối 
+thiểu về năng lực học tập thể hiện ở kết quả học tập, kết quả thi, đánh giá để thí sinh có khả 
+năng theo học và hoàn thành chương trình đào tạo. 
+19. Điểm ưu tiên là mức điểm thí sinh được hưởng theo khu vực, đối tượng ưu tiên 
+được quy định tại Quy chế này. 
+20. Điểm cộng do ĐHQGHN xây dựng và công bố theo các tiêu chí thành tích phù 
+hợp với đầu vào chương trình đào tạo bao gồm: 
+a) Điểm thưởng dành cho các đối tượng thí sinh được xét tuyển thẳng nhưng không 
+sử dụng quyền xét tuyển thẳng theo quy định tại khoản 2, Điều 8 của Quy chế này; mức 
+điểm thưởng tối đa 3,00 điểm theo thang điểm 30; 
+b) Điểm xét thưởng dành cho các đối tượng thí sinh có thành tích hoặc có năng khiếu 
+đặc biệt; mức điểm xét thưởng tối đa 1,50 điểm theo thang điểm 30; 
+c) Điểm khuyến khích dành cho các đối tượng thí sinh có chứng chỉ ngoại ngữ hoặc 
+có chứng chỉ quốc tế; mức điểm khuyến khích tối đa 1,50 điểm theo thang điểm 30. 
+21. Xét tuyển thẳng là việc thực hiện quy trình xét tuyển hồ sơ thí sinh và công nhận 
+trúng tuyển đối với những đối tượng xét tuyển thẳng theo quy định của Quy chế này. 
+22. Xét tuyển là quy trình xử lý riêng tại từng đơn vị đào tạo hoặc xử lý chung theo 
+nhóm trường để xác định điều kiện trúng tuyển và lập danh sách thí sinh đủ điều kiện trúng 
+tuyển vào một chương trình đào tạo theo các tiêu ch í xét tuyển do đơn vị đào tạo xác định 
+căn cứ theo các quy định của Quy chế này. 
+23. Xử lý nguyện vọng là quy trình xử lý trên Hệ thống hỗ trợ tuyển sinh chung để 
+xác định nguyện vọng cao nhất trong số nguyện vọng mà thí sinh đủ điều kiện trúng tuyển, 
+trên cơ sở đó lập danh sách thí sinh trúng tuyển. 
+24. Điểm trúng tuyển của một chương trình đào tạo là ngưỡng điểm mà những thí 
+sinh (đã đăng ký nguyện vọng vào chương trình đào tạo đó) có điểm xét tuyển bằng hoặc 
+cao hơn sẽ đủ điều kiện trúng tuyển và được làm tròn đến hàng phần trăm. Việc làm tròn 
+điểm được thực hiện theo nguyên tắc làm tròn toán học đến hàng phần trăm, sau khi cộng 
+đầy đủ điểm ưu tiên và điểm cộng (nếu có).
+
+## Trang 5
+
+4 
+Điều 3. Nguyên tắc cơ bản trong tuyển sinh 
+1. Công bằng đối với thí sinh 
+d) Về cung cấp thông tin: thí sinh quan tâm được cung cấp thông tin đầy đủ, rõ ràng, 
+tin cậy, nhất quán và kịp thời để có quyết định phù hợp và chuẩn bị tốt nhất cho việc tham 
+gia tuyển sinh; 
+e) Về cơ hội dự tuyển: không thí sinh nào bị mất cơ hội dự tuyển do những quy định 
+không liên quan tới trình độ, năng lực hoặc do quy trình tuyển sinh gây phiền hà, tốn kém; 
+f) Về đánh giá năng lực: thí sinh phải được đánh giá khách quan, công bằng và tin 
+cậy về khả năng chuyên môn, ngoại ngữ và các năng lực khác nhằm đáp ứng yêu cầu đầu 
+vào của ngành và chương trình đào tạo; 
+g) Về cơ hội trúng tuyển: Thí sinh phải được tạo cơ hội trúng tuyển cao nhất và 
+quyền xác định nguyện vọng ưu tiên trong số những chương trình, ngành đào tạo đủ điều 
+kiện trúng tuyển; 
+e) Về thực hiện cam kết: đơn vị đào tạo phải thực hiện các cam kết đã thông báo đối 
+với thí sinh; tư vấn, hỗ trợ và giải quyết khiếu nại, bảo vệ quyền lợi chính đáng của thí sinh 
+trong những trường hợp rủi ro. 
+2. Bình đẳng giữa các đơn vị đào tạo 
+a) Về hợp tác: hợp tác bình đẳng nhằm nâng cao chất lượng và hiệu quả tuyển sinh, 
+bảo đảm quyền lợi tối đa cho thí sinh; 
+b) Về cạnh tranh: cạnh tranh lành mạnh, công bằng trong tuyển sinh. 
+3. Minh bạch đối với xã hội 
+a) Về minh bạch thông tin: đơn vị đào tạo có trách nhiệm công bố thông tin tuyển 
+sinh đầy đủ, rõ ràng và kịp thời qua các phương tiện truyền thông phù hợp; 
+b) Về trách nhiệm giải trình: đ ơn vị đào tạo có trách nhiệm báo cáo theo yêu cầu 
+của ĐHQGHN, các cơ quan quản lý nhà nước và giải trình với các bên liên quan qua hình 
+thức phù hợp về công tác tuyển sinh. 
+Điều 4. Yêu cầu chung trong tuyển sinh 
+1. Đơn vị đào tạo thực hiện quyền tự chủ, tự chịu trách nhiệm gắn với trách nhiệm 
+giải trình về công tác tuyển sinh; bảo đảm nguyên tắc công bằng, khách quan, công khai, 
+minh bạch. 
+2. Đơn vị đào tạo thực hiện tất cả biện pháp nhằm tạo điều kiện thuận lợi và cơ hội 
+bình đẳng cho mọi thí sinh; tuyển chọn được những thí sinh có nguyện vọng và năng lực 
+phù hợp với yêu cầu của chương trình đào tạo; tổ chức xét tuyển tất cả nguyện vọng hợp lệ 
+của thí sinh đã đăng ký xét tuyển vào đơn vị đào tạo trên Hệ thống hỗ trợ tuyển sinh chung.
+
+## Trang 6
+
+5 
+3. Đơn vị đào tạo phối hợp chặt chẽ nhằm bảo đảm tính thống nhất, đồng bộ và liên 
+thông trong hệ thống, giúp nâng cao chất lượng đầu vào, hiệu quả tuyển sinh của mỗi đơn 
+vị và của toàn hệ thống, đồng thời tác đ ộng tích cực tới việc dạy và học ở giáo dục phổ 
+thông. 
+Điều 5. Người dự tuyển, điều kiện dự tuyển 
+1. Người dự tuyển được xác định tại thời điểm xét tuyển trước khi công b ố kết quả 
+xét tuyển chính thức bao gồm: 
+a) Người đã đư ợc công nhận tốt nghiệp THPT, tr ung học nghề của Việt Nam hoặc 
+của nước ngoài được công nhận trình độ tương đương với THPT, trung học nghề của Việt 
+Nam do các đơn vị chức năng xác định; 
+b) Người đã có b ằng tốt nghiệp trung c ấp ngành ngh ề thuộc cùng nhóm ngành d ự 
+tuyển và đã hoàn thành đ ủ yêu cầu khối lượng kiến thức văn hóa cấp THPT theo quy đ ịnh 
+của pháp luật. 
+2. Người dự tuyển quy định tại khoản 1 Điều này phải đáp ứng các điều kiện sau: 
+a) Đạt ngưỡng đầu vào theo quy đ ịnh tại Điều 9 Quy ch ế này đối với chương trình 
+đào tạo đăng ký dự tuyển, trừ các đối tượng tại khoản 1, khoản 2 Điều 8 của Quy chế này; 
+b) Có đủ sức khoẻ để học tập theo quy định hiện hành; 
+c) Có đủ thông tin cá nhân, hồ sơ dự tuyển theo quy định của cơ sở đào tạo. 
+3. Đơn vị đào tạo bổ sung quy định cụ thể về đối tượng, hồ sơ, trình tự, điều kiện dự 
+tuyển cho mỗi phương thức tuyển sinh nhưng phải tuân thủ nguyên tắc quy định tại điểm b 
+khoản 1 Điều 3 Quy chế này. 
+4. Đối với người dự tuyển là người khuyết tật ảnh hưởng khả năng học tập, đơn vị 
+đào tạo thực hiện các biện pháp cần thiết và tạo điều kiện tốt nhất để thí sinh có nguyện vọng 
+được đăng ký dự tuyển vào các chương trình đào tạo phù hợp với năng lực và sức khỏe của 
+thí sinh. 
+Điều 6. Phương thức tuyển sinh và nguồn tuyển 
+1. Các đơn vị đào tạo sử dụng tối đa 05 phương thức tuyển sinh không bao gồm xét 
+tuyển thẳng, xét tuyển đối tượng cử tuyển, xét tuyển đối tượng dự bị đại học. Các phương 
+thức tuyển sinh của ĐHQGHN: 
+a) Thí sinh thuộc đối tượng xét tuyển thẳng, ưu tiên xét tuyển theo Điều 8 Quy chế 
+tuyển sinh của Bộ GDĐT và ưu tiên xét tuyển theo quy định của ĐHQGHN (chi tiết tại Phụ 
+lục VII ban hành kèm theo Quyết định này); 
+b) Thí sinh sử dụng kết quả kỳ thi tốt nghiệp THPT của năm tuyển sinh đạt ngưỡng 
+đầu vào do ĐHQGHN quy định; 
+c) Thí sinh sử dụng kết quả thi đánh giá năng lực học sinh THPT do ĐHQGHN tổ 
+chức đạt ngưỡng đầu vào do ĐHQGHN quy định;
+
+## Trang 7
+
+6 
+d) Các phương thức tuyển sinh khác (sử dụng các chứng chỉ quốc tế) : Đơn vị đào 
+tạo có thể s ử dụng kết quả trong kỳ thi chuẩn hóa SAT (Scholastic Assessment Test, Hoa 
+Kỳ), chứng chỉ quốc tế A-Level của Trung tâm Khảo thí Đại học Cambridge, Anh, kết quả 
+trong kỳ thi chuẩn hóa ACT (Am erican College Testing) đạt ngưỡng bảo đảm chất lượng 
+đầu vào theo quy định. 
+e) Phương thức tuyển sinh dựa trên kết quả học tập các môn học cấp THPT (chỉ áp 
+dụng đối với tuyển sinh đào tạo thường xuyên) bắt buộc môn Toán hoặc Ngữ văn với trọng 
+số tính điểm xét của môn Toán hoặc môn Ngữ văn tối thiểu 1/3 và đáp ứng một trong những 
+yêu cầu nêu tại mục 5 Điều này. 
+f) Ngoài các phương thức tuyển sinh nêu trên, các đơn vị có chương trình đào tạo đặc 
+thù có phương thức tuyển sinh riêng (thi năng khiếu/thi phỏng vấn kết hợp với kết quả học 
+tập cấp THPT/kết quả thi tốt nghiệp THPT/kết quả thi đánh giá năng lực/chứng chỉ quốc 
+tế/chứng chỉ ngoại ngữ) hoặc sử dụng phương thức tuyển sinh khác phải xây dựng phương 
+án cụ thể và báo cáo Giám đốc ĐHQGHN xem xét, phê duyệt trước ngày 30/4 hằng năm. 
+Các chứng chỉ ngoại ngữ, SAT, ACT, A-Level (nếu có) và kết quả thi đánh giá năng 
+lực sử dụng trong tuyển sinh phải còn thời hạn sử dụng tính đến thời điểm kết thúc đăng 
+ký/nộp hồ sơ xét tuyển (chứng chỉ, chứng nhận có giá trị 02 năm kể từ ngày thi). 
+2. Mỗi phương thức tuyển sinh phải quy định rõ các tiêu chí đánh giá, xét tuyển, cách 
+thức tính điểm xét, điều kiện trúng tuyển trong đó: 
+a) Các tiêu chí dùng đ ể đánh giá, xét tuy ển phải dựa trên yêu c ầu về kiến thức nền 
+tảng và năng lực cốt lõi mà thí sinh cần có để theo học chương trình đào tạo; 
+b) Phương thức xét tuyển không thể hiện được yêu cầu ở điểm a khoản này thì người 
+dự tuyển phải có k ết quả học tập tối thiểu 02 h ọc kỳ lớp 12 ho ặc có đi ểm thi t ốt nghiệp 
+THPT môn học phù hợp với yêu cầu đầu vào của chương trình đào t ạo trừ trường hợp xét 
+tuyển vào các ngành ngôn ngữ hoặc sư phạm ngoại ngữ; 
+c) T ổng đi ểm c ộng bao g ồm đi ểm thư ởng, đi ểm xét th ưởng, đi ểm khuy ến khích 
+không vượt quá 10% điểm tối đa của thang điểm xét tuyển; 
+d) Mỗi thí sinh đ ều có cơ hội đạt mức điểm tối đa theo thang đi ểm xét 30 điểm đối 
+với tổ hợp xét tuyển theo 03 môn và b ảo đảm không có thí sinh có đi ểm xét vượt quá mức 
+điểm 30 điểm (bao gồm cả điểm cộng và điểm ưu tiên quy định tại Điều 7 của Quy chế này). 
+3. Nguồn xét tuyển vào chương trình đào tạo trình độ đại học là thí sinh có tổng điểm 
+03 môn thi kỳ thi tốt nghiệp THPT (kỳ thi trung học nghề đối với đối tượng trung học nghề) 
+theo tổ hợp xét tuyển (hoặc sử dụng điểm thi môn Toán, Ngữ văn và một môn thi khác (một 
+trong hai môn thi tốt nghiệp còn lại)) đạt tối thiểu 15,00 điểm theo thang điểm 30, áp dụng 
+đối với thí sinh thi tốt nghiệp từ năm 2026; 
+Quy định này không áp dụng đối với thí sinh được đặc cách xét tốt nghiệp THPT và 
+thí sinh quy định tại khoản 1, khoản 2, khoản 4 Điều 8 của Quy chế này.
+
+## Trang 8
+
+7 
+4. Trường hợp thí sinh s ử dụng chứng chỉ ngoại ngữ (để miễn thi t ốt nghiệp môn 
+ngoại ngữ) đăng ký xét tuyển đại học, đơn vị công bố bảng quy đổi kết quả chứng chỉ ngoại 
+ngữ và điểm xét môn ngoại ngữ theo quy định tại Quy chế này, cụ thể: 
+a) Bảng quy đổi kết quả chứng chỉ ngoại ngữ Tiếng Anh và điểm xét môn ngoại ngữ 
+xây dựng phải có tối thiểu 05 mức điểm chênh lệch ứng với thang điểm của chứng chỉ sử 
+dụng; 
+b) Bảng quy đổi kết quả chứng chỉ ngoại ngữ khác và điểm xét môn ngoại ngữ tương 
+ứng do Hiệu trưởng đơn vị đào tạo quy định trên cơ sở tương ứng với bảng quy đổi điểm 
+chứng chỉ tại Phụ lục kèm theo Quy chế này; 
+c) Bảng quy đ ổi kết quả chứng chỉ ngoại ngữ được rà soát, đi ều chỉnh tối thiểu 02 
+năm một lần trên cơ sở đối sánh kết quả học tập thực tế của sinh viên trúng tuyển; 
+d) Chứng chỉ ngoại ngữ chỉ được dùng cho quy đổi điểm môn ngoại ngữ trong tổ hợp 
+xét tuyển hoặc sử dụng cho điểm khuyến khích. 
+5. Phương thức tuyển sinh dựa trên kết quả học tập các môn học cấp THPT bắt buộc 
+môn Toán hoặc Ngữ văn với trọng số tính điểm xét của môn Toán ho ặc môn Ngữ văn tối 
+thiểu 1/3 và đáp ứng một trong những yêu cầu sau: 
+a) Tổ hợp xét tuyển sử dụng điểm trung bình chung k ết quả học tập cả năm các lớp 
+10, 11, 12 của tối thiểu 03 môn học theo thang điểm 30; 
+b) Tổ hợp xét tuyển sử dụng điểm trung bình chung k ết quả học tập cả năm các lớp 
+10, 11, 12 của tối thiểu 02 môn học (trong đó bắt buộc phải có môn Toán hoặc Ngữ văn) và 
+dùng chứng chỉ ngoại ngữ (chứng chỉ ngoại ngữ sử dụng miễn thi tốt nghiệp THPT theo quy 
+định tại Quy chế thi tốt nghiệp THPT hiện hành), đơn vị đào tạo quy đổi kết quả chứng chỉ 
+ngoại ngữ thành điểm môn ngoại ngữ theo thang điểm 10 để đưa vào tổ hợp môn xét tuyển 
+thay thế môn ngoại ngữ. 
+c) Trường hợp môn học trong tổ hợp xét tuyển không học đủ 06 học kỳ cấp THPT 
+theo năm do thay đổi lựa chọn môn học thì sử dụng kết quả học tập môn học khác gần lĩnh 
+vực thay thế. 
+6. Phương th ức tuyển sinh d ựa trên kết quả các môn thi t ốt nghiệp THPT b ắt buộc 
+phải có môn Toán ho ặc Ngữ văn với trọng số tính điểm xét của môn Toán ho ặc môn Ngữ 
+văn tối thiểu 1/3 và đáp ứng một trong những yêu cầu sau: 
+a) Tổ hợp xét tuyển sử dụng kết quả các môn thi tốt nghiệp THPT dùng để xét tuyển 
+có ít nhất 03 môn phù hợp với đặc điểm, yêu cầu đầu vào của chương trình đào tạo; 
+b) Tổ hợp xét tuyển sử dụng kết quả các môn thi tốt nghiệp THPT có dùng chứng chỉ 
+ngoại ngữ (chứng chỉ ngoại ngữ áp dụng miễn thi tốt nghiệp THPT theo quy đ ịnh tại Quy 
+chế thi tốt nghiệp THPT hi ện hành), đơn vị đào tạo quy đ ổi kết quả chứng chỉ ngoại ngữ 
+thành điểm môn ngoại ngữ theo thang điểm 10 để đưa vào tổ hợp môn xét tuy ển thay thế 
+môn ngoại ngữ, chi tiết tại Phụ lục kèm theo Quy chế này.
+
+## Trang 9
+
+8 
+7. Đối với một chương trình đào t ạo có nhiều phương thức tuyển sinh hoặc kết hợp 
+các phương thức tuyển sinh hoặc sử dụng kết quả kỳ thi tuyển sinh, kỳ thi độc lập hoặc tổ 
+hợp xét tuyển khác: 
+a) Đơn vị đào tạo xác định độ lệch điểm theo hướng dẫn thống nhất của Bộ GDĐT 
+và của ĐHQGHN, bảo đảm tuyển chọn được các thí sinh đáp ứng yêu c ầu đầu vào c ủa 
+chương trình đào tạo; 
+b) Không quy định mã xét tuyển riêng, số lượng tuyển sinh xét tuyển riêng cho từng 
+phương thức xét tuyển hoặc tổ hợp xét tuyển, trừ việc quy định số lượng tuyển sinh xét tuyển 
+thẳng theo quy định tại Điều 8 của Quy chế này. 
+8. Đơn vị đào tạo tự chịu trách nhiệm và trách nhi ệm giải trình về căn cứ xác định 
+phương thức tuyển sinh, t ổ hợp xét tuy ển, quy đ ổi chứng chỉ ngoại ngữ thành điểm môn 
+ngoại ngữ, độ lệch điểm dựa trên số liệu phân tích, đánh giá và đối sánh kết quả học tập của 
+sinh viên trúng tuy ển các năm trư ớc; có trách nhi ệm xử lý bảo đảm quyền lợi của thí sinh 
+khi phát sinh các tình hu ống, sự cố ảnh hưởng đến kết quả thi, kết quả trúng tuyển của thí 
+sinh. 
+9. Tuyển sinh của các chương trình đào tạo đặc thù, đào tạo đặt hàng theo các đề án, 
+nhiệm vụ được Chính phủ, Thủ tướng Chính phủ phê duyệt thực hiện theo đề án. 
+10. Các chương trình đào t ạo tài năng, ch ất lượng cao ph ải xét tuy ển có đi ều kiện 
+ngoại ngữ đầu vào, cụ thể: kết quả môn ngoại ngữ trong kì thi t ốt nghiệp THPT c ủa năm 
+tuyển sinh đ ạt tối thiểu 5,0 điểm (theo thang đi ểm 10) ho ặc điểm trung bình chung môn 
+ngoại ngữ 6 kỳ của cấp THPT đạt tối thiểu 7,0 hoặc sử dụng các chứng chỉ ngoại ngữ quy 
+đổi tương đương theo quy định tại Quy chế thi tốt nghiệp THPT hiện hành. 
+11. Căn cứ Quy chế này và các phương th ức tuyển sinh riêng đư ợc ĐHQGHN phê 
+duyệt (nếu có), các đơn vị đào tạo xây dựng quy định quy trình, hướng dẫn chi tiết xét tuyển, 
+công thức quy đổi điểm các phương thức xét tuyển khác, tổ chức thi năng khiếu, thi phỏng 
+vấn kết hợp (nếu có), đáp ứng các quy định tại Quy chế này và các quy định liên quan hiện 
+hành của Bộ GDĐT. Đối với các đơn vị đào tạo trực thuộc ĐHQGHN, Hiệu trưởng trình 
+Giám đốc ĐHQGHN xem xét ký ban hành Quy định tổ chức thi năng khiếu, thi phỏng vấn, 
+thi bổ trợ và quy định khác (nếu có). 
+12. Căn cứ Quy chế này, các trường xây dựng hướng dẫn tuyển sinh hằng năm cho 
+hình thức đào tạo thường xuyên bảo đảm phù hợp, không trái các quy định hiện hành của 
+ĐHQGHN và của Bộ GDĐT. Đồng thời, báo cáo ĐHQGHN cho ý ki ến trước khi ký ban 
+hành Hướng dẫn, triển khai thực hiện. 
+Điều 7. Chính sách ưu tiên trong tuyển sinh 
+1. Ưu tiên theo khu vực thực hiện theo đơn vị hành chính do cấp có thẩm quyền quy 
+định tại Phụ lục I của Quy chế này:
+
+## Trang 10
+
+9 
+a) Mức điểm ưu tiên áp dụng cho khu vực 1 (KV1) là 0,75 điểm, khu vực 2 nông thôn 
+(KV2-NT) là 0,50 điểm, khu vực 2 (KV2) là 0,25 điểm; khu vực 3 (KV3) không được tính 
+điểm ưu tiên; 
+b) Khu vực tuyển sinh của mỗi thí sinh đư ợc xác định theo địa điểm trường mà thí 
+sinh đã học lâu nh ất trong th ời gian học cấp THPT (ho ặc trung c ấp, trung h ọc nghề); nếu 
+thời gian h ọc (dài nh ất) tại các khu v ực tương đương nhau thì xác đ ịnh theo khu v ực của 
+trường mà thí sinh theo học sau cùng; 
+c) Thí sinh đư ợc hư ởng chính sách ưu tiên khu v ực theo quy đ ịnh trong năm t ốt 
+nghiệp THPT (hoặc trung cấp, trung học nghề) và một năm kế tiếp. 
+2. Ưu tiên theo đối tượng chính sách quy định tại Phụ lục II của Quy chế này: 
+a) Mức điểm ưu tiên áp dụng cho nhóm đ ối tượng UT1 (gồm các đối tượng 01 đến 
+03) là 2,00 điểm và cho nhóm đối tượng UT2 (gồm các đối tượng 04 đến 06) là 1,00 điểm; 
+b) Mức điểm ưu tiên cho những đối tượng chính sách khác được quy định trong các 
+văn bản pháp luật hiện hành do Bộ trưởng Bộ GDĐT quyết định; 
+c) Thí sinh thu ộc nhiều diện đối tượng chính sách quy đ ịnh tại điểm a và đi ểm b 
+khoản này chỉ được hưởng một mức điểm ưu tiên cao nhất. 
+3. Các mức điểm ưu tiên được quy định trong Điều này tương ứng với tổng điểm 03 
+môn (trong tổ hợp xét tuy ển) theo thang đi ểm 30 đ ối với từng môn (không nhân h ệ số); 
+trường hợp phương thức tuyển sinh sử dụng thang điểm khác thì mức điểm ưu tiên được quy 
+đổi tương đương. 
+4. Điểm ưu tiên đối với thí sinh đạt tổng điểm từ 22,50 trở lên (khi quy đổi về điểm 
+theo thang 10 và theo thang t ổng điểm 03 môn t ối đa là 30) đư ợc làm tròn đ ến hàng phần 
+trăm và xác định theo công thức sau: 
+Điểm ưu tiên = [(30 - Tổng điểm đạt được)/7,50] x Mức điểm ưu tiên quy đ ịnh tại 
+khoản 1, 2 Điều này. 
+5. Đối với từng phương thức tuyển sinh và đối tượng tuyển sinh riêng của đơn vị, có 
+thể sử dụng các chính sách ưu tiên tuy ển sinh riêng quy đ ịnh cụ thể trong thông tin tuyển 
+sinh, công bố công khai trên trang thông tin đi ện tử của đơn vị và không trái các quy đ ịnh 
+của Quy chế này. 
+Điều 8. Đối tượng xét tuyển thẳng và ưu tiên xét tuyển 
+1. Anh hùng lao động, Anh hùng lực lượng vũ trang nhân dân, Chiến sĩ thi đua toàn 
+quốc được tuyển thẳng vào các chương trình đào tạo do đơn vị đào tạo quy định. 
+2. Thí sinh đạt giải nhất, nhì, ba trong kỳ thi chọn học sinh giỏi quốc gia, quốc tế do 
+Bộ GDĐT tổ chức, cử tham gia, được xét tuyển thẳng vào chương trình đào tạo phù hợp với 
+môn thi đạt giải; thời gian đạt giải không quá 03 năm tính tới thời điểm xét tuyển thẳng;
+
+## Trang 11
+
+10 
+3. Thí sinh đạt giải nhất, nhì, ba kỳ thi khoa học, kỹ thuật cấp quốc gia, quốc tế do 
+Bộ GDĐT tổ chức, cử tham gia và đạt ngưỡng đảm bảo chất lượng đầu vào của chương trình 
+đào tạo được ưu tiên xét tuyển vào chương trình đào tạo phù hợp. Thời gian đạt giải không 
+quá 03 năm tính tới thời điểm xét tuyển. 
+4. Giám đốc ĐHQGHN, Hiệu trưởng các trường thành viên căn cứ kết quả học tập 
+cấp THPT c ủa thí sinh và yêu c ầu đầu vào c ủa chương trình đào t ạo xem xét, quy ết định 
+nhận vào học những trường hợp quy định dưới đây (trường hợp cần thiết kèm theo điều kiện 
+thí sinh phải học 01 năm bổ sung kiến thức trước khi vào học chính thức): 
+a) Thí sinh là ngư ời nước ngoài đã đ ạt chuẩn năng l ực ngôn ng ữ theo yêu c ầu của 
+chương trình đào tạo phù hợp với quy định của Bộ GDĐT; 
+b) Thí sinh là người Việt Nam học tập cấp THPT, trung học nghề ở nước ngoài hoặc 
+học tập chương trình giáo d ục nước ngoài bằng tiếng nước ngoài ở Việt Nam đạt trình độ 
+tương đương với trình độ THPT, trung học nghề của Việt Nam có kết quả học tập hằng năm 
+đạt tối thiểu 60/100 điểm, trong đó có kết quả 3 môn (bắt buộc có môn Toán hoặc Ngữ văn) 
+theo các tổ hợp quy định của chương trình đào tạo tương ứng bảo đảm mức điểm mỗi môn 
+đạt tối thiểu 60/100, kết hợp với kiểm tra kiến thức chuyên môn và đạt chuẩn năng lực ngôn 
+ngữ theo yêu c ầu của chương trình đào t ạo phù h ợp với quy đ ịnh của Bộ GDĐT và của 
+ĐHQGHN. 
+c) Thí sinh là người dân tộc thiểu số rất ít người theo quy định hiện hành của Chính 
+phủ; 
+d) Thí sinh là người khuyết tật nặng có giấy xác nhận khuyết tật của cơ quan có thẩm 
+quyền cấp theo quy định; có khả năng theo học một số chương trình đào tạo do đơn vị đào 
+tạo quy định nhưng không có khả năng dự tuyển theo phương thức tuyển sinh bình thường. 
+5. Đơn vị đào tạo quy định chi tiết hình thức ưu tiên xét tuyển đối với các thí sinh đã 
+đạt ngưỡng đầu vào ho ặc cộng điểm (điểm thưởng, điểm xét thư ởng, điểm khuyến khích) 
+trên cơ sở hướng dẫn của ĐHQGHN cho các trường hợp sau đây: 
+a) Thí sinh quy định tại khoản 1, 2 Điều này dự tuyển vào các chương trình đào t ạo 
+theo nguyện vọng mà không dùng quyền tuyển thẳng; 
+b) Thí sinh đ ạt giải khuyến khích trong k ỳ thi chọn học sinh giỏi quốc gia; thí sinh 
+đạt giải trong cuộc thi khoa học, kỹ thuật cấp quốc gia, quốc tế dự tuyển vào chương trình 
+đào tạo phù hợp với môn thi hoặc nội dung đề tài dự thi đã đạt giải; thời gian đạt giải không 
+quá 03 năm tính theo năm đến thời điểm xét tuyển; 
+c) Thí sinh đ ạt giải chính th ức trong các cu ộc thi ngh ệ thuật chuyên nghi ệp chính 
+thức toàn quốc về ca, múa, nhạc, mỹ thuật dự tuyển vào các chương trình đào tạo nghệ thuật 
+phù hợp; thời gian đạt giải không quá 04 năm tính tới thời điểm xét tuyển;
+
+## Trang 12
+
+11 
+d) Thí sinh có chứng chỉ ngoại ngữ hoặc có chứng chỉ quốc tế, có thành tích nổi trội 
+hoặc năng khiếu đặc biệt phù hợp với chương trình đào tạo và quy định của ĐHQGHN. 
+6. Trên cơ sở các quy định chung của ĐHQGHN, các đơn vị đào tạo quy định cụ thể 
+và công bố trong thông tin tuyển sinh, kế hoạch tuyển sinh, đối tượng, chỉ tiêu, tiêu chí, phạm 
+vi tuyển sinh, chương trình, ngành đào tạo để xét tuyển thẳng, ưu tiên xét tuyển. 
+Điều 9. Ngưỡng đầu vào các ngành đào tạo 
+1. Ngưỡng đầu vào đối với chương trình đào tạo giáo viên, chương trình đào tạo thuộc 
+lĩnh vực sức khỏe, chương trình đào tạo thuộc lĩnh vực pháp luật sử dụng phương thức tuyển 
+sinh theo kết quả thi tốt nghiệp THPT, trung học nghề được quy định hằng năm như sau: 
+a) Bộ trưởng Bộ GDĐT quyết định ngưỡng đầu vào đối với chương trình đào tạo giáo 
+viên; 
+b) Bộ trưởng Bộ GDĐT chủ trì, phối hợp với Bộ trưởng Bộ Y tế quy định ngưỡng 
+đầu vào đối với chương trình đào tạo thuộc lĩnh vực sức khỏe có cấp giấy phép hành nghề; 
+chủ trì, phối hợp với Bộ trưởng Bộ Tư pháp quy định ngưỡng đầu vào đối với chương trình 
+đào tạo thuộc lĩnh vực pháp luật. 
+ 2. Đối với phương thức tuyển sinh không sử dụng kết quả thi tốt nghiệp THPT hoặc 
+phương thức tuyển sinh kết hợp, thí sinh phải đạt ngưỡng đầu vào đối với chương trình đào 
+tạo giáo viên và chương trình đào t ạo thuộc lĩnh vực pháp luật áp dụng khoản 1 Điều này 
+hoặc kết quả trung bình chung h ọc tập được đánh giá mức tốt (học lực xếp loại từ giỏi trở 
+lên) cả năm lớp 12 (k ết quả học tập 02 h ọc kỳ năm cuối cấp đối với đối tượng trung h ọc 
+nghề và tương đương) và tổng điểm 03 môn thi tốt nghiệp THPT theo tổ hợp xét tuyển (hoặc 
+sử dụng điểm thi môn Toán, Ng ữ văn và m ột môn thi khác) đ ạt 18,00 đi ểm trở lên hoặc 
+điểm xét tốt nghiệp THPT (điểm thi tốt nghiệp trung học nghề) từ 8,50 trở lên; 
+3. Tuyển sinh các ngành đào t ạo trình đ ộ đại học đối với phương th ức tuyển sinh 
+không sử dụng kết quả thi tốt nghiệp THPT hoặc phương thức tuyển sinh kết hợp, thí sinh 
+phải đạt ngưỡng đầu vào đối với chương trình đào tạo thuộc lĩnh vực sức khỏe có cấp giấy phép 
+hành nghề áp dụng khoản 1 Điều này hoặc: 
+a) Kết quả trung bình chung học tập được đánh giá mức tốt (học lực xếp loại từ giỏi 
+trở lên) cả năm lớp 12 (kết quả học tập 02 học kỳ năm cuối cấp đối với đối tượng trung học 
+nghề và tương đương) và tổng điểm 03 môn thi tốt nghiệp THPT theo tổ hợp xét tuyển (hoặc 
+sử dụng điểm thi môn Toán, Ng ữ văn và m ột môn thi khác) đ ạt 20,00 đi ểm trở lên hoặc 
+điểm xét tốt nghiệp THPT (điểm thi tốt nghiệp trung học nghề) từ 8,50 trở lên theo thang 
+điểm 10, trừ các trường hợp quy định tại điểm b khoản này; 
+b) Kết quả trung bình chung h ọc tập đánh giá m ức khá (học lực xếp loại từ khá trở 
+lên) cả năm lớp 12 (k ết quả học tập 02 h ọc kỳ năm cuối cấp đối với đối tượng trung h ọc 
+nghề và tương đương) và tổng điểm 03 môn thi tốt nghiệp THPT đạt 16,50 điểm trở lên hoặc
+
+## Trang 13
+
+12 
+điểm xét tốt nghiệp THPT (trung học nghề) từ 6,50 trở lên đối với chương trình đào tạo Điều 
+dưỡng, Kỹ thuật xét nghiệm y học, Kỹ thuật hình ảnh y học. 
+4. Thí sinh đã tốt nghiệp trình độ trung cấp trở lên cùng nhóm ngành dự tuyển trình 
+độ đại học được áp dụng quy định ngưỡng đầu vào như sau: 
+a) Đối với thí sinh dự tuyển vào chương trình đào t ạo giáo viên, chương trình thu ộc 
+lĩnh vực sức khỏe có c ấp giấy phép hành ngh ề, chương trình thu ộc lĩnh vực pháp lu ật trừ 
+các trường hợp quy định tại điểm b khoản này, ngưỡng đầu vào được áp dụng một trong các 
+tiêu chí sau: 
+- Kết quả trung bình chung học tập đánh giá mức tốt (học lực xếp loại từ giỏi trở lên) 
+hoặc điểm trung bình chung các môn văn hóa cấp THPT đạt từ 8,00 trở lên theo thang điểm 10; 
+- Tốt nghiệp THPT loại giỏi trở lên hoặc kết quả học tập cả năm lớp 12 được đánh 
+giá mức khá (h ọc lực xếp loại khá) và có 03 năm kinh nghi ệm công tác đúng v ới chuyên 
+môn đào tạo; 
+- Tốt nghiệp trung cấp, cao đẳng, đại học đạt loại giỏi trở lên; 
+- Tốt nghiệp trình độ trung cấp hoặc trình độ cao đẳng hoặc trình độ đại học đạt loại 
+khá và có 03 năm kinh nghiệm công tác đúng với chuyên môn đào tạo. 
+b) Đối với thí sinh d ự tuyển vào đại học các chương trình đào t ạo Điều dưỡng, Kỹ 
+thuật xét nghiệm y học, Kỹ thuật hình ảnh y học ngưỡng đầu vào được áp dụng một trong 
+các tiêu chí sau: 
+- Kết quả trung bình chung học tập được đánh giá mức khá (học lực xếp loại khá) hoặc 
+điểm trung bình chung các môn văn hóa cấp THPT đạt từ 6,50 trở lên theo thang điểm 10; 
+- Tốt nghiệp THPT, trung học nghề loại khá hoặc có kết quả học tập cả năm lớp 12 
+được đánh giá m ức đạt (học lực xếp loại trung bình) và có 05 năm kinh nghi ệm công tác 
+đúng với chuyên môn đào tạo; 
+- Tốt nghiệp trình độ trung cấp, trình độ cao đẳng, trình độ đại học đạt loại khá trở 
+lên. 
+5. Đối với người đã trúng tuyển hoặc đã tốt nghiệp các ngành đào tạo giáo viên trước 
+ngày 07 tháng 5 năm 2020 nếu dự tuyển vào học đại học để đạt trình độ chuẩn, ngưỡng đầu 
+vào do đơn vị đào tạo quy định. 
+6. Căn cứ yêu cầu bảo đảm chất lượng, ĐHQGHN xác định và công bố ngưỡng đầu 
+vào chung trong toàn ĐHQGHN, trên cơ sở đó đơn vị đào tạo xác định và công bố ngưỡng 
+đầu vào cho các chương trình đào t ạo và phươ ng thức tuyển sinh trư ớc thời gian k ết thúc 
+đăng ký dự tuyển theo k ế hoạch tuyển sinh h ằng năm và yêu c ầu của chuẩn chương trình 
+đào tạo. Đối với ngưỡng đầu vào chương trình đào tạo giáo viên, chương trình đào tạo thuộc 
+lĩnh vực sức khỏe có c ấp giấy phép hành nghề, chương trình đào t ạo thuộc lĩnh v ực pháp 
+luật ngưỡng đầu vào do đơn vị đào tạo xác định không được thấp hơn quy định tại Điều này.
+
+## Trang 14
+
+13 
+Điều 10. Bảo lưu kết quả trúng tuyển 
+1. Thí sinh đã có giấy báo trúng tuyển được bảo lưu kết quả trúng tuyển trong những 
+trường hợp sau: 
+a) Đi nghĩa vụ quân sự, công an nhân dân hoặc đi thanh niên xung phong tập trung 
+ngay trong năm trúng tuyển theo quyết định hoặc lệnh của cơ quan có thẩm quyền; 
+b) Bị bệnh nặng hoặc bị tai nạn nghiêm trọng không thể nhập học đúng hạn, có hồ 
+sơ y tế và xác nhận của bệnh viện cấp cơ bản trở lên. 
+2. Thí sinh thuộc diện quy định tại khoản 1 gửi đơn xin bảo lưu kèm theo giấy tờ minh 
+chứng tới đơn vị đào tạo gọi nhập học. Thời gian tối đa được bảo lưu kết quả đơn vị đào tạo 
+quy định, nhưng không quá 36 tháng đối với các trường hợp quy định tại khoản 1 Điều này. 
+3. Ngay sau khi đủ điều kiện đi học trở lại, người được bảo lưu kết quả trúng tuyển 
+phải thực hiện các thủ tục nhập học theo quy định của đơn vị đào tạo, trong đó phải cung cấp 
+minh chứng đã hoàn thành nhiệm vụ hoặc đã được điều trị hồi phục. Đối với trường hợp quy 
+định tại điểm a khoản 1 Điều này có thời gian bảo lưu 36 tháng, Hiệu trưởng đơn vị đào tạo 
+xem xét giới thiệu vào các trường, lớp dự bị đại học để ôn tập trước khi vào học chính thức. 
+Điều 11. Thông tin tuyển sinh 
+1. Đơn vị đào tạo xây dựng, công bố và thực hiện đúng cam kết thông tin tuyển sinh 
+về đối tượng, điều kiện dự tuyển, nguồn tuyển, phương thức tuyển sinh, ngưỡng đầu vào, 
+điểm cộng, độ lệch điểm, tiêu chí phụ (nếu có); có trách nhiệ m giải trình với thí sinh, cơ 
+quan quản lý nhà nước và xã hội. Thông tin tuyển sinh phải bảo đảm các yêu cầu sau đây: 
+a) Cung cấp đủ thông tin để thí sinh lựa chọn trường, chương trình đào tạo, phương 
+thức tuyển sinh phù hợp với năng lực, sở thích và điều kiện cá nhân; chuẩn bị các điều kiện 
+tham gia dự tuyển và thực hiện các bước theo kế hoạch tuyển sinh của đơn vị đào tạo; 
+b) Cơ quan quản lý nhà nước và xã hội giám sát được việc thực hiện quy định của 
+pháp luật và các cam kết đối với người học của đơn vị đào tạo trong công tác tuyển sinh và 
+đào tạo. 
+2. Nội dung chủ yếu của thông tin tuyển sinh gồm có: 
+a) Giới thiệu về đơn vị đào tạo, chương trình đào tạo tuyển sinh, giấy phép hoạt động 
+của ngành đào tạo (nếu có), quyết định ban hành chương trình đào tạo, đ ội ngũ giảng viên, 
+điều kiện học tập và nghiên cứu, cơ sở vật chất, văn bằng tốt nghiệp, kết quả kiểm định chất 
+lượng (nếu có), tỷ lệ sinh viên tốt nghiệp (trên tổng số nhập học), tỷ lệ sinh viên tốt nghiệp 
+có việc làm phù hợp trình độ chuyên môn (Phụ lục III của Quy chế); 
+b) Thông tin đầy đủ về chi phí đào tạo, mức thu học phí, mức thu dịch vụ tuyển sinh 
+và khoản thu dịch vụ khác cho lộ trình cả khóa học, từng năm học; chính sách học bổng, 
+miễn giảm học phí, hỗ trợ tài chính, chỗ ở ký túc xá và các chính s ách ưu đãi, hỗ trợ khác 
+dành cho người học;
+
+## Trang 15
+
+14 
+c) Kế hoạch tuyển sinh và phạm vi tuyển sinh các đợt trong năm (trong đó đợt 1 tuyển 
+sinh đại học chính quy phù hợp với kế hoạch chung do Bộ GDĐT ban hành), gồm cả quy 
+định về đối tượng, điều kiện tuyển sinh, phư ơng thức tuyển sinh, tổ hợp xét tuyển và số 
+lượng tuyển sinh (dự kiến) đối với các chương trình đào tạo; quy tắc quy đổi tương đương 
+ngưỡng đầu vào, điểm trúng tuyển của các phương thức, tổ hợp xét tuyển; phương thức và 
+tiêu chí phân bổ người học theo học chương trình đào tạo của đơn vị đào tạo đối với trường 
+hợp xét tuyển theo nhóm ngành, ngành có nhiều chương trình đào tạo cùng một mức điểm 
+trúng tuyển; quy trình, thủ tục đăng ký dự tuyển và các thông tin cần thiết khác cho thí sinh; 
+d) Phương án xử lý rủ i ro khi triển khai công tác tuyển s inh và cam kết trách nhiệm 
+của đơn vị đào tạo. 
+3. Thông tin tuyển sinh, nội dung điều chỉnh, độ lệch điểm, số lượng tuyển sinh chính 
+thức, ngưỡng bảo đảm chất lượng đầu vào tại thông tin tuyển sinh (phụ lục IV của Quy chế) 
+phải công bố trên Cổng thông tin điện tử của đơn vị đào tạo theo kế hoạch tuyển sinh chung 
+hằng năm của Bộ GDĐT; duy trì tối thiểu 04 năm liên tục kể từ ngày công bố, trường hợp 
+cập nhật thông tin phải ghi thời điểm cập nhật. 
+Chương II 
+XÉT TUYỂN ĐÀO TẠO CHÍNH QUY 
+Điều 12. Xây dựng kế hoạch xét tuyển 
+1. Căn cứ kế hoạch tuyển sinh chung của Bộ GDĐT cho công tác xét tuyển đợt 1 đào 
+tạo chính quy, đơn vị đào tạo phối hợp triển khai các quy trình: 
+a) Đăng ký xét tuyển trên Cổng thông tin tuyển sinh của Bộ GDĐT (gọi tắt là Hệ 
+thống) hoặc trên Cổng dịch vụ công quốc gia; 
+b) Tổ chức xét tuyển tại đơn vị đào tạo theo quy định của Quy chế; 
+c) Xử lý nguyện vọng trên Hệ thống (theo chu trình lặp kết hợp với quy trình xét 
+tuyển tại đơn vị đào tạo); 
+d) Xác nhận nhập học trên Hệ thống và nhập học tại đơn vị đào tạo. 
+2. Căn cứ kế hoạch tuyển sinh chung, các đơn vị đào tạo xây dựng kế hoạch xét 
+tuyển thẳng, xét tuyển các đợt 1 và xét tuyển đợt bổ sung (nếu có). 
+Điều 13. Tổ chức đăng ký và xét tuyển thẳng 
+1. Căn cứ thông tin tuyển sinh đã công bố, đơn vị đào tạo tổ chức cho thí sinh thuộc 
+đối tượng được xét tuyển thẳng theo quy định tại Điều 8 của Quy chế này đăng ký dự tuyển. 
+2. Đơn vị đào tạo tổ chức xét tuyển thẳng cho những thí sinh đủ điều kiện; báo cáo 
+ĐHQGHN kết quả xét tuyển trước khi công bố và cập nhật danh sách thí sinh đủ điều kiện 
+trúng tuyển (trừ điều kiện tốt nghiệp THPT) lên Hệ thống để xử lý nguyện vọng cùng với 
+các phương thức xét tuyển khác theo kế hoạch chung, hoàn thành trước khi thí sinh đăng ký 
+xét tuyển trên Hệ thống.
+
+## Trang 16
+
+15 
+3. Thí sinh đã trúng tuyển vào đơn vị đào tạo theo kế hoạch xét tuyển thẳng thực 
+hiện đăng ký nguyện vọng trên Hệ thống theo kế hoạch chung của Bộ GDĐT để lựa chọn 
+chương trình đào tạo đã trúng tuyển thẳng tại một đơn vị đào tạo hoặc đăng ký nguyện vọng 
+xét tuyển khác. 
+4. Thí sinh trúng tuyển thẳng xác nhận nhập học theo kế hoạch chung. 
+5. Hiệu trưởng các đơn vị đào tạo không được yêu cầu thí sinh cam kết nhập học 
+dưới mọi hình thức hoặc xác nhận nhập học sớm hơn lịch trình theo kế hoạch chung. 
+Điều 14. Đăng ký xét tuyển trên Hệ thống 
+1. Bộ GDĐT hỗ trợ tổ chức đăng ký xét tuyển đợt 1 đào tạo chính quy cho tất cả 
+phương thức tuyển sinh của các đơn vị đào tạo. Thời gian đăng ký theo kế hoạch tuyển sinh 
+hằng năm. 
+2. Thí sinh dự tuyển đợt 1 đào tạo chính quy thực hiện đăng ký xét tu yển trên Hệ 
+thống (hoặc qua Cổng dịch vụ công quốc gia) theo kế hoạch chung và hướng dẫn của Bộ 
+GDĐT hằng năm. 
+3. Thí sinh được đăng ký tối đa 15 nguyện vọng vào các chương trình đào tạo, các 
+cơ sở giáo dục đại học khác nhau; nguyện vọng phải được sắp xếp theo thứ tự ưu tiên từ cao 
+xuống thấp. Trong trường hợp nhiều nguyện vọng đủ điều kiện trúng tuyển, thí sinh chỉ được 
+công nhận trúng tu yển và gọi nhập học theo nguyện vọng cao nhất. Các chương trình đào 
+tạo giáo viên chỉ xét tuyển thí sinh đăng ký ở các nguyện vọng có thứ tự từ 01 đến 05. 
+4. Thí sinh thể hiện nguyện vọng đăng ký xét tuyển trên Hệ thống như sau: 
+a) Thứ tự ưu tiên của nguyện vọng (số 1 thể hiện nguyện vọng có thứ tự ưu tiên cao nhất); 
+b) Lựa chọn đơn vị đào tạo, đơn vị tuyển sinh (mã trường); 
+c) Lựa chọn chương trình đào tạo (mã xét tuyển). 
+5. Trong đợt 1, thí sinh đăng ký xét tuyển và chỉ nộp lệ phí xét tuyển một lần duy 
+nhất (không bao g ồm lệ phí các kỳ thi năng khiếu, kỳ thi bổ trợ, kỳ thi độc lập) theo mức 
+thu dịch vụ tuyển sinh do đơn vị đào tạo quy định. 
+Điều 15. Xét tuyển và xử lý nguyện vọng theo kế hoạch chung 
+1. Các đơn vị đào tạo tổ chức xét tuyển theo các phương thức và tiêu chí xé t tuyển 
+riêng, hoặc tự nguyện phối hợp theo nhóm để tổ chức xét tuyển theo các phương thức và 
+tiêu chí xét tuyển chung theo kế hoạch tuyển sinh hằng năm. Bộ GDĐT hướng dẫn lịch trình 
+xét tuyển và hỗ trợ việc xử lý nguyện vọng trên Hệ thống. 
+2. Sau khi kết thúc thời gian đăng ký nguyện vọng trên Hệ thống, đơn vị đào tạo tải 
+thông tin, dữ liệu từ H ệ thống bao gồm: dữ liệu đăng ký nguyện vọng, kết quả học tập cấp 
+THPT (trung học nghề), kết quả kì thi tốt nghiệp THPT (trung học nghề), điểm xét tốt nghiệp 
+THPT (trung học nghề), kết quả thi của các đơn vị tổ chức thi trong năm tuyển sinh, điểm 
+chứng chỉ ngoại ngữ, dữ liệu về ưu tiên theo khu vực và đối tượng của những thí sinh dự 
+tuyển để phục vụ xét tuyển.
+
+## Trang 17
+
+16 
+3. Nguyên tắc xét tuyển 
+a) Điểm trúng tuyển được xác định để số l ượng tuyển được theo từng chương trình 
+đào tạo phù hợp với số lượng tuyển sinh đã công bố và không thấp hơn ngưỡng đầu vào; 
+b) Đối với một chương trình đào tạo, tất cả thí sinh được xét chọn bình đẳng dựa trên 
+điểm xét và điểm trúng tuyển quy đổi tương đương theo từng phương thức xét tuyển, tổ hợp 
+xét tuyển, không phụ thuộc thứ tự ưu tiên của nguyện vọng đăng ký trừ trường hợp quy định 
+tại điểm c khoản này; 
+c) Trường hợp nhiều thí sinh có cùng điểm xét ở cuối danh sách, thứ tự xét ưu tiên 
+đối với các thí sinh c ó điểm cộng thấp hơn; trường hợp nhiều thí sinh có cùng điểm xét ở 
+cuối danh sách và có điểm cộng bằng nhau, thứ tự xét ưu tiên đối với các thí sinh có thứ tự 
+ưu tiên nguyện vọng cao hơn; 
+d) Việc sử dụng điểm ưu tiên khu vực, đối tượng để xét tuyển đảm bảo t hống nhất, 
+đồng bộ với quy định về điểm ưu tiên được quy định tại Điều 7 của Quy chế này; 
+e) Đơn vị đào tạo có thể quy định các tiêu chí phụ khác làm điều kiện cần để xét tuyển 
+và không sử dụng làm tiêu chí phân loại thí sinh ở điểm c, khoản này. 
+4. Sau mỗi chu kỳ xét tuyển, đơn vị đào tạo tải danh sách thí sinh dự kiến đủ điều 
+kiện trúng tuyển chương trình đào tạo (theo các phương thức tuyển sinh) lên Hệ thống. 
+Hệ thống tự động loại bỏ khỏi danh sách những nguyện vọng thấp của thí sinh đủ điều kiện 
+trúng tuyển nhiều nguyện vọng và trả lại danh sách thí sinh dự kiến trúng tuyển theo nguyện 
+vọng cao nhất. Đơn vị đào tạo có trách nhiệm rà soát đầy đủ thông tin trong thông tin tuyển 
+sinh với kết quả thí sinh dự kiến trúng tuyển theo nguyện vọng cao nhất sau mỗi lần H ệ 
+thống trả kết quả xử lý nguyện vọng. 
+5. Căn cứ kết quả xử lý nguyện vọng, đơn vị đào tạo lặp lại quy trình xét tuyển ở 
+chu kỳ sau, điều chỉnh điểm trúng tuyển phù hợp với số lượng tuyển sinh trong thời hạn quy 
+định. Ở chu kỳ cuối, đơn vị đào tạo quyết định điểm trúng tuyển vào các chương trình đào 
+tạo (theo các phương thức tuyển sinh) và tải lên Hệ thống danh sách (chính thức) thí sinh đủ 
+điều kiện trúng tuyển. Trên cơ sở kết quả xử lý nguyện vọng cuối cùng, đơn vị đào tạo quyết 
+định danh sách thí sinh trúng tuyển vào các chương trình đào tạo theo đúng nội dung công 
+bố trong thông tin tuyển sinh. Đối với các đơn vị đào tạo trực thuộc ĐHQGHN, báo cáo Ban 
+Chỉ đạo tuyển sinh phương án xác định điểm trúng tuyển để trình Giám đốc ĐHQGHN xem 
+xét, phê duyệt. 
+6. Đối với các chương trình đào tạo tài năng, chất lượng cao: Xét tuyển dựa trên kết 
+quả thi tốt nghiệp THPT hoặc từ các nguồn tuyển khác theo yêu cầu riêng của từng chương 
+trình đào tạo (đơn vị phải công bố chỉ tiêu, tiêu chí, quy trình xét tuyển trong thông tin tuyển 
+sinh). Đơn vị có thể thực hiện việc phân bổ chỉ tiêu và tuyển sinh độc lập, trực tiếp như 
+chương trình đào tạo chuẩn tương ứng hoặc sau khi trúng tuyển vào đơn vị, thí sinh có 
+nguyện vọng theo học các chương trình này phải đạt điểm trúng tuyển vào chương trình đào
+
+## Trang 18
+
+17 
+tạo tương ứng theo tổ hợp xét tuyển và phải đáp ứng điều kiện ngoại ngữ đầu vào theo quy 
+định tại khoản 10 Điều 6 Quy chế này. Điểm đăng ký dự tuyển vào các chương trình này do 
+đơn vị quy định nhưng tối thiểu bằng hoặc cao hơn điểm trúng tuyển vào chương trình đào 
+tạo chuẩn tương ứng. 
+7. Ký quyết định trúng tuyển và công nhận sinh viên: Trên cơ sở chỉ tiêu đã xác định 
+và kết quả tuyển sinh, Hiệu trưởng trường đại học thành viên ký Quyết định trúng tuyển và 
+công nhận sinh viên của đơn vị, Giám đốc ĐHQGHN ký Quyết định trúng tuyển và Quyết 
+định công nhận sinh viên của các đơn vị đào tạo trực thuộc. 
+Điều 16. Thông báo kết quả, xác nhận nhập học và tổ chức nhập học 
+1. Đơn vị đào tạo công bố điểm trúng tuyển và các điều kiện, tiêu chí phụ (nếu có) 
+vào các chương trình đào tạo theo các phương thức tuyển sinh, cam kết thông tin công bố 
+chính xác và chịu trách nhiệm về kết quả công bố trúng tuyển; tổ chức cho thí sinh tra cứu 
+kết quả trúng tuyển (điểm của thí sinh và tên phương thức trúng tuyển) trên trang thô ng tin 
+điện tử của đơn vị đào tạo và của ĐHQGHN; giải đáp thắc mắc của thí sinh và xã hội (nếu 
+có) về kết quả công bố. 
+2. Đơn vị đào tạo thông báo k ết quả trúng tuyển cho từng thí sinh theo đi ểm và tên 
+phương thức trúng tuyển kèm theo thủ tục nhập học và có quyền từ chối nhập học đối với 
+thí sinh khai báo không trung thực về thông tin cá nhân đăng ký xét tuyển. 
+3. Thí sinh xác nhận nhập học trực tuyến trên Hệ thống trước khi nhập học tại đơn vị 
+đào tạo trong thời hạn quy định. 
+4. Đối với những thí sinh không xác nhận nhập học trong thời hạn quy định: 
+a) Trường hợp không có lý do chính đáng thì coi như thí sinh đã từ chối nhập học và 
+đơn vị đào tạo có quyền không tiếp nhận; 
+b) Trường hợp do ốm đau, tai nạn, có giấy xác nhận của bệnh viện cấp cơ bản trở lên 
+hoặc do thiên tai có xác nhận của ủy ban nhân dân cấp xã, đơn vị đào tạo xem xét quyết định 
+tiếp nhận thí sinh vào học hoặc bảo lưu kết quả tuyển sinh, việc chấp thuận thí sinh vào học 
+do Hiệu trưởng quyết định và chịu trách nhiệm giải trình về thời gian tiếp nhận thí sinh nhập 
+học muộn (nếu có); 
+c) Trường hợp do sai sót, nhầm lẫn được xác định thuộc lỗi kỹ thuật khách quan trong 
+công tác tuyển sinh, Hiệu trưởng chủ động phối hợp với các cá nhân, tổ chức liên quan xem 
+xét các minh chứng và quyết định việc tiếp nhận thí sinh vào học hoặc bảo lưu kết quả tuyển 
+sinh để thí sinh vào học; lập hồ sơ lưu trữ và báo cáo danh sách riêng thí sinh bị sự cố trong 
+báo cáo kết quả tuyển sinh hằng năm. 
+5. Thí sinh đã xác nhận nhập học tại một cơ sở đào tạo không được tham gia xét tuyển 
+ở nơi khác hoặc ở các đợt xét tuyển bổ sung trong năm tuyển sinh, trừ trường hợp được Hiệu 
+trưởng cơ sở đào tạo trúng tuyển cho phép.
+
+## Trang 19
+
+18 
+6. Ký và đóng dấu giấy báo thí sinh trúng tuyển 
+a) Hiệu trưởng trường đại học thành viên ký và đóng dấu giấy b áo thí sinh trúng 
+tuyển vào trường. 
+ b) Trưởng Ban Đào tạo và Công tác sinh viên ký và đóng dấu giấy báo thí sinh trúng 
+tuyển vào các đơn vị đào tạo trực thuộc ĐHQGHN. 
+Điều 17. Tổ chức đăng ký và xét tuyển các đợt bổ sung 
+1. Căn cứ số lượng tuyển sinh và số thí sinh trúng tuyển đã xác nhận nhập học vào 
+các chương trình đào tạo, HĐTS đơn vị báo cáo Ban Chỉ đạo tuyển sinh ĐHQGHN xem xét 
+phê duyệt kế hoạch xét tuyển bổ sung đối với các chương trình đào tạo chưa tuyển đủ trong 
+đợt 1. Sau khi có ý kiến của ĐHQGHN, đơn vị công bố kế hoạch, phương thức xét tuyển và 
+hình thức đăng ký xét tuyển, điều kiện xét tuyển bổ sung đối với các chương trình đào tạo 
+theo từng phương thức xét tuyển nhưng không thấp hơn điều kiện trúng tuyển đợt 1. 
+2. Thí sinh chưa trúng tuyển hoặc đã trúng tuyển nhưng chưa xác nhận nhập học vào 
+bất cứ nơi nào có thể đăng ký xét tuyển đợt bổ sung theo kế hoạch và hướng dẫn của đơn vị 
+đào tạo. 
+3. Kết thúc mỗi đợt xét tuyển, đơn vị đào tạo công bố trên trang thông tin điện tử 
+của đơn vị điểm trúng tuyển và các điều kiện, tiêu chí phụ (nếu có) vào các chương trình 
+đào tạo theo các phương thức tuyển sinh; tổ chức cho thí sinh tra cứu kết quả xét tuyển của 
+cá nhân (điểm của thí sinh và tên phương thức trúng tuyển); gửi giấy báo trúng tuyển và 
+hướng dẫn cho thí sinh trúng tuyển nhập học. 
+Điều 18. Trách nhiệm của các bên liên quan trong công tác xét tuyển 
+1. Trách nhiệm của thí sinh 
+a) Tìm hiểu kỹ thông tin tuyển sinh của các đơn vị đào tạo, không đăn g ký nguyện 
+vọng vào những chương trình đào tạo hay phương thức tuyển sinh mà không đủ điều kiện; 
+b) Cung cấp đầy đủ, tự chịu trách nhiệm về tính chính xác của tất cả thông tin đăng 
+ký dự tuyển, bao gồm cả thông tin cá nhân, thông tin khu vực và đối tượng ưu tiên (nếu có), 
+nguyện vọng đăng ký, chứng chỉ ngoại ngữ (nếu có); tính xác thực của các giấy tờ minh 
+chứng; 
+c) Đồng ý để đơn vị đào tạo mà mình dự tuyển được quyền sử dụng thông tin, dữ 
+liệu cần thiết phục vụ cho công tác xét tuyển; 
+d) Tự chịu trách nhiệm về rủi ro phát sinh khi sử dụng kết quả các kỳ thi tuyển sinh, 
+kỳ thi độc lập của các cơ sở đào tạo hoặc các tổ chức nước ngoài tổ chức kỳ thi độc lập; 
+e) Hoàn thành thanh toán mức thu dịch vụ tuyển sinh trước khi kết thúc thủ tục đăng 
+ký dự tuyển theo quy định của các đơn vị đào tạo.
+
+## Trang 20
+
+19 
+2. Trách nhiệm của đơn vị đào tạo 
+a) Cung cấp đầy đủ, đúng định dạng và bảo đảm tính xác thực của thông tin, dữ liệu 
+tuyển sinh lên Hệ thống; 
+b) Quy định (hoặc thống nhất với các cơ sở đào tạo khác) về mức thu, phương thức 
+thu và sử dụng lệ phí dịch vụ tuyển sinh; 
+c) Cung cấp đầy đủ thông tin, tư vấn, h ướng dẫn thí sinh; thực hiện các biện pháp 
+kỹ thuật để hạn chế thí sinh đăng ký dự tuyển vào một chương trình đào tạo mà không đủ 
+điều kiện; chịu trách nhiệm và chủ động giải quyết việc thí sinh được chuyển đến đơn vị đào 
+tạo hoặc chuyển đi do sai sót khách quan trong tuyển sinh; 
+d) Tuân thủ quy trình xét tuyển, bảo đảm xét tuyển chính xác, công bằng, khách 
+quan; thực hiện đúng cam kết theo thông tin tuyển sinh đã công bố; 
+e) Kiểm tra thông tin và hồ sơ minh chứng khi thí sinh nhập học, bảo đảm tất cả thí 
+sinh nhập học phải đủ điều kiện trúng tuyển; 
+f) Giải quyết đơn thư phản ánh, khiếu nại, tố cáo liên quan tới công tác xét tuyển 
+của đơn vị đào tạo theo quy định của pháp luật; 
+g) Chủ động tạm dừng tuyển sinh và báo cáo ĐHQGHN, Bộ GDĐT việc tạm dừng 
+tuyển sinh đối với các chương trình đào tạo khi không đủ điều kiện duy trì tổ chức thực hiện 
+đào tạo theo quy định hiện hành, không đáp ứng các quy định của pháp luật liên quan; 
+h) Trừ trường hợp thay đổi chính sách tuyển sinh theo quy định của Bộ GDĐT và 
+của ĐHQGHN, đơn vị đào tạo công bố công khai việc điều chỉnh phương thức tuyển sinh 
+tối thiểu trước 12 tháng và khuyến khích công bố điều chỉnh phương thức tuyển sinh trước 
+36 tháng kể từ năm tuyển sinh 2027; 
+i) Đảm bảo quyền lợi của thí sinh khi sử dụng kết quả kỳ thi tuyển sinh, kết quả kỳ 
+thi độc lập trong xét tuyển đại học. 
+Chương III 
+TỔ CHỨC THỰC HIỆN 
+Điều 19. Tổ chức, nhiệm vụ và quyền hạn của ĐHQGHN 
+1. Ban hành kế hoạch tuyển sinh chung và xây dựng các văn bản hướng dẫn về công 
+tác tuyển sinh tại ĐHQGHN. 
+2. Giám đốc ĐHQGHN ra quyết định thành lập Ban Chỉ đạo tuyển sinh của 
+ĐHQGHN để chỉ đạo các đơn vị đào tạo trong công tác tuyển sinh đảm bảo đúng quy định 
+của Quy chế này. 
+ a) Thành phần Ban Chỉ đạo tuyển sinh gồm có: 
+ - Trưởng ban: Đại diện Ban Giám đốc; 
+- Phó Trưởng ban/Uỷ viên thường trực: Đại diện lãnh đạo Ban Đào tạo và Công tác 
+sinh viên;
+
+## Trang 21
+
+20 
+- Các uỷ viên: Đại diện lãnh đạo Văn phòng, các ban chức năng liên quan, đại diện 
+lãnh đạo các đơn vị đào tạo và một số đơn vị liên quan khác thuộc ĐHQGHN; 
+- Ủy viên Thư ký: Chuyên viên Ban Đào tạo và Công tác sinh viên. 
+Những người có người thân (con, vợ/chồng, anh, chị, em ruột của mình và của 
+chồng/vợ) dự thi hay đăng ký xét tuyển vào ĐHQGHN không được tham gia Ban Chỉ đạo 
+tuyển sinh trong năm tuyển sinh. 
+b) Nhiệm vụ và quyền hạn của Ban Chỉ đạo tuyển sinh 
+ - Chỉ đạo và tổ chức các hoạt động truyền thông, tư vấn tuyển sinh của ĐHQGHN; 
+- Chỉ đạo và tổ chức triển khai công tác tuyển sinh của ĐHQGHN; 
+- Điều phối các nguồn lực phục vụ công tác tuyển sinh đảm bảo sự liên thông, thống 
+nhất trong toàn ĐHQGHN; 
+- Thông qua và công bố thông tin tuyển sinh chung của ĐHQGHN; 
+ - Quy định tiêu chí và ngưỡng đầu vào chung trong toàn ĐHQGHN; 
+- Giám sát, kiểm tra công tác tổ chức tuyển sinh của các đơn vị đào tạo; 
+ - Bộ phận thường trực Ban Chỉ đạo (Ban Đào tạo và Công tác sinh viên ) quản lý tài 
+khoản, mật khẩu tuyển sinh của các đơn vị trê n Hệ thống tuyển sinh (trang nghiệp vụ) của 
+Bộ GDĐT; hậu kiểm công tác tuyển sinh đại học theo kế hoạch hằng năm. 
+3. Ban Chỉ đạo tuyển sin h ĐHQGHN quyết định bổ sung phương thức tuyển sinh 
+cho một số chương trình đào tạo đặc thù (nếu có) không quy định tại Quy chế này và xem 
+xét, quyết định các trường hợp đặc biệt khác nhưng không trái Quy chế tuyển sinh của Bộ 
+GDĐT và các quy định của pháp luật. 
+4. Chỉ đạo tổ chức kiểm tra việc thực hiện Quy chế này và quy định của pháp luật 
+theo chức năng nhiệm vụ. 
+Điều 20. Tổ chức, nhiệm vụ và quyền hạn của đơn vị đào tạo 
+1. Hiệu trưởng thành lập Hội đồng tuyển sinh ( HĐTS) để điều hành các công việc 
+liên quan đến công tác tuyển sinh của đơn vị. 
+2. Thành phần của HĐTS gồm có: 
+a) Chủ tịch: Đại diện lãnh đạo đơn vị; 
+b) Phó Chủ tịch: Cấp phó lãnh đạo đơn vị; 
+c) Uỷ viên thường trực: đại diện lãnh đạo phòng Đào tạo hoặc đại diện lãnh đạo 
+phòng được giao nhiệm vụ tuyển sinh đại học; 
+d) Các uỷ viên: Một số trưởng phòng, trưởng khoa, trưởng bộ môn và cán bộ công 
+nghệ thông tin, cán bộ phụ trách công tác tuyển sinh của đơn vị; đại diện Ban Đào tạo và 
+Công tác sinh viên (đối với các đơn vị đào tạo trực thuộc ĐHQGHN).
+
+## Trang 22
+
+21 
+Những người có người thân (con, vợ/chồng, anh, chị, em ruột của mình và của 
+chồng/vợ) dự thi hay đăng ký xét tuyển vào đơn vị không được tham gia HĐTS và các tiểu 
+ban giúp việc HĐTS của đơn vị trong năm tuyển sinh. 
+3. Nhiệm vụ và quyền hạn của HĐTS các đơn vị đào tạo 
+a) Trên cơ sở Q uy chế tuyển sinh này, các đơn vị đào tạo xây dựng hướng dẫn để 
+cụ thể hóa những quy định của Quy chế này cho các hình thức đào tạo, công khai trên trang 
+thông tin điện tử của đơn vị; 
+b) Tổ chức tuyển sinh theo thông ti n tuyển sinh công bố và Quy chế, Hướng d ẫn 
+tuyển sinh hằng năm, tuân thủ các quy định của Quy chế này và các quy định pháp luật hiện 
+hành; thực hiện trách nhiệm giải trình với ĐHQGHN và Bộ GDĐT, các cơ quan có thẩm 
+quyền và xã hội về toàn bộ công tác tuyển sinh của đơn vị; 
+c) Tổ chức rà soát thông tin tuyển sinh, tiến hành kiểm tra nội bộ, hậu kiểm hoạt 
+động tuyển sinh; chủ động giải quyết các rủi ro phát sinh của đơn vị; giải quyết đơn thư phản 
+ánh, khiếu nại, tố cáo và xử lý vi phạm liên quan tới công tác tuyển sinh của đơn vị theo quy 
+định của Quy chế này và quy định của pháp luật có liên quan; 
+d) Chậm nhất ngày 31 tháng 12 hằng năm, đơn vị đào tạo phải hoàn thành cập nhật 
+dữ liệu thực tuyển của tất cả các hình thức đào tạo bao gồm: thông tin thí sinh; thông tin xét 
+tuyển của thí sinh; kết quả xét tu yển của thí sinh; thông tin về chương trình đào tạo tuyển 
+sinh; thông tin về phương thức tuyển sinh đã thông báo tuyển sinh trên Hệ thống của Bộ 
+GDĐT; 
+e) Bảo quản, lưu trữ các tài liệu liên quan đến tuyển sinh trong suốt khóa đào tạo 
+theo quy định của Luật Lư u trữ và các quy định về thời hạn bảo quản tài liệu chuyên môn 
+nghiệp vụ của ngành giáo dục. Đối với đơn vị tổ chức các kỳ thi phục vụ xét tuyển đại học 
+(phỏng vấn, sơ tuyển, thi năng khiếu,…) phải bảo quản danh sách phòng thi, danh sách thí 
+sinh, bài thi của thí sinh (nếu có), file ghi âm/ghi hình, hồ sơ và kết quả chấm thi theo thời 
+hạn quy định tại Quy chế thi tốt nghiệp THPT của Bộ GDĐT; 
+f) Đơn vị đào tạo sử dụng kết quả kỳ thi độc lập để xét tuyển đại học phải có trách 
+nhiệm thực hiện việc đối sánh với kế t quả học tập của sinh viên hằng năm và sau 03 năm 
+liên tiếp áp dụng từ năm 2026 với các tiêu chí: kết quả học tập và thời gian học tập của người 
+trúng tuyển nếu sử dụng phương thức xét tuyển độc lập; 
+g) Thu và sử dụng lệ phí tuyển sinh, lệ phí xét tuyển theo quy định của nhà nước; 
+h) Tổng kết công tác tuyển sinh; quyết định khen thưởng, kỷ luật theo quy định. 
+4. Nhiệm vụ và quyền hạn của Chủ tịch HĐTS 
+a) Tổ chức thực hiện và chịu trách nhiệm về công tác tuyển sinh của đơn vị; 
+b) Báo cáo Ban Chỉ đạo tuyển sinh và các cơ quan có trách nhiệm về công tác tuyển 
+sinh của đơn vị;
+
+## Trang 23
+
+22 
+c) Thành lập các tiểu ban giúp việc cho HĐTS để triển khai công tác tuyển sinh. 
+5. Nhiệm vụ và quyền hạn của Phó Chủ tịch HĐTS: Thực hiện các nhiệm vụ được Chủ 
+tịch HĐTS phân công và thay mặt Chủ tịch HĐTS giải quyết công việc khi được uỷ quyền. 
+6. Tiểu ban Thư ký HĐTS 
+a) Chủ tịch HĐTS thành lập tiểu ban Thư ký. 
+b) Thành phần tiểu ban thư ký HĐTS gồm có: 
+- Trưởng ban do Uỷ viên thường trực HĐTS đơn vị kiêm nhiệm; 
+- Các thành viên: một số cán bộ phòng chuyên môn, cán bộ các khoa liên quan và 
+cán bộ công nghệ thông tin. 
+c) Nhiệm vụ và quyền hạn của tiểu ban Thư ký 
+- Cập nhật thông tin tuyển sinh và các thông tin tuyển sinh khác của đơn vị lên Hệ 
+thống của Bộ GDĐT, của ĐHQGHN và trang thông tin điện tử của đơn vị và các phương 
+tiện thông tin đại chúng; 
+- Dự kiến phương án điểm trúng tuyển, trình HĐTS quyết định; Lập danh sách thí 
+sinh trúng tuyển theo phương án tuyển sinh đã được phê duyệt; 
+- Cập nhật danh sách thí sinh trúng tuyển vào cơ sở dữ liệu theo hướng dẫn của Bộ 
+GDĐT và của ĐHQGHN; 
+- In, trình ký và gửi giấy báo thí sinh trúng tuyển; 
+- Kiểm tra hồ sơ thí sinh trúng tuyển theo quy định tại Quy chế tuyển sinh; 
+- Thực hiện các nhiệm vụ khác do Chủ tịch HĐTS giao. 
+7. Các tiểu ban giúp việc khác (nếu có) do Chủ tịch HĐTS quy định. 
+Điều 21. Xử lý vi phạm 
+1. Cán bộ và thí sinh có hành vi vi phạm trong quá trình tổ chức thi được xử lý theo 
+quy định tại Quy chế thi tốt nghiệp THPT của Bộ GDĐT và quy định của ĐHQGHN. 
+2. Thí sinh có hành vi gian lận trong quá trình đăng ký dự tuyển, dự thi để được trúng 
+tuyển; tùy theo mức độ có thể bị buộc thôi học, cấm dự tuyển vào các đơn vị đào tạo thuộc 
+ĐHQGHN trong những năm tiếp theo hoặc bị xử lý hình sự theo quy định của pháp luật. 
+3. Người có hành vi vi phạm Quy chế này là công chức, viên chức, tùy theo mức độ 
+sẽ bị cơ quan quản lý cán bộ xử lý theo quy định của Luật Giáo dục đại học; Luật Viên chức, 
+Luật Cán bộ, công chức và các văn bản quy định về xử lý kỷ luật viên chức, công chức. 
+4. Đơn vị đào tạo vi phạm về công tác tuyển sinh tùy theo mức độ vi phạm sẽ bị áp 
+dụng xử lý theo quy định của ĐHQGHN và các quy định pháp luật hiện hành. Hiệu trưởng, 
+chủ tịch HĐTS và những cá nhân có liên quan của đơn vị đào tạo vi phạm cũng bị xử lý theo 
+quy định pháp luật có liên quan.
+
+## Trang 24
+
+23 
+5. Hiệu trưởng, Chủ tịch HĐTS chịu trách nhiệm trong v iệc xác định danh sách thí 
+sinh trúng tuyển đảm bảo tỉ lệ gọ i trúng tuyển của chương trình đào tạo không vượt so với 
+chỉ tiêu được giao. Trường hợp, đơn vị gọi vượt chỉ tiêu sẽ bị trừ vào chỉ tiêu tuyển sinh năm 
+tiếp theo, bị xử lý theo Quy chế tuyển sinh hiện hành và các quy định liên quan khác. 
+Điều 22. Khen thưởng 
+Trưởng Ban Chỉ đạo, Chủ tịch HĐTS đơn vị khen thưởng hoặc đề nghị cấp có thẩm 
+quyền khen thưởng theo quy định hiện hành của ĐHQGHN đối với các đơn vị, cá nhân hoàn 
+thành xuất sắc nhiệm vụ được giao; người có nhiều thành tích đóng góp cho công tác tuyển 
+sinh của ĐHQGHN, của đơn vị đào tạo. 
+Điều 23. Chế độ báo cáo và lưu trữ 
+1. Chế độ báo cáo 
+Hằng năm, HĐTS các đơn vị gửi báo cáo Ban Chỉ đạo tuyển sinh (qua Ban Đào tạo 
+và Công tác sinh viên): 
+a) Quyết định thành lập HĐTS và các tiểu ban chuyên môn; 
+b) Thông tin tuyển sinh (theo mẫu tại Phụ lục III Quy chế này) trước khi công bố ít 
+nhất 10 ngày; 
+c) Quy định, quy trình và các văn bản hướng dẫn tuyển sinh của đơn vị (nếu có); 
+d) Kết quả lọc ảo trước khi nhập kết quả xét tuyển lên H ệ thống lọc ảo (lần cuối); 
+điểm trúng tuyển theo chương trình đào tạo trước khi công bố kết quả trúng tuyển; 
+e) Danh sách thí sinh trúng tuyển (dự kiến) theo các phương thức tuyển sinh trước 
+khi ra quyết định công nhận trúng tuyển chính thức; 
+f) Quyết định trúng tuyển và danh sách thí sinh trúng tuyển theo các phương thức 
+tuyển sinh; Danh sách nhập học theo các phương thức tuyển sinh; 
+g) Đối với các chương trình đào tạo chưa tuyển đủ chỉ tiêu trong đợt 1, đơn vị báo 
+cáo Ban Chỉ đạo tuyển sinh ĐHQGHN xem xét, phê duyệt kế hoạch xét tuyển bổ sung trước 
+khi ra thông báo xét tuyển đợt bổ sung (nếu có); 
+h) Báo cáo tổng kết công tác tuyển sinh của đơn vị. 
+2. Chế độ lưu trữ 
+Đơn vị đào tạo có trách nhiệm lưu trữ, bảo quản an toàn các tài liệu liên quan tới công 
+tác tuyển sinh theo các quy định hiện hành của Bộ GDĐT. 
+a) Quyết định trúng tuyển, quyết định công nhận sinh viên là tài liệu lưu trữ được bảo 
+quản vĩnh viễn tại đơn vị đào tạo; 
+b) Tài liệu khác liên quan đến tuyển sinh, đào tạo được lưu trữ, bảo quản tron g suốt 
+quá trình đào tạo; 
+c) Việc tiêu hủy tài liệu liên quan tuyển sinh, đào tạo hết thời gian lưu trữ được thực 
+hiện theo quy định hiện hành của nhà nước.
+
+## Trang 25
+
+24 
+Điều 24. Điều khoản thi hành 
+Quy chế này có hiệu lực kể từ ngày ký và thay thế cho Quy chế tuyển si nh đại học 
+chính quy tại ĐHQGHN ban hành kèm theo Quyết định số 1868/QĐ-ĐHQGHN ngày 18 
+tháng 4 năm 2025 và Quy chế tuyển sinh đại học vừa làm vừa học tại ĐHQGHN ban hành theo 
+Quyết định số 2319/QĐ -ĐHQGHN ngày 03 tháng 7 năm 2023 của Giám đốc ĐHQGHN. 
+Những quy định trước đây (nếu có) trái với Quy chế này đều bãi bỏ. 
+Hằng năm, Quy chế này có thể được sửa đổi, bổ sung, cập nhật theo quy định và 
+hướng dẫn của Bộ GDĐT. Trong quá trình thực hiện, nếu có vấn đề phát sinh , cần điều 
+chỉnh, bổ sung cho phù hợp, các đơn vị báo cáo ĐHQGHN (qua Ban Đào tạo và Công tác 
+sinh viên) để trình Giám đốc ĐHQGHN xem xét quyết định./.
+
+## Trang 26
+
+25 
+ 
+Phụ lục I 
+KHU VỰC ƯU TIÊN 
+(kèm theo Quyết định số /QĐ-ĐHQGHN ngày tháng năm 2026 
+của Giám đốc Đại học Quốc gia Hà Nội) 
+ 
+Khu vực Mô tả khu vực và điều kiện 
+Khu vực 1 
+(KV1) 
+Các xã vùng đồng bào dân tộc thiểu số và miền núi, xã khu vực I, II, III; các 
+xã có thôn vùng đồng bào dân tộc thiểu số và miền núi, thôn đặc biệt khó khăn; 
+các xã/phường hải đảo/đặc khu; các xã/phường biên giới đất liền. 
+Khu vực 2 
+nông thôn 
+(KV2-NT) 
+Các địa phương không thuộc KV1, KV2, KV3. 
+Khu vực 2 
+(KV2) 
+Các phường thuộc tỉnh; các xã của thành phố trực thuộc Trung ương (trừ các 
+xã thuộc KV1). 
+Khu vực 3 
+(KV3) 
+Các phường của thành phố trực thuộc Trung ương.
+
+## Trang 27
+
+26 
+ 
+Phụ lục II 
+ ĐỐI TƯỢNG CHÍNH SÁCH ƯU TIÊN 
+(kèm theo Quyết định số /QĐ-ĐHQGHN ngày tháng năm 2026 
+của Giám đốc Đại học Quốc gia Hà Nội) 
+ 
+Đối 
+tượng Mô tả đối tượng, điều kiện 
+Nhóm 1 
+01 Công dân Việt Nam là người dân tộc thiểu số được hưởng ưu tiên khu vực 1 
+02 
+a) Thương binh, bệnh binh, người có “Giấy chứng nhận người được hưởng 
+chính sách như thương binh; 
+b) Quân nhân; sĩ quan, hạ sĩ quan, chiến sĩ nghĩa vụ trong công an nhân dân 
+xuất ngũ và được công nhận hoàn thành nghĩa vụ phục vụ tại ngũ theo quy định. 
+03 
+a) Thân nhân liệt sĩ; 
+b) Con thương binh, con bệnh binh, con của người được hưởng chính sách như 
+thương binh bị suy giảm khả năng lao động từ 81% trở lên; 
+c) Con của người hoạt động kháng chiến bị nhiễm chất độc hóa học bị suy giảm 
+khả năng lao động 81% trở lên; 
+d) Con của Anh hùng Lực lượng vũ trang nhân dân; con của Anh hùng Lao động 
+trong thời kỳ kháng chiến; 
+đ) Con của người hoạt động kháng chiến bị dị dạng, dị tật do hậu quả của chất 
+độc hóa học đang hưởng trợ cấp hàng tháng. 
+Nhóm 2 
+04 
+a) Thanh niên xung phong tập trung được cử đi học; 
+b) Quân nhân; sĩ quan, hạ sĩ quan, chiến sĩ nghĩa vụ trong Công an nhân dân tại 
+ngũ được cử đi học có thời gian phục vụ trên 15 tháng tính theo ngày. 
+05 
+a) Công dân Việt Nam là người dân tộc thiểu số học ngoài khu vực đã quy định 
+thuộc đối tượng 01; 
+b) Con thương binh, con bệnh binh, con của người được hưởng chính sách như 
+thương binh bị suy giảm khả năng lao động dưới 81%; 
+c) Con của người hoạt động kháng chiến bị nhiễm chất độc hóa học có tỷ lệ suy 
+giảm khả năng lao động dưới 81%. 
+06 
+a) Người khuyết tật nặng có giấy xác nhận khuyết tật của cơ quan có thẩm quyền 
+cấp theo quy định; 
+b) Giáo viên đã giảng dạy đủ 3 năm trở lên dự tuyển vào các chương trình đào 
+tạo giáo viên; 
+c) Y tá, dược tá, hộ lý, y sĩ, điều dưỡng viên, hộ sinh viên, kỹ thuật viên, người 
+có bằng trung cấp Dược đã công tác đủ 3 năm trở lên dự tuyển vào đúng chương 
+trình đào tạo tốt nghiệp thuộc lĩnh vực sức khỏe.
+
+## Trang 28
+
+27 
+ 
+Phụ lục III 
+ THÔNG TIN TUYỂN SINH 
+(kèm theo Quyết định số /QĐ-ĐHQGHN ngày tháng năm 2026 
+của Giám đốc Đại học Quốc gia Hà Nội) 
+ 
+ĐẠI HỌC QUỐC GIA HÀ NỘI 
+ Đơn vị ... 
+------- 
+CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM 
+Độc lập - Tự do - Hạnh phúc 
+--------------- 
+THÔNG TIN TUYỂN SINH NĂM1 ……. 
+(Hình thức đào tạo: ……………………………...2) 
+I. THÔNG TIN CHUNG 
+1. Tên đơn vị đào tạo: 
+2. Mã đơn vị đào tạo trong tuyển sinh 
+3. Địa chỉ các trụ sở (trụ sở chính, trụ sở cùng tỉnh/TP trực thuộc Trung ương) 
+4. Địa chỉ trang thông tin điện tử 
+5. Địa chỉ công khai quy chế tuyển sinh; thông tin, quy chế thi tuyển sinh (nếu đơn 
+vị đào tạo có tổ chức thi) 
+6. Số điện thoại liên hệ tuyển sinh: 
+7. Địa chỉ công khai các thông tin về hoạt động của đơn vị đào tạo3 (CTĐT; đội ngũ 
+giảng viên, cán bộ quản lý; cơ sở vật chất; quy mô đào tạo; tỷ lệ sinh viên có việc làm; 
+kế hoạch tuyển sinh các chương trình đào tạo, phương thức, trình độ đào tạo ngành...) 
+II. TUYỂN SINH ĐÀO TẠO ĐẠI HỌC 
+1. Đối tượng, điều kiện dự tuyển 
+2. Mô tả phương thức tuyển sinh 4 (thi tuyển, xét tuyển hoặc kết hợp thi tuyển và xét 
+tuyển...) 
+3. Quy tắc quy đổi độ lệch điểm ngưỡng đầu vào và điểm trúng tuyển giữa các tổ 
+hợp, phương thức tuyển sinh 
+- Ngưỡng đầu vào 
+- Điểm trúng tuyển 
+4. Số lượng tuyển sinh (Ghi rõ địa chỉ đào tạo; đối với mỗi mã trường trong tuyển sinh 
+lập một bảng theo bảng dưới đây). 
+TT 
+Mã 
+xét 
+tuyển 
+Tên chương trình, 
+ngành, nhóm ngành 
+xét tuyển 
+Mã 
+chương 
+trình, 
+ngành, 
+nhóm 
+ngành5 
+Tên 
+chương 
+trình, 
+ngành, 
+nhóm 
+ngành6 
+Số 
+lượng 
+tuyển 
+sinh 
+Phương thức 
+tuyển sinh 
+Ghi 
+chú 
+1. 
+- Phương thức 1 (Tổ 
+hợp...) 
+- Phương thức 2... 
+- Phương thức 3... 
+ 
+2. 
+3. 
+… 
+ 
+5. Các thông tin cần thiết khác để thí sinh dự tuyển vào đơn vị đào tạo 
+a. Các điều kiện phụ sử dụng trong xét tuyển
+
+## Trang 29
+
+28 
+ 
+b. Điểm cộng 
+c. Tiêu chí phân bổ ngành, chương trình đào tạo (tuyển sinh theo nhóm ngành) 
+d. Các thông tin khác... 
+6. Tổ chức tuyển sinh 
+Thời gian dự kiến tuyển sinh các đợt trong năm, hình thức; các điều kiện xét tuyển, thi 
+tuyển. 
+7. Chính sách ưu tiên 
+Xét tuyển thẳng; ưu tiên xét tuyển. 
+8. Mức thu dịch vụ tuyển sinh (xét tuyển, thi tuyển) 
+9. Cam kết của đơn vị đào tạo đối với thí sinh (Giải quyết khiếu nại, bảo vệ quyền lợi 
+chính đáng của thí sinh trong những trường hợp rủi ro, trách nhiệm giải qu yết việc thí 
+sinh được chuyển đến hoặc chuyển đi do sai sót trong tuyển sinh) 
+10. Các nội dung khác (không trái quy định hiện hành) 
+11. Thông tin về tuyển sinh của 02 năm gần nhất 
+TT 
+Mã 
+xét 
+tuyển 
+Tên 
+chương 
+trình 
+đào 
+tạo, 
+ngành, 
+nhóm 
+ngành 
+xét 
+tuyển 
+Mã 
+chương 
+trình 
+đào 
+tạo, 
+ngành, 
+nhóm 
+ngành 
+Tên 
+chương 
+trình 
+đào 
+tạo, 
+ngành, 
+nhóm 
+ngành 
+Phương 
+thức 
+tuyển 
+sinh 
+Năm ... 
+(Ví dụ: 2024 nếu tuyển 
+sinh năm 2025) 
+Năm ... 
+(Ví dụ: 2023 nếu tuyển 
+sinh năm 2025) 
+Ghi 
+chú 
+Số 
+lượng 
+Số 
+nhập 
+học 
+Điểm trúng 
+tuyển/Thang 
+điểm xét 
+Số 
+lượng 
+Số 
+nhập 
+học 
+Điểm trúng 
+tuyển/Thang 
+điểm xét 
+ 
+1. 
+2. 
+3. 
+… 
+ 
+Cán bộ tuyển sinh 
+(Ghi rõ họ tên, số điện thoại liên hệ, địa chỉ 
+email) 
+…..ngày….. tháng …..năm….. 
+THỦ TRƯỞNG ĐƠN VỊ 
+ 
+ 
+________________________ 
+1 Thông tin tối thiểu, đơn vị đào tạo bổ sung các thông tin khác (nếu cần). 
+2 Chính quy/đào tạo thường xuyên (liên thông, đã có một văn bằng...); cập nhật theo kế hoạch tuyển sinh 
+bảo đảm quy định về công bố thông tin tuyển sinh. 
+3 Theo quy định hiện hành của Bộ trưởng Bộ GDĐT về việc công khai các thông tin về hoạt động của 
+các cơ sở giáo dục thuộc hệ thống giáo dục quốc dân. 
+4 Phân biệt trình độ đại học và cao đẳng. 
+5, 6 Theo danh mục thống kê ngành đào tạo của giáo dục đại học.
+
+## Trang 30
+
+29 
+ 
+Phụ lục IV 
+ THÔNG TIN TUYỂN SINH CẬP NHẬT 
+(kèm theo Quyết định số /QĐ-ĐHQGHN ngày tháng năm 2026 
+của Giám đốc Đại học Quốc gia Hà Nội) 
+ 
+ĐẠI HỌC QUỐC GIA HÀ NỘI 
+Đơn vị ... 
+------- 
+CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM 
+Độc lập - Tự do - Hạnh phúc 
+--------------- 
+ 
+THÔNG TIN TUYỂN SINH NĂM …… CẬP NHẬT 
+(Hình thức đào tạo: ……………………………...) 
+I. THÔNG TIN CHUNG 
+1. Tên đơn vị đào tạo: 
+2. Mã đơn vị đào tạo trong tuyển sinh 
+3. Địa chỉ các trụ sở (trụ sở chính, trụ sở cùng tỉnh/TP trực thuộc Trung ương) 
+4. Địa chỉ trang thông tin điện tử 
+5. Địa chỉ công khai quy chế tuyển sinh; thông tin, quy chế thi tuyển sinh 3 (nếu đơn 
+vị đào tạo có tổ chức thi) 
+6. Số điện thoại liên hệ tuyển sinh: 
+II. TUYỂN SINH ĐÀO TẠO ĐẠI HỌC 
+1. Quy tắc quy đổi độ lệch điểm ngưỡng đầu vào và điểm trúng tuyển giữa các tổ 
+hợp, phương thức tuyển sinh cập nhật 
+- Ngưỡng đầu vào 
+- Điểm trúng tuyển 
+2. Số lượng tuyển sinh cập nhật (Ghi rõ địa chỉ đào tạo; đối với mỗi mã trường trong 
+tuyển sinh lập một bảng theo bảng dưới đây). 
+TT Mã xét 
+tuyển 
+Tên chương 
+trình, ngành, 
+nhóm ngành 
+xét tuyển 
+Mã chương 
+trình, 
+ngành, 
+nhóm ngành 
+Tên 
+chương 
+trình, 
+ngành, 
+nhóm 
+ngành 
+Số 
+lượng 
+tuyển 
+sinh 
+Phương thức 
+tuyển sinh 
+Ghi 
+chú 
+1. 
+- Phương thức 1 
+(Tổ hợp...) 
+- Phương thức 2... 
+- Phương thức 3... 
+ 
+2. 
+3. 
+… 
+ 
+ 
+Cán bộ tuyển sinh 
+(Ghi rõ họ tên, số điện thoại liên hệ, địa chỉ 
+email) 
+…..ngày….. tháng …..năm….. 
+THỦ TRƯỞNG ĐƠN VỊ
+
+## Trang 31
+
+30 
+ 
+ 
+Phụ lục V 
+BẢNG QUY ĐỔI ĐIỂM CHỨNG CHỈ TIẾNG ANH SANG THANG ĐIỂM 10 
+(kèm theo Quyết định số /QĐ-ĐHQGHN ngày tháng năm 2026 
+của Giám đốc Đại học Quốc gia Hà Nội) 
+ 
+STT 
+Trình độ Tiếng Anh Quy đổi điểm chứng chỉ tiếng 
+Anh quốc tế sang thang điểm 10 IELTS 
+(Academic) TOEFL iBT 
+1 5.5 72-78 8,0 
+2 6.0 79-87 8,5 
+3 6.5 88-95 9,0 
+4 7.0 96-101 9,5 
+5 7.5-9.0 102-120 10
+
+## Trang 32
+
+31 
+ 
+Phụ lục VI 
+ CÁC CHỨNG CHỈ NGOẠI NGỮ SỬ DỤNG TRONG TUYỂN SINH ĐẠI HỌC 
+TẠI ĐẠI HỌC QUỐC GIA HÀ NỘI 
+(kèm theo Quyết định số /QĐ-ĐHQGHN ngày tháng năm 2026 
+của Giám đốc Đại học Quốc gia Hà Nội) 
+Môn 
+Ngoại ngữ 
+Chứng chỉ đạt 
+yêu cầu tối thiểu (*) Đơn vị cấp chứng chỉ 
+Tiếng Anh 
+IELTS 5.5 điểm 
+(Academic) 
+- British Council (BC) 
+- International Development Program (IDP) 
+TOEFL iBT 72 điểm Educational Testing Service (ETS) 
+B2 (Vstep 3-5) Trường ĐH Ngoại ngữ, ĐHQGHN 
+Tiếng Nga TRKI-2 
+Trung tâm Khoa học và Văn hóa Nga tại Hà 
+Nội (The Russian centre of science and 
+culture in Hanoi) 
+Tiếng Pháp - TCF 400 điểm 
+- DELF B2 
+Trung tâm Nghiên cứu Sư phạm quốc tế 
+(Centre International d’Etudes 
+Pedagogiques - CIEP) 
+Tiếng 
+Trung Quốc HSK và HSKK cấp độ 4 
+- Văn phòng Hán ngữ đối ngoại Trung 
+Quốc (Hanban); Ủy ban Khảo thí trình độ 
+Hán ngữ quốc gia (The National Committee 
+for the Test of Proficiency in Chinese) 
+Tiếng Đức 
+- DSH B2 
+- TestDaF B2 
+- Goethe-Zertifikat B2 
+- DSD B2 
+- TELC B2 
+- ÖSD Zertifikat B2 
+- Các trường đại học Đức 
+- Viện TestDaF 
+- Viện Goethe (Goethe-Institut) 
+- KMK (Hội đồng Bộ trưởng văn hóa, giáo 
+dục của Liên bang và các bang CHLB Đức) 
+- TELC B2 (TELC GmbH) 
+- Hiệp hội ÖSD (Cộng hòa Áo) 
+Tiếng Nhật JLPT cấp độ N3 Quỹ Giao lưu Quốc tế Nhật Bản (Japan 
+Foundation) 
+Tiếng Hàn TOPIK II cấp độ 4 Viện Giáo dục Quốc tế Quốc gia Hàn Quốc 
+(KICE) 
+(*) Chứng chỉ ngoại ngữ phải đủ 4 kỹ năng, trừ các chứng chỉ ngoại ngữ quốc tế khác 
+tiếng Anh có 3 kĩ năng được công nhận là TOPIK (tiếng Hàn), JLPT (tiếng Nhật), TCF 
+(Tiếng Pháp); 
+- Các đơn vị xây dựng thang quy đổi điểm cho các chứng chỉ ngoại ngữ khác (ngoài tiếng 
+Anh) trong tổ hợp xét tuyển tương ứng với bảng quy đổi điểm chứng chỉ tại Phụ lục V; 
+- Ngoài ra, các đơn vị có thể sử dụng Danh mục các chứng chỉ ngoại ngữ được quy định 
+tại Quy chế thi tốt nghiệp THPT hiện hành để quy đổi điểm như 01 môn trong tổ hợp xét 
+tuyển và không được cao hơn mức điểm quy đổi tại Quy chế này; 
+- ĐHQGHN không chấp nhận các chứng chỉ ngoại ngữ thi online./.
+
+## Trang 33
+
+32 
+ 
+Phụ lục VII 
+XÉT TUYỂN THẲNG, ƯU TIÊN XÉT TUYỂN HỌC SINH THPT 
+VÀO BẬC ĐẠI HỌC TẠI ĐẠI HỌC QUỐC GIA HÀ NỘI 
+(kèm theo Quyết định số /QĐ-ĐHQGHN ngày tháng năm 2026 
+của Giám đốc Đại học Quốc gia Hà Nội) 
+ 
+1. ĐHQGHN xét tuyển thẳng, ưu tiên xét tuy ển các đối tượng được quy định tại 
+Điều 8 Quy chế tuyển sinh của Bộ GDĐT và Quy chế này; 
+2. Học sinh THPT trên toàn quốc được ưu tiên xét tuyển (cộng điểm) vào bậc đại 
+học tại ĐHQGHN theo chương trình, ngành đào tạo phù hợp với môn thi hoặc nội dung 
+đề tài dự thi mà thí sinh đạt giải (môn đạt giải thuộc tổ hợp xét tuyển hoặc môn đạt giải 
+phù hợp với chương trình, ngành đào tạo) nếu tốt nghiệp THPT, có kết quả học tập cả 3 
+năm cấp THPT đư ợc đánh giá m ức tốt (học lực xếp loại giỏi trở lên) và đáp ứng một 
+trong các tiêu chí sau: 
+a) Đạt giải nhất, nhì, ba trong các kỳ thi Olympic bậc THPT của ĐHQGHN; 
+b) Đạt giải nhất, nhì, ba trong kỳ thi chọn học sinh gi ỏi (HSG) b ậc THPT c ấp 
+ĐHQGHN; 
+c) Đạt giải nhất, nhì, ba trong kỳ thi chọn HSG cấp tỉnh/thành phố trực thuộc trung 
+ương. 
+ 3. Học sinh THPT thuộc ĐHQGHN đã tham gia Chương trình VNU 12+ và tích 
+lũy trước tối thiểu 03 học phần thuộc khối kiến thức nền tảng trong 01 chương trình đào 
+tạo đại học, trong đó có tối thiểu từ 02 học phần bắt buộc thuộc khối kiến thức theo khối 
+ngành, nhóm ngành ho ặc khối kiến thức ngành và các tiêu chí khác được quy đ ịnh tại 
+Quyết định số 2008/QĐ-ĐHQGHN ngày 16/05/2024 của Giám đốc ĐHQGHN ban hành 
+Quy định đào tạo thí điểm Chương trình ươm tạo tài năng từ bậc THPT tại ĐHQGHN và 
+Quyết định số 3557/QĐ-ĐHQGHN ngày 10/07/2025 sửa đổi, bổ sung một số nội dung 
+trong Quyết định số 2008/QĐ-ĐHQGHN được ưu tiên xét tuy ển (cộng điểm) vào bậc 
+đại học theo chương trình, ngành đào tạo phù hợp. 
+Thí sinh đạt tiêu chí quy định tại Phụ lục này trong các năm học THPT được bảo lưu 
+kết quả khi xét tuyển thẳng, ưu tiên xét tuyển vào bậc đại học tại ĐHQGHN (trong thời gian 
+3 năm tính từ thời điểm đạt giải đến khi đăng ký xét tuyển).
+
+## Trang 34
+
+33 
+ 
+Phụ lục VIII 
+ HƯỚNG DẪN CỘNG ĐIỂM THƯỞNG, ĐIỂM XÉT THƯỞNG, 
+ĐIỂM KHUYẾN KHÍCH 
+(kèm theo Quyết định số /QĐ-ĐHQGHN ngày tháng năm 2026 
+của Giám đốc Đại học Quốc gia Hà Nội) 
+ 
+1. Đối với các thí sinh quy định tại khoản 2 Điều 8 Quy chế này (thí sinh đạt thành 
+tích cao trong các k ỳ thi quốc gia, quốc tế) dự tuyển vào các chương trình đào t ạo theo 
+nguyện vọng mà không dùng quyền xét tuyển thẳng được cộng điểm như sau: 
+- Giải nhất HSG quốc gia, quốc tế do Bộ GDĐT tổ chức, cử tham gia: được cộng 
+3,0 điểm; 
+- Giải nhì HSG quốc gia, quốc tế do Bộ GDĐT tổ chức, cử tham gia: được cộng 2,5 
+điểm; 
+- Giải ba HSG quốc gia, quốc tế do Bộ GDĐT tổ chức, cử tham gia: được cộng 2,0 
+điểm. 
+2. Đối với các thí sinh quy định tại khoản 3 Điều 8, điểm b khoản 5 Điều 8 Quy chế này 
+được ưu tiên xét tuyển vào các chương trình đào tạo phù hợp, được cộng điểm như sau: 
+- Giải khuyến khích HSG qu ốc gia, qu ốc tế do Bộ GDĐT tổ chức, cử tham gia : 
+được cộng 1,5 điểm. 
+- Giải nhất cuộc thi khoa học, kỹ thuật cấp quốc gia, quốc tế do Bộ GDĐT tổ chức, 
+cử tham gia: được cộng 1,5 điểm; 
+- Giải nhì cuộc thi khoa học, kỹ thuật cấp quốc gia, quốc tế do Bộ GDĐT tổ chức, 
+cử tham gia: được cộng 1,0 điểm; 
+- Giải ba cuộc thi khoa học, kỹ thuật cấp quốc gia, quốc tế do Bộ GDĐT tổ chức, 
+cử tham gia: được cộng 0,5 điểm. 
+3. Đối với các thí sinh đạt giải HSG bậc THPT cấp ĐHQGHN, đạt giải Olympic bậc 
+THPT của ĐHQGHN, HSG cấp tỉnh/thành phố trực thuộc trung ương được ưu tiên xét tuyển 
+vào các chương trình đào tạo phù hợp, được cộng điểm như sau: 
+- Giải nhất (HSG b ậc THPT c ấp ĐHQGHN, Olympic bậc THPT của ĐHQGHN, 
+HSG cấp tỉnh/thành phố trực thuộc trung ương): được cộng 1,5 điểm; 
+- Giải nhì (HSG b ậc THPT c ấp ĐHQGHN, Olympic bậc THPT của ĐHQGHN, 
+HSG cấp tỉnh/thành phố trực thuộc trung ương): được cộng 1,0 điểm; 
+- Giải ba (HSG bậc THPT cấp ĐHQGHN, Olympic bậc THPT của ĐHQGHN, HSG 
+cấp tỉnh/thành phố trực thuộc trung ương): được cộng 0,5 điểm. 
+Ngoài ra, các đơn vị có thể xem xét việc cộng điểm (điểm xét thưởng) cho những thí sinh 
+đạt Giải khuyến khích hoặc Giải tư (kỳ thi khoa học kỹ thuật quốc gia, quốc tế, HSG bậc THPT 
+cấp ĐHQGHN, Olympic bậc THPT của ĐHQGHN, HSG cấp tỉnh/thành phố trực thuộc trung 
+ương): được cộng tối đa 0,25 điểm.
+
+## Trang 35
+
+34 
+ 
+4. Thí sinh tham gia chương trình VNU 12+ được lựa chọn kết quả học tập của tối 
+thiểu 3 học phần trong chương trình đào tạo đại học đã tích lũy để tính GPA (chi tiết tại 
+Mục 3, Phụ lục 7) được cộng điểm như sau: 
+- GPA đạt loại Xuất sắc: được cộng 1,5 điểm; 
+- GPA đạt loại Giỏi: được cộng 1,0 điểm; 
+- GPA đạt loại Khá: được cộng 0,5 điểm. 
+5. Ngoài ra, các đơn v ị có thể xem xét cộng điểm khuyến khích cho các thí sinh 
+có chứng chỉ tiếng Anh qu ốc tế: IELTS đạt tối thiểu 5.5, TOEFL iBT đ ạt tối thiểu 72 
+điểm hoặc các chứng chỉ ngoại ngữ quốc tế khác được Bộ GDĐT chấp nhận, đạt trình độ 
+tối thiểu bậc 4 theo Khung năng l ực ngoại ngữ 6 bậc dành cho Vi ệt Nam trong trường 
+hợp thí sinh chưa sử dụng chứng chỉ quy đổi điểm để xét tuyển, mức điểm khuyến khích 
+cụ thể như sau: 
+- Bậc 6: cộng tối đa 1,50 điểm; 
+- Bậc 5: cộng tối đa 1,25 điểm; 
+- Bậc 4: cộng tối đa 1,00 điểm. 
+Đối với các chứng chỉ ngoại ngữ được quy định tại Phụ lục Quy chế thi tốt nghiệp 
+THPT của Bộ GDĐT các đơn vị có thể quy đổi như một môn trong tổ hợp xét tuyển với trọng 
+số tính điểm xét không vượt quá 1/3 (điểm quy đổi không được cao hơn mức điểm quy đổi tại 
+Quy chế này); 
+Đối với các đơn vị không xét tuyển độc lập bằng kết quả các kỳ thi SAT, ACT hoặc 
+A-Level thì có thể xem xét cộng điểm khuyến khích cho thí sinh đạt kết quả cao trong các 
+kỳ thi SAT, ACT hoặc A-Level với mức điểm cộng không quá 1,50 điểm (khoảng cách giữa 
+các thang điểm là 0,25). 
+Căn cứ Quy chế này, các đơn vị xây dựng hướng dẫn chi tiết, nguyên tắc áp dụng 
+điểm cộng, quy trình quy định tiêu chí xét tuyển cụ thể và cập nhật, bổ sung vào thông tin 
+tuyển sinh đại học. Đồng thời, gửi báo cáo ĐHQGHN (qua Ban Đào tạo và Công tác sinh 
+viên) trước khi công bố thông tin tuyển sinh chính thức./.
