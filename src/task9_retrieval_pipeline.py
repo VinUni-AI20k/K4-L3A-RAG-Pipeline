@@ -11,13 +11,30 @@ Luồng xử lý:
 Không so sánh threshold với RRF score vì hai thang đo khác nhau.
 """
 
+from __future__ import annotations
+
+import os
+
+from dotenv import load_dotenv
+
 from .task5_semantic_search import semantic_search
 from .task6_lexical_search import lexical_search
 from .task7_reranking import rerank_rrf
 from .task8_pageindex_vectorless import pageindex_search
 
 
-SCORE_THRESHOLD = 0.3
+load_dotenv()
+
+
+def _configured_threshold(default: float = 0.3) -> float:
+    raw = os.getenv("SCORE_THRESHOLD", "").strip()
+    try:
+        return float(raw) if raw else default
+    except ValueError:
+        return default
+
+
+SCORE_THRESHOLD = _configured_threshold()
 DEFAULT_TOP_K = 5
 
 
@@ -28,27 +45,38 @@ def retrieve(
     use_reranking: bool = True,
 ) -> list[dict]:
     """Trả về hybrid hoặc pageindex SearchResult."""
-    # TODO: Implement full retrieval pipeline.
-    #
-    # dense = semantic_search(query, top_k=top_k * 2)
-    # sparse = lexical_search(query, top_k=top_k * 2)
-    # hybrid = (
-    #     rerank_rrf([dense, sparse], top_k=top_k)
-    #     if use_reranking else dense[:top_k]
-    # )
-    #
-    # best_dense_score = dense[0]["score"] if dense else 0.0
-    # if best_dense_score < score_threshold:
-    #     try:
-    #         fallback = pageindex_search(query, top_k=top_k)
-    #         if fallback:
-    #             return fallback
-    #     except Exception:
-    #         pass
-    # return hybrid[:top_k]
-    raise NotImplementedError("Implement retrieve")
+    if top_k <= 0 or not isinstance(query, str) or not query.strip():
+        return []
+
+    dense = semantic_search(query, top_k=top_k * 2)
+    sparse = lexical_search(query, top_k=top_k * 2)
+
+    # RRF chạy đúng một lần; nhánh dense-only dùng cho A/B trong evaluation.
+    if use_reranking:
+        hybrid = rerank_rrf([dense, sparse], top_k=top_k)
+    else:
+        hybrid = dense[:top_k]
+
+    # Quyết định fallback dựa trên cosine score gốc của dense, không phải RRF score.
+    best_dense_score = dense[0]["score"] if dense else 0.0
+    if best_dense_score < score_threshold:
+        try:
+            fallback = pageindex_search(query, top_k=top_k)
+        except Exception as error:
+            # PageIndex là dịch vụ ngoài: lỗi của nó không được làm sập chatbot.
+            print(f"PageIndex fallback lỗi ({error}), dùng kết quả hybrid.")
+            fallback = []
+        if fallback:
+            return fallback[:top_k]
+
+    return hybrid[:top_k]
 
 
 if __name__ == "__main__":
-    for result in retrieve("test query", top_k=3):
-        print(result)
+    for result in retrieve("Vịnh Hạ Long được UNESCO công nhận năm nào", top_k=3):
+        print(
+            result["id"],
+            round(result["score"], 5),
+            result["retrieval_method"],
+            result["metadata"]["title"],
+        )

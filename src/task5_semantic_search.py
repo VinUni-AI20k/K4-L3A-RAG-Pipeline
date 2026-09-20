@@ -1,41 +1,55 @@
-"""
-Task 5 — Semantic search.
-
-Embed query bằng chính hàm của Task 4, query ChromaDB và đổi cosine distance
-thành similarity. Output phải theo SearchResult, sort giảm dần và không quá top_k.
-"""
+"""Dense retrieval over the Task 4 Chroma collection."""
 
 from .task4_chunking_indexing import embed_texts, get_collection
 
 
+def _python_metadata(metadata: dict | None) -> dict:
+    output = dict(metadata or {})
+    if output.get("url") == "":
+        output["url"] = None
+    return output
+
+
 def semantic_search(query: str, top_k: int = 10) -> list[dict]:
-    """Trả về dense SearchResult theo score giảm dần."""
-    # TODO: Implement semantic search.
-    #
-    # query_vector = embed_texts([query])[0]
-    # response = get_collection().query(
-    #     query_embeddings=[query_vector],
-    #     n_results=top_k,
-    #     include=["documents", "metadatas", "distances"],
-    # )
-    # results = []
-    # for item_id, content, metadata, distance in zip(
-    #     response["ids"][0],
-    #     response["documents"][0],
-    #     response["metadatas"][0],
-    #     response["distances"][0],
-    # ):
-    #     results.append({
-    #         "id": item_id,
-    #         "content": content,
-    #         "score": max(0.0, 1.0 - distance),
-    #         "metadata": metadata,
-    #         "retrieval_method": "dense",
-    #     })
-    # return sorted(results, key=lambda item: item["score"], reverse=True)[:top_k]
-    raise NotImplementedError("Implement semantic_search")
+    """Return unique dense results ordered by cosine similarity."""
+    if top_k <= 0 or not isinstance(query, str) or not query.strip():
+        return []
+
+    collection = get_collection()
+    try:
+        collection_size = collection.count()
+    except (AttributeError, TypeError):
+        # Contract-test fakes need not implement the full Chroma interface.
+        collection_size = top_k
+    if collection_size <= 0:
+        return []
+
+    response = collection.query(
+        query_embeddings=embed_texts([query.strip()]),
+        n_results=min(top_k, collection_size),
+        include=["documents", "metadatas", "distances"],
+    )
+    rows = zip(
+        (response.get("ids") or [[]])[0],
+        (response.get("documents") or [[]])[0],
+        (response.get("metadatas") or [[]])[0],
+        (response.get("distances") or [[]])[0],
+    )
+    by_id: dict[str, dict] = {}
+    for item_id, content, metadata, distance in rows:
+        result = {
+            "id": item_id,
+            "content": content,
+            "score": 1.0 - float(distance),
+            "metadata": _python_metadata(metadata),
+            "retrieval_method": "dense",
+        }
+        previous = by_id.get(item_id)
+        if previous is None or result["score"] > previous["score"]:
+            by_id[item_id] = result
+    return sorted(by_id.values(), key=lambda item: item["score"], reverse=True)[:top_k]
 
 
 if __name__ == "__main__":
-    for result in semantic_search("test query", top_k=3):
+    for result in semantic_search("du lịch Việt Nam", top_k=3):
         print(result)

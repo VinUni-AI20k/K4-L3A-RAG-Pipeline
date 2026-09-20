@@ -35,6 +35,9 @@ htmlcov/
 .env.*
 !.env.example
 
+# Vector database
+chroma_db/
+
 # Temp PDF conversion cache
 data/_tmp_pdf/
 
