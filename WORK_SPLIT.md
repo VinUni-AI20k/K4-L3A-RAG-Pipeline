@@ -1,5 +1,8 @@
 # Phân chia việc còn lại
 
+> Brief chi tiết cho từng người nằm trong [`handoff/`](handoff/) — mỗi
+> folder một thành viên, kèm bằng chứng cần đọc trước và lệnh chạy.
+
 Pipeline lõi đã chạy được và pass 20/20 test. Phần dưới là **việc còn đọng**,
 chia thành 3 gói độc lập để ba thành viên làm song song mà không đụng file của
 nhau.
