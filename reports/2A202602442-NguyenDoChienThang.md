@@ -4,7 +4,7 @@
 
 - Họ và tên: Nguyễn Đỗ Chiến Thắng
 - Mã học viên: 2A202602442
-- Nhóm: Nhóm RAG Pipeline Thư Viện TVTT ĐHQG-HCM
+- Nhóm: BungChay
 - Repository/branch: main
 
 ## Phần việc đã thực hiện
