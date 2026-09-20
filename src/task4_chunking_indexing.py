@@ -23,24 +23,52 @@ def _gemini_client():
         raise RuntimeError("GEMINI_API_KEY is not configured")
     return genai.Client(api_key=key)
 
+def _embed_batch(client, batch: list[str], offset: int) -> list[list[float]]:
+    """Embed one batch, splitting it when Gemini returns a partial response."""
+    from google.genai import types
+
+    contents = [types.Content(parts=[types.Part(text=text)]) for text in batch]
+    for attempt in range(6):
+        try:
+            response = client.models.embed_content(
+                model=EMBEDDING_MODEL,
+                contents=contents,
+                config={"task_type": "RETRIEVAL_DOCUMENT"},
+            )
+            embeddings = response.embeddings or []
+            vectors = [list(item.values or []) for item in embeddings]
+            if len(vectors) == len(batch) and all(vectors):
+                return vectors
+            break
+        except Exception as exc:
+            if "429" not in str(exc) or attempt == 5:
+                raise
+            time.sleep(60)
+
+    # Some Gemini endpoints occasionally return only part of a large batch.
+    # Bisecting preserves order and isolates a problematic input if one exists.
+    if len(batch) > 1:
+        middle = len(batch) // 2
+        return (
+            _embed_batch(client, batch[:middle], offset)
+            + _embed_batch(client, batch[middle:], offset + middle)
+        )
+
+    digest = hashlib.sha1(batch[0].encode("utf-8")).hexdigest()[:12]
+    raise RuntimeError(
+        f"Gemini did not return an embedding for text #{offset} "
+        f"(sha1={digest}, chars={len(batch[0])})"
+    )
+
+
 def embed_texts(texts: list[str]) -> list[list[float]]:
     if not texts:
         return []
-    client, vectors = _gemini_client(), []
-    for start in range(0, len(texts), 80):
-        batch = texts[start:start + 80]
-        for attempt in range(6):
-            try:
-                res = client.models.embed_content(model=EMBEDDING_MODEL,
-                    contents=batch, config={"task_type": "RETRIEVAL_DOCUMENT"})
-                break
-            except Exception as exc:
-                if "429" not in str(exc) or attempt == 5:
-                    raise
-                time.sleep(60)
-        vectors.extend(list(item.values) for item in res.embeddings)
-    if len(vectors) != len(texts):
-        raise RuntimeError("Embedding count mismatch")
+    client = _gemini_client()
+    vectors: list[list[float]] = []
+    for start in range(0, len(texts), 50):
+        batch = texts[start:start + 50]
+        vectors.extend(_embed_batch(client, batch, start))
     return vectors
 
 def get_collection():
@@ -100,11 +128,47 @@ def index_to_vectorstore(chunks: list[dict]) -> None:
             embeddings=[x["embedding"] for x in batch],
             metadatas=[x["metadata"] for x in batch])
 
+def _same_metadata(stored: dict, current: dict) -> bool:
+    """Treat Chroma's omitted nullable fields as equivalent to ``None``."""
+    keys = set(stored) | set(current)
+    return all(
+        (stored.get(key) in (None, "") and current.get(key) in (None, ""))
+        or stored.get(key) == current.get(key)
+        for key in keys
+    )
+
 def run_pipeline() -> None:
     documents = load_documents()
     chunks = chunk_documents(documents)
-    index_to_vectorstore(embed_chunks(chunks))
-    print(f"Indexed {len(chunks)} chunks from {len(documents)} documents")
+    collection = get_collection()
+    stored = collection.get(include=["metadatas"])
+    existing = dict(zip(stored.get("ids", []), stored.get("metadatas", [])))
+    wanted_ids = {item["id"] for item in chunks}
+
+    pending = [item for item in chunks
+        if item["id"] not in existing
+        or not _same_metadata(existing[item["id"]], item["metadata"])]
+    if pending:
+        embedded = embed_chunks(pending)
+        for start in range(0, len(embedded), 100):
+            batch = embedded[start:start + 100]
+            collection.upsert(
+                ids=[item["id"] for item in batch],
+                documents=[item["content"] for item in batch],
+                embeddings=[item["embedding"] for item in batch],
+                metadatas=[item["metadata"] for item in batch],
+            )
+
+    # Delete obsolete IDs only after every replacement embedding is safely stored.
+    stale_ids = sorted(set(existing) - wanted_ids)
+    if stale_ids:
+        collection.delete(ids=stale_ids)
+
+    unchanged = len(chunks) - len(pending)
+    print(
+        f"Corpus: {len(documents)} documents / {len(chunks)} chunks; "
+        f"embedded: {len(pending)}, unchanged: {unchanged}, deleted: {len(stale_ids)}"
+    )
 
 if __name__ == "__main__":
     run_pipeline()
