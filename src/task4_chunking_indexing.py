@@ -1,17 +1,30 @@
 """
 Task 4 — Chunking, embedding và indexing.
 
-Hướng dẫn:
-    1. Đọc toàn bộ Markdown trong data/standardized/.
-    2. Chia văn bản bằng strategy đã chọn.
-    3. Embed chunks bằng một provider duy nhất.
-    4. Upsert vào ChromaDB với cosine distance.
+Luồng xử lý:
+    data/standardized/**/*.md -> Document -> Chunk -> embedding -> ChromaDB
 
-Mỗi document/chunk phải theo docs/MODULE_CONTRACTS.md. ID cần ổn định để
-chạy lại pipeline không tạo dữ liệu trùng. Task 5 phải dùng chung embed_texts().
+Metadata lấy từ header mà Task 3 ghi ở đầu mỗi file (title, Source URL, Doc
+type) chứ không suy ra từ tên file. Nhờ vậy citation ở Task 10 hiển thị đúng
+tên văn bản và URL công khai để người đọc kiểm chứng.
+
+ID chunk = "<đường dẫn tương đối>::chunk-<n>" nên ổn định giữa các lần chạy;
+upsert theo ID này thì chạy lại pipeline không tạo bản ghi trùng.
+
+Task 5 phải import embed_texts() từ đây để query và corpus dùng chung model.
 """
 
+from __future__ import annotations
+
+import os
+import re
+import sys
 from pathlib import Path
+
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 
 STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
@@ -22,112 +35,204 @@ CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 CHUNKING_METHOD = "recursive"
 
-EMBEDDING_MODEL = "BAAI/bge-m3"
+EMBEDDING_PROVIDER = os.getenv("EMBEDDING_PROVIDER", "sentence_transformers")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "BAAI/bge-m3")
 EMBEDDING_DIM = 1024
+EMBEDDING_BATCH_SIZE = 16
 
 COLLECTION_NAME = "rag_documents"
 
+# Chroma không nhận batch upsert quá lớn.
+UPSERT_BATCH_SIZE = 500
+
+# Header do Task 3 ghi: "# <title>", "**Source:** <url>", "**Doc type:** legal".
+TITLE_PATTERN = re.compile(r"^#\s+(.+)$", re.MULTILINE)
+FIELD_PATTERN = re.compile(r"^\*\*(.+?):\*\*\s*(.*)$", re.MULTILINE)
+HEADER_SEPARATOR = "\n---\n"
+
+# Tách ưu tiên theo ranh giới điều luật để một điều không bị cắt ngang.
+SEPARATORS = ["\nĐiều ", "\n\n", "\n", ". ", " ", ""]
+
+_model_cache: dict[str, object] = {}
+
+
+def _sentence_transformer():
+    """Nạp model local một lần rồi dùng lại cho mọi lần gọi embed."""
+    if EMBEDDING_MODEL not in _model_cache:
+        from sentence_transformers import SentenceTransformer
+
+        print(f"Loading embedding model: {EMBEDDING_MODEL}")
+        model = SentenceTransformer(EMBEDDING_MODEL)
+        # Chunk 500 ký tự chỉ khoảng 250 token; giới hạn seq length để không
+        # trả giá cho context window 8192 của bge-m3 khi chạy trên CPU.
+        model.max_seq_length = min(model.max_seq_length, 512)
+        _model_cache[EMBEDDING_MODEL] = model
+    return _model_cache[EMBEDDING_MODEL]
+
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    # TODO: Dispatch theo EMBEDDING_PROVIDER trong .env.
-    #
-    # Provider local gợi ý:
-    # from sentence_transformers import SentenceTransformer
-    # model = SentenceTransformer(EMBEDDING_MODEL)
-    # return model.encode(texts).tolist()
-    raise NotImplementedError("Implement embed_texts")
+    """Embed danh sách text bằng provider cấu hình trong .env."""
+    if not texts:
+        return []
+
+    if EMBEDDING_PROVIDER == "sentence_transformers":
+        model = _sentence_transformer()
+        vectors = model.encode(
+            texts,
+            batch_size=EMBEDDING_BATCH_SIZE,
+            normalize_embeddings=True,
+            show_progress_bar=len(texts) > EMBEDDING_BATCH_SIZE,
+        )
+        return [vector.tolist() for vector in vectors]
+
+    if EMBEDDING_PROVIDER == "openai":
+        from openai import OpenAI
+
+        client = OpenAI()
+        response = client.embeddings.create(model=EMBEDDING_MODEL, input=texts)
+        return [item.embedding for item in response.data]
+
+    if EMBEDDING_PROVIDER == "gemini":
+        from google import genai
+
+        client = genai.Client()
+        response = client.models.embed_content(model=EMBEDDING_MODEL, contents=texts)
+        return [list(item.values) for item in response.embeddings]
+
+    raise ValueError(f"EMBEDDING_PROVIDER không hỗ trợ: {EMBEDDING_PROVIDER}")
 
 
 def get_collection():
     """Mở Chroma collection dùng cosine distance."""
-    # TODO: Tạo hoặc mở persistent collection.
-    #
-    # import chromadb
-    # CHROMA_DIR.mkdir(parents=True, exist_ok=True)
-    # client = chromadb.PersistentClient(path=str(CHROMA_DIR))
-    # return client.get_or_create_collection(
-    #     name=COLLECTION_NAME,
-    #     metadata={"hnsw:space": "cosine"},
-    # )
-    raise NotImplementedError("Implement get_collection")
+    import chromadb
+
+    CHROMA_DIR.mkdir(parents=True, exist_ok=True)
+    client = chromadb.PersistentClient(path=str(CHROMA_DIR))
+    return client.get_or_create_collection(
+        name=COLLECTION_NAME,
+        metadata={"hnsw:space": "cosine"},
+    )
+
+
+def parse_markdown(text: str) -> tuple[dict[str, str], str]:
+    """Tách header metadata và phần nội dung của một file Markdown."""
+    header, separator, body = text.partition(HEADER_SEPARATOR)
+    if not separator:
+        return {}, text.strip()
+
+    fields = {key.strip(): value.strip() for key, value in FIELD_PATTERN.findall(header)}
+    title = TITLE_PATTERN.search(header)
+    if title:
+        fields["Title"] = title.group(1).strip()
+    return fields, body.strip()
 
 
 def load_documents() -> list[dict]:
-    """Đọc Markdown và trả về danh sách Document."""
-    # TODO: Đọc mọi .md và tạo Document theo contract.
-    #
-    # documents = []
-    # for path in STANDARDIZED_DIR.rglob("*.md"):
-    #     doc_type = "legal" if "legal" in path.parts else "news"
-    #     documents.append({
-    #         "id": path.relative_to(STANDARDIZED_DIR).as_posix(),
-    #         "content": path.read_text(encoding="utf-8"),
-    #         "metadata": {
-    #             "source": path.name,
-    #             "title": path.stem,
-    #             "doc_type": doc_type,
-    #             "url": None,
-    #         },
-    #     })
-    # return documents
-    raise NotImplementedError("Implement load_documents")
+    """Đọc Markdown đã chuẩn hóa và trả về danh sách Document."""
+    documents = []
+
+    for path in sorted(STANDARDIZED_DIR.rglob("*.md")):
+        fields, body = parse_markdown(path.read_text(encoding="utf-8"))
+        if not body:
+            print(f"Bỏ qua (rỗng): {path.name}")
+            continue
+
+        relative = path.relative_to(STANDARDIZED_DIR).as_posix()
+        # Fallback cho file thêm tay không có header của Task 3.
+        doc_type = fields.get("Doc type") or ("legal" if "legal" in path.parts else "news")
+        documents.append(
+            {
+                "id": relative,
+                "content": body,
+                "metadata": {
+                    "source": path.name,
+                    "title": fields.get("Title") or path.stem,
+                    "doc_type": doc_type,
+                    "url": fields.get("Source") or None,
+                },
+            }
+        )
+
+    return documents
 
 
 def chunk_documents(documents: list[dict]) -> list[dict]:
     """Chia Document thành chunks có id và chunk_index."""
-    # TODO: Chunk bằng RecursiveCharacterTextSplitter.
-    #
-    # from langchain_text_splitters import RecursiveCharacterTextSplitter
-    # splitter = RecursiveCharacterTextSplitter(
-    #     chunk_size=CHUNK_SIZE,
-    #     chunk_overlap=CHUNK_OVERLAP,
-    #     separators=["\n\n", "\n", ". ", " ", ""],
-    # )
-    # chunks = []
-    # for document in documents:
-    #     for index, text in enumerate(splitter.split_text(document["content"])):
-    #         chunks.append({
-    #             "id": f"{document['id']}::chunk-{index}",
-    #             "content": text,
-    #             "metadata": {**document["metadata"], "chunk_index": index},
-    #         })
-    # return chunks
-    raise NotImplementedError("Implement chunk_documents")
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+    splitter = RecursiveCharacterTextSplitter(
+        chunk_size=CHUNK_SIZE,
+        chunk_overlap=CHUNK_OVERLAP,
+        separators=SEPARATORS,
+        # Giữ lại "Điều N." ở đầu chunk, nếu không separator bị cắt mất chữ.
+        keep_separator=True,
+    )
+
+    chunks = []
+    for document in documents:
+        pieces = [text.strip() for text in splitter.split_text(document["content"])]
+        for index, text in enumerate(piece for piece in pieces if piece):
+            chunks.append(
+                {
+                    "id": f"{document['id']}::chunk-{index}",
+                    "content": text,
+                    "metadata": {**document["metadata"], "chunk_index": index},
+                }
+            )
+
+    return chunks
 
 
 def embed_chunks(chunks: list[dict]) -> list[dict]:
     """Thêm embedding vào từng chunk."""
-    # TODO: Embed theo batch và giữ nguyên các field của chunk.
-    #
-    # vectors = embed_texts([chunk["content"] for chunk in chunks])
-    # for chunk, vector in zip(chunks, vectors):
-    #     chunk["embedding"] = vector
-    # return chunks
-    raise NotImplementedError("Implement embed_chunks")
+    vectors = embed_texts([chunk["content"] for chunk in chunks])
+    for chunk, vector in zip(chunks, vectors):
+        chunk["embedding"] = vector
+    return chunks
+
+
+def to_chroma_metadata(metadata: dict) -> dict:
+    """Chroma không nhận giá trị None nên đổi thành chuỗi rỗng."""
+    return {key: ("" if value is None else value) for key, value in metadata.items()}
 
 
 def index_to_vectorstore(chunks: list[dict]) -> None:
-    """Upsert chunks vào ChromaDB."""
-    # TODO: Upsert ids, documents, embeddings và metadatas.
-    #
-    # collection = get_collection()
-    # collection.upsert(
-    #     ids=[chunk["id"] for chunk in chunks],
-    #     documents=[chunk["content"] for chunk in chunks],
-    #     embeddings=[chunk["embedding"] for chunk in chunks],
-    #     metadatas=[chunk["metadata"] for chunk in chunks],
-    # )
-    raise NotImplementedError("Implement index_to_vectorstore")
+    """Upsert chunks vào ChromaDB và dọn chunk không còn nguồn."""
+    collection = get_collection()
+
+    for start in range(0, len(chunks), UPSERT_BATCH_SIZE):
+        batch = chunks[start : start + UPSERT_BATCH_SIZE]
+        collection.upsert(
+            ids=[chunk["id"] for chunk in batch],
+            documents=[chunk["content"] for chunk in batch],
+            embeddings=[chunk["embedding"] for chunk in batch],
+            metadatas=[to_chroma_metadata(chunk["metadata"]) for chunk in batch],
+        )
+        print(f"  Upserted {start + len(batch)}/{len(chunks)}")
+
+    current_ids = {chunk["id"] for chunk in chunks}
+    stale = [item_id for item_id in collection.get(include=[])["ids"] if item_id not in current_ids]
+    if stale:
+        collection.delete(ids=stale)
+        print(f"  Đã xoá {len(stale)} chunk không còn nguồn")
 
 
 def run_pipeline() -> None:
     """Chạy load, chunk, embed và index."""
     documents = load_documents()
+    print(f"Documents: {len(documents)}")
+
     chunks = chunk_documents(documents)
+    print(f"Chunks: {len(chunks)} (size={CHUNK_SIZE}, overlap={CHUNK_OVERLAP})")
+
     embedded_chunks = embed_chunks(chunks)
     index_to_vectorstore(embedded_chunks)
-    print(f"Indexed {len(embedded_chunks)} chunks")
+    print(f"Indexed {len(embedded_chunks)} chunks -> {CHROMA_DIR}")
 
 
 if __name__ == "__main__":
+    # Console Windows mặc định là cp1252 nên print tiếng Việt sẽ crash.
+    if (sys.stdout.encoding or "").lower() != "utf-8":
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
     run_pipeline()
