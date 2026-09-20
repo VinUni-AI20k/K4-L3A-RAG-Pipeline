@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from src.task9_retrieval_pipeline import RERANKER_ENABLED
 from src.task10_generation import generate_with_citation
 from src.task13_conversation_memory import answer_with_memory
+from src.ui_citations import highlight_evidence, number_citations, order_sources
 
 
 load_dotenv()
@@ -14,16 +15,32 @@ st.set_page_config(
 )
 
 
-def show_sources(sources: list[dict], retrieval_source: str) -> None:
-    """Show the exact chunk IDs used for citations and their retrieval details."""
+def render_answer(answer: str, sources: list[dict]) -> list[str]:
+    """Hiện câu trả lời với citation dạng badge số; trả về chunk ID theo số."""
+    answer_html, cited_ids = number_citations(answer, sources)
+    st.markdown(answer_html, unsafe_allow_html=True)
+    return cited_ids
+
+
+def show_sources(sources: list[dict], retrieval_source: str, answer: str = "", cited_ids: list[str] | None = None) -> None:
+    """Nguồn được cite lên trước, đánh số khớp badge, highlight câu bằng chứng."""
     if not sources:
         return
+    cited_ids = cited_ids or []
 
-    with st.expander(f"Nguồn tham khảo ({len(sources)})"):
+    with st.expander(f"Nguồn tham khảo ({len(cited_ids)} được cite / {len(sources)} lấy về)"):
         st.caption(f"Nguồn truy hồi: {retrieval_source}")
-        for source in sources:
+        for number, source in order_sources(sources, cited_ids):
             metadata = source["metadata"]
-            st.write(metadata["title"])
+            if number is not None:
+                st.markdown(
+                    f'<span style="display:inline-block;padding:0 8px;border-radius:8px;'
+                    f'background:#1f77b4;color:#fff;font-weight:600">{number}</span> '
+                    f"**{metadata['title']}**",
+                    unsafe_allow_html=True,
+                )
+            else:
+                st.markdown(f"<span style='opacity:0.6'>◦ {metadata['title']} — lấy về nhưng không được cite</span>", unsafe_allow_html=True)
             st.caption(
                 f"Citation: [{source['id']}] · Tệp: {metadata['source']} · "
                 f"Phương thức: {source['retrieval_method']} · "
@@ -31,7 +48,14 @@ def show_sources(sources: list[dict], retrieval_source: str) -> None:
             )
             if metadata.get("url"):
                 st.write(metadata["url"])
-            st.write(source["content"])
+            if number is not None:
+                body = highlight_evidence(source["content"], answer)
+                st.markdown(
+                    f'<div style="border-left:4px solid #1f77b4;padding-left:10px">{body}</div>',
+                    unsafe_allow_html=True,
+                )
+            else:
+                st.markdown(f"<div style='opacity:0.6'>{highlight_evidence(source['content'], '')}</div>", unsafe_allow_html=True)
             st.divider()
 
 
@@ -57,14 +81,18 @@ st.caption("Nhập câu hỏi để nhận câu trả lời kèm citation và ng
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
-        st.markdown(message["content"])
         if message["role"] == "assistant":
+            cited = render_answer(message["content"], message.get("sources", []))
             if message.get("standalone_query"):
                 st.caption(f"Câu hỏi đã diễn giải: {message['standalone_query']}")
             show_sources(
                 message.get("sources", []),
                 message.get("retrieval_source", "none"),
+                message["content"],
+                cited,
             )
+        else:
+            st.markdown(message["content"])
 
 query = st.chat_input("Nhập câu hỏi...")
 
@@ -87,8 +115,8 @@ if query:
             st.caption(f"Câu hỏi đã diễn giải: {standalone}")
         else:
             standalone = None
-        st.markdown(result["answer"])
-        show_sources(result["sources"], result["retrieval_source"])
+        cited = render_answer(result["answer"], result["sources"])
+        show_sources(result["sources"], result["retrieval_source"], result["answer"], cited)
 
     st.session_state.messages.append({
         "role": "assistant",

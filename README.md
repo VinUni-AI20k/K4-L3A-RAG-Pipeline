@@ -31,6 +31,7 @@ Chatbot hỏi đáp về **IELTS Writing** (band descriptors, tiêu chí chấm 
 | Pipeline | `task9_retrieval_pipeline` | dense + BM25 → RRF → (rerank) → fallback khi cosine top-1 < 0.53 |
 | Generation | `task10_generation` | OpenAI / Gemini / Anthropic, citation `[chunk-id]`, safe refusal |
 | Memory (bonus) | `task13_conversation_memory` | condense câu follow-up thành câu độc lập để retrieval, đưa lịch sử vào prompt; toggle trong UI |
+| UI highlight (bonus) | `ui_citations` | citation → badge số, nguồn được cite đánh số + viền, câu bằng chứng bôi vàng, nguồn không cite mờ |
 | Evaluation | `task11_evaluation` | ragas 0.4.3, 4 metric, A/B dense-only vs hybrid + RRF, C = B + rerank |
 
 Threshold fallback 0.53 hiệu chỉnh bằng `python -m src.task9_retrieval_pipeline --calibrate` (in-domain min 0.59, out-of-domain max 0.47). Fallback dùng cosine score gốc của dense, không dùng RRF score.
@@ -103,10 +104,17 @@ Hybrid + RRF (B) tăng recall nhưng mất precision vì BM25 kéo chunk boilerp
 
 Bonus conversation memory: demo 3 lượt trong [results/memory_demo.md](group_project/evaluation/results/memory_demo.md) — "And for Task 1?" được viết lại thành câu độc lập trước khi retrieval và trả lời đúng có citation.
 
+## Giao diện
+
+![Citation badge và highlight câu bằng chứng](docs/ui_citation_highlight.png)
+
+![Follow-up với conversation memory](docs/ui_conversation_memory.png)
+
 ## Cấu trúc repo
 
 ```
-app.py                         Streamlit chatbot: answer, citation, nguồn, retrieval method, score
+app.py                         Streamlit chatbot: answer, badge citation, nguồn highlight, memory toggle
+src/ui_citations.py            Đánh số citation và highlight câu bằng chứng (thuần Python, có test)
 src/task1..task13_*.py         Pipeline theo từng task (task12 = reranker, task13 = memory; bonus)
 src/contracts.py               Schema Document / Chunk / SearchResult / GenerationResult + validator
 data/landing/                  Dữ liệu gốc (PDF, JSON crawl)
@@ -114,7 +122,7 @@ data/standardized/             Markdown chuẩn hoá có front matter
 group_project/evaluation/      golden_dataset.json, out_of_domain.json, RESULT.md, results/
 reports/                       Báo cáo cá nhân (<student-id>-<short-name>.md), template INDIVIDUAL_REPORT.md
 tests/                         Contract, acceptance, test offline Task 5/10, 12, 13
-docs/                          Module contracts, step-by-step, rubric, gợi ý đề tài
+docs/                          Module contracts, step-by-step, rubric, gợi ý đề tài, ảnh chụp UI
 ```
 
 ## Kiểm tra
@@ -125,7 +133,8 @@ pytest tests/test_acceptance.py -q     # acceptance: dữ liệu, golden set, RE
 pytest tests/test_task5_task10.py -q   # offline, không cần mạng
 pytest tests/test_task12_reranker.py -q # offline, reranker + nhánh pipeline
 pytest tests/test_task13_memory.py -q   # offline, conversation memory
-pytest -q                              # toàn bộ (42 tests)
+pytest tests/test_ui_citations.py -q    # offline, highlight citation
+pytest -q                              # toàn bộ (48 tests)
 ```
 
 ## Tài liệu
