@@ -2,7 +2,7 @@
 
 **Source:** https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/
 
-**Crawled:** 2026-09-20T16:18:58.239078
+**Crawled:** 2026-09-20T15:25:43.408668
 
 ---
 
@@ -94,7 +94,7 @@
     * [Tài liệu video trên Youtube](https://www.youtube.com/@MISASME/)
     * [Chat hỗ trợ trực tuyến](https://helpsme.misa.vn/2023/?soc=open)
   * [Tính năng mới](https://sme.misa.vn/tinh-nang-moi-misa-sme/)
-  * [Tiện ích](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/#)
+  * [Tiện ích](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/)
     * [Công vụ tính lãi vay](https://sme.misa.vn/cong-cu-tinh-lai-vay/)
   * [Dùng thử miễn phí](https://sme.misa.vn/dang-ky/)
 
@@ -166,9 +166,9 @@ Theo ngành nghề
 2945
 [Facebook](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsme.misa.vn%2F215483%2Fnhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet%2F "Facebook")
 [Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/&title=Nh%E1%BB%AFng+tr%C6%B0%E1%BB%9Dng+h%E1%BB%A3p+kh%C3%B4ng+%C4%91%C6%B0%E1%BB%A3c+kh%E1%BA%A5u+tr%E1%BB%AB+thu%E1%BA%BF+gi%C3%A1+tr%E1%BB%8B+gia+t%C4%83ng+k%E1%BA%BF+to%C3%A1n+c%E1%BA%A7n+bi%E1%BA%BFt "Linkedin")
-[ ](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/# "More")
+[ ](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/ "More")
 [![trường hợp không được khấu trừ thuế giá trị gia tăng](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20854'%3E%3C/svg%3E)](https://sme.misa.vn/wp-content/uploads/2020/10/accountant-1.jpg)
-**Mục lục** [hiện](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/#)
+**Mục lục** [hiện](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/)
 [ 1. Lỗi về hóa đơn ](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/#1_Loi_ve_hoa_don)
 [ 2. Hóa đơn từ 20 triệu đồng trở lên mà không có chứng từ thanh toán qua ngân hàng ](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/#2_Hoa_don_tu_20_trieu_dong_tro_len_ma_khong_co_chung_tu_thanh_toan_qua_ngan_hang)
 [ 3. Thuế GTGT đầu vào của số lượng hàng hóa hao hụt vượt định mức ](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/#3_Thue_GTGT_dau_vao_cua_so_luong_hang_hoa_hao_hut_vuot_dinh_muc)
@@ -227,7 +227,7 @@ CóKhông
 
 
 [ACT.TTLAN.A0573](https://sme.misa.vn/author/a-0573/)
-####  [Bài viết liên quan](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/#)[Bài viết cùng tác giả](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/#)
+####  [Bài viết liên quan](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/)[Bài viết cùng tác giả](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/)
 [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20218%20114'%3E%3C/svg%3E)](https://sme.misa.vn/63154/tong-hop-ke-toan-linh-vuc-dich-vu-nha-hang-khach-san/ "Top 9 phần mềm kế toán nhà hàng phổ biến năm 2026")
 ### [Top 9 phần mềm kế toán nhà hàng phổ biến năm 2026](https://sme.misa.vn/63154/tong-hop-ke-toan-linh-vuc-dich-vu-nha-hang-khach-san/ "Top 9 phần mềm kế toán nhà hàng phổ biến năm 2026")
 [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20218%20123'%3E%3C/svg%3E)](https://sme.misa.vn/349681/chi-cuc-thue-quan-6/ "Chi cục Thuế Quận 6 hiện nay: Địa chỉ, liên hệ và cơ quan quản lý")
@@ -240,7 +240,7 @@ CóKhông
 ### [Chi cục Thuế quận Hải Châu: Địa chỉ, số điện thoại và thông tin mới](https://sme.misa.vn/349661/chi-cuc-thue-quan-hai-chau/ "Chi cục Thuế quận Hải Châu: Địa chỉ, số điện thoại và thông tin mới")
 [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20218%20150'%3E%3C/svg%3E)](https://sme.misa.vn/349657/chi-cuc-thue-quan-tan-phu/ "Chi cục Thuế quận Tân Phú: Thông tin địa chỉ và thủ tục mới")
 ### [Chi cục Thuế quận Tân Phú: Thông tin địa chỉ và thủ tục mới](https://sme.misa.vn/349657/chi-cuc-thue-quan-tan-phu/ "Chi cục Thuế quận Tân Phú: Thông tin địa chỉ và thủ tục mới")
-[](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/#)[](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/#)
+[](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/)[](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/)
 > [Phần mềm kế toán doanh nghiệp](https://www.facebook.com/MISA.SME/)
 Tìm kiếm nhiều nhất 
 [phần mềm kế toán](https://sme.misa.vn/)[phần mềm kế toán doanh nghiệp vừa và nhỏ](https://sme.misa.vn/116815/phan-mem-ke-toan-doanh-nghiep-nho/)[quyết toán thuế tndn](https://amis.misa.vn/14398/quyet-toan-thue-thu-nhap-doanh-nghiep/)[htkk mới nhất](https://amis.misa.vn/61453/phan-mem-ho-tro-ke-khai-thue-htkk/)[giá phần mềm kế toán](https://amis.misa.vn/20355/bao-gia-phan-mem-ke-toan-online-misa-amis/)[quyết toán thuế](https://amis.misa.vn/120114/quyet-toan-thue/)
@@ -258,7 +258,7 @@ Số điện thoại *
 Mã số thuế *
 Chức vụ/Vai trò *
 Chức vụ/Vai trò * CEO/ Founder/ Chủ tịch Giám đốc (CFO, CTO, Nhân sự, VP) Quản lý (manager) Nhân viên (staff) Học sinh/ Sinh viên (student) Vị trí khác (other) IT
-Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/#) của MISA *
+Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://sme.misa.vn/215483/nhung-truong-hop-khong-duoc-khau-tru-thue-gia-tri-gia-tang-ke-toan-can-biet/) của MISA *
 ![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20152%200'%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20213%200'%3E%3C/svg%3E)
 MISA SME - PHẦN MỀM KẾ TOÁN UY TÍN CHO DOANH NGHIỆP
 Trụ sở chính:
