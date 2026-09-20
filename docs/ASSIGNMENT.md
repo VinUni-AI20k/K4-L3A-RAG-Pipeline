@@ -6,15 +6,15 @@ Repo có 10 task được implement sẵn khung (stub `NotImplementedError`) tro
 
 | Thành viên | Mã HV | Role | Branch đề xuất | Task chính |
 |---|---|---|---|---|
-| Người A | | Data lead | `task-data` | 1, 2, 3 |
-| Người B | | Indexing lead | `task-index` | 4, 5 |
-| Người C | | Fusion lead | `task-fusion` | 6, 7 |
-| Người D | | Retrieval lead | `task-pipeline` | 8, 9 |
-| Người E | | Gen/UI lead | `task-generation` | 10 + `app.py` |
+| Nguyễn Hồ Nam | 2A202602788 | Data lead | `task-data` | 1, 2, 3 |
+| Nguyễn Văn Chiến | 2A202602926 | Indexing lead | `task-index` | 4, 5 |
+| Vũ Văn Hà | 2A202602589 | Fusion lead | `task-fusion` | 6, 7 |
+| Nguyễn Cảnh Duy | 2A202602815 | Retrieval lead | `task-pipeline` | 8, 9 |
+| Nguyễn Trọng Huy | 2A202602379 | Gen/UI lead | `task-generation` | 10 + `app.py` |
 
 ## Phân công chi tiết
 
-### Người A — Data (Tasks 1, 2, 3)
+### Hồ Nam — Data (Tasks 1, 2, 3)
 
 - Chọn đề tài nhóm (tham khảo [SUGGESTED_TOPICS](SUGGESTED_TOPICS.md)) và thống nhất với cả team.
 - `task1_collect_legal_docs.py`: tải ≥ 3 PDF/DOCX vào `data/landing/legal/` (tên không dấu, > 1 KB).
@@ -28,7 +28,7 @@ pytest tests/test_acceptance.py -q
 riêng: `test_corpus_has_required_legal_documents`, `test_corpus_has_required_news_with_metadata`, `test_standardized_output_covers_both_source_types`.
 **Ghi chú:** khối data chặn mọi pipeline; là milestone đầu tiên, ưu tiên xong trước.
 
-### Người B — Indexing + Dense (Tasks 4, 5)
+### Văn Chiến — Indexing + Dense (Tasks 4, 5)
 
 - `task4_chunking_indexing.py`: `load_documents`, `chunk_documents`, `embed_texts`, `embed_chunks`, `get_collection`, `index_to_vectorstore`.
   - Embed theo `EMBEDDING_PROVIDER` trong `.env`; ID chunk ổn định (`<doc-id>::chunk-<i>`).
@@ -42,7 +42,7 @@ python -m src.task5_semantic_search
 pytest tests/test_contracts.py -k "chunk_documents or semantic_search" -q
 ```
 
-### Người C — Lexical + Fusion (Tasks 6, 7)
+### Văn Hà — Lexical + Fusion (Tasks 6, 7)
 
 - `task6_lexical_search.py`: `build_bm25_index` + `lexical_search` trên cùng corpus chunks VỚI Task 5.
 - `task7_reranking.py`: `rerank_rrf` — công thức `sum(1 / (k + rank))`, rank bắt đầu 1, mặc định `k=60`, chỉ fuse một lần.
@@ -52,7 +52,7 @@ pytest tests/test_contracts.py -k "chunk_documents or semantic_search" -q
 pytest tests/test_contracts.py -k "lexical or rrf" -q
 ```
 
-### Người D — Fallback + Pipeline (Tasks 8, 9)
+### Cảnh Duy — Fallback + Pipeline (Tasks 8, 9)
 
 - `task8_pageindex_vectorless.py`: đọc `PAGEINDEX_API_KEY`, upload + cache IDs, `pageindex_search` trả `SearchResult` method `pageindex`; xử lý lỗi/timeout.
 - `task9_retrieval_pipeline.py`: `retrieve` — dense + BM25 → RRF đúng một lần; so sánh **dense cosine gốc** với `score_threshold` mới quyết định fallback; fallback lỗi trả hybrid, không crash.
@@ -63,7 +63,7 @@ pytest tests/test_contracts.py -k "lexical or rrf" -q
 pytest tests/test_contracts.py -k "retrieve" -q
 ```
 
-### Người E — Generation + UI + Integration (Task 10, `app.py`)
+### Trọng Huy — Generation + UI + Integration (Task 10, `app.py`)
 
 - `task10_generation.py`: `reorder_for_llm` (không mutate), `format_context` (có title + source), `call_llm` dispatch theo `LLM_PROVIDER`, `generate_with_citation`; safe refusal khi thiếu evidence.
 - `app.py`: thay placeholder bằng `generate_with_citation(query, top_k)`; hiển thị answer, `sources`, `retrieval_method`, score.
@@ -79,11 +79,11 @@ streamlit run app.py
 
 | Hạng mục | Chủ trì | Mô tả |
 |---|---|---|
-| Golden dataset ≥ 15 Q&A | A góp phần legal, cả team góp, E tổng hợp | Ghi vào `group_project/evaluation/golden_dataset.json` |
-| Script đánh giá 4 metric (ragas) | E | faithfulness, answer relevance, context recall, context precision |
-| Config A dense-only vs B hybrid+RRF | B + D chạy, C/E phân tích | Cùng dataset/generator/prompt/top_k, chỉ khác retrieval |
-| Hiệu chỉnh threshold & ghi lại | D | Ghi vào `RESULT.md` phần calibration |
-| Hoàn thiện `group_project/evaluation/RESULT.md` | E | Không còn `TODO`, đủ 4 heading acceptance test yêu cầu |
+| Golden dataset ≥ 15 Q&A | Hồ Nam góp phần legal, cả team góp, Trọng Huy tổng hợp | Ghi vào `group_project/evaluation/golden_dataset.json` |
+| Script đánh giá 4 metric (ragas) | Trọng Huy | faithfulness, answer relevance, context recall, context precision |
+| Config A dense-only vs B hybrid+RRF | Văn Chiến + Cảnh Duy chạy, Văn Hà/Trọng Huy phân tích | Cùng dataset/generator/prompt/top_k, chỉ khác retrieval |
+| Hiệu chỉnh threshold & ghi lại | Cảnh Duy | Ghi vào `RESULT.md` phần calibration |
+| Hoàn thiện `group_project/evaluation/RESULT.md` | Trọng Huy | Không còn `TODO`, đủ 4 heading acceptance test yêu cầu |
 | Báo cáo cá nhân | Từng người | Copy `reports/INDIVIDUAL_REPORT.md` → `reports/<ma-hv>-<ten>.md` |
 
 ## Thứ tự làm việc (dependency)
@@ -95,21 +95,21 @@ streamlit run app.py
             [T8 pageindex] ──────────────────────────────────────────────────────→↑(fallback)                        → [evaluation]
 ```
 
-- A làm trước (milestone 0–1). B/C nhận ra khung Task 4–7 sớm (B cần A xong data).
-- D làm Task 8 song song với C; Task 9 chờ 5–7 trả đủ.
-- E viết `reorder_for_llm`/`format_context` sớm (không phụ thuộc data), `call_llm`/`generate_with_citation` chờ Task 9.
+- Hồ Nam làm trước (milestone 0–1). Văn Chiến/Văn Hà nhận ra khung Task 4–7 sớm (Văn Chiến cần Hồ Nam xong data).
+- Cảnh Duy làm Task 8 song song với Văn Hà; Task 9 chờ 5–7 trả đủ.
+- Trọng Huy viết `reorder_for_llm`/`format_context` sớm (không phụ thuộc data), `call_llm`/`generate_with_citation` chờ Task 9.
 - Evaluation chạy cuối khi pipeline end-to-end xong.
 
 ## Thời lượng tham chiếu (lộ trình 3 giờ)
 
 | Mốc | Thời gian | Người nộp |
 |---|---|---|
-| Setup + chọn đề tài | 0–10' | Cả team (A chủ trì tên đề tài) |
-| Data hoàn tất | 10–35' | A |
-| Index + search chạy | 35–65' | B (C chuẩn bị BM25) |
-| RRF + fallback | 65–90' | C + D |
-| Generation + UI | 90–120' | E |
-| Evaluation + reports | 120–150' | Cả team, E tổng hợp |
+| Setup + chọn đề tài | 0–10' | Cả team (Hồ Nam chủ trì tên đề tài) |
+| Data hoàn tất | 10–35' | Hồ Nam |
+| Index + search chạy | 35–65' | Văn Chiến (Văn Hà chuẩn bị BM25) |
+| RRF + fallback | 65–90' | Văn Hà + Cảnh Duy |
+| Generation + UI | 90–120' | Trọng Huy |
+| Evaluation + reports | 120–150' | Cả team, Trọng Huy tổng hợp |
 | Test, demo, push | 150–180' | Cả team |
 
 ## Quy tắc chung
