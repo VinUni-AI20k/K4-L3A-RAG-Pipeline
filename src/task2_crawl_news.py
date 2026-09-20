@@ -21,25 +21,42 @@ from pathlib import Path
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
 
 ARTICLE_URLS = [
-    # TODO: Thêm ít nhất 5 public URL.
+    "https://www.vnulib.edu.vn/index.php/muon-tra-tai-lieu-tvtt",
+    "https://vnulib.edu.vn/index.php/cau-hoi-thuong-gap-tai-tvtt",
+    "https://vnulib.edu.vn/index.php/general/36-dich-vu-thu-vien/147-tap-huan-tv",
+    "https://vnulib.edu.vn/index.php/general/36-dich-vu-thu-vien/146-cung-cap-thong-tin-theo-yeu-cau-tvtt",
+    "https://vnulib.edu.vn/index.php/general/9-tin-tuc-su-kien-thong-bao/428-tb-dieu-chinh-muon-tra-tl-2026",
+    "https://vnulib.edu.vn/index.php/2014-05-22-10-14-38",
+    "https://vnulib.edu.vn/index.php/dang-ky-lam-the-thu-vien",
 ]
 
 
 async def crawl_article(url: str) -> dict:
-    # TODO: Implement crawling logic.
-    #
-    # from datetime import datetime
-    # from crawl4ai import AsyncWebCrawler
-    #
-    # async with AsyncWebCrawler() as crawler:
-    #     result = await crawler.arun(url=url)
-    #     return {
-    #         "url": url,
-    #         "title": result.metadata.get("title", "Unknown"),
-    #         "date_crawled": datetime.now().isoformat(),
-    #         "content_markdown": result.markdown,
-    #     }
-    raise NotImplementedError("Implement crawl_article")
+    from datetime import datetime
+
+    from crawl4ai import AsyncWebCrawler, CacheMode, CrawlerRunConfig
+
+    # vnulib.edu.vn (Joomla) đặt nội dung bài trong div.item-page; lấy riêng
+    # phần này để markdown không lẫn logo, menu, sidebar và bản đồ.
+    config = CrawlerRunConfig(
+        cache_mode=CacheMode.BYPASS,
+        target_elements=[".item-page"],  # không dùng css_selector: nó làm mất <title>
+        excluded_tags=["nav", "header", "footer", "aside", "form", "script", "style"],
+        remove_overlay_elements=True,
+    )
+    async with AsyncWebCrawler() as crawler:
+        result = await crawler.arun(url=url, config=config)
+        if not result.success:
+            raise RuntimeError(result.error_message or "crawl failed")
+        content = str(result.markdown or "").strip()
+        if not content:
+            raise RuntimeError("empty content")
+        return {
+            "url": url,
+            "title": (result.metadata or {}).get("title") or "Unknown",
+            "date_crawled": datetime.now().isoformat(),
+            "content_markdown": content,
+        }
 
 
 async def crawl_all() -> None:
