@@ -102,6 +102,31 @@ Về rerank là không bắt buộc, các bận có thể sử dụng Jina, ho�
 - Calibrate threshold bằng query đúng domain và query ngoài domain.
 - Dùng dense cosine score gốc để quyết định fallback.
 
+Chạy pipeline local trước (không cần LLM API key):
+
+```powershell
+.\.venv\Scripts\python.exe -m src.task9_retrieval_pipeline
+```
+
+Ngưỡng mặc định `SCORE_THRESHOLD=0.62` chỉ là điểm khởi đầu: trên index hiện
+tại, 15 câu golden có top-1 dense score `0.632–0.803`; 3 câu ngoài lĩnh vực
+đạt `0.413–0.478`, còn 4 câu hỏi về giá sách/học phí/tác giả/lịch thi đạt
+`0.543–0.607`. Khoảng cách ở ranh giới rất nhỏ, nên cần đo lại khi thay
+corpus hoặc embedding model và không coi ngưỡng là bằng chứng đã có đáp án.
+
+PageIndex Cloud là tùy chọn và cần `PAGEINDEX_API_KEY`. Chỉ sau khi có quyền
+đưa tài liệu lên dịch vụ ngoài, điền key vào `.env` và **chủ động** chạy:
+
+```powershell
+.\.venv\Scripts\python.exe -m src.task8_pageindex_vectorless
+```
+
+Task 8 upload 3 PDF SGK gốc và tạo 5 PDF chữ tạm từ bài viết Markdown;
+`pageindex_doc_ids.json` và `pageindex_pdfs/` được ignore. Chờ PageIndex xử
+lý xong trước khi thử fallback. Truy vấn thông thường không tự upload. Nếu
+không có key, chưa upload hoặc dịch vụ lỗi, Task 9 giữ kết quả hybrid thay vì
+crash. Mỗi lần fallback chỉ thử tối đa 3 tài liệu, ưu tiên nguồn khớp BM25.
+
 ## 8. Generation có citation
 
 Hoàn thiện Task 10:
