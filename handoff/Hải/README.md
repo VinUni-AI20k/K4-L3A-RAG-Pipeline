@@ -69,7 +69,7 @@ Nhớ giữ nguyên golden dataset, generator, evaluator, prompt và `top_k` —
 chiến lược retrieval.
 
 Cũng nên đo **latency**: cross-encoder chấm lại từng cặp (query, chunk) nên chậm
-hơn RRF rõ rệt. Bảng `experiments.md` có cột "Latency/cost delta" để ghi.
+hơn RRF rõ rệt. Bảng thí nghiệm có cột "Latency/cost delta" để ghi.
 
 ---
 
@@ -109,7 +109,7 @@ python -m group_project.evaluation.eval_pipeline
 Một lần eval mất khoảng 10–12 phút mỗi config.
 
 **Lưu ý về độ tin cậy:** dao động giữa hai lần chạy đã được đo là **khoảng
-0.01**, ghi trong `group_project/evaluation/experiments.md`. Chênh lệch dưới 0.05
+0.01**, ghi trong `group_project/evaluation/experiments/huy.md`. Chênh lệch dưới 0.05
 thì đừng kết luận là cải thiện.
 
 ---
@@ -120,16 +120,17 @@ thì đừng kết luận là cải thiện.
 - [ ] Có bảng A/B ba chiều (dense / hybrid+RRF / hybrid+RRF+cross-encoder)
 - [ ] HyDE hoặc query expansion chạy được, có A/B riêng
 - [ ] `pytest -q` vẫn 20/20
-- [ ] Thêm **2 dòng** vào bảng trong `group_project/evaluation/experiments.md`,
-      kèm cả cột latency — **thêm dòng, đừng ghi đè bảng của người khác**, file
-      đó dùng chung cả nhóm
+- [ ] Thêm **2 dòng** vào bảng trong `group_project/evaluation/experiments/hai.md`,
+      kèm cả cột latency — file này **chỉ của bạn**, không ai
+      khác sửa nên không bao giờ conflict
 - [ ] Mở PR từ `feat/advanced-rerank` vào `main`
 - [ ] Viết báo cáo cá nhân `reports/2A202602967-hai.md` theo template
       `group_project/ịndividual/INDIVIDUAL_REPORT.md`
 
 Nếu đo ra cross-encoder **không** tốt hơn RRF thì vẫn ghi đúng như vậy — một
 thí nghiệm bác bỏ giả thuyết mà có số liệu vẫn được tính điểm phân tích, và
-`experiments.md` đã có sẵn một ví dụ như thế để bạn tham khảo cách trình bày.
+`group_project/evaluation/experiments/huy.md` đã có sẵn một ví dụ như thế để
+bạn tham khảo cách trình bày.
 
 ---
 

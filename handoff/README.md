@@ -32,9 +32,17 @@ góp đối chiếu được — đúng thứ mà template báo cáo cá nhân y
 
 ## File dùng chung
 
-`group_project/evaluation/experiments.md` là bảng kết quả thí nghiệm của cả
-nhóm. **Thêm dòng vào bảng, đừng ghi đè bảng của người khác** — nếu hai người
-cùng ghi đè thì merge sẽ xung đột và một bên mất số liệu.
+Không còn file dùng chung nào phải tranh nhau sửa:
+
+- `group_project/evaluation/experiments/<ten>.md` — mỗi người một file, script
+  `eval_pipeline.py` tự ghép lại thành một bảng trong `RESULT.md`.
+- `group_project/evaluation/per_question_scores.json` đã được gitignore vì nó
+  sinh lại mỗi lần chạy eval.
+- `RESULT.md` vẫn commit (acceptance test đọc nó), nhưng **chỉ regenerate trên
+  `main` sau khi merge** — đừng commit nó từ nhánh feature.
+- `src/task9_retrieval_pipeline.py` có sẵn hai hook `expand_query()` và
+  `post_rerank()` cùng hằng `CANDIDATE_MULTIPLIER`, nên ba gói sửa ba chỗ khác
+  nhau trong cùng file mà không chồng dòng.
 
 ## Xong thì
 

@@ -52,7 +52,15 @@ ANALYSIS_PLACEHOLDER = """| Priority | Action | Evidence from failure analysis |
 
 # Thí nghiệm phải chạy tay (đổi cấu hình rồi chạy lại eval), nên kết quả cũng
 # giữ ở sidecar thay vì sinh tự động.
-EXPERIMENTS_PATH = EVALUATION_DIR / "experiments.md"
+#
+# Mỗi thành viên một file trong experiments/ và script ghép lại thành một bảng.
+# Nếu để chung một file thì ba người cùng append sẽ conflict mỗi lần merge.
+EXPERIMENTS_DIR = EVALUATION_DIR / "experiments"
+
+EXPERIMENTS_HEADER = (
+    "| Experiment | Baseline | Metric delta | Latency/cost delta | Conclusion |\n"
+    "| ---------- | -------- | -----------: | -----------------: | ---------- |"
+)
 
 EXPERIMENTS_PLACEHOLDER = """| Experiment | Baseline | Metric delta | Latency/cost delta | Conclusion |
 | ---------- | -------- | -----------: | -----------------: | ---------- |
@@ -278,6 +286,29 @@ def _worst_rows(frames: dict, golden_dataset: list[dict], limit: int = 3) -> lis
     return records[:limit]
 
 
+def _collect_experiments() -> str:
+    """Ghép các file trong experiments/ thành một bảng Markdown."""
+    if not EXPERIMENTS_DIR.is_dir():
+        return EXPERIMENTS_PLACEHOLDER
+
+    rows: list[str] = []
+    for path in sorted(EXPERIMENTS_DIR.glob("*.md")):
+        for line in path.read_text(encoding="utf-8").splitlines():
+            stripped = line.strip()
+            # Bỏ comment hướng dẫn và dòng header nếu ai đó lỡ chép vào.
+            if not stripped.startswith("|"):
+                continue
+            if set(stripped) <= set("|-: "):
+                continue
+            if stripped.startswith("| Experiment"):
+                continue
+            rows.append(stripped)
+
+    if not rows:
+        return EXPERIMENTS_PLACEHOLDER
+    return EXPERIMENTS_HEADER + "\n" + "\n".join(rows)
+
+
 def export_results(summaries: dict, frames: dict, golden_dataset: list[dict]) -> None:
     """Ghi RESULT.md theo đúng các heading mà tests/test_acceptance.py yêu cầu."""
     a, b = summaries["A"], summaries["B"]
@@ -290,10 +321,7 @@ def export_results(summaries: dict, frames: dict, golden_dataset: list[dict]) ->
     else:
         analysis = ANALYSIS_PLACEHOLDER
 
-    if EXPERIMENTS_PATH.is_file():
-        experiments = EXPERIMENTS_PATH.read_text(encoding="utf-8").strip()
-    else:
-        experiments = EXPERIMENTS_PLACEHOLDER
+    experiments = _collect_experiments()
 
     metric_rows = "\n".join(
         f"| {METRIC_LABELS[key]} | {_fmt(a[key])} | {_fmt(b[key])} | "

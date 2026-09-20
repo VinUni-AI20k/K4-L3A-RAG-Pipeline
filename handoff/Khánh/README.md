@@ -89,7 +89,7 @@ Cân nhắc khi làm:
   `pytest` sẽ đỏ.
 
 **Có một manh mối mạnh ủng hộ hướng này:** thí nghiệm ngược đã được chạy và ghi
-trong `group_project/evaluation/experiments.md` — khi **bỏ bớt** phần text mang
+trong `group_project/evaluation/experiments/huy.md` — khi **bỏ bớt** phần text mang
 tiêu đề ra khỏi chunk, điểm Config B tụt từ 0.745 xuống 0.527 (−0.218). Tức là
 text mang tiêu đề đang giúp retrieval; thêm vào nhiều hơn nhiều khả năng giúp
 tiếp.
@@ -136,9 +136,9 @@ Một lần eval mất khoảng 10–12 phút (15 câu × 2 config, gọi DeepSe
 - [ ] Số câu bị từ chối của Config B giảm xuống dưới 2/15 (đếm số điểm `0.000`
       trong `group_project/evaluation/per_question_scores.json`)
 - [ ] `pytest -q` vẫn 20/20
-- [ ] Thêm **2 dòng** vào bảng trong `group_project/evaluation/experiments.md`,
-      mỗi việc một dòng, với số liệu thật — **thêm dòng, đừng ghi đè bảng của
-      người khác**, file đó dùng chung cả nhóm
+- [ ] Thêm **2 dòng** vào bảng trong `group_project/evaluation/experiments/khanh.md`,
+      mỗi việc một dòng, với số liệu thật. File này **chỉ của bạn**, không ai
+      khác sửa nên không bao giờ conflict
 - [ ] Mở PR từ `feat/retrieval-quality` vào `main`
 - [ ] Viết báo cáo cá nhân `reports/2A202602546-khanh.md` theo template
       `group_project/ịndividual/INDIVIDUAL_REPORT.md`

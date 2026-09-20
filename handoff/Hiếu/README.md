@@ -125,9 +125,9 @@ Sau khi mở rộng dataset lên 30–40 câu, một lần eval sẽ mất kho�
 - [ ] Follow-up question trả lời đúng, có kịch bản demo 3–4 câu
 - [ ] UI highlight đoạn trích dẫn (hoặc deploy online)
 - [ ] `pytest -q` vẫn 20/20
-- [ ] Thêm dòng vào bảng trong `group_project/evaluation/experiments.md` nếu có
-      đo A/B — **thêm dòng, đừng ghi đè bảng của người khác**, file đó dùng
-      chung cả nhóm
+- [ ] Thêm dòng vào bảng trong `group_project/evaluation/experiments/hieu.md` nếu có
+      đo A/B — file này **chỉ của bạn**, không ai khác sửa
+      nên không bao giờ conflict
 - [ ] Mở PR từ `feat/eval-ui` vào `main`
 - [ ] Viết báo cáo cá nhân `reports/2A202602919-hieu.md` theo template
       `group_project/ịndividual/INDIVIDUAL_REPORT.md`

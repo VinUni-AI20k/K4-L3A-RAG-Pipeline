@@ -35,6 +35,29 @@ load_dotenv()
 SCORE_THRESHOLD = float(os.getenv("SCORE_THRESHOLD") or 0.53)
 DEFAULT_TOP_K = 5
 
+# Số ứng viên lấy từ mỗi ranker trước khi fuse, tính theo bội của top_k. Nới
+# rộng giúp những chunk chỉ một ranker tìm ra có cơ hội lọt vào kết quả, nhưng
+# cũng kéo thêm chunk nhiễu — phải đo cả recall lẫn precision khi đổi.
+CANDIDATE_MULTIPLIER = 2
+
+
+def expand_query(query: str) -> str:
+    """Hook biến đổi query trước khi dense search (HyDE, query expansion...).
+
+    Mặc định trả nguyên query. Ai làm HyDE thì thay thân hàm này, không cần
+    sửa retrieve().
+    """
+    return query
+
+
+def post_rerank(query: str, results: list[dict], top_k: int) -> list[dict]:
+    """Hook xếp hạng lại sau RRF (cross-encoder, LLM rerank...).
+
+    Mặc định trả nguyên kết quả. Ai làm cross-encoder thì thay thân hàm này.
+    Output phải giữ đúng SearchResult contract.
+    """
+    return results
+
 
 def retrieve(
     query: str,
@@ -43,20 +66,22 @@ def retrieve(
     use_reranking: bool = True,
 ) -> list[dict]:
     """Trả về hybrid hoặc pageindex SearchResult."""
+    candidates = top_k * CANDIDATE_MULTIPLIER
+
     try:
-        dense = semantic_search(query, top_k=top_k * 2)
+        dense = semantic_search(expand_query(query), top_k=candidates)
     except Exception as error:
         print(f"Semantic search lỗi: {error}")
         dense = []
 
     try:
-        sparse = lexical_search(query, top_k=top_k * 2)
+        sparse = lexical_search(query, top_k=candidates)
     except Exception as error:
         print(f"Lexical search lỗi: {error}")
         sparse = []
 
     if use_reranking:
-        hybrid = rerank_rrf([dense, sparse], top_k=top_k)
+        hybrid = post_rerank(query, rerank_rrf([dense, sparse], top_k=top_k), top_k)
     else:
         hybrid = dense[:top_k]
 
