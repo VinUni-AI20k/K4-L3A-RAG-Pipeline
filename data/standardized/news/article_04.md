@@ -1,0 +1,43 @@
+# VAMC duoc mua no xau theo gia thi truong va bang trai phieu dac biet - BNews TTXVN
+
+**Nguồn:** https://bnews.vn/vamc-duoc-mua-no-xau-theo-gia-thi-truong-va-bang-trai-phieu-dac-biet/378200.html
+
+**Ngày crawl:** 2026-09-20T15:10:57.858547
+
+---
+
+# VAMC duoc mua no xau theo gia thi truong va bang trai phieu dac biet theo Nghi dinh 359/2026/ND-CP
+
+Ngay 17/9/2026, Chinh phu ban hanh Nghi dinh so 359/2026/ND-CP quy dinh ve thanh lap, to chuc, hoat dong va co che tai chinh cua Cong ty Quan ly tai san cua cac to chuc tin dung Viet Nam (VAMC), co hieu luc tu ngay 06/11/2026.
+
+## Von dieu le va mo hinh hoat dong
+
+VAMC la doanh nghiep dac thu, hinh thuc cong ty trach nhiem huu han mot thanh vien do Nha nuoc so huu 100% von dieu le, chiu su quan ly, thanh tra, giam sat cua Ngan hang Nha nuoc.
+
+Von dieu le duoc quy dinh la 5.000 ty dong.
+
+Nguyen tac hoat dong: Lay thu bu chi, khong vi muc tieu loi nhuan; dam bao cong khai, minh bach trong hoat dong mua, xu ly no xau; han che rui ro va chi phi.
+
+## Phuong thuc mua no xau
+
+VAMC duoc mua khoan no xau cua cac to chuc tin dung Viet Nam theo hai hinh thuc:
+
+- Theo gia tri thi truong
+- Bang trai phieu dac biet
+
+Doi voi to chuc tin dung lien doanh, 100% von nuoc ngoai va chi nhanh ngan hang nuoc ngoai, VAMC mua no theo gia tri thi truong.
+
+VAMC co co che chuyen cac khoan no xau da mua bang trai phieu dac biet sang mua theo gia tri thi truong.
+
+## Nghiep vu xu ly no xau
+
+Sau khi mua no, VAMC khong chi dung lai o viec doi no hoac ban tai san bao dam ma con duoc thuc hien:
+
+- Co cau lai thoi han tra no
+- Chuyen no thanh von gop hoac co phan cua khach hang vay
+- Dau tu, sua chua, khai thac va cho thue tai san bao dam
+- Bao lanh vay von cho khach hang co phuong an san xuat kinh doanh kha thi
+
+## Boi canh ban hanh
+
+Nghi dinh 359/2026/ND-CP la mot phan trong lo trinh hoan thien khung phap ly giai doan 2026-2030, gan lien voi De an hien dai hoa he thong ngan hang va xu ly cac to chuc tin dung yeu kem theo Quyet dinh so 1809/QD-TTg ngay 18/9/2026. Muc tieu la nang cao hieu qua hoat dong cua VAMC, phat trien thi truong mua ban no tai Viet Nam va ho tro tang truong kinh te.
