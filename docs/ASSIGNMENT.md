@@ -6,9 +6,9 @@ Repo có 10 task được implement sẵn khung (stub `NotImplementedError`) tro
 
 | Thành viên | Mã HV | Role | Branch đề xuất | Task chính |
 |---|---|---|---|---|
-| Nguyễn Hồ Nam | 2A202602788 | Data lead | `task-data` | 1, 2, 3 |
+| Vũ Văn Hà | 2A202602788 | Data lead | `task-data` | 1, 2, 3 |
 | Nguyễn Văn Chiến | 2A202602926 | Indexing lead | `task-index` | 4, 5 |
-| Vũ Văn Hà | 2A202602589 | Fusion lead | `task-fusion` | 6, 7 |
+| Nguyễn Hồ Nam | 2A202602589 | Fusion lead | `task-fusion` | 6, 7 |
 | Nguyễn Cảnh Duy | 2A202602815 | Retrieval lead | `task-pipeline` | 8, 9 |
 | Nguyễn Trọng Huy | 2A202602379 | Gen/UI lead | `task-generation` | 10 + `app.py` |
 
@@ -42,7 +42,7 @@ python -m src.task5_semantic_search
 pytest tests/test_contracts.py -k "chunk_documents or semantic_search" -q
 ```
 
-### Văn Hà — Lexical + Fusion (Tasks 6, 7)
+### Nam — Lexical + Fusion (Tasks 6, 7)
 
 - `task6_lexical_search.py`: `build_bm25_index` + `lexical_search` trên cùng corpus chunks VỚI Task 5.
 - `task7_reranking.py`: `rerank_rrf` — công thức `sum(1 / (k + rank))`, rank bắt đầu 1, mặc định `k=60`, chỉ fuse một lần.
@@ -81,7 +81,7 @@ streamlit run app.py
 |---|---|---|
 | Golden dataset ≥ 15 Q&A | Hồ Nam góp phần legal, cả team góp, Trọng Huy tổng hợp | Ghi vào `group_project/evaluation/golden_dataset.json` |
 | Script đánh giá 4 metric (ragas) | Trọng Huy | faithfulness, answer relevance, context recall, context precision |
-| Config A dense-only vs B hybrid+RRF | Văn Chiến + Cảnh Duy chạy, Văn Hà/Trọng Huy phân tích | Cùng dataset/generator/prompt/top_k, chỉ khác retrieval |
+| Config A dense-only vs B hybrid+RRF | Văn Chiến + Cảnh Duy chạy, Nam/Trọng Huy phân tích | Cùng dataset/generator/prompt/top_k, chỉ khác retrieval |
 | Hiệu chỉnh threshold & ghi lại | Cảnh Duy | Ghi vào `RESULT.md` phần calibration |
 | Hoàn thiện `group_project/evaluation/RESULT.md` | Trọng Huy | Không còn `TODO`, đủ 4 heading acceptance test yêu cầu |
 | Báo cáo cá nhân | Từng người | Copy `reports/INDIVIDUAL_REPORT.md` → `reports/<ma-hv>-<ten>.md` |
@@ -95,8 +95,8 @@ streamlit run app.py
             [T8 pageindex] ──────────────────────────────────────────────────────→↑(fallback)                        → [evaluation]
 ```
 
-- Hồ Nam làm trước (milestone 0–1). Văn Chiến/Văn Hà nhận ra khung Task 4–7 sớm (Văn Chiến cần Hồ Nam xong data).
-- Cảnh Duy làm Task 8 song song với Văn Hà; Task 9 chờ 5–7 trả đủ.
+- Hồ Nam làm trước (milestone 0–1). Văn Chiến/Nam nhận ra khung Task 4–7 sớm (Văn Chiến cần Hồ Nam xong data).
+- Cảnh Duy làm Task 8 song song với Nam; Task 9 chờ 5–7 trả đủ.
 - Trọng Huy viết `reorder_for_llm`/`format_context` sớm (không phụ thuộc data), `call_llm`/`generate_with_citation` chờ Task 9.
 - Evaluation chạy cuối khi pipeline end-to-end xong.
 
@@ -106,8 +106,8 @@ streamlit run app.py
 |---|---|---|
 | Setup + chọn đề tài | 0–10' | Cả team (Hồ Nam chủ trì tên đề tài) |
 | Data hoàn tất | 10–35' | Hồ Nam |
-| Index + search chạy | 35–65' | Văn Chiến (Văn Hà chuẩn bị BM25) |
-| RRF + fallback | 65–90' | Văn Hà + Cảnh Duy |
+| Index + search chạy | 35–65' | Văn Chiến (Nam chuẩn bị BM25) |
+| RRF + fallback | 65–90' | Nam + Cảnh Duy |
 | Generation + UI | 90–120' | Trọng Huy |
 | Evaluation + reports | 120–150' | Cả team, Trọng Huy tổng hợp |
 | Test, demo, push | 150–180' | Cả team |
