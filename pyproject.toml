@@ -35,8 +35,13 @@ dependencies = [
     # torch>=2.5, không có trên macOS x86_64 (torch dừng ở 2.2.2). Khoảng cũ
     # ">=2.2.0,<7" quá lỏng nên pip kéo về 6.1.0 -> transformers 5.17 -> vỡ.
     # BAAI/bge-m3 chạy bình thường trên sentence-transformers 3.x.
+    # Trần transformers <4.50: từ 4.50 trở đi transformers chặn torch.load
+    # với torch < 2.6 (chốt CVE-2025-32434), kể cả khi weights_only=True.
+    # Trên macOS x86_64 (Intel) torch không có wheel nào mới hơn 2.2.2, và
+    # BAAI/bge-m3 không có bản safetensors trên HuggingFace, nên không thể
+    # lách chốt này bằng cách nâng torch hay đổi định dạng checkpoint.
     "sentence-transformers>=3.0.0,<4",
-    "transformers>=4.41.0,<5",
+    "transformers>=4.41.0,<4.50",
     "streamlit>=1.35.0,<2",
 ]
 
