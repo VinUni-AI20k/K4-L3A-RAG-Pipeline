@@ -15,51 +15,107 @@
 | 3 | Thu thập dữ liệu | **Khanh** | 🟡 MỘT PHẦN — legal ✅ / news ⏸️ PENDING |
 | 4 | Chuẩn hóa Markdown | **Khanh** | ✅ XONG — legal 4/4 ✓ (news PENDING do Mục 3B hoãn) |
 | 5 | Chunk, embedding & index | **Khanh** | ✅ XONG — 1392 chunk đã index, dim 1024 ✓ |
-| 6 | Xây dựng hybrid retrieval | **Minh** | ⏳ CHƯA LÀM |
-| 7 | Fallback & retrieval pipeline | **Minh** | ⏳ CHƯA LÀM |
-| 8 | Generation có citation | **Minh** | ⏳ CHƯA LÀM |
-| 9 | Chatbot & evaluation | **Hùng** | ⏳ CHƯA LÀM |
+| 6 | Xây dựng hybrid retrieval | **Minh** | ❌ VẪN LÀ STUB — 7/15 contract test FAIL |
+| 7 | Fallback & retrieval pipeline | **Minh** | ❌ VẪN LÀ STUB — 7/15 contract test FAIL |
+| 8 | Generation có citation | **Minh** | ❌ VẪN LÀ STUB — 7/15 contract test FAIL |
+| 9 | Chatbot & evaluation | **Hùng** | 🟡 PHẦN LÀM (khác spec) — UI ✅ / Eval ⏸️ CHƯA CHẠY |
 | 10 | Kiểm tra & nộp bài | *Chưa phân công* | ⏳ CHƯA LÀM |
 
 ---
 
-## 👉 Bước Tiếp Theo
+## 👉 Bước Tiếp Theo — CẬP NHẬT NGÀY 2026-09-21
 
-**✅ Mục 5 (Khanh) ĐÃ HOÀN THÀNH:** Vector store sẵn sàng với 1392 chunk trong collection `rag_documents`, embedding dimension 1024. Blocker torch/numpy/transformers đã được giải quyết.
+### ❌ PHÁT HIỆN NGÀY 2026-09-21: Minh Vẫn Chưa Bắt Đầu Task 5-10
 
-**Output pipeline thực tế:**
+- **Trạng thái:** `src/task5-10` vẫn là stub hoàn toàn (7/15 contract test FAIL)
+- **Nguyên nhân:** Không có giải thích rõ ràng; có thể Minh bị chặn bởi điều gì đó hoặc quên
+- **Tác động:** Nhóm sẽ **mất 45 điểm** nếu không implement trước deadline
+- **Hành động cần thiết:**
+  1. **Minh bắt đầu **NGAY** — không hoãn thêm**
+  2. Tuân theo comment giải thích trong từng file (`# TODO:` sections đã được giải thích từng dòng)
+  3. Ước lượng ~3-4 giờ để implement + test + debug
+  4. **Minh cần commit từng task (5, 6, 7, 9, 10) riêng để có thể trace được phần việc trong report cá nhân**
+
+### ✅ Hùng Đã Hoàn Thành Chatbot (Nhưng Khác Spec)
+
+- **Chatbot UI:** ✅ Chạy được qua `python -m chatbot.server` (HTTP server + HTML tĩnh)
+- **Golden dataset:** ✅ 20 câu, test pass
+- **Còn lại:** 
+  - [ ] Chạy `python group_project/evaluation/run_evaluation.py` để thực thi evaluation (nếu Minh xong task10 + có thời gian)
+  - [ ] Điền `reports/2A202602942-HUNGLM.md` (individual report) — copy template và ghi phần việc của Hùng
+
+### 🔵 News (Mục 3 Part B) — VẨN PENDING
+
+- [ ] Cần crawl ≥5 bài vào `data/landing/news/` để acceptance test pass
+- [ ] Nếu không có news, `pytest -q` không thể pass toàn bộ
+- **Đề xuất:** Khanh hoặc Hùng (hoặc cả hai) crawl 5 bài trong 30 phút khi có lúc, không cần chờ Minh xong
+
+### 📌 Dòng Thời Gian Khuyến Nghị
+
 ```
-[task4] Đã embed 1392/1392 chunk.
-[task4] Đã index 1392/1392 chunk vào 'rag_documents'.
-[task4] Hoàn tất: 4 document, 1392 chunk, 1392 chunk đã index.
-EXIT_CODE:0
+Hiện tại (sáng 2026-09-21):
+├─ Minh: Bắt đầu task5 NGAY, xong task5→10 trong ~3-4 giờ
+├─ Hùng (song parallel): Chạy eval (30') + viết report (30') khi Minh xong task10
+├─ Khanh (song parallel): Crawl news 5 bài (30') + chuẩn hoá (15')
+└─ Cả nhóm (cuối cùng): Chạy `pytest -q` toàn bộ, chỉnh sửa nếu lỗi, push repo
 ```
 
-**Kiểm chứng ChromaDB:**
-- Collection name: `rag_documents`, count: 1392 ✓
-- Embedding dimension: 1024 ✓
-- Chunk ID format: `{doc_id}::chunk-{index}` ✓
-- Re-index (upsert) không nhân bản ✓
-- Contract test: **2 PASSED** ✓
-
----
-
-**🚀 Minh bắt đầu Mục 6 NGAY:**
-- **QUAN TRỌNG:** Task 5 phải import `embed_texts` **và** `get_collection` từ `src.task4_chunking_indexing` **theo tên cấp module**, vì test monkeypatch đúng hai tên đó trên `src.task5_semantic_search`.
-- Contract test của Mục 6 monkeypatch embedding, nên code pass test được mà không cần `chroma_db/`.
-- Demo end-to-end thì cần `chroma_db/` — vector store sẵn sàng.
-
----
-
-**Song parallel — Hùng:** Soạn golden dataset ≥15 câu dựa trên **4 văn bản luật đã có** (Luật Nhà ở, Luật Kinh doanh BĐS, Luật Bảo vệ quyền lợi người tiêu dùng 2023, mẫu số 1A). *Bộ luật Dân sự đã bị gỡ.* Không cần code chạy.
-
----
-
-**News (Mục 3 Part B):** vẫn PENDING. Phải làm trước Mục 10 vì `pytest -q` cần xanh toàn bộ.
+**Deadline hôm nay hoặc ngày mai?** → Phải xác nhận với giảng viên. Nếu hôm nay 17:00, **không kịp** vì Minh cần 3-4 giờ; nếu ngày mai cả sáng, **kịp được nếu Minh bắt đầu NGAY**.
 
 ---
 
 ## ⚠️ Ghi Chú Quan Trọng
+
+### ⚠️ Hai Nhánh Implementation Song Song — TÌNH HUỐNG THỰC
+
+**Tóm tắt:** Hùng đã viết một implementation **hoàn toàn độc lập** (`chatbot/` package) cho mục 9, không dùng các hàm từ `src/task5_semantic_search.py` → `src/task10_generation.py` của Minh. Kết quả là nhóm hiện có **hai implementation hybrid retrieval + generation riêng biệt, khác nhau hoàn toàn**:
+
+#### Nhánh A: `src/task5-10` (Minh phụ trách — hiện là stub)
+- Tuân theo contract trong `docs/MODULE_CONTRACTS.md` (schema, interface, test cụ thể)
+- Dense embedding: dùng `embed_texts()` chung từ task4, embedding dimension = 1024
+- ChromaDB: tham vấn vector store đã index (1392 chunk)
+- Hybrid: RRF gộp dense + BM25
+- LLM: dispatch theo LLM_PROVIDER
+- **Status:** 7 contract test FAIL, chưa implement
+
+#### Nhánh B: `chatbot/` (Hùng phụ trách — đã implement)
+- Độc lập, không import từ `src/`
+- Dense embedding: TF-IDF (default) hoặc fastembed (không dùng `sentence-transformers` vì PyTorch bị chặn)
+- Corpus: load từ `data/standardized/legal/` trực tiếp, chunk lại theo article-aware (không dùng ChromaDB)
+- Hybrid: RRF gộp dense + BM25
+- LLM: dispatch theo LLM_PROVIDER (cùng config)
+- **Status:** ✅ Hoàn toàn implement, chạy được
+
+#### Tác Động Lên Rubric (90 điểm)
+
+| Tiêu chí | Điểm | Hiện trạng | Vấn đề |
+|----------|------|-----------|--------|
+| Dense, BM25, RRF | 20 | Nhánh A (Minh): stub ❌ | Nếu chấm theo contract test, 20 điểm này sẽ bị mất |
+| Retrieval pipeline | 10 | Nhánh A: stub ❌ | Nhánh B (Hùng) có, nhưng không theo contract → không đủ để thay thế Minh |
+| Generation + citation | 15 | Nhánh B: có `generate_with_citation()` ✅ | Nhánh A chưa implement, nhưng Nhánh B chạy được |
+| Chatbot UI | 10 | Nhánh B: HTTP server ✅ | Spec yêu cầu Streamlit; HTTP server khác cách làm → rủi ro mất điểm |
+| **Tổng rubric chực hiện:** | **45/90** | Chỉ có nhánh B chạy được | Nhánh A vẫn là stub → **mất 45 điểm từ mục 6-8** |
+
+#### Hai Lựa Chọn Tiến Hành (Quyết định của nhóm)
+
+**Lựa Chọn 1: Giữ nguyên hai nhánh — Minh implement `src/task5-10` theo contract**
+- ✅ Ưu điểm: Đầy đủ contract test, schema chuẩn hóa, khả năng reuse cao
+- ❌ Nhược điểm: Hùng phải tách `chatbot/` thành wrapper gọi `src/task10_generation.py` thay vì tự implement; hoặc chấp nhận mất 45 điểm nếu giảng viên chỉ chấm theo contract test
+- ⏱️ **Thời gian:** Minh cần ~3-4 giờ để implement task5-10 theo spec (đủ vì còn ~6 giờ tổng cộng)
+
+**Lựa Chọn 2: Chấp nhận `chatbot/` làm giải pháp chính, wrap lại cho khớp interface**
+- ✅ Ưu điểm: Nhánh B đã chạy, có thể nhanh chóng tạo wrapper để contract test pass
+- ❌ Nhược điểm: Vượt scope, phải refactor `chatbot/engine.py` để khớp schema contract; vẫn không khác biệt lớn với nhánh B
+- ⏱️ **Thời gian:** Nhanh, ~1-2 giờ, nhưng không giải quyết root cause (Minh chưa implement)
+
+#### Khuyến Nghị
+
+**Hành động khẩn cấp (nên làm ngay hôm nay hay tối hôm nay):**
+1. Minh và Hùng họp 10 phút để chọn lựa chọn 1 hay 2
+2. **Nếu chọn lựa chọn 1:** Minh bắt đầu implement task5-10 ngay — đây là critical path, phần của Minh là nút thắt cổ chai lớn nhất
+3. **Nếu chọn lựa chọn 2:** Hùng chuẩn bị wrapper + Minh review contract test để pass
+
+Không thể hoãn vì acceptance test `pytest -q` không pass (3 câu fail do news + evaluation) cho tới khi lựa chọn được chốt.
 
 ### Mục 10 — Phân Công Chưa Rõ
 
@@ -125,17 +181,22 @@ Máy chạy **macOS x86_64 (Intel)** — PyTorch **ngừng build wheel macOS Int
 - **Cách xử lý đã chọn:** Thay bằng nguồn PDF khác có text layer (`luat_bao_ve_nguoi_tieu_dung_2023.pdf`). Nhanh, vài phút. Cách còn lại là OCR (tốn thời gian, cần cài tesseract).
 - **Khuyến nghị:** Nếu sau này bổ sung tài liệu legal mới, hãy kiểm tra số ký tự convert được ngay thay vì tin vào kích thước file.
 
-### Khối Lượng Công Việc Lệch Nhau
+### Khối Lượng Công Việc Lệch Nhau — CẬP NHẬT NGÀY 2026-09-21
 
-- **Khanh:** 20 điểm (mục 3→4→5) — tương đối cân bằng
+- **Khanh:** 20 điểm (mục 3→4→5) — ✅ **ĐÃ XONG**, không có thêm công việc
 - **Minh:** 45 điểm (mục 6→7→8) — **gánh nặng nhất**, tương đương ~50% rubric
-  - Dense, BM25, RRF: 20đ
-  - Pipeline & fallback: 10đ
-  - Generation & citation: 15đ
-- **Hùng:** 20 điểm (mục 9)
-- **Chung:** 5 điểm (mục 10)
+  - Dense, BM25, RRF: 20đ — **VẪN LÀ STUB** ❌
+  - Pipeline & fallback: 10đ — **VẦN LÀ STUB** ❌
+  - Generation & citation: 15đ — **VẨN LÀ STUB** ❌
+  - **Critical:** 7 contract test fail; Minh phải implement ngay (~ 3-4 giờ)
+- **Hùng:** 20 điểm (mục 9) — 🟡 **PHẦN LÀM NHƯNG KHÁC SPEC**
+  - Chatbot UI: ✅ implement (nhưng dùng HTTP server thay Streamlit)
+  - Golden dataset: ✅ 20 câu, test pass
+  - Evaluation: ⏳ chưa chạy (vẫn là template TODO)
+  - **Còn cần:** Chạy `python group_project/evaluation/run_evaluation.py` (nếu kịp + có thời gian)
+- **Chung:** 5 điểm (mục 10) — ⏳ Chưa làm; phụ thuộc vào Minh xong trước
 
-**Khuyến nghị:** Nếu kịp, hãy san bớt mục 8 (Generation) sang Hùng hoặc Khanh để cân bằng công việc.
+**⚠️ Cảnh báo đỏ:** Nếu Minh không implement task5-10, nhóm sẽ mất **45 điểm** (contract test + rubric); phần của Hùng không thể thay thế được vì hai nhánh independence. **Minh cần bắt đầu **NGAY HÔM NAY** để còn thời gian debug.**
 
 ### ✅ Đã Xử Lý: mau-so-1a.docx
 
@@ -385,30 +446,31 @@ Contract ghi `url: str | None` nên hợp lệ. Citation ở Mục 8 sẽ dẫn 
 ---
 
 ### **Mục 9 — Chatbot & Evaluation** ⏱️ 30'
-**Người phụ trách:** **Hùng** | **Trạng thái:** ⏳ **CHƯA LÀM**
+**Người phụ trách:** **Hùng** | **Trạng thái:** 🟡 **PHẦN LÀM (KHÁC SPEC)**
 
-> **Phụ thuộc:** Mục này chỉ run được khi Minh xong mục 8. Trong khi chờ, Hùng nên chuẩn bị golden dataset & khung `app.py`.
+> **Lưu ý quan trọng:** Hùng đã implement chatbot UI hoàn toàn độc lập (`chatbot/`) không phụ thuộc vào `src/task5`→`task10` (mục 6-8 của Minh). Tuy nhiên điều này tạo ra hai nhánh implementation song song — **xem tiểu mục "Hai Nhánh Implementation Song Song" dưới đây.**
 
-#### Part A: Streamlit App
-- [ ] `app.py` — `streamlit run app.py`:
-  - [ ] Hiển thị: **answer** + **sources** (list) + **retrieval_method** + **score**
-  - [ ] Không crash khi retrieval error hoặc LLM error
+#### Part A: Chat UI ✅ HOÀN THÀNH (NHƯNG KHÁC SPEC)
+- [x] **`chatbot/server.py` + `chatbot/static/index.html`** — HTTP server Python (ThreadingHTTPServer) thay vì Streamlit
+  - [x] Hiển thị: **answer** + **sources** (list) + **retrieval_method** + **score** ✓
+  - [x] Không crash khi retrieval error hoặc LLM error ✓
+- [ ] **DIVERGENCE:** Spec yêu cầu `streamlit run app.py`, nhưng Hùng nộp HTTP server với UI tĩnh dạng HTML/JS. GRADING_RUBRIC.md không bắt buộc Streamlit cụ thể, chỉ "chatbot chạy end-to-end, hiển thị nguồn" — **rủi ro mất điểm nếu giảng viên kiểm tra**
 
-#### Part B: Golden Dataset
-- [ ] `group_project/evaluation/golden_dataset.json` — **≥15 golden Q&A:**
-  - [ ] Mỗi item: `{question, expected_answer, expected_context}`
-  - [ ] Câu hỏi phải vừa chủ đề, vừa có dữ liệu để trả lời
+#### Part B: Golden Dataset ✅ HOÀN THÀNH
+- [x] `group_project/evaluation/golden_dataset.json` — **20 golden Q&A** (vượt ≥15) ✓
+  - [x] Mỗi item: `{id, question, expected_answer, expected_context, source, article}` đầy đủ ✓
+  - [x] Test `test_golden_dataset_has_15_grounded_cases` **PASS** ✓
 
-#### Part C: RAGAS Evaluation
-- [ ] Chạy 4 metric RAGAS: `faithfulness`, `answer_relevance`, `context_recall`, `context_precision`
-- [ ] A/B test: **Dense-only vs Hybrid + RRF** (chỉ đổi retrieval method, cấu hình khác giữ nguyên)
+#### Part C: RAGAS Evaluation ⏸️ CHƯA CHẠY
+- [ ] `group_project/evaluation/run_evaluation.py` — script sẵn sàng nhưng **chưa được thực thi**
+  - [ ] Gọi `chatbot.engine.generate_with_citation()` (không phải `src/task10_generation.py`)
+  - [ ] Chạy 4 metric RAGAS: `faithfulness`, `answer_relevance`, `context_recall`, `context_precision` — **CỊ CHỈ KHI RUN**
+  - [ ] A/B test: **Dense-only vs Hybrid + RRF** trên cùng 20 câu golden dataset
 
-#### Part D: Result Report
-- [ ] `group_project/evaluation/RESULT.md`:
-  - [ ] Bảng A/B kết quả 4 metric
-  - [ ] Phân tích worst cases (câu kém nhất, kết quả kém nhất)
-  - [ ] Khuyến nghị cải thiện
-  - [ ] ⚠️ **KHÔNG được còn chữ "TODO"** (acceptance test check literal)
+#### Part D: Result Report ⏸️ CHƯA ĐIỀN
+- [ ] `group_project/evaluation/RESULT.md` — vẫn là **template với chứa "TODO"** ❌
+  - [ ] ⚠️ Test `test_evaluation_report_is_completed` **FAIL** — acceptance test check literal "TODO"
+  - [ ] Cần chạy `python group_project/evaluation/run_evaluation.py` để render kết quả thực tế vào file này
 
 ---
 
@@ -551,4 +613,4 @@ Cuối cùng: Cả nhóm (Mục 10, ~15') — chuẩn bị report cá nhân & de
 
 ---
 
-**✏️ Cập nhật lần cuối:** 2026-09-20
+**✏️ Cập nhật lần cuối:** 2026-09-21 — đối chiếu code Hùng với spec, phát hiện hai nhánh implementation song song, cảnh báo critical path
