@@ -1,0 +1,117 @@
+[
+  {
+    "id": "sgk10_01",
+    "question": "Độ dịch chuyển cho biết những gì về sự thay đổi vị trí của vật?",
+    "expected_answer": "Độ dịch chuyển là đại lượng vectơ cho biết độ dài và hướng của sự thay đổi vị trí của vật.",
+    "expected_context": "Độ dịch chuyển là một đại lượng vectơ, cho biết độ dài và hướng của sự thay đổi vị trí",
+    "source": "legal/10.md",
+    "pdf_page": 26
+  },
+  {
+    "id": "sgk10_02",
+    "question": "Theo định luật I Newton, một vật đang chuyển động sẽ chuyển động thế nào nếu hợp lực tác dụng lên nó bằng không?",
+    "expected_answer": "Vật tiếp tục chuyển động thẳng đều.",
+    "expected_context": "Nếu một vật không chịu tác dụng của lực nào hoặc chịu\ntác dụng của các lực có hợp lực bằng không, thì vật đang\nđứng yên sẽ tiếp tục đứng yên, đang chuyển động sẽ tiếp\ntục chuyển động thẳng đều.",
+    "source": "legal/10.md",
+    "pdf_page": 62
+  },
+  {
+    "id": "sgk10_03",
+    "question": "Công suất đặc trưng cho đại lượng nào và có đơn vị SI là gì?",
+    "expected_answer": "Công suất đặc trưng cho tốc độ sinh công; đơn vị là oát (W).",
+    "expected_context": "Công suất là đại lượng đặc trưng cho tốc độ sinh công, được đo bằng công sinh ra\ntrong một giây và có đơn vị là oát (W)",
+    "source": "legal/10.md",
+    "pdf_page": 99
+  },
+  {
+    "id": "sgk11_01",
+    "question": "Biên độ sóng là gì?",
+    "expected_answer": "Biên độ sóng là độ lệch lớn nhất của phần tử sóng khỏi vị trí cân bằng.",
+    "expected_context": "Biên độ sóng là độ lệch lớn nhất của phần tử sóng khỏi vị trí cân bằng.",
+    "source": "legal/11.md",
+    "pdf_page": 36
+  },
+  {
+    "id": "sgk11_02",
+    "question": "Bước sóng được xác định bằng khoảng cách giữa những phần tử môi trường nào?",
+    "expected_answer": "Đó là khoảng cách từ một phần tử trên phương truyền sóng đến phần tử gần nhất có trạng thái dao động hoàn toàn tương tự.",
+    "expected_context": "Bước sóng là khoảng cách từ một phần tử môi trường bất kì trên phương truyền sóng\nđến phần tử gần nhất có trạng thái dao động hoàn toàn trơng tự.",
+    "source": "legal/11.md",
+    "pdf_page": 36
+  },
+  {
+    "id": "sgk11_03",
+    "question": "Chu kì sóng có quan hệ thế nào với chu kì dao động của phần tử sóng?",
+    "expected_answer": "Chu kì sóng bằng chu kì dao động của phần tử sóng.",
+    "expected_context": "Chu kỉ sóng chính bằng chu kì dao động của phần tử sóng.",
+    "source": "legal/11.md",
+    "pdf_page": 36
+  },
+  {
+    "id": "sgk11_04",
+    "question": "Trong hệ SI, cường độ điện trường có đơn vị gì?",
+    "expected_answer": "Đơn vị cường độ điện trường là vôn trên mét (V/m).",
+    "expected_context": "đơn vị của cường độ điện trường là vốn trên mét (V/m).",
+    "source": "legal/11.md",
+    "pdf_page": 68
+  },
+  {
+    "id": "sgk12_01",
+    "question": "Có những cách nào để làm thay đổi nội năng của một vật?",
+    "expected_answer": "Có hai cách: thực hiện công và truyền nhiệt.",
+    "expected_context": "Có hai cách làm thay đối nội năng là thực hiện công và\n\ntruyền năng lượng nhiệt (gọi tắt là truyền nhiệt).",
+    "source": "legal/12.md",
+    "pdf_page": 13
+  },
+  {
+    "id": "sgk12_02",
+    "question": "Nhiệt dung riêng của một chất cho biết nhiệt lượng cần để làm gì?",
+    "expected_answer": "Đó là nhiệt lượng cần truyền cho 1 kg chất ấy để nhiệt độ tăng thêm 1 °C.",
+    "expected_context": "Nhiệt dung riêng của một chất là nhiệt lượng cần truyền cho 1 kg chất đó để làm cho nhiệt\nđộ của nó tăng thêm 1 °€.",
+    "source": "legal/12.md",
+    "pdf_page": 23
+  },
+  {
+    "id": "sgk12_03",
+    "question": "Theo định luật Boyle, khi nhiệt độ của một lượng khí xác định không đổi thì áp suất phụ thuộc vào thể tích như thế nào?",
+    "expected_answer": "Áp suất tỉ lệ nghịch với thể tích; tích pV không đổi.",
+    "expected_context": "Định luật Boyle: Khi nhiệt độ của một khối lượng khí xác định giữ không đổi thì áp suất gây\nra bởi khí tỉ lệ nghịch với thế tích của nó:",
+    "source": "legal/12.md",
+    "pdf_page": 42
+  },
+  {
+    "id": "article_01",
+    "question": "Động năng của một vật là năng lượng có được do đâu?",
+    "expected_answer": "Do chuyển động của vật.",
+    "expected_context": "Động năng (Tiếng Anh: kinetic energy) của một vật là năng lượng mà nó có được từ chuyển động của nó.",
+    "source": "news/article_01.md"
+  },
+  {
+    "id": "article_02",
+    "question": "Trong dao động điều hòa, độ lớn lực kéo về liên hệ thế nào với độ lớn li độ?",
+    "expected_answer": "Độ lớn lực kéo về tỉ lệ thuận với độ lớn li độ.",
+    "expected_context": "hệ đó chịu tác dụng của lực kéo về F có độ lớn tỉ lệ thuận với độ lớn li độ x",
+    "source": "news/article_02.md"
+  },
+  {
+    "id": "article_03",
+    "question": "Vectơ cường độ điện trường tại một điểm trên đường sức điện có phương và chiều như thế nào?",
+    "expected_answer": "Phương của vectơ trùng tiếp tuyến với đường sức tại điểm đó; chiều trùng chiều đường sức.",
+    "expected_context": "Vector cường độ điện trường tại bất kì điểm nào trên đường sức điện có phương trùng với tiếp tuyến tại điểm đó trên đường sức điện và có chiều trùng với chiều của đường sức.",
+    "source": "news/article_03.md"
+  },
+  {
+    "id": "article_04",
+    "question": "Theo bài viết, thuật ngữ nhiệt động học có hai nghĩa nào?",
+    "expected_answer": "Nhiệt động học có thể là khoa học về nhiệt và động cơ nhiệt, hoặc khoa học về các hệ ở trạng thái cân bằng.",
+    "expected_context": "Khoa học về nhiệt và các động cơ nhiệt (nhiệt động học cổ điển)\nKhoa học về các hệ thống ở trạng thái cân bằng (nhiệt động học cân bằng)",
+    "source": "news/article_04.md"
+  },
+  {
+    "id": "article_05",
+    "question": "Theo bài viết, từ trường có thể sinh ra quanh những điện tích nào?",
+    "expected_answer": "Từ trường có thể sinh ra quanh các điện tích chuyển động.",
+    "expected_context": "Từ trường là môi trường năng lượng đặc biệt sinh ra quanh các điện tích chuyển động",
+    "source": "news/article_05.md"
+  }
+]

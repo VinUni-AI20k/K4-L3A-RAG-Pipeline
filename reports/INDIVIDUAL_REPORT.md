@@ -12,29 +12,28 @@ Giới hạn khuyến nghị: 1 trang, không chép lại README hoặc mô tả
 
 ## Thông tin
 
-- Họ và tên:
-- Mã học viên:
-- Nhóm:
-- Repository/branch:
+- Họ và tên: Hoàng Trung Anh
+- Mã học viên: 2A202602521
+- Nhóm:Akatsuki
+- Repository/branch:[https://github.com/trungKoiKa/K4-L3A-RAG-Pipeline-Akatsuki](https://github.com/trungKoiKa/K4-L3A-RAG-Pipeline-Akatsuki)
 
 ## Phần việc đã thực hiện
 
-| Module/deliverable | Việc tôi trực tiếp làm | File/commit/PR | Trạng thái |
-|---|---|---|---|
-| | | | Done / Partial / Blocked |
+| Module/deliverable | Việc tôi trực tiếp làm | File/commit/PR | Trạng thái               |
+| ------------------ | ---------------------- | -------------- | ------------------------ |
+|                    |                        |                | Done / Partial / Blocked |
 
 Chỉ kê khai công việc có thể đối chiếu bằng file, commit, pull request, test hoặc kết quả evaluation.
 
 ## Quyết định kỹ thuật quan trọng
 
-Mô tả tối đa hai quyết định mà bạn trực tiếp tham gia:
+Mô tả tối đna hai quyết định mà bạ trực tiếp tham gia:
 
-1. **Quyết định:**  
-   **Lý do/evidence:**  
+1. **Quyết định:**
+  **Lý do/evidence:**  
    **Trade-off:**
-
-2. **Quyết định:**  
-   **Lý do/evidence:**  
+2. **Quyết định:**
+  **Lý do/evidence:**  
    **Trade-off:**
 
 ## Kiểm thử và kết quả
@@ -52,5 +51,5 @@ Mô tả tối đa hai quyết định mà bạn trực tiếp tham gia:
 
 Tôi xác nhận nội dung trên phản ánh đúng phần việc của mình và có thể giải thích hoặc chạy lại trong buổi demo.
 
-- Ngày:
-- Tên thành viên:
+- Ngày: 20/9/2026
+- Tên thành viên: Hoàng Trung Anh

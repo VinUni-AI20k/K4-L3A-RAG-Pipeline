@@ -56,15 +56,36 @@ Kiểm tra thủ công một số trang của mỗi sách, đặc biệt là cô
 
 ## 5. Chunk, embedding và index
 
+Task 4 đọc 8 file Markdown trong `data/standardized/`, chia recursive chunk
+500 ký tự (overlap 50), tạo embedding bằng `BAAI/bge-m3` rồi upsert vào
+ChromaDB tại `chroma_db/` (cosine distance). ID chunk ổn định nên chạy lại
+không tạo bản ghi trùng. Lần đầu cần tải model từ Hugging Face, dung lượng
+lớn và cần kết nối mạng; các lần sau dùng cache của máy.
+
 ```bash
 python -m src.task4_chunking_indexing
 ```
 
+Trên Windows dùng `\.venv\Scripts\python.exe -m src.task4_chunking_indexing`.
+Sau khi chạy, kiểm tra số bản ghi bằng:
+
+```powershell
+.\.venv\Scripts\python.exe -c "from src.task4_chunking_indexing import get_collection; print(get_collection().count())"
+```
+
+Không commit `chroma_db/` hoặc cache model. Dùng cùng `EMBEDDING_MODEL` khi
+index và khi truy vấn; đổi model thì cần tạo lại index.
+
 ## 6. Xây dựng hybrid retrieval
 
 - Task 5: semantic search từ ChromaDB.
-- Task 6: BM25 trên cùng corpus chunks.
+- Task 6: BM25L trên cùng corpus chunks, token hóa Unicode cho tiếng Việt.
 - Task 7: RRF gộp hai bảng xếp hạng theo ID.
+
+Chạy bước 5 trước và kiểm tra ChromaDB đã có dữ liệu. Task 5 dùng lại
+`EMBEDDING_MODEL` để mã hóa câu hỏi; cả ba task không cần LLM API key.
+Task 6 đọc Markdown đã chuẩn hóa và tái tạo cùng các chunk, không cần tải
+model. Task 7 kết hợp kết quả của Task 5 và 6; RRF không phải LLM reranker.
 
 ```bash
 python -m src.task5_semantic_search
