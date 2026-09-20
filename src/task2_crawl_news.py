@@ -1,40 +1,13 @@
-"""
-Task 2 — Crawl bài viết/thông báo du lịch.
-
-Hướng dẫn:
-    1. Điền tối thiểu 5 URL công khai vào ARTICLE_URLS.
-    2. Crawl từng URL bằng Crawl4AI (hoặc fallback request).
-    3. Lưu mỗi bài thành một JSON trong data/landing/news/.
-    4. Giữ đủ url, title, date_crawled và content_markdown.
-
-Cài browser trước khi chạy:
-    python -m playwright install chromium
-    
--> Dùng Firecrawl or bất cứ công cụ nào bạn quen    
-"""
-
 import asyncio
-from datetime import datetime
+import csv
 import json
+from datetime import datetime
 from pathlib import Path
-import re
-
-DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
-
-ARTICLE_URLS = [
-    "https://vnexpress.net/cam-nang-du-lich-ha-giang-4445788.html",
-    "https://vnexpress.net/cam-nang-du-lich-da-nang-4470111.html",
-    "https://vnexpress.net/cam-nang-du-lich-phu-quoc-4106697.html",
-    "https://vnexpress.net/cam-nang-du-lich-ta-xua-4656282.html",
-    "https://vnexpress.net/cam-nang-du-lich-nha-trang-tu-a-den-z-4127199.html",
-]
-
 
 async def crawl_article(url: str) -> dict:
     """Crawl bài viết bằng Crawl4AI, có fallback sang httpx + bs4 nếu browser lỗi."""
     date_crawled = datetime.now().isoformat()
 
-    # Cách 1: Thử crawl bằng Crawl4AI theo chuẩn repo
     try:
         from crawl4ai import AsyncWebCrawler
 
@@ -55,7 +28,6 @@ async def crawl_article(url: str) -> dict:
     except Exception as crawl_err:
         print(f"[Crawl4AI Notice] Lỗi chạy browser ({crawl_err}), chuyển sang HTTP fallback...")
 
-    # Cách 2: Fallback bằng HTTP request nếu Playwright chưa cấu hình xong
     import httpx
     from bs4 import BeautifulSoup
 
@@ -112,15 +84,19 @@ async def crawl_article(url: str) -> dict:
     }
 
 
-async def crawl_all() -> None:
-    """Crawl và lưu từng bài thành một file JSON."""
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
+async def crawl_all(news_list: list, output_dir: Path) -> None:
+    """Crawl và lưu từng bài thành một file JSON theo short_name."""
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    for index, url in enumerate(ARTICLE_URLS, 1):
+    for index, item in enumerate(news_list, 1):
+        short_name = item['short_name'].strip()
+        url = item['url'].strip()
+        
         try:
-            print(f"[{index}/{len(ARTICLE_URLS)}] Crawling: {url} ...")
+            print(f"[{index}/{len(news_list)}] Crawling: {short_name} ({url})...")
             article = await crawl_article(url)
-            output = DATA_DIR / f"article_{index:02d}.json"
+            
+            output = output_dir / f"{short_name}.json"
             output.write_text(
                 json.dumps(article, ensure_ascii=False, indent=2),
                 encoding="utf-8",
@@ -130,5 +106,27 @@ async def crawl_all() -> None:
             print(f" -> Failed: {url} — {error}")
 
 
+def main():
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    
+    INPUT_CSV = BASE_DIR / "news_urls.csv"
+    OUTPUT_DIR = BASE_DIR / "data" / "landing" / "news"
+
+    if not INPUT_CSV.exists():
+        raise FileNotFoundError(f"Không tìm thấy file danh sách link tại: {INPUT_CSV}")
+
+    news_to_crawl = []
+    with open(INPUT_CSV, mode='r', encoding='utf-8-sig') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if row.get('short_name') and row.get('url'):
+                news_to_crawl.append(row)
+
+    print(f"[*] Tổng cộng có {len(news_to_crawl)} bài viết cần thu thập.")
+    
+    # Khởi chạy bất đồng bộ
+    asyncio.run(crawl_all(news_to_crawl, OUTPUT_DIR))
+
+
 if __name__ == "__main__":
-    asyncio.run(crawl_all())
+    main()

@@ -1,32 +1,17 @@
-"""
-Task 3 — Chuẩn hóa dữ liệu sang Markdown.
-
-Hướng dẫn:
-    1. Dùng MarkItDown để convert PDF/DOCX (có fallback cho .doc legacy).
-    2. Đọc JSON và giữ metadata ở đầu file Markdown.
-    3. Giữ cấu trúc thư mục legal/ và news/.
-    4. Không tạo file rỗng hoặc file trùng khi chạy lại.
-
-Cài đặt:
-    Dependency MarkItDown đã được khai báo trong pyproject.toml.
-    
--> Hoặc dùng công cụ nào bạn quen khác Markitdown
-"""
-
 import json
-from pathlib import Path
 import re
-import subprocess
 import shutil
+import subprocess
 import tempfile
+from pathlib import Path
 
-LANDING_DIR = Path(__file__).parent.parent / "data" / "landing"
-OUTPUT_DIR = Path(__file__).parent.parent / "data" / "standardized"
+BASE_DIR = Path(__file__).resolve().parent.parent
+LANDING_DIR = BASE_DIR / "data" / "landing"
+OUTPUT_DIR = BASE_DIR / "data" / "standardized"
 
 
 def _extract_doc_text_fallback(file_path: Path) -> str:
     """Hàm fallback đọc nội dung cho file .doc cũ nếu MarkItDown không hỗ trợ trực tiếp."""
-    # Thử qua antiword (nếu có trên Linux/macOS)
     try:
         proc = subprocess.run(
             ["antiword", str(file_path)],
@@ -43,11 +28,9 @@ def _extract_doc_text_fallback(file_path: Path) -> str:
     # Thử trích xuất các chuỗi text có nghĩa từ binary doc
     try:
         content_bytes = file_path.read_bytes()
-        # Thử decode UTF-16LE hoặc Windows-1258 / UTF-8
         for enc in ["utf-16le", "utf-8", "windows-1258", "cp1252"]:
             try:
                 decoded = content_bytes.decode(enc, errors="ignore")
-                # Lọc các đoạn text dài trên 30 ký tự
                 extracted = re.findall(r"[\w\s,.;:/?!@#$%^&*()_\-+=\[\]\"']{30,}", decoded)
                 if extracted and len(" ".join(extracted)) > 200:
                     return "\n\n".join(extracted)
@@ -57,6 +40,7 @@ def _extract_doc_text_fallback(file_path: Path) -> str:
         pass
 
     return ""
+
 
 def _convert_doc_to_docx_with_libreoffice(doc_path: Path) -> Path | None:
     """Chuyển .doc sang .docx bằng LibreOffice headless để MarkItDown đọc được."""
@@ -98,7 +82,6 @@ def _extract_doc_text_with_antiword(file_path: Path) -> str:
         )
         return proc.stdout.strip()
     except Exception:
-        # Fallback không tham số font map
         try:
             proc = subprocess.run(
                 ["antiword", str(file_path)],
@@ -169,7 +152,7 @@ def convert_legal_docs() -> None:
 
         target_file = output_dir / f"{path.stem}.md"
 
-        # Yêu cầu 4: Chống chạy lại trùng lặp (nếu file đã convert và mới hơn file gốc)
+        # Chống chạy lại trùng lặp (nếu file đã convert và mới hơn file gốc)
         if target_file.exists() and target_file.stat().st_size > 0:
             if target_file.stat().st_mtime >= path.stat().st_mtime:
                 print(f"[Legal] Đã tồn tại, bỏ qua: {target_file.name}")
@@ -178,7 +161,7 @@ def convert_legal_docs() -> None:
         print(f"[Legal] Đang convert: {path.name}...")
         text_content = parse_legal_file(path, converter)
 
-        # Yêu cầu 4: Không tạo file rỗng
+        # Không tạo file rỗng
         if not text_content.strip():
             print(f" [!] Bỏ qua file rỗng hoặc không đọc được: {path.name}")
             continue
