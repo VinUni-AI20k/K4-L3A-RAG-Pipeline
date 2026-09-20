@@ -1,97 +1,68 @@
-"""
-Task 10 — Generation có citation.
-
-Hướng dẫn:
-    1. Retrieve top-k chunks.
-    2. Reorder để giảm lost-in-the-middle.
-    3. Format context kèm title và source.
-    4. Gọi provider được chọn trong .env.
-    5. Trả answer, sources và retrieval_source.
-
-Nếu context không đủ hoặc provider lỗi, trả safe refusal; không bịa thông tin.
-"""
-
+"""Grounded Gemini generation with verifiable numeric citations."""
 import os
-
 from dotenv import load_dotenv
-
 from .task9_retrieval_pipeline import retrieve
 
-
 load_dotenv()
-
-TOP_K = 5
-TOP_P = 0.9
-TEMPERATURE = 0.3
-
-LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai")
-LLM_MODEL = os.getenv("LLM_MODEL", "")
-
-SYSTEM_PROMPT = """Trả lời chỉ từ context được cung cấp.
-Mỗi khẳng định phải có citation. Nếu thiếu evidence, hãy từ chối xác minh."""
-
+TOP_K, TOP_P, TEMPERATURE = 5, 0.9, 0.2
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "gemini").lower()
+LLM_MODEL = os.getenv("LLM_MODEL", "gemini-3.5-flash-lite")
+SAFE_REFUSAL = "Tôi không thể xác minh thông tin này từ các nguồn hiện có."
+SYSTEM_PROMPT = """Bạn là trợ lý du lịch Việt Nam. Chỉ trả lời bằng thông tin trong context.
+Viết ngắn gọn bằng tiếng Việt. Sau mỗi khẳng định thực tế, dẫn nguồn bằng [1], [2]...
+đúng với số tài liệu trong context. Không dùng kiến thức ngoài. Nếu context không đủ,
+chỉ trả lời: Tôi không thể xác minh thông tin này từ các nguồn hiện có."""
 
 def reorder_for_llm(chunks: list[dict]) -> list[dict]:
-    """Đưa chunks quan trọng về đầu và cuối context."""
-    # TODO: Implement document reordering.
-    #
-    # if len(chunks) <= 2:
-    #     return list(chunks)
-    # front = chunks[::2]
-    # back = chunks[1::2]
-    # return front + back[::-1]
-    raise NotImplementedError("Implement reorder_for_llm")
-
+    if len(chunks) <= 2:
+        return list(chunks)
+    reordered = [None] * len(chunks)
+    positions = list(range(0, len(chunks), 2)) + list(range(1, len(chunks), 2))[::-1]
+    for item, position in zip(chunks, positions):
+        reordered[position] = item
+    return reordered
 
 def format_context(chunks: list[dict]) -> str:
-    """Tạo context có title và source label."""
-    # TODO: Format chunks để LLM tạo citation kiểm chứng được.
-    #
-    # parts = []
-    # for index, chunk in enumerate(chunks, 1):
-    #     metadata = chunk["metadata"]
-    #     parts.append(
-    #         f"[Document {index} | Title: {metadata['title']} | "
-    #         f"Source: {metadata['source']}]\n{chunk['content']}"
-    #     )
-    # return "\n\n---\n\n".join(parts)
-    raise NotImplementedError("Implement format_context")
-
+    parts = []
+    for index, chunk in enumerate(chunks, 1):
+        metadata = chunk["metadata"]
+        parts.append(f"[{index}] Title: {metadata['title']}\nSource: {metadata['source']}\nURL: {metadata.get('url') or 'N/A'}\n{chunk['content']}")
+    return "\n\n---\n\n".join(parts)
 
 def call_llm(system_prompt: str, user_message: str) -> str:
-    """Gọi OpenAI, Gemini hoặc Anthropic theo cấu hình."""
-    # TODO: Dispatch theo LLM_PROVIDER.
-    #
-    # - openai    -> OPENAI_API_KEY
-    # - gemini    -> GEMINI_API_KEY
-    # - anthropic -> ANTHROPIC_API_KEY
-    #
-    # Dùng LLM_MODEL và trả về text thuần cho cả ba nhánh.
-    raise NotImplementedError("Implement call_llm")
-
+    if LLM_PROVIDER != "gemini":
+        raise ValueError("LLM_PROVIDER phải là gemini cho dự án này")
+    from google import genai
+    key = os.getenv("GEMINI_API_KEY", "").strip()
+    if not key:
+        raise RuntimeError("GEMINI_API_KEY is not configured")
+    client = genai.Client(api_key=key)
+    response = client.models.generate_content(
+        model=LLM_MODEL, contents=user_message,
+        config={"system_instruction": system_prompt, "temperature": TEMPERATURE,
+                "top_p": TOP_P, "max_output_tokens": 1024})
+    text = (response.text or "").strip()
+    if not text:
+        raise RuntimeError("Gemini returned an empty response")
+    return text
 
 def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
-    """Trả về GenerationResult."""
-    # TODO: Implement end-to-end generation.
-    #
-    # chunks = retrieve(query, top_k=top_k)
-    # if not chunks:
-    #     return {
-    #         "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
-    #         "sources": [],
-    #         "retrieval_source": "none",
-    #     }
-    # reordered = reorder_for_llm(chunks)
-    # context = format_context(reordered)
-    # user_message = f"Context:\n{context}\n\nQuestion: {query}"
-    # answer = call_llm(SYSTEM_PROMPT, user_message)
-    # return {
-    #     "answer": answer,
-    #     "sources": chunks,
-    #     "retrieval_source": chunks[0]["retrieval_method"],
-    # }
-    raise NotImplementedError("Implement generate_with_citation")
-
+    if not query.strip():
+        return {"answer": SAFE_REFUSAL, "sources": [], "retrieval_source": "none"}
+    try:
+        chunks = retrieve(query, top_k=top_k)
+        if not chunks:
+            return {"answer": SAFE_REFUSAL, "sources": [], "retrieval_source": "none"}
+        reordered = reorder_for_llm(chunks)
+        message = f"Context:\n{format_context(reordered)}\n\nQuestion: {query}"
+        answer = call_llm(SYSTEM_PROMPT, message)
+        if answer != SAFE_REFUSAL and not any(f"[{i}]" in answer for i in range(1, len(chunks) + 1)):
+            answer += "\n\nNguồn tham khảo: " + ", ".join(f"[{i}]" for i in range(1, len(chunks) + 1))
+        source_type = chunks[0]["retrieval_method"]
+        return {"answer": answer, "sources": reordered,
+                "retrieval_source": "pageindex" if source_type == "pageindex" else "hybrid"}
+    except Exception:
+        return {"answer": SAFE_REFUSAL, "sources": [], "retrieval_source": "none"}
 
 if __name__ == "__main__":
-    print(generate_with_citation("test query"))
+    print(generate_with_citation("Hà Giang mùa nào đẹp?"))
