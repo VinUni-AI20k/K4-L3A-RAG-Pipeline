@@ -110,7 +110,7 @@ def main():
     print(f"[*] Tổng cộng có {len(docs_to_download)} tài liệu cần tải.")
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False, slow_mo=50) 
+        browser = p.chromium.launch(headless=True, slow_mo=50) 
         context = browser.new_context(
             viewport={"width": 1920, "height": 1080},
             accept_downloads=True
@@ -121,7 +121,6 @@ def main():
             login_via_popup(page, username, password)
             download_documents(page, docs_to_download, output_dir=OUTPUT_DIR)
         finally:
-            input("\nNhấn Enter để đóng trình duyệt...")
             browser.close()
 
 if __name__ == "__main__":
