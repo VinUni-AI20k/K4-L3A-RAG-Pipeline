@@ -57,10 +57,12 @@
 - Hạn chế cụ thể: PageIndex fallback chưa chạy end-to-end vì không có
   `PAGEINDEX_API_KEY`; nhánh này mới chỉ được xác minh bằng contract test
   (bao gồm test provider lỗi), chưa có số liệu thật trên corpus của nhóm.
-- Nếu có thêm thời gian: `SCORE_THRESHOLD=0.3` hiện là giá trị mặc định chưa
-  hiệu chỉnh. Việc đầu tiên tôi sẽ làm là đo phân phối best cosine score trên
-  tập câu hỏi in-domain và out-of-domain rồi chọn ngưỡng tại điểm tách hai phân
-  phối, thay vì dùng một con số chọn sẵn.
+- `SCORE_THRESHOLD` đã được hiệu chỉnh trên corpus du lịch: đo best cosine của
+  dense trên 9 câu in-domain (0,564–0,760) và 7 câu out-of-domain (0,394–0,553)
+  rồi chốt `0.56` tại điểm tách hai phân phối. Hạn chế là biên rất mỏng (~0,011)
+  và câu in-domain thấp nhất ("Sa Pa thuộc tỉnh nào") gần sát ngưỡng; nếu có
+  thêm thời gian tôi sẽ mở rộng tập hiệu chỉnh lên vài chục câu mỗi phía và chọn
+  ngưỡng theo phân vị thay vì theo min/max.
 
 ## Xác nhận đóng góp
 

@@ -108,6 +108,8 @@ def _call_gemini(system_prompt: str, user_message: str) -> str:
             system_instruction=system_prompt,
             temperature=TEMPERATURE,
             top_p=TOP_P,
+            # Pipeline không dùng tool call; tắt AFC để bỏ cảnh báo của SDK.
+            automatic_function_calling=types.AutomaticFunctionCallingConfig(disable=True),
         ),
     )
     return (response.text or "").strip()
