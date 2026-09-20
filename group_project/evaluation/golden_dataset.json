@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Người mua có thể yêu cầu trả hàng/hoàn tiền trong thời hạn bao lâu sau khi nhận hàng?",
+    "expected_answer": "Trong vòng 15 ngày kể từ ngày nhận hàng đối với sản phẩm thuộc Shopee Mall, và 3 ngày đối với sản phẩm thường.",
+    "expected_context": "Người mua có thể yêu cầu trả hàng/hoàn tiền trong vòng 15 ngày kể từ ngày nhận hàng đối với sản phẩm thuộc Shopee Mall, và 3 ngày đối với sản phẩm thường.",
+    "source_file": "returns-refund-policy-shopee.md"
+  },
+  {
+    "question": "Shopee hỗ trợ những phương thức thanh toán nào?",
+    "expected_answer": "Thẻ Tín dụng/Ghi nợ (Visa, Mastercard, JCB), Ví ShopeePay, Thanh toán khi nhận hàng (COD), và Trả góp qua thẻ tín dụng hoặc SPayLater.",
+    "expected_context": "Khách hàng có thể thanh toán bằng: 1. Thẻ Tín dụng/Ghi nợ (Visa, Mastercard, JCB). 2. Ví ShopeePay (ưu tiên với nhiều voucher giảm giá). 3. Thanh toán khi nhận hàng (COD). 4. Trả góp qua thẻ tín dụng hoặc SPayLater.",
+    "source_file": "payment-methods-shopee.md"
+  },
+  {
+    "question": "Người bán không được đăng bán những sản phẩm nào?",
+    "expected_answer": "Hàng giả, hàng nhái và hàng vi phạm bản quyền.",
+    "expected_context": "Không đăng bán hàng giả, hàng nhái, hàng vi phạm bản quyền.",
+    "source_file": "product-listing-regulations-shopee.md"
+  },
+  {
+    "question": "Làm thế nào để theo dõi đơn hàng?",
+    "expected_answer": "Vào mục Tôi > Đơn mua > Đang giao để xem chi tiết hành trình đơn hàng.",
+    "expected_context": "Để theo dõi đơn hàng của bạn trên Shopee, hãy vào mục Tôi > Đơn mua > Đang giao. Tại đây, bạn sẽ thấy chi tiết hành trình đơn hàng.",
+    "source_file": "article_01.md"
+  },
+  {
+    "question": "Có thể đổi phương thức thanh toán sau khi người bán xác nhận đơn không?",
+    "expected_answer": "Không. Chỉ đổi được trước khi người bán xác nhận đơn hàng; sau đó lựa chọn duy nhất là hủy đơn và đặt lại.",
+    "expected_context": "Bạn có thể thay đổi phương thức thanh toán trước khi người bán xác nhận đơn hàng. Nếu đơn hàng đã được người bán xác nhận, bạn không thể thay đổi phương thức thanh toán nữa; khi đó lựa chọn duy nhất là hủy đơn và đặt lại từ đầu.",
+    "source_file": "article_02.md"
+  },
+  {
+    "question": "Cần cung cấp bằng chứng gì để yêu cầu hoàn tiền cho sản phẩm bị lỗi?",
+    "expected_answer": "Video mở hộp không cắt ghép, quay rõ mã vận đơn, toàn cảnh quá trình bóc hàng và tình trạng sản phẩm; có thể cần thêm hình ảnh rõ nét về lỗi.",
+    "expected_context": "Khi yêu cầu hoàn tiền cho sản phẩm bị lỗi hoặc thiếu, bạn cần cung cấp video mở hộp (unboxing video) không cắt ghép. Video phải quay rõ mã vận đơn, toàn cảnh quá trình bóc hàng và tình trạng thực tế của sản phẩm.",
+    "source_file": "article_03.md"
+  },
+  {
+    "question": "Mua hàng quốc tế thì bao lâu nhận được?",
+    "expected_answer": "Thường mất từ 7 đến 15 ngày làm việc, tùy thủ tục hải quan và thời tiết.",
+    "expected_context": "Đơn hàng từ quốc tế thường mất từ 7 đến 15 ngày làm việc để giao đến tay bạn, tùy thuộc vào thủ tục hải quan và tình hình thời tiết.",
+    "source_file": "article_04.md"
+  },
+  {
+    "question": "Phải làm gì nếu ứng dụng báo đã giao nhưng chưa nhận được hàng?",
+    "expected_answer": "Khoan bấm Đã nhận hàng; liên hệ người thân, bảo vệ hoặc hàng xóm, gọi shipper, hoặc bấm Yêu cầu Trả hàng/Hoàn tiền với lý do chưa nhận được hàng trong vòng 24 giờ.",
+    "expected_context": "Nếu ứng dụng báo Đã giao nhưng bạn chưa nhận được hàng, hãy khoan bấm Đã nhận hàng. Bạn có thể gọi cho shipper qua số điện thoại trên hệ thống, hoặc bấm nút Yêu cầu Trả hàng/Hoàn tiền với lý do 'Chưa nhận được hàng' trong vòng 24 giờ.",
+    "source_file": "article_05.md"
+  },
+  {
+    "question": "Thanh toán bằng thẻ tín dụng trên Shopee có an toàn không?",
+    "expected_answer": "Có. Mọi giao dịch qua thẻ đều được mã hóa và bảo mật theo tiêu chuẩn quốc tế.",
+    "expected_context": "Mọi giao dịch qua thẻ đều được mã hóa và bảo mật theo tiêu chuẩn quốc tế.",
+    "source_file": "payment-methods-shopee.md"
+  },
+  {
+    "question": "Nếu người bán từ chối yêu cầu trả hàng thì ai giải quyết?",
+    "expected_answer": "Shopee sẽ đứng ra giải quyết tranh chấp dựa trên bằng chứng của cả hai bên.",
+    "expected_context": "Trong trường hợp người bán từ chối yêu cầu, Shopee sẽ đứng ra giải quyết tranh chấp dựa trên bằng chứng của cả hai bên.",
+    "source_file": "returns-refund-policy-shopee.md"
+  },
+  {
+    "question": "Shopee có hỗ trợ chuyển khoản ngân hàng trực tiếp cho người bán không?",
+    "expected_answer": "Không. Shopee không hỗ trợ thanh toán qua chuyển khoản ngân hàng trực tiếp cho người bán.",
+    "expected_context": "Shopee không hỗ trợ thanh toán qua chuyển khoản ngân hàng trực tiếp cho người bán.",
+    "source_file": "payment-methods-shopee.md"
+  },
+  {
+    "question": "Hình ảnh sản phẩm cần đáp ứng yêu cầu gì khi đăng bán?",
+    "expected_answer": "Phải rõ nét, không chứa thông tin liên hệ bên ngoài hoặc logo của sàn thương mại điện tử khác.",
+    "expected_context": "Hình ảnh sản phẩm phải rõ nét, không chứa thông tin liên hệ bên ngoài hoặc logo của sàn TMĐT khác.",
+    "source_file": "product-listing-regulations-shopee.md"
+  },
+  {
+    "question": "Đơn hàng quốc tế giao trễ thì có được bồi thường không?",
+    "expected_answer": "Có. Hệ thống tự động bồi thường voucher hoặc Xu theo chính sách Đảm Bảo Giao Hàng, không cần gửi yêu cầu thủ công.",
+    "expected_context": "Nếu đơn hàng bị giao trễ quá thời gian dự kiến, hệ thống sẽ tự động bồi thường cho bạn một voucher hoặc Xu theo chính sách Đảm Bảo Giao Hàng mà không cần bạn phải gửi yêu cầu thủ công.",
+    "source_file": "article_04.md"
+  },
+  {
+    "question": "Người bán vi phạm quy định đăng bán sẽ bị xử lý thế nào?",
+    "expected_answer": "Bị khóa tài khoản hoặc xóa sản phẩm mà không cần báo trước.",
+    "expected_context": "Người bán vi phạm sẽ bị khóa tài khoản hoặc xóa sản phẩm mà không cần báo trước.",
+    "source_file": "product-listing-regulations-shopee.md"
+  },
+  {
+    "question": "Ví ShopeePay có ưu đãi gì khi thanh toán?",
+    "expected_answer": "ShopeePay được ưu tiên với nhiều voucher giảm giá.",
+    "expected_context": "Ví ShopeePay (ưu tiên với nhiều voucher giảm giá).",
+    "source_file": "payment-methods-shopee.md"
+  }
+]

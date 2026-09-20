@@ -1,30 +1,83 @@
+"""Chatbot RAG hỗ trợ khách hàng sàn thương mại điện tử."""
+
 import streamlit as st
 from dotenv import load_dotenv
+
+from src.task10_generation import generate_with_citation
 
 
 load_dotenv()
 
 st.set_page_config(
-    page_title="RAG Chatbot",
-    page_icon="",
+    page_title="RAG Chatbot — Hỗ trợ khách hàng TMĐT",
+    page_icon="🛍️",
     layout="wide",
 )
+
+RETRIEVAL_LABELS = {
+    "hybrid": "Hybrid (dense + BM25 + RRF)",
+    "pageindex": "PageIndex fallback (vectorless)",
+    "none": "Không tìm được nguồn nào",
+}
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
 with st.sidebar:
-    st.title("RAG Chatbot")
-    st.caption("Thay mô tả theo đề tài của nhóm")
-    top_k = st.slider("Số chunks", 3, 10, 5)
+    st.title("🛍️ RAG Chatbot")
+    st.caption(
+        "Trả lời câu hỏi về chính sách trả hàng, thanh toán và quy định đăng bán "
+        "trên sàn thương mại điện tử, kèm trích dẫn nguồn."
+    )
+    top_k = st.slider("Số chunks đưa vào context", 3, 10, 5)
+    st.divider()
+    st.caption(
+        "Corpus: 3 tài liệu chính sách + 5 bài hướng dẫn (synthetic, do nhóm tự "
+        "soạn cho bài lab). Bot chỉ trả lời dựa trên corpus này."
+    )
+    if st.button("Xoá hội thoại", use_container_width=True):
+        st.session_state.messages = []
+        st.rerun()
 
-st.title("RAG Chatbot")
-st.caption("Thay tiêu đề và hướng dẫn sử dụng")
+
+def render_sources(sources: list[dict], retrieval_source: str) -> None:
+    """Hiển thị nguồn để người đọc đối chiếu được từng citation."""
+    label = RETRIEVAL_LABELS.get(retrieval_source, retrieval_source)
+    if not sources:
+        st.caption(f"Nguồn: {label}")
+        return
+
+    with st.expander(f"📎 {len(sources)} nguồn tham khảo — {label}"):
+        for index, source in enumerate(sources, 1):
+            metadata = source.get("metadata", {})
+            st.markdown(
+                f"**[Document {index}] {metadata.get('title', 'Unknown')}**  \n"
+                f"`{metadata.get('source', '?')}` · loại: "
+                f"`{metadata.get('doc_type', '?')}` · chunk "
+                f"`{metadata.get('chunk_index', '?')}` · score "
+                f"`{source.get('score', 0):.4f}` · "
+                f"`{source.get('retrieval_method', '?')}`"
+            )
+            st.caption(source["content"])
+            if index < len(sources):
+                st.divider()
+
+
+st.title("Chatbot hỗ trợ khách hàng")
+st.caption(
+    "Hỏi về chính sách trả hàng/hoàn tiền, phương thức thanh toán, quy định đăng "
+    "bán hoặc cách theo dõi đơn hàng. Mỗi câu trả lời đều kèm [Document N] trỏ về "
+    "nguồn ở phần mở rộng bên dưới."
+)
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
-        # TODO: Hiển thị sources và retrieval score.
+        if message["role"] == "assistant":
+            render_sources(
+                message.get("sources", []),
+                message.get("retrieval_source", "none"),
+            )
 
 query = st.chat_input("Nhập câu hỏi...")
 
@@ -35,11 +88,25 @@ if query:
         st.markdown(query)
 
     with st.chat_message("assistant"):
-        # TODO: Gọi generate_with_citation(query, top_k).
-        answer = "TODO: Itegration RAG Pipeline hêre"
-        sources = []
-        st.markdown(answer)
+        with st.spinner("Đang tìm nguồn và soạn câu trả lời..."):
+            try:
+                result = generate_with_citation(query, top_k=top_k)
+            except Exception as error:
+                # Provider hoặc vector store lỗi thì báo rõ, không để UI chết.
+                result = {
+                    "answer": f"Hệ thống gặp lỗi khi xử lý câu hỏi: {error}",
+                    "sources": [],
+                    "retrieval_source": "none",
+                }
 
-        # TODO: Hiển thị sources và citation.
+        st.markdown(result["answer"])
+        render_sources(result["sources"], result["retrieval_source"])
 
-    # TODO: Lưu answer và sources vào session state.
+    st.session_state.messages.append(
+        {
+            "role": "assistant",
+            "content": result["answer"],
+            "sources": result["sources"],
+            "retrieval_source": result["retrieval_source"],
+        }
+    )
