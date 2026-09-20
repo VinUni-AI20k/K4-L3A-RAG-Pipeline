@@ -2,7 +2,7 @@
 
 **Source:** https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/
 
-**Crawled:** 2026-09-20T15:25:29.227498
+**Crawled:** 2026-09-20T16:18:45.964657
 
 ---
 
@@ -94,7 +94,7 @@
     * [Tài liệu video trên Youtube](https://www.youtube.com/@MISASME/)
     * [Chat hỗ trợ trực tuyến](https://helpsme.misa.vn/2023/?soc=open)
   * [Tính năng mới](https://sme.misa.vn/tinh-nang-moi-misa-sme/)
-  * [Tiện ích](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/)
+  * [Tiện ích](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/#)
     * [Công vụ tính lãi vay](https://sme.misa.vn/cong-cu-tinh-lai-vay/)
   * [Dùng thử miễn phí](https://sme.misa.vn/dang-ky/)
 
@@ -166,9 +166,9 @@ Theo ngành nghề
 44
 [Facebook](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsme.misa.vn%2F349941%2Fchi-phi-khong-duoc-tru-khi-tinh-thue-tndn%2F "Facebook")
 [Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/&title=23+kho%E1%BA%A3n+chi+ph%C3%AD+kh%C3%B4ng+%C4%91%C6%B0%E1%BB%A3c+tr%E1%BB%AB+khi+t%C3%ADnh+thu%E1%BA%BF+TNDN+theo+Ngh%E1%BB%8B+%C4%91%E1%BB%8Bnh+320%2F2025 "Linkedin")
-[ ](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/ "More")
+[ ](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/# "More")
 [![các chi phí được trừ khi tính thuế tndn](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%201080'%3E%3C/svg%3E)](https://sme.misa.vn/wp-content/uploads/2026/09/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn.png)
-**Mục lục** [hiện](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/)
+**Mục lục** [hiện](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/#)
 [ 1. Chi phí không được trừ khi tính thuế TNDN là gì? ](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/#1_Chi_phi_khong_duoc_tru_khi_tinh_thue_TNDN_la_gi)
 [ 2. Điều kiện để chi phí được trừ khi tính thuế TNDN ](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/#2_Dieu_kien_de_chi_phi_duoc_tru_khi_tinh_thue_TNDN)
 [ 3. Các khoản chi phí không được trừ khi tính thuế TNDN ](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/#3_Cac_khoan_chi_phi_khong_duoc_tru_khi_tinh_thue_TNDN)
@@ -607,14 +607,14 @@ Nhờ đó, kế toán có thể **kiểm soát chi phí ngay từ khi phát sin
 Họ và tên đệm *
 Số điện thoại *
 Mã số thuế *
-Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/) của MISA *
+Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/#) của MISA *
 Đánh giá bài viết
 [Tổng số: 0 Trung bình: 0]
 Bài viết này hữu ích chứ?
 CóKhông
 **Lưu ý:** Nội dung bài viết được biên soạn dựa trên quy định pháp luật hiện hành tại thời điểm đăng tải, nhằm mục đích cung cấp thông tin tham khảo, không thay thế hoàn toàn tư vấn pháp lý, thuế hoặc kế toán chuyên biệt cho từng trường hợp cụ thể. Do quy định pháp luật có thể thay đổi hoặc áp dụng khác nhau tùy tình huống thực tế, MISA khuyến nghị người đọc đối chiếu văn bản pháp luật gốc (MISA có đính kèm căn cứ pháp lý gốc ở trên bài viết) hoặc liên hệ cơ quan thuế/chuyên gia tư vấn trước khi áp dụng. MISA không chịu trách nhiệm đối với thiệt hại phát sinh từ việc áp dụng thông tin trong bài viết mà không có sự xác minh phù hợp.
 [Đinh Thị Thùy Trang](https://sme.misa.vn/author/c-2120/)
-####  [Bài viết liên quan](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/)[Bài viết cùng tác giả](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/)
+####  [Bài viết liên quan](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/#)[Bài viết cùng tác giả](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/#)
 [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20218%20123'%3E%3C/svg%3E)](https://sme.misa.vn/350183/hach-toan-thue-tndn/ "Nghiệp vụ hạch toán thuế TNDN – TK 821 theo Thông tư 99/2025/TT-BTC")
 ### [Nghiệp vụ hạch toán thuế TNDN – TK 821 theo Thông tư 99/2025/TT-BTC](https://sme.misa.vn/350183/hach-toan-thue-tndn/ "Nghiệp vụ hạch toán thuế TNDN – TK 821 theo Thông tư 99/2025/TT-BTC")
 [![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20218%20123'%3E%3C/svg%3E)](https://sme.misa.vn/350169/thu-nhap-chiu-thue-tndn/ "22 khoản thu nhập chịu thuế TNDN năm 2026 kế toán cần biết")
@@ -627,7 +627,7 @@ CóKhông
 ### [5 điểm mới của nghị định 320 về thuế TNDN doanh nghiệp cần biết](https://sme.misa.vn/350011/nghi-dinh-320-ve-thue-tndn/ "5 điểm mới của nghị định 320 về thuế TNDN doanh nghiệp cần biết")
 [![nghị quyết 198 về miễn thuế tndn](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20218%20123'%3E%3C/svg%3E)](https://sme.misa.vn/349989/nghi-quyet-198-mien-thue-tndn/ "Ai được miễn thuế TNDN 3 năm theo Nghị quyết 198?")
 ### [Ai được miễn thuế TNDN 3 năm theo Nghị quyết 198?](https://sme.misa.vn/349989/nghi-quyet-198-mien-thue-tndn/ "Ai được miễn thuế TNDN 3 năm theo Nghị quyết 198?")
-[](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/)[](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/)
+[](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/#)[](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/#)
 > [Phần mềm kế toán doanh nghiệp](https://www.facebook.com/MISA.SME/)
 Tìm kiếm nhiều nhất 
 [phần mềm kế toán](https://sme.misa.vn/)[phần mềm kế toán doanh nghiệp vừa và nhỏ](https://sme.misa.vn/116815/phan-mem-ke-toan-doanh-nghiep-nho/)[quyết toán thuế tndn](https://amis.misa.vn/14398/quyet-toan-thue-thu-nhap-doanh-nghiep/)[htkk mới nhất](https://amis.misa.vn/61453/phan-mem-ho-tro-ke-khai-thue-htkk/)[giá phần mềm kế toán](https://amis.misa.vn/20355/bao-gia-phan-mem-ke-toan-online-misa-amis/)[quyết toán thuế](https://amis.misa.vn/120114/quyet-toan-thue/)
@@ -645,7 +645,7 @@ Số điện thoại *
 Mã số thuế *
 Chức vụ/Vai trò *
 Chức vụ/Vai trò * CEO/ Founder/ Chủ tịch Giám đốc (CFO, CTO, Nhân sự, VP) Quản lý (manager) Nhân viên (staff) Học sinh/ Sinh viên (student) Vị trí khác (other) IT
-Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/) của MISA *
+Tôi đồng ý với [Chính sách bảo vệ dữ liệu cá nhân](https://sme.misa.vn/349941/chi-phi-khong-duoc-tru-khi-tinh-thue-tndn/#) của MISA *
 ![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20152%200'%3E%3C/svg%3E)![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20213%200'%3E%3C/svg%3E)
 MISA SME - PHẦN MỀM KẾ TOÁN UY TÍN CHO DOANH NGHIỆP
 Trụ sở chính:
