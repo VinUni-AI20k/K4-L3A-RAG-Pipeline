@@ -22,12 +22,10 @@ CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 CHUNKING_METHOD = "recursive"
 
-EMBEDDING_MODEL = "BAAI/bge-m3"
-EMBEDDING_DIM = 1024
+EMBEDDING_MODEL = "gemini-embedding-001"
+EMBEDDING_DIM = 3072
 
 COLLECTION_NAME = "rag_documents"
-
-_LOCAL_EMBEDDING_MODEL = None
 
 
 def _get_env(name: str, default: str = "") -> str:
@@ -75,31 +73,31 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
     if not texts:
         return []
 
-    provider = _get_env("EMBEDDING_PROVIDER", "sentence_transformers").lower()
-    model_name = _get_env("EMBEDDING_MODEL", EMBEDDING_MODEL) or EMBEDDING_MODEL
+    env_path = Path(__file__).parent.parent / ".env"
+    if env_path.exists():
+        for line in env_path.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            os.environ[key.strip()] = value.strip().strip("\"'")
+
+    provider = _get_env("EMBEDDING_PROVIDER", "gemini").lower()
+    default_models = {
+        "gemini": "gemini-embedding-001",
+        "openai": "text-embedding-3-small",
+    }
+    model_name = (
+        _get_env("EMBEDDING_MODEL")
+        or default_models.get(provider)
+        or "gemini-embedding-001"
+    )
 
     if provider in {"sentence_transformers", "local"}:
-        global _LOCAL_EMBEDDING_MODEL
-        if _LOCAL_EMBEDDING_MODEL is None:
-            try:
-                from sentence_transformers import SentenceTransformer
-            except (ImportError, NameError) as error:
-                raise RuntimeError(
-                    "Không import được sentence_transformers. "
-                    "Kiểm tra lại version transformers/torch trong venv; "
-                    "project này pin transformers<5 để tương thích ổn hơn."
-                ) from error
-
-            _LOCAL_EMBEDDING_MODEL = SentenceTransformer(model_name)
-        try:
-            vectors = _LOCAL_EMBEDDING_MODEL.encode(
-                texts,
-                normalize_embeddings=True,
-                show_progress_bar=False,
-            )
-        except TypeError:
-            vectors = _LOCAL_EMBEDDING_MODEL.encode(texts)
-        return vectors.tolist()
+        raise RuntimeError(
+            "EMBEDDING_PROVIDER đang là local/sentence_transformers, "
+            "sẽ tải model rất nặng. Hãy dùng openai hoặc gemini trong .env."
+        )
 
     if provider == "openai":
         from openai import OpenAI
@@ -110,12 +108,28 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
 
     if provider == "gemini":
         from google import genai
+        import time
 
         client = genai.Client(api_key=_get_env("GEMINI_API_KEY") or None)
-        return [
-            client.models.embed_content(model=model_name, contents=text).embeddings[0].values
-            for text in texts
-        ]
+        vectors = []
+        for start in range(0, len(texts), 100):
+            batch = texts[start:start + 100]
+            for attempt in range(3):
+                try:
+                    response = client.models.embed_content(
+                        model=model_name,
+                        contents=batch,
+                    )
+                    break
+                except Exception as error:
+                    message = str(error)
+                    if "429" not in message and "RESOURCE_EXHAUSTED" not in message:
+                        raise
+                    if attempt == 2:
+                        raise
+                    time.sleep(30)
+            vectors.extend(embedding.values for embedding in response.embeddings)
+        return vectors
 
     raise ValueError(f"Unsupported EMBEDDING_PROVIDER: {provider}")
 

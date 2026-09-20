@@ -1,11 +1,12 @@
 import streamlit as st
 from dotenv import load_dotenv
 
+from src.task10_generation import generate_with_citation
 
 load_dotenv()
 
 st.set_page_config(
-    page_title="RAG Chatbot",
+    page_title="RAG Chatbot - Du lich Vinh Ha Long",
     page_icon="",
     layout="wide",
 )
@@ -15,18 +16,28 @@ if "messages" not in st.session_state:
 
 with st.sidebar:
     st.title("RAG Chatbot")
-    st.caption("Thay mô tả theo đề tài của nhóm")
-    top_k = st.slider("Số chunks", 3, 10, 5)
+    st.caption("Hoi dap tu chinh sach va bai viet cong khai ve du lich Vinh Ha Long")
+    top_k = st.slider("So chunks", 3, 10, 5)
+    st.divider()
+    st.caption("Hybrid retrieval: dense + BM25 + RRF.")
 
-st.title("RAG Chatbot")
-st.caption("Thay tiêu đề và hướng dẫn sử dụng")
+st.title("RAG Chatbot - Du lich Vinh Ha Long")
+st.caption("Tra loi dua tren van ban quyet dinh/quy dinh va bai viet cong khai da thu thap.")
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
-        # TODO: Hiển thị sources và retrieval score.
+        if message["role"] == "assistant" and message.get("sources"):
+            with st.expander("Nguon trich xuat", expanded=False):
+                for index, source in enumerate(message["sources"], 1):
+                    metadata = source.get("metadata", {})
+                    title = metadata.get("title", "Khong ro")
+                    source_name = metadata.get("source", "Khong ro")
+                    score = source.get("score", 0.0)
+                    method = source.get("retrieval_method", "unknown")
+                    st.markdown(f"**{index}. {title}** | file: `{source_name}` | score: `{score:.4f}` | method: `{method}`")
 
-query = st.chat_input("Nhập câu hỏi...")
+query = st.chat_input("Hoi ve Vinh Ha Long, quy dinh du lich, visa...")
 
 if query:
     st.session_state.messages.append({"role": "user", "content": query})
@@ -35,11 +46,27 @@ if query:
         st.markdown(query)
 
     with st.chat_message("assistant"):
-        # TODO: Gọi generate_with_citation(query, top_k).
-        answer = "TODO: Itegration RAG Pipeline hêre"
-        sources = []
+        with st.spinner("Dang truy xuat..."):
+            result = generate_with_citation(query, top_k=top_k)
+
+        answer = result["answer"]
+        sources = result["sources"]
         st.markdown(answer)
 
-        # TODO: Hiển thị sources và citation.
+        if sources:
+            with st.expander("Nguon trich xuat", expanded=False):
+                for index, source in enumerate(sources, 1):
+                    metadata = source.get("metadata", {})
+                    title = metadata.get("title", "Khong ro")
+                    source_name = metadata.get("source", "Khong ro")
+                    score = source.get("score", 0.0)
+                    method = source.get("retrieval_method", "unknown")
+                    st.markdown(f"**{index}. {title}** | file: `{source_name}` | score: `{score:.4f}` | method: `{method}`")
 
-    # TODO: Lưu answer và sources vào session state.
+    st.session_state.messages.append(
+        {
+            "role": "assistant",
+            "content": answer,
+            "sources": sources,
+        }
+    )
