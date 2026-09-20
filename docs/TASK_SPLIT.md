@@ -19,15 +19,22 @@
 
 ---
 
-## Phân công 3 người
+## Phân công 4 người
 
 | # | Phụ trách | Module | Điểm rubric | Việc cụ thể |
 |---|---|---|---:|---|
-| 1 | **Data & Indexing** | Task 1, 2, 3, 4 | 20đ | Tìm PDF/DOCX chính sách thật, crawl ≥5 bài news, convert markdown, chunk + embed + index vào ChromaDB |
-| 2 | **Retrieval** | Task 5, 6, 7, 8, 9 | 30đ | Dense search, BM25, RRF, PageIndex fallback (optional), ráp retrieval pipeline + hiệu chỉnh threshold |
-| 3 | **Generation & Product** | Task 10, `app.py`, Evaluation | 35đ | Generation kèm citation, chatbot Streamlit, 15 câu golden Q&A + RAGAS 4 metric + A/B, điền `RESULT.md` |
+| 1 | **Data Collection** | Task 1, 2, 3 | 10đ | Tìm ≥3 PDF/DOCX chính sách thật, crawl ≥5 bài news, convert sang markdown chuẩn |
+| 2 | **Indexing & Dense Retrieval** | Task 4, 5 | 10 + phần dense trong 20đ | Chunk + embed + index vào ChromaDB, semantic search (dense) |
+| 3 | **Lexical, Fusion & Pipeline** | Task 6, 7, 8, 9 | phần BM25/RRF trong 20 + 10đ | BM25, RRF, PageIndex fallback (optional), ráp retrieval pipeline + hiệu chỉnh threshold |
+| 4 | **Generation, Chatbot & Evaluation** | Task 10, `app.py`, Evaluation | 15 + 10 + 10 = 35đ | Generation kèm citation, chatbot Streamlit, 15 câu golden Q&A + RAGAS 4 metric + A/B, điền `RESULT.md` |
 
-Phần README + individual reports (5đ) là việc chung — nhóm trưởng tổng hợp và review tích hợp giữa 3 phần.
+Phần README + individual reports (5đ) là việc chung — nhóm trưởng tổng hợp và review tích hợp giữa 4 phần.
+
+**Việc phân bổ không đều tuyệt đối** (Người 4 nặng nhất ~35đ, Người 1 nhẹ nhất ~10đ). Hai cách cân bằng lại:
+- Người 1 (Data) phối hợp viết 15 câu golden Q&A cùng Người 4 — vì Người 1 hiểu corpus nhất (bớt việc cho Người 4).
+- Người 2 và Người 3, sau khi xong Task 5–9, phụ Người 4 nối `retrieve()`/`generate_with_citation()` vào `app.py` thay vì để một mình Người 4 làm toàn bộ Streamlit UI.
+
+**Thứ tự phụ thuộc:** Người 2/3 cần ít nhất vài chunk mẫu từ Người 1 để test sớm (không cần đợi đủ 3 PDF + 5 news — dùng tạm 8 file học bổng đã có ở `data/standardized/legal/` để code trước). Người 4 code Task 10/`app.py` dựa trên schema `SearchResult` cố định sẵn trong `src/contracts.py`, không cần đợi Người 2/3 xong hẳn mới bắt đầu — có thể mock `retrieve()` tạm thời.
 
 ---
 
