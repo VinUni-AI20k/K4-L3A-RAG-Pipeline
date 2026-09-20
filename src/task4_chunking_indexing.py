@@ -53,13 +53,14 @@ DOCUMENT_TITLES: dict[str, str] = {
     ),
 }
 
-# URL nguồn chính thức (vd. congbao.chinhphu.vn, thuvienphapluat.vn) — để trống
-# (None) vì chưa xác minh được URL thật, KHÔNG bịa. Nhóm điền sau khi có nguồn
+# URL nguồn chính thức (vd. congbao.chinhphu.vn, datafiles.chinhphu.vn) — để trống
+# (None) nếu không tìm được URL đã xác minh, KHÔNG bịa. Nhóm điền sau khi có nguồn
 # đã xác minh để citation ở Task 10 dẫn ngược được về văn bản gốc.
+# Xác minh: kiểm curl -sIL content-length khớp byte của file local.
 DOCUMENT_URLS: dict[str, str | None] = {
-    "luat-nha-o.md": None,
-    "luat-kinh-doanh-bds.md": None,
-    "luat_bao_ve_nguoi_tieu_dung_2023.md": None,
+    "luat-nha-o.md": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2024/01/luat27.pdf",
+    "luat-kinh-doanh-bds.md": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2024/01/luat29.pdf",
+    "luat_bao_ve_nguoi_tieu_dung_2023.md": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2023/7/luat19_2023.pdf",
     "mau-so-1a.md": None,
 }
 

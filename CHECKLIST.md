@@ -13,38 +13,109 @@
 | 1 | Chọn đề tài | Cả nhóm | ✅ ĐÃ XONG |
 | 2 | Cài môi trường | Cả nhóm | ✅ ĐÃ XONG |
 | 3 | Thu thập dữ liệu | **Khanh** | 🟡 MỘT PHẦN — legal ✅ / news ⏸️ PENDING |
-| 4 | Chuẩn hóa Markdown | **Khanh** | ✅ XONG (legal) — news chờ Part B |
-| 5 | Chunk, embedding & index | **Khanh** | 🟡 CODE XONG — 🔴 BỊ CHẶN bởi xung đột torch/numpy |
-| 6 | Xây dựng hybrid retrieval | **Minh** | ⏳ CHƯA LÀM |
-| 7 | Fallback & retrieval pipeline | **Minh** | ⏳ CHƯA LÀM |
-| 8 | Generation có citation | **Minh** | ⏳ CHƯA LÀM |
-| 9 | Chatbot & evaluation | **Hùng** | ⏳ CHƯA LÀM |
+| 4 | Chuẩn hóa Markdown | **Khanh** | ✅ XONG — legal 4/4 ✓ (news PENDING do Mục 3B hoãn) |
+| 5 | Chunk, embedding & index | **Khanh** | ✅ XONG — 1392 chunk đã index, dim 1024 ✓ |
+| 6 | Xây dựng hybrid retrieval | **Minh** | ❌ VẪN LÀ STUB — 7/15 contract test FAIL |
+| 7 | Fallback & retrieval pipeline | **Minh** | ❌ VẪN LÀ STUB — 7/15 contract test FAIL |
+| 8 | Generation có citation | **Minh** | ❌ VẪN LÀ STUB — 7/15 contract test FAIL |
+| 9 | Chatbot & evaluation | **Hùng** | 🟡 PHẦN LÀM (khác spec) — UI ✅ / Eval ⏸️ CHƯA CHẠY |
 | 10 | Kiểm tra & nộp bài | *Chưa phân công* | ⏳ CHƯA LÀM |
 
 ---
 
-## 👉 Bước Tiếp Theo
+## 👉 Bước Tiếp Theo — CẬP NHẬT NGÀY 2026-09-21
 
-**Mục 5 — code đã viết xong, nhưng KHÔNG chạy được vì môi trường `.venv` đang hỏng.** Đây là việc chặn đường găng, phải xử lý trước mọi thứ khác.
+### ❌ PHÁT HIỆN NGÀY 2026-09-21: Minh Vẫn Chưa Bắt Đầu Task 5-10
 
-- **🔴 ƯU TIÊN 1 — Sửa xung đột torch/numpy/transformers** (xem mục `🔴 BLOCKER` bên dưới). Chừng nào chưa sửa, cả mục 5 lẫn mục 6 của Minh đều không chạy được, vì cả hai đều import `sentence_transformers`.
+- **Trạng thái:** `src/task5-10` vẫn là stub hoàn toàn (7/15 contract test FAIL)
+- **Nguyên nhân:** Không có giải thích rõ ràng; có thể Minh bị chặn bởi điều gì đó hoặc quên
+- **Tác động:** Nhóm sẽ **mất 45 điểm** nếu không implement trước deadline
+- **Hành động cần thiết:**
+  1. **Minh bắt đầu **NGAY** — không hoãn thêm**
+  2. Tuân theo comment giải thích trong từng file (`# TODO:` sections đã được giải thích từng dòng)
+  3. Ước lượng ~3-4 giờ để implement + test + debug
+  4. **Minh cần commit từng task (5, 6, 7, 9, 10) riêng để có thể trace được phần việc trong report cá nhân**
 
-- **Sau khi sửa môi trường — Khanh chạy lại:**
-  ```bash
-  .venv/bin/python -m pytest tests/test_contracts.py::test_chunk_documents_preserves_identity_and_metadata tests/test_contracts.py::test_public_function_signatures_are_stable -q
-  .venv/bin/python -m src.task4_chunking_indexing
-  ```
-  - ⚠️ Lệnh thứ hai sẽ tải model `BAAI/bge-m3` (~2+ GB) rồi embed **ước tính 1.500+ chunk** trên CPU — mất nhiều phút đến hàng chục phút. Chạy khi có thời gian, đừng chạy ngay trước lúc demo.
+### ✅ Hùng Đã Hoàn Thành Chatbot (Nhưng Khác Spec)
 
-- **Kế tiếp — Minh:** Ngay khi mục 5 chạy xong và `embed_texts()` import được, Minh bắt đầu mục 6. Không cần chờ news.
+- **Chatbot UI:** ✅ Chạy được qua `python -m chatbot.server` (HTTP server + HTML tĩnh)
+- **Golden dataset:** ✅ 20 câu, test pass
+- **Còn lại:** 
+  - [ ] Chạy `python group_project/evaluation/run_evaluation.py` để thực thi evaluation (nếu Minh xong task10 + có thời gian)
+  - [ ] Điền `reports/2A202602942-HUNGLM.md` (individual report) — copy template và ghi phần việc của Hùng
 
-- **Song song — Hùng:** Soạn trước golden dataset dựa trên **nội dung 4 văn bản luật đã có** (Luật Nhà ở, Luật Kinh doanh BĐS, Luật Bảo vệ người tiêu dùng 2023, mẫu số 1A). *Lưu ý: Bộ luật Dân sự đã bị gỡ, không soạn câu hỏi dựa trên nó.* Viết câu hỏi không cần code chạy được.
+### 🔵 News (Mục 3 Part B) — VẨN PENDING
 
-- **Khi nào quay lại news:** Trước mục 10, vì `pytest -q` phải xanh toàn bộ mới nộp được.
+- [ ] Cần crawl ≥5 bài vào `data/landing/news/` để acceptance test pass
+- [ ] Nếu không có news, `pytest -q` không thể pass toàn bộ
+- **Đề xuất:** Khanh hoặc Hùng (hoặc cả hai) crawl 5 bài trong 30 phút khi có lúc, không cần chờ Minh xong
+
+### 📌 Dòng Thời Gian Khuyến Nghị
+
+```
+Hiện tại (sáng 2026-09-21):
+├─ Minh: Bắt đầu task5 NGAY, xong task5→10 trong ~3-4 giờ
+├─ Hùng (song parallel): Chạy eval (30') + viết report (30') khi Minh xong task10
+├─ Khanh (song parallel): Crawl news 5 bài (30') + chuẩn hoá (15')
+└─ Cả nhóm (cuối cùng): Chạy `pytest -q` toàn bộ, chỉnh sửa nếu lỗi, push repo
+```
+
+**Deadline hôm nay hoặc ngày mai?** → Phải xác nhận với giảng viên. Nếu hôm nay 17:00, **không kịp** vì Minh cần 3-4 giờ; nếu ngày mai cả sáng, **kịp được nếu Minh bắt đầu NGAY**.
 
 ---
 
 ## ⚠️ Ghi Chú Quan Trọng
+
+### ⚠️ Hai Nhánh Implementation Song Song — TÌNH HUỐNG THỰC
+
+**Tóm tắt:** Hùng đã viết một implementation **hoàn toàn độc lập** (`chatbot/` package) cho mục 9, không dùng các hàm từ `src/task5_semantic_search.py` → `src/task10_generation.py` của Minh. Kết quả là nhóm hiện có **hai implementation hybrid retrieval + generation riêng biệt, khác nhau hoàn toàn**:
+
+#### Nhánh A: `src/task5-10` (Minh phụ trách — hiện là stub)
+- Tuân theo contract trong `docs/MODULE_CONTRACTS.md` (schema, interface, test cụ thể)
+- Dense embedding: dùng `embed_texts()` chung từ task4, embedding dimension = 1024
+- ChromaDB: tham vấn vector store đã index (1392 chunk)
+- Hybrid: RRF gộp dense + BM25
+- LLM: dispatch theo LLM_PROVIDER
+- **Status:** 7 contract test FAIL, chưa implement
+
+#### Nhánh B: `chatbot/` (Hùng phụ trách — đã implement)
+- Độc lập, không import từ `src/`
+- Dense embedding: TF-IDF (default) hoặc fastembed (không dùng `sentence-transformers` vì PyTorch bị chặn)
+- Corpus: load từ `data/standardized/legal/` trực tiếp, chunk lại theo article-aware (không dùng ChromaDB)
+- Hybrid: RRF gộp dense + BM25
+- LLM: dispatch theo LLM_PROVIDER (cùng config)
+- **Status:** ✅ Hoàn toàn implement, chạy được
+
+#### Tác Động Lên Rubric (90 điểm)
+
+| Tiêu chí | Điểm | Hiện trạng | Vấn đề |
+|----------|------|-----------|--------|
+| Dense, BM25, RRF | 20 | Nhánh A (Minh): stub ❌ | Nếu chấm theo contract test, 20 điểm này sẽ bị mất |
+| Retrieval pipeline | 10 | Nhánh A: stub ❌ | Nhánh B (Hùng) có, nhưng không theo contract → không đủ để thay thế Minh |
+| Generation + citation | 15 | Nhánh B: có `generate_with_citation()` ✅ | Nhánh A chưa implement, nhưng Nhánh B chạy được |
+| Chatbot UI | 10 | Nhánh B: HTTP server ✅ | Spec yêu cầu Streamlit; HTTP server khác cách làm → rủi ro mất điểm |
+| **Tổng rubric chực hiện:** | **45/90** | Chỉ có nhánh B chạy được | Nhánh A vẫn là stub → **mất 45 điểm từ mục 6-8** |
+
+#### Hai Lựa Chọn Tiến Hành (Quyết định của nhóm)
+
+**Lựa Chọn 1: Giữ nguyên hai nhánh — Minh implement `src/task5-10` theo contract**
+- ✅ Ưu điểm: Đầy đủ contract test, schema chuẩn hóa, khả năng reuse cao
+- ❌ Nhược điểm: Hùng phải tách `chatbot/` thành wrapper gọi `src/task10_generation.py` thay vì tự implement; hoặc chấp nhận mất 45 điểm nếu giảng viên chỉ chấm theo contract test
+- ⏱️ **Thời gian:** Minh cần ~3-4 giờ để implement task5-10 theo spec (đủ vì còn ~6 giờ tổng cộng)
+
+**Lựa Chọn 2: Chấp nhận `chatbot/` làm giải pháp chính, wrap lại cho khớp interface**
+- ✅ Ưu điểm: Nhánh B đã chạy, có thể nhanh chóng tạo wrapper để contract test pass
+- ❌ Nhược điểm: Vượt scope, phải refactor `chatbot/engine.py` để khớp schema contract; vẫn không khác biệt lớn với nhánh B
+- ⏱️ **Thời gian:** Nhanh, ~1-2 giờ, nhưng không giải quyết root cause (Minh chưa implement)
+
+#### Khuyến Nghị
+
+**Hành động khẩn cấp (nên làm ngay hôm nay hay tối hôm nay):**
+1. Minh và Hùng họp 10 phút để chọn lựa chọn 1 hay 2
+2. **Nếu chọn lựa chọn 1:** Minh bắt đầu implement task5-10 ngay — đây là critical path, phần của Minh là nút thắt cổ chai lớn nhất
+3. **Nếu chọn lựa chọn 2:** Hùng chuẩn bị wrapper + Minh review contract test để pass
+
+Không thể hoãn vì acceptance test `pytest -q` không pass (3 câu fail do news + evaluation) cho tới khi lựa chọn được chốt.
 
 ### Mục 10 — Phân Công Chưa Rõ
 
@@ -63,18 +134,18 @@
 
 3. **Corpus chỉ có văn bản luật.** Golden dataset ở mục 9 sẽ chỉ hỏi được về nội dung luật; phần A/B test và các câu hỏi dạng tin tức/thời sự sẽ không có dữ liệu để trả lời. Hùng cần biết điều này khi soạn 15 câu hỏi.
 
-### 🔴 BLOCKER: Xung Đột torch / numpy / transformers trong `.venv`
+### ✅ Đã Xử Lý: Xung Đột torch / numpy / transformers trong `.venv`
 
-**Triệu chứng:** chạy `pytest tests/test_contracts.py::test_chunk_documents_preserves_identity_and_metadata` báo `NameError: name 'nn' is not defined`, phát sinh trong chuỗi import `langchain_text_splitters → sentence_transformers → transformers → torch.nn.modules.transformer` — **trước khi** code của task4 chạy dòng nào. Kèm cảnh báo của torch: `Failed to initialize NumPy: _ARRAY_API not found`.
+**Triệu chứng (đã xảy ra):** chạy `pytest tests/test_contracts.py::test_chunk_documents_preserves_identity_and_metadata` báo `NameError: name 'nn' is not defined`, phát sinh trong chuỗi import `langchain_text_splitters → sentence_transformers → transformers → torch.nn.modules.transformer` — **trước khi** code của task4 chạy dòng nào. Kèm cảnh báo của torch: `Failed to initialize NumPy: _ARRAY_API not found`.
 
-**Nguyên nhân — đã xác minh bằng `pip list` và `uname -m`:**
+**Nguyên nhân — được xác minh bằng `pip list` và `uname -m` (lúc chưa fix):**
 
-| Package | Đã cài | Ràng buộc |
-|---|---|---|
-| `torch` | 2.2.2 | build trên numpy 1.x ABI → **không chịu được numpy 2** |
-| `numpy` | 2.4.6 | phá ABI của torch 2.2.2 |
-| `transformers` | 5.17.0 | đòi **torch ≥ 2.5** |
-| `sentence-transformers` | 6.1.0 | kéo theo transformers 5.x |
+| Package | Lúc bị bug | Lúc ghim | Hiện tại (đã fix) |
+|---|---|---|---|
+| `torch` | 2.2.2 | (không ghim) | 2.2.2 ✓ |
+| `numpy` | 2.4.6 → ❌ | ≥1.26.0,<2 | 1.26.4 ✓ |
+| `transformers` | 5.17.0 → ❌ | ≥4.41.0,<5 | 4.57.6 ✓ |
+| `sentence-transformers` | 6.1.0 → ❌ | ≥3.0.0,<4 | 3.4.1 ✓ |
 
 Máy chạy **macOS x86_64 (Intel)** — PyTorch **ngừng build wheel macOS Intel sau bản 2.2.2**, nên không có đường nâng torch. Bộ version này mâu thuẫn ba chiều: transformers đòi torch ≥2.5, torch 2.2.2 đòi numpy <2.
 
@@ -90,10 +161,10 @@ Máy chạy **macOS x86_64 (Intel)** — PyTorch **ngừng build wheel macOS Int
 - `transformers>=4.41.0,<5` (mới thêm, trước đây chỉ là dependency gián tiếp)
 - `torch` cố ý **không ghim** — trên Intel pip sẽ tự lấy 2.2.2 (bản cao nhất có), trên arm64/Linux lấy bản mới hơn; cả hai đều chạy được với numpy 1.x + transformers 4.x.
 
-**⏳ CHƯA LÀM — cài lại `.venv` cho khớp:**
-- [ ] `.venv/bin/python -m pip install -e ".[dev]"` (pip sẽ hạ numpy/transformers/sentence-transformers xuống)
-- [ ] Chạy lại 2 test contract của mục 5 để xác nhận
-- [ ] **Minh & Hùng cũng phải cài lại** sau khi pull — nếu không sẽ gặp lại đúng lỗi này
+**✅ ĐÃ LÀM — cài lại `.venv` cho khớp:**
+- [x] `.venv/bin/python -m pip install -e ".[dev]"` (pip đã hạ numpy/transformers/sentence-transformers xuống) ✓
+- [x] Chạy lại 2 test contract của mục 5 để xác nhận — **2 PASSED in 18.16s** ✓
+- [ ] **Minh & Hùng:** Khi pull code mới, chạy `pip install -e ".[dev]"` lại để cập nhật dependencies — nếu không sẽ gặp lại lỗi này
 
 **Ghi chú:** `BAAI/bge-m3` chạy bình thường trên `sentence-transformers` 3.x, việc hạ version không ảnh hưởng chất lượng embedding.
 
@@ -110,22 +181,48 @@ Máy chạy **macOS x86_64 (Intel)** — PyTorch **ngừng build wheel macOS Int
 - **Cách xử lý đã chọn:** Thay bằng nguồn PDF khác có text layer (`luat_bao_ve_nguoi_tieu_dung_2023.pdf`). Nhanh, vài phút. Cách còn lại là OCR (tốn thời gian, cần cài tesseract).
 - **Khuyến nghị:** Nếu sau này bổ sung tài liệu legal mới, hãy kiểm tra số ký tự convert được ngay thay vì tin vào kích thước file.
 
-### Khối Lượng Công Việc Lệch Nhau
+### Khối Lượng Công Việc Lệch Nhau — CẬP NHẬT NGÀY 2026-09-21
 
-- **Khanh:** 20 điểm (mục 3→4→5) — tương đối cân bằng
+- **Khanh:** 20 điểm (mục 3→4→5) — ✅ **ĐÃ XONG**, không có thêm công việc
 - **Minh:** 45 điểm (mục 6→7→8) — **gánh nặng nhất**, tương đương ~50% rubric
-  - Dense, BM25, RRF: 20đ
-  - Pipeline & fallback: 10đ
-  - Generation & citation: 15đ
-- **Hùng:** 20 điểm (mục 9)
-- **Chung:** 5 điểm (mục 10)
+  - Dense, BM25, RRF: 20đ — **VẪN LÀ STUB** ❌
+  - Pipeline & fallback: 10đ — **VẦN LÀ STUB** ❌
+  - Generation & citation: 15đ — **VẨN LÀ STUB** ❌
+  - **Critical:** 7 contract test fail; Minh phải implement ngay (~ 3-4 giờ)
+- **Hùng:** 20 điểm (mục 9) — 🟡 **PHẦN LÀM NHƯNG KHÁC SPEC**
+  - Chatbot UI: ✅ implement (nhưng dùng HTTP server thay Streamlit)
+  - Golden dataset: ✅ 20 câu, test pass
+  - Evaluation: ⏳ chưa chạy (vẫn là template TODO)
+  - **Còn cần:** Chạy `python group_project/evaluation/run_evaluation.py` (nếu kịp + có thời gian)
+- **Chung:** 5 điểm (mục 10) — ⏳ Chưa làm; phụ thuộc vào Minh xong trước
 
-**Khuyến nghị:** Nếu kịp, hãy san bớt mục 8 (Generation) sang Hùng hoặc Khanh để cân bằng công việc.
+**⚠️ Cảnh báo đỏ:** Nếu Minh không implement task5-10, nhóm sẽ mất **45 điểm** (contract test + rubric); phần của Hùng không thể thay thế được vì hai nhánh independence. **Minh cần bắt đầu **NGAY HÔM NAY** để còn thời gian debug.**
 
 ### ✅ Đã Xử Lý: mau-so-1a.docx
 
 - **Lo ngại ban đầu:** File biểu mẫu pháp lý (35 KB) có thể không đạt ≥200 ký tự sau khi convert.
 - **Kết quả thực tế:** Sau khi cài `markitdown[docx]`, file convert thành công ra **53.394 ký tự** — vượt xa ngưỡng. **Không cần thay file.**
+
+### ✅ Đã Xử Lý: Chốt CVE-2025-32434 Chặn Load Model
+
+**Triệu chứng (đã gặp):** Pipeline chạy tới bước load `BAAI/bge-m3` thì chết với:
+```
+ValueError: Due to a serious vulnerability issue in torch.load..., 
+require users to upgrade torch to at least v2.6... CVE-2025-32434
+```
+
+**Nguyên nhân — ba ràng buộc khoá nhau:**
+1. `transformers` phiên bản cao (4.50+) chốt CVE-2025-32434: chặn `torch.load` file `.bin` khi torch < 2.6
+2. `torch` kẹt ở 2.2.2 trên macOS Intel (PyTorch ngừng build wheel cho kiến trúc này sau bản 2.2.2)
+3. `BAAI/bge-m3` **không có** bản `safetensors` trên HuggingFace → không lách CVE bằng cách dùng safetensors
+
+**Cách sửa đã chọn:** Hạ trần `transformers` xuống `<4.50` trong `pyproject.toml` → pip resolve ra **4.49.0**, không còn chốt CVE. Giữ nguyên `BAAI/bge-m3`, `torch 2.2.2`, mọi hằng số của lab, không sửa code.
+
+**Kết quả:** Mục 5 hoàn thành, 1392 chunk đã index thành công, 2 test contract pass.
+
+**⚠️ Bài học:** Khoảng version lỏng cho torch/transformers/numpy là nguồn gốc của cả hai blocker. Trần `<4.50` (transformers) và `<2` (numpy) giờ đã có comment giải thích trong `pyproject.toml` — **đừng nâng lên nếu chưa kiểm tra lại trên máy Intel.**
+
+**📌 Với Minh & Hùng:** Khi pull code mới, **chạy `pip install -e ".[dev]"` lại** (không chỉ `git pull`), nếu không venv của bạn vẫn giữ transformers/numpy cũ và sẽ gặp lại lỗi này.
 
 ---
 
@@ -184,25 +281,40 @@ Máy chạy **macOS x86_64 (Intel)** — PyTorch **ngừng build wheel macOS Int
   - [x] Idempotent: tên file output cố định `{stem}.md`, chạy lại ghi đè, không nhân bản, không để lại file rỗng
 - [x] ✅ **Kiểm tra** `mau-so-1a.docx` khi convert — **đạt 53.394 ký tự**, vượt ngưỡng 200 ký tự
 - [x] **Lệnh:** `python -m src.task3_convert_markdown` ✅ **Chạy thành công**
-- [ ] ✅ **Chốt:** `pytest tests/test_acceptance.py` phần data — legal ✅ PASS, nhưng news PENDING (chưa chạy full test do news rỗng)*
+- [x] ✅ **Chốt:** `pytest tests/test_acceptance.py` — Legal PASS (4/4 file, ≥200 ký tự), News PENDING (không phải lỗi Mục 4)
 
-**Kết quả chạy thực tế:**
+**Kết quả chạy thực tế (đo ngày 2026-09-20):**
 
-| File nguồn | File Markdown | Số ký tự | Kết quả |
+| File nguồn | File Markdown | Số ký tự (thực đo) | Kết quả |
 |---|---|---|---|
-| `luat-nha-o.pdf` | `luat-nha-o.md` | 209.458 | ✅ |
-| `luat-kinh-doanh-bds.pdf` | `luat-kinh-doanh-bds.md` | 145.203 | ✅ |
-| `luat_bao_ve_nguoi_tieu_dung_2023.pdf` | `luat_bao_ve_nguoi_tieu_dung_2023.md` | 111.198 | ✅ |
-| `mau-so-1a.docx` | `mau-so-1a.md` | 53.394 | ✅ |
+| `luat-nha-o.pdf` | `luat-nha-o.md` | 209.472 | ✅ |
+| `luat-kinh-doanh-bds.pdf` | `luat-kinh-doanh-bds.md` | 145.226 | ✅ |
+| `luat_bao_ve_nguoi_tieu_dung_2023.pdf` | `luat_bao_ve_nguoi_tieu_dung_2023.md` | 111.234 | ✅ |
+| `mau-so-1a.docx` | `mau-so-1a.md` | 53.407 | ✅ |
 
-**4/4 file convert thành công, 0 file bị bỏ qua. Tất cả vượt xa ngưỡng 200 ký tự.**
+**4/4 file convert thành công, 0 file bị bỏ qua. Tất cả vượt xa ngưỡng 200 ký tự. Không có file rỗng hoặc trùng lặp.**
+
+**pytest test_acceptance.py kết quả (ngày 2026-09-20):**
+```
+.FFFF [100%]
+PASSED: test_corpus_has_required_legal_documents ✓
+FAILED: test_corpus_has_required_news_with_metadata (0 news files — PENDING, Mục 3 Part B)
+FAILED: test_standardized_output_covers_both_source_types (0 news markdown — PENDING, Mục 3 Part B)
+FAILED: test_golden_dataset_has_15_grounded_cases (Mục 9 chưa làm)
+FAILED: test_evaluation_report_is_completed (Mục 9 chưa làm)
+```
+
+**Phân loại fail:**
+- 2 fail do news PENDING (Mục 3 Part B, nhóm hoãn crawl) — **KHÔNG phải lỗi Mục 4**
+- 2 fail do Mục 9 chưa làm (golden_dataset.json, RESULT.md) — **KHÔNG phải lỗi Mục 4**
+- **Kết luận:** Mục 4 (legal part) ✅ HOÀN THÀNH TRỌN VẸN trong phạm vi của nó
 
 **Ghi chú:** Dependency `markitdown[docx]` đã được cài để hỗ trợ convert `.docx`. Vấn đề ban đầu là phần code cần handle trường hợp `data/landing/news/` rỗng để không crash mục 5 — đã implement xong và chạy thành công.
 
 ---
 
 ### **Mục 5 — Chunk, Embedding & Index** ⏱️ 15'
-**Người phụ trách:** **Khanh** | **Trạng thái:** 🟡 **CODE XONG — 🔴 BỊ CHẶN bởi môi trường**
+**Người phụ trách:** **Khanh** | **Trạng thái:** ✅ **XONG — vector store đã build, 1392 chunk**
 
 - [x] `src/task4_chunking_indexing.py` — đã implement đầy đủ:
   - [x] Giữ nguyên hằng số: `CHUNK_SIZE=500`, `CHUNK_OVERLAP=50`, `CHUNKING_METHOD="recursive"`, `EMBEDDING_MODEL="BAAI/bge-m3"`, `EMBEDDING_DIM=1024`, `COLLECTION_NAME="rag_documents"`
@@ -227,13 +339,37 @@ Máy chạy **macOS x86_64 (Intel)** — PyTorch **ngừng build wheel macOS Int
 
   Fallback nếu file mới không có trong dict: heading `#` đầu tiên → `path.stem`.
 
-- [ ] **`metadata.url` hiện đều là `None`** (`DOCUMENT_URLS` để trống sẵn). Contract ghi `url: str | None` nên **hợp lệ, không vi phạm** — nhưng citation ở Mục 8 sẽ không dẫn ngược về văn bản gốc được. Nhóm điền URL đã xác minh vào dict này nếu muốn citation đầy đủ.
+- [x] **`metadata.url` đã điền đầy đủ** từ datafiles.chinhphu.vn (xác minh byte khớp):
+
+| File | URL | Local bytes | Remote bytes | Khớp? |
+|---|---|---|---|---|
+| `luat-nha-o.md` | https://datafiles.chinhphu.vn/cpp/files/vbpq/2024/01/luat27.pdf | 1.369.519 | 1.369.519 | ✓ |
+| `luat-kinh-doanh-bds.md` | https://datafiles.chinhphu.vn/cpp/files/vbpq/2024/01/luat29.pdf | 726.118 | 726.118 | ✓ |
+| `luat_bao_ve_nguoi_tieu_dung_2023.md` | https://datafiles.chinhphu.vn/cpp/files/vbpq/2023/7/luat19_2023.pdf | 622.946 | 622.946 | ✓ |
+| `mau-so-1a.md` | (không tìm được URL công khai độc lập) | 35.307 | — | ✗ |
+
+Contract ghi `url: str | None` nên hợp lệ. Citation ở Mục 8 sẽ dẫn ngược về văn bản gốc thông qua `source` (tên file) + `title` (tên luật). URL HTTP cung cấp thêm tham chiếu chính thức cho người dùng.
 
 - [x] ✅ **Chốt 1:** `test_public_function_signatures_are_stable` — **PASS**
-- [ ] 🔴 **Chốt 2:** `test_chunk_documents_preserves_identity_and_metadata` — **FAIL**, nhưng **không phải lỗi logic**: import `sentence_transformers` vỡ vì xung đột torch/numpy (xem mục 🔴 BLOCKER ở trên). Chưa xác minh được logic bằng thực thi.
-- [ ] **Lệnh (chạy sau khi sửa môi trường):** `.venv/bin/python -m src.task4_chunking_indexing`
-  - ⚠️ Tải model ~2+ GB, embed ước tính **1.500+ chunk** trên CPU → mất nhiều phút đến hàng chục phút
-- [x] **🔗 Bàn giao cho Minh:** `embed_texts()` là hàm cấp module, import được từ `src.task4_chunking_indexing`
+- [x] ✅ **Chốt 2:** `test_chunk_documents_preserves_identity_and_metadata` — **PASS** (môi trường đã fix, logic verified)
+- [x] **✅ THỰC HIỆN — Lệnh:** `.venv/bin/python -m src.task4_chunking_indexing`
+  **Kết quả thực tế:**
+  ```
+  [task4] Đã embed 1392/1392 chunk.
+  [task4] Đã index 1392/1392 chunk vào 'rag_documents'.
+  [task4] Hoàn tất: 4 document, 1392 chunk, 1392 chunk đã index.
+  EXIT_CODE:0
+  ```
+  **Xác minh:**
+  - ChromaDB collection `rag_documents`: count = **1392** ✓
+  - Embedding dimension: **1024** ✓ (khớp `EMBEDDING_DIM`)
+  - Chunk ID format: `{doc_id}::chunk-{index}` (e.g., `legal/luat-kinh-doanh-bds.md::chunk-0`) ✓
+  - Metadata: title, source, url, doc_type, chunk_index ✓
+  - Re-index test: upsert 1 chunk đã tồn tại → count vẫn 1392 (không nhân bản) ✓
+  - **Contract test toàn bộ:** 8 passed, 7 failed
+    - ✅ **2 test của Mục 5 PASS:** `test_public_function_signatures_are_stable`, `test_chunk_documents_preserves_identity_and_metadata`
+    - ❌ 7 failed: thuộc task5-10 chưa implement (Minh, Hùng phụ trách)
+- [x] **🔗 Bàn giao cho Minh:** `embed_texts()` và `get_collection()` là hàm cấp module, import được từ `src.task4_chunking_indexing` **theo tên module** (không qua alias)
 
 ---
 
@@ -310,30 +446,31 @@ Máy chạy **macOS x86_64 (Intel)** — PyTorch **ngừng build wheel macOS Int
 ---
 
 ### **Mục 9 — Chatbot & Evaluation** ⏱️ 30'
-**Người phụ trách:** **Hùng** | **Trạng thái:** ⏳ **CHƯA LÀM**
+**Người phụ trách:** **Hùng** | **Trạng thái:** 🟡 **PHẦN LÀM (KHÁC SPEC)**
 
-> **Phụ thuộc:** Mục này chỉ run được khi Minh xong mục 8. Trong khi chờ, Hùng nên chuẩn bị golden dataset & khung `app.py`.
+> **Lưu ý quan trọng:** Hùng đã implement chatbot UI hoàn toàn độc lập (`chatbot/`) không phụ thuộc vào `src/task5`→`task10` (mục 6-8 của Minh). Tuy nhiên điều này tạo ra hai nhánh implementation song song — **xem tiểu mục "Hai Nhánh Implementation Song Song" dưới đây.**
 
-#### Part A: Streamlit App
-- [ ] `app.py` — `streamlit run app.py`:
-  - [ ] Hiển thị: **answer** + **sources** (list) + **retrieval_method** + **score**
-  - [ ] Không crash khi retrieval error hoặc LLM error
+#### Part A: Chat UI ✅ HOÀN THÀNH (NHƯNG KHÁC SPEC)
+- [x] **`chatbot/server.py` + `chatbot/static/index.html`** — HTTP server Python (ThreadingHTTPServer) thay vì Streamlit
+  - [x] Hiển thị: **answer** + **sources** (list) + **retrieval_method** + **score** ✓
+  - [x] Không crash khi retrieval error hoặc LLM error ✓
+- [ ] **DIVERGENCE:** Spec yêu cầu `streamlit run app.py`, nhưng Hùng nộp HTTP server với UI tĩnh dạng HTML/JS. GRADING_RUBRIC.md không bắt buộc Streamlit cụ thể, chỉ "chatbot chạy end-to-end, hiển thị nguồn" — **rủi ro mất điểm nếu giảng viên kiểm tra**
 
-#### Part B: Golden Dataset
-- [ ] `group_project/evaluation/golden_dataset.json` — **≥15 golden Q&A:**
-  - [ ] Mỗi item: `{question, expected_answer, expected_context}`
-  - [ ] Câu hỏi phải vừa chủ đề, vừa có dữ liệu để trả lời
+#### Part B: Golden Dataset ✅ HOÀN THÀNH
+- [x] `group_project/evaluation/golden_dataset.json` — **20 golden Q&A** (vượt ≥15) ✓
+  - [x] Mỗi item: `{id, question, expected_answer, expected_context, source, article}` đầy đủ ✓
+  - [x] Test `test_golden_dataset_has_15_grounded_cases` **PASS** ✓
 
-#### Part C: RAGAS Evaluation
-- [ ] Chạy 4 metric RAGAS: `faithfulness`, `answer_relevance`, `context_recall`, `context_precision`
-- [ ] A/B test: **Dense-only vs Hybrid + RRF** (chỉ đổi retrieval method, cấu hình khác giữ nguyên)
+#### Part C: RAGAS Evaluation ⏸️ CHƯA CHẠY
+- [ ] `group_project/evaluation/run_evaluation.py` — script sẵn sàng nhưng **chưa được thực thi**
+  - [ ] Gọi `chatbot.engine.generate_with_citation()` (không phải `src/task10_generation.py`)
+  - [ ] Chạy 4 metric RAGAS: `faithfulness`, `answer_relevance`, `context_recall`, `context_precision` — **CỊ CHỈ KHI RUN**
+  - [ ] A/B test: **Dense-only vs Hybrid + RRF** trên cùng 20 câu golden dataset
 
-#### Part D: Result Report
-- [ ] `group_project/evaluation/RESULT.md`:
-  - [ ] Bảng A/B kết quả 4 metric
-  - [ ] Phân tích worst cases (câu kém nhất, kết quả kém nhất)
-  - [ ] Khuyến nghị cải thiện
-  - [ ] ⚠️ **KHÔNG được còn chữ "TODO"** (acceptance test check literal)
+#### Part D: Result Report ⏸️ CHƯA ĐIỀN
+- [ ] `group_project/evaluation/RESULT.md` — vẫn là **template với chứa "TODO"** ❌
+  - [ ] ⚠️ Test `test_evaluation_report_is_completed` **FAIL** — acceptance test check literal "TODO"
+  - [ ] Cần chạy `python group_project/evaluation/run_evaluation.py` để render kết quả thực tế vào file này
 
 ---
 
@@ -351,7 +488,7 @@ Máy chạy **macOS x86_64 (Intel)** — PyTorch **ngừng build wheel macOS Int
   - [ ] `pytest -q` — **PASS**
   - [ ] `grep -r "\.env" .` — KHÔNG leak `.env`
   - [ ] `grep -rE "(OPENAI_API_KEY|GEMINI_API_KEY|ANTHROPIC_API_KEY)" src/ --include="*.py"` — KHÔNG hard-code API key
-  - [ ] Kiểm tra cache (`.pkl`, `.index`, `chroma_data`) có được `.gitignore` không
+  - [ ] Kiểm tra cache (`.pkl`, `.index`, `chroma_db/`, `pageindex_pdfs/`) có được `.gitignore` không — **✅ `chroma_db/` đã thêm vào `.gitignore`**
 - [ ] **Demo live:**
   - [ ] Query 1: **Trong domain** (e.g., "Hộ kinh doanh cần những giấy tờ gì để mua nhà?") → kỳ vọng dense + BM25 chạy tốt
   - [ ] Query 2: **Ngoài domain** (e.g., "Công thức nấu ăn gì?") → kỳ vọng fallback PageIndex hoặc safe refusal
@@ -476,4 +613,4 @@ Cuối cùng: Cả nhóm (Mục 10, ~15') — chuẩn bị report cá nhân & de
 
 ---
 
-**✏️ Cập nhật lần cuối:** 2026-09-20
+**✏️ Cập nhật lần cuối:** 2026-09-21 — đối chiếu code Hùng với spec, phát hiện hai nhánh implementation song song, cảnh báo critical path
