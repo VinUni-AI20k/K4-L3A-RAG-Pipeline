@@ -1,0 +1,82 @@
+[
+  {
+    "question": "Vốn điều lệ của VAMC được quy định là bao nhiêu theo Nghị định 359/2026/NĐ-CP?",
+    "expected_answer": "Theo Nghị định 359/2026/NĐ-CP, vốn điều lệ của VAMC là 5.000 tỷ đồng và do Nhà nước sở hữu 100% vốn điều lệ.",
+    "expected_context": "Vốn điều lệ: 5.000 tỷ đồng. VAMC là doanh nghiệp đặc thù, hình thức Công ty TNHH một thành viên do Nhà nước sở hữu 100% vốn điều lệ, chịu sự quản lý, thanh tra, giám sát của Ngân hàng Nhà nước."
+  },
+  {
+    "question": "Cơ quan nào có thẩm quyền quản lý, thanh tra, giám sát hoạt động của VAMC?",
+    "expected_answer": "VAMC chịu sự quản lý, thanh tra, giám sát của Ngân hàng Nhà nước Việt Nam.",
+    "expected_context": "VAMC là doanh nghiệp đặc thù, hình thức Công ty TNHH một thành viên do Nhà nước sở hữu 100% vốn điều lệ, chịu sự quản lý, thanh tra, giám sát của Ngân hàng Nhà nước."
+  },
+  {
+    "question": "VAMC được thực hiện mua nợ xấu theo những phương thức nào?",
+    "expected_answer": "VAMC được mua nợ xấu theo hai phương thức: theo giá trị thị trường (áp dụng với mọi TCTD trong nước và nước ngoài) và bằng trái phiếu đặc biệt (chỉ áp dụng với TCTD trong nước).",
+    "expected_context": "Phương thức mua nợ xấu: Theo giá trị thị trường: áp dụng với tất cả tổ chức tín dụng trong nước và nước ngoài; Bằng trái phiếu đặc biệt: chỉ áp dụng với tổ chức tín dụng trong nước."
+  },
+  {
+    "question": "Nghị định số 359/2026/NĐ-CP có hiệu lực thi hành từ ngày nào và thay thế văn bản nào?",
+    "expected_answer": "Nghị định 359/2026/NĐ-CP có hiệu lực từ ngày 06/11/2026 và thay thế Nghị định số 53/2013/NĐ-CP cùng các quy định liên quan trước đó.",
+    "expected_context": "Ngày ban hành: 17/09/2026, Hiệu lực: 06/11/2026. Nghị định thay thế Nghị định số 53/2013/NĐ-CP và các quy định liên quan trước đó."
+  },
+  {
+    "question": "Vai trò và chức năng cốt lõi của DATC theo Nghị định 358/2026/NĐ-CP là gì?",
+    "expected_answer": "DATC là công cụ của Chính phủ nhằm hỗ trợ cơ cấu lại doanh nghiệp nhà nước và các thành phần kinh tế khác thông qua việc tiếp nhận, mua, xử lý nợ và tài sản.",
+    "expected_context": "DATC là công cụ của Chính phủ nhằm hỗ trợ cơ cấu lại doanh nghiệp nhà nước và các thành phần kinh tế khác thông qua việc tiếp nhận, mua, xử lý nợ và tài sản."
+  },
+  {
+    "question": "Nghị định 358/2026/NĐ-CP quy định mấy nhóm ngành nghề, hoạt động kinh doanh chính của DATC?",
+    "expected_answer": "Nghị định 358/2026/NĐ-CP quy định 7 nhóm hoạt động kinh doanh chính của DATC.",
+    "expected_context": "Nghị định quy định 7 ngành nghề, hoạt động kinh doanh chính của DATC: 1. Tiếp nhận, xử lý nợ và tài sản; 2. Mua, xử lý nợ và tài sản; 3. Tái cơ cấu doanh nghiệp; 4. Quản lý, đầu tư, khai thác và kinh doanh tài sản; 5. Mua, quản lý nợ và tài sản có nguồn gốc từ Chính phủ; 6. Quản lý, khai thác tài sản công; 7. Tư vấn và dịch vụ."
+  },
+  {
+    "question": "Nghị định 358/2026/NĐ-CP thay thế nghị định nào và có hiệu lực từ ngày nào?",
+    "expected_answer": "Nghị định 358/2026/NĐ-CP có hiệu lực từ ngày 30/10/2026 và thay thế Nghị định số 129/2020/NĐ-CP.",
+    "expected_context": "Nghị định số 358/2026/NĐ-CP ngày 15/9/2026 của Chính phủ có hiệu lực từ ngày 30/10/2026, thay thế Nghị định số 129/2020/NĐ-CP."
+  },
+  {
+    "question": "Điều kiện để doanh nghiệp được DATC hỗ trợ phục hồi theo Nghị định 358/2026/NĐ-CP là gì?",
+    "expected_answer": "Doanh nghiệp phải có phương án kinh doanh khả thi, có triển vọng phục hồi và phát triển, nợ và tài sản cần xử lý thuộc phạm vi DATC có thể tiếp nhận.",
+    "expected_context": "Để được DATC hỗ trợ phục hồi, doanh nghiệp phải đáp ứng các điều kiện: Có phương án kinh doanh khả thi; Có triển vọng phục hồi và phát triển; Nợ và tài sản cần xử lý thuộc phạm vi DATC có thể tiếp nhận."
+  },
+  {
+    "question": "Khoản thu từ cổ phần hóa, thoái vốn nhà nước được phân cấp nộp ngân sách như thế nào theo Nghị định 357/2026/NĐ-CP?",
+    "expected_answer": "Khoản thu thuộc Trung ương nộp vào ngân sách Trung ương (bao gồm cả tiền thu từ xử lý nợ giao DATC xử lý); khoản thu thuộc địa phương nộp vào ngân sách địa phương.",
+    "expected_context": "Phân cấp: Khoản thu thuộc Trung ương → ngân sách Trung ương (bao gồm cả tiền thu từ xử lý nợ và tài sản loại trừ không tính vào giá trị doanh nghiệp đã giao cho DATC xử lý); Khoản thu thuộc địa phương → ngân sách địa phương."
+  },
+  {
+    "question": "Nguồn thu từ cơ cấu lại vốn nhà nước tại doanh nghiệp được sử dụng cho các mục tiêu chi đầu tư phát triển nào?",
+    "expected_answer": "Được sử dụng để đầu tư vốn nhà nước vào các doanh nghiệp mạnh, quy mô lớn trong các ngành then chốt và đầu tư cho các công trình kết cấu hạ tầng trọng điểm quốc gia.",
+    "expected_context": "Chi đầu tư phát triển: Đầu tư vốn nhà nước vào các doanh nghiệp mạnh, quy mô lớn, có vai trò dẫn dắt trong các ngành then chốt; Đầu tư cho các công trình kết cấu hạ tầng trọng điểm quốc gia."
+  },
+  {
+    "question": "Thời hạn và biểu mẫu kê khai khoản phải nộp từ ngày 01/11/2026 theo Nghị định 357/2026/NĐ-CP là gì?",
+    "expected_answer": "Doanh nghiệp tự xác định, kê khai khoản phải nộp theo Mẫu số 02/PTQ trong thời hạn 10 ngày làm việc kể từ ngày ký Biên bản làm việc.",
+    "expected_context": "Doanh nghiệp tự xác định, kê khai khoản phải nộp theo Mẫu số 02/PTQ. Thời hạn: 10 ngày làm việc kể từ ngày ký Biên bản làm việc."
+  },
+  {
+    "question": "Nếu doanh nghiệp không tự xác định được khoản phải nộp theo Nghị định 357/2026/NĐ-CP thì phải làm gì?",
+    "expected_answer": "Doanh nghiệp phải phối hợp với cơ quan đại diện chủ sở hữu, SCIC hoặc các cơ quan liên quan để rà soát, xác định nghĩa vụ phải nộp.",
+    "expected_context": "Trường hợp không tự xác định được: Doanh nghiệp phải phối hợp với cơ quan đại diện chủ sở hữu, SCIC hoặc các cơ quan liên quan để rà soát, xác định nghĩa vụ phải nộp."
+  },
+  {
+    "question": "Trong 6 tháng đầu năm 2026, kết quả hoạt động mua bán nợ theo giá thị trường của DATC đạt được như thế nào?",
+    "expected_answer": "Doanh số mua nợ theo giá trị thị trường đạt 118% kế hoạch, doanh thu và lợi nhuận vượt 117% kế hoạch; so với cùng kỳ năm 2025, mua nợ thị trường tăng hơn 200% và lợi nhuận tăng hơn 5,6 lần.",
+    "expected_context": "Trong 6 tháng đầu năm 2026, DATC ghi nhận doanh số mua nợ theo giá trị thị trường đạt 118% kế hoạch. Doanh thu và lợi nhuận vượt 117% kế hoạch đề ra. So với cùng kỳ năm 2025, hoạt động mua nợ theo giá trị thị trường tăng hơn 200%, lợi nhuận tăng hơn 5,6 lần."
+  },
+  {
+    "question": "Những nghiệp vụ chính mà VAMC được thực hiện sau khi mua nợ xấu là gì?",
+    "expected_answer": "Cơ cấu lại thời hạn trả nợ; chuyển nợ thành vốn góp hoặc cổ phần; đầu tư, sửa chữa, khai thác và cho thuê tài sản bảo đảm; bảo lãnh vay vốn cho phương án khả thi; bán, nhượng quyền thu nợ, xử lý nợ và tài sản bảo đảm.",
+    "expected_context": "Nghiệp vụ xử lý nợ: Cơ cấu lại thời hạn trả nợ; Chuyển nợ thành vốn góp hoặc cổ phần; Đầu tư, sửa chữa, khai thác và cho thuê tài sản bảo đảm; Bảo lãnh vay vốn cho khách hàng có phương án kinh doanh khả thi; Bán, nhượng quyền thu nợ, xử lý nợ và tài sản bảo đảm."
+  },
+  {
+    "question": "Nguyên tắc hoạt động cơ bản của VAMC là gì?",
+    "expected_answer": "Lấy thu bù chi, không vì mục tiêu lợi nhuận; đảm bảo công khai, minh bạch trong hoạt động mua, xử lý nợ xấu; hạn chế rủi ro và chi phí.",
+    "expected_context": "Nguyên tắc hoạt động: Lấy thu bù chi, không vì mục tiêu lợi nhuận; Đảm bảo công khai, minh bạch trong hoạt động mua, xử lý nợ xấu; Hạn chế rủi ro và chi phí."
+  },
+  {
+    "question": "Điểm mới nổi bật của Nghị định 358/2026/NĐ-CP về phạm vi hoạt động của DATC so với quy định cũ là gì?",
+    "expected_answer": "Làm rõ nguyên tắc trích lập dự phòng an toàn tài chính, mở rộng hoạt động tư vấn, dịch vụ (thẩm định giá, quản lý nợ, M&A) và được trực tiếp quản lý, khai thác tài sản công.",
+    "expected_context": "Những điểm mới nổi bật: Làm rõ nguyên tắc trích lập dự phòng; Mở rộng phạm vi hoạt động sang tư vấn và dịch vụ (thẩm định giá, quản lý nợ và tài sản); Cho phép DATC quản lý và khai thác tài sản công theo quy định pháp luật."
+  }
+]

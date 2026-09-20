@@ -1,5 +1,5 @@
 """
-Task 10 — Generation có citation.
+Task 10 — Generation có citation và hỗ trợ Conversation Memory.
 
 Hướng dẫn:
     1. Retrieve top-k chunks.
@@ -9,9 +9,11 @@ Hướng dẫn:
     5. Trả answer, sources và retrieval_source.
 
 Nếu context không đủ hoặc provider lỗi, trả safe refusal; không bịa thông tin.
+Hỗ trợ mở rộng: Multi-turn conversation memory cho câu hỏi nối tiếp.
 """
 
 import os
+import re
 
 from dotenv import load_dotenv
 
@@ -27,8 +29,13 @@ TEMPERATURE = 0.3
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai")
 LLM_MODEL = os.getenv("LLM_MODEL", "")
 
-SYSTEM_PROMPT = """Trả lời chỉ từ context được cung cấp.
-Mỗi khẳng định phải có citation. Nếu thiếu evidence, hãy từ chối xác minh."""
+SYSTEM_PROMPT = """Bạn là trợ lý pháp lý chuyên nghiệp hỗ trợ tra cứu và giải đáp thông tin quy định pháp luật và tái cơ cấu doanh nghiệp.
+
+QUY TẮC BẮT BUỘC:
+1. CHỈ sử dụng thông tin được cung cấp trong phần Context dưới đây. Tuyệt đối KHÔNG sử dụng kiến thức bên ngoài, không tự suy diễn hoặc bịa đặt thông tin.
+2. Mọi thông tin, khẳng định hoặc số liệu nêu ra BẮT BUỘC phải kèm theo trích dẫn nguồn chuẩn dạng [Document X] (ví dụ: [Document 1], [Document 2]) tương ứng với tài liệu trong Context.
+3. Nếu Context không chứa đủ thông tin để trả lời câu hỏi, bạn PHẢI từ chối trả lời bằng cách nói chính xác: "Tôi không thể xác minh thông tin này từ nguồn hiện có."
+4. Trả lời rõ ràng, mạch lạc, trung thực và chuẩn xác với căn cứ pháp lý."""
 
 
 def reorder_for_llm(chunks: list[dict]) -> list[dict]:
@@ -41,13 +48,14 @@ def reorder_for_llm(chunks: list[dict]) -> list[dict]:
 
 
 def format_context(chunks: list[dict]) -> str:
-    """Tạo context có title và source label."""
+    """Tạo context có title và source label chuẩn hóa."""
     parts = []
     for index, chunk in enumerate(chunks, 1):
-        metadata = chunk["metadata"]
+        metadata = chunk.get("metadata", {})
+        title = metadata.get("title", "Tài liệu")
+        source = metadata.get("source", "Không rõ nguồn")
         parts.append(
-            f"[Document {index} | Title: {metadata['title']} | "
-            f"Source: {metadata['source']}]\n{chunk['content']}"
+            f"[Document {index} | Title: {title} | Source: {source}]\n{chunk.get('content', '')}"
         )
     return "\n\n---\n\n".join(parts)
 
@@ -71,19 +79,36 @@ def call_llm(system_prompt: str, user_message: str) -> str:
         )
         return response.choices[0].message.content or ""
     elif provider == "gemini":
-        import google.generativeai as genai
+        api_key = os.getenv("GEMINI_API_KEY")
+        model_name = LLM_MODEL or "gemini-2.5-flash"
+        try:
+            from google import genai
+            from google.genai import types
 
-        genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-        model_name = LLM_MODEL or "gemini-1.5-flash"
-        model = genai.GenerativeModel(
-            model_name=model_name,
-            system_instruction=system_prompt,
-        )
-        response = model.generate_content(
-            user_message,
-            generation_config={"temperature": TEMPERATURE, "top_p": TOP_P},
-        )
-        return response.text or ""
+            client = genai.Client(api_key=api_key)
+            response = client.models.generate_content(
+                model=model_name,
+                contents=user_message,
+                config=types.GenerateContentConfig(
+                    system_instruction=system_prompt,
+                    temperature=TEMPERATURE,
+                    top_p=TOP_P,
+                ),
+            )
+            return response.text or ""
+        except ImportError:
+            import google.generativeai as legacy_genai
+
+            legacy_genai.configure(api_key=api_key)
+            model = legacy_genai.GenerativeModel(
+                model_name=model_name,
+                system_instruction=system_prompt,
+            )
+            response = model.generate_content(
+                user_message,
+                generation_config={"temperature": TEMPERATURE, "top_p": TOP_P},
+            )
+            return response.text or ""
     elif provider == "anthropic":
         import anthropic
 
@@ -102,9 +127,50 @@ def call_llm(system_prompt: str, user_message: str) -> str:
         raise ValueError(f"Unsupported LLM_PROVIDER: {LLM_PROVIDER}")
 
 
-def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
-    """Trả về GenerationResult."""
-    chunks = retrieve(query, top_k=top_k)
+def rewrite_query_for_followup(query: str, history: list[dict]) -> str:
+    """Tự động bổ sung ngữ cảnh từ lịch sử chat gần nhất cho câu hỏi nối tiếp."""
+    if not history:
+        return query
+
+    # Lấy tối đa 2 lượt hỏi-đáp gần nhất
+    recent_turns = []
+    for msg in history[-4:]:
+        role = "Người dùng" if msg.get("role") == "user" else "Trợ lý"
+        content = msg.get("content", "")[:300]
+        recent_turns.append(f"{role}: {content}")
+
+    context_str = "\n".join(recent_turns)
+    rewrite_prompt = (
+        "Dựa vào lịch sử cuộc trò chuyện dưới đây, nếu câu hỏi của người dùng là câu hỏi nối tiếp "
+        "(sử dụng đại từ thay thế như 'nó', 'đơn vị này', 'quy định đó' hoặc thiếu chủ ngữ), hãy viết lại thành "
+        "MỘT câu truy vấn độc lập, đầy đủ ngữ cảnh để tìm kiếm thông tin pháp lý. "
+        "Nếu câu hỏi đã đầy đủ ý nghĩa độc lập, chỉ cần trả lại nguyên văn câu hỏi. "
+        "Chỉ trả lời duy nhất câu truy vấn viết lại, không thêm lời giải thích nào khác.\n\n"
+        f"Lịch sử:\n{context_str}\n\n"
+        f"Câu hỏi hiện tại: {query}\n\n"
+        "Câu truy vấn độc lập:"
+    )
+    try:
+        rewritten = call_llm(
+            "Bạn là bộ tiền xử lý câu hỏi người dùng cho hệ thống tìm kiếm.",
+            rewrite_prompt,
+        ).strip()
+        return rewritten if rewritten else query
+    except Exception:
+        return query
+
+
+def generate_with_history(
+    query: str,
+    history: list[dict] | None = None,
+    top_k: int = TOP_K,
+) -> dict:
+    """Sinh câu trả lời có citation, hỗ trợ multi-turn conversation memory."""
+    search_query = query
+    if history:
+        search_query = rewrite_query_for_followup(query, history)
+
+    chunks = retrieve(search_query, top_k=top_k)
     if not chunks:
         return {
             "answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có.",
@@ -114,14 +180,26 @@ def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
 
     reordered = reorder_for_llm(chunks)
     context = format_context(reordered)
-    user_message = f"Context:\n{context}\n\nQuestion: {query}"
+
+    history_context = ""
+    if history:
+        prev_lines = []
+        for msg in history[-4:]:
+            role = "User" if msg.get("role") == "user" else "Assistant"
+            prev_lines.append(f"{role}: {msg.get('content', '')}")
+        history_context = "Lịch sử trò chuyện trước đó:\n" + "\n".join(prev_lines) + "\n\n"
+
+    user_message = f"{history_context}Context:\n{context}\n\nQuestion: {query}"
+
     try:
         answer = call_llm(SYSTEM_PROMPT, user_message)
     except Exception as e:
         answer = f"Tôi không thể xác minh thông tin này từ nguồn hiện có do lỗi kỹ thuật: {e}"
 
+    # Kiểm tra safe refusal
     refusal_keywords = [
-        "không thể xác minh",
+        "không thể xác minh thông tin này từ nguồn hiện có",
+        "tôi không thể xác minh",
         "thiếu evidence",
         "không có thông tin",
         "không tìm thấy thông tin",
@@ -129,19 +207,30 @@ def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
         "từ chối xác minh",
         "không thể trả lời",
     ]
-    is_refusal = any(kw in answer.lower() for kw in refusal_keywords)
-    if is_refusal:
+    lowered_answer = answer.lower()
+    has_refusal_kw = any(kw in lowered_answer for kw in refusal_keywords)
+    has_citation = bool(re.search(r"\[document\s*\d+\]|\(document\s*\d+\)", lowered_answer))
+
+    if has_refusal_kw and not has_citation:
         return {
             "answer": answer,
             "sources": [],
             "retrieval_source": "none",
         }
 
+    raw_method = chunks[0].get("retrieval_method", "hybrid")
+    retrieval_source = raw_method if raw_method in {"hybrid", "pageindex", "none"} else "hybrid"
+
     return {
         "answer": answer,
         "sources": chunks,
-        "retrieval_source": chunks[0]["retrieval_method"],
+        "retrieval_source": retrieval_source,
     }
+
+
+def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
+    """Trả về GenerationResult chuẩn hợp đồng (chữ ký cố định query, top_k)."""
+    return generate_with_history(query, history=None, top_k=top_k)
 
 
 if __name__ == "__main__":
