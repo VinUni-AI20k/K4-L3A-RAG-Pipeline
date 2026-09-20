@@ -154,6 +154,16 @@ streamlit run app.py
 - So sánh dense-only với hybrid + RRF trên cùng cấu hình còn lại.
 - Điền `group_project/evaluation/RESULT.md`.
 
+Có thể chạy evaluation tái lập bằng:
+
+```powershell
+.\.venv\Scripts\python.exe -m src.task11_evaluation
+```
+
+Kết quả chi tiết được lưu ở `group_project/evaluation/evaluation_runs.json`;
+báo cáo tổng hợp nằm trong `RESULT.md`. Bộ evaluator hiện là lexical,
+deterministic (không phải Ragas judge model), nên cần ghi rõ khi thuyết trình.
+
 **Hoàn thành khi:** chatbot chạy end-to-end và báo cáo không còn placeholder.
 
 ## 10. Kiểm tra và nộp bài

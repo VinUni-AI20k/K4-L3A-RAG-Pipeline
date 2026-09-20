@@ -1,0 +1,591 @@
+{
+  "top_k": 5,
+  "summary": {
+    "dense-only": {
+      "faithfulness": 0.8839,
+      "answer_relevance": 0.7266,
+      "context_recall": 0.9889,
+      "context_precision": 0.7467,
+      "average": 0.8365
+    },
+    "hybrid + RRF": {
+      "faithfulness": 0.9049,
+      "answer_relevance": 0.7107,
+      "context_recall": 1.0,
+      "context_precision": 0.7467,
+      "average": 0.8406
+    }
+  },
+  "rows": [
+    {
+      "id": "sgk10_01",
+      "question": "Độ dịch chuyển cho biết những gì về sự thay đổi vị trí của vật?",
+      "config": "dense-only",
+      "answer": "Độ dịch chuyển là một đại lượng vectơ, cho biết độ dài và hướng của sự thay đổi vị trí của vật [Document 1].",
+      "chunk_ids": [
+        "legal/10.md::chunk-100",
+        "legal/10.md::chunk-89",
+        "legal/10.md::chunk-91",
+        "legal/10.md::chunk-150",
+        "legal/10.md::chunk-535"
+      ],
+      "metrics": {
+        "faithfulness": 0.9375,
+        "answer_relevance": 0.9677,
+        "context_recall": 1.0,
+        "context_precision": 1.0
+      }
+    },
+    {
+      "id": "sgk10_01",
+      "question": "Độ dịch chuyển cho biết những gì về sự thay đổi vị trí của vật?",
+      "config": "hybrid + RRF",
+      "answer": "Độ dịch chuyển cho biết cả độ dài (độ lớn) và hướng của sự thay đổi vị trí của vật. [Document 1]",
+      "chunk_ids": [
+        "legal/10.md::chunk-100",
+        "legal/10.md::chunk-89",
+        "legal/10.md::chunk-91",
+        "legal/10.md::chunk-150",
+        "legal/10.md::chunk-204"
+      ],
+      "metrics": {
+        "faithfulness": 0.8667,
+        "answer_relevance": 0.8,
+        "context_recall": 1.0,
+        "context_precision": 1.0
+      }
+    },
+    {
+      "id": "sgk10_02",
+      "question": "Theo định luật I Newton, một vật đang chuyển động sẽ chuyển động thế nào nếu hợp lực tác dụng lên nó bằng không?",
+      "config": "dense-only",
+      "answer": "Theo định luật I Newton, nếu hợp lực tác dụng lên một vật bằng không thì vật đang chuyển động sẽ tiếp tục chuyển động thẳng đều. [Document 5]",
+      "chunk_ids": [
+        "legal/10.md::chunk-251",
+        "legal/10.md::chunk-245",
+        "legal/10.md::chunk-446",
+        "legal/10.md::chunk-453",
+        "news/article_01.md::chunk-4"
+      ],
+      "metrics": {
+        "faithfulness": 0.9545,
+        "answer_relevance": 0.4828,
+        "context_recall": 1.0,
+        "context_precision": 0.6
+      }
+    },
+    {
+      "id": "sgk10_02",
+      "question": "Theo định luật I Newton, một vật đang chuyển động sẽ chuyển động thế nào nếu hợp lực tác dụng lên nó bằng không?",
+      "config": "hybrid + RRF",
+      "answer": "Theo định luật I Newton, nếu hợp lực tác dụng lên một vật đang chuyển động bằng không, thì vật đó sẽ tiếp tục chuyển động thẳng đều (tức là với vận tốc không đổi trên một đường thẳng). [Document 1]",
+      "chunk_ids": [
+        "legal/10.md::chunk-245",
+        "legal/10.md::chunk-240",
+        "legal/10.md::chunk-251",
+        "legal/10.md::chunk-150",
+        "legal/10.md::chunk-446"
+      ],
+      "metrics": {
+        "faithfulness": 0.931,
+        "answer_relevance": 0.3889,
+        "context_recall": 1.0,
+        "context_precision": 0.8
+      }
+    },
+    {
+      "id": "sgk10_03",
+      "question": "Công suất đặc trưng cho đại lượng nào và có đơn vị SI là gì?",
+      "config": "dense-only",
+      "answer": "Công suất là đại lượng đặc trưng cho tốc độ sinh công và có đơn vị SI là oát, ký hiệu W [Document 2].",
+      "chunk_ids": [
+        "legal/10.md::chunk-15",
+        "legal/11.md::chunk-320",
+        "legal/10.md::chunk-389",
+        "legal/12.md::chunk-327",
+        "legal/11.md::chunk-392"
+      ],
+      "metrics": {
+        "faithfulness": 0.875,
+        "answer_relevance": 0.7692,
+        "context_recall": 1.0,
+        "context_precision": 0.8
+      }
+    },
+    {
+      "id": "sgk10_03",
+      "question": "Công suất đặc trưng cho đại lượng nào và có đơn vị SI là gì?",
+      "config": "hybrid + RRF",
+      "answer": "Công suất là đại lượng đặc trưng cho tốc độ sinh công (khả năng thực hiện công nhanh hay chậm) [Document 2]. Đơn vị SI của công suất là oát (W) [Document 5].",
+      "chunk_ids": [
+        "legal/10.md::chunk-15",
+        "legal/10.md::chunk-389",
+        "legal/10.md::chunk-381",
+        "legal/11.md::chunk-320",
+        "legal/10.md::chunk-384"
+      ],
+      "metrics": {
+        "faithfulness": 0.9524,
+        "answer_relevance": 0.6452,
+        "context_recall": 1.0,
+        "context_precision": 0.8
+      }
+    },
+    {
+      "id": "sgk11_01",
+      "question": "Biên độ sóng là gì?",
+      "config": "dense-only",
+      "answer": "Biên độ sóng A là độ lệch lớn nhất của phần tử sóng khỏi vị trí cân bằng – tức độ cao hoặc độ sâu cực đại của một ngọn sóng so với mức cân bằng; đồng thời bằng đúng biên độ dao động của nguồn sóng [Document 1][Document 2].",
+      "chunk_ids": [
+        "legal/11.md::chunk-118",
+        "legal/11.md::chunk-120",
+        "legal/11.md::chunk-122",
+        "legal/11.md::chunk-123",
+        "legal/11.md::chunk-28"
+      ],
+      "metrics": {
+        "faithfulness": 0.8276,
+        "answer_relevance": 0.619,
+        "context_recall": 1.0,
+        "context_precision": 0.8
+      }
+    },
+    {
+      "id": "sgk11_01",
+      "question": "Biên độ sóng là gì?",
+      "config": "hybrid + RRF",
+      "answer": "Biên độ sóng A là độ lệch lớn nhất của phần tử sóng khỏi vị trí cân bằng (độ cao hay độ sâu của một ngọn sóng so với mức cân bằng) và bằng biên độ dao động của nguồn sóng [Document 5][Document 1].",
+      "chunk_ids": [
+        "legal/11.md::chunk-122",
+        "legal/11.md::chunk-118",
+        "legal/11.md::chunk-123",
+        "legal/11.md::chunk-183",
+        "legal/11.md::chunk-110"
+      ],
+      "metrics": {
+        "faithfulness": 0.9565,
+        "answer_relevance": 0.7222,
+        "context_recall": 1.0,
+        "context_precision": 0.6
+      }
+    },
+    {
+      "id": "sgk11_02",
+      "question": "Bước sóng được xác định bằng khoảng cách giữa những phần tử môi trường nào?",
+      "config": "dense-only",
+      "answer": "Bước sóng là khoảng cách từ một phần tử môi trường bất kỳ trên phương truyền sóng đến phần tử gần nhất có trạng thái dao động hoàn toàn trùng pha [Document 5].",
+      "chunk_ids": [
+        "legal/11.md::chunk-192",
+        "legal/11.md::chunk-118",
+        "legal/11.md::chunk-175",
+        "legal/11.md::chunk-178",
+        "legal/11.md::chunk-123"
+      ],
+      "metrics": {
+        "faithfulness": 0.88,
+        "answer_relevance": 0.7556,
+        "context_recall": 1.0,
+        "context_precision": 0.4
+      }
+    },
+    {
+      "id": "sgk11_02",
+      "question": "Bước sóng được xác định bằng khoảng cách giữa những phần tử môi trường nào?",
+      "config": "hybrid + RRF",
+      "answer": "Bước sóng là khoảng cách giữa hai phần tử môi trường bất kỳ trên phương truyền sóng có cùng trạng thái dao động (hoàn toàn trùng pha) [Document 1].",
+      "chunk_ids": [
+        "legal/11.md::chunk-118",
+        "legal/11.md::chunk-123",
+        "legal/11.md::chunk-192",
+        "legal/11.md::chunk-110",
+        "legal/11.md::chunk-175"
+      ],
+      "metrics": {
+        "faithfulness": 0.84,
+        "answer_relevance": 0.6222,
+        "context_recall": 1.0,
+        "context_precision": 0.4
+      }
+    },
+    {
+      "id": "sgk11_03",
+      "question": "Chu kì sóng có quan hệ thế nào với chu kì dao động của phần tử sóng?",
+      "config": "dense-only",
+      "answer": "Chu kì sóng bằng chu kì dao động của phần tử sóng. [Document 1]",
+      "chunk_ids": [
+        "legal/11.md::chunk-119",
+        "legal/11.md::chunk-135",
+        "legal/11.md::chunk-122",
+        "legal/11.md::chunk-121",
+        "legal/11.md::chunk-128"
+      ],
+      "metrics": {
+        "faithfulness": 0.8889,
+        "answer_relevance": 0.9412,
+        "context_recall": 1.0,
+        "context_precision": 1.0
+      }
+    },
+    {
+      "id": "sgk11_03",
+      "question": "Chu kì sóng có quan hệ thế nào với chu kì dao động của phần tử sóng?",
+      "config": "hybrid + RRF",
+      "answer": "Chu kì sóng bằng chu kì dao động của phần tử sóng [Document 4].",
+      "chunk_ids": [
+        "legal/11.md::chunk-122",
+        "legal/11.md::chunk-121",
+        "legal/11.md::chunk-135",
+        "legal/11.md::chunk-119",
+        "legal/11.md::chunk-110"
+      ],
+      "metrics": {
+        "faithfulness": 0.8889,
+        "answer_relevance": 0.9412,
+        "context_recall": 1.0,
+        "context_precision": 1.0
+      }
+    },
+    {
+      "id": "sgk11_04",
+      "question": "Trong hệ SI, cường độ điện trường có đơn vị gì?",
+      "config": "dense-only",
+      "answer": "Trong hệ SI, cường độ điện trường có đơn vị là vôn trên mét (V/m). [Document 1]",
+      "chunk_ids": [
+        "legal/11.md::chunk-233",
+        "legal/11.md::chunk-234",
+        "legal/11.md::chunk-241",
+        "legal/11.md::chunk-232",
+        "legal/10.md::chunk-15"
+      ],
+      "metrics": {
+        "faithfulness": 0.8333,
+        "answer_relevance": 0.8571,
+        "context_recall": 1.0,
+        "context_precision": 1.0
+      }
+    },
+    {
+      "id": "sgk11_04",
+      "question": "Trong hệ SI, cường độ điện trường có đơn vị gì?",
+      "config": "hybrid + RRF",
+      "answer": "Trong hệ SI, đơn vị của cường độ điện trường là vôn trên mét (V/m) [Document 1].",
+      "chunk_ids": [
+        "legal/11.md::chunk-233",
+        "legal/10.md::chunk-15",
+        "legal/11.md::chunk-234",
+        "legal/11.md::chunk-240",
+        "legal/11.md::chunk-241"
+      ],
+      "metrics": {
+        "faithfulness": 0.8333,
+        "answer_relevance": 0.8571,
+        "context_recall": 1.0,
+        "context_precision": 1.0
+      }
+    },
+    {
+      "id": "sgk12_01",
+      "question": "Có những cách nào để làm thay đổi nội năng của một vật?",
+      "config": "dense-only",
+      "answer": "Có hai cách làm thay đổi nội năng của một vật:  \n1. Thực hiện công lên vật.  \n2. Truyền năng lượng nhiệt (truyền nhiệt) cho vật.  \n[Document 1][Document 5]",
+      "chunk_ids": [
+        "legal/12.md::chunk-44",
+        "legal/12.md::chunk-56",
+        "legal/12.md::chunk-133",
+        "legal/12.md::chunk-37",
+        "legal/12.md::chunk-45"
+      ],
+      "metrics": {
+        "faithfulness": 0.9375,
+        "answer_relevance": 0.6087,
+        "context_recall": 1.0,
+        "context_precision": 0.8
+      }
+    },
+    {
+      "id": "sgk12_01",
+      "question": "Có những cách nào để làm thay đổi nội năng của một vật?",
+      "config": "hybrid + RRF",
+      "answer": "Có hai cách làm thay đổi nội năng của một vật:\n- Thực hiện công [Document 5]\n- Truyền nhiệt [Document 5]",
+      "chunk_ids": [
+        "legal/12.md::chunk-44",
+        "legal/12.md::chunk-56",
+        "legal/12.md::chunk-133",
+        "legal/12.md::chunk-37",
+        "legal/12.md::chunk-45"
+      ],
+      "metrics": {
+        "faithfulness": 0.9286,
+        "answer_relevance": 0.6667,
+        "context_recall": 1.0,
+        "context_precision": 0.8
+      }
+    },
+    {
+      "id": "sgk12_02",
+      "question": "Nhiệt dung riêng của một chất cho biết nhiệt lượng cần để làm gì?",
+      "config": "dense-only",
+      "answer": "Nhiệt dung riêng của một chất cho biết nhiệt lượng cần truyền cho 1 kg chất đó để làm cho nhiệt độ của nó tăng thêm 1 °C [Document 1].",
+      "chunk_ids": [
+        "legal/12.md::chunk-98",
+        "legal/12.md::chunk-87",
+        "legal/12.md::chunk-88",
+        "legal/12.md::chunk-105",
+        "legal/12.md::chunk-113"
+      ],
+      "metrics": {
+        "faithfulness": 0.9412,
+        "answer_relevance": 0.7586,
+        "context_recall": 1.0,
+        "context_precision": 0.8
+      }
+    },
+    {
+      "id": "sgk12_02",
+      "question": "Nhiệt dung riêng của một chất cho biết nhiệt lượng cần để làm gì?",
+      "config": "hybrid + RRF",
+      "answer": "Nhiệt dung riêng của một chất cho biết nhiệt lượng cần truyền cho 1 kg chất đó để làm cho nhiệt độ của nó tăng thêm 1 °C [Document 1].",
+      "chunk_ids": [
+        "legal/12.md::chunk-98",
+        "legal/12.md::chunk-87",
+        "legal/12.md::chunk-113",
+        "legal/12.md::chunk-116",
+        "legal/12.md::chunk-88"
+      ],
+      "metrics": {
+        "faithfulness": 0.9412,
+        "answer_relevance": 0.7586,
+        "context_recall": 1.0,
+        "context_precision": 0.8
+      }
+    },
+    {
+      "id": "sgk12_03",
+      "question": "Theo định luật Boyle, khi nhiệt độ của một lượng khí xác định không đổi thì áp suất phụ thuộc vào thể tích như thế nào?",
+      "config": "dense-only",
+      "answer": "Áp suất tỉ lệ nghịch với thể tích của khí, sao cho  \np·V = hằng số [Document 1].",
+      "chunk_ids": [
+        "legal/12.md::chunk-173",
+        "legal/12.md::chunk-179",
+        "legal/12.md::chunk-176",
+        "legal/12.md::chunk-180",
+        "legal/12.md::chunk-184"
+      ],
+      "metrics": {
+        "faithfulness": 0.8333,
+        "answer_relevance": 0.6364,
+        "context_recall": 1.0,
+        "context_precision": 1.0
+      }
+    },
+    {
+      "id": "sgk12_03",
+      "question": "Theo định luật Boyle, khi nhiệt độ của một lượng khí xác định không đổi thì áp suất phụ thuộc vào thể tích như thế nào?",
+      "config": "hybrid + RRF",
+      "answer": "Theo định luật Boyle, khi nhiệt độ của một lượng khí xác định không đổi thì áp suất tỉ lệ nghịch với thể tích của nó, sao cho p·V = hằng số [Document 2].",
+      "chunk_ids": [
+        "legal/12.md::chunk-180",
+        "legal/12.md::chunk-176",
+        "legal/12.md::chunk-173",
+        "legal/12.md::chunk-193",
+        "legal/12.md::chunk-164"
+      ],
+      "metrics": {
+        "faithfulness": 0.9167,
+        "answer_relevance": 0.5294,
+        "context_recall": 1.0,
+        "context_precision": 1.0
+      }
+    },
+    {
+      "id": "article_01",
+      "question": "Động năng của một vật là năng lượng có được do đâu?",
+      "config": "dense-only",
+      "answer": "Động năng của một vật là năng lượng mà nó có được do chuyển động của nó [Document 1].",
+      "chunk_ids": [
+        "news/article_01.md::chunk-1",
+        "legal/10.md::chunk-404",
+        "legal/10.md::chunk-363",
+        "legal/12.md::chunk-37",
+        "legal/12.md::chunk-56"
+      ],
+      "metrics": {
+        "faithfulness": 0.8889,
+        "answer_relevance": 0.6154,
+        "context_recall": 1.0,
+        "context_precision": 0.8
+      }
+    },
+    {
+      "id": "article_01",
+      "question": "Động năng của một vật là năng lượng có được do đâu?",
+      "config": "hybrid + RRF",
+      "answer": "Động năng của một vật là năng lượng mà vật có được do chuyển động của nó [Document 1][Document 2].",
+      "chunk_ids": [
+        "legal/10.md::chunk-363",
+        "legal/12.md::chunk-56",
+        "news/article_01.md::chunk-1",
+        "legal/10.md::chunk-366",
+        "legal/10.md::chunk-404"
+      ],
+      "metrics": {
+        "faithfulness": 0.8889,
+        "answer_relevance": 0.6154,
+        "context_recall": 1.0,
+        "context_precision": 1.0
+      }
+    },
+    {
+      "id": "article_02",
+      "question": "Trong dao động điều hòa, độ lớn lực kéo về liên hệ thế nào với độ lớn li độ?",
+      "config": "dense-only",
+      "answer": "Độ lớn lực kéo về tỉ lệ thuận với độ lớn li độ, cụ thể:  \n|F| = k·|x| [Document 1]",
+      "chunk_ids": [
+        "news/article_02.md::chunk-1",
+        "legal/11.md::chunk-43",
+        "legal/11.md::chunk-107",
+        "legal/11.md::chunk-26",
+        "legal/11.md::chunk-103"
+      ],
+      "metrics": {
+        "faithfulness": 0.8333,
+        "answer_relevance": 0.8571,
+        "context_recall": 1.0,
+        "context_precision": 0.2
+      }
+    },
+    {
+      "id": "article_02",
+      "question": "Trong dao động điều hòa, độ lớn lực kéo về liên hệ thế nào với độ lớn li độ?",
+      "config": "hybrid + RRF",
+      "answer": "Độ lớn của lực kéo về |F| tỉ lệ thuận với độ lớn li độ |x|, cụ thể:  \n|F| = k·|x| [Document 5]",
+      "chunk_ids": [
+        "legal/11.md::chunk-26",
+        "news/article_02.md::chunk-1",
+        "news/article_02.md::chunk-4",
+        "legal/10.md::chunk-233",
+        "legal/11.md::chunk-43"
+      ],
+      "metrics": {
+        "faithfulness": 0.8333,
+        "answer_relevance": 0.8571,
+        "context_recall": 1.0,
+        "context_precision": 0.4
+      }
+    },
+    {
+      "id": "article_03",
+      "question": "Vectơ cường độ điện trường tại một điểm trên đường sức điện có phương và chiều như thế nào?",
+      "config": "dense-only",
+      "answer": "Vectơ cường độ điện trường tại một điểm trên đường sức điện có\n\n• phương tiếp tuyến với đường sức điện tại điểm đó;  \n• chiều trùng với chiều đường sức (tức hướng từ nơi có điện thế cao đến nơi có điện thế thấp), đồng thời là chiều của lực điện tác dụng lên một điện tích thử dương q>0 [Document 3; Document 5].",
+      "chunk_ids": [
+        "legal/11.md::chunk-253",
+        "legal/11.md::chunk-305",
+        "legal/11.md::chunk-260",
+        "legal/11.md::chunk-234",
+        "legal/11.md::chunk-235"
+      ],
+      "metrics": {
+        "faithfulness": 0.7273,
+        "answer_relevance": 0.5,
+        "context_recall": 0.8333,
+        "context_precision": 0.8
+      }
+    },
+    {
+      "id": "article_03",
+      "question": "Vectơ cường độ điện trường tại một điểm trên đường sức điện có phương và chiều như thế nào?",
+      "config": "hybrid + RRF",
+      "answer": "Vectơ cường độ điện trường tại một điểm trên đường sức điện có phương trùng với tiếp tuyến tại điểm đó trên đường sức và chiều trùng với chiều của đường sức điện [Document 4].",
+      "chunk_ids": [
+        "legal/11.md::chunk-305",
+        "legal/11.md::chunk-253",
+        "legal/11.md::chunk-235",
+        "news/article_03.md::chunk-1",
+        "legal/11.md::chunk-240"
+      ],
+      "metrics": {
+        "faithfulness": 0.9412,
+        "answer_relevance": 0.7857,
+        "context_recall": 1.0,
+        "context_precision": 0.8
+      }
+    },
+    {
+      "id": "article_04",
+      "question": "Theo bài viết, thuật ngữ nhiệt động học có hai nghĩa nào?",
+      "config": "dense-only",
+      "answer": "Thuật ngữ nhiệt động học có hai nghĩa:\n\n- Khoa học về nhiệt và các động cơ nhiệt (nhiệt động học cổ điển) [Document 5].  \n- Khoa học về các hệ thống ở trạng thái cân bằng (nhiệt động học cân bằng) [Document 5].",
+      "chunk_ids": [
+        "news/article_04.md::chunk-0",
+        "news/article_04.md::chunk-1",
+        "legal/12.md::chunk-557",
+        "legal/12.md::chunk-59",
+        "legal/12.md::chunk-40"
+      ],
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 0.6875,
+        "context_recall": 1.0,
+        "context_precision": 0.6
+      }
+    },
+    {
+      "id": "article_04",
+      "question": "Theo bài viết, thuật ngữ nhiệt động học có hai nghĩa nào?",
+      "config": "hybrid + RRF",
+      "answer": "Theo bài viết, thuật ngữ “nhiệt động học” có hai nghĩa chính:  \n1. Khoa học về nhiệt và các động cơ nhiệt (nhiệt động học cổ điển) [Document 5].  \n2. Khoa học về các hệ thống ở trạng thái cân bằng (nhiệt động học cân bằng) [Document 5].",
+      "chunk_ids": [
+        "legal/12.md::chunk-59",
+        "news/article_04.md::chunk-1",
+        "legal/12.md::chunk-11",
+        "news/article_04.md::chunk-0",
+        "legal/11.md::chunk-11"
+      ],
+      "metrics": {
+        "faithfulness": 0.9545,
+        "answer_relevance": 0.6286,
+        "context_recall": 1.0,
+        "context_precision": 0.2
+      }
+    },
+    {
+      "id": "article_05",
+      "question": "Theo bài viết, từ trường có thể sinh ra quanh những điện tích nào?",
+      "config": "dense-only",
+      "answer": "Từ trường sinh ra quanh các điện tích đang chuyển động [Document 1].",
+      "chunk_ids": [
+        "news/article_05.md::chunk-1",
+        "legal/11.md::chunk-231",
+        "legal/12.md::chunk-250",
+        "legal/12.md::chunk-370",
+        "legal/12.md::chunk-266"
+      ],
+      "metrics": {
+        "faithfulness": 0.9,
+        "answer_relevance": 0.8421,
+        "context_recall": 1.0,
+        "context_precision": 0.6
+      }
+    },
+    {
+      "id": "article_05",
+      "question": "Theo bài viết, từ trường có thể sinh ra quanh những điện tích nào?",
+      "config": "hybrid + RRF",
+      "answer": "Từ trường sinh ra quanh các điện tích đang chuyển động. [Document 5]",
+      "chunk_ids": [
+        "legal/11.md::chunk-231",
+        "news/article_05.md::chunk-1",
+        "legal/12.md::chunk-370",
+        "legal/12.md::chunk-11",
+        "legal/11.md::chunk-11"
+      ],
+      "metrics": {
+        "faithfulness": 0.9,
+        "answer_relevance": 0.8421,
+        "context_recall": 1.0,
+        "context_precision": 0.6
+      }
+    }
+  ]
+}
