@@ -1,0 +1,92 @@
+[
+  {
+    "question": "What is the minimum word count for IELTS Academic Writing Task 1?",
+    "expected_answer": "At least 150 words.",
+    "expected_context": "In Task 1, test takers must describe some visual information (a table, graph, chart, or diagram) in at least 150 words.",
+    "source": "legal/ielts-scores-guide.md"
+  },
+  {
+    "question": "What is the minimum word count for IELTS Writing Task 2?",
+    "expected_answer": "At least 250 words.",
+    "expected_context": "In Task 2, they are given a point of view, argument, or problem to discuss in at least 250 words.",
+    "source": "legal/ielts-scores-guide.md"
+  },
+  {
+    "question": "How much time should candidates spend on IELTS Writing Task 1 and Task 2?",
+    "expected_answer": "About 20 minutes on Task 1 and 40 minutes on Task 2.",
+    "expected_context": "Plan to spend about 40 minutes on Task 2, and 20 minutes on Task 1.",
+    "source": "news/ielts-article-10-tips-improve-your-ielts-writing-band-score.md"
+  },
+  {
+    "question": "What proportion of the IELTS Writing score comes from Task 2?",
+    "expected_answer": "Task 2 is worth two-thirds of the overall Writing band score.",
+    "expected_context": "Writing Task 2 is worth two-thirds of your overall Writing band score.",
+    "source": "news/ielts-article-10-tips-improve-your-ielts-writing-band-score.md"
+  },
+  {
+    "question": "Which assessment criterion differs between Writing Task 1 and Task 2?",
+    "expected_answer": "Task 1 uses Task Achievement, while Task 2 uses Task Response.",
+    "expected_context": "For Task 1 the criteria include Task Achievement; for Task 2 they include Task Response. Both use Coherence and Cohesion, Lexical Resource, and Grammatical Range and Accuracy.",
+    "source": "legal/ielts-writing-key-assessment-criteria.md"
+  },
+  {
+    "question": "What are the four assessment criteria for IELTS Writing Task 2?",
+    "expected_answer": "Task Response, Coherence and Cohesion, Lexical Resource, and Grammatical Range and Accuracy.",
+    "expected_context": "For Task 2 of both the AC and GT Writing tests, the key criteria are: Task Response; Coherence and Cohesion; Lexical Resource; Grammatical Range and Accuracy.",
+    "source": "legal/ielts-writing-key-assessment-criteria.md"
+  },
+  {
+    "question": "What does the Task Response criterion assess in Writing Task 2?",
+    "expected_answer": "It assesses how fully the candidate responds, develops and supports relevant ideas, states a clear position and conclusion, and uses an appropriate format.",
+    "expected_context": "The TR criterion assesses how fully the candidate responds to the task, how adequately main ideas are extended and supported, their relevance, the clarity of the position and conclusions, and the response format.",
+    "source": "legal/ielts-writing-key-assessment-criteria.md"
+  },
+  {
+    "question": "What does a candidate do in Academic Writing Task 1?",
+    "expected_answer": "They analyse and describe visual information such as a chart, diagram, graph, or table.",
+    "expected_context": "Academic test-takers are provided with a chart, diagram or graph and asked to analyse and explain the data in their own words.",
+    "source": "news/ielts-article-10-tips-improve-your-ielts-writing-band-score.md"
+  },
+  {
+    "question": "What type of text is required in General Training Writing Task 1?",
+    "expected_answer": "A letter responding to a given situation, such as a letter to a friend, a company, or an employer.",
+    "expected_context": "General Training test-takers will be asked to write a letter based on a situation outlined in the IELTS test.",
+    "source": "news/ielts-article-10-tips-improve-your-ielts-writing-band-score.md"
+  },
+  {
+    "question": "How is a Band 7 Task Response described for Writing Task 2?",
+    "expected_answer": "The main parts of the prompt are addressed, a clear developed position is presented, and main ideas are extended and supported, though support may over-generalise or lack precision.",
+    "expected_context": "Band 7 Task Response: the main parts of the prompt are appropriately addressed; a clear and developed position is presented; main ideas are extended and supported, though there may be over-generalisation or imprecise support.",
+    "source": "legal/ielts-writing-band-descriptors.md"
+  },
+  {
+    "question": "What does Band 7 Lexical Resource require in Writing Task 2?",
+    "expected_answer": "Vocabulary should allow some flexibility and precision, with some less common or idiomatic items, awareness of style and collocation, and only a few errors that do not reduce clarity.",
+    "expected_context": "Band 7 Lexical Resource: sufficient flexibility and precision, some less common or idiomatic items, awareness of style and collocation, and few spelling or word-formation errors that do not detract from clarity.",
+    "source": "legal/ielts-writing-band-descriptors.md"
+  },
+  {
+    "question": "What is the Band 6 description for Grammatical Range and Accuracy in Writing Task 2?",
+    "expected_answer": "It uses a mix of simple and complex sentences with limited flexibility; complex structures are less accurate, and errors rarely impede communication.",
+    "expected_context": "Band 6 Grammatical Range and Accuracy: a mix of simple and complex sentence forms with limited flexibility; complex structures are less accurate; grammar and punctuation errors rarely impede communication.",
+    "source": "legal/ielts-writing-band-descriptors.md"
+  },
+  {
+    "question": "Why should a candidate plan a Writing Task 2 essay before writing?",
+    "expected_answer": "Planning helps organise ideas and essay structure, saving time and supporting a clear, coherent response.",
+    "expected_context": "Planning helps you organise your ideas and structure your essay before you write it, saving you time and helping you produce a clear and coherent essay.",
+    "source": "news/ieltsadvantage-writing-task-2.md"
+  },
+  {
+    "question": "What should the introduction of a Writing Task 2 essay do?",
+    "expected_answer": "It should answer the question directly and set up the main body paragraphs.",
+    "expected_context": "The introduction should answer the question directly. This tells the examiner you understand the task and helps you write the main body paragraphs.",
+    "source": "news/ieltsadvantage-writing-task-2.md"
+  },
+  {
+    "question": "Why is answering only the causes insufficient in a causes-and-solutions essay?",
+    "expected_answer": "The response only partially addresses the prompt because it omits the requested solutions.",
+    "expected_context": "If a question asks about both the causes and solutions of a problem, but the essay only discusses causes, the response is incomplete.",
+    "source": "news/cathoven-common-mistakes-in-ielts-writing-task-2.md"
+  }
+]
