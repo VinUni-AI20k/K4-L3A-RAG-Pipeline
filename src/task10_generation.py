@@ -157,4 +157,4 @@ def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
 
 
 if __name__ == "__main__":
-    print(generate_with_citation("test query"))
+    print(generate_with_citation("Thí sinh khu vực 1 được cộng bao nhiêu điểm ưu tiên?"))

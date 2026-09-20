@@ -5,10 +5,15 @@ only after a successful run, so the report never contains invented metrics.
 """
 
 import asyncio
+import io
 import json
 import os
+import sys
 from pathlib import Path
 from statistics import mean
+
+if sys.platform == "win32" and hasattr(sys.stdout, "buffer"):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 from dotenv import load_dotenv
 
@@ -78,19 +83,37 @@ def make_evaluator_llm():
     )
 
 
+def make_evaluator_embeddings():
+    """Create evaluator embeddings for Ragas AnswerRelevancy metric."""
+    from openai import AsyncOpenAI
+    from ragas.embeddings import OpenAIEmbeddings
+
+    model = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
+    api_key = os.environ.get("OPENAI_API_KEY")
+    if not api_key:
+        raise ValueError("OPENAI_API_KEY must be set for evaluation embeddings")
+    return OpenAIEmbeddings(model=model, client=AsyncOpenAI(api_key=api_key))
+
+
 async def score_case(metrics: dict, case: dict, generated: dict) -> dict:
     """Score one grounded case with the four required Ragas metrics."""
     contexts = [source["content"] for source in generated["sources"]]
-    common = {"user_input": case["question"], "retrieved_contexts": contexts}
+    user_input = case["question"]
     response = generated["answer"]
     reference = case["expected_answer"]
 
-    faithfulness = await metrics["faithfulness"].ascore(response=response, **common)
-    relevance = await metrics["answer_relevance"].ascore(response=response, **common)
-    precision = await metrics["context_precision"].ascore(
-        response=response, reference=reference, **common
+    faithfulness = await metrics["faithfulness"].ascore(
+        user_input=user_input, response=response, retrieved_contexts=contexts
     )
-    recall = await metrics["context_recall"].ascore(reference=reference, **common)
+    relevance = await metrics["answer_relevance"].ascore(
+        user_input=user_input, response=response
+    )
+    precision = await metrics["context_precision"].ascore(
+        user_input=user_input, reference=reference, retrieved_contexts=contexts
+    )
+    recall = await metrics["context_recall"].ascore(
+        user_input=user_input, retrieved_contexts=contexts, reference=reference
+    )
     return {
         "faithfulness": faithfulness.value,
         "answer_relevance": relevance.value,
@@ -102,7 +125,8 @@ async def score_case(metrics: dict, case: dict, generated: dict) -> dict:
 async def run_configuration(name: str, cases: list[dict], metrics: dict) -> dict:
     """Run a single retrieval configuration and retain evidence for review."""
     rows = []
-    for case in cases:
+    for index, case in enumerate(cases, 1):
+        print(f"[{name}] Scoring case {index}/{len(cases)}", flush=True)
         generated = (
             dense_only_generation(case["question"], TOP_K)
             if name == "dense_only"
@@ -143,9 +167,10 @@ async def run_evaluation() -> None:
         raise ValueError("Golden dataset has no grounded cases to evaluate")
 
     evaluator_llm = make_evaluator_llm()
+    evaluator_embeddings = make_evaluator_embeddings()
     metrics = {
         "faithfulness": Faithfulness(llm=evaluator_llm),
-        "answer_relevance": AnswerRelevancy(llm=evaluator_llm),
+        "answer_relevance": AnswerRelevancy(llm=evaluator_llm, embeddings=evaluator_embeddings),
         "context_precision": ContextPrecision(llm=evaluator_llm),
         "context_recall": ContextRecall(llm=evaluator_llm),
     }
