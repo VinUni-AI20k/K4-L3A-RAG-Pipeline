@@ -17,7 +17,7 @@
 ## Quyết định kỹ thuật quan trọng
 
 1. **Quyết định:** Sử dụng thư viện `crawl4ai` thay vì code BeautifulSoup chay.
-   **Lý do/evidence:** Gói này nó gom sẵn thành markdown gọn gàng luôn, đỡ phải xử lý mấy cái thẻ HTML lằng nhằng rác rưởi.
+   **Lý do/evidence:** Gói này nó gom sẵn thành markdown gọn gàng luôn, đỡ phải xử lý mấy cái thẻ HTML lằng nhằng.
    **Trade-off:** Cài đặt thư viện này tải hơi lâu và nặng máy.
 2. **Quyết định:** Chấm điểm dùng `gpt-4o-mini` làm giám khảo.
    **Lý do/evidence:** Rẻ, chạy nhanh mà kết quả đánh giá vẫn khá ổn, sinh viên dùng API đỡ xót tiền.
