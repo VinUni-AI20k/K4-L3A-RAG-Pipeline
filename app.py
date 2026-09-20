@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 
 from src.task9_retrieval_pipeline import RERANKER_ENABLED
 from src.task10_generation import generate_with_citation
+from src.task13_conversation_memory import answer_with_memory
 
 
 load_dotenv()
@@ -41,6 +42,10 @@ with st.sidebar:
     st.title("RAG Chatbot")
     st.caption("Hỏi đáp dựa trên bộ tài liệu đã lập chỉ mục.")
     top_k = st.slider("Số chunks", 3, 10, 5)
+    use_memory = st.toggle("Nhớ hội thoại (follow-up)", value=True)
+    if st.button("Xoá hội thoại"):
+        st.session_state.messages = []
+        st.rerun()
     st.caption(
         "Retrieval: dense + BM25 → RRF"
         + (" → cross-encoder rerank" if RERANKER_ENABLED else "")
@@ -54,6 +59,8 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
         if message["role"] == "assistant":
+            if message.get("standalone_query"):
+                st.caption(f"Câu hỏi đã diễn giải: {message['standalone_query']}")
             show_sources(
                 message.get("sources", []),
                 message.get("retrieval_source", "none"),
@@ -69,7 +76,17 @@ if query:
 
     with st.chat_message("assistant"):
         with st.spinner("Đang tìm nguồn và tạo câu trả lời..."):
-            result = generate_with_citation(query, top_k=top_k)
+            # Lịch sử là các lượt trước lượt user vừa thêm.
+            history = st.session_state.messages[:-1]
+            if use_memory and history:
+                result = answer_with_memory(query, history, top_k=top_k)
+            else:
+                result = generate_with_citation(query, top_k=top_k)
+        standalone = result.get("standalone_query")
+        if standalone and standalone != query:
+            st.caption(f"Câu hỏi đã diễn giải: {standalone}")
+        else:
+            standalone = None
         st.markdown(result["answer"])
         show_sources(result["sources"], result["retrieval_source"])
 
@@ -78,4 +95,5 @@ if query:
         "content": result["answer"],
         "sources": result["sources"],
         "retrieval_source": result["retrieval_source"],
+        "standalone_query": standalone,
     })

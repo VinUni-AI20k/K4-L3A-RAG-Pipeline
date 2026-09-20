@@ -6,7 +6,7 @@ Chatbot hỏi đáp về **IELTS Writing** (band descriptors, tiêu chí chấm 
 
 | Họ tên | Mã học viên | Phần việc chính | Báo cáo cá nhân |
 | --- | --- | --- | --- |
-| Lê Chí Hùng | 2A202602863 | Task 2, 6, 7, 8, 9, 12 (reranker), golden dataset, Task 11, `RESULT.md` | [reports/2A202602863-LeChiHung.md](reports/2A202602863-LeChiHung.md) |
+| Lê Chí Hùng | 2A202602863 | Task 2, 6, 7, 8, 9, 12 (reranker), 13 (memory), golden dataset, Task 11, `RESULT.md` | [reports/2A202602863-LeChiHung.md](reports/2A202602863-LeChiHung.md) |
 | Nguyễn Văn Hưởng | 2A202602743 | Task 1, 3, 4, 5, 10, Streamlit UI, test Task 5/10 | [reports/2A202602743-NguyenVanHuong.md](reports/2A202602743-NguyenVanHuong.md) |
 
 ## Dữ liệu
@@ -30,6 +30,7 @@ Chatbot hỏi đáp về **IELTS Writing** (band descriptors, tiêu chí chấm 
 | Fallback | `task8_pageindex_vectorless` | PageIndex vectorless, `retrieval_method="pageindex"` |
 | Pipeline | `task9_retrieval_pipeline` | dense + BM25 → RRF → (rerank) → fallback khi cosine top-1 < 0.53 |
 | Generation | `task10_generation` | OpenAI / Gemini / Anthropic, citation `[chunk-id]`, safe refusal |
+| Memory (bonus) | `task13_conversation_memory` | condense câu follow-up thành câu độc lập để retrieval, đưa lịch sử vào prompt; toggle trong UI |
 | Evaluation | `task11_evaluation` | ragas 0.4.3, 4 metric, A/B dense-only vs hybrid + RRF, C = B + rerank |
 
 Threshold fallback 0.53 hiệu chỉnh bằng `python -m src.task9_retrieval_pipeline --calibrate` (in-domain min 0.59, out-of-domain max 0.47). Fallback dùng cosine score gốc của dense, không dùng RRF score.
@@ -83,6 +84,7 @@ python -m src.task7_reranking "band 7 lexical resource task 2"
 python -m src.task12_cross_encoder_rerank "band 7 lexical resource task 2"   # so RRF vs cross-encoder
 python -m src.task9_retrieval_pipeline "How many words for Task 2?"
 python -m src.task9_retrieval_pipeline "How do I cook pho?"   # out-of-domain → fallback_tried=True
+python -m src.task13_conversation_memory   # demo 3 lượt follow-up → results/memory_demo.md
 ```
 
 ## Kết quả đánh giá
@@ -99,17 +101,19 @@ Golden dataset 20 câu (12 EN + 8 VI, 6 nhóm) tại `group_project/evaluation/g
 
 Hybrid + RRF (B) tăng recall nhưng mất precision vì BM25 kéo chunk boilerplate "Band 1" vào top-5. Cross-encoder reranker (C, bonus) lấy lại precision (+0.25 so với B, vượt cả dense-only) mà recall gần như không đổi, nên **nhóm bật C làm mặc định của chatbot**. Đổi lại retrieval chậm hơn (median 113 ms → ~4.5 s trên CPU). 4 refusal còn lại là câu "Band N + tiêu chí" do chunking tách heading band khỏi nội dung (xem recommendation #1 trong `RESULT.md`).
 
+Bonus conversation memory: demo 3 lượt trong [results/memory_demo.md](group_project/evaluation/results/memory_demo.md) — "And for Task 1?" được viết lại thành câu độc lập trước khi retrieval và trả lời đúng có citation.
+
 ## Cấu trúc repo
 
 ```
 app.py                         Streamlit chatbot: answer, citation, nguồn, retrieval method, score
-src/task1..task12_*.py         Pipeline theo từng task (task12 = reranker bonus)
+src/task1..task13_*.py         Pipeline theo từng task (task12 = reranker, task13 = memory; bonus)
 src/contracts.py               Schema Document / Chunk / SearchResult / GenerationResult + validator
 data/landing/                  Dữ liệu gốc (PDF, JSON crawl)
 data/standardized/             Markdown chuẩn hoá có front matter
 group_project/evaluation/      golden_dataset.json, out_of_domain.json, RESULT.md, results/
 reports/                       Báo cáo cá nhân (<student-id>-<short-name>.md), template INDIVIDUAL_REPORT.md
-tests/                         Contract, acceptance, test offline Task 5/10 và Task 12
+tests/                         Contract, acceptance, test offline Task 5/10, 12, 13
 docs/                          Module contracts, step-by-step, rubric, gợi ý đề tài
 ```
 
@@ -120,7 +124,8 @@ pytest tests/test_contracts.py -q      # contract
 pytest tests/test_acceptance.py -q     # acceptance: dữ liệu, golden set, RESULT.md
 pytest tests/test_task5_task10.py -q   # offline, không cần mạng
 pytest tests/test_task12_reranker.py -q # offline, reranker + nhánh pipeline
-pytest -q                              # toàn bộ (36 tests)
+pytest tests/test_task13_memory.py -q   # offline, conversation memory
+pytest -q                              # toàn bộ (42 tests)
 ```
 
 ## Tài liệu

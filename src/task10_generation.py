@@ -162,18 +162,41 @@ def _refusal() -> dict:
     return {"answer": SAFE_REFUSAL, "sources": [], "retrieval_source": "none"}
 
 
-def generate_from_chunks(query: str, chunks: list[dict]) -> dict:
+def format_history(history: list[dict]) -> str:
+    """Render prior turns as plain text; strip old citations so the LLM cannot
+    copy chunk IDs that are not in the current Context."""
+    lines = []
+    for turn in history:
+        role = "User" if turn.get("role") == "user" else "Assistant"
+        content = re.sub(r"\[[^\[\]\n]+\]", "", str(turn.get("content", ""))).strip()
+        if content:
+            lines.append(f"{role}: {content}")
+    return "\n".join(lines)
+
+
+def generate_from_chunks(query: str, chunks: list[dict], history: list[dict] | None = None) -> dict:
     """Answer ``query`` from already-retrieved ``chunks`` with the shared prompt.
 
     Tách riêng để evaluation (Task 11) có thể so sánh A/B: cùng prompt, cùng
-    LLM, chỉ khác danh sách chunks đầu vào.
+    LLM, chỉ khác danh sách chunks đầu vào. ``history`` (Task 13, tuỳ chọn) là
+    các lượt trước dạng ``{"role", "content"}`` để LLM hiểu câu hỏi nối tiếp;
+    citation vẫn chỉ được lấy từ Context hiện tại.
     """
     if not query.strip() or not chunks:
         return _refusal()
 
     try:
         context = format_context(reorder_for_llm(chunks))
-        answer = call_llm(SYSTEM_PROMPT, f"Context:\n{context}\n\nQuestion: {query}")
+        user_message = f"Context:\n{context}\n\n"
+        if history:
+            rendered = format_history(history)
+            if rendered:
+                user_message += (
+                    "Conversation so far (for reference only, do not cite from it):\n"
+                    f"{rendered}\n\n"
+                )
+        user_message += f"Question: {query}"
+        answer = call_llm(SYSTEM_PROMPT, user_message)
     except Exception:
         return _refusal()
 
