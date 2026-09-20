@@ -9,32 +9,34 @@
 | Evaluator model                    | OpenAI `gpt-4o-mini` (judge) + `text-embedding-3-small` (cho answer relevancy) |
 | Generator model                    | OpenAI `gpt-4o-mini`, temperature 0.3, top_p 0.9, prompt trong `src/task10_generation.py` |
 | Embedding model                    | `BAAI/bge-m3` (sentence-transformers, CPU), ChromaDB cosine, 985 chunks |
-| Corpus version/commit              | `0fb3190` (5 PDF legal + 10 bài news, chuẩn hoá Markdown); config C chạy tại `0a63929`, cùng corpus và index |
+| Corpus version/commit              | `0fb3190` (5 PDF legal + 10 bài news, chuẩn hoá Markdown); config C chạy tại `0a63929`, config D tại `dd89acd`, cùng corpus và index |
 | Golden dataset size                | 20 câu (`golden_dataset.json`), 12 tiếng Anh + 8 tiếng Việt, 6 nhóm: criteria, requirements, scoring, band_descriptor (8 câu), task_format, advice |
 | `top_k`                            | 5 (RRF lấy 10 ứng viên mỗi nhánh rồi cắt còn 5; config C giữ 10 sau RRF rồi cross-encoder cắt còn 5) |
 | Fallback threshold and calibration | Cosine dense top-1 ≥ 0.53 thì dùng hybrid, dưới thì thử PageIndex. Hiệu chỉnh bằng 6 query in-domain (min 0.5907) và 6 query out-of-domain (max 0.4714), chọn giữa khoảng trống. Trong run này **0/20** câu golden rơi xuống fallback (dense top-1 thấp nhất 0.631). |
 
-Số liệu chi tiết từng câu, context đã lấy, latency và câu trả lời nằm trong `results/config_A.json`, `results/config_B.json`, `results/config_C.json`, tổng hợp ở `results/summary.md`. Chạy lại bằng `python -m src.task11_evaluation` (A+B+C) hoặc `--config C`.
+Số liệu chi tiết từng câu, context đã lấy, latency và câu trả lời nằm trong `results/config_{A,B,C,D}.json`, tổng hợp ở `results/summary.md`. Chạy lại bằng `python -m src.task11_evaluation` (A+B+C+D) hoặc `--config D`.
 
 ## Configurations
 
 - **Config A — dense-only:** `semantic_search(query, top_k=10)` bằng bge-m3 trên ChromaDB, cắt còn 5 chunk đầu theo cosine; không chạy BM25, không RRF (`retrieve_detailed(..., use_reranking=False)`).
 - **Config B — hybrid + RRF:** `semantic_search` + `lexical_search` (BM25Okapi trên cùng 985 chunk), mỗi nhánh 10 ứng viên, gộp bằng `rerank_rrf` (k=60) đúng một lần, lấy 5 chunk đầu (`use_reranking=True`). Đây là so sánh A/B bắt buộc.
-- **Config C — hybrid + RRF + rerank (bonus):** như B nhưng RRF giữ 10 ứng viên, cross-encoder `BAAI/bge-reranker-v2-m3` (`src/task12_cross_encoder_rerank.py`, chạy CPU) chấm lại cặp (query, chunk) rồi cắt còn 5 (`use_cross_encoder=True`). Cross-encoder chỉ sắp xếp lại danh sách RRF, không thêm ứng viên; fallback vẫn quyết định bằng cosine dense trước khi rerank. **Đây là cấu hình mặc định của chatbot** (`RERANKER_ENABLED=1`).
+- **Config C — hybrid + RRF + rerank (bonus):** như B nhưng RRF giữ 10 ứng viên, cross-encoder `BAAI/bge-reranker-v2-m3` (`src/task12_cross_encoder_rerank.py`, chạy CPU) chấm lại cặp (query, chunk) rồi cắt còn 5 (`use_cross_encoder=True`). Cross-encoder chỉ sắp xếp lại danh sách RRF, không thêm ứng viên; fallback vẫn quyết định bằng cosine dense trước khi rerank. Cấu hình này là baseline cho HyDE.
+
+- **Config D — C + HyDE (bonus):** như C nhưng query tìm kiếm được nối thêm đoạn giả định do gpt-4o-mini viết theo văn phong band descriptor (`src/task14_hyde.py`). RRF gộp **3** danh sách trong một lần gọi: dense(query gốc), dense(query + hypothetical), BM25(query + hypothetical); giữ dense gốc để phòng đoạn giả định lạc đề. Fallback vẫn dùng cosine của query gốc nên threshold 0.53 không đổi. Đoạn giả định chỉ dùng để tìm, không đưa vào Context của Task 10. **Đây là cấu hình mặc định của chatbot** (`RERANKER_ENABLED=1`, `HYDE_ENABLED=1`).
 
 Các config phải dùng cùng golden dataset, generator, evaluator, prompt và `top_k`; chỉ thay retrieval strategy. Tất cả đi qua cùng ngưỡng fallback và cùng bước reorder + citation check trong `generate_from_chunks`.
 
 ## Overall scores
 
-| Metric            | Config A | Config B | Config C (bonus) | Delta B−A | Delta C−B |
-| ----------------- | -------: | -------: | ---------------: | --------: | --------: |
-| Faithfulness      |   0.6833 |   0.7000 |           0.7536 |   +0.0167 |   +0.0536 |
-| Answer relevance  |   0.6128 |   0.5802 |           0.6352 |   −0.0326 |   +0.0550 |
-| Context recall    |   0.7881 |   0.8476 |           0.8393 |   +0.0595 |   −0.0083 |
-| Context precision |   0.7767 |   0.6160 |           0.8675 |   −0.1607 |   +0.2515 |
-| **Average**       |   0.7152 |   0.6860 |           0.7739 |   −0.0292 |   +0.0879 |
+| Metric            | Config A | Config B | Config C (bonus) | Config D (bonus) | Delta B−A | Delta C−B | Delta D−C |
+| ----------------- | -------: | -------: | ---------------: | ---------------: | --------: | --------: | --------: |
+| Faithfulness      |   0.6833 |   0.7000 |           0.7536 |           0.8333 |   +0.0167 |   +0.0536 |   +0.0797 |
+| Answer relevance  |   0.6128 |   0.5802 |           0.6352 |           0.7506 |   −0.0326 |   +0.0550 |   +0.1154 |
+| Context recall    |   0.7881 |   0.8476 |           0.8393 |           0.9101 |   +0.0595 |   −0.0083 |   +0.0708 |
+| Context precision |   0.7767 |   0.6160 |           0.8675 |           0.9049 |   −0.1607 |   +0.2515 |   +0.0374 |
+| **Average**       |   0.7152 |   0.6860 |           0.7739 |           0.8497 |   −0.0292 |   +0.0879 |   +0.0758 |
 
-Ghi chú cách đọc: safe refusal được chấm faithfulness = 0 và relevance = 0 (câu trả lời không chứa nội dung), nên hai metric này bị kéo xuống trực tiếp bởi số câu refusal: A 5/20, B 6/20, C 4/20. Nếu chỉ tính các câu có trả lời, faithfulness A = 0.911 (15 câu), B = 1.000 (14 câu), C = 0.942 (16 câu); precision A = 0.923, B = 0.747, C = 0.992.
+Ghi chú cách đọc: safe refusal được chấm faithfulness = 0 và relevance = 0 (câu trả lời không chứa nội dung), nên hai metric này bị kéo xuống trực tiếp bởi số câu refusal: A 5/20, B 6/20, C 4/20, D 2/20. Nếu chỉ tính các câu có trả lời, faithfulness A = 0.911 (15 câu), B = 1.000 (14 câu), C = 0.942 (16 câu), D = 0.926 (18 câu); precision A = 0.923, B = 0.747, C = 0.992, D = 0.948.
 
 ## A/B comparison
 
@@ -68,6 +70,7 @@ Các câu g07, g09, g10 (band descriptor, refusal ở cả hai config) có cùng
 | Experiment | Baseline | Metric delta | Latency/cost delta | Conclusion |
 | ---------- | -------- | -----------: | -----------------: | ---------- |
 | Reranker cross-encoder `bge-reranker-v2-m3` sau RRF (Config C, `src/task12_cross_encoder_rerank.py`) | Config B (hybrid + RRF) | Precision +0.2515 (0.616 → 0.868), faithfulness +0.054, relevance +0.055, recall −0.008; average +0.088 (0.686 → 0.774), cao nhất trong 3 config. Refusal 6 → 4: g16 (bullet points) và g18 (cách tính điểm) từ refusal thành trả lời đúng vì cross-encoder đẩy chunk trả lời lên top-5 (g16 precision 0.00 → 1.00, g18 0.33 → 1.00). Precision tăng ở 15/20 câu, chỉ giảm ở g07 (0.33 → 0.20). | Retrieval median 113 ms → 4 471 ms (chạy CPU macOS Intel, 10 cặp query–chunk mỗi câu; lần đầu thêm ~5 s load model). Không tốn API vì model local; generation không đổi. | **Reranker chứng minh cải thiện so với RRF** trên cùng golden set, đúng recommendation #2 ở trên: lấy lại precision mà hybrid đánh mất mà không giảm recall đáng kể. Nhóm bật mặc định cho chatbot (`RERANKER_ENABLED=1`). 4 refusal còn lại (g07, g09, g10, g13) vẫn là câu "Band N + tiêu chí" — reranker không cứu được vì chunk đúng không có trong 10 ứng viên RRF (lỗi chunking, recommendation #1). |
+| HyDE (Config D = C + HyDE, `src/task14_hyde.py`) | Config C (hybrid + RRF + rerank) | Average +0.0758 (0.774 → 0.850): faithfulness +0.080, relevance +0.115, recall +0.071, precision +0.037 — cả 4 metric đều tăng. Refusal 4 → 2: **g10** (Grammatical Range Band 5) và **g13** (so sánh Lexical Resource Band 8/9) từ refusal thành trả lời đúng có citation; đây là hai câu "Band N + tiêu chí" mà BM25 bigram và cross-encoder đều không cứu được vì chunk đúng không lọt top-10 RRF. Đoạn giả định viết theo văn phong descriptor ("limited range of grammatical structures… errors are frequent") nên dense trên query mở rộng kéo được chunk descriptor thật lên. Recall tăng ở 3 câu (g07, g10, g15), giảm ở 1 (g09). | Thêm 1 lời gọi gpt-4o-mini + 1 dense + 1 BM25 mỗi query: retrieval median 4.5 s → 6.0 s (CPU). Generation không đổi. | **HyDE chứng minh cải thiện** trên cùng golden set và cùng baseline mạnh nhất (C). Nhóm bật mặc định (`HYDE_ENABLED=1`). Còn 2 refusal (g07, g09): chunk đúng vẫn không lọt top-10 — cần sửa chunking (recommendation #1). |
 | Conversation memory cho follow-up (`src/task13_conversation_memory.py`) | Không có memory: câu "And for Task 1?" được retrieval nguyên văn, không biết đang hỏi về số từ | Demo 3 lượt (`results/memory_demo.md`, config C): "And for Task 1?" → viết lại thành "And for IELTS Writing Task 1, how many words must I write?" → trả lời đúng 150 từ có citation; "Which one carries more weight in the final score?" → "Which one, IELTS Writing Task 1 or Task 2, carries more weight…" → trả lời đúng Task 2. Không đo trên golden set vì golden là câu đơn lẻ. | Thêm 1 lời gọi gpt-4o-mini (condense) mỗi lượt có lịch sử, ~0.5–1 s; lượt đầu không tốn. | Tính năng chạy được, có transcript; bật mặc định trong Streamlit (toggle "Nhớ hội thoại"), 6 test offline. Citation vẫn chỉ lấy từ Context hiện tại, lịch sử đã bỏ citation cũ nên không sinh refusal giả. |
 | UI citation/source highlighting (`src/ui_citations.py`, `app.py`) | UI cũ: citation thô `[news/x.md::chunk-48]` trong câu trả lời, 5 nguồn liệt kê ngang nhau, người dùng phải tự tìm câu bằng chứng | Không có metric; bằng chứng là ảnh `docs/ui_citation_highlight.png` và `docs/ui_conversation_memory.png`: citation thành badge số có tooltip chunk ID, nguồn được cite xếp trước và đánh số khớp, câu bằng chứng trong chunk bôi vàng (trên 16 câu trả lời của config C: 15/16 chunk được cite có ít nhất một câu được đánh dấu, 51/117 câu), nguồn không cite hiển thị mờ. | Thuần Python, không thêm lời gọi LLM hay độ trễ đáng kể. | Tính năng chạy được, 6 test offline. Heuristic trùng từ khoá + số nên có thể highlight thừa/thiếu khi answer tiếng Việt còn chunk tiếng Anh. |
 | PageIndex fallback | — | — | — | Đã tích hợp (Task 8) nhưng không kích hoạt trên golden set (0/20, dense top-1 thấp nhất 0.631 > 0.53) nên chưa đo được. |

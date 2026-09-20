@@ -7,6 +7,8 @@ Hai cấu hình chỉ khác retrieval strategy, mọi thứ còn lại giữ ngu
     B  hybrid + RRF         : semantic_search + lexical_search gộp bằng RRF một lần
     C  hybrid + RRF + rerank: như B nhưng RRF lấy 2×top_k rồi cross-encoder
                               (Task 12, bonus) chấm lại và cắt top_k
+    D  C + HyDE             : như C nhưng query tìm kiếm được nối thêm đoạn giả
+                              định (Task 14, bonus); RRF gộp 3 danh sách
 
 Metric (ragas 0.4.3, API collections):
     faithfulness       answer có bám vào retrieved contexts không
@@ -63,9 +65,10 @@ EVAL_EMBEDDING_MODEL = os.getenv("EVAL_EMBEDDING_MODEL", "text-embedding-3-small
 EVAL_CONCURRENCY = 4   # số câu chấm song song; giữ thấp để tránh rate limit
 
 CONFIGS = {
-    "A": {"label": "dense-only", "use_reranking": False, "use_cross_encoder": False},
-    "B": {"label": "hybrid + RRF", "use_reranking": True, "use_cross_encoder": False},
-    "C": {"label": "hybrid + RRF + rerank", "use_reranking": True, "use_cross_encoder": True},
+    "A": {"label": "dense-only", "use_reranking": False, "use_cross_encoder": False, "use_hyde": False},
+    "B": {"label": "hybrid + RRF", "use_reranking": True, "use_cross_encoder": False, "use_hyde": False},
+    "C": {"label": "hybrid + RRF + rerank", "use_reranking": True, "use_cross_encoder": True, "use_hyde": False},
+    "D": {"label": "C + HyDE", "use_reranking": True, "use_cross_encoder": True, "use_hyde": True},
 }
 METRICS = ("faithfulness", "answer_relevancy", "context_recall", "context_precision")
 
@@ -92,6 +95,7 @@ def run_config(config_key: str, golden: list[dict]) -> list[dict]:
             top_k=TOP_K,
             use_reranking=config["use_reranking"],
             use_cross_encoder=config["use_cross_encoder"],
+            use_hyde=config["use_hyde"],
         )
         retrieval_ms = (time.perf_counter() - started) * 1000
         chunks = detail["results"][:TOP_K]
@@ -115,6 +119,7 @@ def run_config(config_key: str, golden: list[dict]) -> list[dict]:
             "fallback_tried": detail["fallback_tried"],
             "reranked": detail.get("reranked", False),
             "reranker_error": detail.get("reranker_error"),
+            "hyde_query": detail.get("hyde_query"),
             "contexts": [
                 {
                     "id": chunk["id"],

@@ -2,8 +2,10 @@
 Task 9 — Retrieval pipeline hoàn chỉnh.
 
 Luồng xử lý:
-    1. Chạy semantic_search và lexical_search.
-    2. Fuse hai danh sách bằng RRF đúng một lần.
+    1. Chạy semantic_search và lexical_search. (Tuỳ chọn, HYDE_ENABLED=1) thêm
+       đoạn giả định của Task 14 vào query tìm kiếm; dense trên query gốc vẫn
+       được giữ làm danh sách thứ ba.
+    2. Fuse các danh sách bằng RRF đúng một lần.
     3. (Tuỳ chọn, RERANKER_ENABLED=1) cross-encoder chấm lại 2×top_k ứng viên
        RRF rồi cắt top_k — xem Task 12. Reranker lỗi thì dùng kết quả RRF.
     4. Lấy best cosine score gốc từ dense results.
@@ -38,6 +40,7 @@ from .task6_lexical_search import lexical_search
 from .task7_reranking import rerank_rrf
 from .task8_pageindex_vectorless import pageindex_search
 from .task12_cross_encoder_rerank import rerank_cross_encoder
+from .task14_hyde import expand_query
 
 
 load_dotenv()
@@ -57,6 +60,9 @@ CANDIDATE_MULTIPLIER = 2   # lấy dư ứng viên cho RRF có chỗ gộp
 # Bật cross-encoder sau RRF (Task 12). Tắt mặc định để contract test và config
 # B của evaluation đo đúng "hybrid + RRF"; config C và .env của nhóm bật lên.
 RERANKER_ENABLED = os.getenv("RERANKER_ENABLED", "0").strip().lower() in {"1", "true", "yes"}
+# Bật HyDE (Task 14): thêm đoạn giả định vào query tìm kiếm. Tắt mặc định vì
+# tốn một lời gọi LLM mỗi query; config D của evaluation bật lên để đo.
+HYDE_ENABLED = os.getenv("HYDE_ENABLED", "0").strip().lower() in {"1", "true", "yes"}
 
 
 def retrieve_detailed(
@@ -65,35 +71,58 @@ def retrieve_detailed(
     score_threshold: float = SCORE_THRESHOLD,
     use_reranking: bool = True,
     use_cross_encoder: bool | None = None,
+    use_hyde: bool | None = None,
 ) -> dict:
     """Như retrieve() nhưng kèm thông tin để UI/Task 10 giải thích kết quả.
 
     ``use_reranking`` bật RRF (hybrid); ``use_cross_encoder`` bật cross-encoder
     sau RRF, None thì theo RERANKER_ENABLED. Cross-encoder chỉ có tác dụng khi
-    use_reranking=True.
+    use_reranking=True. ``use_hyde`` (None → HYDE_ENABLED) thêm đoạn giả định
+    vào query tìm kiếm; chỉ có tác dụng khi use_reranking=True vì cần RRF để
+    gộp dense(query gốc) với dense/BM25(query mở rộng).
 
     Trả về dict:
         results            list[SearchResult]
         retrieval_source   "hybrid" | "pageindex" | "none"
-        best_dense_score   cosine gốc cao nhất của dense search
+        best_dense_score   cosine gốc cao nhất của dense search trên query gốc
         reranked           bool — cross-encoder đã chấm lại kết quả
         reranker_error     str | None
+        hyde_query         str | None — query mở rộng đã dùng (None nếu tắt)
         fallback_tried     bool
         fallback_error     str | None
     """
     if use_cross_encoder is None:
         use_cross_encoder = RERANKER_ENABLED
     use_cross_encoder = use_cross_encoder and use_reranking
+    if use_hyde is None:
+        use_hyde = HYDE_ENABLED
+    use_hyde = use_hyde and use_reranking
 
     candidates = max(top_k * CANDIDATE_MULTIPLIER, top_k)
     dense = semantic_search(query, top_k=candidates)
-    sparse = lexical_search(query, top_k=candidates)
+
+    hyde_query = None
+    if use_hyde:
+        expanded = expand_query(query)
+        if expanded != query:
+            hyde_query = expanded
+    if hyde_query:
+        # Dense trên query gốc giữ lại để phòng đoạn giả định lạc đề; cả ba
+        # danh sách gộp trong đúng một lần RRF.
+        ranked_lists = [
+            dense,
+            semantic_search(hyde_query, top_k=candidates),
+            lexical_search(hyde_query, top_k=candidates),
+        ]
+    else:
+        sparse = lexical_search(query, top_k=candidates)
+        ranked_lists = [dense, sparse]
 
     reranked = False
     reranker_error = None
     if use_reranking and use_cross_encoder:
         # RRF vẫn chạy một lần; chỉ lấy dư ứng viên để cross-encoder có chỗ chọn.
-        fused = rerank_rrf([dense, sparse], top_k=candidates)
+        fused = rerank_rrf(ranked_lists, top_k=candidates)
         try:
             hybrid = rerank_cross_encoder(query, fused, top_k=top_k)
             reranked = True
@@ -101,7 +130,7 @@ def retrieve_detailed(
             reranker_error = f"{type(error).__name__}: {error}"
             hybrid = fused[:top_k]
     elif use_reranking:
-        hybrid = rerank_rrf([dense, sparse], top_k=top_k)
+        hybrid = rerank_rrf(ranked_lists, top_k=top_k)
     else:
         hybrid = dense[:top_k]
 
@@ -112,6 +141,7 @@ def retrieve_detailed(
         "best_dense_score": best_dense_score,
         "reranked": reranked,
         "reranker_error": reranker_error,
+        "hyde_query": hyde_query,
         "fallback_tried": False,
         "fallback_error": None,
     }
@@ -197,7 +227,8 @@ if __name__ == "__main__":
         print(f"Query: {question}")
         print(
             f"source={detail['retrieval_source']}  best_dense={detail['best_dense_score']:.4f}"
-            f"  reranked={detail['reranked']}  fallback_tried={detail['fallback_tried']}"
+            f"  reranked={detail['reranked']}  hyde={detail['hyde_query'] is not None}"
+            f"  fallback_tried={detail['fallback_tried']}"
             f"  error={detail['reranker_error'] or detail['fallback_error']}\n"
         )
         for rank, result in enumerate(detail["results"], 1):

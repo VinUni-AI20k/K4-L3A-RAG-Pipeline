@@ -1,7 +1,7 @@
 import streamlit as st
 from dotenv import load_dotenv
 
-from src.task9_retrieval_pipeline import RERANKER_ENABLED
+from src.task9_retrieval_pipeline import HYDE_ENABLED, RERANKER_ENABLED
 from src.task10_generation import generate_with_citation
 from src.task13_conversation_memory import answer_with_memory
 from src.ui_citations import highlight_evidence, number_citations, order_sources
@@ -74,6 +74,7 @@ with st.sidebar:
         "Retrieval: dense + BM25 → RRF"
         + (" → cross-encoder rerank" if RERANKER_ENABLED else "")
         + " → PageIndex fallback"
+        + (" · HyDE bật" if HYDE_ENABLED else "")
     )
 
 st.title("RAG Chatbot")
