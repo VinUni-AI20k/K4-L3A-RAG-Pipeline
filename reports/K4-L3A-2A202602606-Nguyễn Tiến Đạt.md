@@ -5,9 +5,7 @@
 - Họ và tên: Nguyễn Tiến Đạt
 - Mã học viên: 2A202602606
 - Nhóm: K4-L3A
-- Repository/branch: <https://github.com/hoanganhb680-arch/K4-L3A-RAG-Pipeline>
-
-## Phần việc đã thực hiện
+- Repository/branch: https\://github.com/hoanganhb680-arch/K4-L3A-RAG-Pipeline/tree/ntiendat01/trđã thực hiện
 
 | Module/deliverable                     | Việc tôi trực tiếp làm                                                                                                                                                          | File/commit/PR                                                                                                              | Trạng thái |
 | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------- |
