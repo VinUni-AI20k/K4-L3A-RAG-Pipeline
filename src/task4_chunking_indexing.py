@@ -38,7 +38,6 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
     provider = os.getenv("EMBEDDING_PROVIDER", "gemini").lower()
     if provider == "gemini":
         from google import genai
-        from google.genai import types
 
         api_key = os.getenv("GEMINI_API_KEY")
         if not api_key:
@@ -46,11 +45,18 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
 
         client = genai.Client(api_key=api_key)
         model_name = os.getenv("EMBEDDING_MODEL", "gemini-embedding-001")
-        response = client.models.embed_content(
-            model=model_name,
-            contents=texts,
-        )
-        return [e.values for e in response.embeddings]
+
+        # Chia nhỏ thành các batch 50 items để không vượt quá giới hạn API
+        batch_size = 50
+        all_embeddings = []
+        for i in range(0, len(texts), batch_size):
+            batch = texts[i : i + batch_size]
+            response = client.models.embed_content(
+                model=model_name,
+                contents=batch,
+            )
+            all_embeddings.extend([e.values for e in response.embeddings])
+        return all_embeddings
     else:
         from sentence_transformers import SentenceTransformer
 
