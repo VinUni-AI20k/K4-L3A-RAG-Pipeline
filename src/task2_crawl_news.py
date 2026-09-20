@@ -21,25 +21,25 @@ from pathlib import Path
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
 
 ARTICLE_URLS = [
-    # TODO: Thêm ít nhất 5 public URL.
+    "https://ielts.idp.com/vietnam/about/news-and-articles/article-ielts-writing-task-1",
+    "https://ielts.idp.com/vietnam/about/news-and-articles/article-ielts-writing-task-2"
 ]
 
 
 async def crawl_article(url: str) -> dict:
     # TODO: Implement crawling logic.
     #
-    # from datetime import datetime
-    # from crawl4ai import AsyncWebCrawler
-    #
-    # async with AsyncWebCrawler() as crawler:
-    #     result = await crawler.arun(url=url)
-    #     return {
-    #         "url": url,
-    #         "title": result.metadata.get("title", "Unknown"),
-    #         "date_crawled": datetime.now().isoformat(),
-    #         "content_markdown": result.markdown,
-    #     }
-    raise NotImplementedError("Implement crawl_article")
+    from datetime import datetime
+    from crawl4ai import AsyncWebCrawler
+    
+    async with AsyncWebCrawler() as crawler:
+         result = await crawler.arun(url=url)
+         return {
+             "url": url,
+             "title": result.metadata.get("title", "Unknown"),
+             "date_crawled": datetime.now().isoformat(),
+             "content_markdown": result.markdown,
+         }
 
 
 async def crawl_all() -> None:
