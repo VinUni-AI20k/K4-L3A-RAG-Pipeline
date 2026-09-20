@@ -5,8 +5,12 @@
 - Họ và tên: Nguyễn Quang Huy
 - Mã học viên: 2A202602421
 - Nhóm: K4-L3A
+- Thành viên nhóm:
+  - Nguyễn Thị Minh Khánh — 2A202602546
+  - Nguyễn Việt Hoàng Hải — 2A202602967
+  - Nguyễn Quang Huy — 2A202602421
+  - Phạm Minh Hiếu — 2A202602919
 - Repository/branch: `kamitoznguyen-collab/K4-L3A-RAG-Pipeline`, nhánh `Huy`
-- Vai trò: làm toàn bộ bài — data, retrieval, generation, UI và evaluation
 
 ## Phần việc đã thực hiện
 
@@ -25,7 +29,10 @@
 Kiểm chứng: `pytest -q` → 20/20 pass (15 contract + 5 acceptance).
 
 Các commit `7a43099`–`6a2a2d4` là bộ khung đề bài có sẵn (docs/, `src/contracts.py`,
-các file task ở dạng stub, template báo cáo). Toàn bộ phần implement là của tôi.
+các file task ở dạng stub, template báo cáo), không phải phần code của nhóm.
+
+Phần việc kê ở bảng trên nằm trong các commit của tôi trên nhánh `Huy`
+(`b4e7322` trở đi).
 
 ## Quyết định kỹ thuật quan trọng
 
