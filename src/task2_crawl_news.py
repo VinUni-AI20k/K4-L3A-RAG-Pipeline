@@ -14,32 +14,40 @@ Cài browser trước khi chạy:
 """
 
 import asyncio
+from datetime import datetime
 import json
 from pathlib import Path
+from crawl4ai import AsyncWebCrawler
 
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
 
+# TODO: Thêm ít nhất 5 public URL.
 ARTICLE_URLS = [
-    # TODO: Thêm ít nhất 5 public URL.
+    "https://ieltsliz.com/ielts-band-scores/",
+    "https://ieltsliz.com/ielts-writing-task-1-lessons-and-tips/",
+    "https://ieltsliz.com/ielts-writing-task-1-band-scores/",
+    "https://ieltsliz.com/ielts-writing-task-2-band-scores-5-to-8/",
+    "https://ieltsliz.com/ielts-sample-essay/",
+    "https://ieltsliz.com/ielts-writing-task-2-discussion-essay-expressions/",
 ]
 
 
 async def crawl_article(url: str) -> dict:
     # TODO: Implement crawling logic.
-    #
-    # from datetime import datetime
-    # from crawl4ai import AsyncWebCrawler
-    #
-    # async with AsyncWebCrawler() as crawler:
-    #     result = await crawler.arun(url=url)
-    #     return {
-    #         "url": url,
-    #         "title": result.metadata.get("title", "Unknown"),
-    #         "date_crawled": datetime.now().isoformat(),
-    #         "content_markdown": result.markdown,
-    #     }
-    raise NotImplementedError("Implement crawl_article")
+    async with AsyncWebCrawler() as crawler:
+        result = await crawler.arun(url=url)
+        title = result.metadata.get("title", "")
+        if not title:
+            title = "IELTS Writing Guide"
+        title = title.split(" - IELTS Liz")[0].split(" | IELTS Liz")[0].strip()
+
+        return {
+            "url": url,
+            "title": title,
+            "date_crawled": datetime.now().isoformat(),
+            "content_markdown": result.markdown,
+        }
 
 
 async def crawl_all() -> None:
