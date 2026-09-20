@@ -7,6 +7,14 @@
 # rule "không cho phép chữ contrast thấp", nên nền trang lấy theo
 # color.surface.muted (#ffffff) và surface.base chỉ dùng cho bề mặt đảo màu.
 
+[server]
+# Watcher của Streamlit quét mọi submodule trong sys.modules. Vì sentence-transformers
+# kéo theo transformers, nó chạm vào các model thị giác cần torchvision (dự án không
+# dùng, không cài) và in ra hàng chục traceback ModuleNotFoundError mỗi lần khởi động.
+# App vẫn chạy bình thường, nhưng log nhiễu khiến người xem tưởng app lỗi.
+# Đổi lại "auto" nếu cần hot-reload khi đang sửa code.
+fileWatcherType = "none"
+
 [theme]
 font = "sans-serif"
 baseFontSize = 14

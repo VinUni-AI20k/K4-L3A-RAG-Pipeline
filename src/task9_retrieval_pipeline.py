@@ -11,13 +11,34 @@ Luồng xử lý:
 Không so sánh threshold với RRF score vì hai thang đo khác nhau.
 """
 
+import os
+
+from dotenv import load_dotenv
+
 from .task5_semantic_search import semantic_search
 from .task6_lexical_search import lexical_search
 from .task7_reranking import rerank_rrf
 from .task8_pageindex_vectorless import pageindex_search
 
 
-SCORE_THRESHOLD = 0.3
+load_dotenv()
+
+
+def _threshold_from_env(default: float = 0.3) -> float:
+    """Đọc SCORE_THRESHOLD từ .env, bỏ qua giá trị rỗng hoặc sai định dạng."""
+    raw = (os.getenv("SCORE_THRESHOLD") or "").strip()
+    if not raw:
+        return default
+    try:
+        return float(raw)
+    except ValueError:
+        print(f"SCORE_THRESHOLD không phải số: {raw!r}, dùng mặc định {default}")
+        return default
+
+
+# Ngưỡng phải hiệu chỉnh theo corpus và embedding model, không có con số đúng
+# cho mọi hệ thống. Đo bằng src/run_evaluation.py rồi điền vào .env.
+SCORE_THRESHOLD = _threshold_from_env()
 DEFAULT_TOP_K = 5
 
 

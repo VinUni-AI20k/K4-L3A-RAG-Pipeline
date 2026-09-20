@@ -1,0 +1,961 @@
+{
+  "evaluation_date": "2026-09-21",
+  "generator": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "embedding_model": "BAAI/bge-m3",
+  "top_k": 5,
+  "golden_dataset_size": 17,
+  "configs": {
+    "A_dense_only": {
+      "summary": {
+        "faithfulness": 0.872549019607843,
+        "answer_relevancy": 0.7911786766570348,
+        "context_recall": 0.7647058823529411,
+        "llm_context_precision_with_reference": 0.6441176470069281
+      },
+      "per_case": [
+        {
+          "user_input": "Người điều khiển xe ô tô có nồng độ cồn vượt quá 50 đến 80 miligam/100 mililít máu bị phạt bao nhiêu tiền?",
+          "retrieved_contexts": [
+            "Điều 9. Xử phạt người điều khiển xe đạp, xe đạp máy, người điều khiển xe\nđường có biển “Cấm đi ngược chiều”;\n\nd) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt\n\nquá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n\n0,4 miligam/1 lít khí thở.\n\n4.  Phạt  tiền  từ  400.000  đồng  đến  600.000  đồng  đối  với  người  điều  khiển  xe\n\nthực hiện một trong các hành vi vi phạm sau đây:",
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\n9. Phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở;",
+            "Điều  8. Xử phạt  người  điều khiển xe máy chuyên dùng vi  phạm  quy tắc\n7. Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng đối với người điều khiển xe\n\nthực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở;\n\nb)  Không  chấp  hành  hiệu  lệnh,  hướng  dẫn  của  người  điều  khiển  giao  thông",
+            "Điều 7. Xử phạt, trừ điểm giấy phép lái của người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi…\nb) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở.\n\n9. Phạt tiền từ 8.000.000 đồng đến 10.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:",
+            "Điều 9. Xử phạt người điều khiển xe đạp, xe đạp máy, người điều khiển xe\nquá 80 miligam/100 mililít máu hoặc vượt quá 0,4 miligam/1 lít khí thở;\n\nc)  Không  chấp  hành  yêu  cầu  kiểm  tra  về  nồng  độ  cồn  của  người  thi  hành\n\ncông vụ;\n\nd) Người điều khiển xe đạp máy không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi tham gia giao thông trên đường bộ;"
+          ],
+          "reference_contexts": [
+            "9. Phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở;"
+          ],
+          "response": "Người điều khiển xe ô tô trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu bị phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng [Document 5].",
+          "reference": "Phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng, theo khoản 9 Điều 6 Nghị định 168/2024/NĐ-CP.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9897275066300917,
+          "context_recall": 0.0,
+          "llm_context_precision_with_reference": 0.49999999995
+        },
+        {
+          "user_input": "Mức phạt tiền cao nhất về nồng độ cồn đối với người lái xe ô tô là bao nhiêu?",
+          "retrieved_contexts": [
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\n9. Phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở;",
+            "Điều 9. Xử phạt người điều khiển xe đạp, xe đạp máy, người điều khiển xe\nđường có biển “Cấm đi ngược chiều”;\n\nd) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt\n\nquá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n\n0,4 miligam/1 lít khí thở.\n\n4.  Phạt  tiền  từ  400.000  đồng  đến  600.000  đồng  đối  với  người  điều  khiển  xe\n\nthực hiện một trong các hành vi vi phạm sau đây:",
+            "Điều 7. Xử phạt, trừ điểm giấy phép lái của người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi…\nb) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở.\n\n9. Phạt tiền từ 8.000.000 đồng đến 10.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:",
+            "Điều  8. Xử phạt  người  điều khiển xe máy chuyên dùng vi  phạm  quy tắc\n7. Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng đối với người điều khiển xe\n\nthực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở;\n\nb)  Không  chấp  hành  hiệu  lệnh,  hướng  dẫn  của  người  điều  khiển  giao  thông",
+            "Điều 9. Xử phạt người điều khiển xe đạp, xe đạp máy, người điều khiển xe\no) Xe đạp, xe đạp máy, xe xích lô chở quá số người quy định, trừ trường hợp\n\nchở người bệnh đi cấp cứu;\n\np) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn nhưng\n\nchưa vượt quá 50 miligam/100 mililít máu hoặc chưa vượt quá 0,25 miligam/1 lít\n\nkhí thở.\n\n2.  Phạt  tiền  từ  150.000  đồng  đến  250.000  đồng  đối  với  người  điều  khiển  xe\n\nthực hiện một trong các hành vi vi phạm sau đây:"
+          ],
+          "reference_contexts": [
+            "11.  Phạt  tiền  từ  30.000.000  đồng  đến  40.000.000  đồng  đối  với  người  điều\n\nkhiển xe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt\n\nquá 80 miligam/100 mililít máu hoặc vượt quá 0,4 miligam/1 lít khí thở;"
+          ],
+          "response": "Dựa trên các tài liệu được cung cấp, không có thông tin về mức phạt tiền \"cao nhất\" cụ thể đối với người lái xe ô tô vi phạm về nồng độ cồn. \n\nTài liệu chỉ cung cấp mức phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng đối với người điều khiển xe ô tô (và các loại xe tương tự được quy định tại Điều 6) khi có hành vi điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến 0,4 miligam/1 lít khí thở [Document 1].",
+          "reference": "Phạt tiền từ 30.000.000 đồng đến 40.000.000 đồng khi nồng độ cồn vượt quá 80 miligam/100 mililít máu hoặc vượt quá 0,4 miligam/1 lít khí thở.",
+          "faithfulness": 0.3333333333333333,
+          "answer_relevancy": 0.0,
+          "context_recall": 0.0,
+          "llm_context_precision_with_reference": 0.0
+        },
+        {
+          "user_input": "Người lái xe ô tô chạy quá tốc độ trên 20 km/h đến 35 km/h bị phạt bao nhiêu tiền?",
+          "retrieved_contexts": [
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\nvào nhà, cơ quan.\n\n7. Phạt tiền từ 12.000.000 đồng đến 14.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe chạy quá tốc độ quy định trên 35 km/h;\n\nb) Điều khiển xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh\n\ncó gắn động cơ đi vào đường cao tốc;",
+            "Điều 20. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô chở  hành  khách,  ô  tô  chở  người  và  các  loại  xe  tương  tự  xe  ô  tô…\n.  Phạt  tiền  từ  1.000.000  đồng đến 2.000.000  đồng  trên  mỗi  người  vượt  quá quy định được phép chở của phương tiện nhưng tổng mức phạt tiền tối đa không vượt quá 75.000.000 đồng đối với người điều khiển xe ô tô chở hành khách (kinh doanh vận tải hành khách theo tuyến cố định, hợp đồng) chạy tuyến có cự ly lớn hơn 300 km thực hiện hành vi",
+            "Điều 20. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô chở  hành  khách,  ô  tô  chở  người  và  các  loại  xe  tương  tự  xe  ô  tô…\nhoặc có nhưng đã hết giá trị sử dụng hoặc sử dụng phù hiệu không do cơ quan có thẩm quyền cấp.\n\n8. Phạt tiền từ 10.000.000 đồng đến 12.000.000 đồng đối với người điều khiển\n\nxe thực hiện hành vi đón, trả hành khách trên đường cao tốc.\n\n9. Ngoài việc bị áp dụng hình thức xử phạt, người điều khiển phương tiện thực",
+            "Điều 7. Xử phạt, trừ điểm giấy phép lái của người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi…\nhiệu ưu tiên đi làm nhiệm vụ.\n\n8. Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng đối với người điều khiển xe\n\nthực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe chạy quá tốc độ quy định trên 20 km/h;",
+            "Điều 20. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô chở  hành  khách,  ô  tô  chở  người  và  các  loại  xe  tương  tự  xe  ô  tô…\n6. Phạt tiền từ 3.000.000 đồng đến 5.000.000 đồng đối với một trong các hành\n\nvi vi phạm sau đây:\n\na) Vận chuyển hàng hóa nguy hiểm, hàng độc hại, dễ cháy, dễ nổ, động vật, hàng có mùi hôi thối hoặc hàng hóa khác ảnh hưởng đến sức khỏe của hành khách trên xe;\n\nb) Chở người trên mui xe, trong khoang chở hành lý của xe;"
+          ],
+          "reference_contexts": [
+            "6. Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng đối với người điều khiển xe\n\nthực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe chạy quá tốc độ quy định trên 20 km/h đến 35 km/h;"
+          ],
+          "response": "Dựa trên các tài liệu được cung cấp, không có thông tin về mức phạt tiền đối với người lái xe ô tô chạy quá tốc độ trên 20 km/h đến 35 km/h. Do đó, tôi từ chối xác minh thông tin này theo quy định.",
+          "reference": "Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng.",
+          "faithfulness": 0.5,
+          "answer_relevancy": 0.0,
+          "context_recall": 0.0,
+          "llm_context_precision_with_reference": 0.0
+        },
+        {
+          "user_input": "Lái xe ô tô có nồng độ cồn nhưng chưa vượt quá 50 miligam/100 mililít máu thì bị xử phạt thế nào?",
+          "retrieved_contexts": [
+            "Điều 9. Xử phạt người điều khiển xe đạp, xe đạp máy, người điều khiển xe\nquá 80 miligam/100 mililít máu hoặc vượt quá 0,4 miligam/1 lít khí thở;\n\nc)  Không  chấp  hành  yêu  cầu  kiểm  tra  về  nồng  độ  cồn  của  người  thi  hành\n\ncông vụ;\n\nd) Người điều khiển xe đạp máy không đội “mũ bảo hiểm cho người đi mô tô, xe máy” hoặc đội “mũ bảo hiểm cho người đi mô tô, xe máy” không cài quai đúng quy cách khi tham gia giao thông trên đường bộ;",
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\nhiệu ưu tiên đi làm nhiệm vụ;\n\nc) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn nhưng chưa vượt quá 50 miligam/100 mililít máu hoặc chưa vượt quá 0,25 miligam/1 lít khí thở;\n\nd) Điều khiển xe đi trên vỉa hè, trừ trường hợp điều khiển xe đi qua vỉa hè để\n\nvào nhà, cơ quan.",
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\n9. Phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở;",
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\nkhiển xe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt\n\nquá 80 miligam/100 mililít máu hoặc vượt quá 0,4 miligam/1 lít khí thở;\n\nb) Không chấp hành yêu cầu kiểm tra về nồng độ cồn của người thi hành công vụ;",
+            "Điều 9. Xử phạt người điều khiển xe đạp, xe đạp máy, người điều khiển xe\nđường có biển “Cấm đi ngược chiều”;\n\nd) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt\n\nquá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n\n0,4 miligam/1 lít khí thở.\n\n4.  Phạt  tiền  từ  400.000  đồng  đến  600.000  đồng  đối  với  người  điều  khiển  xe\n\nthực hiện một trong các hành vi vi phạm sau đây:"
+          ],
+          "reference_contexts": [
+            "c) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn nhưng chưa vượt quá 50 miligam/100 mililít máu hoặc chưa vượt quá 0,25 miligam/1 lít khí thở;"
+          ],
+          "response": "Dựa trên các tài liệu được cung cấp, ngữ cảnh chỉ đề cập đến hành vi \"Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn nhưng chưa vượt quá 50 miligam/100 mililít máu hoặc chưa vượt quá 0,25 miligam/1 lít khí thở\" đối với người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ [Document 5]. Tuy nhiên, **ngữ cảnh không cung cấp thông tin chi tiết về mức hình thức xử phạt cụ thể** cho hành vi này. \n\nDo đó, tôi từ chối xác minh mức xử phạt cụ thể do thiếu evidence trong context.",
+          "reference": "Bị phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng, cùng khung với hành vi chạy quá tốc độ trên 20 km/h đến 35 km/h.",
+          "faithfulness": 0.6666666666666666,
+          "answer_relevancy": 0.0,
+          "context_recall": 0.0,
+          "llm_context_precision_with_reference": 0.0
+        },
+        {
+          "user_input": "Những xe ô tô nào bắt buộc phải lắp thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe?",
+          "retrieved_contexts": [
+            "Điều 27. Thiết bị giám sát hành trình lắp trên xe ô tô kinh doanh vận tải, xe ô tô đầu kéo, xe cứu thương, xe cứu hộ giao thông đường bộ\n1. Xe ô tô kinh doanh vận tải, xe ô tô đầu kéo, xe cứu thương, xe cứu hộ giao thông đường bộ phải lắp thiết bị giám sát hành trình bảo đảm yêu cầu kỹ thuật theo quy định của Quy chuẩn kỹ thuật quốc gia về thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe.",
+            "Điều 28. Thiết bị ghi nhận hình ảnh người lái xe lắp trên xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải, xe ô…\nXe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải, xe ô tô đầu kéo, xe cứu thương, xe cứu hộ giao thông đường bộ phải lắp thiết bị ghi nhận hình ảnh người lái xe bảo đảm yêu cầu kỹ thuật theo quy định của Quy chuẩn kỹ thuật quốc gia về thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe.",
+            "Điều 35. Điều kiện phương tiện tham gia giao thông đường bộ\ncủa pháp luật.\n\n2. Xe ô tô kinh doanh vận tải phải lắp thiết bị giám sát hành trình. Xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải, xe ô tô đầu kéo, xe cứu thương phải lắp thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe.\n\n3.  Phương  tiện  giao  thông  thông  minh  bảo  đảm  các  điều  kiện  quy  định  tại",
+            "Điều  26.  Xử phạt các  hành  vi vi phạm quy định về trật tự, an toàn giao\nliên quan đến giám sát hành trình, ghi nhận hình ảnh người lái xe thực hiện một\n\ntrong các hành vi sau:\n\na) Đơn vị sản xuất, lắp ráp, nhập khẩu thiết bị giám sát hành trình của xe ô tô\n\nkhông có nhân sự cho từng vị trí công việc theo quy định;\n\nb) Đơn vị sản xuất, lắp ráp, nhập khẩu thiết bị giám sát hành trình của xe ô tô\n\nkhông báo cáo về việc cập nhật, thay đổi phần mềm của thiết bị theo quy định.",
+            "Điều 28. Thiết bị ghi nhận hình ảnh người lái xe lắp trên xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải, xe ô tô đầu kéo, xe cứu thương, xe cứu hộ giao thông đường bộ"
+          ],
+          "reference_contexts": [
+            "2. Xe ô tô kinh doanh vận tải phải lắp thiết bị giám sát hành trình. Xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải, xe ô tô đầu kéo, xe cứu thương phải lắp thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe."
+          ],
+          "response": "Dựa trên các tài liệu được cung cấp, những loại xe ô tô bắt buộc phải lắp thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe bao gồm:\n\n* Xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải [Document 2, Document 3, Document 5].\n* Xe ô tô đầu kéo [Document 1, Document 2, Document 3, Document 5].\n* Xe cứu thương [Document 1, Document 2, Document 3, Document 5].\n* Xe cứu hộ giao thông đường bộ [Document 1, Document 3, Document 5].",
+          "reference": "Xe ô tô kinh doanh vận tải phải lắp thiết bị giám sát hành trình. Xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải, xe ô tô đầu kéo và xe cứu thương phải lắp cả thiết bị giám sát hành trình lẫn thiết bị ghi nhận hình ảnh người lái xe.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9936236607354282,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.5833333333041666
+        },
+        {
+          "user_input": "Bao nhiêu tuổi thì được điều khiển xe gắn máy và bao nhiêu tuổi được cấp giấy phép lái xe hạng B?",
+          "retrieved_contexts": [
+            "Điều 59. Tuổi, sức khỏe của người điều khiển phương tiện tham gia giao\nb) Người đủ 18 tuổi trở lên được cấp giấy phép lái xe hạng A1, A, B1, B, C1, được cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ để điều khiển xe máy chuyên dùng tham gia giao thông đường bộ;\n\nc) Người đủ 21 tuổi trở lên được cấp giấy phép lái xe hạng C, BE;\n\nd) Người đủ 24 tuổi trở lên được cấp giấy phép lái xe hạng D1, D2, C1E, CE;",
+            "Điều 59. Tuổi, sức khỏe của người điều khiển phương tiện tham gia giao\n\nthông đường bộ\n\n1. Độ tuổi của người lái xe, người điều khiển xe máy chuyên dùng được quy\n\nđịnh như sau:\n\na) Người đủ 16 tuổi trở lên được điều khiển xe gắn máy;",
+            "Điều 59. Tuổi, sức khỏe của người điều khiển phương tiện tham gia giao\nđ) Người đủ 27 tuổi trở lên được cấp giấy phép lái xe hạng D, D1E, D2E, DE;\n\ne)  Tuổi  tối  đa  của  người  lái  xe  ô  tô  chở  người  (kể  cả  xe  buýt)  trên  29  chỗ\n(không kể chỗ của người lái xe), xe ô tô chở người giường nằm là đủ 57 tuổi đối với nam, đủ 55 tuổi đối với nữ.",
+            "Điều 18. Xử phạt, trừ điểm giấy phép lái xe các hành vi vi phạm quy định\n\nvề điều kiện của người điều khiển xe cơ giới\n\n1. Phạt cảnh cáo người từ đủ 14 tuổi đến dưới 16 tuổi điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy hoặc\nđiều khiển xe ô tô, điều khiển xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và các loại xe tương tự xe ô tô.",
+            "Điều 89. Quy định chuyển tiếp\nhạng B với điều kiện hạn chế là chỉ được điều khiển xe ô tô số tự động;\n\ne) Giấy phép lái xe hạng B1, B2 được đổi, cấp lại sang giấy phép lái xe hạng B hoặc hạng C1 và chứng chỉ điều khiển xe máy chuyên dùng cho người điều khiển máy kéo có trọng tải đến 3.500 kg;\n\ng) Giấy phép lái xe hạng C giữ nguyên và đổi, cấp lại cùng hạng và chứng chỉ\nđiều  khiển  xe  máy  chuyên  dùng  cho  người  điều  khiển  máy  kéo  có  trọng  tải  trên\n3.500 kg;"
+          ],
+          "reference_contexts": [
+            "1. Độ tuổi của người lái xe, người điều khiển xe máy chuyên dùng được quy\n\nđịnh như sau:\n\na) Người đủ 16 tuổi trở lên được điều khiển xe gắn máy;\n\nb) Người đủ 18 tuổi trở lên được cấp giấy phép lái xe hạng A1, A, B1, B, C1"
+          ],
+          "response": "Dựa trên các tài liệu được cung cấp:\n\n- **Điều khiển xe gắn máy:** Người đủ 16 tuổi trở lên được điều khiển xe gắn máy [Document 5].\n- **Cấp giấy phép lái xe hạng B:** Người đủ 18 tuổi trở lên được cấp giấy phép lái xe hạng B [Document 1].",
+          "reference": "Người đủ 16 tuổi trở lên được điều khiển xe gắn máy; người đủ 18 tuổi trở lên được cấp giấy phép lái xe hạng A1, A, B1, B, C1.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9731130912757252,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.49999999995
+        },
+        {
+          "user_input": "Giấy phép lái xe hạng B có thời hạn bao lâu?",
+          "retrieved_contexts": [
+            "Điều 57. Giấy phép lái xe\nc) Giấy phép lái xe các hạng C, D1, D2, D, BE, C1E, CE, D1E, D2E và DE có\n\nthời hạn 05 năm kể từ ngày cấp.\n\n6. Giấy phép lái xe có giá trị sử dụng trong phạm vi lãnh thổ Việt Nam bao gồm:\n\na) Giấy phép lái xe do cơ quan có thẩm quyền của Việt Nam cấp;",
+            "Điều 57. Giấy phép lái xe\n4. Người điều khiển xe ô tô có thiết kế, cải tạo với số chỗ ít hơn xe cùng loại, kích thước giới hạn tương đương phải sử dụng giấy phép lái xe có hạng phù hợp với xe ô tô cùng loại, kích thước giới hạn tương đương và có số chỗ nhiều nhất.\n\n5. Thời hạn của giấy phép lái xe được quy định như sau:\n\na) Giấy phép lái xe các hạng A1, A, B1 không thời hạn;\n\nb) Giấy phép lái xe hạng B và hạng C1 có thời hạn 10 năm kể từ ngày cấp;",
+            "### Đào tạo lái xe các hạng B, C1\nTheo Thông tư, chương trình, phân bổ thời gian đào tạo thực hành đào tạo lái xe các hạng B, C1 như sau:   \n|  SỐ TT  |  NỘI DUNG  |  ĐƠN VỊ TÍNH  |  HẠNG GIẤY PHÉP LÁI XE  |  \n| --- | --- | --- | --- |  \n|  Hạng B  |  Hạng C1  |  \n|  Học xe chuyển số tự động (bao gồm cả xe ô tô điện)  |  Học xe chuyển số cơ khí (số sàn)  |  \n|  1  |  Thời gian học thực hành lái xe trên sân tập lái của 01 học viên  |  giờ  |  41  |  41  |  43  |",
+            "Điều 89. Quy định chuyển tiếp\nhạng B với điều kiện hạn chế là chỉ được điều khiển xe ô tô số tự động;\n\ne) Giấy phép lái xe hạng B1, B2 được đổi, cấp lại sang giấy phép lái xe hạng B hoặc hạng C1 và chứng chỉ điều khiển xe máy chuyên dùng cho người điều khiển máy kéo có trọng tải đến 3.500 kg;\n\ng) Giấy phép lái xe hạng C giữ nguyên và đổi, cấp lại cùng hạng và chứng chỉ\nđiều  khiển  xe  máy  chuyên  dùng  cho  người  điều  khiển  máy  kéo  có  trọng  tải  trên\n3.500 kg;",
+            "Điều 57. Giấy phép lái xe\nc) Hạng B1 cấp cho người lái xe mô tô ba bánh và các loại xe quy định cho\n\ngiấy phép lái xe hạng A1;\n\nd) Hạng B cấp cho người lái xe ô tô chở người đến 08 chỗ (không kể chỗ của người lái xe); xe ô tô tải và ô tô chuyên dùng có khối lượng toàn bộ theo thiết kế đến 3.500 kg; các loại xe ô tô quy định cho giấy phép lái xe hạng B kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg;"
+          ],
+          "reference_contexts": [
+            "5. Thời hạn của giấy phép lái xe được quy định như sau:\n\na) Giấy phép lái xe các hạng A1, A, B1 không thời hạn;\n\nb) Giấy phép lái xe hạng B và hạng C1 có thời hạn 10 năm kể từ ngày cấp;\n\nc) Giấy phép lái xe các hạng C, D1, D2, D, BE, C1E, CE, D1E, D2E và DE có\n\nthời hạn 05 năm kể từ ngày cấp."
+          ],
+          "response": "Giấy phép lái xe hạng B có thời hạn 10 năm kể từ ngày cấp [Document 5].",
+          "reference": "Giấy phép lái xe hạng B và hạng C1 có thời hạn 10 năm kể từ ngày cấp. Hạng A1, A, B1 không thời hạn; các hạng C, D1, D2, D, BE, C1E, CE, D1E, D2E và DE có thời hạn 05 năm.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9829087557351451,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.49999999995
+        },
+        {
+          "user_input": "Thiết bị an toàn cho trẻ em được Luật Trật tự, an toàn giao thông đường bộ định nghĩa như thế nào?",
+          "retrieved_contexts": [
+            "Điều 2. Giải thích từ ngữ\n13. Thiết bị an toàn cho trẻ em là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế ngồi hoặc nằm trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương cho người dùng trong trường hợp xảy ra va chạm hoặc xe ô tô giảm tốc độ đột ngột, bằng cách hạn chế sự di chuyển của cơ thể trẻ em.",
+            "Một trong các nội dung đáng chú ý của Nghị định số 238/2026/NĐ-CP là bổ sung khoản 1a vào trước khoản 1 Điều 6 Nghị định số 168/2024/NĐ-CP về xử phạt hành vi chở trẻ em trên xe mà không sử dụng thiết bị an toàn. Theo đó, phạt cảnh cáo đối với người điều khiển xe ô tô thực hiện hành vi chở trẻ em dưới 10 tuổi và chiều cao dưới 1,35 mét trên xe mà không sử dụng thiết bị an toàn phù hợp cho trẻ em theo quy định (trừ xe ô tô kinh doanh vận tải hành khách).",
+            "Điều 46. Bảo đảm trật tự, an toàn giao thông đường bộ đối với xe ô tô chở\nnăng cảnh báo, chống bỏ quên trẻ em trên xe; có niên hạn sử dụng không quá 20 năm; có màu sơn theo quy định của Chính phủ;\n\nb) Xe ô tô chở trẻ em mầm non hoặc học sinh tiểu học phải có dây đai an toàn phù hợp với lứa tuổi hoặc sử dụng xe có ghế ngồi phù hợp với lứa tuổi theo quy định của pháp luật.",
+            "Điều  5.  Tuyên  truyền,  phổ  biến  pháp  luật  về  trật  tự,  an  toàn  giao  thông\n7. Thành viên trong gia đình có trách nhiệm tuyên truyền, nhắc nhở thành viên khác chấp hành pháp luật về trật tự, an toàn giao thông đường bộ, sử dụng dây đai an toàn, ghế dành cho trẻ em hoặc có người lớn ngồi cùng trẻ em phía sau khi chở trẻ em dưới 06 tuổi bằng xe gắn máy, xe mô tô.",
+            "Điều 46. Bảo đảm trật tự, an toàn giao thông đường bộ đối với xe ô tô chở\n\ntrẻ em mầm non, học sinh\n\n1. Xe ô tô kinh doanh vận tải chở trẻ em mầm non, học sinh phải đáp ứng các\n\nyêu cầu sau đây:\n\na) Bảo đảm các điều kiện quy định tại khoản 1 và khoản 2 Điều 35 của Luật này; có thiết bị ghi nhận hình ảnh trẻ em  mầm non, học sinh và thiết bị có chức"
+          ],
+          "reference_contexts": [
+            "13. Thiết bị an toàn cho trẻ em là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế ngồi hoặc nằm trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương cho người dùng trong trường hợp xảy ra va chạm hoặc xe ô tô giảm tốc độ đột ngột, bằng cách hạn chế sự di chuyển của cơ thể trẻ em."
+          ],
+          "response": "Theo Luật Trật tự, an toàn giao thông đường bộ, thiết bị an toàn cho trẻ em là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế ngồi hoặc nằm trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương cho người dùng trong trường hợp xảy ra va chạm hoặc xe ô tô giảm tốc độ đột ngột, bằng cách hạn chế sự di chuyển của cơ thể trẻ em [Document 1].",
+          "reference": "Là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế ngồi hoặc nằm trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương khi xảy ra va chạm hoặc khi xe giảm tốc độ đột ngột, bằng cách hạn chế sự di chuyển của cơ thể trẻ em.",
+          "faithfulness": 0.3333333333333333,
+          "answer_relevancy": 0.968649317807828,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.9999999999
+        },
+        {
+          "user_input": "Xe cơ giới tham gia giao thông đường bộ phải đáp ứng những điều kiện nào?",
+          "retrieved_contexts": [
+            "Điều 35. Điều kiện phương tiện tham gia giao thông đường bộ\n\n1.  Xe  cơ  giới,  xe  máy  chuyên  dùng  tham  gia  giao  thông  đường  bộ  phải  đáp\n\nứng các điều kiện sau đây:\n\na) Được cấp chứng nhận đăng ký xe và gắn biển số xe theo quy định của pháp luật;\n\nb) Bảo đảm chất lượng an toàn kỹ thuật và bảo vệ môi trường theo quy định\n\ncủa pháp luật.",
+            "Điều 56. Điều kiện của người điều khiển phương tiện tham gia giao thông\ngiới theo quy định của pháp luật;\n\nd) Chứng nhận bảo hiểm bắt buộc trách nhiệm dân sự của chủ xe cơ giới.",
+            "Điều 32. Xe cơ giới nước ngoài và người nước ngoài điều khiển phương tiện tham gia giao thông tại Việt Nam\na) Có hộ chiếu, thị thực hoặc giấy tờ có giá trị đi lại quốc tế, giấy tờ có giá trị cư trú tại Việt Nam, trừ trường hợp được miễn thị thực và không thuộc trường hợp chưa cho nhập cảnh theo quy định của pháp luật về nhập cảnh, xuất cảnh, quá cảnh, cư trú của người nước ngoài tại Việt Nam.",
+            "Điều 56. Điều kiện của người điều khiển phương tiện tham gia giao thông\n\nđường bộ",
+            "Điều 56. Điều kiện của người điều khiển phương tiện tham gia giao thông\nđường bộ\n\n1. Người lái xe tham gia giao thông đường bộ phải đủ tuổi, sức khỏe theo quy định của pháp luật; có giấy phép lái xe đang còn điểm, còn hiệu lực phù hợp với loại xe đang điều khiển do cơ quan có thẩm quyền cấp, trừ người lái xe gắn máy quy  định  tại  khoản 4  Điều  này.  Khi  tham  gia  giao  thông đường  bộ,  người  lái  xe phải mang theo các giấy tờ sau đây:"
+          ],
+          "reference_contexts": [
+            "a) Được cấp chứng nhận đăng ký xe và gắn biển số xe theo quy định của pháp luật;\n\nb) Bảo đảm chất lượng an toàn kỹ thuật và bảo vệ môi trường theo quy định\n\ncủa pháp luật."
+          ],
+          "response": "Theo các tài liệu được cung cấp, xe cơ giới tham gia giao thông đường bộ phải đáp ứng các điều kiện sau đây:\n\n1. Được cấp chứng nhận đăng ký xe và gắn biển số xe theo quy định của pháp luật [Document 1].\n2. Bảo đảm chất lượng an toàn kỹ thuật và bảo vệ môi trường theo quy định của pháp luật [Document 1].",
+          "reference": "Phải được cấp chứng nhận đăng ký xe và gắn biển số xe theo quy định của pháp luật, đồng thời bảo đảm chất lượng an toàn kỹ thuật và bảo vệ môi trường.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9841077782119526,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.9999999999
+        },
+        {
+          "user_input": "Kinh doanh vận tải hành khách bằng xe ô tô gồm những loại hình nào?",
+          "retrieved_contexts": [
+            "Điều 56. Hoạt động vận tải đường bộ\n6. Kinh doanh vận tải hành khách bằng xe ô tô gồm: kinh doanh vận tải hành khách theo tuyến cố định, kinh doanh vận tải hành khách công cộng bằng xe buýt, kinh doanh vận tải hành khách bằng xe taxi, kinh doanh vận tải hành khách theo hợp đồng và loại hình kinh doanh vận tải hành khách mới theo quy định của Chính phủ.",
+            "Điều 56. Hoạt động vận tải đường bộ\nTrường hợp đơn vị kinh doanh vận tải sử dụng xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) phải có hợp đồng vận tải bằng văn bản giữa đơn vị kinh doanh vận tải hành khách với người thuê vận tải thuê cả chuyến xe, bao gồm cả người lái xe.\n\n11. Kinh doanh vận tải hàng hóa bằng xe ô tô là loại hình kinh doanh vận tải sử dụng xe ô tô chở hàng, xe ô tô chuyên dùng để vận tải hàng hóa trên đường bộ.",
+            "Điều 56. Hoạt động vận tải đường bộ\n7. Kinh doanh vận tải hành khách theo tuyến cố định là loại hình kinh doanh vận tải hành khách sử dụng xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) để vận tải hành khách, có xác định bến xe khách nơi đi, bến xe khách nơi đến với lịch trình, hành trình xác định.",
+            "Điều 78. Trách nhiệm thi hành\n- Các loại hình ghi trên Giấy phép: kinh doanh vận tải hành khách theo tuyến cố định; kinh doanh vận tải hành khách bằng xe buýt; kinh doanh vận tải hành khách bằng xe taxi; kinh doanh vận tải hành khách theo hợp đồng; kinh doanh vận tải hàng hóa bằng công-ten-nơ; kinh doanh vận tải hàng hóa bằng xe ô tô.",
+            "Điều 56. Hoạt động vận tải đường bộ\n5. Kinh doanh vận tải bằng xe ô tô, bằng xe bốn bánh có gắn động cơ gồm kinh doanh vận tải hành khách và kinh doanh vận tải hàng hoá. Kinh doanh vận tải bằng xe ô tô, bằng xe bốn bánh có gắn động cơ là việc tổ chức, cá nhân thực hiện ít nhất một trong các công đoạn gồm: điều hành phương tiện và lái xe hoặc quyết định giá cước vận tải để vận tải hành khách, hàng hóa trên đường bộ nhằm"
+          ],
+          "reference_contexts": [
+            "6. Kinh doanh vận tải hành khách bằng xe ô tô gồm: kinh doanh vận tải hành khách theo tuyến cố định, kinh doanh vận tải hành khách công cộng bằng xe buýt, kinh doanh vận tải hành khách bằng xe taxi, kinh doanh vận tải hành khách theo hợp đồng và loại hình kinh doanh vận tải hành khách mới theo quy định của Chính phủ."
+          ],
+          "response": "Theo các tài liệu được cung cấp, kinh doanh vận tải hành khách bằng xe ô tô gồm các loại hình sau:\n\n* Kinh doanh vận tải hành khách theo tuyến cố định [Document 1, Document 2]\n* Kinh doanh vận tải hành khách công cộng bằng xe buýt [Document 1]\n* Kinh doanh vận tải hành khách bằng xe taxi [Document 1]\n* Kinh doanh vận tải hành khách theo hợp đồng [Document 1]\n* Loại hình kinh doanh vận tải hành khách mới theo quy định của Chính phủ [Document 1]",
+          "reference": "Gồm kinh doanh vận tải hành khách theo tuyến cố định, vận tải hành khách công cộng bằng xe buýt, vận tải hành khách bằng xe taxi, vận tải hành khách theo hợp đồng và loại hình mới theo quy định của Chính phủ.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9999999999999998,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.7499999999625
+        },
+        {
+          "user_input": "Xe ô tô kinh doanh vận tải hành khách theo tuyến cố định phải có sức chứa tối thiểu bao nhiêu chỗ?",
+          "retrieved_contexts": [
+            "Điều 13. Điều kiện kinh doanh vận tải hành khách bằng xe ô tô\n3. Xe ô tô kinh doanh vận tải hành khách theo tuyến cố định phải có sức chứa từ 08 chỗ trở lên (không kể chỗ của người lái xe) và có niên hạn sử dụng như sau:\nkhông quá 15 năm đối với xe hoạt động trên tuyến cự ly trên 300 ki-lô-mét, không quá 20 năm đối với xe hoạt động trên tuyến có cự ly từ 300 ki-lô-mét trở xuống.\n\n4. Xe ô tô kinh doanh vận tải hành khách bằng xe buýt phải có sức chứa từ 08 chỗ",
+            "Điều 56. Hoạt động vận tải đường bộ\n7. Kinh doanh vận tải hành khách theo tuyến cố định là loại hình kinh doanh vận tải hành khách sử dụng xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) để vận tải hành khách, có xác định bến xe khách nơi đi, bến xe khách nơi đến với lịch trình, hành trình xác định.",
+            "Điều 4. Kinh doanh vận tải hành khách bằng xe ô tô theo tuyến cố định\nb)  Phải  có  phù  hiệu  “XE  TUYẾN  CỐ  ĐỊNH”  theo  Mẫu  số  01  Phụ  lục  XIII kèm theo Nghị định này và được dán cố định tại góc trên bên phải ngay sát phía dưới vị trí của Tem kiểm định, mặt trong kính chắn gió phía trước của xe;\n\nc) Phải được niêm yết đầy đủ các thông tin trên xe.\n\n5. Xe ô tô sử dụng để vận tải trung chuyển hành khách\n\na) Sử dụng xe ô tô chở người đến 29 chỗ (không kể chỗ của người lái xe);",
+            "Điều 13. Điều kiện kinh doanh vận tải hành khách bằng xe ô tô\ntrở lên (không kể chỗ của người lái xe) và có niên hạn sử dụng không quá 20 năm.\n\n5. Xe ô tô kinh doanh vận tải hành khách bằng xe taxi phải có sức chứa dưới\n08 chỗ (không kể chỗ của người lái xe) và có niên hạn sử dụng không quá 12 năm.\nKhông sử dụng xe ô tô chở người có thiết kế, cải tạo với số chỗ ít hơn 08 chỗ từ xe ô tô lớn hơn 08 chỗ (không kể chỗ của người lái xe) để kinh doanh vận tải hành khách bằng taxi.",
+            "Điều 13. Điều kiện kinh doanh vận tải hành khách bằng xe ô tô\nRiêng xe ô tô kinh doanh vận tải hành khách theo hợp đồng có sức chứa dưới\n08 chỗ (không kể chỗ của người lái xe) sử dụng hợp đồng điện tử có niên hạn sử dụng không quá 12 năm."
+          ],
+          "reference_contexts": [
+            "3. Xe ô tô kinh doanh vận tải hành khách theo tuyến cố định phải có sức chứa từ 08 chỗ trở lên (không kể chỗ của người lái xe) và có niên hạn sử dụng như sau:"
+          ],
+          "response": "Xe ô tô kinh doanh vận tải hành khách theo tuyến cố định phải có sức chứa từ 08 chỗ trở lên (không kể chỗ của người lái xe) [Document 1, Document 5].",
+          "reference": "Phải có sức chứa từ 08 chỗ trở lên, không kể chỗ của người lái xe.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9938786115296627,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.9166666666361111
+        },
+        {
+          "user_input": "Cơ quan nào có thẩm quyền cấp giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên cho các cơ quan ở trung ương?",
+          "retrieved_contexts": [
+            "Điều 23. Thẩm quyền cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên\n1. Cục Cảnh sát giao thông, Bộ Công an cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên cho các đối tượng thuộc bộ, ngành, cơ quan ở trung ương, trừ xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp.",
+            "Điều 23. Thẩm quyền cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên\n2. Phòng Cảnh sát giao thông Công an tỉnh, thành phố trực thuộc Trung ương cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên cho các đối tượng thuộc cơ quan, đơn vị, tổ chức tại địa phương, trừ xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp.",
+            "Điều 23. Thẩm quyền cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên\n3. Bộ Tổng Tham mưu, Bộ Quốc phòng cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên cho xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp.\n4. Cơ quan có thẩm quyền cấp, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên có trách nhiệm thống kê, theo dõi công tác cấp, thu hồi giấy phép theo Mẫu số 02c Phụ lục II kèm theo Nghị định này.",
+            "Cơ quan, tổ chức, cá nhân chỉ được lắp đặt thiết bị phát tín hiệu của xe ưu tiên trên các loại xe quy định tại khoản 1 Điều 27 Luật Trật tự, an toàn giao thông đường bộ (trừ đoàn xe tang) và phải có giấy phép sử dụng do cơ quan có thẩm quyền cấp; đối với xe đi làm nhiệm vụ trong tình trạng khẩn cấp theo quy định của pháp luật là xe phục vụ Ban chỉ đạo, xe phục vụ các lực lượng chức năng được huy động tham gia thực hiện nhiệm vụ khi tình trạng khẩn cấp được ban bố.",
+            "Điều 24. Trách nhiệm quản lý, sử dụng thiết bị phát tín hiệu của xe ưu tiên\n1. Bộ Công an chỉ đạo đơn vị chức năng thực hiện việc quản lý, lắp đặt, sử dụng thiết bị phát tín hiệu của xe ưu tiên; cấp, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên quy định tại Nghị định này, trừ xe ưu tiên thuộc phạm vi quản lý của Bộ Quốc phòng."
+          ],
+          "reference_contexts": [
+            "1. Cục Cảnh sát giao thông, Bộ Công an cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên cho các đối tượng thuộc bộ, ngành, cơ quan ở trung ương, trừ xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp."
+          ],
+          "response": "Cục Cảnh sát giao thông, Bộ Công an có thẩm quyền cấp mới, cấp lại giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên cho các đối tượng thuộc bộ, ngành, cơ quan ở trung ương (trừ xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp) [Document 1].",
+          "reference": "Cục Cảnh sát giao thông, Bộ Công an, trừ xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9366884370757851,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.699999999965
+        },
+        {
+          "user_input": "Sau khi đạt kết quả kỳ sát hạch thì bao lâu được cấp giấy phép lái xe?",
+          "retrieved_contexts": [
+            "Tải xuống\nẢnh minh họa\nTheo đó, Cục Cảnh sát giao thông (Bộ Công an) là đơn vị cấp giấy phép lái xe cho người đạt kết quả kỳ sát hạch trong thời hạn 7 ngày làm việc (kể từ ngày kết thúc kỳ sát hạch). Giấy phép lái xe điện tử được tích hợp vào hệ thống dữ liệu điện tử, tài khoản định danh điện tử trong thời hạn 3 ngày làm việc (kể từ ngày kết thúc kỳ sát hạch).",
+            "# Cấp giấy phép lái xe cho người đạt kết quả kỳ sát hạch trong thời hạn 7 ngày làm việc\n##  (Chinhphu.vn) - Bộ Công an vừa ban hành Thông tư số 12/2025/TT-BCA ngày 28/02/2025 quy định về sát hạch, cấp giấy phép lái xe; cấp, sử dụng giấy phép lái xe quốc tế. Thông tư có hiệu lực từ ngày 01/3/2025. Trong đó, đáng chú ý, tại Điều 19 của Thông tư, quy định các trường hợp được cấp giấy phép lái xe. \nTải xuống\nẢnh minh họa",
+            "Trường hợp giấy phép lái xe quá thời hạn sử dụng từ 01 năm trở lên kể từ ngày hết hạn thì phải sát hạch lý thuyết, thực hành lái xe trong hình và trên đường để cấp giấy phép lái xe theo quy định tại các khoản 1, 2, 3 Điều 4 Thông tư này.\nHồ sơ đề nghị sát hạch thực hiện theo quy định tại khoản 3 Điều 16 Thông tư này.",
+            "Trường hợp giấy phép lái xe quá thời hạn sử dụng dưới 01 tháng kể từ ngày hết hạn mà người có giấy phép lái xe không thể thực hiện được thủ tục đổi giấy phép lái xe do ốm đau, thiên tai, hỏa hoạn, dịch bệnh thì người đó không phải sát hạch lý thuyết để cấp giấy phép lái xe.\nTrường hợp giấy phép lái xe quá thời hạn sử dụng dưới 01 năm kể từ ngày hết hạn thì phải sát hạch lý thuyết theo quy định tại điểm a khoản 1 Điều 4 Thông tư này để cấp giấy phép lái xe.",
+            "Điều 61. Sát hạch lái xe\n7. Bộ trưởng Bộ Giao thông vận tải quy định hình thức, nội dung, quy trình sát hạch để cấp giấy phép lái xe; điều kiện, tiêu chuẩn sát hạch viên, tổ chức tập huấn, cấp thẻ sát hạch viên; tiêu chuẩn kỹ thuật sân tập lái để sát hạch lái xe mô tô, quy\n\nchuẩn kỹ thuật quốc gia về trung tâm sát hạch lái xe cơ giới đường bộ; đối với sát hạch lái xe cho lực lượng quân đội, công an làm nhiệm vụ quốc phòng, an ninh do\nBộ trưởng Bộ Quốc phòng, Bộ trưởng Bộ Công an quy định."
+          ],
+          "reference_contexts": [
+            "Theo đó, Cục Cảnh sát giao thông (Bộ Công an) là đơn vị cấp giấy phép lái xe cho người đạt kết quả kỳ sát hạch trong thời hạn 7 ngày làm việc (kể từ ngày kết thúc kỳ sát hạch)."
+          ],
+          "response": "Sau khi đạt kết quả kỳ sát hạch, Cục Cảnh sát giao thông (Bộ Công an) là đơn vị cấp giấy phép lái xe trong thời hạn **7 ngày làm việc** (kể từ ngày kết thúc kỳ sát hạch) [Document 1]. \n\nBên cạnh đó, giấy phép lái xe điện tử được tích hợp vào hệ thống dữ liệu điện tử, tài khoản định danh điện tử trong thời hạn **3 ngày làm việc** (kể từ ngày kết thúc kỳ sát hạch) [Document 1].",
+          "reference": "Trong thời hạn 7 ngày làm việc kể từ ngày kết thúc kỳ sát hạch, do Cục Cảnh sát giao thông cấp. Giấy phép lái xe điện tử được tích hợp trong thời hạn 3 ngày làm việc.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9167356464391906,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.9999999999
+        },
+        {
+          "user_input": "Thông tư nào quy định về sát hạch, cấp giấy phép lái xe và có hiệu lực từ khi nào?",
+          "retrieved_contexts": [
+            "# Cấp giấy phép lái xe cho người đạt kết quả kỳ sát hạch trong thời hạn 7 ngày làm việc\n##  (Chinhphu.vn) - Bộ Công an vừa ban hành Thông tư số 12/2025/TT-BCA ngày 28/02/2025 quy định về sát hạch, cấp giấy phép lái xe; cấp, sử dụng giấy phép lái xe quốc tế. Thông tư có hiệu lực từ ngày 01/3/2025. Trong đó, đáng chú ý, tại Điều 19 của Thông tư, quy định các trường hợp được cấp giấy phép lái xe. \nTải xuống\nẢnh minh họa",
+            "Thông tư này có hiệu lực thi hành từ ngày 01/9/2025. Thông tư này bãi bỏ Thông tư số 35/2024/TT-BGTVT ngày 15/11/2024 của Bộ trưởng Bộ Giao thông vận tải quy định về đào tạo, sát hạch, cấp giấy phép lái xe; cấp, sử dụng giấy phép lái xe quốc tế; đào tạo, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ. \n## Quy định chuyển tiếp",
+            "Điều 61. Sát hạch lái xe\n7. Bộ trưởng Bộ Giao thông vận tải quy định hình thức, nội dung, quy trình sát hạch để cấp giấy phép lái xe; điều kiện, tiêu chuẩn sát hạch viên, tổ chức tập huấn, cấp thẻ sát hạch viên; tiêu chuẩn kỹ thuật sân tập lái để sát hạch lái xe mô tô, quy\n\nchuẩn kỹ thuật quốc gia về trung tâm sát hạch lái xe cơ giới đường bộ; đối với sát hạch lái xe cho lực lượng quân đội, công an làm nhiệm vụ quốc phòng, an ninh do\nBộ trưởng Bộ Quốc phòng, Bộ trưởng Bộ Công an quy định.",
+            "# Quy định mới nhất về đào tạo lái xe\n##  (Chinhphu.vn) - Bộ Xây dựng đã ban hành Thông tư số 14/2025/TT-BXD quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ. \nTải xuống\nBộ Xây dựng đã ban hành quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ",
+            "Trường hợp giấy phép lái xe quá thời hạn sử dụng từ 01 năm trở lên kể từ ngày hết hạn thì phải sát hạch lý thuyết, thực hành lái xe trong hình và trên đường để cấp giấy phép lái xe theo quy định tại các khoản 1, 2, 3 Điều 4 Thông tư này.\nHồ sơ đề nghị sát hạch thực hiện theo quy định tại khoản 3 Điều 16 Thông tư này."
+          ],
+          "reference_contexts": [
+            "Bộ Công an vừa ban hành Thông tư số 12/2025/TT-BCA ngày 28/02/2025 quy định về sát hạch, cấp giấy phép lái xe; cấp, sử dụng giấy phép lái xe quốc tế. Thông tư có hiệu lực từ ngày 01/3/2025."
+          ],
+          "response": "Thông tư quy định về sát hạch, cấp giấy phép lái xe; cấp, sử dụng giấy phép lái xe quốc tế là Thông tư số 12/2025/TT-BCA do Bộ Công an ban hành ngày 28/02/2025, có hiệu lực từ ngày 01/3/2025 [Document 1].",
+          "reference": "Thông tư số 12/2025/TT-BCA ngày 28/02/2025 của Bộ Công an, có hiệu lực từ ngày 01/3/2025.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.8507322476993409,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.9999999999
+        },
+        {
+          "user_input": "Từ ngày 15/8, ô tô chở trẻ em dưới 10 tuổi không sử dụng thiết bị an toàn phù hợp bị xử lý thế nào?",
+          "retrieved_contexts": [
+            "# Từ 15/8, phạt cảnh cáo ô tô chở trẻ em không có thiết bị an toàn phù hợp\n##  (Chinhphu.vn) - Chính phủ ban hành Nghị định số 238/2026/NĐ-CP ngày 26/6/2026 sửa đổi, bổ sung một số điều của Nghị định số 168/2024/NĐ-CP ngày 26/12/2024 của Chính phủ quy định xử phạt vi phạm hành chính về trật tự, an toàn giao thông trong lĩnh vực giao thông đường bộ; trừ điểm, phục hồi điểm giấy phép lái xe. \nTải xuống\nTừ 15/8, phạt cảnh cáo ô tô chở trẻ em không có thiết bị an toàn phù hợp.",
+            "Một trong các nội dung đáng chú ý của Nghị định số 238/2026/NĐ-CP là bổ sung khoản 1a vào trước khoản 1 Điều 6 Nghị định số 168/2024/NĐ-CP về xử phạt hành vi chở trẻ em trên xe mà không sử dụng thiết bị an toàn. Theo đó, phạt cảnh cáo đối với người điều khiển xe ô tô thực hiện hành vi chở trẻ em dưới 10 tuổi và chiều cao dưới 1,35 mét trên xe mà không sử dụng thiết bị an toàn phù hợp cho trẻ em theo quy định (trừ xe ô tô kinh doanh vận tải hành khách).",
+            "## **Bỏ quy định phạt tiền đối với lái xe ô tô chở trẻ em dưới 10 tuổi không sử dụng thiết bị an toàn phù hợp**",
+            "Đồng thời, tại điểm m khoản 3 Điều 6, Nghị định 238/2026/NĐ-CP bỏ quy định phạt tiền từ 800.000 đồng đến 1.000.000 đồng đối với lái xe ô tô chở trẻ em không sử dụng thiết bị an toàn phù hợp theo quy định.\n## **Ngăn chặn hành vi làm thay đổi khả năng nhận diện biển số xe**",
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\nđai an toàn) khi xe đang chạy;\n\nm) Chở trẻ em dưới 10 tuổi và chiều cao dưới 1,35 mét trên xe ô tô ngồi cùng hàng ghế  với người lái xe  (trừ  loại xe  ô tô chỉ  có một hàng ghế)  hoặc không sử dụng thiết bị an toàn phù hợp cho trẻ em theo quy định;\n\nn) Chạy trong hầm đường bộ không sử dụng đèn chiếu sáng gần;"
+          ],
+          "reference_contexts": [
+            "Một trong các nội dung đáng chú ý của Nghị định số 238/2026/NĐ-CP là bổ sung khoản 1a vào trước khoản 1 Điều 6 Nghị định số 168/2024/NĐ-CP về xử phạt hành vi chở trẻ em trên xe mà không sử dụng thiết bị an toàn. Theo đó, phạt cảnh cáo đối với người điều khiển xe ô tô thực hiện hành vi chở trẻ em dưới 10 tuổi"
+          ],
+          "response": "Từ ngày 15/8, người điều khiển xe ô tô thực hiện hành vi chở trẻ em dưới 10 tuổi và chiều cao dưới 1,35 mét trên xe mà không sử dụng thiết bị an toàn phù hợp cho trẻ em theo quy định sẽ bị **phạt cảnh cáo** (trừ xe ô tô kinh doanh vận tải hành khách) [Document 5]. Đồng thời, quy định phạt tiền đối với hành vi này đã được bỏ [Document 2, Document 4].",
+          "reference": "Bị phạt cảnh cáo, theo khoản 1a bổ sung vào Điều 6 Nghị định 168/2024/NĐ-CP bởi Nghị định 238/2026/NĐ-CP.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.8995731586900019,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.99999999995
+        },
+        {
+          "user_input": "Nghị định 236/2026/NĐ-CP sửa đổi, bổ sung nghị định nào?",
+          "retrieved_contexts": [
+            "Ngoài ra, Nghị định 236/2026/NĐ-CP tiếp tục sửa đổi, bổ sung các quy định liên quan đến xe ưu tiên và xe làm nhiệm vụ khẩn cấp nhằm phù hợp với yêu cầu thực tiễn. Trong đó, Nghị định thống nhất quy định về hệ thống đèn, còi và tín hiệu ưu tiên sử dụng trên các phương tiện này.",
+            "# Sửa đổi, bổ sung một số quy định về trật tự, an toàn giao thông đường bộ\n##  (Chinhphu.vn) - Chính phủ ban hành Nghị định số 236/2026/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 151/2024/NĐ-CP ngày 15/11/2024 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Trật tự, an toàn giao thông đường bộ được sửa đổi, bổ sung bởi Nghị định số 184/2025/NĐ-CP ngày 01/7/2025 của Chính phủ. \nTải xuống\nHoàn thiện cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ",
+            "## Hoàn thiện cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ\nTrong đó, Nghị định số 236/2026/NĐ-CP sửa đổi, bổ sung quy định cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ (khoản 1 Điều 9, một số điểm, khoản của Điều 10 của Nghị định số 151/2024/NĐ-CP) nhằm hoàn thiện hệ thống cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ theo hướng đồng bộ, thống nhất trên phạm vi toàn quốc.",
+            "Nghị định số 238/2026/NĐ-CP sửa đổi, bổ sung điểm b khoản 8 Điều 13 Nghị định số 168/2024/NĐ-CP về việc xử phạt vi phạm quy định liên quan đến biển số xe theo hướng bổ sung phạt đối với hành vi điều khiển xe gắn biển số sử dụng vật liệu, thiết bị làm thay đổi khả năng nhận diện biển số của các thiết bị kỹ thuật nghiệp vụ.",
+            "Bên cạnh đó, Nghị định số 238/2026/NĐ-CP sửa đổi, bổ sung điểm đ khoản 6 Điều 20 Nghị định số 168/2024/NĐ-CP theo hướng bổ sung hình phạt đối với xe vận tải nội bộ không lắp thiết bị giám sát hành trình theo quy định. Tại Nghị định số 168/2024/NĐ-CP, chỉ áp dụng hình phạt này đối với xe kinh doanh vận tải hành khách."
+          ],
+          "reference_contexts": [
+            "Chính phủ ban hành Nghị định số 236/2026/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 151/2024/NĐ-CP ngày 15/11/2024 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Trật tự, an toàn giao thông đường bộ được sửa đổi, bổ sung bởi Nghị định số 184/2025/NĐ-CP ngày 01/7/2025 của Chính phủ."
+          ],
+          "response": "Nghị định số 236/2026/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 151/2024/NĐ-CP ngày 15/11/2024 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Trật tự, an toàn giao thông đường bộ được sửa đổi, bổ sung bởi Nghị định số 184/2025/NĐ-CP ngày 01/7/2025 của Chính phủ [Document 5].",
+          "reference": "Sửa đổi, bổ sung một số điều của Nghị định số 151/2024/NĐ-CP ngày 15/11/2024, văn bản này trước đó đã được sửa đổi bởi Nghị định số 184/2025/NĐ-CP ngày 01/7/2025.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9823487990972074,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.49999999995
+        },
+        {
+          "user_input": "Thông tư 14/2025/TT-BXD do cơ quan nào ban hành và quy định về nội dung gì?",
+          "retrieved_contexts": [
+            "# Quy định mới nhất về đào tạo lái xe\n##  (Chinhphu.vn) - Bộ Xây dựng đã ban hành Thông tư số 14/2025/TT-BXD quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ. \nTải xuống\nBộ Xây dựng đã ban hành quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ",
+            "Điều 39. Bến xe, bãi đỗ xe, trạm dừng nghỉ, điểm dừng xe, trạm thu phí\n24 Cụm từ “Bộ Giao thông vận tải” được thay thế bằng cụm từ “Bộ Xây dựng” theo quy định tại khoản 8 Điều 8 của Luật số 118/2025/QH15 sửa đổi, bổ sung một số điều của 10 luật có liên quan đến an ninh, trật tự, có hiệu lực kể từ ngày 01 tháng 7 năm 2026.",
+            "Điều 28. Đầu tư, xây dựng công trình thuộc kết cấu hạ tầng đường bộ\n14 Cụm từ “Bộ Giao thông vận tải” được thay thế bằng cụm từ “Bộ Xây dựng” theo quy định tại khoản 8 Điều 8 của Luật số 118/2025/QH15 sửa đổi, bổ sung một số điều của 10 luật có liên quan đến an ninh, trật tự, có hiệu lực kể từ ngày 01 tháng 7 năm 2026.\n\n5. Việc đầu tư, xây dựng công trình thuộc kết cấu hạ tầng đường bộ phải bảo\n\nđảm các quy định sau đây:\n\na) Phù hợp với quy hoạch;",
+            "Điều 12. Quỹ đất dành cho kết cấu hạ tầng đường bộ\n7 Cụm từ “Bộ Giao thông vận tải” được thay thế bằng cụm từ “Bộ Xây dựng” theo quy định tại khoản 8 Điều 8 của Luật số 118/2025/QH15 sửa đổi, bổ sung một số điều của 10 luật có liên quan đến an ninh, trật tự, có hiệu lực kể từ ngày 01 tháng 7 năm 2026.",
+            "Điều 27. Tải trọng và khổ giới hạn của đường bộ\n13  Khoản  này  được  sửa  đổi,  bổ  sung  theo  quy  định  tại  khoản  4  Điều  8  của  Luật  số\n118/2025/QH15 sửa đổi, bổ sung một số điều của 10 luật có liên quan đến an ninh, trật tự, có hiệu lực kể từ ngày 01 tháng 7 năm 2026.\n\na) Cơ quan quản lý đường bộ thuộc Bộ Xây dựng công bố tải trọng, khổ giới\n\nhạn của đường bộ thuộc phạm vi quản lý của Bộ Xây dựng;"
+          ],
+          "reference_contexts": [
+            "Bộ Xây dựng đã ban hành Thông tư số 14/2025/TT-BXD quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ."
+          ],
+          "response": "Thông tư số 14/2025/TT-BXD do **Bộ Xây dựng** ban hành [Document 1]. \n\nThông tư này quy định về các nội dung sau:\n- Đào tạo lái xe [Document 1].\n- Bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ [Document 1].",
+          "reference": "Do Bộ Xây dựng ban hành, quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9779504922422311,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.9999999999
+        }
+      ]
+    },
+    "B_hybrid_rrf": {
+      "summary": {
+        "faithfulness": 0.9166666666666666,
+        "answer_relevancy": 0.7634592271280687,
+        "context_recall": 0.7647058823529411,
+        "llm_context_precision_with_reference": 0.6421568626938725
+      },
+      "per_case": [
+        {
+          "user_input": "Người điều khiển xe ô tô có nồng độ cồn vượt quá 50 đến 80 miligam/100 mililít máu bị phạt bao nhiêu tiền?",
+          "retrieved_contexts": [
+            "Điều 9. Xử phạt người điều khiển xe đạp, xe đạp máy, người điều khiển xe\nđường có biển “Cấm đi ngược chiều”;\n\nd) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt\n\nquá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n\n0,4 miligam/1 lít khí thở.\n\n4.  Phạt  tiền  từ  400.000  đồng  đến  600.000  đồng  đối  với  người  điều  khiển  xe\n\nthực hiện một trong các hành vi vi phạm sau đây:",
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\n9. Phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở;",
+            "Điều  8. Xử phạt  người  điều khiển xe máy chuyên dùng vi  phạm  quy tắc\n7. Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng đối với người điều khiển xe\n\nthực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở;\n\nb)  Không  chấp  hành  hiệu  lệnh,  hướng  dẫn  của  người  điều  khiển  giao  thông",
+            "Điều 7. Xử phạt, trừ điểm giấy phép lái của người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi…\nb) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở.\n\n9. Phạt tiền từ 8.000.000 đồng đến 10.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:",
+            "Điều  8. Xử phạt  người  điều khiển xe máy chuyên dùng vi  phạm  quy tắc\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt\n\nquá 80 miligam/100 mililít máu hoặc vượt quá 0,4 miligam/1 lít khí thở;\n\nb)  Không  chấp  hành  yêu  cầu  kiểm  tra  về  nồng  độ  cồn  của  người  thi  hành\n\ncông vụ;\n\nc)  Điều  khiển  xe  trên  đường  mà  trong  cơ  thể  có  chất  ma  túy  hoặc  chất kích\n\nthích khác mà pháp luật cấm sử dụng;"
+          ],
+          "reference_contexts": [
+            "9. Phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở;"
+          ],
+          "response": "Người điều khiển xe ô tô trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu bị phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng [Document 5].\n\n**Nguồn trích dẫn:**\n- [Document 5] Nghị định số 168/2024/NĐ-CP (Điều 6, Khoản 9, Điểm a).",
+          "reference": "Phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng, theo khoản 9 Điều 6 Nghị định 168/2024/NĐ-CP.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9710525758224903,
+          "context_recall": 0.0,
+          "llm_context_precision_with_reference": 0.49999999995
+        },
+        {
+          "user_input": "Mức phạt tiền cao nhất về nồng độ cồn đối với người lái xe ô tô là bao nhiêu?",
+          "retrieved_contexts": [
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\n9. Phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở;",
+            "Điều 9. Xử phạt người điều khiển xe đạp, xe đạp máy, người điều khiển xe\nđường có biển “Cấm đi ngược chiều”;\n\nd) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt\n\nquá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n\n0,4 miligam/1 lít khí thở.\n\n4.  Phạt  tiền  từ  400.000  đồng  đến  600.000  đồng  đối  với  người  điều  khiển  xe\n\nthực hiện một trong các hành vi vi phạm sau đây:",
+            "Điều 7. Xử phạt, trừ điểm giấy phép lái của người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi…\nb) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở.\n\n9. Phạt tiền từ 8.000.000 đồng đến 10.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:",
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\nkhiển xe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt\n\nquá 80 miligam/100 mililít máu hoặc vượt quá 0,4 miligam/1 lít khí thở;\n\nb) Không chấp hành yêu cầu kiểm tra về nồng độ cồn của người thi hành công vụ;",
+            "Điều  8. Xử phạt  người  điều khiển xe máy chuyên dùng vi  phạm  quy tắc\n7. Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng đối với người điều khiển xe\n\nthực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở;\n\nb)  Không  chấp  hành  hiệu  lệnh,  hướng  dẫn  của  người  điều  khiển  giao  thông"
+          ],
+          "reference_contexts": [
+            "11.  Phạt  tiền  từ  30.000.000  đồng  đến  40.000.000  đồng  đối  với  người  điều\n\nkhiển xe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt\n\nquá 80 miligam/100 mililít máu hoặc vượt quá 0,4 miligam/1 lít khí thở;"
+          ],
+          "response": "Dựa trên các tài liệu được cung cấp, không có thông tin cụ thể về mức phạt tiền cao nhất đối với người điều khiển xe ô tô vi phạm nồng độ cồn (tài liệu chỉ đề cập mức phạt từ 18.000.000 đồng đến 20.000.000 đồng đối với hành vi có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến 0,4 miligam/1 lít khí thở) [Document 1]. Do đó, tôi từ chối xác minh mức phạt cao nhất vì thiếu evidence.",
+          "reference": "Phạt tiền từ 30.000.000 đồng đến 40.000.000 đồng khi nồng độ cồn vượt quá 80 miligam/100 mililít máu hoặc vượt quá 0,4 miligam/1 lít khí thở.",
+          "faithfulness": 0.3333333333333333,
+          "answer_relevancy": 0.0,
+          "context_recall": 0.0,
+          "llm_context_precision_with_reference": 0.0
+        },
+        {
+          "user_input": "Người lái xe ô tô chạy quá tốc độ trên 20 km/h đến 35 km/h bị phạt bao nhiêu tiền?",
+          "retrieved_contexts": [
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\nvào nhà, cơ quan.\n\n7. Phạt tiền từ 12.000.000 đồng đến 14.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe chạy quá tốc độ quy định trên 35 km/h;\n\nb) Điều khiển xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh\n\ncó gắn động cơ đi vào đường cao tốc;",
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\n3. Phạt tiền từ 800.000 đồng đến 1.000.000 đồng đối với người điều khiển xe\n\nthực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe chạy quá tốc độ quy định từ 05 km/h đến dưới 10 km/h;",
+            "Điều 7. Xử phạt, trừ điểm giấy phép lái của người điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy vi…\nhiệu ưu tiên đi làm nhiệm vụ.\n\n8. Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng đối với người điều khiển xe\n\nthực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe chạy quá tốc độ quy định trên 20 km/h;",
+            "Điều  8. Xử phạt  người  điều khiển xe máy chuyên dùng vi  phạm  quy tắc\nđ) Điều khiển xe chạy dưới tốc độ tối thiểu trên đoạn đường bộ có quy định tốc\n\nđộ tối thiểu cho phép.\n\n4. Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng đối với người điều khiển xe\n\nthực hiện một trong các hành vi vi phạm sau đây:\n\na) Chạy quá tốc độ quy định từ 10 km/h đến 20 km/h;\n\nb) Chạy xe trong hầm đường bộ không sử dụng đèn chiếu sáng gần;",
+            "Điều 20. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô chở  hành  khách,  ô  tô  chở  người  và  các  loại  xe  tương  tự  xe  ô  tô…\n.  Phạt  tiền  từ  1.000.000  đồng đến 2.000.000  đồng  trên  mỗi  người  vượt  quá quy định được phép chở của phương tiện nhưng tổng mức phạt tiền tối đa không vượt quá 75.000.000 đồng đối với người điều khiển xe ô tô chở hành khách (kinh doanh vận tải hành khách theo tuyến cố định, hợp đồng) chạy tuyến có cự ly lớn hơn 300 km thực hiện hành vi"
+          ],
+          "reference_contexts": [
+            "6. Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng đối với người điều khiển xe\n\nthực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe chạy quá tốc độ quy định trên 20 km/h đến 35 km/h;"
+          ],
+          "response": "Dựa trên các tài liệu được cung cấp, không có thông tin về mức phạt tiền đối với người điều khiển xe ô tô chạy quá tốc độ trên 20 km/h đến 35 km/h. Do đó, tôi từ chối xác minh câu hỏi này do thiếu evidence [Document 1, Document 3, Document 5].",
+          "reference": "Phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng.",
+          "faithfulness": 0.5,
+          "answer_relevancy": 0.0,
+          "context_recall": 0.0,
+          "llm_context_precision_with_reference": 0.0
+        },
+        {
+          "user_input": "Lái xe ô tô có nồng độ cồn nhưng chưa vượt quá 50 miligam/100 mililít máu thì bị xử phạt thế nào?",
+          "retrieved_contexts": [
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\nhiệu ưu tiên đi làm nhiệm vụ;\n\nc) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn nhưng chưa vượt quá 50 miligam/100 mililít máu hoặc chưa vượt quá 0,25 miligam/1 lít khí thở;\n\nd) Điều khiển xe đi trên vỉa hè, trừ trường hợp điều khiển xe đi qua vỉa hè để\n\nvào nhà, cơ quan.",
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\n9. Phạt tiền từ 18.000.000 đồng đến 20.000.000 đồng đối với người điều khiển\n\nxe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n0,4 miligam/1 lít khí thở;",
+            "Điều 9. Xử phạt người điều khiển xe đạp, xe đạp máy, người điều khiển xe\nđường có biển “Cấm đi ngược chiều”;\n\nd) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt\n\nquá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến\n\n0,4 miligam/1 lít khí thở.\n\n4.  Phạt  tiền  từ  400.000  đồng  đến  600.000  đồng  đối  với  người  điều  khiển  xe\n\nthực hiện một trong các hành vi vi phạm sau đây:",
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\nkhiển xe thực hiện một trong các hành vi vi phạm sau đây:\n\na) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt\n\nquá 80 miligam/100 mililít máu hoặc vượt quá 0,4 miligam/1 lít khí thở;\n\nb) Không chấp hành yêu cầu kiểm tra về nồng độ cồn của người thi hành công vụ;",
+            "Điều  8. Xử phạt  người  điều khiển xe máy chuyên dùng vi  phạm  quy tắc\nc) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn nhưng chưa vượt quá 50 miligam/100 mililít máu hoặc chưa vượt quá 0,25 miligam/1 lít khí thở;\n\nd) Đi vào khu vực cấm, đường có biển báo hiệu có nội dung cấm đi vào đối với loại phương tiện đang điều khiển, trừ các hành vi vi phạm quy định tại điểm d khoản 7, điểm đ khoản 9 Điều này và các trường hợp xe ưu tiên đang đi làm nhiệm vụ khẩn cấp theo quy định;"
+          ],
+          "reference_contexts": [
+            "c) Điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn nhưng chưa vượt quá 50 miligam/100 mililít máu hoặc chưa vượt quá 0,25 miligam/1 lít khí thở;"
+          ],
+          "response": "Dựa trên các tài liệu được cung cấp, đối với người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ mà điều khiển xe trên đường mà trong máu hoặc hơi thở có nồng độ cồn nhưng chưa vượt quá 50 miligam/100 mililít máu hoặc chưa vượt quá 0,25 miligam/1 lít khí thở, hành vi này thuộc phạm vi quy định xử phạt và trừ điểm giấy phép lái xe tại Điều 6 [Document 1]. \n\nTuy nhiên, đoạn văn bản trong ngữ cảnh được cung cấp chỉ liệt kê hành vi này (tại điểm c khoản của Điều 6) [Document 1] chứ không nêu cụ thể mức tiền phạt hay số điểm bị trừ cho riêng hành vi này. Do đó, ngữ cảnh không đủ thông tin để mô tả chi tiết hình thức xử phạt cụ thể cho trường hợp này.",
+          "reference": "Bị phạt tiền từ 6.000.000 đồng đến 8.000.000 đồng, cùng khung với hành vi chạy quá tốc độ trên 20 km/h đến 35 km/h.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "context_recall": 0.0,
+          "llm_context_precision_with_reference": 0.0
+        },
+        {
+          "user_input": "Những xe ô tô nào bắt buộc phải lắp thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe?",
+          "retrieved_contexts": [
+            "Điều 27. Thiết bị giám sát hành trình lắp trên xe ô tô kinh doanh vận tải, xe ô tô đầu kéo, xe cứu thương, xe cứu hộ giao thông đường bộ\n1. Xe ô tô kinh doanh vận tải, xe ô tô đầu kéo, xe cứu thương, xe cứu hộ giao thông đường bộ phải lắp thiết bị giám sát hành trình bảo đảm yêu cầu kỹ thuật theo quy định của Quy chuẩn kỹ thuật quốc gia về thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe.",
+            "Điều 28. Thiết bị ghi nhận hình ảnh người lái xe lắp trên xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải, xe ô…\nXe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải, xe ô tô đầu kéo, xe cứu thương, xe cứu hộ giao thông đường bộ phải lắp thiết bị ghi nhận hình ảnh người lái xe bảo đảm yêu cầu kỹ thuật theo quy định của Quy chuẩn kỹ thuật quốc gia về thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe.",
+            "Điều 35. Điều kiện phương tiện tham gia giao thông đường bộ\ncủa pháp luật.\n\n2. Xe ô tô kinh doanh vận tải phải lắp thiết bị giám sát hành trình. Xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải, xe ô tô đầu kéo, xe cứu thương phải lắp thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe.\n\n3.  Phương  tiện  giao  thông  thông  minh  bảo  đảm  các  điều  kiện  quy  định  tại",
+            "Điều 13. Điều kiện kinh doanh vận tải hành khách bằng xe ô tô\n2. Xe ô tô kinh doanh vận tải phải lắp thiết bị giám sát hành trình, thiết bị ghi nhận hình ảnh người lái xe theo quy định tại khoản 2 Điều 35 Luật Trật tự, an toàn giao thông đường bộ.",
+            "Điều  26.  Xử phạt các  hành  vi vi phạm quy định về trật tự, an toàn giao\nliên quan đến giám sát hành trình, ghi nhận hình ảnh người lái xe thực hiện một\n\ntrong các hành vi sau:\n\na) Đơn vị sản xuất, lắp ráp, nhập khẩu thiết bị giám sát hành trình của xe ô tô\n\nkhông có nhân sự cho từng vị trí công việc theo quy định;\n\nb) Đơn vị sản xuất, lắp ráp, nhập khẩu thiết bị giám sát hành trình của xe ô tô\n\nkhông báo cáo về việc cập nhật, thay đổi phần mềm của thiết bị theo quy định."
+          ],
+          "reference_contexts": [
+            "2. Xe ô tô kinh doanh vận tải phải lắp thiết bị giám sát hành trình. Xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải, xe ô tô đầu kéo, xe cứu thương phải lắp thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe."
+          ],
+          "response": "Dựa trên các tài liệu được cung cấp, các loại xe ô tô bắt buộc phải lắp cả thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh người lái xe bao gồm:\n\n* Xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải [Document 2, Document 5].\n* Xe ô tô đầu kéo [Document 2, Document 5].\n* Xe cứu thương [Document 2, Document 5].\n* Xe cứu hộ giao thông đường bộ (theo quy định tại Nghị định số 151/2024/NĐ-CP đối với các loại xe phải lắp thiết bị giám sát hành trình và thiết bị ghi nhận hình ảnh) [Document 1, Document 5].",
+          "reference": "Xe ô tô kinh doanh vận tải phải lắp thiết bị giám sát hành trình. Xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) kinh doanh vận tải, xe ô tô đầu kéo và xe cứu thương phải lắp cả thiết bị giám sát hành trình lẫn thiết bị ghi nhận hình ảnh người lái xe.",
+          "faithfulness": 0.75,
+          "answer_relevancy": 0.9909639419333681,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.5833333333041666
+        },
+        {
+          "user_input": "Bao nhiêu tuổi thì được điều khiển xe gắn máy và bao nhiêu tuổi được cấp giấy phép lái xe hạng B?",
+          "retrieved_contexts": [
+            "Điều 59. Tuổi, sức khỏe của người điều khiển phương tiện tham gia giao\nb) Người đủ 18 tuổi trở lên được cấp giấy phép lái xe hạng A1, A, B1, B, C1, được cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ để điều khiển xe máy chuyên dùng tham gia giao thông đường bộ;\n\nc) Người đủ 21 tuổi trở lên được cấp giấy phép lái xe hạng C, BE;\n\nd) Người đủ 24 tuổi trở lên được cấp giấy phép lái xe hạng D1, D2, C1E, CE;",
+            "Điều 59. Tuổi, sức khỏe của người điều khiển phương tiện tham gia giao\n\nthông đường bộ\n\n1. Độ tuổi của người lái xe, người điều khiển xe máy chuyên dùng được quy\n\nđịnh như sau:\n\na) Người đủ 16 tuổi trở lên được điều khiển xe gắn máy;",
+            "Điều 59. Tuổi, sức khỏe của người điều khiển phương tiện tham gia giao\nđ) Người đủ 27 tuổi trở lên được cấp giấy phép lái xe hạng D, D1E, D2E, DE;\n\ne)  Tuổi  tối  đa  của  người  lái  xe  ô  tô  chở  người  (kể  cả  xe  buýt)  trên  29  chỗ\n(không kể chỗ của người lái xe), xe ô tô chở người giường nằm là đủ 57 tuổi đối với nam, đủ 55 tuổi đối với nữ.",
+            "Điều 18. Xử phạt, trừ điểm giấy phép lái xe các hành vi vi phạm quy định\n\nvề điều kiện của người điều khiển xe cơ giới\n\n1. Phạt cảnh cáo người từ đủ 14 tuổi đến dưới 16 tuổi điều khiển xe mô tô, xe gắn máy, các loại xe tương tự xe mô tô và các loại xe tương tự xe gắn máy hoặc\nđiều khiển xe ô tô, điều khiển xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và các loại xe tương tự xe ô tô.",
+            "Điều 89. Quy định chuyển tiếp\nhạng B với điều kiện hạn chế là chỉ được điều khiển xe ô tô số tự động;\n\ne) Giấy phép lái xe hạng B1, B2 được đổi, cấp lại sang giấy phép lái xe hạng B hoặc hạng C1 và chứng chỉ điều khiển xe máy chuyên dùng cho người điều khiển máy kéo có trọng tải đến 3.500 kg;\n\ng) Giấy phép lái xe hạng C giữ nguyên và đổi, cấp lại cùng hạng và chứng chỉ\nđiều  khiển  xe  máy  chuyên  dùng  cho  người  điều  khiển  máy  kéo  có  trọng  tải  trên\n3.500 kg;"
+          ],
+          "reference_contexts": [
+            "1. Độ tuổi của người lái xe, người điều khiển xe máy chuyên dùng được quy\n\nđịnh như sau:\n\na) Người đủ 16 tuổi trở lên được điều khiển xe gắn máy;\n\nb) Người đủ 18 tuổi trở lên được cấp giấy phép lái xe hạng A1, A, B1, B, C1"
+          ],
+          "response": "Dựa vào các tài liệu được cung cấp:\n\n* **Điều khiển xe gắn máy:** Người đủ 16 tuổi trở lên được điều khiển xe gắn máy [Document 5].\n* **Cấp giấy phép lái xe hạng B:** Người đủ 18 tuổi trở lên được cấp giấy phép lái xe hạng B [Document 1].",
+          "reference": "Người đủ 16 tuổi trở lên được điều khiển xe gắn máy; người đủ 18 tuổi trở lên được cấp giấy phép lái xe hạng A1, A, B1, B, C1.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9593948307024844,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.0
+        },
+        {
+          "user_input": "Giấy phép lái xe hạng B có thời hạn bao lâu?",
+          "retrieved_contexts": [
+            "Điều 57. Giấy phép lái xe\n4. Người điều khiển xe ô tô có thiết kế, cải tạo với số chỗ ít hơn xe cùng loại, kích thước giới hạn tương đương phải sử dụng giấy phép lái xe có hạng phù hợp với xe ô tô cùng loại, kích thước giới hạn tương đương và có số chỗ nhiều nhất.\n\n5. Thời hạn của giấy phép lái xe được quy định như sau:\n\na) Giấy phép lái xe các hạng A1, A, B1 không thời hạn;\n\nb) Giấy phép lái xe hạng B và hạng C1 có thời hạn 10 năm kể từ ngày cấp;",
+            "Điều 57. Giấy phép lái xe\nc) Giấy phép lái xe các hạng C, D1, D2, D, BE, C1E, CE, D1E, D2E và DE có\n\nthời hạn 05 năm kể từ ngày cấp.\n\n6. Giấy phép lái xe có giá trị sử dụng trong phạm vi lãnh thổ Việt Nam bao gồm:\n\na) Giấy phép lái xe do cơ quan có thẩm quyền của Việt Nam cấp;",
+            "Điều 89. Quy định chuyển tiếp\nhạng B với điều kiện hạn chế là chỉ được điều khiển xe ô tô số tự động;\n\ne) Giấy phép lái xe hạng B1, B2 được đổi, cấp lại sang giấy phép lái xe hạng B hoặc hạng C1 và chứng chỉ điều khiển xe máy chuyên dùng cho người điều khiển máy kéo có trọng tải đến 3.500 kg;\n\ng) Giấy phép lái xe hạng C giữ nguyên và đổi, cấp lại cùng hạng và chứng chỉ\nđiều  khiển  xe  máy  chuyên  dùng  cho  người  điều  khiển  máy  kéo  có  trọng  tải  trên\n3.500 kg;",
+            "Điều 57. Giấy phép lái xe\nc) Hạng B1 cấp cho người lái xe mô tô ba bánh và các loại xe quy định cho\n\ngiấy phép lái xe hạng A1;\n\nd) Hạng B cấp cho người lái xe ô tô chở người đến 08 chỗ (không kể chỗ của người lái xe); xe ô tô tải và ô tô chuyên dùng có khối lượng toàn bộ theo thiết kế đến 3.500 kg; các loại xe ô tô quy định cho giấy phép lái xe hạng B kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg;",
+            "Việc cấp giấy phép lái xe cho người có giấy phép lái xe ô tô các hạng mà quá thời hạn sử dụng; mất giấy phép lái xe ô tô và giấy phép lái xe đó quá thời hạn sử dụng bao gồm cả người có giấy phép lái xe quân sự do Bộ Quốc phòng cấp, giấy phép lái xe trong Công an nhân dân khi thôi không còn làm nhiệm vụ quốc phòng, an ninh thực hiện như sau:"
+          ],
+          "reference_contexts": [
+            "5. Thời hạn của giấy phép lái xe được quy định như sau:\n\na) Giấy phép lái xe các hạng A1, A, B1 không thời hạn;\n\nb) Giấy phép lái xe hạng B và hạng C1 có thời hạn 10 năm kể từ ngày cấp;\n\nc) Giấy phép lái xe các hạng C, D1, D2, D, BE, C1E, CE, D1E, D2E và DE có\n\nthời hạn 05 năm kể từ ngày cấp."
+          ],
+          "response": "Giấy phép lái xe hạng B có thời hạn 10 năm kể từ ngày cấp [Document 1].",
+          "reference": "Giấy phép lái xe hạng B và hạng C1 có thời hạn 10 năm kể từ ngày cấp. Hạng A1, A, B1 không thời hạn; các hạng C, D1, D2, D, BE, C1E, CE, D1E, D2E và DE có thời hạn 05 năm.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9756032770767533,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.9999999999
+        },
+        {
+          "user_input": "Thiết bị an toàn cho trẻ em được Luật Trật tự, an toàn giao thông đường bộ định nghĩa như thế nào?",
+          "retrieved_contexts": [
+            "Điều 2. Giải thích từ ngữ\n13. Thiết bị an toàn cho trẻ em là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế ngồi hoặc nằm trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương cho người dùng trong trường hợp xảy ra va chạm hoặc xe ô tô giảm tốc độ đột ngột, bằng cách hạn chế sự di chuyển của cơ thể trẻ em.",
+            "Điều  5.  Tuyên  truyền,  phổ  biến  pháp  luật  về  trật  tự,  an  toàn  giao  thông\n7. Thành viên trong gia đình có trách nhiệm tuyên truyền, nhắc nhở thành viên khác chấp hành pháp luật về trật tự, an toàn giao thông đường bộ, sử dụng dây đai an toàn, ghế dành cho trẻ em hoặc có người lớn ngồi cùng trẻ em phía sau khi chở trẻ em dưới 06 tuổi bằng xe gắn máy, xe mô tô.",
+            "Điều 6. Giáo dục kiến thức pháp luật về trật tự, an toàn giao thông đường bộ\n\n1. Giáo dục kiến thức pháp luật về trật tự, an toàn giao thông đường bộ cho trẻ em của cơ sở giáo dục mầm non (sau đây gọi là trẻ em mầm non), học sinh của cơ sở giáo dục phổ thông, cơ sở giáo dục nghề nghiệp.",
+            "Điều 46. Bảo đảm trật tự, an toàn giao thông đường bộ đối với xe ô tô chở\n\ntrẻ em mầm non, học sinh\n\n1. Xe ô tô kinh doanh vận tải chở trẻ em mầm non, học sinh phải đáp ứng các\n\nyêu cầu sau đây:\n\na) Bảo đảm các điều kiện quy định tại khoản 1 và khoản 2 Điều 35 của Luật này; có thiết bị ghi nhận hình ảnh trẻ em  mầm non, học sinh và thiết bị có chức",
+            "# Từ 15/8, phạt cảnh cáo ô tô chở trẻ em không có thiết bị an toàn phù hợp\n##  (Chinhphu.vn) - Chính phủ ban hành Nghị định số 238/2026/NĐ-CP ngày 26/6/2026 sửa đổi, bổ sung một số điều của Nghị định số 168/2024/NĐ-CP ngày 26/12/2024 của Chính phủ quy định xử phạt vi phạm hành chính về trật tự, an toàn giao thông trong lĩnh vực giao thông đường bộ; trừ điểm, phục hồi điểm giấy phép lái xe. \nTải xuống\nTừ 15/8, phạt cảnh cáo ô tô chở trẻ em không có thiết bị an toàn phù hợp."
+          ],
+          "reference_contexts": [
+            "13. Thiết bị an toàn cho trẻ em là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế ngồi hoặc nằm trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương cho người dùng trong trường hợp xảy ra va chạm hoặc xe ô tô giảm tốc độ đột ngột, bằng cách hạn chế sự di chuyển của cơ thể trẻ em."
+          ],
+          "response": "Theo Luật Trật tự, an toàn giao thông đường bộ, thiết bị an toàn cho trẻ em là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế ngồi hoặc nằm trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương cho người dùng trong trường hợp xảy ra va chạm hoặc xe ô tô giảm tốc độ đột ngột, bằng cách hạn chế sự di chuyển của cơ thể trẻ em [Document 1].",
+          "reference": "Là thiết bị có đủ khả năng bảo đảm an toàn cho trẻ em ở tư thế ngồi hoặc nằm trên xe ô tô, được thiết kế để giảm nguy cơ chấn thương khi xảy ra va chạm hoặc khi xe giảm tốc độ đột ngột, bằng cách hạn chế sự di chuyển của cơ thể trẻ em.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9590176302585722,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.9999999999
+        },
+        {
+          "user_input": "Xe cơ giới tham gia giao thông đường bộ phải đáp ứng những điều kiện nào?",
+          "retrieved_contexts": [
+            "Điều 35. Điều kiện phương tiện tham gia giao thông đường bộ\n\n1.  Xe  cơ  giới,  xe  máy  chuyên  dùng  tham  gia  giao  thông  đường  bộ  phải  đáp\n\nứng các điều kiện sau đây:\n\na) Được cấp chứng nhận đăng ký xe và gắn biển số xe theo quy định của pháp luật;\n\nb) Bảo đảm chất lượng an toàn kỹ thuật và bảo vệ môi trường theo quy định\n\ncủa pháp luật.",
+            "Điều 32. Xe cơ giới nước ngoài và người nước ngoài điều khiển phương tiện tham gia giao thông tại Việt Nam\n2. Xe ô tô của người nước ngoài có tay lái ở bên phải tham gia giao thông tại\nViệt Nam không phải mục đích du lịch là xe ô tô chở người.\n3. Điều kiện chung đối với xe cơ giới nước ngoài và người nước ngoài tham gia giao thông tại Việt Nam:\na) Có văn bản chấp thuận được tổ chức cho người nước ngoài đưa xe cơ giới nước ngoài vào tham gia giao thông tại Việt Nam;",
+            "Điều 56. Điều kiện của người điều khiển phương tiện tham gia giao thông\ngiới theo quy định của pháp luật;\n\nd) Chứng nhận bảo hiểm bắt buộc trách nhiệm dân sự của chủ xe cơ giới.",
+            "Điều 61. Sát hạch lái xe\n. Trung tâm sát hạch lái xe là đơn vị cung cấp dịch vụ sát hạch lái xe; phải đáp  ứng  các  điều kiện do  Chính phủ quy  định và đáp  ứng  yêu  cầu kỹ  thuật  theo quy chuẩn kỹ thuật quốc gia về trung tâm sát hạch lái xe cơ giới đường bộ; phải sử dụng thiết bị ứng dụng công nghệ thông tin và phải chia sẻ ngay kết quả và dữ liệu giám sát quá trình sát hạch đến cơ quan quản lý đào tạo, sát hạch, cấp giấy phép lái xe, cơ quan quản lý về trật tự, an toàn giao thông đường bộ",
+            "Điều 32. Xe cơ giới nước ngoài và người nước ngoài điều khiển phương tiện tham gia giao thông tại Việt Nam\na) Có hộ chiếu, thị thực hoặc giấy tờ có giá trị đi lại quốc tế, giấy tờ có giá trị cư trú tại Việt Nam, trừ trường hợp được miễn thị thực và không thuộc trường hợp chưa cho nhập cảnh theo quy định của pháp luật về nhập cảnh, xuất cảnh, quá cảnh, cư trú của người nước ngoài tại Việt Nam."
+          ],
+          "reference_contexts": [
+            "a) Được cấp chứng nhận đăng ký xe và gắn biển số xe theo quy định của pháp luật;\n\nb) Bảo đảm chất lượng an toàn kỹ thuật và bảo vệ môi trường theo quy định\n\ncủa pháp luật."
+          ],
+          "response": "Theo context được cung cấp, xe cơ giới tham gia giao thông đường bộ phải đáp ứng các điều kiện sau đây:\n\n1. Được cấp chứng nhận đăng ký xe và gắn biển số xe theo quy định của pháp luật [Document 1].\n2. Bảo đảm chất lượng an toàn kỹ thuật và bảo vệ môi trường theo quy định của pháp luật [Document 1].",
+          "reference": "Phải được cấp chứng nhận đăng ký xe và gắn biển số xe theo quy định của pháp luật, đồng thời bảo đảm chất lượng an toàn kỹ thuật và bảo vệ môi trường.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.990118783234578,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.9999999999
+        },
+        {
+          "user_input": "Kinh doanh vận tải hành khách bằng xe ô tô gồm những loại hình nào?",
+          "retrieved_contexts": [
+            "Điều 56. Hoạt động vận tải đường bộ\n6. Kinh doanh vận tải hành khách bằng xe ô tô gồm: kinh doanh vận tải hành khách theo tuyến cố định, kinh doanh vận tải hành khách công cộng bằng xe buýt, kinh doanh vận tải hành khách bằng xe taxi, kinh doanh vận tải hành khách theo hợp đồng và loại hình kinh doanh vận tải hành khách mới theo quy định của Chính phủ.",
+            "Điều 56. Hoạt động vận tải đường bộ\nTrường hợp đơn vị kinh doanh vận tải sử dụng xe ô tô chở người từ 08 chỗ trở lên (không kể chỗ của người lái xe) phải có hợp đồng vận tải bằng văn bản giữa đơn vị kinh doanh vận tải hành khách với người thuê vận tải thuê cả chuyến xe, bao gồm cả người lái xe.\n\n11. Kinh doanh vận tải hàng hóa bằng xe ô tô là loại hình kinh doanh vận tải sử dụng xe ô tô chở hàng, xe ô tô chuyên dùng để vận tải hàng hóa trên đường bộ.",
+            "Điều 78. Trách nhiệm thi hành\n- Các loại hình ghi trên Giấy phép: kinh doanh vận tải hành khách theo tuyến cố định; kinh doanh vận tải hành khách bằng xe buýt; kinh doanh vận tải hành khách bằng xe taxi; kinh doanh vận tải hành khách theo hợp đồng; kinh doanh vận tải hàng hóa bằng công-ten-nơ; kinh doanh vận tải hàng hóa bằng xe ô tô.",
+            "Điều 56. Hoạt động vận tải đường bộ\nkhách thông qua phương tiện điện tử;\n\nc) Tiền cước theo thoả thuận với đơn vị kinh doanh vận tải.\n\n10. Kinh doanh vận tải hành khách theo hợp đồng là loại hình kinh doanh vận tải hành khách sử dụng xe ô tô chở người để vận tải hành khách theo hợp đồng vận tải bằng văn bản giữa đơn vị kinh doanh vận tải hành khách với người thuê vận tải, bao gồm cả thuê người lái xe.",
+            "Điều 7. Kinh doanh vận tải hành khách theo hợp đồng\n\n1. Đơn vị kinh doanh vận tải có Giấy phép kinh doanh vận tải bằng ô tô, trong đó  có  loại  hình kinh  doanh  vận  tải  hành  khách  theo  hợp  đồng  thì được  tham gia kinh doanh vận tải hành khách theo hợp đồng.\n\n2. Xe ô tô kinh doanh vận tải hành khách theo hợp đồng\n\na)  Xe  ô  tô  kinh doanh  vận  tải hành  khách  theo  hợp  đồng bảo  đảm đúng  quy"
+          ],
+          "reference_contexts": [
+            "6. Kinh doanh vận tải hành khách bằng xe ô tô gồm: kinh doanh vận tải hành khách theo tuyến cố định, kinh doanh vận tải hành khách công cộng bằng xe buýt, kinh doanh vận tải hành khách bằng xe taxi, kinh doanh vận tải hành khách theo hợp đồng và loại hình kinh doanh vận tải hành khách mới theo quy định của Chính phủ."
+          ],
+          "response": "Căn cứ theo Điều 56 khoản 6 của Luật Đường bộ, kinh doanh vận tải hành khách bằng xe ô tô gồm các loại hình sau:\n- Kinh doanh vận tải hành khách theo tuyến cố định [Document 1].\n- Kinh doanh vận tải hành khách công cộng bằng xe buýt [Document 1].\n- Kinh doanh vận tải hành khách bằng xe taxi [Document 1].\n- Kinh doanh vận tải hành khách theo hợp đồng [Document 1].\n- Loại hình kinh doanh vận tải hành khách mới theo quy định của Chính phủ [Document 1].",
+          "reference": "Gồm kinh doanh vận tải hành khách theo tuyến cố định, vận tải hành khách công cộng bằng xe buýt, vận tải hành khách bằng xe taxi, vận tải hành khách theo hợp đồng và loại hình mới theo quy định của Chính phủ.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9413056309763457,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.8333333332916666
+        },
+        {
+          "user_input": "Xe ô tô kinh doanh vận tải hành khách theo tuyến cố định phải có sức chứa tối thiểu bao nhiêu chỗ?",
+          "retrieved_contexts": [
+            "Điều 13. Điều kiện kinh doanh vận tải hành khách bằng xe ô tô\n3. Xe ô tô kinh doanh vận tải hành khách theo tuyến cố định phải có sức chứa từ 08 chỗ trở lên (không kể chỗ của người lái xe) và có niên hạn sử dụng như sau:\nkhông quá 15 năm đối với xe hoạt động trên tuyến cự ly trên 300 ki-lô-mét, không quá 20 năm đối với xe hoạt động trên tuyến có cự ly từ 300 ki-lô-mét trở xuống.\n\n4. Xe ô tô kinh doanh vận tải hành khách bằng xe buýt phải có sức chứa từ 08 chỗ",
+            "Điều 13. Điều kiện kinh doanh vận tải hành khách bằng xe ô tô\nRiêng xe ô tô kinh doanh vận tải hành khách theo hợp đồng có sức chứa dưới\n08 chỗ (không kể chỗ của người lái xe) sử dụng hợp đồng điện tử có niên hạn sử dụng không quá 12 năm.",
+            "Điều 13. Điều kiện kinh doanh vận tải hành khách bằng xe ô tô\ntrở lên (không kể chỗ của người lái xe) và có niên hạn sử dụng không quá 20 năm.\n\n5. Xe ô tô kinh doanh vận tải hành khách bằng xe taxi phải có sức chứa dưới\n08 chỗ (không kể chỗ của người lái xe) và có niên hạn sử dụng không quá 12 năm.\nKhông sử dụng xe ô tô chở người có thiết kế, cải tạo với số chỗ ít hơn 08 chỗ từ xe ô tô lớn hơn 08 chỗ (không kể chỗ của người lái xe) để kinh doanh vận tải hành khách bằng taxi.",
+            "Điều 4. Kinh doanh vận tải hành khách bằng xe ô tô theo tuyến cố định\nc) Theo dõi, tổng hợp kết quả hoạt động vận tải của các đơn vị kinh doanh vận\n\ntải, bến xe trên tuyến.\n\n4. Xe ô tô kinh doanh vận tải hành khách theo tuyến cố định\n\na) Phải có chỗ ưu tiên cho người khuyết tật, người cao tuổi và phụ nữ mang thai;",
+            "Điều 4. Kinh doanh vận tải hành khách bằng xe ô tô theo tuyến cố định\n\n1. Đơn vị kinh doanh vận tải có Giấy phép kinh doanh vận tải bằng xe ô tô, trong đó có loại hình kinh doanh vận tải hành khách theo tuyến cố định thì được đăng ký khai thác tuyến theo quy định tại Điều 22 của Nghị định này.\n\n2. Tuyến cố định phải xuất phát và kết thúc tại bến xe khách đã được công bố\n\nđưa vào khai thác."
+          ],
+          "reference_contexts": [
+            "3. Xe ô tô kinh doanh vận tải hành khách theo tuyến cố định phải có sức chứa từ 08 chỗ trở lên (không kể chỗ của người lái xe) và có niên hạn sử dụng như sau:"
+          ],
+          "response": "Xe ô tô kinh doanh vận tải hành khách theo tuyến cố định phải có sức chứa từ 08 chỗ trở lên (không kể chỗ của người lái xe) [Document 1].",
+          "reference": "Phải có sức chứa từ 08 chỗ trở lên, không kể chỗ của người lái xe.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.981629243739495,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.8333333332916666
+        },
+        {
+          "user_input": "Cơ quan nào có thẩm quyền cấp giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên cho các cơ quan ở trung ương?",
+          "retrieved_contexts": [
+            "Điều 23. Thẩm quyền cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên\n1. Cục Cảnh sát giao thông, Bộ Công an cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên cho các đối tượng thuộc bộ, ngành, cơ quan ở trung ương, trừ xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp.",
+            "Điều 17. Thiết bị phát tín hiệu của xe ưu tiên\n3. Quản lý thiết bị phát tín hiệu của xe ưu tiên:\na) Xe ưu tiên khi lắp đặt thiết bị phát tín hiệu của xe ưu tiên phải có giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên do cơ quan có thẩm quyền cấp;\nb) Cơ quan, tổ chức, cá nhân chỉ được lắp đặt, sử dụng thiết bị phát tín hiệu của xe ưu tiên trên các loại xe quy định tại Điều 18 của Nghị định này.",
+            "Điều 21. Trình tự, thủ tục cấp mới, cấp lại giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên\n4. Trường hợp giải quyết hồ sơ trực tiếp, cơ quan có thẩm quyền cấp giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên có trách nhiệm cập nhật thông tin trong giấy phép vào cơ sở dữ liệu để quản lý giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên.",
+            "Điều 23. Thẩm quyền cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên\n3. Bộ Tổng Tham mưu, Bộ Quốc phòng cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên cho xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp.\n4. Cơ quan có thẩm quyền cấp, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên có trách nhiệm thống kê, theo dõi công tác cấp, thu hồi giấy phép theo Mẫu số 02c Phụ lục II kèm theo Nghị định này.",
+            "Điều 23. Thẩm quyền cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên\n2. Phòng Cảnh sát giao thông Công an tỉnh, thành phố trực thuộc Trung ương cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên cho các đối tượng thuộc cơ quan, đơn vị, tổ chức tại địa phương, trừ xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp."
+          ],
+          "reference_contexts": [
+            "1. Cục Cảnh sát giao thông, Bộ Công an cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên cho các đối tượng thuộc bộ, ngành, cơ quan ở trung ương, trừ xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp."
+          ],
+          "response": "Cục Cảnh sát giao thông, Bộ Công an có thẩm quyền cấp mới, cấp lại, thu hồi giấy phép sử dụng thiết bị phát tín hiệu của xe ưu tiên cho các đối tượng thuộc bộ, ngành, cơ quan ở trung ương (trừ xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp) [Document 1].",
+          "reference": "Cục Cảnh sát giao thông, Bộ Công an, trừ xe của lực lượng quân sự đi làm nhiệm vụ khẩn cấp.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9187912762431824,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.9999999999
+        },
+        {
+          "user_input": "Sau khi đạt kết quả kỳ sát hạch thì bao lâu được cấp giấy phép lái xe?",
+          "retrieved_contexts": [
+            "Tải xuống\nẢnh minh họa\nTheo đó, Cục Cảnh sát giao thông (Bộ Công an) là đơn vị cấp giấy phép lái xe cho người đạt kết quả kỳ sát hạch trong thời hạn 7 ngày làm việc (kể từ ngày kết thúc kỳ sát hạch). Giấy phép lái xe điện tử được tích hợp vào hệ thống dữ liệu điện tử, tài khoản định danh điện tử trong thời hạn 3 ngày làm việc (kể từ ngày kết thúc kỳ sát hạch).",
+            "# Cấp giấy phép lái xe cho người đạt kết quả kỳ sát hạch trong thời hạn 7 ngày làm việc\n##  (Chinhphu.vn) - Bộ Công an vừa ban hành Thông tư số 12/2025/TT-BCA ngày 28/02/2025 quy định về sát hạch, cấp giấy phép lái xe; cấp, sử dụng giấy phép lái xe quốc tế. Thông tư có hiệu lực từ ngày 01/3/2025. Trong đó, đáng chú ý, tại Điều 19 của Thông tư, quy định các trường hợp được cấp giấy phép lái xe. \nTải xuống\nẢnh minh họa",
+            "Điều 62. Cấp, đổi, cấp lại và thu hồi giấy phép lái xe\n\n1. Giấy phép lái xe được cấp cho người tham dự kỳ sát hạch lái xe có kết quả\n\nđạt yêu cầu.\n\n2.  Người  có  giấy  phép  lái  xe  được  đổi,  cấp  lại  giấy  phép  lái  xe  trong  các\n\ntrường hợp sau đây:\n\na) Giấy phép lái xe bị mất;\n\nb) Giấy phép lái xe bị hỏng không còn sử dụng được;\n\nc) Trước thời hạn ghi trên giấy phép lái xe;\n\nd) Thay đổi thông tin ghi trên giấy phép lái xe;",
+            "Điều 61. Sát hạch lái xe\n5.  Việc  sát  hạch  lái  xe  do  sát  hạch  viên  thực  hiện.  Sát  hạch  viên  phải  có  đủ\nđiều kiện, tiêu chuẩn, được cấp thẻ sát hạch viên và phải chịu trách nhiệm về kết quả sát hạch của mình.\n\n6.  Chính phủ quy  định  điều kiện, trình tự,  thủ tục kiểm  tra, đánh  giá để  cấp, cấp lại và thu hồi giấy phép sát hạch cho trung tâm sát hạch lái xe; điều kiện sân tập lái để sát hạch lái xe mô tô.",
+            "Trường hợp giấy phép lái xe quá thời hạn sử dụng từ 01 năm trở lên kể từ ngày hết hạn thì phải sát hạch lý thuyết, thực hành lái xe trong hình và trên đường để cấp giấy phép lái xe theo quy định tại các khoản 1, 2, 3 Điều 4 Thông tư này.\nHồ sơ đề nghị sát hạch thực hiện theo quy định tại khoản 3 Điều 16 Thông tư này."
+          ],
+          "reference_contexts": [
+            "Theo đó, Cục Cảnh sát giao thông (Bộ Công an) là đơn vị cấp giấy phép lái xe cho người đạt kết quả kỳ sát hạch trong thời hạn 7 ngày làm việc (kể từ ngày kết thúc kỳ sát hạch)."
+          ],
+          "response": "Theo ngữ cảnh, Cục Cảnh sát giao thông (Bộ Công an) là đơn vị cấp giấy phép lái xe cho người đạt kết quả kỳ sát hạch trong thời hạn 7 ngày làm việc kể từ ngày kết thúc kỳ sát hạch [Document 1]. Ngoài ra, giấy phép lái xe điện tử được tích hợp vào hệ thống dữ liệu điện tử, tài khoản định danh điện tử trong thời hạn 3 ngày làm việc kể từ ngày kết thúc kỳ sát hạch [Document 1].",
+          "reference": "Trong thời hạn 7 ngày làm việc kể từ ngày kết thúc kỳ sát hạch, do Cục Cảnh sát giao thông cấp. Giấy phép lái xe điện tử được tích hợp trong thời hạn 3 ngày làm việc.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.8991692055401506,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.99999999995
+        },
+        {
+          "user_input": "Thông tư nào quy định về sát hạch, cấp giấy phép lái xe và có hiệu lực từ khi nào?",
+          "retrieved_contexts": [
+            "# Cấp giấy phép lái xe cho người đạt kết quả kỳ sát hạch trong thời hạn 7 ngày làm việc\n##  (Chinhphu.vn) - Bộ Công an vừa ban hành Thông tư số 12/2025/TT-BCA ngày 28/02/2025 quy định về sát hạch, cấp giấy phép lái xe; cấp, sử dụng giấy phép lái xe quốc tế. Thông tư có hiệu lực từ ngày 01/3/2025. Trong đó, đáng chú ý, tại Điều 19 của Thông tư, quy định các trường hợp được cấp giấy phép lái xe. \nTải xuống\nẢnh minh họa",
+            "Thông tư này có hiệu lực thi hành từ ngày 01/9/2025. Thông tư này bãi bỏ Thông tư số 35/2024/TT-BGTVT ngày 15/11/2024 của Bộ trưởng Bộ Giao thông vận tải quy định về đào tạo, sát hạch, cấp giấy phép lái xe; cấp, sử dụng giấy phép lái xe quốc tế; đào tạo, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ. \n## Quy định chuyển tiếp",
+            "Điều 89. Quy định chuyển tiếp\n4. Người học lái xe đã được đào tạo lái xe trước ngày Luật này có hiệu lực thi hành hoặc đang được đào tạo lái xe tại ngày Luật này có hiệu lực thi hành chưa được  sát  hạch,  cấp  giấy  phép  lái  xe  thì được  sát  hạch,  cấp  giấy  phép  lái  xe  theo hạng giấy phép lái xe đổi, cấp lại quy định tại khoản 3 Điều này.\n\n5. Chứng nhận đăng ký xe, biển số xe máy chuyên dùng cấp trước ngày Luật\n\nnày có hiệu lực thi hành vẫn có giá trị sử dụng.",
+            "Trường hợp giấy phép lái xe quá thời hạn sử dụng từ 01 năm trở lên kể từ ngày hết hạn thì phải sát hạch lý thuyết, thực hành lái xe trong hình và trên đường để cấp giấy phép lái xe theo quy định tại các khoản 1, 2, 3 Điều 4 Thông tư này.\nHồ sơ đề nghị sát hạch thực hiện theo quy định tại khoản 3 Điều 16 Thông tư này.",
+            "**Cụ thể, bổ sung khoản 14 Điều 11 - Thông tin về sát hạch, cấp giấy phép lái xe gồm** : họ, tên; số định danh cá nhân; ngày, tháng, năm sinh; giới tính; quốc tịch; nơi cư trú; số giấy phép lái xe; ngày, tháng, năm cấp giấy xác nhận hoàn thành khóa đào tạo lái xe; cơ quan sát hạch; địa điểm tổ chức sát hạch (trung tâm sát hạch hoặc sân tập lái dùng để sát hạch); ngày, tháng, năm cấp, đổi, cấp lại giấy phép lái xe; cơ quan cấp, đổi, cấp lại giấy phép lái xe; giấy phép lái xe trước khi đổi (giấy"
+          ],
+          "reference_contexts": [
+            "Bộ Công an vừa ban hành Thông tư số 12/2025/TT-BCA ngày 28/02/2025 quy định về sát hạch, cấp giấy phép lái xe; cấp, sử dụng giấy phép lái xe quốc tế. Thông tư có hiệu lực từ ngày 01/3/2025."
+          ],
+          "response": "Dựa trên các tài liệu được cung cấp:\n\n- Thông tư số 12/2025/TT-BCA ngày 28/02/2025 quy định về sát hạch, cấp giấy phép lái xe; cấp, sử dụng giấy phép lái xe quốc tế có hiệu lực từ ngày 01/3/2025 [Document 1].",
+          "reference": "Thông tư số 12/2025/TT-BCA ngày 28/02/2025 của Bộ Công an, có hiệu lực từ ngày 01/3/2025.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.5763273144352121,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.9999999999
+        },
+        {
+          "user_input": "Từ ngày 15/8, ô tô chở trẻ em dưới 10 tuổi không sử dụng thiết bị an toàn phù hợp bị xử lý thế nào?",
+          "retrieved_contexts": [
+            "## **Bỏ quy định phạt tiền đối với lái xe ô tô chở trẻ em dưới 10 tuổi không sử dụng thiết bị an toàn phù hợp**",
+            "# Từ 15/8, phạt cảnh cáo ô tô chở trẻ em không có thiết bị an toàn phù hợp\n##  (Chinhphu.vn) - Chính phủ ban hành Nghị định số 238/2026/NĐ-CP ngày 26/6/2026 sửa đổi, bổ sung một số điều của Nghị định số 168/2024/NĐ-CP ngày 26/12/2024 của Chính phủ quy định xử phạt vi phạm hành chính về trật tự, an toàn giao thông trong lĩnh vực giao thông đường bộ; trừ điểm, phục hồi điểm giấy phép lái xe. \nTải xuống\nTừ 15/8, phạt cảnh cáo ô tô chở trẻ em không có thiết bị an toàn phù hợp.",
+            "Một trong các nội dung đáng chú ý của Nghị định số 238/2026/NĐ-CP là bổ sung khoản 1a vào trước khoản 1 Điều 6 Nghị định số 168/2024/NĐ-CP về xử phạt hành vi chở trẻ em trên xe mà không sử dụng thiết bị an toàn. Theo đó, phạt cảnh cáo đối với người điều khiển xe ô tô thực hiện hành vi chở trẻ em dưới 10 tuổi và chiều cao dưới 1,35 mét trên xe mà không sử dụng thiết bị an toàn phù hợp cho trẻ em theo quy định (trừ xe ô tô kinh doanh vận tải hành khách).",
+            "Điều 6. Xử phạt, trừ điểm giấy phép lái xe của người điều khiển xe ô tô, xe chở người bốn bánh có gắn động cơ, xe chở hàng bốn bánh có gắn động cơ và…\nđai an toàn) khi xe đang chạy;\n\nm) Chở trẻ em dưới 10 tuổi và chiều cao dưới 1,35 mét trên xe ô tô ngồi cùng hàng ghế  với người lái xe  (trừ  loại xe  ô tô chỉ  có một hàng ghế)  hoặc không sử dụng thiết bị an toàn phù hợp cho trẻ em theo quy định;\n\nn) Chạy trong hầm đường bộ không sử dụng đèn chiếu sáng gần;",
+            "Đồng thời, tại điểm m khoản 3 Điều 6, Nghị định 238/2026/NĐ-CP bỏ quy định phạt tiền từ 800.000 đồng đến 1.000.000 đồng đối với lái xe ô tô chở trẻ em không sử dụng thiết bị an toàn phù hợp theo quy định.\n## **Ngăn chặn hành vi làm thay đổi khả năng nhận diện biển số xe**"
+          ],
+          "reference_contexts": [
+            "Một trong các nội dung đáng chú ý của Nghị định số 238/2026/NĐ-CP là bổ sung khoản 1a vào trước khoản 1 Điều 6 Nghị định số 168/2024/NĐ-CP về xử phạt hành vi chở trẻ em trên xe mà không sử dụng thiết bị an toàn. Theo đó, phạt cảnh cáo đối với người điều khiển xe ô tô thực hiện hành vi chở trẻ em dưới 10 tuổi"
+          ],
+          "response": "Từ ngày 15/8, người điều khiển xe ô tô thực hiện hành vi chở trẻ em dưới 10 tuổi và chiều cao dưới 1,35 mét trên xe mà không sử dụng thiết bị an toàn phù hợp (trừ xe ô tô kinh doanh vận tải hành khách) sẽ bị **phạt cảnh cáo** [Document 2]. Đồng thời, quy định phạt tiền đối với hành vi này đã bị bãi bỏ [Document 1, Document 3].",
+          "reference": "Bị phạt cảnh cáo, theo khoản 1a bổ sung vào Điều 6 Nghị định 168/2024/NĐ-CP bởi Nghị định 238/2026/NĐ-CP.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9027341280827815,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.5833333333041666
+        },
+        {
+          "user_input": "Nghị định 236/2026/NĐ-CP sửa đổi, bổ sung nghị định nào?",
+          "retrieved_contexts": [
+            "Ngoài ra, Nghị định 236/2026/NĐ-CP tiếp tục sửa đổi, bổ sung các quy định liên quan đến xe ưu tiên và xe làm nhiệm vụ khẩn cấp nhằm phù hợp với yêu cầu thực tiễn. Trong đó, Nghị định thống nhất quy định về hệ thống đèn, còi và tín hiệu ưu tiên sử dụng trên các phương tiện này.",
+            "# Sửa đổi, bổ sung một số quy định về trật tự, an toàn giao thông đường bộ\n##  (Chinhphu.vn) - Chính phủ ban hành Nghị định số 236/2026/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 151/2024/NĐ-CP ngày 15/11/2024 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Trật tự, an toàn giao thông đường bộ được sửa đổi, bổ sung bởi Nghị định số 184/2025/NĐ-CP ngày 01/7/2025 của Chính phủ. \nTải xuống\nHoàn thiện cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ",
+            "## Hoàn thiện cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ\nTrong đó, Nghị định số 236/2026/NĐ-CP sửa đổi, bổ sung quy định cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ (khoản 1 Điều 9, một số điểm, khoản của Điều 10 của Nghị định số 151/2024/NĐ-CP) nhằm hoàn thiện hệ thống cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ theo hướng đồng bộ, thống nhất trên phạm vi toàn quốc.",
+            "Điều 67. Sửa đổi, bổ sung một số điều của các Nghị định có liên quan\n1. Sửa đổi, bổ sung khoản 1 Điều 13 Nghị định số 56/2019/NĐ-CP ngày 24 tháng 6 năm 2019 của Chính phủ quy định chi tiết thi hành một số điều liên quan đến lĩnh vực giao thông vận tải trong Luật sửa đổi, bổ sung một số điều của 37\nLuật có liên quan đến quy hoạch như sau:",
+            "Điều 68. Hiệu lực thi hành\nNghị định số 01/2024/NĐ-CP ngày 01 tháng 01 năm 2024 của Chính phủ sửa đổi, bổ sung một số điều của Nghị định số 11/2010/NĐ-CP.\nNghị định số 32/2014/NĐ-CP ngày 22 tháng 4 năm 2014 của Chính phủ về quản lý, khai thác và bảo trì công trình đường cao tốc.\nNghị định số 25/2023/NĐ-CP ngày 19 tháng 5 năm 2023 của Chính phủ sửa đổi, bổ sung một số điều của Nghị định số 32/2014/NĐ-CP."
+          ],
+          "reference_contexts": [
+            "Chính phủ ban hành Nghị định số 236/2026/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 151/2024/NĐ-CP ngày 15/11/2024 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Trật tự, an toàn giao thông đường bộ được sửa đổi, bổ sung bởi Nghị định số 184/2025/NĐ-CP ngày 01/7/2025 của Chính phủ."
+          ],
+          "response": "Nghị định số 236/2026/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 151/2024/NĐ-CP ngày 15/11/2024 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Trật tự, an toàn giao thông đường bộ (được sửa đổi, bổ sung bởi Nghị định số 184/2025/NĐ-CP ngày 01/7/2025 của Chính phủ) [Document 5].",
+          "reference": "Sửa đổi, bổ sung một số điều của Nghị định số 151/2024/NĐ-CP ngày 15/11/2024, văn bản này trước đó đã được sửa đổi bởi Nghị định số 184/2025/NĐ-CP ngày 01/7/2025.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9347485308895228,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.5833333333041666
+        },
+        {
+          "user_input": "Thông tư 14/2025/TT-BXD do cơ quan nào ban hành và quy định về nội dung gì?",
+          "retrieved_contexts": [
+            "# Quy định mới nhất về đào tạo lái xe\n##  (Chinhphu.vn) - Bộ Xây dựng đã ban hành Thông tư số 14/2025/TT-BXD quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ. \nTải xuống\nBộ Xây dựng đã ban hành quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ",
+            "Điều 39. Bến xe, bãi đỗ xe, trạm dừng nghỉ, điểm dừng xe, trạm thu phí\n24 Cụm từ “Bộ Giao thông vận tải” được thay thế bằng cụm từ “Bộ Xây dựng” theo quy định tại khoản 8 Điều 8 của Luật số 118/2025/QH15 sửa đổi, bổ sung một số điều của 10 luật có liên quan đến an ninh, trật tự, có hiệu lực kể từ ngày 01 tháng 7 năm 2026.",
+            "Điều 20. Hồ sơ đề nghị cấp, cấp lại Giấy phép kinh doanh\nkinh doanh quy định tại khoản 1 (trừ điểm đ, điểm e) Điều 19 của Nghị định này\n\n(việc thay đổi liên quan đến nội dung nào thì bổ sung tài liệu về nội dung đó).\n\n3. Trường hợp cấp lại Giấy phép kinh doanh do bị mất hoặc bị hư hỏng, hồ sơ\n\ngồm: Giấy đề nghị cấp lại Giấy phép kinh doanh theo mẫu quy định tại Phụ lục I\n\nkèm theo Nghị định này.\n\n4. Trường hợp cấp lại Giấy phép kinh doanh do bị thu hồi, hồ sơ đề nghị cấp",
+            "Điều 28. Đầu tư, xây dựng công trình thuộc kết cấu hạ tầng đường bộ\n14 Cụm từ “Bộ Giao thông vận tải” được thay thế bằng cụm từ “Bộ Xây dựng” theo quy định tại khoản 8 Điều 8 của Luật số 118/2025/QH15 sửa đổi, bổ sung một số điều của 10 luật có liên quan đến an ninh, trật tự, có hiệu lực kể từ ngày 01 tháng 7 năm 2026.\n\n5. Việc đầu tư, xây dựng công trình thuộc kết cấu hạ tầng đường bộ phải bảo\n\nđảm các quy định sau đây:\n\na) Phù hợp với quy hoạch;",
+            "Điều 81. Nội dung quản lý nhà nước về hoạt động đường bộ\n\n1. Xây dựng, ban hành hoặc trình cơ quan có thẩm quyền ban hành và tổ chức thực hiện chính sách, pháp luật; quy chuẩn, tiêu chuẩn kỹ thuật, định mức kinh tế - kỹ thuật về hoạt động đường bộ.\n\n2. Xây dựng, ban hành và tổ chức thực hiện quy hoạch, kế hoạch về hoạt\n\nđộng đường bộ.\n\n3. Tuyên truyền, phổ biến, giáo dục pháp luật trong hoạt động đường bộ."
+          ],
+          "reference_contexts": [
+            "Bộ Xây dựng đã ban hành Thông tư số 14/2025/TT-BXD quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ."
+          ],
+          "response": "Dựa trên context được cung cấp, Thông tư số 14/2025/TT-BXD do **Bộ Xây dựng** ban hành [Document 1]. \n\nThông tư này quy định về các nội dung sau:\n- Đào tạo lái xe [Document 1].\n- Bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ [Document 1].",
+          "reference": "Do Bộ Xây dựng ban hành, quy định về đào tạo lái xe; bồi dưỡng, kiểm tra, cấp chứng chỉ bồi dưỡng kiến thức pháp luật về giao thông đường bộ.",
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9779504922422311,
+          "context_recall": 1.0,
+          "llm_context_precision_with_reference": 0.9999999999
+        }
+      ]
+    }
+  },
+  "previous_run": {
+    "evaluation_date": "2026-09-20",
+    "generator": {
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite"
+    },
+    "configs": [
+      "A_dense_only"
+    ]
+  },
+  "threshold_calibration": {
+    "in_domain_scores": [
+      0.716,
+      0.727,
+      0.694,
+      0.688,
+      0.695,
+      0.744,
+      0.672,
+      0.699,
+      0.769,
+      0.733,
+      0.753,
+      0.771,
+      0.794,
+      0.731,
+      0.765,
+      0.629,
+      0.541
+    ],
+    "out_of_domain_scores": [
+      0.419,
+      0.365,
+      0.589
+    ],
+    "in_domain_min": 0.541,
+    "in_domain_mean": 0.713,
+    "current_threshold": 0.6,
+    "out_of_domain_max": 0.589,
+    "out_of_domain_mean": 0.457,
+    "distributions_overlap": true,
+    "sweep": [
+      {
+        "threshold": 0.3,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 0
+      },
+      {
+        "threshold": 0.31,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 0
+      },
+      {
+        "threshold": 0.32,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 0
+      },
+      {
+        "threshold": 0.33,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 0
+      },
+      {
+        "threshold": 0.34,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 0
+      },
+      {
+        "threshold": 0.35,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 0
+      },
+      {
+        "threshold": 0.36,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 0
+      },
+      {
+        "threshold": 0.37,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 1
+      },
+      {
+        "threshold": 0.38,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 1
+      },
+      {
+        "threshold": 0.39,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 1
+      },
+      {
+        "threshold": 0.4,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 1
+      },
+      {
+        "threshold": 0.41,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 1
+      },
+      {
+        "threshold": 0.42,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.43,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.44,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.45,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.46,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.47,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.48,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.49,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.5,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.51,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.52,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.53,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.54,
+        "in_domain_false_fallback": 0,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.55,
+        "in_domain_false_fallback": 1,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.56,
+        "in_domain_false_fallback": 1,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.57,
+        "in_domain_false_fallback": 1,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.58,
+        "in_domain_false_fallback": 1,
+        "out_of_domain_caught": 2
+      },
+      {
+        "threshold": 0.59,
+        "in_domain_false_fallback": 1,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.6,
+        "in_domain_false_fallback": 1,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.61,
+        "in_domain_false_fallback": 1,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.62,
+        "in_domain_false_fallback": 1,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.63,
+        "in_domain_false_fallback": 2,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.64,
+        "in_domain_false_fallback": 2,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.65,
+        "in_domain_false_fallback": 2,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.66,
+        "in_domain_false_fallback": 2,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.67,
+        "in_domain_false_fallback": 2,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.68,
+        "in_domain_false_fallback": 3,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.69,
+        "in_domain_false_fallback": 4,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.7,
+        "in_domain_false_fallback": 7,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.71,
+        "in_domain_false_fallback": 7,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.72,
+        "in_domain_false_fallback": 8,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.73,
+        "in_domain_false_fallback": 9,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.74,
+        "in_domain_false_fallback": 11,
+        "out_of_domain_caught": 3
+      },
+      {
+        "threshold": 0.75,
+        "in_domain_false_fallback": 12,
+        "out_of_domain_caught": 3
+      }
+    ],
+    "optimal_range": [
+      0.59,
+      0.62
+    ],
+    "suggested_threshold": 0.6,
+    "at_suggested": {
+      "in_domain_false_fallback": "1/17",
+      "out_of_domain_caught": "3/3"
+    }
+  }
+}
