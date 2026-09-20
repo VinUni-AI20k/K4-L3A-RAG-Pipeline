@@ -5,7 +5,7 @@
 - Họ và tên: Nguyễn Vũ Anh
 - Mã học viên: 2A202602502
 - Nhóm: K4-L3A
-- Repository/branch: K4-L3A-RAG-Pipeline-NguyenVuAnh-2A202602502 / vuanh
+- Repository/branch: K4-L3A-RAG-Pipeline / vuanh
 
 ## Phần việc đã thực hiện
 

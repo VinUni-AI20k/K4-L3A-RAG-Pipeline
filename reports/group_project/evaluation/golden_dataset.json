@@ -1,0 +1,77 @@
+[
+  {
+    "question": "Bốn tiêu chí chấm điểm chính trong bài thi IELTS Writing Task 2 là gì?",
+    "expected_answer": "Bốn tiêu chí chấm điểm chính trong IELTS Writing Task 2 bao gồm: Task Response (Khả năng trả lời đề bài), Coherence and Cohesion (Độ mạch lạc và liên kết), Lexical Resource (Vốn từ vựng), và Grammatical Range and Accuracy (Độ đa dạng và chính xác ngữ pháp). Mỗi tiêu chí chiếm 25% tổng số điểm của bài viết.",
+    "expected_context": "WRITING TASK 2: Band Descriptors (public version) Task response Coherence and cohesion Lexical resource Grammatical range and accuracy"
+  },
+  {
+    "question": "Thí sinh cần viết tối thiểu bao nhiêu từ trong bài thi IELTS Writing Task 1 Academic?",
+    "expected_answer": "Thí sinh cần viết tối thiểu từ 150 từ trở lên cho bài thi IELTS Writing Task 1 Academic.",
+    "expected_context": "The instructions say 'Write at least 150 words'. This means you need to write over 150 words."
+  },
+  {
+    "question": "Bài thi Writing Task 1 chiếm bao nhiêu phần trăm tổng số điểm của phần thi Writing?",
+    "expected_answer": "Writing Task 1 chiếm khoảng 33% (tương đương 1/3) tổng số điểm của toàn bộ phần thi IELTS Writing.",
+    "expected_context": "Writing Task 1 counts for about 33% of your writing marks."
+  },
+  {
+    "question": "Thời gian được khuyến nghị dành cho phần thi IELTS Writing Task 1 là bao lâu?",
+    "expected_answer": "Thí sinh được khuyến nghị nên dành tối đa không quá 20 phút cho Writing Task 1 trong tổng số 60 phút của toàn bộ bài thi viết.",
+    "expected_context": "You have one hour in total for your whole writing test (both task 1 and task 2). IELTS recommend you spend no more than 20 mins on writing task 1."
+  },
+  {
+    "question": "Có những dạng biểu đồ hoặc sơ đồ phổ biến nào trong bài thi IELTS Academic Writing Task 1?",
+    "expected_answer": "Có 6 dạng biểu đồ và sơ đồ phổ biến bao gồm: Biểu đồ cột (Bar Charts), Biểu đồ đường (Line Graphs), Bảng biểu số liệu (Tables), Biểu đồ tròn (Pie Charts), Sơ đồ quy trình hoặc chu trình (Diagrams/Processes), và Bản đồ (Maps).",
+    "expected_context": "Below are the six types of tasks that can appear in IELTS Writing task 1... Bar Charts, Line Graphs, Tables, Pie Charts, Diagrams, Maps"
+  },
+  {
+    "question": "Để đạt điểm Band 9 ở tiêu chí Task Response trong IELTS Writing Task 2 cần đáp ứng điều kiện gì?",
+    "expected_answer": "Để đạt Band 9 ở tiêu chí Task Response, thí sinh phải trả lời đầy đủ và trọn vẹn mọi yêu cầu của đề bài, đồng thời trình bày một lập trường phát triển toàn diện với các ý tưởng liên quan, được mở rộng triệt để và hỗ trợ lập luận chặt chẽ.",
+    "expected_context": "Band 9 Task response: fully addresses all parts of the task; presents a fully developed position in answer to the question with relevant, fully extended and well supported ideas."
+  },
+  {
+    "question": "Mô tả tiêu chuẩn vốn từ vựng (Lexical Resource) ở mức Band 8 trong Writing Task 2 là gì?",
+    "expected_answer": "Ở mức Band 8, thí sinh sử dụng vốn từ vựng phong phú một cách lưu loát và linh hoạt để truyền đạt ý nghĩa chính xác; vận dụng thành thạo các từ vựng ít phổ biến, chỉ có thể xuất hiện vài lỗi nhỏ hiếm hoi trong việc lựa chọn từ ngữ hoặc kết hợp từ (collocation).",
+    "expected_context": "Band 8 Lexical resource: uses a wide range of vocabulary fluently and flexibly to convey precise meanings; skillfully uses uncommon lexical items but there may be occasional inaccuracies in word choice and collocation"
+  },
+  {
+    "question": "Tiêu chí phân chia đoạn văn (paragraphing) được đánh giá như thế nào ở mức Band 7 trong Coherence and Cohesion của Writing Task 2?",
+    "expected_answer": "Ở Band 7, thí sinh sắp xếp thông tin và các ý tưởng một cách logic, kiểm soát tốt mọi khía cạnh của tính liên kết, và sử dụng việc phân chia đoạn văn một cách đầy đủ, thích hợp với một chủ đề trung tâm rõ ràng trong từng đoạn văn.",
+    "expected_context": "Band 7 Coherence and cohesion: logically organizes information and ideas; there is clear progression throughout; uses a range of cohesive devices appropriately; presents a clear central topic within each paragraph"
+  },
+  {
+    "question": "Điều gì sẽ xảy ra nếu bài viết IELTS Writing Task 2 viết dưới số từ quy định hoặc bị lạc đề?",
+    "expected_answer": "Nếu bài viết bị viết dưới số lượng từ quy định (underlength), không giải quyết đầy đủ yêu cầu đề bài hoặc bị lạc đề, điểm số ở tiêu chí Task Response sẽ bị trừ nặng và thường bị giới hạn tối đa ở mức Band 5 hoặc thấp hơn tùy theo mức độ vi phạm.",
+    "expected_context": "Band 5 Task response: addresses the task only partially; the format may be inappropriate; expresses a position but the development is not always clear; underlength or limited focus"
+  },
+  {
+    "question": "Điểm khác biệt mấu chốt giữa đoạn tổng quan (Overview) và đoạn kết luận (Conclusion) trong IELTS Writing Task 1 là gì?",
+    "expected_answer": "Đoạn tổng quan (Overview) tóm tắt các xu hướng chính, các điểm cao nhất hoặc thấp nhất, hoặc các giai đoạn tổng thể mà không nêu số liệu chi tiết và là phần bắt buộc phải có trong Task 1; trong khi đoạn kết luận (Conclusion) mang tính nêu quan điểm hoặc suy luận cá nhân và không cần thiết trong bài báo cáo Task 1.",
+    "expected_context": "Writing Task 1 is a report, not an essay. An overview is essential to highlight key trends and main features without concluding opinions."
+  },
+  {
+    "question": "Những phương tiện liên kết (cohesive devices) phổ biến nào thường được dùng để nối các câu trong bài luận IELTS?",
+    "expected_answer": "Các phương tiện liên kết phổ biến bao gồm từ chuyển tiếp (transitions), phép quy chiếu đại từ (pronoun referencing), liên từ và các cụm từ nối logic như furthermore, however, consequently, in addition.",
+    "expected_context": "uses a range of cohesive devices appropriately... skillful use of transitions, conjunctions, and referential pronouns to ensure smooth flow."
+  },
+  {
+    "question": "Tiêu chí Grammatical Range and Accuracy ở mức Band 7 đòi hỏi những yêu cầu ngữ pháp gì?",
+    "expected_answer": "Thí sinh phải sử dụng đa dạng các cấu trúc câu phức, tạo ra các câu văn không mắc lỗi với tần suất thường xuyên, và thể hiện khả năng kiểm soát tốt ngữ pháp và dấu câu dù vẫn có thể mắc một vài lỗi nhỏ.",
+    "expected_context": "Band 7 Grammatical range and accuracy: uses a variety of complex structures; produces frequent error-free sentences; has good control of grammar and punctuation but may make a few errors"
+  },
+  {
+    "question": "Tại sao thí sinh nên tránh sử dụng các mẫu câu học vẹt hoặc thành ngữ bị lạm dụng trong IELTS Writing?",
+    "expected_answer": "Giám khảo được huấn luyện chuyên sâu để nhận diện các câu học thuộc lòng và các thành ngữ sáo rỗng; việc lạm dụng chúng sẽ bị trừ điểm ở tiêu chí Lexical Resource và Task Response vì không thể hiện được sự linh hoạt và tự nhiên trong cách sử dụng từ ngữ thực tế.",
+    "expected_context": "Examiner feedback notes that memorized sentences and unnatural idioms are penalized because they do not demonstrate authentic lexical flexibility."
+  },
+  {
+    "question": "Trong dạng bài Discussion Essay (Thảo luận cả hai quan điểm và đưa ra ý kiến), người viết bắt buộc phải trình bày những nội dung gì?",
+    "expected_answer": "Người viết bắt buộc phải phân tích khách quan và đồng đều cả hai quan điểm đã cho trong đề bài, đồng thời nêu rõ ràng lập trường/ý kiến cá nhân xuyên suốt bài viết, củng cố các luận điểm bằng những giải thích hoặc ví dụ minh họa phù hợp.",
+    "expected_context": "Discussion essay expressions: Discuss both views and give your opinion requires addressing both sides equally and presenting a clear opinion throughout the essay."
+  },
+  {
+    "question": "Điểm tổng thể của phần thi Writing được tính toán từ Task 1 và Task 2 như thế nào?",
+    "expected_answer": "Task 2 có trọng số gấp đôi Task 1 (Task 2 chiếm 2/3 hay khoảng 66.7%, Task 1 chiếm 1/3 hay khoảng 33.3% tổng điểm). Điểm trung bình có trọng số của hai phần sẽ được tính toán và làm tròn đến 0.5 band hoặc 1.0 band gần nhất theo quy tắc làm tròn của IELTS.",
+    "expected_context": "Writing Task 1 counts for about 33% of your writing marks, while Task 2 counts for 66%. The final writing score is a weighted average."
+  }
+]
