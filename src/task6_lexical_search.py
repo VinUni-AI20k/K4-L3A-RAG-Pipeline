@@ -64,7 +64,15 @@ def lexical_search(query: str, top_k: int = 10) -> list[dict]:
     corpus = _corpus()
     if not corpus:
         return []
-    scores = build_bm25_index(corpus).get_scores(_tokens(query))
+    query_tokens = _tokens(query)
+    scores = build_bm25_index(corpus).get_scores(query_tokens)
+    # rank_bm25's epsilon smoothing can produce all-zero scores for a tiny
+    # corpus even when query terms match. Keep lexical retrieval useful in
+    # that edge case with the same BM25 calculation used by our fallback.
+    if not any(float(score) > 0 for score in scores) and query_tokens:
+        scores = _FallbackBM25([_tokens(item["content"]) for item in corpus]).get_scores(
+            query_tokens
+        )
     ranked = sorted(enumerate(scores), key=lambda pair: float(pair[1]), reverse=True)
     results = []
     for index, score in ranked:
