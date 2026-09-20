@@ -23,19 +23,17 @@ def rerank_rrf(
     items: dict[str, dict] = {}
 
     for ranked_list in ranked_lists:
-        if not ranked_list:
-            continue
-        for rank, item in enumerate(ranked_list, 1):
+        for rank, item in enumerate(ranked_list, start=1):
             item_id = item["id"]
-            scores[item_id] = scores.get(item_id, 0.0) + 1.0 / (k + rank)
+            scores[item_id] = scores.get(item_id, 0.0) + (1.0 / (k + rank))
             if item_id not in items:
                 items[item_id] = item
 
     ranked_ids = sorted(scores.keys(), key=lambda item_id: scores[item_id], reverse=True)
-    results = []
+    results: list[dict] = []
     for item_id in ranked_ids[:top_k]:
-        result = dict(items[item_id])
-        result["score"] = float(scores[item_id])
+        result = items[item_id].copy()
+        result["score"] = scores[item_id]
         result["retrieval_method"] = "hybrid"
         results.append(result)
 
@@ -43,4 +41,14 @@ def rerank_rrf(
 
 
 if __name__ == "__main__":
-    print("Implement rerank_rrf, then run contract tests.")
+    from .task5_semantic_search import semantic_search
+    from .task6_lexical_search import lexical_search
+
+    query = "đào tạo lái xe hạng B"
+    dense = semantic_search(query, top_k=5)
+    sparse = lexical_search(query, top_k=5)
+    hybrid = rerank_rrf([dense, sparse], top_k=5)
+    print(f"Hybrid results for: {query}")
+    for item in hybrid:
+        print(f"[{item['score']:.4f}] ({item['retrieval_method']}) {item['id']}: {item['content'][:80]}...")
+
