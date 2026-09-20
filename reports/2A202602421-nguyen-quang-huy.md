@@ -6,7 +6,7 @@
 - Mã học viên: 2A202602421
 - Nhóm: K4-L3A
 - Repository/branch: `kamitoznguyen-collab/K4-L3A-RAG-Pipeline`, nhánh `Huy`
-- Vai trò: **Pipeline Lead** — retrieval, generation và evaluation
+- Vai trò: làm toàn bộ bài — data, retrieval, generation, UI và evaluation
 
 ## Phần việc đã thực hiện
 
@@ -24,8 +24,8 @@
 
 Kiểm chứng: `pytest -q` → 20/20 pass (15 contract + 5 acceptance).
 
-Thành viên khác (khvavuong) dựng khung repo, `pyproject.toml` và template báo cáo
-(commit `7a43099`–`6a2a2d4`).
+Các commit `7a43099`–`6a2a2d4` là bộ khung đề bài có sẵn (docs/, `src/contracts.py`,
+các file task ở dạng stub, template báo cáo). Toàn bộ phần implement là của tôi.
 
 ## Quyết định kỹ thuật quan trọng
 

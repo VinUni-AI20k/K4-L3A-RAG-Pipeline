@@ -1,11 +1,10 @@
 # Báo cáo cá nhân
 
-Mỗi thành viên copy template từ
-[`group_project/ịndividual/INDIVIDUAL_REPORT.md`](../group_project/%E1%BB%8Bndividual/INDIVIDUAL_REPORT.md)
-thành `reports/<student-id>-<short-name>.md` rồi điền vào.
+Báo cáo cá nhân đặt tên theo `<student-id>-<short-name>.md`, viết theo template
+[`group_project/ịndividual/INDIVIDUAL_REPORT.md`](../group_project/%E1%BB%8Bndividual/INDIVIDUAL_REPORT.md).
 
-Template chỉ tồn tại một bản duy nhất ở `group_project/` — đừng copy bản trống
-vào đây, vì sửa template ở một chỗ sẽ lệch với chỗ còn lại.
+Đừng copy bản template trống vào đây — template chỉ nên tồn tại một bản duy nhất
+ở `group_project/`, sửa hai chỗ sẽ lệch nhau.
 
-Báo cáo đánh giá của nhóm nằm ở `group_project/evaluation/RESULT.md`, không nằm
-trong thư mục này.
+Báo cáo đánh giá nằm ở `group_project/evaluation/RESULT.md`, không nằm trong thư
+mục này.
