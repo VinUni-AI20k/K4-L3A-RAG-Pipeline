@@ -17,6 +17,8 @@ import json
 from pathlib import Path
 import re
 import subprocess
+import shutil
+import tempfile
 
 LANDING_DIR = Path(__file__).parent.parent / "data" / "landing"
 OUTPUT_DIR = Path(__file__).parent.parent / "data" / "standardized"
@@ -56,9 +58,95 @@ def _extract_doc_text_fallback(file_path: Path) -> str:
 
     return ""
 
+def _convert_doc_to_docx_with_libreoffice(doc_path: Path) -> Path | None:
+    """Chuyển .doc sang .docx bằng LibreOffice headless để MarkItDown đọc được."""
+    if not shutil.which("libreoffice"):
+        return None
+    try:
+        temp_dir = Path(tempfile.mkdtemp())
+        cmd = [
+            "libreoffice",
+            "--headless",
+            "--convert-to",
+            "docx",
+            str(doc_path),
+            "--outdir",
+            str(temp_dir),
+        ]
+        result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=30)
+        if result.returncode == 0:
+            converted_docx = temp_dir / f"{doc_path.stem}.docx"
+            if converted_docx.exists():
+                return converted_docx
+    except Exception as e:
+        print(f" -> LibreOffice convert thất bại: {e}")
+    return None
+
+
+def _extract_doc_text_with_antiword(file_path: Path) -> str:
+    """Fallback dùng antiword để đọc văn bản .doc tiếng Việt."""
+    if not shutil.which("antiword"):
+        return ""
+    try:
+        proc = subprocess.run(
+            ["antiword", "-m", "UTF-8.txt", str(file_path)],  # Xuất UTF-8 sạch
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            check=True,
+            timeout=15,
+        )
+        return proc.stdout.strip()
+    except Exception:
+        # Fallback không tham số font map
+        try:
+            proc = subprocess.run(
+                ["antiword", str(file_path)],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                check=True,
+            )
+            return proc.stdout.strip()
+        except Exception:
+            return ""
+
+
+def parse_legal_file(path: Path, converter) -> str:
+    """Parse tài liệu pháp luật (PDF, DOCX, DOC)."""
+    text_content = ""
+    temp_docx = None
+
+    # Nếu là .doc legacy: Ưu tiên convert sang .docx tạm để đưa qua MarkItDown
+    if path.suffix.lower() == ".doc":
+        temp_docx = _convert_doc_to_docx_with_libreoffice(path)
+        target_path = temp_docx if temp_docx else path
+    else:
+        target_path = path
+
+    # 1. Thử convert bằng MarkItDown
+    if converter and target_path.suffix.lower() in [".pdf", ".docx"]:
+        try:
+            res = converter.convert(str(target_path))
+            if res and res.text_content:
+                text_content = res.text_content.strip()
+        except Exception as e:
+            print(f" -> Lỗi MarkItDown: {e}")
+
+    # 2. Fallback nếu vẫn là .doc và chưa có text (hoặc LibreOffice chưa cài)
+    if not text_content and path.suffix.lower() == ".doc":
+        print(f" -> Dùng antiword fallback cho {path.name}...")
+        text_content = _extract_doc_text_with_antiword(path)
+
+    # Dọn dẹp file tạm .docx
+    if temp_docx and temp_docx.exists():
+        shutil.rmtree(temp_docx.parent, ignore_errors=True)
+
+    return text_content
+
 
 def convert_legal_docs() -> None:
-    """Convert PDF/DOC/DOCX trong landing/legal vào standardized/legal."""
+    """Convert PDF/DOC/DOCX trong landing/legal sang standardized/legal."""
     legal_dir = LANDING_DIR / "legal"
     output_dir = OUTPUT_DIR / "legal"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -67,13 +155,12 @@ def convert_legal_docs() -> None:
         print(f"[Legal] Bỏ qua: Thư mục {legal_dir} không tồn tại.")
         return
 
-    # Khởi tạo MarkItDown nếu có
     converter = None
     try:
         from markitdown import MarkItDown
         converter = MarkItDown()
     except Exception as e:
-        print(f"[Notice] MarkItDown chưa khởi tạo được ({e}), sử dụng fallback.")
+        print(f"[Notice] MarkItDown chưa được cài: {e}")
 
     valid_exts = {".pdf", ".doc", ".docx"}
     for path in legal_dir.iterdir():
@@ -81,28 +168,21 @@ def convert_legal_docs() -> None:
             continue
 
         target_file = output_dir / f"{path.stem}.md"
-        text_content = ""
+
+        # Yêu cầu 4: Chống chạy lại trùng lặp (nếu file đã convert và mới hơn file gốc)
+        if target_file.exists() and target_file.stat().st_size > 0:
+            if target_file.stat().st_mtime >= path.stat().st_mtime:
+                print(f"[Legal] Đã tồn tại, bỏ qua: {target_file.name}")
+                continue
 
         print(f"[Legal] Đang convert: {path.name}...")
+        text_content = parse_legal_file(path, converter)
 
-        # 1. Thử convert bằng MarkItDown
-        if converter:
-            try:
-                res = converter.convert(str(path))
-                if res and res.text_content:
-                    text_content = res.text_content.strip()
-            except Exception as conv_err:
-                print(f" -> MarkItDown không đọc được file {path.name} ({conv_err}). Chuyển fallback.")
-
-        # 2. Fallback nếu MarkItDown không xử lý được (đặc biệt với .doc legacy)
-        if not text_content:
-            text_content = _extract_doc_text_fallback(path)
-
+        # Yêu cầu 4: Không tạo file rỗng
         if not text_content.strip():
-            print(f" [!] Cảnh báo: Không thể trích xuất nội dung từ {path.name}. Vui lòng đổi sang .docx hoặc .pdf.")
+            print(f" [!] Bỏ qua file rỗng hoặc không đọc được: {path.name}")
             continue
 
-        # Định dạng header chuẩn cho file văn bản quy định
         doc_title = path.stem.replace("_", " ").title()
         metadata_header = (
             f"# {doc_title}\n\n"
