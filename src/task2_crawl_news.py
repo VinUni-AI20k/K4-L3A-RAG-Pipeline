@@ -26,19 +26,25 @@ ARTICLE_URLS = [
 
 
 async def crawl_article(url: str) -> dict:
-    
-     from datetime import datetime
-     from crawl4ai import AsyncWebCrawler
-    
-     async with AsyncWebCrawler() as crawler:
-         result = await crawler.arun(url=url)
-         return {
-             "url": url,
-             "title": result.metadata.get("title", "Unknown"),
-             "date_crawled": datetime.now().isoformat(),
-             "content_markdown": result.markdown,
-         }
+    from datetime import datetime
+    from crawl4ai import AsyncWebCrawler
 
+    async with AsyncWebCrawler() as crawler:
+        result = await crawler.arun(url=url)
+        if not result.success:
+            raise RuntimeError(f"Crawl failed for {url}: {result.error_message}")
+
+        markdown = result.markdown
+        content = markdown.raw_markdown if markdown is not None else ""
+        if not content.strip():
+            raise ValueError(f"No Markdown content returned for {url}")
+
+        return {
+            "url": url,
+            "title": (result.metadata or {}).get("title") or "Unknown",
+            "date_crawled": datetime.now().astimezone().isoformat(),
+            "content_markdown": content,
+        }
 
 
 async def crawl_all() -> None:
