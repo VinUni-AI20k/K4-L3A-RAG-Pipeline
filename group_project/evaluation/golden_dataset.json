@@ -1,0 +1,107 @@
+[
+  {
+    "question": "Theo Nghị quyết 198/2025/QH15, mỗi doanh nghiệp hoặc hộ kinh doanh bị thanh tra tối đa bao nhiêu lần trong một năm?",
+    "expected_answer": "Không quá 1 lần trong năm, trừ trường hợp có dấu hiệu vi phạm rõ ràng.",
+    "expected_context": "Số lần thanh tra đối với mỗi doanh nghiệp, hộ kinh doanh, cá nhân kinh doanh (nếu có) không được quá 01 lần trong năm, trừ trường hợp có dấu hiệu vi phạm rõ ràng.",
+    "doc_type": "legal",
+    "source": "nghi-quyet-198-2025-qh15-kinh-te-tu-nhan.md"
+  },
+  {
+    "question": "Nghị quyết 198/2025/QH15 định nghĩa hộ kinh doanh như thế nào?",
+    "expected_answer": "Hộ kinh doanh là loại hình kinh doanh do một cá nhân hoặc các thành viên hộ gia đình đăng ký thành lập, chịu trách nhiệm bằng toàn bộ tài sản của mình đối với hoạt động kinh doanh.",
+    "expected_context": "Hộ kinh doanh là loại hình kinh doanh do một cá nhân hoặc các thành viên hộ gia đình đăng ký thành lập theo quy định của pháp luật và chịu trách nhiệm bằng toàn bộ tài sản của mình đối với hoạt động kinh doanh của hộ kinh doanh.",
+    "doc_type": "legal",
+    "source": "nghi-quyet-198-2025-qh15-kinh-te-tu-nhan.md"
+  },
+  {
+    "question": "Nghị định 168/2025/NĐ-CP quy định về những nội dung nào liên quan đến hộ kinh doanh?",
+    "expected_answer": "Nghị định quy định về hồ sơ, trình tự, thủ tục đăng ký doanh nghiệp và đăng ký hộ kinh doanh; liên thông thủ tục đăng ký; đăng ký qua mạng thông tin điện tử; cung cấp, khai thác và chia sẻ thông tin đăng ký.",
+    "expected_context": "Nghị định này quy định về hồ sơ, trình tự, thủ tục đăng ký doanh nghiệp; quy định về đăng ký và hoạt động của hộ kinh doanh; quy định việc liên thông thủ tục đăng ký doanh nghiệp, đăng ký hộ kinh doanh; đăng ký doanh nghiệp, đăng ký hộ kinh doanh qua mạng thông tin điện tử; cung cấp thông tin đăng ký doanh nghiệp, đăng ký hộ kinh doanh, khai thác và chia sẻ thông tin doanh nghiệp.",
+    "doc_type": "legal",
+    "source": "nghi-dinh-168-2025-nd-cp-dang-ky-ho-kinh-doanh.md"
+  },
+  {
+    "question": "Nghị định 168/2025/NĐ-CP áp dụng cho những đối tượng nào?",
+    "expected_answer": "Tổ chức, cá nhân trong nước và nước ngoài thực hiện đăng ký doanh nghiệp/hộ kinh doanh, doanh nghiệp, hộ kinh doanh, và cơ quan đăng ký kinh doanh.",
+    "expected_context": "1. Tổ chức, cá nhân trong nước; tổ chức, cá nhân nước ngoài thực hiện đăng ký doanh nghiệp, đăng ký hộ kinh doanh theo quy định của pháp luật Việt Nam.\n2. Doanh nghiệp.\n3. Hộ kinh doanh.\n4. Cơ quan đăng ký kinh doanh.",
+    "doc_type": "legal",
+    "source": "nghi-dinh-168-2025-nd-cp-dang-ky-ho-kinh-doanh.md"
+  },
+  {
+    "question": "Nghị định 70/2025/NĐ-CP sửa đổi, bổ sung nghị định nào về hóa đơn, chứng từ?",
+    "expected_answer": "Nghị định 70/2025/NĐ-CP sửa đổi, bổ sung Nghị định số 123/2020/NĐ-CP ngày 19/10/2020 quy định về hóa đơn, chứng từ.",
+    "expected_context": "Chính phủ ban hành Nghị định sửa đổi, bổ sung một số điều của Nghị định số 123/2020/NĐ-CP ngày 19 tháng 10 năm 2020 của Chính phủ quy định về hóa đơn, chứng từ.",
+    "doc_type": "legal",
+    "source": "nghi-dinh-70-2025-nd-cp-sua-doi-hoa-don-chung-tu.md"
+  },
+  {
+    "question": "Theo Nghị định 70/2025/NĐ-CP, hóa đơn điện tử khởi tạo từ máy tính tiền là gì?",
+    "expected_answer": "Là hóa đơn có mã của cơ quan thuế hoặc dữ liệu điện tử để người mua truy xuất, kê khai, do người bán lập từ hệ thống tính tiền và dữ liệu được chuyển tới cơ quan thuế.",
+    "expected_context": "Hóa đơn điện tử khởi tạo từ máy tính tiền có kết nối chuyển dữ liệu điện tử với cơ quan thuế là hóa đơn có mã của cơ quan thuế hoặc dữ liệu điện tử để người mua có thể truy xuất, kê khai thông tin hóa đơn điện tử khởi tạo từ máy tính tiền do tổ chức, cá nhân bán hàng hóa, cung cấp dịch vụ lập từ hệ thống tính tiền, dữ liệu được chuyển đến cơ quan thuế.",
+    "doc_type": "legal",
+    "source": "nghi-dinh-70-2025-nd-cp-sua-doi-hoa-don-chung-tu.md"
+  },
+  {
+    "question": "Luật Thương mại điện tử 122/2025/QH15 áp dụng cho những đối tượng nào?",
+    "expected_answer": "Áp dụng đối với tổ chức, cá nhân trong nước và nước ngoài tham gia hoạt động thương mại điện tử tại Việt Nam.",
+    "expected_context": "Luật này áp dụng đối với tổ chức, cá nhân trong nước và nước ngoài tham gia hoạt động thương mại điện tử tại Việt Nam.",
+    "doc_type": "legal",
+    "source": "luat-122-2025-qh15-thuong-mai-dien-tu.md"
+  },
+  {
+    "question": "Theo Luật Thương mại điện tử 122/2025/QH15, nền tảng thương mại điện tử bao gồm những loại nào?",
+    "expected_answer": "Gồm nền tảng thương mại điện tử kinh doanh trực tiếp, nền tảng trung gian, mạng xã hội hoạt động thương mại điện tử và nền tảng thương mại điện tử tích hợp.",
+    "expected_context": "Nền tảng thương mại điện tử là nền tảng số được thiết lập để thực hiện hoạt động thương mại điện tử, bao gồm: nền tảng thương mại điện tử kinh doanh trực tiếp, nền tảng thương mại điện tử trung gian, mạng xã hội hoạt động thương mại điện tử và nền tảng thương mại điện tử tích hợp.",
+    "doc_type": "legal",
+    "source": "luat-122-2025-qh15-thuong-mai-dien-tu.md"
+  },
+  {
+    "question": "Từ năm 2026, hộ kinh doanh có doanh thu bao nhiêu thì không phải nộp thuế?",
+    "expected_answer": "Hộ kinh doanh có doanh thu từ 500 triệu đồng/năm trở xuống không phải nộp thuế GTGT và thuế thu nhập cá nhân.",
+    "expected_context": "Theo Luật Thuế thu nhập cá nhân (sửa đổi) vừa được Quốc hội thông qua ngày 10-12, ngưỡng doanh thu tính thuế của hộ kinh doanh được nâng lên 500 triệu đồng/năm, từ đầu năm 2026.",
+    "doc_type": "news",
+    "source": "article_04.md"
+  },
+  {
+    "question": "Hộ kinh doanh nhóm 1 (doanh thu từ 500 triệu đồng/năm trở xuống) có bắt buộc dùng hóa đơn điện tử không?",
+    "expected_answer": "Không bắt buộc áp dụng hóa đơn điện tử và chế độ kế toán, chỉ phải kê khai doanh thu 2 lần/năm.",
+    "expected_context": "Với hộ kinh doanh thuộc nhóm 1, có doanh thu từ 500 triệu đồng trở xuống/năm sẽ không chịu thuế GTGT, không phải nộp thuế TNCN, không bắt buộc áp dụng hóa đơn điện tử và chế độ kế toán, hộ kinh doanh chỉ phải kê khai doanh thu 2 lần/năm.",
+    "doc_type": "news",
+    "source": "article_04.md"
+  },
+  {
+    "question": "Nghị định nào và từ ngày nào nâng ngưỡng doanh thu miễn thuế cho hộ kinh doanh lên 1 tỷ đồng?",
+    "expected_answer": "Nghị định 141, ban hành ngày 29/4/2026, nâng ngưỡng miễn thuế cho hộ kinh doanh lên 1 tỷ đồng/năm, gấp đôi mức 500 triệu đồng trước đó.",
+    "expected_context": "Chính phủ vừa có Nghị định 141 ngày 29/4 sửa quy định về ngưỡng miễn thuế với cá nhân, hộ kinh doanh lên 1 tỷ đồng một năm, gấp đôi mức hiện hành.",
+    "doc_type": "news",
+    "source": "article_06.md"
+  },
+  {
+    "question": "Từ ngày 1-1-2026, hộ kinh doanh chuyển từ hình thức nộp thuế nào sang hình thức nào?",
+    "expected_answer": "Chuyển từ thuế khoán sang thuế kê khai.",
+    "expected_context": "Từ ngày 1-1, hộ kinh doanh sẽ chuyển từ thuế khoán sang thuế kê khai. Ngưỡng doanh thu chịu thuế được nâng lên 500 triệu đồng/năm.",
+    "doc_type": "news",
+    "source": "article_02.md"
+  },
+  {
+    "question": "Hộ kinh doanh có doanh thu dưới 3 tỷ đồng/năm nhưng không xác định được chi phí đầu vào thì nộp thuế thu nhập cá nhân theo cách nào?",
+    "expected_answer": "Nộp thuế theo tỷ lệ trên doanh thu, mức 0,5-2% tùy ngành nghề, được trừ đi ngưỡng không chịu thuế 500 triệu đồng/năm trước khi tính.",
+    "expected_context": "Trường hợp hộ có doanh thu dưới 3 tỷ không xác định được chi phí, họ sẽ tiếp tục nộp thuế theo tỷ lệ trên doanh thu như hiện nay, mức 0,5-2% tùy ngành nghề. Tuy nhiên, họ sẽ được trừ đi khoản thu thuộc ngưỡng không chịu thuế (500 triệu đồng một năm), trước khi tính toán.",
+    "doc_type": "news",
+    "source": "article_03.md"
+  },
+  {
+    "question": "Từ 1-1-2026, cơ quan thuế có dùng doanh thu khai thuế năm 2026 để truy thu thuế các năm trước của hộ kinh doanh không?",
+    "expected_answer": "Không, trừ trường hợp cơ quan thuế phát hiện hộ kinh doanh có hành vi che giấu doanh thu dẫn đến thiếu thuế.",
+    "expected_context": "Một trong những nội dung quan trọng là từ ngày 1-1-2026, cơ quan thuế không sử dụng doanh thu khai thuế năm 2026 để xác định lại nghĩa vụ thuế các năm trước, không xử phạt vi phạm hành chính đối với các nghĩa vụ thuế đã thực hiện theo phương pháp khoán, trừ trường hợp cơ quan thuế, cơ quan nhà nước có thẩm quyền phát hiện hộ kinh doanh, cá nhân kinh doanh có hành vi che giấu doanh thu dẫn đến thiếu thuế.",
+    "doc_type": "news",
+    "source": "article_01.md"
+  },
+  {
+    "question": "Theo khoản 5 Điều 17 Nghị định 68/2026, cơ quan thuế chỉ truy thu thuế các năm trước của hộ kinh doanh trong trường hợp nào?",
+    "expected_answer": "Chỉ truy thu khi có cơ sở khẳng định hộ kinh doanh, cá nhân kinh doanh đã khai thuế sai ở những năm trước.",
+    "expected_context": "Không lấy doanh thu của năm 2026 làm cơ sở để truy thu thuế những năm trước của hộ kinh doanh, cá nhân kinh doanh. Cơ quan thuế chỉ truy thu khi có cơ sở khẳng định những năm trước, người kinh doanh đã khai thuế sai.",
+    "doc_type": "news",
+    "source": "article_05.md"
+  }
+]
