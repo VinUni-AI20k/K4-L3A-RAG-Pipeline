@@ -3,7 +3,7 @@
 ## Thông tin
 
 - Họ và tên: Lê Chí Hùng
-- Mã học viên: (điền)
+- Mã học viên: 2A202602863
 - Nhóm: DuoH (K4-DAY08)
 - Repository/branch: https://github.com/lechihung252/K4-DAY08-DuoH — `main`, các nhánh `feature/task6-lexical-search`, `feature/task7-reranking`, `feature/task8-pageindex`, `feature/task9-retrieval-pipeline`
 
