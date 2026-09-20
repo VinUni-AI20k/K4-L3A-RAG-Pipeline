@@ -1,0 +1,49 @@
+# Individual contribution report
+
+## Thông tin
+
+- Họ và tên: Lê Chí Hùng
+- Mã học viên: (điền)
+- Nhóm: DuoH (K4-DAY08)
+- Repository/branch: https://github.com/lechihung252/K4-DAY08-DuoH — `main`, các nhánh `feature/task6-lexical-search`, `feature/task7-reranking`, `feature/task8-pageindex`, `feature/task9-retrieval-pipeline`
+
+## Phần việc đã thực hiện
+
+| Module/deliverable | Việc tôi trực tiếp làm | File/commit/PR | Trạng thái |
+|---|---|---|---|
+| Task 2 — crawl news | Viết crawler Crawl4AI cho 10 bài từ ielts.org, IDP, ieltsadvantage, ieltsliz, TED IELTS, cathoven; loại 2 nguồn bị WAF chặn thay vì vượt; JSON có `url/title/date_crawled/content_markdown` | `src/task2_crawl_news.py`, commit `49038c7` | Done |
+| Dữ liệu corpus | Chạy pipeline thu thập + chuẩn hoá, commit 5 PDF legal (`sources.json` ghi nguồn) và 10 news JSON + 15 Markdown chuẩn hoá | `data/landing/*`, `data/standardized/*`, commit `ea8e851` | Done |
+| Task 6 — BM25 | `lexical_search` trên cùng corpus chunks của Task 4; tokenizer lowercase + unigram + bigram; cache index theo corpus | `src/task6_lexical_search.py`, PR #2 (`282a0c7`) | Done |
+| Task 7 — RRF | `rerank_rrf` gộp dense + BM25 theo ID, k = 60, chỉ chạy một lần, giữ schema `SearchResult` | `src/task7_reranking.py`, PR #3 (`4a2fc4a`) | Done |
+| Task 8 — PageIndex fallback | Upload legal PDF / news (convert sang PDF bằng fpdf2), cache `doc_id`, query có timeout riêng vì SDK không có; trả `retrieval_method="pageindex"`, trả `[]` khi thiếu key | `src/task8_pageindex_vectorless.py`, PR #4 (`5d199f9`), `268fce2` | Done |
+| Task 9 — retrieval pipeline | `retrieve_detailed`: dense + BM25 → RRF một lần → fallback theo cosine gốc; hàm `calibrate_threshold` và chọn ngưỡng 0.53 | `src/task9_retrieval_pipeline.py`, PR #5/#6 (`9a10480`), `0fb3190` | Done |
+| Golden dataset | 20 câu Q&A (12 EN + 8 VI, 6 nhóm) có `expected_context` trích từ corpus, 6 câu out-of-domain để hiệu chỉnh | `group_project/evaluation/golden_dataset.json`, `out_of_domain.json`, commit `0c88ad9` | Done |
+| Task 11 — evaluation & RESULT.md | Script ragas 0.4.3 chấm 4 metric cho 2 config A/B, ghi per-question JSON + summary; điền toàn bộ `RESULT.md` gồm failure analysis và recommendations; sửa `normalize_citations` trong Task 10 sau khi phát hiện refusal giả | `src/task11_evaluation.py`, `group_project/evaluation/RESULT.md`, `results/`, commit `1b971b4` | Done |
+
+## Quyết định kỹ thuật quan trọng
+
+1. **Quyết định:** Fallback quyết định bằng cosine score gốc của dense (ngưỡng 0.53), không dùng RRF score.
+   **Lý do/evidence:** RRF chỉ là tổng nghịch đảo thứ hạng (~0.03 với mọi query, liên quan hay không) nên không đo được độ tự tin. Chạy `python -m src.task9_retrieval_pipeline --calibrate`: in-domain top-1 thấp nhất 0.5907, out-of-domain cao nhất 0.4714 → chọn 0.53 ở giữa khoảng trống, mỗi phía dư ~0.06.
+   **Trade-off:** Query near-domain (IELTS Speaking/Listening) vẫn đạt 0.65–0.73 nên không tách được bằng cosine; phải dựa vào safe refusal của Task 10. Ngưỡng gắn với bge-m3, đổi embedding phải hiệu chỉnh lại.
+
+2. **Quyết định:** Giữ hybrid + RRF (Config B) làm mặc định dù average 4 metric thấp hơn dense-only 0.03.
+   **Lý do/evidence:** B tăng context recall +0.06 và faithfulness +0.02; chênh lệch average nằm trong nhiễu của judge với n = 20 (g01/A bị chấm faithfulness 0.0 dù đúng). Precision giảm −0.16 là do BM25 đưa chunk boilerplate "Band 1" vào top-5 — lỗi thuộc chunking, không phải bản chất của hybrid.
+   **Trade-off:** Người dùng thấy nhiều chunk nhiễu hơn trong phần nguồn; cần reranker (recommendation #2 trong RESULT.md) để lấy lại precision.
+
+## Kiểm thử và kết quả
+
+- Test hoặc query tôi đã dùng: `pytest -q` (30 passed); `python -m src.task9_retrieval_pipeline --calibrate` với 6 query in-domain + 6 out-of-domain; `python -m src.task11_evaluation` trên 20 câu golden cho cả A và B.
+- Kết quả trước/sau nếu có: Config A → B: recall 0.788 → 0.848, faithfulness 0.683 → 0.700, precision 0.777 → 0.616. Sau khi sửa parser citation: refusal giả do format `[chunk_id: ...]` / thiếu tiền tố `news/` giảm về 0, còn lại 5–6 refusal đều do retrieval miss.
+- Lỗi đã phát hiện và cách xử lý: (1) gpt-4o-mini chép placeholder `[chunk_id]` trong prompt vào citation → refusal giả ~2/6 lần; sửa prompt và thêm `normalize_citations`. (2) SDK pageindex 0.2.8 gọi `requests` không timeout, treo UI → tự gọi HTTP với deadline. (3) Reasoning model OpenAI từ chối `temperature` → bắt `BadRequestError` và gọi lại không tham số (`0fb3190`).
+
+## Điều còn hạn chế
+
+- Một hạn chế cụ thể của phần tôi làm: 4/6 câu refusal là câu "Band N + tiêu chí" mà cả dense lẫn BM25 đều lấy nhầm chunk Band 1, vì chunk của Task 4 không mang heading band; BM25 bigram của tôi không cứu được vì token "band_8" không xuất hiện trong chunk đúng.
+- Nếu có thêm thời gian, thay đổi đầu tiên tôi sẽ thực hiện: prepend heading cha (`Writing Task 1 — Band 8`) vào mỗi chunk band descriptor rồi re-index và chạy lại `task11_evaluation --config B` để xác nhận recall nhóm band_descriptor tăng từ 0.77.
+
+## Xác nhận đóng góp
+
+Tôi xác nhận nội dung trên phản ánh đúng phần việc của mình và có thể giải thích hoặc chạy lại trong buổi demo.
+
+- Ngày: 2026-09-20
+- Tên thành viên: Lê Chí Hùng
