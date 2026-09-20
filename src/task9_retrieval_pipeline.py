@@ -46,7 +46,17 @@ def retrieve(
     #     except Exception:
     #         pass
     # return hybrid[:top_k]
-    raise NotImplementedError("Implement retrieve")
+    dense = semantic_search(query, top_k=top_k * 2)
+    sparse = lexical_search(query, top_k=top_k * 2)
+    hybrid = rerank_rrf([dense, sparse], top_k=top_k) if use_reranking else dense[:top_k]
+    if (dense[0]["score"] if dense else 0.0) < score_threshold:
+        try:
+            fallback = pageindex_search(query, top_k=top_k)
+            if fallback:
+                return fallback
+        except Exception:
+            pass
+    return hybrid[:top_k]
 
 
 if __name__ == "__main__":

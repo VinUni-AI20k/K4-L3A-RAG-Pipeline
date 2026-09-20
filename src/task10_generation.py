@@ -40,7 +40,9 @@ def reorder_for_llm(chunks: list[dict]) -> list[dict]:
     # front = chunks[::2]
     # back = chunks[1::2]
     # return front + back[::-1]
-    raise NotImplementedError("Implement reorder_for_llm")
+    if len(chunks) <= 2:
+        return list(chunks)
+    return list(chunks[::2]) + list(chunks[1::2])[::-1]
 
 
 def format_context(chunks: list[dict]) -> str:
@@ -55,7 +57,11 @@ def format_context(chunks: list[dict]) -> str:
     #         f"Source: {metadata['source']}]\n{chunk['content']}"
     #     )
     # return "\n\n---\n\n".join(parts)
-    raise NotImplementedError("Implement format_context")
+    return "\n\n---\n\n".join(
+        f"[Document {index} | Title: {chunk['metadata']['title']} | "
+        f"Source: {chunk['metadata']['source']}]\n{chunk['content']}"
+        for index, chunk in enumerate(chunks, 1)
+    )
 
 
 def call_llm(system_prompt: str, user_message: str) -> str:

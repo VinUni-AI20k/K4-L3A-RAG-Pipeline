@@ -14,6 +14,8 @@ Nếu website chặn crawler, hãy chọn nguồn công khai khác; không vư�
 from pathlib import Path
 
 
+import requests
+
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "legal"
 
 
@@ -24,22 +26,29 @@ def setup_directory() -> None:
 
 
 def download_documents() -> None:
-    """Tải ít nhất 3 PDF/DOCX từ nguồn công khai."""
-    # TODO: Có thể tải thủ công hoặc dùng requests.
-    #
-    # Ví dụ:
-    # import requests
-    #
-    # sources = {
-    #     "policy-a.pdf": "https://example.edu/policy-a.pdf",
-    # }
-    # for filename, url in sources.items():
-    #     response = requests.get(url, timeout=30)
-    #     response.raise_for_status()
-    #     (DATA_DIR / filename).write_bytes(response.content)
-    raise NotImplementedError("Implement download_documents")
+    """Kiểm tra và thu thập các tài liệu IELTS chính sách / hướng dẫn trong data/landing/legal/."""
+    setup_directory()
+    
+    expected_files = [
+        "IELTS WRITING 1.pdf",
+        "IELTS WRITING 2.pdf",
+        "IELTS WRITING 3.pdf",
+    ]
+
+    valid_count = 0
+    for filename in expected_files:
+        target_path = DATA_DIR / filename
+        if target_path.exists() and target_path.stat().st_size > 1024:
+            size_mb = target_path.stat().st_size / (1024 * 1024)
+            print(f"Verified: {filename} ({size_mb:.2f} MB)")
+            valid_count += 1
+        else:
+            print(f"Missing or invalid file: {filename}")
+
+    print(f"\nTổng số tài liệu hợp lệ: {valid_count}/{len(expected_files)}")
+    if valid_count < 3:
+        raise FileNotFoundError("Chưa đủ tối thiểu 3 tài liệu trong data/landing/legal/")
 
 
 if __name__ == "__main__":
-    setup_directory()
     download_documents()
