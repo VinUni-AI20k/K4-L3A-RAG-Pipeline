@@ -2,115 +2,19 @@
 
 **Source:** https://baochinhphu.vn/bao-dam-trat-tu-an-toan-giao-thong-doi-voi-hoat-dong-kinh-doanh-van-tai-bang-xe-o-to-102260821114408935.htm
 
-**Crawled:** 2026-09-20T15:25:04.376859
+**Origin:** data/landing/news/article_03.json
+
+**Doc type:** news
+
+**Crawled:** 2026-09-20T15:39:06
+
+**Published:** 2026-08-21T12:02:00+07:00
 
 ---
 
-[ ![Báo chính phủ](https://static-cttcp.cdnchinhphu.vn/baochinhphu/image/logo_bcp.png) ](https://baochinhphu.vn/)
-chính phủ nước cộng hòa xã hội chủ nghĩa việt nam
-Báo Điện tử Chính phủ
-Chủ nhật, 20/9/2026 [English](https://en.baochinhphu.vn/ "Tiếng Anh") [中文](https://cn.baochinhphu.vn/ "Tiếng Trung")
-  * [ trang chủ ](https://baochinhphu.vn/ "Trang chủ")
-  * [Chính trị](https://baochinhphu.vn/chinh-tri.htm "Chính trị")
-[Đối ngoại](https://baochinhphu.vn/chinh-tri/doi-ngoai.htm "Đối ngoại") [Tổ chức nhân sự](https://baochinhphu.vn/chinh-tri/to-chuc-nhan-su.htm "Tổ chức nhân sự") [Hội nhập](https://baochinhphu.vn/chinh-tri/hoi-nhap.htm "Hội nhập")
-  * [Kinh tế](https://baochinhphu.vn/kinh-te.htm "Kinh tế")
-[Ngân hàng](https://baochinhphu.vn/kinh-te/ngan-hang.htm "Ngân hàng") [Chứng khoán](https://baochinhphu.vn/kinh-te/chung-khoan.htm "Chứng khoán") [Kinh doanh](https://baochinhphu.vn/kinh-te/kinh-doanh.htm "Kinh doanh")
-  * [Văn hóa](https://baochinhphu.vn/van-hoa.htm "Văn hóa")
-[Thể thao](https://baochinhphu.vn/van-hoa/the-thao.htm "Thể thao") [Du lịch](https://baochinhphu.vn/van-hoa/du-lich.htm "Du lịch")
-  * [Xã hội](https://baochinhphu.vn/xa-hoi.htm "Xã hội")
-[Pháp luật](https://baochinhphu.vn/xa-hoi/phap-luat.htm "Pháp luật") [Đời sống](https://baochinhphu.vn/xa-hoi/doi-song.htm "Đời sống") [Y tế](https://baochinhphu.vn/xa-hoi/y-te.htm "Y tế")
-  * [Khoa giáo](https://baochinhphu.vn/khoa-giao.htm "Khoa giáo")
-[Giáo dục](https://baochinhphu.vn/khoa-giao/giao-duc.htm "Giáo dục") [Khoa học - Công nghệ](https://baochinhphu.vn/khoa-giao/khoa-hoc-cong-nghe.htm "Khoa học - Công nghệ")
-  * [Quốc tế](https://baochinhphu.vn/quoc-te.htm "Quốc tế")
-  * [ Góp Ý Hiến Kế ](https://baochinhphu.vn/#gop-y-hien-ke "Góp Ý Hiến Kế")
-
-
-[ Mới Nhất ](https://baochinhphu.vn/tin-moi.htm "Mới Nhất") [ ](javascript:; "Tìm kiếm")
-[ ](https://baochinhphu.vn/bao-dam-trat-tu-an-toan-giao-thong-doi-voi-hoat-dong-kinh-doanh-van-tai-bang-xe-o-to-102260821114408935.htm)
-[ Phát triển nhà ở cho thuê - Trụ cột chiến lược, lâu dài ](https://baochinhphu.vn/chu-de/phat-trien-nha-o-cho-thue-tru-cot-chien-luoc-lau-dai-293.htm "Phát triển nhà ở cho thuê - Trụ cột chiến lược, lâu dài")
-[ Tổng Bí thư, Chủ tịch nước Tô Lâm và Phu nhân thăm Liên bang Nga, Cộng hòa Pháp ](https://baochinhphu.vn/chu-de/tong-bi-thu-chu-tich-nuoc-to-lam-va-phu-nhan-tham-lien-bang-nga-cong-hoa-phap-294.htm "Tổng Bí thư, Chủ tịch nước Tô Lâm và Phu nhân thăm Liên bang Nga, Cộng hòa Pháp")
-[ Chiến dịch 500 ngày đêm tìm kiếm, quy tập và xác định danh tính hài cốt liệt sĩ ](https://baochinhphu.vn/chu-de/chien-dich-500-ngay-dem-tim-kiem-quy-tap-va-xac-dinh-danh-tinh-hai-cot-liet-si-291.htm "Chiến dịch 500 ngày đêm tìm kiếm, quy tập và xác định danh tính hài cốt liệt sĩ")
-[ Bảo vệ nền tảng tư tưởng của Đảng trong kỷ nguyên phát triển mới ](https://baochinhphu.vn/chu-de/bao-ve-nen-tang-tu-tuong-cua-dang-trong-ky-nguyen-phat-trien-moi-290.htm "Bảo vệ nền tảng tư tưởng của Đảng trong kỷ nguyên phát triển mới")
-[ 100 ngày xử lý các điểm nghẽn về chuyển đổi số ](https://baochinhphu.vn/chu-de/100-ngay-xu-ly-cac-diem-nghen-ve-chuyen-doi-so-295.htm "100 ngày xử lý các điểm nghẽn về chuyển đổi số")
-[ Phát triển nhà ở cho thuê - Trụ cột chiến lược, lâu dài ](https://baochinhphu.vn/chu-de/phat-trien-nha-o-cho-thue-tru-cot-chien-luoc-lau-dai-293.htm "Phát triển nhà ở cho thuê - Trụ cột chiến lược, lâu dài")
-[ Tổng Bí thư, Chủ tịch nước Tô Lâm và Phu nhân thăm Liên bang Nga, Cộng hòa Pháp ](https://baochinhphu.vn/chu-de/tong-bi-thu-chu-tich-nuoc-to-lam-va-phu-nhan-tham-lien-bang-nga-cong-hoa-phap-294.htm "Tổng Bí thư, Chủ tịch nước Tô Lâm và Phu nhân thăm Liên bang Nga, Cộng hòa Pháp")
-[ Cổng TTĐT Chính phủ ](https://chinhphu.vn "Cổng TTĐT Chính phủ") [ Văn phòng Chính phủ ](https://vpcp.chinhphu.vn/ "Văn phòng Chính phủ") [ ](https://mail.chinhphu.vn/ "email")
-  * An Giang
-  * Bình Dương
-  * Bình Phước
-  * Bình Thuận
-  * Bình Định
-  * Bạc Liêu
-  * Bắc Giang
-  * Bắc Kạn
-  * Bắc Ninh
-  * Bến Tre
-  * Cao Bằng
-  * Cà Mau
-  * Cần Thơ
-  * Điện Biên
-  * Đà Nẵng
-  * Đà Lạt
-  * Đắk Lắk
-  * Đắk Nông
-  * Đồng Nai
-  * Đồng Tháp
-  * Gia Lai
-  * Hà Nội
-  * Hồ Chí Minh
-  * Hà Giang
-  * Hà Nam
-  * Hà Tây
-  * Hà Tĩnh
-  * Hòa Bình
-  * Hưng Yên
-  * Hải Dương
-  * Hải Phòng
-  * Hậu Giang
-  * Khánh Hòa
-  * Kiên Giang
-  * Kon Tum
-  * Lai Châu
-  * Long An
-  * Lào Cai
-  * Lâm Đồng
-  * Lạng Sơn
-  * Nam Định
-  * Nghệ An
-  * Ninh Bình
-  * Ninh Thuận
-  * Phú Thọ
-  * Phú Yên
-  * Quảng Bình
-  * Quảng Nam
-  * Quảng Ngãi
-  * Quảng Ninh
-  * Quảng Trị
-  * Sóc Trăng
-  * Sơn La
-  * Thanh Hóa
-  * Thái Bình
-  * Thái Nguyên
-  * Thừa Thiên Huế
-  * Tiền Giang
-  * Trà Vinh
-  * Tuyên Quang
-  * Tây Ninh
-  * Vĩnh Long
-  * Vĩnh Phúc
-  * Vũng Tàu
-  * Yên Bái
-
-
-[ ](javascript:; "chia sẻ facebook") [ ](javascript:; "chia sẻ zalo") [ 0 ](https://baochinhphu.vn/bao-dam-trat-tu-an-toan-giao-thong-doi-voi-hoat-dong-kinh-doanh-van-tai-bang-xe-o-to-102260821114408935.htm#commentpage "bình luận") [ ](https://baochinhphu.vn/print/bao-dam-trat-tu-an-toan-giao-thong-doi-voi-hoat-dong-kinh-doanh-van-tai-bang-xe-o-to-102260821114408935.htm "In bài viết") [ aA  ](javascript:; "Tăng cỡ chữ")
-  * [ Chỉ đạo, quyết định của Chính phủ - Thủ tướng Chính phủ ](https://baochinhphu.vn/chi-dao-quyet-dinh-cua-chinh-phu-thu-tuong-chinh-phu.htm "Chỉ đạo, quyết định của Chính phủ - Thủ tướng Chính phủ")
-
-
 # Bảo đảm trật tự, an toàn giao thông đối với hoạt động kinh doanh vận tải bằng xe ô tô
 ##  (Chinhphu.vn) - Phó Thủ tướng Phạm Gia Túc vừa ký Công điện số 56/CĐ-TTg ngày 21/8/2026 của Thủ tướng Chính phủ về bảo đảm trật tự, an toàn giao thông đối với hoạt động kinh doanh vận tải bằng xe ô tô. 
-21/08/2026 12:02 
-[![Bảo đảm trật tự, an toàn giao thông đối với hoạt động kinh doanh vận tải bằng xe ô tô- Ảnh 1.](https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2026/8/21/1-3-173502556379618764005-17872872697451446490906.jpg)](https://bcp.cdnchinhphu.vn/334894974524682240/2026/8/21/1-3-173502556379618764005-17872872697451446490906.jpg "Bảo đảm trật tự, an toàn giao thông đối với hoạt động kinh doanh vận tải bằng xe ô tô")
-[ Tải xuống ](https://bcp.cdnchinhphu.vn/334894974524682240/2026/8/21/1-3-173502556379618764005-17872872697451446490906.jpg "Bảo đảm trật tự, an toàn giao thông đối với hoạt động kinh doanh vận tải bằng xe ô tô")
+Tải xuống
 Bảo đảm trật tự, an toàn giao thông đối với hoạt động kinh doanh vận tải bằng xe ô tô
 Công điện nêu: Thời gian qua, Đảng, Chính phủ, Thủ tướng Chính phủ đã có nhiều chỉ đạo các Bộ, ngành, địa phương về tăng cường công tác bảo đảm trật tự, an toàn giao thông (TTATGT) đối với hoạt động kinh doanh vận tải bằng xe ô tô; các đơn vị, địa phương đã chủ động triển khai, huy động sự vào cuộc của các cấp ủy đảng, chính quyền, đoàn thể; qua đó, công tác bảo đảm TTATGT đạt được những kết quả quan trọng, tích cực; kỷ luật, kỷ cương trong thực thi pháp luật về giao thông có sự chuyển biến; hiệu lực, hiệu quả quản lý nhà nước về TTATGT đường bộ được nâng lên.
 Tuy nhiên, công tác quản lý nhà nước trong lĩnh vực kinh doanh vận tải bằng xe ô tô có nơi, có lúc chưa thực sự hiệu quả, tai nạn giao thông (TNGT) liên quan đến xe kinh doanh vận tải vẫn ở mức cao (chiếm 37,3% tổng số vụ TNGT); nhiều đơn vị kinh doanh vận tải chưa chấp hành nghiêm các quy định về hoạt động vận tải đường bộ, chưa thực hiện đúng, đầy đủ trách nhiệm được giao theo quy định; ý thức chấp hành pháp luật về TTATGT đường bộ của nhiều lái xe kinh doanh vận tải chưa nghiêm, còn thường xuyên vi phạm.
@@ -140,62 +44,10 @@ d) Ủy ban nhân dân các tỉnh, thành phố
 - Bố trí nguồn lực đầu tư, nâng cấp, cải tạo các tuyến giao thông thuộc phạm vi quản lý đảm bảo kết nối liên vùng, phù hợp định hướng phát triển kinh tế - xã hội của địa phương.
 3. Giao Bộ Công an đôn đốc việc thực hiện các nhiệm vụ nêu trên; tổng hợp tình hình, kết quả thực hiện, báo cáo Thủ tướng Chính phủ./.
   * Tham khảo thêm
-#### [Xử lý nghiêm hành vi tăng giá vé vận tải bất hợp lý dịp nghỉ lễ 2/9](https://baochinhphu.vn/xu-ly-nghiem-hanh-vi-tang-gia-ve-van-tai-bat-hop-ly-dip-nghi-le-2-9-102260818163143612.htm)
-[![Xử lý nghiêm hành vi tăng giá vé vận tải bất hợp lý dịp nghỉ lễ 2/9](https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2026/8/18/17870453661381502017584250765363873750563331553399483d0f714a172ab8bd97b58f458d3e73c-17870453842331006351658-0-0-731-1170-crop-1787045451938764115905.jpg)](https://baochinhphu.vn/xu-ly-nghiem-hanh-vi-tang-gia-ve-van-tai-bat-hop-ly-dip-nghi-le-2-9-102260818163143612.htm)
+#### Xử lý nghiêm hành vi tăng giá vé vận tải bất hợp lý dịp nghỉ lễ 2/9
   * Tham khảo thêm
-#### [Cục CSGT tổng kiểm tra doanh nghiệp vận tải hành khách](https://baochinhphu.vn/cuc-csgt-tong-kiem-tra-doanh-nghiep-van-tai-hanh-khach-102260722075450135.htm)
-[![Cục CSGT tổng kiểm tra doanh nghiệp vận tải hành khách](https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2026/7/22/vnapotaldongnaichayxekhachkhien7nguoituvongstand-1784681599217387543926-0-0-416-665-crop-1784681646658885858372.jpeg)](https://baochinhphu.vn/cuc-csgt-tong-kiem-tra-doanh-nghiep-van-tai-hanh-khach-102260722075450135.htm)
+#### Cục CSGT tổng kiểm tra doanh nghiệp vận tải hành khách
   * Tham khảo thêm
-#### [Từ 1/1/2028, xe hợp đồng phải chia sẻ dữ liệu hợp đồng vận tải với Bộ Công an](https://baochinhphu.vn/tu-1-1-2028-xe-hop-dong-phai-chia-se-du-lieu-hop-dong-van-tai-voi-bo-cong-an-102260623153536234.htm)
-[![Từ 1/1/2028, xe hợp đồng phải chia sẻ dữ liệu hợp đồng vận tải với Bộ Công an](https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2026/6/23/van-tai-duong-bo-la-gi-1-1782203282876482755593-0-0-432-691-crop-1782203331373491038744.jpg)](https://baochinhphu.vn/tu-1-1-2028-xe-hop-dong-phai-chia-se-du-lieu-hop-dong-van-tai-voi-bo-cong-an-102260623153536234.htm)
+#### Từ 1/1/2028, xe hợp đồng phải chia sẻ dữ liệu hợp đồng vận tải với Bộ Công an
   * Tham khảo thêm
-#### [Quản lý phương tiện vận tải xuất nhập cảnh qua nền tảng dữ liệu số tập trung](https://baochinhphu.vn/quan-ly-phuong-tien-van-tai-xuat-nhap-canh-qua-nen-tang-du-lieu-so-tap-trung-102260528123016452.htm)
-[![Quản lý phương tiện vận tải xuất nhập cảnh qua nền tảng dữ liệu số tập trung](https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2026/5/28/quy-cua-khau-duong-bo-e1757317477240-1779964441590617776625-0-30-479-796-crop-17799649355402105408038.jpg)](https://baochinhphu.vn/quan-ly-phuong-tien-van-tai-xuat-nhap-canh-qua-nen-tang-du-lieu-so-tap-trung-102260528123016452.htm)
-
-
-  
-
-  * [kinh doanh xe khách](https://baochinhphu.vn/kinh-doanh-xe-khach.html "kinh doanh xe khách")
-  * [kinh doanh vận tải](https://baochinhphu.vn/kinh-doanh-van-tai.html "kinh doanh vận tải")
-
-
-Bài viết cùng chuyên mục
-[ ![Điều kiện thành lập cơ sở giáo dục đại học, phân hiệu của cơ sở giáo dục đại học nước ngoài tại Việt Nam](https://bcp.cdnchinhphu.vn/zoom/299_156/334894974524682240/2026/9/19/giaoducdh-1789816367782808692476-8-0-383-600-crop-17898164514121943245652.png) ](https://baochinhphu.vn/dieu-kien-thanh-lap-co-so-giao-duc-dai-hoc-phan-hieu-cua-co-so-giao-duc-dai-hoc-nuoc-ngoai-tai-viet-nam-102260919181742096.htm "Điều kiện thành lập cơ sở giáo dục đại học, phân hiệu của cơ sở giáo dục đại học nước ngoài tại Việt Nam")
-[Điều kiện thành lập cơ sở giáo dục đại học, phân hiệu của cơ sở giáo dục đại học nước ngoài tại Việt Nam](https://baochinhphu.vn/dieu-kien-thanh-lap-co-so-giao-duc-dai-hoc-phan-hieu-cua-co-so-giao-duc-dai-hoc-nuoc-ngoai-tai-viet-nam-102260919181742096.htm "Điều kiện thành lập cơ sở giáo dục đại học, phân hiệu của cơ sở giáo dục đại học nước ngoài tại Việt Nam")
-[ ![Điều kiện thành lập, cấp phép hoạt động của cơ sở giáo dục mầm non](https://bcp.cdnchinhphu.vn/zoom/299_156/334894974524682240/2026/9/19/gsmamnon-17898107322091934932042-31-0-517-777-crop-17898108084341153014164.jpg) ](https://baochinhphu.vn/dieu-kien-thanh-lap-cap-phep-hoat-dong-cua-co-so-giao-duc-mam-non-102260919164310234.htm "Điều kiện thành lập, cấp phép hoạt động của cơ sở giáo dục mầm non")
-[Điều kiện thành lập, cấp phép hoạt động của cơ sở giáo dục mầm non](https://baochinhphu.vn/dieu-kien-thanh-lap-cap-phep-hoat-dong-cua-co-so-giao-duc-mam-non-102260919164310234.htm "Điều kiện thành lập, cấp phép hoạt động của cơ sở giáo dục mầm non")
-[ ![Chính phủ yêu cầu khẩn trương hoàn thiện 8 dự án luật, nghị quyết](https://bcp.cdnchinhphu.vn/zoom/299_156/334894974524682240/2026/9/19/thutuong-1789813108484983623479-0-0-486-777-crop-1789813152970613255976.png) ](https://baochinhphu.vn/chinh-phu-yeu-cau-khan-truong-hoan-thien-8-du-an-luat-nghi-quyet-102260919172535895.htm "Chính phủ yêu cầu khẩn trương hoàn thiện 8 dự án luật, nghị quyết")
-[Chính phủ yêu cầu khẩn trương hoàn thiện 8 dự án luật, nghị quyết](https://baochinhphu.vn/chinh-phu-yeu-cau-khan-truong-hoan-thien-8-du-an-luat-nghi-quyet-102260919172535895.htm "Chính phủ yêu cầu khẩn trương hoàn thiện 8 dự án luật, nghị quyết")
-[ ![Thủ tướng chỉ đạo huy động tất cả nguồn lực, in ấn, cung ứng đủ sách giáo khoa, báo cáo trước 22/9](https://bcp.cdnchinhphu.vn/zoom/299_156/334894974524682240/2026/9/19/sgk-17897946120151855223061-0-0-456-730-crop-17897949384611670008735.jpg) ](https://baochinhphu.vn/hoan-thanh-viec-cung-ung-sach-giao-khoa-va-bao-cao-thu-tuong-chinh-phu-truoc-ngay-22-9-2026-102260919121741737.htm "Thủ tướng chỉ đạo huy động tất cả nguồn lực, in ấn, cung ứng đủ sách giáo khoa, báo cáo trước 22/9")
-[Thủ tướng chỉ đạo huy động tất cả nguồn lực, in ấn, cung ứng đủ sách giáo khoa, báo cáo trước 22/9](https://baochinhphu.vn/hoan-thanh-viec-cung-ung-sach-giao-khoa-va-bao-cao-thu-tuong-chinh-phu-truoc-ngay-22-9-2026-102260919121741737.htm "Thủ tướng chỉ đạo huy động tất cả nguồn lực, in ấn, cung ứng đủ sách giáo khoa, báo cáo trước 22/9")
-[ ![Chỉ đạo, điều hành của Chính phủ, Thủ tướng Chính phủ nổi bật tuần 12-18/9/2026](https://bcp.cdnchinhphu.vn/zoom/299_156/334894974524682240/2026/9/18/giaoducjmamnon-1789392031893213934673-1789707446717145766628-0-0-486-777-crop-17897075101061483796664.jpg) ](https://baochinhphu.vn/chi-dao-dieu-hanh-cua-chinh-phu-thu-tuong-chinh-phu-noi-bat-tuan-12-18-9-2026-102260918120031455.htm "Chỉ đạo, điều hành của Chính phủ, Thủ tướng Chính phủ nổi bật tuần 12-18/9/2026")
-[Chỉ đạo, điều hành của Chính phủ, Thủ tướng Chính phủ nổi bật tuần 12-18/9/2026](https://baochinhphu.vn/chi-dao-dieu-hanh-cua-chinh-phu-thu-tuong-chinh-phu-noi-bat-tuan-12-18-9-2026-102260918120031455.htm "Chỉ đạo, điều hành của Chính phủ, Thủ tướng Chính phủ nổi bật tuần 12-18/9/2026")
-[ ![Hiện đại hóa hệ thống ngân hàng, xử lý tổ chức tín dụng yếu kém, tăng cường khả năng tiếp cận vốn cho doanh nghiệp](https://bcp.cdnchinhphu.vn/zoom/299_156/334894974524682240/2026/9/18/nganhang-17897361683461387600403-0-0-1000-1600-crop-17897363583091123889833.jpeg) ](https://baochinhphu.vn/hien-dai-hoa-he-thong-ngan-hang-xu-ly-to-chuc-tin-dung-yeu-kem-tang-cuong-kha-nang-tiep-can-von-cho-doanh-nghiep-102260918200027954.htm "Hiện đại hóa hệ thống ngân hàng, xử lý tổ chức tín dụng yếu kém, tăng cường khả năng tiếp cận vốn cho doanh nghiệp")
-[Hiện đại hóa hệ thống ngân hàng, xử lý tổ chức tín dụng yếu kém, tăng cường khả năng tiếp cận vốn cho doanh nghiệp](https://baochinhphu.vn/hien-dai-hoa-he-thong-ngan-hang-xu-ly-to-chuc-tin-dung-yeu-kem-tang-cuong-kha-nang-tiep-can-von-cho-doanh-nghiep-102260918200027954.htm "Hiện đại hóa hệ thống ngân hàng, xử lý tổ chức tín dụng yếu kém, tăng cường khả năng tiếp cận vốn cho doanh nghiệp")
-Đọc thêm
-[ HIỂN THỊ THÊM BÀI ](javascript:; "Xem thêm")
-  * [ trang chủ ](https://baochinhphu.vn/ "trang chủ")
-  * [ Chính trị ](https://baochinhphu.vn/chinh-tri.htm "Chính trị")
-  * [ Kinh tế ](https://baochinhphu.vn/kinh-te.htm "Kinh tế")
-  * [ Văn hóa ](https://baochinhphu.vn/van-hoa.htm "Văn hóa")
-  * [ Xã hội ](https://baochinhphu.vn/xa-hoi.htm "Xã hội")
-  * [ Khoa giáo ](https://baochinhphu.vn/khoa-giao.htm "Khoa giáo")
-  * [ Quốc tế ](https://baochinhphu.vn/quoc-te.htm "Quốc tế")
-  * [ GÓP Ý HIẾN KẾ ](https://baochinhphu.vn/#gop-y-hien-ke "GÓP Ý HIẾN KẾ")
-
-
-© BÁO ĐIỆN TỬ CỦA CHÍNH PHỦ NƯỚC CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM 
-Tổng Biên tập: Nguyễn Hồng Sâm
-Giấy phép số: 102/GP-BTTTT, cấp ngày 15/04/2024.
-Trụ sở: 16 Lê Hồng Phong - Ba Đình - Hà Nội;
-Điện thoại: Văn phòng: 080.43162;Fax: 080.48924;
-Email: thongtinchinhphu@chinhphu.vn. 
-[ ![logo](https://static-cttcp.cdnchinhphu.vn/baochinhphu/image/logo-footrer-ap.png) ](https://baochinhphu.vn/ "trang chủ")
-Tải ứng dụng: 
-BÁO ĐIỆN TỬ CHÍNH PHỦ 
-[ ![app store](https://static-cttcp.cdnchinhphu.vn/baochinhphu/image/ip.png) ](https://apps.apple.com/app/b%C3%A1o-%C4%91t-ch%C3%ADnh-ph%E1%BB%A7/id6503898662 "appstore") [ ![google play](https://static-cttcp.cdnchinhphu.vn/baochinhphu/image/gg.png) ](https://play.google.com/store/apps/details?id=vn.chinhphu.baochinhphu "googleplays")
-![Quét ma QR](https://static-cttcp.cdnchinhphu.vn/thumb_w/200/baochinhphu/image/download-app-qrcode.png)
-Quét mã QR để tải
-Bản quyền thuộc Báo Điện tử Chính phủ - Cục Thông tin và Truyền thông Chính phủ. 
-Ghi rõ nguồn "Cục Thông tin và Truyền thông Chính phủ", "Báo Điện tử Chính phủ" hoặc "www.chinhphu.vn" khi phát hành lại thông tin từ các nguồn này. 
-[ ](javascript:;)
+#### Quản lý phương tiện vận tải xuất nhập cảnh qua nền tảng dữ liệu số tập trung
