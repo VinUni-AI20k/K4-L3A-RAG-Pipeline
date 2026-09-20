@@ -8,6 +8,10 @@ Lưu ý: RRF score chỉ phản ánh thứ hạng, không dùng để quyết đ
 """
 
 
+import copy
+import sys
+
+
 def rerank_rrf(
     ranked_lists: list[list[dict]],
     top_k: int = 5,
@@ -27,7 +31,7 @@ def rerank_rrf(
     ranked_ids = sorted(scores, key=lambda x: scores[x], reverse=True)
     results = []
     for item_id in ranked_ids[:top_k]:
-        result = items[item_id].copy()
+        result = copy.deepcopy(items[item_id])
         result["score"] = scores[item_id]
         result["retrieval_method"] = "hybrid"
         results.append(result)
@@ -36,6 +40,12 @@ def rerank_rrf(
 
 
 if __name__ == "__main__":
+    if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+        try:
+            sys.stdout.reconfigure(encoding="utf-8")
+        except Exception:
+            pass
+
     from src.task5_semantic_search import semantic_search
     from src.task6_lexical_search import lexical_search
 
@@ -46,3 +56,4 @@ if __name__ == "__main__":
     print(f"=== Hybrid RRF for: '{query}' ===")
     for res in fused:
         print(f"- [{res['score']:.6f}] {res['id']}: {res['content'][:80]}...")
+

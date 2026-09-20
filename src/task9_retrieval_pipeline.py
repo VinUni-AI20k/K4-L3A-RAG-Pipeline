@@ -50,5 +50,16 @@ def retrieve(
 
 
 if __name__ == "__main__":
-    for result in retrieve("VAMC mua nợ xấu thế nào", top_k=3):
+    import sys
+
+    if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+        try:
+            sys.stdout.reconfigure(encoding="utf-8")
+        except Exception:
+            pass
+
+    query = "VAMC mua nợ xấu thế nào"
+    print(f"=== Retrieval for: '{query}' ===")
+    for result in retrieve(query, top_k=3):
         print(f"[{result['score']:.4f} - {result['retrieval_method']}] {result['id']}")
+
