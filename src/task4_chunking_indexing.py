@@ -12,6 +12,9 @@ chạy lại pipeline không tạo dữ liệu trùng. Task 5 phải dùng chung
 """
 
 from pathlib import Path
+import os
+os.environ["USE_TF"] = "0"
+
 
 from dotenv import load_dotenv
 
