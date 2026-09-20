@@ -12,16 +12,17 @@ Giới hạn khuyến nghị: 1 trang, không chép lại README hoặc mô tả
 
 ## Thông tin
 
-- Họ và tên:
-- Mã học viên:
-- Nhóm:
-- Repository/branch:
+- Họ và tên: Lưu Mạnh Hùng
+- Mã học viên: 2A202602942
+- Nhóm: LomDom
+- Repository/branch: [github.com/jaimesHub/K4-L3A-RAG-Pipeline-LomDom](https://github.com/jaimesHub/K4-L3A-RAG-Pipeline-LomDom)
 
 ## Phần việc đã thực hiện
 
-| Module/deliverable | Việc tôi trực tiếp làm | File/commit/PR | Trạng thái |
-|---|---|---|---|
-| | | | Done / Partial / Blocked |
+
+| Module/deliverable | Việc tôi trực tiếp làm | File/commit/PR | Trạng thái             |
+| -------------------- | ----------------------------- | ---------------- | -------------------------- |
+|                    |                             |                | Done / Partial / Blocked |
 
 Chỉ kê khai công việc có thể đối chiếu bằng file, commit, pull request, test hoặc kết quả evaluation.
 
@@ -29,12 +30,11 @@ Chỉ kê khai công việc có thể đối chiếu bằng file, commit, pull r
 
 Mô tả tối đa hai quyết định mà bạn trực tiếp tham gia:
 
-1. **Quyết định:**  
-   **Lý do/evidence:**  
+1. **Quyết định:**
+   **Lý do/evidence:**
    **Trade-off:**
-
-2. **Quyết định:**  
-   **Lý do/evidence:**  
+2. **Quyết định:**
+   **Lý do/evidence:**
    **Trade-off:**
 
 ## Kiểm thử và kết quả

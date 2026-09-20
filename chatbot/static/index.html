@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trợ lý pháp lý - Hợp đồng mua bán căn hộ</title>
+<style>
+  :root {
+    --navy: #0f2942;
+    --navy-light: #16406b;
+    --gold: #b8892b;
+    --bg: #f4f6f8;
+    --panel: #ffffff;
+    --border: #e1e6ea;
+    --text: #1c2733;
+    --muted: #64748b;
+    --dense: #6366f1;
+    --hybrid: #0d9488;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    color: white;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  }
+  header h1 { font-size: 18px; margin: 0; }
+  header p { margin: 2px 0 0; font-size: 12.5px; color: #cbd8e6; }
+  .controls {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    font-size: 13px;
+    background: rgba(255,255,255,.08);
+    padding: 8px 14px;
+    border-radius: 10px;
+  }
+  .controls label { display: flex; align-items: center; gap: 6px; }
+  .controls select, .controls input[type=number] {
+    border-radius: 6px; border: none; padding: 3px 6px; font-size: 13px;
+  }
+  main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .empty-state {
+    margin: auto;
+    text-align: center;
+    color: var(--muted);
+    max-width: 480px;
+  }
+  .empty-state h2 { color: var(--navy); font-size: 17px; }
+  .suggestions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 14px; }
+  .suggestion-chip {
+    background: white; border: 1px solid var(--border); border-radius: 20px;
+    padding: 7px 14px; font-size: 12.5px; cursor: pointer; color: var(--navy-light);
+    transition: all .15s;
+  }
+  .suggestion-chip:hover { background: var(--navy-light); color: white; border-color: var(--navy-light); }
+
+  .msg { display: flex; gap: 10px; max-width: 100%; }
+  .msg.user { justify-content: flex-end; }
+  .bubble {
+    padding: 12px 16px; border-radius: 14px; max-width: 78%;
+    line-height: 1.55; font-size: 14.5px; white-space: pre-wrap;
+  }
+  .msg.user .bubble { background: var(--navy); color: white; border-bottom-right-radius: 4px; }
+  .msg.bot .bubble { background: var(--panel); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+  .msg.bot .avatar, .msg.user .avatar {
+    width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 600; color: white;
+  }
+  .msg.bot .avatar { background: var(--gold); }
+  .msg.user .avatar { background: #94a3b8; }
+
+  .meta-row { display: flex; gap: 8px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px; font-weight: 600; padding: 2px 9px; border-radius: 20px; color: white;
+  }
+  .badge.hybrid { background: var(--hybrid); }
+  .badge.dense { background: var(--dense); }
+
+  .sources { margin-top: 10px; }
+  .sources summary {
+    cursor: pointer; font-size: 12.5px; color: var(--navy-light); font-weight: 600;
+    outline: none;
+  }
+  .source-item {
+    margin-top: 8px; padding: 10px 12px; background: #f8fafc; border-left: 3px solid var(--gold);
+    border-radius: 6px; font-size: 12.5px;
+  }
+  .source-item .src-title { font-weight: 600; color: var(--navy); }
+  .source-item .src-meta { color: var(--muted); margin: 3px 0 6px; }
+  .source-item .src-snippet { color: #334155; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    background: var(--panel);
+    padding: 14px 24px 20px;
+  }
+  .composer {
+    max-width: 860px; margin: 0 auto; display: flex; gap: 10px; align-items: flex-end;
+  }
+  .composer textarea {
+    flex: 1; resize: none; border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px 14px; font-size: 14.5px; font-family: inherit; max-height: 120px;
+  }
+  .composer textarea:focus { outline: 2px solid var(--navy-light); }
+  .composer button {
+    background: var(--navy); color: white; border: none; border-radius: 12px;
+    padding: 12px 20px; font-size: 14px; font-weight: 600; cursor: pointer;
+  }
+  .composer button:disabled { background: #94a3b8; cursor: not-allowed; }
+  .disclaimer { max-width: 860px; margin: 8px auto 0; font-size: 11px; color: var(--muted); text-align: center; }
+
+  .typing { display: flex; gap: 4px; padding: 6px 0; }
+  .typing span {
+    width: 6px; height: 6px; border-radius: 50%; background: var(--muted);
+    animation: bounce 1.2s infinite ease-in-out;
+  }
+  .typing span:nth-child(2) { animation-delay: .15s; }
+  .typing span:nth-child(3) { animation-delay: .3s; }
+  @keyframes bounce { 0%, 80%, 100% { transform: translateY(0); opacity: .4; } 40% { transform: translateY(-4px); opacity: 1; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>⚖ Trợ lý pháp lý - Hợp đồng mua bán căn hộ</h1>
+    <p>Trả lời có trích dẫn dựa trên Luật Nhà ở, Luật Kinh doanh BĐS &amp; Mẫu hợp đồng số 1a</p>
+  </div>
+  <div class="controls">
+    <label>Chế độ truy hồi
+      <select id="mode">
+        <option value="hybrid" selected>Hybrid + RRF</option>
+        <option value="dense">Dense-only</option>
+      </select>
+    </label>
+    <label>Top-K
+      <input id="topk" type="number" min="1" max="10" value="5" style="width:52px">
+    </label>
+  </div>
+</header>
+
+<main id="main">
+  <div class="empty-state" id="empty-state">
+    <h2>Hỏi về hợp đồng mua bán căn hộ chung cư</h2>
+    <p>Ví dụ: điều kiện, thanh toán, bảo hành, vi phạm hợp đồng, chuyển nhượng hợp đồng, quyền &amp; nghĩa vụ hai bên...</p>
+    <div class="suggestions">
+      <div class="suggestion-chip">Hợp đồng mua bán căn hộ có bắt buộc công chứng không?</div>
+      <div class="suggestion-chip">Thanh toán mua căn hộ hình thành trong tương lai tối đa bao nhiêu % trước khi bàn giao?</div>
+      <div class="suggestion-chip">Bên bán không bàn giao căn hộ đúng hạn thì xử lý thế nào?</div>
+      <div class="suggestion-chip">Thời gian bảo hành căn hộ chung cư tính từ khi nào?</div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="composer">
+    <textarea id="question" rows="1" placeholder="Nhập câu hỏi về hợp đồng mua bán căn hộ..."></textarea>
+    <button id="send">Gửi</button>
+  </div>
+  <p class="disclaimer">Thông tin tham khảo, không thay thế tư vấn pháp lý chính thức. Mọi câu trả lời cần đối chiếu với trích dẫn nguồn bên dưới.</p>
+</footer>
+
+<script>
+const main = document.getElementById('main');
+const emptyState = document.getElementById('empty-state');
+const questionEl = document.getElementById('question');
+const sendBtn = document.getElementById('send');
+const modeEl = document.getElementById('mode');
+const topkEl = document.getElementById('topk');
+
+function scrollToBottom() { main.scrollTop = main.scrollHeight; }
+
+function addMessage(role, text) {
+  if (emptyState) emptyState.remove();
+  const wrap = document.createElement('div');
+  wrap.className = `msg ${role}`;
+  const avatar = document.createElement('div');
+  avatar.className = 'avatar';
+  avatar.textContent = role === 'user' ? 'B' : 'AI';
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  bubble.textContent = text;
+  if (role === 'user') { wrap.appendChild(bubble); wrap.appendChild(avatar); }
+  else { wrap.appendChild(avatar); wrap.appendChild(bubble); }
+  main.appendChild(wrap);
+  scrollToBottom();
+  return bubble;
+}
+
+function addBotResult(data) {
+  if (emptyState) emptyState.remove();
+  const wrap = document.createElement('div');
+  wrap.className = 'msg bot';
+  const avatar = document.createElement('div');
+  avatar.className = 'avatar';
+  avatar.textContent = 'AI';
+  const content = document.createElement('div');
+  content.style.maxWidth = '78%';
+
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  bubble.textContent = data.answer;
+  content.appendChild(bubble);
+
+  const metaRow = document.createElement('div');
+  metaRow.className = 'meta-row';
+  const badge = document.createElement('span');
+  badge.className = `badge ${data.retrieval_method}`;
+  badge.textContent = data.retrieval_method === 'hybrid' ? 'Hybrid + RRF' : 'Dense-only';
+  metaRow.appendChild(badge);
+  content.appendChild(metaRow);
+
+  if (data.sources && data.sources.length) {
+    const details = document.createElement('details');
+    details.className = 'sources';
+    const summary = document.createElement('summary');
+    summary.textContent = `📎 ${data.sources.length} nguồn trích dẫn`;
+    details.appendChild(summary);
+    data.sources.forEach((s, i) => {
+      const item = document.createElement('div');
+      item.className = 'source-item';
+      item.innerHTML = `
+        <div class="src-title">[Nguồn ${i + 1}] ${escapeHtml(s.title)}</div>
+        <div class="src-meta">Tệp: ${escapeHtml(s.source)} · điểm: ${s.score} · phương thức: ${s.retrieval_method}</div>
+        <div class="src-snippet">${escapeHtml(s.snippet)}...</div>
+      `;
+      details.appendChild(item);
+    });
+    content.appendChild(details);
+  }
+
+  wrap.appendChild(avatar);
+  wrap.appendChild(content);
+  main.appendChild(wrap);
+  scrollToBottom();
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+function addTyping() {
+  const wrap = document.createElement('div');
+  wrap.className = 'msg bot';
+  wrap.id = 'typing-indicator';
+  wrap.innerHTML = `<div class="avatar">AI</div><div class="bubble"><div class="typing"><span></span><span></span><span></span></div></div>`;
+  main.appendChild(wrap);
+  scrollToBottom();
+}
+
+function removeTyping() {
+  const el = document.getElementById('typing-indicator');
+  if (el) el.remove();
+}
+
+async function sendQuestion(text) {
+  if (!text.trim()) return;
+  addMessage('user', text);
+  questionEl.value = '';
+  sendBtn.disabled = true;
+  addTyping();
+
+  try {
+    const response = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        question: text,
+        top_k: parseInt(topkEl.value, 10) || 5,
+        use_hybrid: modeEl.value === 'hybrid',
+      }),
+    });
+    const data = await response.json();
+    removeTyping();
+    if (!response.ok) {
+      addMessage('bot', `Lỗi: ${data.error || 'không thể xử lý yêu cầu'}`);
+      return;
+    }
+    addBotResult(data);
+  } catch (err) {
+    removeTyping();
+    addMessage('bot', `Không thể kết nối tới máy chủ chatbot: ${err.message}`);
+  } finally {
+    sendBtn.disabled = false;
+  }
+}
+
+sendBtn.addEventListener('click', () => sendQuestion(questionEl.value));
+questionEl.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendQuestion(questionEl.value);
+  }
+});
+document.querySelectorAll('.suggestion-chip').forEach((chip) => {
+  chip.addEventListener('click', () => sendQuestion(chip.textContent));
+});
+</script>
+</body>
+</html>
