@@ -1,0 +1,23 @@
+# Quyết định 39/2026/QĐ-TTg: Chương trình đào tạo Đại học tối thiểu 120 tín chỉ, thạc sĩ từ 45 tín chỉ
+
+**Source:** https://luatvietnam.vn/tin-van-ban-moi/quyet-dinh-39-2026-qd-ttg-chuong-trinh-dao-tao-dai-hoc-toi-thieu-120-tin-chi-thac-si-tu-45-tin-chi-186-110858-article.html
+
+**Crawled:** 2026-09-20
+
+---
+
+# Quyết định 39/2026/QĐ-TTg: Chương trình đào tạo Đại học tối thiểu 120 tín chỉ, thạc sĩ từ 45 tín chỉ
+
+Quyết định 39/2026/QĐ-TTg đã quy định lại khối lượng học tập tối thiểu của các chương trình giáo dục, đào tạo tương ứng với từng bậc của Khung trình độ quốc gia Việt Nam.
+
+Theo Điều 7 Quyết định 39 2026 QĐ TTg, khối lượng học tập tối thiểu của chương trình giáo dục, chương trình đào tạo tương ứng với từng bậc trình độ được quy định tại Phụ lục ban hành kèm theo Quyết định.
+
+Thời gian đào tạo phải phù hợp với khối lượng học tập tối thiểu và Khung cơ cấu hệ thống giáo dục quốc dân. Đối với một số ngành, nghề đặc thù thuộc lĩnh vực nghệ thuật, thể dục, thể thao và các lĩnh vực khác, khối lượng học tập tối thiểu được thực hiện theo chuẩn chương trình đào tạo do Bộ Giáo dục và Đào tạo ban hành.
+
+Theo Phụ lục của Quyết định 39/2026/QĐ-TTg, chương trình đào tạo trình độ đại học (bậc 6) có khối lượng học tập tối thiểu 120 tín chỉ. Đối với trình độ thạc sĩ (bậc 7), khối lượng học tập tối thiểu được quy định theo trình độ đầu vào.
+
+Cụ thể, người có bằng đại học học chương trình thạc sĩ phải hoàn thành tối thiểu 60 tín chỉ, trong khi một số chương trình đào tạo theo trình độ đầu vào khác có khối lượng học tập tối thiểu 45 tín chỉ theo quy định của Khung trình độ quốc gia. Bên cạnh đó, Quyết định cũng quy định chi tiết số tín chỉ tối thiểu đối với từng trình độ sơ cấp, trung cấp và cao đẳng, thay vì chỉ quy định theo từng bậc trình độ như trước đây.
+
+So với Quyết định 1982/QĐ-TTg, khối lượng học tập tối thiểu của chương trình đại học vẫn được giữ ở mức 120 tín chỉ. Tuy nhiên, đối với trình độ thạc sĩ và nhiều trình độ khác, Quyết định 39/2026/QĐ-TTg đã quy định cụ thể hơn theo từng trình độ đầu vào và loại chương trình đào tạo.
+
+Ngoài ra, quy định mới còn bổ sung quy định về khối lượng học tập tối thiểu đối với chương trình đào tạo tích hợp và các chương trình đào tạo đặc thù, trong khi Quyết định 1982/QĐ-TTg chưa có các quy định chi tiết này.
