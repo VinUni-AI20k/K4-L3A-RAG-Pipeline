@@ -2,6 +2,7 @@
 
 import os
 import re
+import sys
 
 from dotenv import load_dotenv
 
@@ -134,4 +135,5 @@ def generate_with_citation(query: str, top_k: int = TOP_K) -> dict:
 
 
 if __name__ == "__main__":
-    print(generate_with_citation("test query"))
+    question = " ".join(sys.argv[1:]) or "What is the minimum word count for IELTS Writing Task 2?"
+    print(generate_with_citation(question))
