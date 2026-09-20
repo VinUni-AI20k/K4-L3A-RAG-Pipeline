@@ -27,15 +27,88 @@ EMBEDDING_DIM = 1024
 
 COLLECTION_NAME = "rag_documents"
 
+import logging
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+def _embed_gemini(texts: list[str]) -> list[list[float]]:
+    from google import genai
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        raise ValueError("GEMINI_API_KEY is not set.")
+    model = os.getenv("EMBEDDING_MODEL", "text-embedding-004")
+    client = genai.Client(api_key=api_key)
+    response = client.models.embed_content(
+        model=model,
+        contents=texts,
+    )
+    return [e.values for e in response.embeddings]
+
+
+def _embed_nvidia(texts: list[str]) -> list[list[float]]:
+    from openai import OpenAI
+    api_key = os.getenv("NVIDIA_API_KEY")
+    if not api_key:
+        raise ValueError("NVIDIA_API_KEY is not set.")
+    base_url = os.getenv("NVIDIA_BASE_URL", "https://integrate.api.nvidia.com/v1")
+    model = os.getenv("NVIDIA_EMBEDDING_MODEL", "nvidia/nv-embedqa-e5-v5")
+    client = OpenAI(api_key=api_key, base_url=base_url)
+    response = client.embeddings.create(
+        model=model,
+        input=texts,
+    )
+    return [item.embedding for item in response.data]
+
+
+def _embed_sentence_transformers(texts: list[str]) -> list[list[float]]:
+    from sentence_transformers import SentenceTransformer
+    model_name = os.getenv("EMBEDDING_MODEL", "BAAI/bge-m3")
+    model = SentenceTransformer(model_name)
+    return model.encode(texts).tolist()
+
+
+def _embed_openai(texts: list[str]) -> list[list[float]]:
+    from openai import OpenAI
+    api_key = os.getenv("OPENAI_API_KEY")
+    base_url = os.getenv("OPENAI_BASE_URL") or None
+    model = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
+    client = OpenAI(api_key=api_key, base_url=base_url)
+    response = client.embeddings.create(model=model, input=texts)
+    return [item.embedding for item in response.data]
+
+
+def _dispatch_embed(provider: str, texts: list[str]) -> list[list[float]]:
+    provider = provider.lower()
+    if provider == "gemini":
+        return _embed_gemini(texts)
+    elif provider == "nvidia":
+        return _embed_nvidia(texts)
+    elif provider == "openai":
+        return _embed_openai(texts)
+    elif provider == "sentence_transformers":
+        return _embed_sentence_transformers(texts)
+    else:
+        raise ValueError(f"Unsupported EMBEDDING_PROVIDER: {provider}")
+
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    # TODO: Dispatch theo EMBEDDING_PROVIDER trong .env.
-    #
-    # Provider local gợi ý:
-    # from sentence_transformers import SentenceTransformer
-    # model = SentenceTransformer(EMBEDDING_MODEL)
-    # return model.encode(texts).tolist()
-    raise NotImplementedError("Implement embed_texts")
+    """Tạo vector embeddings theo EMBEDDING_PROVIDER với cơ chế fallback tự động."""
+    provider = os.getenv("EMBEDDING_PROVIDER", "gemini")
+    enable_fallback = os.getenv("ENABLE_EMBEDDING_FALLBACK", "true").lower() in ("true", "1", "yes")
+    fallback_provider = os.getenv("FALLBACK_EMBEDDING_PROVIDER", "nvidia")
+
+    try:
+        return _dispatch_embed(provider, texts)
+    except Exception as e:
+        if enable_fallback and fallback_provider and fallback_provider.lower() != provider.lower():
+            logging.warning(
+                f"[WARN] Embedding with '{provider}' failed ({e}). Falling back to '{fallback_provider}'..."
+            )
+            return _dispatch_embed(fallback_provider, texts)
+        raise
 
 
 def get_collection():
