@@ -19,14 +19,23 @@ def build_bm25_index(corpus: list[dict]):
 def lexical_search(query: str, top_k: int = 10) -> list[dict]:
     """Trả về BM25 SearchResult theo score giảm dần."""
     import numpy as np
-    bm25 = build_bm25_index(CORPUS)
+
+    corpus = CORPUS
+    if not corpus:
+        from .task4_chunking_indexing import chunk_documents, load_documents
+
+        corpus = chunk_documents(load_documents())
+    if not corpus:
+        return []
+
+    bm25 = build_bm25_index(corpus)
     scores = bm25.get_scores(query.lower().split())
     indices = np.argsort(scores)[::-1][:top_k]
     results = []
     for index in indices:
         if scores[index] <= 0:
             continue
-        item = CORPUS[index]
+        item = corpus[index]
         results.append({
             "id": item["id"],
             "content": item["content"],

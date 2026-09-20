@@ -13,6 +13,11 @@ chạy lại pipeline không tạo dữ liệu trùng. Task 5 phải dùng chung
 
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
 
 STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
 CHROMA_DIR = Path(__file__).parent.parent / "chroma_db"
@@ -29,9 +34,37 @@ COLLECTION_NAME = "rag_documents"
 
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    from sentence_transformers import SentenceTransformer
-    model = SentenceTransformer(EMBEDDING_MODEL)
-    return model.encode(texts).tolist()
+    import os
+
+    provider = os.getenv("EMBEDDING_PROVIDER", "sentence_transformers").strip().lower()
+    model_name = os.getenv("EMBEDDING_MODEL", EMBEDDING_MODEL)
+
+    if provider == "openai":
+        from openai import OpenAI
+
+        response = OpenAI().embeddings.create(
+            model=model_name or "text-embedding-3-small",
+            input=texts,
+        )
+        return [item.embedding for item in response.data]
+
+    if provider == "sentence_transformers":
+        try:
+            from sentence_transformers import SentenceTransformer
+
+            model = SentenceTransformer(model_name)
+            return model.encode(texts).tolist()
+        except Exception:
+            pass
+
+    from sklearn.feature_extraction.text import HashingVectorizer
+
+    vectorizer = HashingVectorizer(
+        n_features=EMBEDDING_DIM,
+        alternate_sign=False,
+        norm="l2",
+    )
+    return vectorizer.transform(texts).toarray().tolist()
 
 
 def get_collection():

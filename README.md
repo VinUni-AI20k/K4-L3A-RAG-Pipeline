@@ -45,15 +45,15 @@ streamlit run app.py
 
 ## Lộ trình 3 giờ
 
-| Mốc                  | Thời gian | Kết quả cần có                           |
-| -------------------- | --------: | ---------------------------------------- |
-| 0. Setup             |   10 phút | Môi trường và `.env` sẵn sàng            |
+| Mốc                 | Thời gian | Kết quả cần có                             |
+| -------------------- | ---------: | ---------------------------------------------- |
+| 0. Setup             |   10 phút | Môi trường và`.env` sẵn sàng           |
 | 1. Data              |   25 phút | ≥3 legal, ≥5 news, Markdown đã chuẩn hoá |
-| 2. Index & search    |   30 phút | ChromaDB, dense search và BM25 chạy được |
-| 3. Fusion & fallback |   25 phút | RRF và fallback tuân thủ contract        |
-| 4. Generation & UI   |   30 phút | Chatbot trả lời có citation              |
-| 5. Evaluation        |   30 phút | 15+ Q&A, 4 metric, A/B comparison        |
-| 6. Demo & handoff    |   30 phút | Test, report, demo và push repository    |
+| 2. Index & search    |   30 phút | ChromaDB, dense search và BM25 chạy được  |
+| 3. Fusion & fallback |   25 phút | RRF và fallback tuân thủ contract           |
+| 4. Generation & UI   |   30 phút | Chatbot trả lời có citation                 |
+| 5. Evaluation        |   30 phút | 15+ Q&A, 4 metric, A/B comparison              |
+| 6. Demo & handoff    |   30 phút | Test, report, demo và push repository         |
 
 ## Lưu ý quy tắc để có code quality tốt:
 
