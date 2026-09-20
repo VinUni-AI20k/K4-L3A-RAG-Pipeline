@@ -1,0 +1,16 @@
+{
+  "luat_73_2021": {
+    "source_id": "luat_73_2021", "title": "Luật Phòng, chống ma túy số 73/2021/QH14", "source_type": "legal", "publisher": "Quốc hội", "trust_level": "official", "landing_url": "https://chinhphu.vn/?classid=1&docid=204940&pageid=27160&typegroupid=3", "expected_pdf_name": "73luat.pdf", "local_filename": "luat_73_2021_phong_chong_ma_tuy.pdf"
+  },
+  "nd28_2026": {
+    "source_id": "nd28_2026", "title": "Nghị định 28/2026/NĐ-CP", "source_type": "legal", "publisher": "Chính phủ", "trust_level": "official", "landing_url": "https://chinhphu.vn/?classid=1&docid=216717&pageid=27160", "expected_pdf_name": "28-cp.signed.pdf", "local_filename": "nghi_dinh_28_2026_danh_muc_ma_tuy.pdf"
+  },
+  "nd163_2026": {
+    "source_id": "nd163_2026", "title": "Nghị định 163/2026/NĐ-CP", "source_type": "legal", "publisher": "Chính phủ", "trust_level": "official", "landing_url": "https://chinhphu.vn/?docid=218256&pageid=27160&typegroupid=4", "expected_pdf_name": "163-ndcp.signed.pdf", "local_filename": "nghi_dinh_163_2026_huong_dan_luat.pdf"
+  },
+  "bocongan_20260706_etomidate_quang_ninh": {"source_id":"bocongan_20260706_etomidate_quang_ninh","publisher":"Bộ Công an","source_type":"official_news","trust_level":"official","published_date":"2026-07-06","url":"https://bocongan.gov.vn/bai-viet/cong-an-tinh-quang-ninh-quyet-liet-dau-tranh-xu-ly-toi-pham-lien-quan-den-chat-ma-tuy-moi-etomidate-1783415450"},
+  "bocongan_20260717_pod_chill_quang_ninh": {"source_id":"bocongan_20260717_pod_chill_quang_ninh","publisher":"Bộ Công an","source_type":"official_news","trust_level":"official","published_date":"2026-07-17","url":"https://bocongan.gov.vn/bai-viet/cong-an-tinh-quang-ninh-triet-pha-duong-day-mua-ban-to-chuc-su-dung-ma-tuy-etomidate-duoi-dang-pod-chill-tai-mong-cai-1784272382"},
+  "vtv_20260725_pod_chill_etomidate": {"source_id":"vtv_20260725_pod_chill_etomidate","publisher":"VTV","source_type":"trusted_news","trust_level":"trusted","published_date":"2026-07-25","url":"https://vtv.vn/pod-chill-chua-etomidate-hiem-hoa-ma-tuy-moi-doi-lot-thuoc-la-dien-tu-100260725185715661.htm"},
+  "bocongan_20260802_etomidate_hcm": {"source_id":"bocongan_20260802_etomidate_hcm","publisher":"Bộ Công an","source_type":"official_news","trust_level":"official","published_date":"2026-08-02","url":"https://bocongan.gov.vn/bai-viet/cong-an-thanh-pho-ho-chi-minh-tiep-tuc-triet-pha-duong-day-ma-tuy-etomidate-doi-lot-pod-chill-bat-giu-va-xu-ly-37-doi-tuong-1785643233"},
+  "bocongan_20260828_etomidate_hanoi": {"source_id":"bocongan_20260828_etomidate_hanoi","publisher":"Bộ Công an","source_type":"official_news","trust_level":"official","published_date":"2026-08-28","url":"https://www.bocongan.gov.vn/bai-viet/cong-an-ha-noi-triet-pha-duong-day-mua-ban-san-chiet-tinh-dau-ma-tuy-cuc-lon-nup-bong-thuoc-la-dien-tu-giao-dich-khoang-100-ty-dong-1787893865"}
+}
