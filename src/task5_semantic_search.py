@@ -1,41 +1,20 @@
-"""
-Task 5 — Semantic search.
-
-Embed query bằng chính hàm của Task 4, query ChromaDB và đổi cosine distance
-thành similarity. Output phải theo SearchResult, sort giảm dần và không quá top_k.
-"""
-
+"""Semantic search using the same Gemini embedding model as indexing."""
 from .task4_chunking_indexing import embed_texts, get_collection
 
-
 def semantic_search(query: str, top_k: int = 10) -> list[dict]:
-    """Trả về dense SearchResult theo score giảm dần."""
-    # TODO: Implement semantic search.
-    #
-    # query_vector = embed_texts([query])[0]
-    # response = get_collection().query(
-    #     query_embeddings=[query_vector],
-    #     n_results=top_k,
-    #     include=["documents", "metadatas", "distances"],
-    # )
-    # results = []
-    # for item_id, content, metadata, distance in zip(
-    #     response["ids"][0],
-    #     response["documents"][0],
-    #     response["metadatas"][0],
-    #     response["distances"][0],
-    # ):
-    #     results.append({
-    #         "id": item_id,
-    #         "content": content,
-    #         "score": max(0.0, 1.0 - distance),
-    #         "metadata": metadata,
-    #         "retrieval_method": "dense",
-    #     })
-    # return sorted(results, key=lambda item: item["score"], reverse=True)[:top_k]
-    raise NotImplementedError("Implement semantic_search")
-
+    if not query.strip() or top_k <= 0:
+        return []
+    query_vector = embed_texts([query])[0]
+    collection = get_collection()
+    raw = collection.query(query_embeddings=[query_vector],
+        n_results=top_k,
+        include=["documents", "metadatas", "distances"])
+    results = [{"id": item_id, "content": content,
+        "score": float(1.0 - distance), "metadata": metadata,
+        "retrieval_method": "dense"}
+        for item_id, content, metadata, distance in zip(raw["ids"][0],
+            raw["documents"][0], raw["metadatas"][0], raw["distances"][0])]
+    return sorted(results, key=lambda item: item["score"], reverse=True)[:top_k]
 
 if __name__ == "__main__":
-    for result in semantic_search("test query", top_k=3):
-        print(result)
+    print(semantic_search("Du lịch Hà Giang mùa nào đẹp?", 3))

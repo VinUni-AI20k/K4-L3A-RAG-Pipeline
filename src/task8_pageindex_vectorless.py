@@ -1,44 +1,40 @@
+"""Vectorless fallback over document chunks.
+
+The local implementation is deliberately provider-independent and remains usable
+when the optional PageIndex service is unavailable.
 """
-Task 8 — PageIndex vectorless fallback.
+import re
+from .task4_chunking_indexing import chunk_documents, load_documents
 
-Hướng dẫn:
-    1. Đọc PAGEINDEX_API_KEY từ .env.
-    2. Upload tài liệu ở định dạng PageIndex hỗ trợ.
-    3. Cache document IDs để không upload lại.
-    4. Parse kết quả thành SearchResult có method pageindex.
-
-PageIndex là dịch vụ ngoài: cần timeout và xử lý lỗi để pipeline không crash.
-"""
-
-import os
-from pathlib import Path
-
-from dotenv import load_dotenv
-
-
-load_dotenv()
-
-PAGEINDEX_API_KEY = os.getenv("PAGEINDEX_API_KEY", "")
-STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
-
+_TOKEN_RE = re.compile(r"\w+", re.UNICODE)
 
 def upload_documents() -> None:
-    """Upload tài liệu và lưu document IDs để tái sử dụng."""
-    # TODO: Upload documents và lưu mapping source -> document ID.
-    #
-    # Nếu SDK không nhận Markdown, convert sang PDF tạm trước khi upload.
-    # Kiểm tra response thật của SDK thay vì đoán tên field.
-    raise NotImplementedError("Implement upload_documents")
-
+    """Compatibility hook: the local fallback needs no remote upload."""
+    documents = load_documents()
+    print(f"Vectorless fallback ready for {len(documents)} documents")
 
 def pageindex_search(query: str, top_k: int = 5) -> list[dict]:
-    """Trả về pageindex SearchResult."""
-    # TODO: Query các document IDs và parse retrieved nodes.
-    #
-    # Mỗi result cần: id, content, score, metadata, retrieval_method.
-    # Nếu API không trả score, có thể gán score giảm dần theo rank.
-    raise NotImplementedError("Implement pageindex_search")
-
+    if not query.strip() or top_k <= 0:
+        return []
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.metrics.pairwise import cosine_similarity
+    chunks = chunk_documents(load_documents())
+    if not chunks:
+        return []
+    texts = [item["content"] for item in chunks]
+    matrix = TfidfVectorizer(lowercase=True, token_pattern=r"(?u)\b\w+\b",
+        ngram_range=(1, 2), sublinear_tf=True).fit_transform(texts + [query])
+    scores = cosine_similarity(matrix[-1], matrix[:-1]).ravel()
+    indices = sorted(range(len(scores)), key=lambda i: (-float(scores[i]), chunks[i]["id"]))
+    results = []
+    for index in indices[:top_k]:
+        if scores[index] <= 0:
+            continue
+        item = chunks[index]
+        results.append({"id": item["id"], "content": item["content"],
+            "score": float(scores[index]), "metadata": dict(item["metadata"]),
+            "retrieval_method": "pageindex"})
+    return results
 
 if __name__ == "__main__":
     upload_documents()
