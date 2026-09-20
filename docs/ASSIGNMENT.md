@@ -6,9 +6,9 @@ Repo có 10 task được implement sẵn khung (stub `NotImplementedError`) tro
 
 | Thành viên | Mã HV | Role | Branch đề xuất | Task chính |
 |---|---|---|---|---|
-| Vũ Văn Hà | 2A202602788 | Data lead | `task-data` | 1, 2, 3 |
+| Vũ Văn Hà | 2A202602589 | Data lead | `task-data` | 1, 2, 3 |
 | Nguyễn Văn Chiến | 2A202602926 | Indexing lead | `task-index` | 4, 5 |
-| Nguyễn Hồ Nam | 2A202602589 | Fusion lead | `task-fusion` | 6, 7 |
+| Nguyễn Hồ Nam |  2A202602788 | Fusion lead | `task-fusion` | 6, 7 |
 | Nguyễn Cảnh Duy | 2A202602815 | Retrieval lead | `task-pipeline` | 8, 9 |
 | Nguyễn Trọng Huy | 2A202602379 | Gen/UI lead | `task-generation` | 10 + `app.py` |
 
