@@ -7,7 +7,7 @@
 - Họ và tên: Nguyễn Đức Thắng
 - Mã học viên: 2A202602605
 - Nhóm: K4-L3A-RAG-Pipeline
-- Repository/branch: https://github.com/thangws4/K4-L3A-RAG-Pipeline — branch `main`, `thangnd`
+- Repository/branch: https://github.com/thangws4/K4-Day08-GICUNGDC — branch `main`, `thangnd`
 
 ## Phần việc đã thực hiện
 
