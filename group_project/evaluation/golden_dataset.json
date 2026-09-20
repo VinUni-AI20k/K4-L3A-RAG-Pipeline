@@ -1,0 +1,82 @@
+[
+  {
+    "question": "Thời gian tối đa để sinh viên hoàn thành khoá học tại Đại học Quốc gia Hà Nội được quy định như thế nào?",
+    "expected_answer": "Thời gian tối đa để sinh viên hoàn thành khoá học không vượt quá 2 lần thời gian theo kế hoạch học tập chuẩn toàn khoá đối với mỗi hình thức đào tạo. Đối với sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ, thời gian tối đa được xác định trên cơ sở thời gian chuẩn giảm tương ứng với khối lượng được miễn trừ.",
+    "expected_context": "Thời gian tối đa để sinh viên hoàn thành khoá học không vượt quá 2 lần thời gian theo kế hoạch học tập chuẩn toàn khoá đối với mỗi hình thức đào tạo. Đối với sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ tích lũy, thời gian tối đa để sinh viên hoàn thành khóa học được xác định trên cơ sở thời gian theo kế hoạch học tập chuẩn toàn khoá giảm tương ứng với khối lượng được miễn trừ."
+  },
+  {
+    "question": "Điều kiện về điểm trung bình chung tích lũy để sinh viên năm thứ nhất và năm thứ hai không bị cảnh báo học vụ là gì?",
+    "expected_answer": "Sinh viên bị cảnh báo học vụ nếu điểm trung bình chung tích lũy đạt dưới 1,20 đối với sinh viên năm thứ nhất, hoặc dưới 1,40 đối với sinh viên năm thứ hai.",
+    "expected_context": "Đơn vị đào tạo thực hiện cảnh báo học vụ theo từng học kỳ cho sinh viên có kết quả học tập như sau: a) Điểm trung bình chung tích luỹ đạt dưới 1,20 đối với sinh viên năm thứ nhất, dưới 1,40 đối với sinh viên năm thứ hai, dưới 1,60 đối với sinh viên năm thứ ba hoặc dưới 1,80 đối với sinh viên các năm tiếp theo và cuối khoá."
+  },
+  {
+    "question": "Những trường hợp nào khiến sinh viên bị buộc thôi học theo Quy chế đào tạo đại học ĐHQGHN?",
+    "expected_answer": "Sinh viên bị buộc thôi học nếu: có số lần cảnh báo học tập vượt quá giới hạn theo quy định của thủ trưởng đơn vị đào tạo; vượt quá thời gian tối đa được phép học; bị kỷ luật lần thứ hai vì thi hộ hoặc nhờ thi hộ; bị kỷ luật xóa tên khỏi danh sách sinh viên; không đăng ký học 2 học kỳ liên tiếp; hoặc sau khi hết hạn nghỉ học tạm thời sinh viên không có đơn xin học trở lại.",
+    "expected_context": "Sau mỗi học kỳ, sinh viên bị buộc thôi học nếu thuộc một trong các trường hợp sau: a) Có số lần cảnh báo kết quả học tập vượt quá giới hạn theo quy định của thủ trưởng đơn vị đào tạo; b) Vượt quá thời gian tối đa được phép học; c) Bị kỷ luật lần thứ hai vì lý do thi hộ hoặc nhờ người thi hộ; d) Không đăng ký học 2 học kỳ liên tiếp; đ) Sau khi hết hạn nghỉ học tạm thời sinh viên không có đơn xin học trở lại."
+  },
+  {
+    "question": "Thang điểm chữ A+, A, B+ quy đổi sang thang điểm 4 tương ứng với bao nhiêu điểm?",
+    "expected_answer": "Theo thang điểm 4 của ĐHQGHN: điểm A+ tương ứng với 4,0; điểm A tương ứng với 3,7; và điểm B+ tương ứng với 3,5.",
+    "expected_context": "A+ tương ứng với 4,0; A tương ứng với 3,7; B+ tương ứng với 3,5; B tương ứng với 3,0; C+ tương ứng với 2,5; C tương ứng với 2,0; D+ tương ứng với 1,5; D tương ứng với 1,0; F tương ứng với 0."
+  },
+  {
+    "question": "Hạng tốt nghiệp Xuất sắc và Giỏi của sinh viên ĐHQGHN được xác định theo mức điểm trung bình chung tích lũy nào?",
+    "expected_answer": "Hạng tốt nghiệp Xuất sắc yêu cầu điểm trung bình chung tích lũy từ 3,60 đến 4,00. Hạng tốt nghiệp Giỏi yêu cầu điểm trung bình chung tích lũy từ 3,20 đến 3,59.",
+    "expected_context": "Hạng tốt nghiệp được xác định theo điểm trung bình chung tích lũy của toàn khóa học, cụ thể như sau: a) Xuất sắc: Điểm trung bình chung tích lũy từ 3,60 đến 4,00; b) Giỏi: Điểm trung bình chung tích lũy từ 3,20 đến 3,59; c) Khá: Điểm trung bình chung tích lũy từ 2,50 đến 3,19; d) Trung bình: Điểm trung bình chung tích lũy từ 2,00 đến 2,49."
+  },
+  {
+    "question": "Trường hợp nào sinh viên tốt nghiệp loại Xuất sắc hoặc Giỏi bị hạ một bậc hạng tốt nghiệp?",
+    "expected_answer": "Sinh viên có kết quả học tập toàn khóa đạt hạng Xuất sắc hoặc Giỏi sẽ bị hạ một hạng nếu: bị kỷ luật từ mức cảnh báo trở lên trong thời gian học, hoặc khối lượng của các học phần phải học lại vượt quá 5% so với tổng số tín chỉ quy định cho toàn chương trình.",
+    "expected_context": "Những sinh viên có kết quả học tập toàn khóa đạt hạng xuất sắc hoặc giỏi, hạng tốt nghiệp sẽ bị hạ một hạng nếu bị kỷ luật từ mức cảnh cáo trở lên trong thời gian học hoặc khối lượng của các học phần phải học lại vượt quá 5% so với tổng số tín chỉ quy định cho toàn chương trình."
+  },
+  {
+    "question": "Sinh viên cần đáp ứng những điều kiện gì để được xem xét chuyển sang học một ngành học khác sau năm thứ nhất?",
+    "expected_answer": "Sinh viên cần: đáp ứng điều kiện trúng tuyển của ngành muốn chuyển sang; có số tín chỉ tích lũy tối thiểu bằng khối lượng thiết kế theo kế hoạch học tập chuẩn; điểm trung bình chung các học phần từ 2,50 trở lên; không bị cảnh báo học tập hoặc kỷ luật; đơn vị đào tạo còn chỉ tiêu; và được sự đồng ý của Chủ nhiệm Khoa/Bộ môn cùng thủ trưởng đơn vị đào tạo.",
+    "expected_context": "Sinh viên hoàn thành năm học thứ nhất được xem xét chuyển sang học một ngành học khác nếu đáp ứng đầy đủ các điều kiện sau: a) Đáp ứng điều kiện trúng tuyển của ngành muốn chuyển sang học; b) Có số tín chỉ tích lũy tối thiểu bằng khối lượng thiết kế theo kế hoạch học tập chuẩn; c) Điểm trung bình chung các học phần tính đến thời điểm xét đạt từ 2,50 trở lên; d) Không bị cảnh báo học tập hoặc bị xét thi hành kỷ luật; đ) Đơn vị đào tạo còn chỉ tiêu đối với ngành đào tạo sinh viên muốn chuyển đến; e) Được sự đồng ý của Chủ nhiệm Khoa/Bộ môn và thủ trưởng đơn vị đào tạo."
+  },
+  {
+    "question": "Định kỳ mỗi năm đơn vị đào tạo tổ chức xét tốt nghiệp cho sinh viên vào những tháng nào?",
+    "expected_answer": "Định kỳ mỗi năm 4 lần vào các tháng: tháng 3, tháng 6 và tháng 7, tháng 9, tháng 12.",
+    "expected_context": "Định kỳ mỗi năm 4 lần (tháng 3, tháng 6 và tháng 7, tháng 9, tháng 12), thủ trưởng đơn vị đào tạo ra quyết định thành lập Hội đồng xét tốt nghiệp cho sinh viên đã hoàn thành chương trình đào tạo của đơn vị."
+  },
+  {
+    "question": "Theo Quyết định 4618/QĐ-ĐHQGHN, học bổng tại ĐHQGHN được định nghĩa như thế nào?",
+    "expected_answer": "Học bổng là khoản kinh phí mà học sinh, sinh viên được nhận thông qua đầu mối ĐHQGHN hoặc đơn vị thành viên, đơn vị trực thuộc của ĐHQGHN xét, cấp nhằm hỗ trợ chi phí sinh hoạt, học tập, nghiên cứu tại ĐHQGHN.",
+    "expected_context": "Học bổng là khoản kinh phí mà học sinh, sinh viên được nhận thông qua đầu mối ĐHQGHN hoặc đơn vị thành viên, đơn vị trực thuộc của ĐHQGHN (gọi chung là đơn vị) xét, cấp nhằm hỗ trợ chi phí sinh hoạt, học tập, nghiên cứu tại ĐHQGHN."
+  },
+  {
+    "question": "Quy chế đào tạo quy định số lần cảnh báo học vụ liên tiếp tối đa cho sinh viên là bao nhiêu lần?",
+    "expected_answer": "Thủ trưởng đơn vị quy định số lần cảnh báo học vụ nhưng không quá 2 lần liên tiếp.",
+    "expected_context": "Tùy theo đặc điểm của từng đơn vị đào tạo, thủ trưởng đơn vị quy định áp dụng một hoặc hai trong ba điều kiện nêu trên để cảnh báo kết quả học tập của sinh viên và quy định số lần cảnh báo học vụ, nhưng không quá 2 lần liên tiếp."
+  },
+  {
+    "question": "Sinh viên tốt nghiệp đợt tháng 01/2026 tại UET nộp ảnh làm bằng tốt nghiệp ở đâu và hạn chót khi nào?",
+    "expected_answer": "Mỗi sinh viên nộp cho Lớp trưởng 02 ảnh chân dung màu cỡ 3x4cm. Lớp trưởng thu nhận và nộp đầy đủ ảnh cùng danh sách tại Phòng Công tác sinh viên (Phòng 107-G2) trước thứ Tư, ngày 21/01/2026.",
+    "expected_context": "Mỗi sinh viên nộp cho Lớp trưởng Lớp khóa học 02 ảnh chân dung màu cỡ 3x4cm... Lớp trưởng nộp đầy đủ ảnh và danh sách tại phòng Công tác sinh viên (P.107-G2) trước thứ Tư ngày 21/01/2026. Quá thời hạn này, nếu sinh viên không thực hiện yêu cầu trên, phải tự chịu trách nhiệm về việc không được cấp bằng tốt nghiệp đúng thời hạn của mình."
+  },
+  {
+    "question": "Lễ bế giảng và trao bằng tốt nghiệp đợt tháng 1/2026 của UET được tổ chức ở đâu và vào ngày nào?",
+    "expected_answer": "Lễ bế giảng và trao bằng tốt nghiệp được tổ chức vào thứ Bảy, ngày 07/02/2026 tại Hội trường Nguyễn Văn Đạo.",
+    "expected_context": "Lễ bế giảng và trao bằng tốt nghiệp cho sinh viên tốt nghiệp đợt tháng 1/2026 sẽ được tổ chức vào thứ Bảy, ngày 07/02/2026 tại Hội trường Nguyễn Văn Đạo theo các khung giờ dự kiến."
+  },
+  {
+    "question": "Sinh viên UET có thắc mắc hoặc cần xử lý gia hạn BHYT năm 2026 liên hệ phòng nào và hạn chót là ngày nào?",
+    "expected_answer": "Sinh viên liên hệ với Phòng Công tác sinh viên tại Phòng 210-G2 trước ngày 15/01/2026 để được giải quyết.",
+    "expected_context": "Nếu có bất cứ thắc mắc gì về các danh sách trên, sinh viên liên hệ với phòng Công tác sinh viên (Phòng 210-G2) trước ngày 15/01/2026 để được giải quyết."
+  },
+  {
+    "question": "Sinh viên UET đăng ký tham gia cuộc thi Học sinh, sinh viên với ý tưởng khởi nghiệp trước ngày nào và nộp những sản phẩm gì?",
+    "expected_answer": "Sinh viên đăng ký trước Chủ nhật, ngày 25/01/2026. Khi đăng ký cần gửi kèm 02 sản phẩm: Bản thuyết minh dự án và Video clip thuyết minh dự án.",
+    "expected_context": "Sinh viên lưu ý: Khi đăng ký dự thi, phải gửi kèm theo 02 sản phẩm sau đây: + Bản thuyết minh dự án (Theo mẫu phụ lục 01 trong Thể lệ); + Video clip thuyết minh dự án (Theo mẫu phụ lục 02 trong thể lệ). Sinh viên có nguyện vọng thì đăng ký tham gia cuộc thi trước Chủ nhật, ngày 25 tháng 01 năm 2026."
+  },
+  {
+    "question": "Mức hỗ trợ học bổng của Tập đoàn Vingroup cho học viên cao học và nghiên cứu sinh tại UET là bao nhiêu?",
+    "expected_answer": "Mức hỗ trợ là 120.000.000 VNĐ cho bậc đào tạo thạc sĩ và 150.000.000 VNĐ cho bậc đào tạo tiến sĩ.",
+    "expected_context": "2. Mức hỗ trợ: - 120.000.000 VNĐ cho bậc đào tạo thạc sĩ; - 150.000.000 VNĐ cho bậc đào tạo tiến sĩ."
+  },
+  {
+    "question": "Học bổng sau đại học của Trường ĐH Công nghệ (UET) trao cho nghiên cứu sinh có giá trị là bao nhiêu?",
+    "expected_answer": "Học bổng toàn phần của Trường ĐH Công nghệ cho nghiên cứu sinh từ thạc sĩ là 60.000.000 đồng/khóa học, và cho nghiên cứu sinh từ cử nhân là 80.000.000 đồng/khóa học.",
+    "expected_context": "Học bổng toàn phần của Trường ĐH Công nghệ: cho NCS từ thạc sĩ là 60.000.000 đồng/khóa học, cho NCS từ cử nhân là 80.000.000 đồng/khóa học. Phòng Đào tạo, Trường ĐH Công nghệ: chị Nguyễn Khánh Ly – SĐT: 024 3754 7810."
+  }
+]

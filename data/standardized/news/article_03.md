@@ -1,0 +1,35 @@
+# Tham gia cuộc thi “Học sinh, sinh viên với ý tưởng khởi nghiệp”
+
+**Source:** https://uet.vnu.edu.vn/tham-gia-cuoc-thi-hoc-sinh-sinh-vien-voi-y-tuong-khoi-nghiep/
+
+**Crawled:** 2026-09-20T10:24:26.609294
+
+**Doc Type:** news
+
+---
+
+# Tham gia cuộc thi “Học sinh, sinh viên với ý tưởng khởi nghiệp”
+
+
+Nhà trường nhận được công văn số 3344/QĐ-BGDĐT, ngày 05 tháng 12 năm 2025 của Bộ giáo dục và Đào tạo về việc tổ chức cuộc thi “Học sinh, sinh viên với ý tưởng khởi nghiệp”.
+
+
+Cuộc thi được tổ chức với mục đích thúc đẩy tinh thần khởi nghiệp, trang bị kiến thức, kỹ năng về khởi nghiệp cho học sinh, sinh viên, qua đó tạo môi trường để học sinh sinh viên hình thành và hiện thực hóa ý tưởng, giải pháp, dự án khởi nghiệp, góp phần tạo giá trị cho bản thân, gia đình, cộng đồng và xã hội. Thông qua cuộc thi Ban Tổ chức cũng sẽ lựa chọn và hỗ trợ ươm tạo các dự án khởi nghiệp khả thi của học sinh sinh viên.
+
+
+Thể lệ về cuộc thi gửikèm theothông báo này.
+
+
+Sinh viên lưu ý: Khi đăng ký dự thi, phải gửi kèm theo 02 sản phẩm sau đây:
+
+
++ Bản thuyết minh dự án (Theo mẫu phụ lục 01 trong Thể lệ);
+
+
++ Video clip thuyết minh dự án (Theo mẫu phụ lục 02 trong thể lệ).
+
+
+Nhà trường thông báo để sinh viên được biết, sinh viên có nguyện vọng thì đăng ký tham gia cuộc thi trước Chủ nhật, ngày 25 tháng 01 năm 2026 tại đường dẫn:https://forms.gle/QHA4wHeWqPWVTW8b8. Sau thời gian này, Hội đồng xét chọn của Nhà trường sẽ lựa chọn những sản phẩm có chất lượng của sinh viên để gửi đi đăng ký dự thi cấp Bộ.
+
+
+Trân trọng thông báo!

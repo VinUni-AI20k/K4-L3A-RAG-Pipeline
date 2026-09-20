@@ -1,0 +1,203 @@
+# Kế hoạch kết thúc khóa học của các lớp QH-2021 (K66) chương trình kỹ sư, các khóa cũ và TN trước hạn  đợt xét tháng 01/2026
+
+**Source:** https://uet.vnu.edu.vn/ke-hoach-ket-thuc-khoa-hoc-cua-cac-lop-qh-2021-k66-chuong-trinh-ky-su-cac-khoa-cu-va-tn-truoc-han-dot-xet-thang-01-2026/
+
+**Crawled:** 2026-09-20T10:24:22.892954
+
+**Doc Type:** news
+
+---
+
+# Kế hoạch kết thúc khóa học của các lớp QH-2021 (K66) chương trình kỹ sư, các khóa cũ và TN trước hạn  đợt xét tháng 01/2026
+
+
+Thực hiện kế hoạch học tập năm học 2025-2026, Nhà trường thông báo kế hoạch tổ chức các hoạt động kết thúc khóa học và chuẩn bị trao bằng cho sinh viên tốt nghiệp đợt tháng 01/2026 như sau:
+
+
+I. Triển khai đánh giá kết quả rèn luyện và xét khen thưởng
+
+
+1. Đối với sinh viên cáclớpK66chương trình kỹ sưvà sinh viên tốt nghiệp trước hạnthực hiện các công việc sau:
+
+
+1.1. Cá nhân sinh viên:
+
+
+Từ 14h00 ngày 09/01 đến 09h00 ngày 12/01/2026:
+
+
++ Tự đánh giá Kết quả rèn tại tranghttps://student.uet.vnu.edu.vn/#1;
+
+
++ Kiểm tra kết quả rèn luyện các học kỳ (bảng tổng hợp gửi kèm theo), nếu phát hiện có điểm nào chưa chính xác thì làm đơn hiệu chỉnh gửi Ban cán sự lớp khóa học;
+
+
++ Đối chiếu với quy chế khen thưởng để xác định mình đủ điều kiện đạt các Danh hiệu nào trong toàn khóa học;
+
+
++ Hoàn thành Link khảo sát:https://vieclam.uet.vnu.edu.vn/khao-sat-sinh-vien-nsi4805
+
+
+Lưu ý:
+
+
++Đánh giá kết quả rèn luyện theo đúng lịch do không có đợt mở đánh giá bổ sung;
+
+
++ Sinh viên xin đánh giá muộn phải có lý do chính đáng (nếu vẫn kịp đợt xét tốt nghiệp tháng 01/2026), nếu không tham gia mà không có lý do chính đáng sẽ nhận 0 điểm và xếp loại “Kém” cho kết quả rèn luyện của Học kỳ, khi đó mọi quyền lợi của sinh viên liên quan đến kết quả rèn luyệnnhư khen thưởng, học bổng, in vào bảng điểm..v.v..sẽ không được xem xét;
+
+
++Các mục đánh giá cộng điểm như: mục 3.2,mục 5.4, 5.5, 5.6, 5.7, 5.8trong phiếu đánh giá kết quả rèn luyện trên hệ thống sinh viên bắt buộc phảitảiminh chứng vào cột “SV_MC”.
+
+
++ Sinh viên xem thông tin ở cột “CTSV” để biết sơ bộ các mục cộng, trừ điểm từ dữ liệu của Nhà trường;
+
+
++Với các sinh viên chưa có đủ điểm các học phần tính đến thời điểm họp xét, đang dự thi trong học kỳ I năm học 2025-2026, sau khi được cập nhật điểm mà thay đổi điểm rèn luyện thì làm đơn gửi Văn phòng Khoa/Việnhoặc phòng Công tác sinh viên (nếu vẫn kịp đợt xét tốt nghiệp tháng 01/2026);
+
+
++ Trong quá trình đánh giá nếu sinh viên gặp bất cứ vướng mắc thìliên hệ phòng Công tác sinh viên quahotline: 088.624.1976, email:nthue153@vnu.edu.vn.
+
+
++ Sau khi kết thúcđợt đánh giá sinh viên xem điểm cuối cùng của mìnhtại cột “Trường XN”, kiểm tra lại điểm rèn luyện khi có thông báo trên websiteTrường.
+
+
+1.2. Đại diện Ban cán sự lớp Khóa học
+
+
+Từ ngày 09/01 đến ngày 12/01/2026:
+
+
++ Triển khai duyệt Kết quả rèn luyện của từng thành viên trong lớp trên tranghttps://student.uet.vnu.edu.vn/#1(chỉ duyệt cho các sinh viên đã tham gia đánh giá);
+
+
++ Xuất file Kết quả rèn luyện của toàn thể sinh viên trong lớp;
+
+
++ Lập danh sách sinh viên cần điều chỉnh điểm rèn luyện (nếu có);
+
+
++ Lập danh sách (theo mẫu) sinh viên đủ điều kiện khen thưởng;
+
+
+1.3. Giáo viên chủ nhiệm
+
+
++ Triển khai sinh hoạt lớp khóa học(địa điểm và thời gian theo sự phân công của Khoa/Viện)để thông qua kết quả rèn luyện và kết quả khen thưởng của sinh viên trong lớp;
+
+
++ Tiến hành duyệt Kết quả rèn luyện của từng thành viên trong lớp trên tranghttps://student.uet.vnu.edu.vn/#1Từ ngày 09/01 đến ngày 12/01/2026.
+
+
++ Sau buổi sinh hoạt lớp gửi về Văn phòng Khoa/Viện các tài liệu (cả bản cứng và file điện tử): Kết quả rèn luyện của toàn thể sinh viên trong lớp; Danh sách sinh viên cần điều chỉnh điểm rèn luyện (nếu có); Danh sách (theo mẫu) sinh viên đủ điều kiện khen thưởng;
+
+
+1.4. Khoa/Viện
+
+
++ Trước ngày 09/01/2026 nhận từ Phòng Công tác sinh viên bản mềm tài liệu: Hướng dẫn đánh giá Kết quả rèn luyện trên phần mềm; Hướng dẫn công tác xét Khen thưởng; Danh sách sinh viên được cộng/trừ điểm rèn luyện; Các biểu mẫu kèm theo (nếu có);
+
+
++ Xuất từ hệ thống bảng điểm học tập phục vụ cho việc đánh giá kết quả rèn luyện học kỳ I, năm học 2025-2026 và điểm toàn khóa học phục vụ cho việc xét khen thưởng(lưu ý lấy điểm toàn khóa và điểm của từng học kỳ để xét điểm thành phần)các Khoa/Viện tự xuất điểm trên phần mềm đào tạo;
+
+
++ Chuyển các tài liệu liên quan đến Ban cán sự lớp và chỉ đạo tổ chức sinh hoạt các lớp khóa học thuộc đơn vị mình(tự quy định về hình thức, thời gian và bổ sung thêm các nội dung sinh hoạt lớp nếu cần);
+
+
++ Tổ chức Hội đồng cấp Khoa/Viện để thông qua kết quả rèn luyện và khen thưởng của sinh viên thuộc đơn vị mình;
+
+
++ Trước ngày 16/01/2026 nộp về phòng Công tác sinh viên bản cứng (nộp về Phòng 210-G2) và bản điện tử (nộp bản mềm về hòm mail:nthue153@vnu.edu.vn)các tài liệu: Biên bản họp xét kết quả rèn luyện, khen thưởng và Danh sách (theo mẫu) sinh viên đủ tiêu chuẩn khen thưởng của đơn vị mình.
+
+
+2. Đối với các sinh viên đang trong thời gian đào tạo kéo dàithực hiện các công việc sautrướcngày12/01/2026:
+
+
++ Tự làm phiếu đánh giá điểm rèn luyện HKI năm học 2025-2026 và những học kỳ còn thiếu (không phải lấy xác nhận của giáo viên chủ nhiệm và Lớp trưởng) (1.Mẫu Phiếu đánh giá ĐRL;2.Hướng dẫn đánh giá ĐRL)
+
+
+nộp phiếu trực tiếp tại phòng Công tác sinh viên (phòng 210-G2) hoặc qua đường link:https://forms.gle/4LG3RPD8eJTb2uFa6;
+
+
++ Nếu thuộc diện được tốt nghiệp đợt tháng 01/2026 thì ngoài tự đánh giá điểm rèn luyện thì hoàn thành Link khảo sát:https://vieclam.uet.vnu.edu.vn/khao-sat-sinh-vien-nsi4805;
+
+
+II. Hoàn thiện các thủ tục trước khi nhận bằng
+
+
+1. Khám sức khỏe cuối khóa
+
+
+Thời gian: 7h30 – 11h30 và 13h00 – 16h30, thứ Bảy, ngày 17/01/2026.
+
+
+Địa điểm: Bệnh viện ĐHQGHN, 182 Lương Thế Vinh, Thanh Xuân, Hà Nội.
+
+
+Lưu ý:Khi đến khám sức khỏe, mỗi sinh viên phải đem theo:
+
+
+– Thẻ sinh viên;
+
+
+– Lệ phí khám sức khỏe (theo quy định của Đại học Quốc gia Hà Nội): 100.000đ/bản đầu tiên và 10.000đ/bản tiếp theo (nếu có nhu cầu). Lệ phí này nộp tại phòng khám;
+
+
+– Ảnh chân dung màu cỡ 4x6cm mới chụp trong khoảng thời gian 6 tháng trở lại đây (mỗi Phiếu khám sức khỏe cần 1 ảnh, tùy theo số lượng bản sinh viên cần thì sinh viên sẽ đem theo ảnh và kinh phí tương ứng);
+
+
+– Các sinh viên có tên trong danh sách  (Phụ lục 2) được miễn tiền khám sức khỏe đính kèm sẽ không phải nộp lệ phí 100.000đ.
+
+
+2. Nộp ảnh để làm bằng tốt nghiệp
+
+
+– Mỗi sinh viên nộp cho Lớp trưởng Lớp khóa học 02 ảnh chân dung màu cỡ 3x4cm, được chụp trong thời gian 2 tháng gần nhất. Mặt sau của mỗi ảnh ghi rõ họ tên/ngày sinh/mã sinh viên. Ảnh được bỏ trong phong bì dán kín,ngoài phong bì ghi rõ họ tên/ngày sinh/lớp/mã số sinh viên/nơi sinh theo giấy khai sinh. (Chú ý: ảnh chụp theo quy định ảnh thẻ).
+
+
+– Lớp trưởng thu ảnh của sinh viên trong lớp và lập danh sách gồm các thông tin: họ tên, mã số sinh viên, ngày sinh, nơi sinh, lớp, đã nộp/chưa nộp và sắp xếp theo thứ tự danh sách lớp;
+
+
+– Lớp trưởng nộp đầy đủ ảnh và danh sách tại phòng Công tác sinh viên (P.107-G2) trướcthứ Tư ngày 21/01/2026. Quá thời hạn này, nếu sinh viên không thực hiện yêu cầu trên, phải tự chịu trách nhiệm về việc không được cấp bằng tốt nghiệp đúng thời hạn của mình.
+
+
+3. Nộp ảnh để trình chiếu trong Lễ trao bằng
+
+
+Với các sinh viên dự kiến tốt nghiệp đợt tháng 01/2026 nộp bản mềm ảnh cá nhân để trình chiếu khi lên nhận bằng tốt nghiệp tại đường link, trướcngày18/01/2026:http://ctsv.uet.vnu.edu.vn:4000/login(Tài khoản và mật khẩu là mã sinh viên,yêu cầu ảnh theo chiều dọc, chụp đẹp, trang phục tự chọn nhưng phải lịch sự, nếu không đạt yêu cầu sẽ không được trình chiếu khi lên nhận bằng, sinh viên up ảnhlên google drivervà gửi ở dạng đường link công khai).
+
+
+4. Thanh toán các khoản nợ tại các đơn vị
+
+
+–  Nếu sinh viên còn có các khoản nợ tại các đơn vị: Phòng Kế hoạch – Tài chính (học phí), Thư viện Hội sinh viên Trường, Trung tâm Thông tin – Thư viện (sách và giáo trình) và Ký túc xá (các khoản phí) thì phải thực hiện nghĩa vụ thanh toán đối với các đơn vị nói trên;
+
+
+– Sauthứ Tư 21/01/2026: nếu sinh viên không thực hiện thanh toán các khoản nợ tại các đơn vị nêu trên sẽ không hoàn thành thủ tục tốt nghiệp ra trường và không được xét công nhận tốt nghiệp.
+
+
+5. Nhận hồ sơ tốt nghiệp
+
+
+Ngày28/01/2026và sáng29/01/2026: Các sinh viên đủ điều kiện tốt nghiệp đợt tháng 01/2026 đến Phòng Công tác Sinh viên 107-G2(theo lịch trả hồ sơ trong Phụ lụcđính kèm).
+
+
+– Khi đến nhận Hồ sơ sinh viên(không nhờ người khác nhận hộ).Đề nghị sinh viên đem theo Căn cước công dân hoặc hộ chiếu, Thẻ sinh viên và “Giấy thu nhận sinh viên” lúc nhập học(nếu còn);
+
+
+III. Lễ bế giảng và trao bằng tốt nghiệp
+
+
+Lễ bế giảng và trao bằng tốt nghiệp cho sinh viên tốt nghiệp đợt tháng 1/2026 sẽ được tổ chức vàothứ Bảy, ngày 07/02/2026 tại Hội trường Nguyễn Văn Đạotheo các khung giờ dự kiến như sau:
+
+- Ca 1 (8h – 9h30): Trao bằng cho Tiến sĩ, Thạc sĩ, Thủ khoa ĐH(Không giới hạn người nhà vào tham dự).
+- Ca 2 (9h50 – 10h50): Trao bằng cho các ngành Kỹ thuật năng lượng, Vật lý kỹ thuật, CN Kỹ thuật xây dựng, CN Hàng không vũ trụ (Mỗi người học được nhận 02 Giấy mời cho 02 người nhà).
+- Ca 3 (11h10 – 12h10): Trao bằng cho các ngành Mạng máy tính và truyền thông dữ liệu, Khoa học máy tính, Công nghệ thông tin, Hệ thống thông tin (Mỗi người học được nhận 02 Giấy mời cho 02 người nhà).
+- Ca 4 (13h00 – 14h10): Trao bằng cho các ngành Kỹ thuật máy tính, Kỹ thuật Robot, Công nghệ KT Điện tử viễn thông (Mỗi người học được nhận 02 Giấy mời cho 02 người nhà).
+- Ca 5 (14h30 – 15h10): Trao bằng cho các ngành Trí tuệ nhân tạo, Công nghệ nông nghiệp (Mỗi người học được nhận 02 Giấy mời cho 02 người nhà).
+- Ca 6 (15h30 – 17h00): Trao bằng cho các ngành Cơ kỹ thuật, KT Điều khiển & TĐH, Công nghệ kỹ thuật Cơ điện tử (Mỗi người học được nhận 02 Giấy mời cho 02 người nhà).
+
+Lưu ý: Lịch kí nhận bằng, Kịch bản chi tiết Lễ bế giảng và trao bằng tốt nghiệp, sơ đồ chỗ ngồi sẽ được thông báo tới người học sau ngày 25/01/2026.
+
+
+Đề nghị các Ban chủ nhiệm Khoa/Viện, Giáo viên chủ nhiệm, Ban cán sự Lớp khóa học và Ban chấp hành Chi đoàn chỉ đạo, kiểm tra đôn đốc sinh viên thực hiện tốt, đầy đủ và đúng hạn các công việc trên./.

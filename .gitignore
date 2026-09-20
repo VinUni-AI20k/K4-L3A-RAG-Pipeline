@@ -40,8 +40,10 @@ data/_tmp_pdf/
 
 # Temp / cache
 .pytest_cache/
+chroma_db/
 *.tmp
 *.log
+
 pageindex_doc_ids.json
 pageindex_pdfs/
 
@@ -55,3 +57,4 @@ pageindex_pdfs/
 # OS
 .DS_Store
 Thumbs.db
+*.zip
