@@ -117,6 +117,7 @@ embedding model thì phải đo lại.
 - [Grading rubric](docs/GRADING_RUBRIC.md): Rubric thang điểm.
 - [Individual report](group_project/ịndividual/INDIVIDUAL_REPORT.md): template báo cáo cá nhân.
 - [Suggested topics](docs/SUGGESTED_TOPICS.md): danh sách chủ đề tham khảo, không bắt buộc.
+- [Thành viên nhóm](TEAMMATES.md) và [phân chia việc còn lại](WORK_SPLIT.md).
 
 ## Kiểm tra
 
