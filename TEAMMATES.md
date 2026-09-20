@@ -22,7 +22,7 @@ git push -u origin feature/<ten-nhanh-cua-ban>
 | | Thành viên | Mã học viên | Vai trò chính |
 |---|---|---|---|
 | TV1 | Đỗ Thái Sơn | 2A202603021 | Data pipeline + Indexing |
-| TV2 | | | Retrieval (Dense + Lexical) |
+| TV2 | Nguyễn Vũ Huy | 2A202602662 | Retrieval (Dense + Lexical) |
 | TV3 | | | Fusion + Fallback + PageIndex |
 | TV4 | | | Generation + UI + Evaluation |
 
