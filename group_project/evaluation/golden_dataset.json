@@ -1,0 +1,77 @@
+[
+  {
+    "question": "Các phương tiện nào phải tuân thủ nghiêm ngặt quy định về an toàn giao thông đường bộ theo Luật 36/2024?",
+    "expected_answer": "Luật 36/2024 áp dụng đối với người điều khiển, người tham gia giao thông và các phương tiện trên đường bộ theo quy định về an toàn giao thông.",
+    "expected_context": "Luật trật tự an toàn giao thông đường bộ"
+  },
+  {
+    "question": "Điều gì là nguyên nhân chính dẫn đến tai nạn giao thông theo nguồn dữ liệu?",
+    "expected_answer": "Nguyên nhân chính chủ yếu là vi phạm quy định về tốc độ, làn đường, vượt xe và thiếu ý thức an toàn giao thông.",
+    "expected_context": "Tài liệu pháp lý và tin tức liên quan đến vi phạm giao thông"
+  },
+  {
+    "question": "Xe máy có được đi vào làn ưu tiên không?",
+    "expected_answer": "Theo quy định hiện hành, xe máy không được ưu tiên đi vào làn dành cho phương tiện ưu tiên trừ khi được pháp luật cho phép theo trường hợp quy định cụ thể.",
+    "expected_context": "Quy định làn đường ưu tiên và phương tiện tham gia giao thông"
+  },
+  {
+    "question": "Mức xử phạt đối với hành vi vượt đèn đỏ là bao nhiêu?",
+    "expected_answer": "Hành vi vượt đèn đỏ có thể bị xử phạt theo mức phạt quy định trong Nghị định và văn bản hướng dẫn về xử phạt vi phạm giao thông đường bộ.",
+    "expected_context": "Nghị định về xử phạt vi phạm giao thông đường bộ"
+  },
+  {
+    "question": "Khi nào người lái xe phải giảm tốc độ ở khu dân cư?",
+    "expected_answer": "Người lái xe phải giảm tốc độ khi đi qua khu dân cư, trường học, khu vực đông người và nơi có biển báo cảnh báo.",
+    "expected_context": "Quy định tốc độ và cảnh báo giao thông"
+  },
+  {
+    "question": "Làn đường nào được ưu tiên cho xe cứu thương, xe cứu hộ hoặc xe ưu tiên?",
+    "expected_answer": "Các phương tiện ưu tiên có quyền đi trên làn đường ưu tiên theo quy định cụ thể, nhưng các phương tiện khác phải nhường đường.",
+    "expected_context": "Quy định về xe ưu tiên và làn đường"
+  },
+  {
+    "question": "Nội dung chính của Nghị định 168/2024 là gì?",
+    "expected_answer": "Nghị định 168/2024 quy định chủ yếu về mức xử phạt vi phạm giao thông đường bộ, và các hành vi bị phạt theo từng mức độ.",
+    "expected_context": "Nghị định 168/2024 về xử phạt vi phạm giao thông đường bộ"
+  },
+  {
+    "question": "Nếu phát hiện người chạy xe máy dưới ảnh hưởng rượu cần làm gì?",
+    "expected_answer": "Người điều khiển xe máy dưới ảnh hưởng rượu sẽ bị xử lý theo quy định nghiêm ngặt, có thể bị tước giấy phép hoặc bị phạt nặng tùy mức độ.",
+    "expected_context": "Quy định về nồng độ cồn và xử phạt"
+  },
+  {
+    "question": "Tại sao việc kiểm soát tốc độ lại quan trọng trong giao thông đường bộ?",
+    "expected_answer": "Vì tốc độ là yếu tố quyết định tới mức độ nguy hiểm của va chạm và ảnh hưởng trực tiếp đến an toàn giao thông.",
+    "expected_context": "Cảnh báo và quy định về tốc độ"
+  },
+  {
+    "question": "Điều gì cần lưu ý khi người lái xe chuyển làn?",
+    "expected_answer": "Người lái xe cần quan sát kỹ, báo tín hiệu và đảm bảo không gây nguy hiểm cho phương tiện đang đi trên làn đó.",
+    "expected_context": "Quy định chuyển làn và an toàn giao thông"
+  },
+  {
+    "question": "Mức xử phạt đối với hành vi không đội mũ bảo hiểm là bao nhiêu?",
+    "expected_answer": "Hành vi không đội mũ bảo hiểm được xử phạt theo quy định cụ thể của Nghị định và các văn bản liên quan đến vi phạm giao thông.",
+    "expected_context": "Quy định an toàn khi tham gia giao thông"
+  },
+  {
+    "question": "Theo báo cáo giao thông, yếu tố nào thường xuất hiện trong các vụ tai nạn nghiêm trọng?",
+    "expected_answer": "Các vụ tai nạn nghiêm trọng thường liên quan đến uống rượu, vượt ẩu, chạy quá tốc độ và không tuân thủ tín hiệu giao thông.",
+    "expected_context": "Tin tức và phân tích tai nạn giao thông"
+  },
+  {
+    "question": "Tại sao văn bản hướng dẫn và nghị định lại quan trọng đối với người tham gia giao thông?",
+    "expected_answer": "Vì chúng xác định rõ các hành vi bị cấm, mức xử phạt, và yêu cầu an toàn để người tham gia giao thông tuân thủ.",
+    "expected_context": "Văn bản quy phạm giao thông"
+  },
+  {
+    "question": "Hành vi nào được xem là vi phạm nghiêm trọng về an toàn giao thông?",
+    "expected_answer": "Vi phạm nghiêm trọng bao gồm chạy quá tốc độ, uống rượu điều khiển phương tiện, vượt ẩu, và không chấp hành tín hiệu giao thông.",
+    "expected_context": "Quy định về các hành vi vi phạm giao thông"
+  },
+  {
+    "question": "Làm sao để tối ưu hóa bộ lọc truy vấn trong RAG dựa trên luật giao thông?",
+    "expected_answer": "Nên kết hợp từ khóa chính xác, bối cảnh pháp lý và mô hình truy xuất ngữ nghĩa để tìm đúng điều luật, mốc xử phạt và tài liệu liên quan.",
+    "expected_context": "Cấu hình retrieval và evaluation của RAG pipeline"
+  }
+]
