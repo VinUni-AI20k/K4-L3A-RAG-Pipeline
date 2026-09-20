@@ -1,0 +1,77 @@
+[
+  {
+    "question": "PTIT thông báo các phương thức tuyển sinh đại học chính quy năm 2026 ở đâu?",
+    "expected_answer": "Thông tin nằm trong bài thông báo các phương thức tuyển sinh đại học hệ chính quy năm 2026 của Học viện Công nghệ Bưu chính Viễn thông.",
+    "expected_context": "article_01.md"
+  },
+  {
+    "question": "Năm 2026 PTIT dự kiến tuyển sinh khoảng bao nhiêu sinh viên?",
+    "expected_answer": "Bài viết cho biết Học viện Công nghệ Bưu chính Viễn thông dự kiến tuyển sinh khoảng 8.000 sinh viên năm 2026.",
+    "expected_context": "article_02.md"
+  },
+  {
+    "question": "Bài viết nào trong corpus nói về học phí chính thức PTIT năm 2026-2027?",
+    "expected_answer": "Bài 'Học phí chính thức Học viện Công nghệ Bưu chính Viễn thông năm 2026 - 2027 (mới nhất)' nói về học phí chính thức.",
+    "expected_context": "article_03.md"
+  },
+  {
+    "question": "PTIT có mở rộng phương thức xét tuyển IELTS kết hợp học bạ không?",
+    "expected_answer": "Có. Corpus có bài viết về việc Học viện Công nghệ Bưu chính Viễn thông mở rộng phương thức xét tuyển IELTS kết hợp học bạ.",
+    "expected_context": "article_04.md"
+  },
+  {
+    "question": "Nguồn nào cung cấp thông tin về chỉ tiêu, ngành học và học phí PTIT năm 2026?",
+    "expected_answer": "Thông tin này nằm trong bài 'Chỉ tiêu, ngành học, học phí Học viện Công nghệ Bưu chính Viễn thông PTIT năm 2026'.",
+    "expected_context": "article_05.md"
+  },
+  {
+    "question": "Các tài liệu legal trong corpus gồm những nhóm nội dung nào?",
+    "expected_answer": "Corpus có các tài liệu legal về học phí PTIT 2026, thông tin tuyển sinh PTIT 2026 và điểm chuẩn PTIT 2026.",
+    "expected_context": "hoc-phi-ptit-2026.md; thong-tin-tuyen-sinh-ptit-2026.md; diem-chuan-ptit-2026.md"
+  },
+  {
+    "question": "Nếu hỏi về điểm chuẩn PTIT 2026 thì nên dùng nguồn nào?",
+    "expected_answer": "Nên dùng tài liệu standardized/legal/diem-chuan-ptit-2026.md hoặc file PDF gốc diem-chuan-ptit-2026.pdf.",
+    "expected_context": "diem-chuan-ptit-2026.md"
+  },
+  {
+    "question": "Nếu hỏi về học phí PTIT năm 2026-2027 thì corpus có những nguồn nào liên quan?",
+    "expected_answer": "Corpus có article_03.md, article_05.md và tài liệu legal hoc-phi-ptit-2026.md liên quan đến học phí.",
+    "expected_context": "article_03.md; article_05.md; hoc-phi-ptit-2026.md"
+  },
+  {
+    "question": "Corpus có bao nhiêu bài viết news đã crawl?",
+    "expected_answer": "Corpus có 5 bài viết news đã crawl và chuẩn hóa thành Markdown.",
+    "expected_context": "data/standardized/news/article_01.md đến article_05.md"
+  },
+  {
+    "question": "Corpus có bao nhiêu tài liệu legal PDF gốc?",
+    "expected_answer": "Corpus có 3 tài liệu legal PDF gốc trong data/landing/legal.",
+    "expected_context": "data/landing/legal"
+  },
+  {
+    "question": "Bài nào nói về tuyển sinh khoảng 8.000 sinh viên năm 2026?",
+    "expected_answer": "Đó là article_02.md, bài 'Học viện Công nghệ Bưu chính Viễn thông dự kiến tuyển sinh khoảng 8.000 sinh viên năm 2026'.",
+    "expected_context": "article_02.md"
+  },
+  {
+    "question": "Bài nào nói về phương thức tuyển sinh đại học chính quy năm 2026?",
+    "expected_answer": "Đó là article_01.md, bài thông báo các phương thức tuyển sinh đại học hệ chính quy năm 2026.",
+    "expected_context": "article_01.md"
+  },
+  {
+    "question": "Bài nào nói về IELTS kết hợp học bạ?",
+    "expected_answer": "Đó là article_04.md, bài về việc PTIT mở rộng phương thức xét tuyển IELTS kết hợp học bạ.",
+    "expected_context": "article_04.md"
+  },
+  {
+    "question": "Bài nào nên được truy xuất khi hỏi về ngành học và chỉ tiêu PTIT năm 2026?",
+    "expected_answer": "Nên truy xuất article_05.md vì bài này nói về chỉ tiêu, ngành học và học phí PTIT năm 2026.",
+    "expected_context": "article_05.md"
+  },
+  {
+    "question": "Nếu câu hỏi ngoài phạm vi corpus, chatbot nên làm gì?",
+    "expected_answer": "Chatbot nên từ chối xác minh hoặc nói không đủ bằng chứng từ nguồn hiện có, thay vì bịa thông tin.",
+    "expected_context": "SYSTEM_PROMPT trong task10_generation.py"
+  }
+]

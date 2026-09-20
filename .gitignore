@@ -10,7 +10,9 @@ venv/
 env/
 ENV/
 
+
 # Packaging / build artifacts
+
 build/
 dist/
 .eggs/
@@ -55,3 +57,6 @@ pageindex_pdfs/
 # OS
 .DS_Store
 Thumbs.db
+
+chroma_db/
+:memory:.ses
