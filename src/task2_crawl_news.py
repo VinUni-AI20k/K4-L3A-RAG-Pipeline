@@ -15,31 +15,92 @@ Cài browser trước khi chạy:
 
 import asyncio
 import json
+import re
+from datetime import datetime, timezone
+from html.parser import HTMLParser
 from pathlib import Path
+
+import requests
 
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
 
 ARTICLE_URLS = [
-    # TODO: Thêm ít nhất 5 public URL.
+    "https://daotao.ueh.edu.vn/thong-bao-ve-viec-nop-ho-so-de-nghi-mien-giam-hoc-phi-va-ho-tro-chi-phi-hoc-tap-trong-hkd-nam-2026-doi-voi-sinh-vien-dhcq-lien-thong-dhcq/",
+    "https://daotao.ueh.edu.vn/thong-bao-danh-sach-sinh-vien-duoc-xet-duyet-mien-giam-hoc-phi-dot-2-hoc-ky-cuoi-nam-2026/",
+    "https://dsa.ueh.edu.vn/tin-tuc/thong-bao-ve-viec-thu-noi-tru-phi-ky-tuc-xa-quy-iii-2026-thang-789-nam-2026/",
+    "https://dsa.ueh.edu.vn/tin-tuc/kh-xet-hb-ueh-2026/",
+    "https://nhaphoc.ueh.edu.vn/dinh-huong-sau-nhap-hoc/ho-tro-va-cham-soc/cham-soc-suc-khoe/",
 ]
 
 
+class _ArticleParser(HTMLParser):
+    """Trích xuất văn bản đọc được từ HTML mà không cần browser automation."""
+
+    CONTENT_TAGS = {"h1", "h2", "h3", "p", "li", "td"}
+    SKIP_TAGS = {"script", "style", "noscript", "svg", "nav", "footer", "header"}
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.title = ""
+        self._in_title = False
+        self._skip_depth = 0
+        self._active_tag: str | None = None
+        self._parts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag in self.SKIP_TAGS:
+            self._skip_depth += 1
+        if tag == "title":
+            self._in_title = True
+        if self._skip_depth == 0 and tag in self.CONTENT_TAGS:
+            self._active_tag = tag
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "title":
+            self._in_title = False
+        if self._skip_depth == 0 and tag == self._active_tag:
+            self._active_tag = None
+        if tag in self.SKIP_TAGS and self._skip_depth:
+            self._skip_depth -= 1
+
+    def handle_data(self, data: str) -> None:
+        text = re.sub(r"\s+", " ", data).strip()
+        if not text:
+            return
+        if self._in_title:
+            self.title += f" {text}"
+        if self._skip_depth == 0 and self._active_tag:
+            prefix = "# " if self._active_tag == "h1" else "## " if self._active_tag in {"h2", "h3"} else "- " if self._active_tag == "li" else ""
+            self._parts.append(f"{prefix}{text}")
+
+    @property
+    def markdown(self) -> str:
+        return "\n\n".join(dict.fromkeys(self._parts)).strip()
+
+
 async def crawl_article(url: str) -> dict:
-    # TODO: Implement crawling logic.
-    #
-    # from datetime import datetime
-    # from crawl4ai import AsyncWebCrawler
-    #
-    # async with AsyncWebCrawler() as crawler:
-    #     result = await crawler.arun(url=url)
-    #     return {
-    #         "url": url,
-    #         "title": result.metadata.get("title", "Unknown"),
-    #         "date_crawled": datetime.now().isoformat(),
-    #         "content_markdown": result.markdown,
-    #     }
-    raise NotImplementedError("Implement crawl_article")
+    def fetch() -> dict:
+        response = requests.get(
+            url,
+            headers={"User-Agent": "K4-RAG-Lab/1.0 (educational project)"},
+            timeout=45,
+        )
+        response.raise_for_status()
+        parser = _ArticleParser()
+        parser.feed(response.text)
+        title = re.sub(r"\s+", " ", parser.title).strip() or "Untitled article"
+        content = parser.markdown
+        if len(content) < 200:
+            raise ValueError("Extracted article content is too short")
+        return {
+            "url": url,
+            "title": title,
+            "date_crawled": datetime.now(timezone.utc).isoformat(),
+            "content_markdown": content,
+        }
+
+    return await asyncio.to_thread(fetch)
 
 
 async def crawl_all() -> None:
