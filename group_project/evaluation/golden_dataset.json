@@ -1,0 +1,110 @@
+[
+  {
+    "question": "Ẩm thực Việt Nam có đặc điểm chung là gì?",
+    "expected_answer": "Ẩm thực Việt Nam thường sử dụng nhiều loại rau thơm, gia vị chua cay, ít mỡ và thiên về sự phối trộn hài hòa các vị mặn, ngọt, chua, cay. Nước mắm là gia vị đặc trưng được sử dụng rộng rãi.",
+    "expected_context": "Đặc điểm chung của ẩm thực Việt Nam là sự pha trộn phong phú của các loại gia vị, đặc biệt là nước mắm. Các món ăn thường ít mỡ, sử dụng nhiều rau xanh, kết hợp hài hòa ngũ vị: mặn, ngọt, chua, cay, đắng.",
+    "source": "vi-wikipedia-org-wiki-am-thuc-viet-nam.md"
+  },
+  {
+    "question": "Vịnh Hạ Long nằm ở tỉnh nào và được UNESCO công nhận là di sản thế giới vào năm nào?",
+    "expected_answer": "Vịnh Hạ Long nằm ở tỉnh Quảng Ninh. Nơi đây được UNESCO công nhận là di sản thiên nhiên thế giới lần đầu tiên vào năm 1994.",
+    "expected_context": "Vịnh Hạ Long là một vịnh nhỏ thuộc phần bờ tây vịnh Bắc Bộ tại khu vực biển Đông Bắc Việt Nam, bao gồm vùng biển đảo của thành phố Hạ Long thuộc tỉnh Quảng Ninh. UNESCO đã nhiều lần công nhận vịnh Hạ Long là di sản thiên nhiên thế giới, lần đầu vào năm 1994.",
+    "source": "vi-wikipedia-org-wiki-vinh-ha-long.md"
+  },
+  {
+    "question": "Quy hoạch hệ thống du lịch thời kỳ 2021-2030 đặt mục tiêu lượng khách quốc tế đến năm 2030 là bao nhiêu?",
+    "expected_answer": "Đến năm 2030, mục tiêu phấn đấu đón 35 triệu lượt khách quốc tế.",
+    "expected_context": "Mục tiêu cụ thể đến năm 2030: Phấn đấu đón 35 triệu lượt khách quốc tế, tốc độ tăng trưởng bình quân về khách quốc tế giai đoạn 2026 - 2030 đạt từ 13 - 15%/năm.",
+    "source": "quy-hoach-he-thong-du-lich-2021-2030.md"
+  },
+  {
+    "question": "Phố cổ Hội An có những di tích kiến trúc tiêu biểu nào?",
+    "expected_answer": "Phố cổ Hội An nổi tiếng với các di tích như Chùa Cầu, hội quán Phúc Kiến, nhà cổ Tân Ký, và các ngôi nhà gỗ cổ kính mang đậm phong cách kiến trúc giao thoa Việt, Hoa, Nhật.",
+    "expected_context": "Quần thể di tích kiến trúc Hội An rất phong phú với những ngôi nhà ống xuyên qua các phố, những hội quán, đền miếu mang dấu ấn của người Hoa, và biểu tượng Chùa Cầu do người Nhật xây dựng.",
+    "source": "vi-wikipedia-org-wiki-pho-co-hoi-an.md"
+  },
+  {
+    "question": "Theo Đề án phát triển sản phẩm du lịch đêm, các mô hình giải trí đêm nào được ưu tiên phát triển?",
+    "expected_answer": "Đề án ưu tiên phát triển các mô hình như biểu diễn văn hóa, nghệ thuật, chợ đêm, khu vui chơi giải trí, và các tuyến phố đi bộ kết hợp ẩm thực.",
+    "expected_context": "Khuyến khích phát triển các mô hình du lịch đêm như: Hoạt động biểu diễn văn hóa, nghệ thuật; Hoạt động thể thao, chăm sóc sức khỏe, làm đẹp về đêm; Mua sắm, giải trí đêm; Tham quan du lịch đêm; và Giới thiệu văn hóa ẩm thực.",
+    "source": "de-an-phat-trien-san-pham-du-lich-dem.md"
+  },
+  {
+    "question": "Sa Pa có đặc điểm khí hậu như thế nào?",
+    "expected_answer": "Sa Pa có khí hậu ôn đới, quanh năm mát mẻ. Mùa đông đôi khi có tuyết rơi.",
+    "expected_context": "Sa Pa có khí hậu mát mẻ quanh năm với nhiệt độ trung bình từ 15-18 độ C. Vào mùa đông, nhiệt độ có thể xuống dưới 0 độ C và có tuyết rơi, một hiện tượng hiếm gặp ở Việt Nam.",
+    "source": "vi-wikipedia-org-wiki-sa-pa.md"
+  },
+  {
+    "question": "Luật Du lịch năm 2017 có những điểm mới nào về quản lý lữ hành?",
+    "expected_answer": "Luật Du lịch 2017 quy định chặt chẽ hơn về điều kiện kinh doanh lữ hành, bao gồm yêu cầu ký quỹ đối với cả lữ hành nội địa và quốc tế, cũng như yêu cầu về thẻ hướng dẫn viên.",
+    "expected_context": "Điểm mới nổi bật của Luật Du lịch 2017 là việc quy định bắt buộc phải ký quỹ đối với cả doanh nghiệp kinh doanh lữ hành nội địa (trước đây chỉ áp dụng cho lữ hành quốc tế) để đảm bảo quyền lợi cho khách du lịch.",
+    "source": "bao-cao-thi-hanh-luat-du-lich-2017.md"
+  },
+  {
+    "question": "Du lịch Việt Nam chia làm mấy vùng trọng điểm theo Quy hoạch?",
+    "expected_answer": "Quy hoạch chia du lịch Việt Nam thành 6 vùng trọng điểm.",
+    "expected_context": "Phát triển không gian du lịch Việt Nam gồm 06 vùng: Vùng Trung du và miền núi phía Bắc; Vùng Đồng bằng sông Hồng; Vùng Bắc Trung Bộ và duyên hải miền Trung; Vùng Tây Nguyên; Vùng Đông Nam Bộ; Vùng Đồng bằng sông Cửu Long.",
+    "source": "quy-hoach-he-thong-du-lich-2021-2030.md"
+  },
+  {
+    "question": "Đặc trưng của món Phở Việt Nam là gì?",
+    "expected_answer": "Phở là món nước dùng trong, ngọt từ xương bò, bánh phở mềm, ăn kèm với thịt bò hoặc gà, cùng các loại rau thơm như ngò gai, húng quế.",
+    "expected_context": "Phở là một trong những món ăn tiêu biểu nhất của ẩm thực Việt. Nước dùng phở được ninh từ xương bò cùng các loại gia vị như quế, hồi, gừng nướng, thảo quả. Bánh phở làm từ bột gạo, ăn kèm thịt bò (hoặc gà) thái mỏng.",
+    "source": "vi-wikipedia-org-wiki-am-thuc-viet-nam.md"
+  },
+  {
+    "question": "Chùa Cầu ở Hội An còn có tên gọi khác là gì?",
+    "expected_answer": "Chùa Cầu còn được gọi là cầu Nhật Bản hoặc Lai Viễn Kiều.",
+    "expected_context": "Chùa Cầu, còn gọi là Cầu Nhật Bản hay Lai Viễn Kiều, là một chiếc cầu cổ tại thành phố Hội An, tỉnh Quảng Nam, được các thương nhân người Nhật góp tiền xây dựng vào khoảng thế kỷ 17.",
+    "source": "vi-wikipedia-org-wiki-pho-co-hoi-an.md"
+  },
+  {
+    "question": "Có bao nhiêu di sản văn hóa thế giới được UNESCO công nhận tại Việt Nam tính đến nay?",
+    "expected_answer": "Việt Nam hiện có 8 di sản thế giới được UNESCO công nhận (bao gồm cả thiên nhiên và văn hóa).",
+    "expected_context": "Việt Nam là một trong những quốc gia có nhiều di sản thế giới tại khu vực Đông Nam Á, với tổng cộng 8 di sản thiên nhiên và văn hóa được UNESCO vinh danh.",
+    "source": "vi-wikipedia-org-wiki-du-lich-viet-nam.md"
+  },
+  {
+    "question": "Cáp treo Fansipan nằm ở đâu và có đặc điểm gì?",
+    "expected_answer": "Cáp treo Fansipan nằm ở Sa Pa. Đây là hệ thống cáp treo 3 dây dài nhất thế giới và có độ chênh lệch giữa ga đi và ga đến lớn nhất thế giới.",
+    "expected_context": "Hệ thống cáp treo Fansipan tại Sa Pa là hệ thống cáp treo ba dây dài nhất thế giới (6292,5m), đồng thời có độ chênh lệch giữa ga đi và ga đến lớn nhất thế giới (1410m).",
+    "source": "vi-wikipedia-org-wiki-sa-pa.md"
+  },
+  {
+    "question": "Lễ hội Đền Hùng được tổ chức vào ngày nào âm lịch hàng năm?",
+    "expected_answer": "Lễ hội Đền Hùng được tổ chức vào ngày mùng 10 tháng 3 Âm lịch hàng năm.",
+    "expected_context": "Lễ hội Đền Hùng (hay Giỗ tổ Hùng Vương) là một lễ hội lớn mang tầm vóc quốc gia ở Việt Nam, được tổ chức thường niên vào ngày mùng 10 tháng 3 âm lịch tại Đền Hùng, tỉnh Phú Thọ.",
+    "source": "vi-wikipedia-org-wiki-du-lich-viet-nam.md"
+  },
+  {
+    "question": "Mục tiêu đóng góp của ngành du lịch vào GDP năm 2030 là bao nhiêu?",
+    "expected_answer": "Ngành du lịch phấn đấu đóng góp trực tiếp từ 13 - 14% GDP vào năm 2030.",
+    "expected_context": "Chỉ tiêu kinh tế: Đóng góp trực tiếp từ 13 - 14% GDP; tạo ra khoảng 10,5 triệu việc làm, trong đó có khoảng 3,5 triệu việc làm trực tiếp.",
+    "source": "quy-hoach-he-thong-du-lich-2021-2030.md"
+  },
+  {
+    "question": "Món Bún chả Hà Nội có những thành phần chính nào?",
+    "expected_answer": "Bún chả Hà Nội gồm bún rối, chả lợn nướng (chả miếng và chả viên) ăn cùng nước mắm pha chua ngọt, su hào đu đủ muối chua và rau sống.",
+    "expected_context": "Bún chả là món ăn đặc trưng của Hà Nội, bao gồm bún, thịt lợn nướng chả viên và chả miếng tẩm ướp đậm đà, ăn kèm bát nước mắm pha chua ngọt có đu đủ, cà rốt ngâm giòn và nhiều loại rau thơm.",
+    "source": "vi-wikipedia-org-wiki-am-thuc-viet-nam.md"
+  },
+  {
+    "question": "Chợ đêm tại các khu du lịch có vai trò gì trong phát triển kinh tế đêm?",
+    "expected_answer": "Chợ đêm giúp thu hút du khách, kéo dài thời gian lưu trú, tăng mức chi tiêu của khách và tạo thêm việc làm cho người dân địa phương.",
+    "expected_context": "Việc tổ chức các khu phố đi bộ, chợ đêm không chỉ tạo điểm nhấn văn hóa, giải trí thu hút khách du lịch mà còn góp phần kéo dài thời gian lưu trú, tăng doanh thu du lịch và phát triển kinh tế địa phương về đêm.",
+    "source": "de-an-phat-trien-san-pham-du-lich-dem.md"
+  },
+  {
+    "question": "Đảo Ngọc Phú Quốc thuộc tỉnh nào?",
+    "expected_answer": "Phú Quốc thuộc tỉnh Kiên Giang.",
+    "expected_context": "Thành phố Phú Quốc (còn được mệnh danh là Đảo Ngọc) là một quần đảo xinh đẹp nằm sâu trong vùng vịnh Thái Lan, thuộc địa phận tỉnh Kiên Giang.",
+    "source": "vi-wikipedia-org-wiki-du-lich-viet-nam.md"
+  },
+  {
+    "question": "Các làng nghề truyền thống ở Hội An gồm những làng nào nổi tiếng?",
+    "expected_answer": "Hội An có các làng nghề nổi tiếng như làng gốm Thanh Hà, làng mộc Kim Bồng và làng rau Trà Quế.",
+    "expected_context": "Đến Hội An, du khách không chỉ thăm khu phố cổ mà còn có thể trải nghiệm các làng nghề truyền thống lâu đời như làng gốm Thanh Hà, làng mộc Kim Bồng, làng rau Trà Quế.",
+    "source": "vi-wikipedia-org-wiki-pho-co-hoi-an.md"
+  }
+]

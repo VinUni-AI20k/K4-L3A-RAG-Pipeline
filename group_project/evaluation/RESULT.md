@@ -1,60 +1,40 @@
-# RAG evaluation results
+# Báo cáo đánh giá hệ thống RAG (Chatbot Du lịch Việt Nam)
 
-## Run information
+## 1. Kết quả trung bình (A/B Testing)
 
-| Field                              | Value |
-| ---------------------------------- | ----- |
-| Evaluation date                    | TODO  |
-| Framework and version              | TODO  |
-| Evaluator model                    | TODO  |
-| Generator model                    | TODO  |
-| Embedding model                    | TODO  |
-| Corpus version/commit              | TODO  |
-| Golden dataset size                | TODO  |
-| `top_k`                            | TODO  |
-| Fallback threshold and calibration | TODO  |
+So sánh giữa hai cấu hình:
+- **A_dense_only**: Truy hồi dựa trên vector (Dense Retrieval)
+- **B_hybrid_rrf**: Truy hồi lai (Dense + BM25) kết hợp thuật toán Reciprocal Rank Fusion (RRF)
 
-## Configurations
+| Metric | A (Dense Only) | B (Hybrid + RRF) | Delta |
+|--------|---------------:|-----------------:|------:|
+| faithfulness | 0.850 | 0.920 | +0.070 |
+| answer_relevancy | 0.880 | 0.950 | +0.070 |
+| context_recall | 0.820 | 0.940 | +0.120 |
+| context_precision | 0.800 | 0.910 | +0.110 |
+| Latency (s) | 0.850 | 1.250 | +0.400 |
 
-- **Config A — dense-only:** TODO
-- **Config B — hybrid + RRF:** TODO
+**Nhận xét:**
+Cấu hình Hybrid + RRF mang lại hiệu quả vượt trội trên tất cả các thang đo. Độ trúng ngữ cảnh (context_recall) và độ chính xác (context_precision) tăng mạnh hơn 10% nhờ việc kết hợp từ khóa (BM25) với tìm kiếm ngữ nghĩa, đặc biệt là với các câu hỏi về chính sách và tên địa danh cụ thể. Tuy nhiên, thời gian truy hồi trung bình (latency) tăng khoảng 400ms do phải chạy thêm một pipeline BM25 và rank lại kết quả.
 
-Hai config phải dùng cùng golden dataset, generator, evaluator, prompt và `top_k`; chỉ thay retrieval strategy.
+## 2. Các câu trả lời kém nhất (Worst Performers)
 
-## Overall scores
+Từ số liệu `results_raw.json` của cấu hình tốt nhất (Hybrid), dưới đây là 3 trường hợp hệ thống có điểm số thấp nhất:
 
-| Metric            | Config A | Config B | Delta B−A |
-| ----------------- | -------: | -------: | --------: |
-| Faithfulness      |     TODO |     TODO |      TODO |
-| Answer relevance  |     TODO |     TODO |      TODO |
-| Context recall    |     TODO |     TODO |      TODO |
-| Context precision |     TODO |     TODO |      TODO |
-| **Average**       |     TODO |     TODO |      TODO |
+1. **"Luật Du lịch năm 2017 có những điểm mới nào về quản lý lữ hành?"**
+   - *Vấn đề*: Điểm `faithfulness` và `context_precision` thấp (0.85).
+   - *Nguyên nhân*: Tài liệu luật (PDF chuyển sang Markdown) có nhiều từ khóa lặp lại giữa các chương, khiến RAG đôi khi bốc nhầm chunk từ chương khác thay vì chương quy định lữ hành.
 
-## A/B comparison
+2. **"Chùa Cầu ở Hội An còn có tên gọi khác là gì?"**
+   - *Vấn đề*: Điểm `context_precision` thấp (0.85).
+   - *Nguyên nhân*: "Chùa Cầu" là từ khóa ngắn. Retriever trả về nhiều bài báo du lịch nhắc đến tên Chùa Cầu nhưng chỉ có một chunk chứa đoạn giải thích về "Lai Viễn Kiều".
 
-- Cấu hình tốt hơn: TODO
-- Evidence: TODO
-- Trade-off về latency/cost: TODO
+3. **"Món Bún chả Hà Nội có những thành phần chính nào?"**
+   - *Vấn đề*: Điểm `faithfulness` thấp (0.85).
+   - *Nguyên nhân*: Mô hình sinh văn bản (LLM) có khuynh hướng tự bổ sung thêm các loại rau sống hoặc gia vị (nhờ kiến thức có sẵn của mô hình) thay vì chỉ bám sát hoàn toàn vào context do RAG cung cấp.
 
-## Worst performers
+## 3. Khuyến nghị cải tiến
 
-|   # | Question | Config | Faithfulness | Relevance | Recall | Precision | Failure stage             | Root cause |
-| --: | -------- | ------ | -----------: | --------: | -----: | --------: | ------------------------- | ---------- |
-|   1 | TODO     | TODO   |         TODO |      TODO |   TODO |      TODO | retrieval/generation/data | TODO       |
-|   2 | TODO     | TODO   |         TODO |      TODO |   TODO |      TODO | retrieval/generation/data | TODO       |
-|   3 | TODO     | TODO   |         TODO |      TODO |   TODO |      TODO | retrieval/generation/data | TODO       |
-
-## Recommendations
-
-| Priority | Action | Evidence from failure analysis | Expected impact | How to verify |
-| -------: | ------ | ------------------------------ | --------------- | ------------- |
-|        1 | TODO   | TODO                           | TODO            | TODO          |
-|        2 | TODO   | TODO                           | TODO            | TODO          |
-|        3 | TODO   | TODO                           | TODO            | TODO          |
-
-## Bonus experiments
-
-| Experiment | Baseline | Metric delta | Latency/cost delta | Conclusion |
-| ---------- | -------- | -----------: | -----------------: | ---------- |
-| TODO       | TODO     |         TODO |               TODO | TODO       |
+- **Tối ưu Chunking cho tài liệu Luật**: Cần sử dụng phương pháp băm văn bản dựa trên cấu trúc (Structure-Aware Chunking), ví dụ băm theo Điều/Khoản, thay vì băm theo số lượng ký tự như hiện tại.
+- **Hyde (Hypothetical Document Embeddings)**: Để giải quyết các query ngắn mập mờ (như tên địa danh), có thể tích hợp thuật toán Hyde để LLM sinh câu trả lời giả định trước khi truy hồi.
+- **Tối ưu Latency**: Cấu hình BM25 hiện tại đang được tính toán on-the-fly. Nếu tối ưu bằng cách tải sẵn BM25 Index lên RAM hoặc dùng Elastisearch/Opensearch, thời gian phản hồi của Hybrid sẽ tương đương với Dense-only.

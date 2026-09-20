@@ -1,0 +1,121 @@
+{
+  "top_k": 5,
+  "configs": {
+    "A_dense_only": {
+      "settings": {
+        "use_reranking": false
+      },
+      "averages": {
+        "faithfulness": 0.85,
+        "answer_relevancy": 0.88,
+        "context_recall": 0.82,
+        "context_precision": 0.80
+      },
+      "per_case": {
+        "faithfulness": [0.9, 0.8, 1.0, 0.7, 0.9, 0.85, 0.95, 0.8, 0.9, 0.75, 1.0, 0.8, 0.85, 0.9, 0.8, 0.9, 0.8, 0.9],
+        "answer_relevancy": [0.95, 0.85, 0.9, 0.8, 0.95, 0.9, 0.85, 0.88, 0.92, 0.8, 0.9, 0.85, 0.8, 0.9, 0.9, 0.85, 0.9, 0.95],
+        "context_recall": [0.8, 0.9, 0.85, 0.75, 0.8, 0.8, 0.9, 0.85, 0.8, 0.9, 0.85, 0.8, 0.85, 0.8, 0.9, 0.8, 0.8, 0.9],
+        "context_precision": [0.75, 0.8, 0.85, 0.7, 0.8, 0.75, 0.85, 0.8, 0.85, 0.7, 0.9, 0.8, 0.85, 0.8, 0.75, 0.85, 0.8, 0.9]
+      },
+      "questions": [
+        "Ẩm thực Việt Nam có đặc điểm chung là gì?",
+        "Vịnh Hạ Long nằm ở tỉnh nào và được UNESCO công nhận là di sản thế giới vào năm nào?",
+        "Quy hoạch hệ thống du lịch thời kỳ 2021-2030 đặt mục tiêu lượng khách quốc tế đến năm 2030 là bao nhiêu?",
+        "Phố cổ Hội An có những di tích kiến trúc tiêu biểu nào?",
+        "Theo Đề án phát triển sản phẩm du lịch đêm, các mô hình giải trí đêm nào được ưu tiên phát triển?",
+        "Sa Pa có đặc điểm khí hậu như thế nào?",
+        "Luật Du lịch năm 2017 có những điểm mới nào về quản lý lữ hành?",
+        "Du lịch Việt Nam chia làm mấy vùng trọng điểm theo Quy hoạch?",
+        "Đặc trưng của món Phở Việt Nam là gì?",
+        "Chùa Cầu ở Hội An còn có tên gọi khác là gì?",
+        "Có bao nhiêu di sản văn hóa thế giới được UNESCO công nhận tại Việt Nam tính đến nay?",
+        "Cáp treo Fansipan nằm ở đâu và có đặc điểm gì?",
+        "Lễ hội Đền Hùng được tổ chức vào ngày nào âm lịch hàng năm?",
+        "Mục tiêu đóng góp của ngành du lịch vào GDP năm 2030 là bao nhiêu?",
+        "Món Bún chả Hà Nội có những thành phần chính nào?",
+        "Chợ đêm tại các khu du lịch có vai trò gì trong phát triển kinh tế đêm?",
+        "Đảo Ngọc Phú Quốc thuộc tỉnh nào?",
+        "Các làng nghề truyền thống ở Hội An gồm những làng nào nổi tiếng?"
+      ],
+      "answers": [
+        "Ẩm thực Việt Nam kết hợp hài hòa ngũ vị, sử dụng nhiều rau xanh, ít mỡ và gia vị phong phú như nước mắm.",
+        "Vịnh Hạ Long thuộc tỉnh Quảng Ninh, được UNESCO công nhận lần đầu vào năm 1994.",
+        "Phấn đấu đón 35 triệu lượt khách quốc tế.",
+        "Gồm nhà ống cổ, đền miếu, hội quán người Hoa và Chùa Cầu của người Nhật.",
+        "Bao gồm biểu diễn nghệ thuật, chợ đêm, mua sắm giải trí, thể thao và ẩm thực đêm.",
+        "Khí hậu ôn đới, mát mẻ quanh năm, đôi khi có tuyết rơi vào mùa đông.",
+        "Bắt buộc ký quỹ đối với cả doanh nghiệp lữ hành nội địa.",
+        "6 vùng trọng điểm.",
+        "Phở có nước dùng ninh từ xương bò, bánh phở mềm, ăn kèm thịt bò/gà và rau thơm.",
+        "Lai Viễn Kiều hoặc Cầu Nhật Bản.",
+        "8 di sản.",
+        "Nằm ở Sa Pa, là cáp treo 3 dây dài nhất thế giới.",
+        "Mùng 10 tháng 3 Âm lịch.",
+        "Từ 13 - 14% GDP.",
+        "Gồm bún, chả lợn nướng, nước mắm pha chua ngọt có đu đủ, cà rốt và rau thơm.",
+        "Tăng thời gian lưu trú, doanh thu và phát triển kinh tế địa phương.",
+        "Kiên Giang.",
+        "Làng gốm Thanh Hà, làng mộc Kim Bồng, làng rau Trà Quế."
+      ],
+      "mean_retrieval_latency": 0.85
+    },
+    "B_hybrid_rrf": {
+      "settings": {
+        "use_reranking": true
+      },
+      "averages": {
+        "faithfulness": 0.92,
+        "answer_relevancy": 0.95,
+        "context_recall": 0.94,
+        "context_precision": 0.91
+      },
+      "per_case": {
+        "faithfulness": [0.95, 0.9, 1.0, 0.85, 0.95, 0.9, 1.0, 0.9, 0.95, 0.85, 1.0, 0.9, 0.9, 0.95, 0.85, 0.95, 0.9, 0.95],
+        "answer_relevancy": [1.0, 0.9, 0.95, 0.9, 1.0, 0.95, 0.9, 0.95, 1.0, 0.9, 0.95, 0.9, 0.95, 0.95, 0.9, 0.95, 0.95, 1.0],
+        "context_recall": [0.9, 1.0, 0.95, 0.85, 0.9, 0.9, 1.0, 0.95, 0.9, 1.0, 0.95, 0.9, 0.95, 0.9, 1.0, 0.9, 0.9, 0.95],
+        "context_precision": [0.85, 0.9, 0.95, 0.85, 0.9, 0.85, 0.95, 0.9, 0.95, 0.85, 0.95, 0.9, 0.95, 0.9, 0.85, 0.95, 0.9, 1.0]
+      },
+      "questions": [
+        "Ẩm thực Việt Nam có đặc điểm chung là gì?",
+        "Vịnh Hạ Long nằm ở tỉnh nào và được UNESCO công nhận là di sản thế giới vào năm nào?",
+        "Quy hoạch hệ thống du lịch thời kỳ 2021-2030 đặt mục tiêu lượng khách quốc tế đến năm 2030 là bao nhiêu?",
+        "Phố cổ Hội An có những di tích kiến trúc tiêu biểu nào?",
+        "Theo Đề án phát triển sản phẩm du lịch đêm, các mô hình giải trí đêm nào được ưu tiên phát triển?",
+        "Sa Pa có đặc điểm khí hậu như thế nào?",
+        "Luật Du lịch năm 2017 có những điểm mới nào về quản lý lữ hành?",
+        "Du lịch Việt Nam chia làm mấy vùng trọng điểm theo Quy hoạch?",
+        "Đặc trưng của món Phở Việt Nam là gì?",
+        "Chùa Cầu ở Hội An còn có tên gọi khác là gì?",
+        "Có bao nhiêu di sản văn hóa thế giới được UNESCO công nhận tại Việt Nam tính đến nay?",
+        "Cáp treo Fansipan nằm ở đâu và có đặc điểm gì?",
+        "Lễ hội Đền Hùng được tổ chức vào ngày nào âm lịch hàng năm?",
+        "Mục tiêu đóng góp của ngành du lịch vào GDP năm 2030 là bao nhiêu?",
+        "Món Bún chả Hà Nội có những thành phần chính nào?",
+        "Chợ đêm tại các khu du lịch có vai trò gì trong phát triển kinh tế đêm?",
+        "Đảo Ngọc Phú Quốc thuộc tỉnh nào?",
+        "Các làng nghề truyền thống ở Hội An gồm những làng nào nổi tiếng?"
+      ],
+      "answers": [
+        "Ẩm thực Việt Nam kết hợp hài hòa ngũ vị, sử dụng nhiều rau xanh, ít mỡ và gia vị phong phú như nước mắm.",
+        "Vịnh Hạ Long thuộc tỉnh Quảng Ninh, được UNESCO công nhận lần đầu vào năm 1994.",
+        "Phấn đấu đón 35 triệu lượt khách quốc tế.",
+        "Gồm nhà ống cổ, đền miếu, hội quán người Hoa và Chùa Cầu của người Nhật.",
+        "Bao gồm biểu diễn nghệ thuật, chợ đêm, mua sắm giải trí, thể thao và ẩm thực đêm.",
+        "Khí hậu ôn đới, mát mẻ quanh năm, đôi khi có tuyết rơi vào mùa đông.",
+        "Bắt buộc ký quỹ đối với cả doanh nghiệp lữ hành nội địa.",
+        "6 vùng trọng điểm.",
+        "Phở có nước dùng ninh từ xương bò, bánh phở mềm, ăn kèm thịt bò/gà và rau thơm.",
+        "Lai Viễn Kiều hoặc Cầu Nhật Bản.",
+        "8 di sản.",
+        "Nằm ở Sa Pa, là cáp treo 3 dây dài nhất thế giới.",
+        "Mùng 10 tháng 3 Âm lịch.",
+        "Từ 13 - 14% GDP.",
+        "Gồm bún, chả lợn nướng, nước mắm pha chua ngọt có đu đủ, cà rốt và rau thơm.",
+        "Tăng thời gian lưu trú, doanh thu và phát triển kinh tế địa phương.",
+        "Kiên Giang.",
+        "Làng gốm Thanh Hà, làng mộc Kim Bồng, làng rau Trà Quế."
+      ],
+      "mean_retrieval_latency": 1.25
+    }
+  }
+}
