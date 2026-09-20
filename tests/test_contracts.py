@@ -132,6 +132,31 @@ def test_semantic_search_uses_shared_embedding_and_contract(monkeypatch):
     validate_search_results(output, top_k=2, expected_method="dense")
 
 
+def test_embedding_batch_recovers_from_partial_gemini_response():
+    from types import SimpleNamespace
+    from src.task4_chunking_indexing import _embed_batch
+
+    class FakeModels:
+        def embed_content(self, *, model, contents, config):
+            # Simulate the production failure: multi-item responses are partial.
+            selected = contents[:1] if len(contents) > 1 else contents
+            return SimpleNamespace(embeddings=[
+                SimpleNamespace(values=[float(len(content.parts[0].text))])
+                for content in selected
+            ])
+
+    client = SimpleNamespace(models=FakeModels())
+    assert _embed_batch(client, ["a", "bb", "ccc"], 0) == [[1.0], [2.0], [3.0]]
+
+
+def test_incremental_metadata_treats_missing_url_as_none():
+    from src.task4_chunking_indexing import _same_metadata
+
+    stored = {"source": "legal.md", "title": "Law", "doc_type": "legal", "chunk_index": 0}
+    current = {**stored, "url": None}
+    assert _same_metadata(stored, current)
+
+
 def test_lexical_search_returns_bm25_contract(monkeypatch):
     import src.task6_lexical_search as lexical
 
