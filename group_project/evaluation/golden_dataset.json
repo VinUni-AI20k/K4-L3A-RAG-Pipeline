@@ -1,0 +1,162 @@
+[
+  {
+    "id": "q01",
+    "question": "Người mua có bao nhiêu ngày để gửi yêu cầu trả hàng/hoàn tiền? Thực phẩm tươi sống thì sao?",
+    "expected_answer": "Người mua có thể gửi yêu cầu trả hàng/hoàn tiền trong vòng 15 ngày kể từ lúc đơn hàng được cập nhật giao hàng thành công. Riêng thực phẩm tươi sống và đông lạnh, người mua phải gửi yêu cầu trong vòng 24 giờ kể từ lúc đơn hàng được cập nhật giao hàng thành công.",
+    "expected_context": "Người Mua có thể gửi yêu cầu trả hàng/hoàn tiền trong vòng 15 (mười lăm) ngày kể từ lúc đơn hàng được cập nhật giao hàng thành công. Riêng đối với các Sản Phẩm là thực phẩm tươi sống và đông lạnh, Người Mua cần gửi yêu cầu trả hàng/hoàn tiền trong vòng 24 giờ kể từ lúc đơn hàng được cập nhật giao hàng thành công.",
+    "source": "legal/shopee-return-policy.md",
+    "category": "returns"
+  },
+  {
+    "id": "q02",
+    "question": "Những ai được sử dụng hình thức Trả hàng COM (trả hàng khi không còn nhu cầu)?",
+    "expected_answer": "Trả hàng COM chỉ áp dụng cho người mua là thành viên Chương trình khách hàng thân thiết Shopee hạng Vàng và Kim Cương, hoặc người mua đang sử dụng Gói ShopeeVIP.",
+    "expected_context": "i. Người Mua là thành viên của Chương trình khách hàng thân thiết Shopee đạt hạng Vàng và Kim Cương. Vui lòng tham khảo hạng thành viên tại ĐÂY;\n\nii. Người Mua đang sử dụng Gói ShopeeVIP.",
+    "source": "legal/shopee-return-policy.md",
+    "category": "returns"
+  },
+  {
+    "id": "q03",
+    "question": "Người dùng gói ShopeeVIP được Trả hàng COM tối đa bao nhiêu lần mỗi tháng?",
+    "expected_answer": "Người mua dùng Gói ShopeeVIP được Trả hàng COM tối đa 15 lần trong mỗi tháng dương lịch; hạn mức còn lại của tháng trước không được cộng dồn sang tháng sau.",
+    "expected_context": "b. Đối với Người Mua sử dụng Gói ShopeeVIP, hạn mức Trả hàng COM là 15 (mười lăm) lần trong mỗi tháng dương lịch được tính bắt đầu từ thời điểm Gói ShopeeVIP được Người Mua đăng ký thành công",
+    "source": "legal/shopee-return-policy.md",
+    "category": "returns"
+  },
+  {
+    "id": "q04",
+    "question": "Người bán có bao lâu để phản hồi nếu không đồng ý với quyết định hoàn tiền của Shopee?",
+    "expected_answer": "Người bán cần gửi phản hồi trong vòng 02 ngày lịch kể từ ngày nhận được thông báo của Shopee; nếu không phản hồi, Shopee hiểu rằng người bán đồng ý với quyết định xử lý.",
+    "expected_context": "Người Bán cần gửi phản hồi trong vòng 02 ngày lịch (hoặc thời hạn khác được quy định bởi Shopee trong từng thời điểm) kể từ ngày nhận được thông báo của Shopee nếu không đồng ý với quyết định hoàn tiền của Shopee",
+    "source": "legal/shopee-return-policy.md",
+    "category": "returns"
+  },
+  {
+    "id": "q05",
+    "question": "Khi người bán đề xuất hoàn tiền ngay không cần trả hàng, số tiền hoàn tối thiểu là bao nhiêu?",
+    "expected_answer": "Số tiền hoàn do hai bên tự thỏa thuận nhưng không được thấp hơn 50% giá trị của sản phẩm hoàn trả; nếu thấp hơn, Shopee có quyền cấn trừ số dư tài khoản của người bán để bù phần chênh lệch cho người mua.",
+    "expected_context": "Đối với các trường hợp hoàn tiền ngay do Người Bán đề xuất, số tiền hoàn trả sẽ do hai Bên tự thỏa thuận với nhau nhưng không được thấp hơn 50% giá trị của Sản Phẩm Hoàn Trả.",
+    "source": "legal/shopee-return-policy.md",
+    "category": "returns"
+  },
+  {
+    "id": "q06",
+    "question": "Thanh toán bằng thẻ tín dụng/ghi nợ thì sau bao lâu tôi nhận được tiền hoàn?",
+    "expected_answer": "Tiền hoàn về đúng thẻ tín dụng/ghi nợ đã dùng thanh toán trong khoảng 7 - 14 ngày làm việc (tùy ngân hàng) sau khi Shopee chấp nhận hoàn tiền.",
+    "expected_context": "| Thẻ tín dụng/ghi nợ  | Thẻ tín dụng/ghi nợ (Hoàn tiền về đúng tài khoản Tín dụng/Ghi nợ đã sử dụng khi thanh toán đơn hàng)  | 7 - 14 ngày làm việc (tùy theo ngân hàng)  |",
+    "source": "news/article_01.md",
+    "category": "refund"
+  },
+  {
+    "id": "q07",
+    "question": "Nếu tôi tự sắp xếp gửi trả hàng cho đơn không thuộc Shopee Mall, Shopee hỗ trợ phí trả hàng như thế nào?",
+    "expected_answer": "Người mua trả trước phí trả hàng; Shopee hoàn lại dưới dạng Shopee Xu trong 3 - 5 ngày làm việc sau khi yêu cầu được chấp nhận và đủ điều kiện: 25.000 Xu nếu cùng tỉnh/thành phố với người bán, 40.000 Xu nếu khác tỉnh/thành phố.",
+    "expected_context": "Trường hợp địa chỉ của bạn cùng tỉnh/thành phố với Người bán: Bạn sẽ được hoàn25,000 Shopee Xu\n  * Trường hợp địa chỉ của bạn khác tỉnh/thành phố với Người bán: Bạn sẽ được hoàn 40,000 Shopee Xu",
+    "source": "news/article_02.md",
+    "category": "refund"
+  },
+  {
+    "id": "q08",
+    "question": "Tiền hoàn vào SPayLater được cập nhật trong bao lâu và hiển thị ở đâu?",
+    "expected_answer": "Sau khi có thông báo chấp nhận hoàn tiền, tiền hoàn được cập nhật tại mục Giao dịch của SPayLater trong vòng 24 giờ với tiêu đề “Hoàn trả”.",
+    "expected_context": "Sau khi có thông báo chấp nhận hoàn tiền, tiền hoàn sẽ được cập nhật tại mục Giao dịch của SPayLater trong vòng 24 giờ với tiêu đề “Hoàn trả”",
+    "source": "news/article_04.md",
+    "category": "refund"
+  },
+  {
+    "id": "q09",
+    "question": "Khi đóng gói hàng hoàn trả theo hình thức Tự sắp xếp, tôi cần ghi gì lên hộp?",
+    "expected_answer": "Người mua cần ghi chữ “Trả hàng Shopee” lên hộp vận chuyển (không viết lên hộp của nhà sản xuất) và gửi trả tại bưu cục tùy chọn theo địa chỉ trả hàng Shopee cung cấp.",
+    "expected_context": "Với hình thức Tự sắp xếp:** Bạn cần ghi chữ “Trả hàng Shopee” lên hộp vận chuyển và gửi trả tại bưu cục tùy chọn theo địa chỉ trả hàng Shopee cung cấp.",
+    "source": "news/article_05.md",
+    "category": "returns"
+  },
+  {
+    "id": "q10",
+    "question": "Mua hàng ở Shopee Mall, sau khi yêu cầu trả hàng được chấp thuận thì tôi phải gửi trả sản phẩm trong bao lâu?",
+    "expected_answer": "Trừ trường hợp được Hoàn Tiền Ngay, người mua tại Shopee Mall phải hoàn trả sản phẩm trong vòng 06 ngày lịch kể từ ngày yêu cầu trả hàng/hoàn tiền được chấp thuận, kèm bao bì ban đầu và Phiếu Trả Hàng.",
+    "expected_context": "Người Mua tại Shopee Mall phải hoàn trả Sản Phẩm đến Trung Tâm Xử Lý Trả Hàng của Shopee hoặc trả về Địa chỉ của Người Bán Shopee Mall - theo yêu cầu của Shopee tùy vào trường hợp cụ thể theo Chính sách của Shopee trong từng thời điểm trong vòng 06 (sáu) ngày lịch kể từ ngày yêu cầu trả hàng/hoàn tiền được chấp thuận.",
+    "source": "news/article_07.md",
+    "category": "shopee-mall"
+  },
+  {
+    "id": "q11",
+    "question": "Shopee giải quyết các tranh chấp không phải khiếu nại trả hàng/hoàn tiền trong bao lâu?",
+    "expected_answer": "Shopee đưa ra hướng giải quyết trong vòng 07 ngày làm việc kể từ ngày nhận được đầy đủ thông tin/tài liệu liên quan; vụ việc phức tạp có thể kéo dài hơn.",
+    "expected_context": "Đối với các tranh chấp không phải là khiếu nại Trả Hàng/Hoàn Tiền, Shopee yêu cầu các bên tranh chấp cung cấp đầy đủ thông tin/tài liệu liên quan đến vụ việc, và đưa ra hướng giải quyết dựa trên các thông tin/tài liệu thu thập được trong vòng 07 ngày làm việc kể từ ngày nhận được đầy đủ các thông tin/tài liệu có liên quan đến vụ việc.",
+    "source": "legal/shopee-dispute-resolution.md",
+    "category": "dispute"
+  },
+  {
+    "id": "q12",
+    "question": "Người tiêu dùng dễ bị tổn thương cần làm gì để được ưu tiên xử lý khiếu nại?",
+    "expected_answer": "Người khiếu nại phải cung cấp tài liệu, chứng cứ chứng minh mình là người tiêu dùng dễ bị tổn thương theo Luật Bảo vệ quyền lợi người tiêu dùng 2023; khi đó Shopee sẽ ưu tiên tiếp nhận, xử lý yêu cầu so với quy trình thông thường.",
+    "expected_context": "Người Khiếu Nại cần phải cung cấp các tài liệu, chứng cứ chứng minh mình là Người tiêu dùng dễ bị tổn thương phù hợp với các quy định của pháp luật có liên quan;",
+    "source": "legal/shopee-dispute-resolution.md",
+    "category": "dispute"
+  },
+  {
+    "id": "q13",
+    "question": "Đơn hàng có giá trị bao nhiêu thì Shopee không hỗ trợ vận chuyển?",
+    "expected_answer": "Shopee không hỗ trợ vận chuyển đơn hàng có giá trị hàng hóa lớn hơn 50.000.000 VNĐ (tính theo giá khuyến mãi nếu có, không bao gồm mã giảm giá, xu và phí vận chuyển).",
+    "expected_context": "d. Đơn hàng có giá trị hàng hóa lớn hơn 50.000.000VNĐ (Tổng giá trị hàng hóa với giá khuyến mãi nếu có, không bao gồm mã giảm giá của Shopee, mã giảm giá của Người Bán, xu và phí vận chuyển);",
+    "source": "legal/shopee-shipping-policy.md",
+    "category": "shipping"
+  },
+  {
+    "id": "q14",
+    "question": "Nếu hàng bị mất hoàn toàn khi vận chuyển mà đơn vị vận chuyển không bồi thường, người bán được bồi thường bao nhiêu?",
+    "expected_answer": "Người bán được bồi thường 70% giá bán của sản phẩm (tỷ lệ này không áp dụng cho trường hợp bất khả kháng), hoặc số tiền đơn vị vận chuyển đồng ý bồi thường theo quy trình giữa Shopee và đơn vị vận chuyển.",
+    "expected_context": "(ii) 70% Giá bán của sản phẩm trong trường hợp đơn vị vận chuyển không bồi thường hoặc bồi thường với mức thấp hơn tỷ lệ này. Tỷ lệ bồi thường này sẽ không áp dụng đối với trường hợp bất khả kháng.",
+    "source": "legal/shopee-shipping-policy.md",
+    "category": "shipping"
+  },
+  {
+    "id": "q15",
+    "question": "Shopee xử lý khiếu nại vận chuyển trong thời gian tối đa bao lâu, và người khiếu nại phải nộp bằng chứng trong bao lâu?",
+    "expected_answer": "Thời gian xử lý khiếu nại tối đa 10 ngày làm việc kể từ khi nhận đủ bằng chứng hợp lệ (có thể kéo dài với vụ việc phức tạp); người khiếu nại phải cung cấp bằng chứng trong vòng 24 giờ kể từ khi gửi khiếu nại hoặc khi nhận được yêu cầu từ Shopee.",
+    "expected_context": "a. Tối đa 10 ngày làm việc kể từ thời điểm nhận được đầy đủ bằng chứng hợp lệ từ các bên có liên quan.",
+    "source": "legal/shopee-shipping-policy.md",
+    "category": "shipping"
+  },
+  {
+    "id": "q16",
+    "question": "Người bán gửi hàng có hạn sử dụng thì sản phẩm phải còn hạn tối thiểu bao lâu?",
+    "expected_answer": "Khi giao đi, hàng hóa phải còn ít nhất 30% thời hạn sử dụng và còn ít nhất 30 ngày tính đến ngày hết hạn.",
+    "expected_context": "a. Người Bán chỉ được phép bán các loại hàng hóa mà khi giao đi phải còn ít nhất 30% thời hạn sử dụng và còn ít nhất 30 ngày, tính từ thời điểm hiện tại đến ngày hết hạn.",
+    "source": "legal/shopee-listing-policy.md",
+    "category": "listing"
+  },
+  {
+    "id": "q17",
+    "question": "Yêu cầu về hình ảnh thật của sản phẩm khi đăng bán trên Shopee là gì?",
+    "expected_answer": "Phải có ít nhất một hình ảnh thật của sản phẩm do chính người bán tự chụp, trong đó sản phẩm thật chiếm ít nhất 40% diện tích toàn ảnh.",
+    "expected_context": "b. Phải có ít nhất một hình ảnh thật của sản phẩm do chính Người Bán tự chụp. Trong ảnh này, diện tích sản phẩm thật phải chiếm ít nhất 40% diện tích toàn ảnh.",
+    "source": "legal/shopee-listing-policy.md",
+    "category": "listing"
+  },
+  {
+    "id": "q18",
+    "question": "Có được bán đồ chơi hình khẩu súng trên Shopee không?",
+    "expected_answer": "Không. Đồ chơi có hình dáng giống súng, lựu đạn, bom, mìn thuộc danh sách sản phẩm bị cấm, trừ đồ chơi phun nước hoặc tạo bong bóng.",
+    "expected_context": "Các loại đồ chơi có hình dáng giống như các loại súng, lựu đạn, bom, mìn..., trừ đồ chơi phun nước hoặc tạo bong bóng;",
+    "source": "legal/shopee-prohibited-items.md",
+    "category": "prohibited"
+  },
+  {
+    "id": "q19",
+    "question": "Tôi có thể bán Bitcoin hoặc tiền ảo trên Shopee không?",
+    "expected_answer": "Không. Tiền ảo (Bitcoin, Pi, ...) thuộc nhóm dịch vụ bất hợp pháp bị cấm mua bán trên Shopee, cùng với tiền đang lưu hành, tiền giả và thẻ tín dụng/ghi nợ đã kích hoạt.",
+    "expected_context": "a. Tiền đang có giá trị lưu hành, tiền phát hành bởi chế độ cũ, tiền giả (trừ tiền âm phủ), tiền ảo (Bitcoin, Pi,...), thẻ tín dụng và thẻ ghi nợ đã kích hoạt.",
+    "source": "legal/shopee-prohibited-items.md",
+    "category": "prohibited"
+  },
+  {
+    "id": "q20",
+    "question": "Nếu tôi không có nhà khi shipper giao hàng thì có thể hẹn lại trong bao lâu?",
+    "expected_answer": "Đơn vị vận chuyển sẽ liên hệ 2-3 lần để giao hàng; người mua có thể thỏa thuận lại thời gian giao với nhân viên nhưng không quá 05 ngày kể từ lần liên hệ đầu tiên.",
+    "expected_context": "Đơn vị vận chuyển sẽ liên hệ **2-3 lần** để giao hàng. Nếu bạn không có mặt tại địa chỉ nhận hàng khi nhân viên liên hệ, bạn có thể thỏa thuận lại thời gian giao hàng với nhân viên cho phù hợp, nhưng không quá **05 ngày** kể từ lần liên hệ đầu tiên",
+    "source": "news/article_06.md",
+    "category": "shipping"
+  }
+]

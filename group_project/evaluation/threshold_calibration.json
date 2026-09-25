@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "threshold": 0.532,
+    "balanced_accuracy": 1.0,
+    "in_domain_min": 0.6179,
+    "in_domain_mean": 0.7314,
+    "out_of_domain_max": 0.4465,
+    "out_of_domain_mean": 0.3798,
+    "near_domain_scores": [
+      0.5499,
+      0.5973,
+      0.5767
+    ]
+  },
+  "scores": {
+    "in_domain": [
+      {
+        "query": "Người mua có bao nhiêu ngày để gửi yêu cầu trả hàng/hoàn tiền? Thực phẩm tươi sống thì sao?",
+        "best_dense_score": 0.7909
+      },
+      {
+        "query": "Những ai được sử dụng hình thức Trả hàng COM (trả hàng khi không còn nhu cầu)?",
+        "best_dense_score": 0.7166
+      },
+      {
+        "query": "Người dùng gói ShopeeVIP được Trả hàng COM tối đa bao nhiêu lần mỗi tháng?",
+        "best_dense_score": 0.7712
+      },
+      {
+        "query": "Người bán có bao lâu để phản hồi nếu không đồng ý với quyết định hoàn tiền của Shopee?",
+        "best_dense_score": 0.8107
+      },
+      {
+        "query": "Khi người bán đề xuất hoàn tiền ngay không cần trả hàng, số tiền hoàn tối thiểu là bao nhiêu?",
+        "best_dense_score": 0.7047
+      },
+      {
+        "query": "Thanh toán bằng thẻ tín dụng/ghi nợ thì sau bao lâu tôi nhận được tiền hoàn?",
+        "best_dense_score": 0.8022
+      },
+      {
+        "query": "Nếu tôi tự sắp xếp gửi trả hàng cho đơn không thuộc Shopee Mall, Shopee hỗ trợ phí trả hàng như thế nào?",
+        "best_dense_score": 0.7597
+      },
+      {
+        "query": "Tiền hoàn vào SPayLater được cập nhật trong bao lâu và hiển thị ở đâu?",
+        "best_dense_score": 0.7532
+      },
+      {
+        "query": "Khi đóng gói hàng hoàn trả theo hình thức Tự sắp xếp, tôi cần ghi gì lên hộp?",
+        "best_dense_score": 0.6831
+      },
+      {
+        "query": "Mua hàng ở Shopee Mall, sau khi yêu cầu trả hàng được chấp thuận thì tôi phải gửi trả sản phẩm trong bao lâu?",
+        "best_dense_score": 0.8271
+      },
+      {
+        "query": "Shopee giải quyết các tranh chấp không phải khiếu nại trả hàng/hoàn tiền trong bao lâu?",
+        "best_dense_score": 0.7249
+      },
+      {
+        "query": "Người tiêu dùng dễ bị tổn thương cần làm gì để được ưu tiên xử lý khiếu nại?",
+        "best_dense_score": 0.7702
+      },
+      {
+        "query": "Đơn hàng có giá trị bao nhiêu thì Shopee không hỗ trợ vận chuyển?",
+        "best_dense_score": 0.7602
+      },
+      {
+        "query": "Nếu hàng bị mất hoàn toàn khi vận chuyển mà đơn vị vận chuyển không bồi thường, người bán được bồi thường bao nhiêu?",
+        "best_dense_score": 0.7251
+      },
+      {
+        "query": "Shopee xử lý khiếu nại vận chuyển trong thời gian tối đa bao lâu, và người khiếu nại phải nộp bằng chứng trong bao lâu?",
+        "best_dense_score": 0.7958
+      },
+      {
+        "query": "Người bán gửi hàng có hạn sử dụng thì sản phẩm phải còn hạn tối thiểu bao lâu?",
+        "best_dense_score": 0.7045
+      },
+      {
+        "query": "Yêu cầu về hình ảnh thật của sản phẩm khi đăng bán trên Shopee là gì?",
+        "best_dense_score": 0.6896
+      },
+      {
+        "query": "Có được bán đồ chơi hình khẩu súng trên Shopee không?",
+        "best_dense_score": 0.6811
+      },
+      {
+        "query": "Tôi có thể bán Bitcoin hoặc tiền ảo trên Shopee không?",
+        "best_dense_score": 0.6179
+      },
+      {
+        "query": "Nếu tôi không có nhà khi shipper giao hàng thì có thể hẹn lại trong bao lâu?",
+        "best_dense_score": 0.6898
+      },
+      {
+        "query": "Hàng bị giao sai màu thì có được trả không?",
+        "best_dense_score": 0.6573
+      },
+      {
+        "query": "Shopee hoàn tiền về Ví ShopeePay mất bao lâu?",
+        "best_dense_score": 0.7976
+      },
+      {
+        "query": "Người bán tự vận chuyển có phải chịu phí hoàn hàng không?",
+        "best_dense_score": 0.7266
+      },
+      {
+        "query": "Sản phẩm dễ vỡ cần đóng gói như thế nào khi trả hàng?",
+        "best_dense_score": 0.6703
+      },
+      {
+        "query": "Có được bán dao găm trên Shopee không?",
+        "best_dense_score": 0.6539
+      }
+    ],
+    "out_of_domain": [
+      {
+        "query": "Thời tiết Hà Nội hôm nay thế nào?",
+        "best_dense_score": 0.4229
+      },
+      {
+        "query": "Công thức nấu phở bò ngon",
+        "best_dense_score": 0.3419
+      },
+      {
+        "query": "Ai là tổng thống Mỹ hiện nay?",
+        "best_dense_score": 0.3341
+      },
+      {
+        "query": "Cách cài đặt Python trên Windows",
+        "best_dense_score": 0.3414
+      },
+      {
+        "query": "Kết quả trận bóng đá Việt Nam tối qua",
+        "best_dense_score": 0.3743
+      },
+      {
+        "query": "Giá vàng SJC hôm nay bao nhiêu?",
+        "best_dense_score": 0.4227
+      },
+      {
+        "query": "Làm sao để học tiếng Anh nhanh?",
+        "best_dense_score": 0.4084
+      },
+      {
+        "query": "Lịch thi đại học năm nay",
+        "best_dense_score": 0.4465
+      },
+      {
+        "query": "Viết một bài thơ về mùa thu",
+        "best_dense_score": 0.3014
+      },
+      {
+        "query": "Cách chữa đau đầu tại nhà",
+        "best_dense_score": 0.4041
+      }
+    ],
+    "near_domain": [
+      {
+        "query": "Chính sách đổi trả của Lazada là gì?",
+        "best_dense_score": 0.5499
+      },
+      {
+        "query": "Tiki giao hàng trong bao lâu?",
+        "best_dense_score": 0.5973
+      },
+      {
+        "query": "Phí mở gian hàng trên TikTok Shop là bao nhiêu?",
+        "best_dense_score": 0.5767
+      }
+    ]
+  }
+}
